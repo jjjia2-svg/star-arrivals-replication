@@ -1,0 +1,29 @@
+[project]
+name = "star-arrivals-replication"
+version = "0.1.0"
+description = "Replication package: star arrivals and incumbent colleagues (MEcon thesis)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "duckdb==1.5.4",
+  "pyarrow==24.0.0",
+  # T7 review MAJOR-3: a FLOOR here resolved to pandas 3.0.5, which is not the version that wrote
+  # the frozen roster parquets (they carry "pandas_version": "3.0.2" in their own metadata) — so the
+  # locked environment could not reproduce two byte-identity assertions that the ambient interpreter
+  # passes. Pinned to the writer's version.
+  "pandas==3.0.2",
+  # Hard-required by the ported U4 preflight gate
+  # (units/u0_foundation/src/common/preflight.py check ④ — "error if missing, no downgrade"), and absent from
+  # every lock file, so `uv sync --frozen` produced an environment in which 54 of the 2,001 ported
+  # unit tests exit ENVIRONMENT_GATE_FAIL=30. Pinned to the version this project has been running.
+  "rapidfuzz==3.14.5",
+  # M3 T8 (carried from the T4 review): a HARD dependency of the gated full-snapshot FWCI scan.
+  # `pipeline/fwci/.../01_scan_full_snapshot.py` calls `set_json_lib("orjson")`, which raises
+  # SystemExit when the module is absent — the "stdlib fallback works" claim in the T4 report was
+  # measured and found FALSE, so without this pin the 37-minute stage cannot start at all and the
+  # documented `--json-lib stdlib` route is ~3x slower. It was in no lock file.
+  "orjson==3.11.4",
+  "matplotlib>=3.10",
+  "pyyaml>=6.0",
+  "pytest>=8",
+  "requests>=2.32",
+]

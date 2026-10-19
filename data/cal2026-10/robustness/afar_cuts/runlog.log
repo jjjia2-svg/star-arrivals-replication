@@ -1,0 +1,374 @@
+cut pos/econ: rows=1500425 pairs=90325 ties=3615 events=111 cut=0.0
+  control p3_afar_pos_econ.parquet vs data/frames: EQUAL
+cut med/econ: rows=399163 pairs=24110 ties=1052 events=95 cut=0.34018290146315816
+  control p3_afar_med_econ.parquet vs data/frames: EQUAL
+cut pos/chemistry: rows=184960 pairs=11466 ties=1004 events=38 cut=0.0
+  control p3_afar_pos_chemistry.parquet vs data/frames: EQUAL
+cut med/chemistry: rows=36409 pairs=2286 ties=243 events=32 cut=0.3558482936330024
+  control p3_afar_med_chemistry.parquet vs data/frames: EQUAL
+cut pos/math_stats: rows=256506 pairs=15318 ties=401 events=32 cut=0.0
+  control p3_afar_pos_math_stats.parquet vs data/frames: EQUAL
+cut med/math_stats: rows=51296 pairs=3087 ties=116 events=31 cut=0.08066404978281591
+  control p3_afar_med_math_stats.parquet vs data/frames: EQUAL
+FRAMES_CONTROL EQUAL
+== P3cut_pos_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_pos_chemistry rows=184960 groups=11466 first ties=1004 events=38 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_chemistry          ATE=-0.004662 (pair-clustered SE 0.002963, CI -0.010469~0.001144) joint-effect p=0.0429 | event-clustered SE 0.002930
+[P3cut_pos_chemistry] done elapsed=0.3 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_chemistry vs P3pos_chemistry_A_far.json
+== P3cut_med_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_med_chemistry rows=36409 groups=2286 first ties=243 events=32 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_med_chemistry          ATE=-0.006420 (pair-clustered SE 0.002935, CI -0.012173~-0.000668) joint-effect p=0.2070 | event-clustered SE 0.001931
+[P3cut_med_chemistry] done elapsed=0.1 minutes
+EQUAL
+CONTROL EQUAL: P3cut_med_chemistry vs P3med_chemistry_A_far.json
+== P3cut_pos_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_pos_math_stats rows=256506 groups=15318 first ties=401 events=32 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_math_stats         ATE=+0.000413 (pair-clustered SE 0.000411, CI -0.000392~0.001219) joint-effect p=0.0803 | event-clustered SE 0.000289
+[P3cut_pos_math_stats] done elapsed=0.3 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_math_stats vs P3pos_math_stats_A_far.json
+== P3cut_med_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_med_math_stats rows=51296 groups=3087 first ties=116 events=31 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_med_math_stats         ATE=-0.000155 (pair-clustered SE 0.001140, CI -0.002390~0.002079) joint-effect p=0.2197 | event-clustered SE 0.001066
+[P3cut_med_math_stats] done elapsed=0.1 minutes
+EQUAL
+CONTROL EQUAL: P3cut_med_math_stats vs P3med_math_stats_A_far.json
+== P3cut_pos_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_pos_econ rows=1500425 groups=90325 first ties=3615 events=111 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_econ               ATE=-0.000615 (pair-clustered SE 0.000529, CI -0.001652~0.000422) joint-effect p=0.0000 | event-clustered SE 0.000933
+[P3cut_pos_econ] done elapsed=1.3 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_econ vs P3pos_econ_A_far.json
+== P3cut_med_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_med_econ rows=399163 groups=24110 first ties=1052 events=95 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_med_econ               ATE=-0.000793 (pair-clustered SE 0.000378, CI -0.001534~-0.000051) joint-effect p=0.0014 | event-clustered SE 0.000431
+[P3cut_med_econ] done elapsed=0.2 minutes
+EQUAL
+CONTROL EQUAL: P3cut_med_econ vs P3med_econ_A_far.json
+== P3cut_pos_chemistry (shift 0)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 0] P3cut_pos_chemistry rows=184960 groups=11466 first ties=1004 events=38 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_chemistry          ATE=-0.004662 (pair-clustered SE 0.002963, CI -0.010469~0.001144) joint-effect p=0.0429 | event-clustered SE 0.002930
+[P3cut_pos_chemistry] done elapsed=0.1 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_chemistry vs P3pos_chemistry_A_far.json
+== P3cut_pos_math_stats (shift 0)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 0] P3cut_pos_math_stats rows=256506 groups=15318 first ties=401 events=32 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_math_stats         ATE=+0.000413 (pair-clustered SE 0.000411, CI -0.000392~0.001219) joint-effect p=0.0803 | event-clustered SE 0.000289
+[P3cut_pos_math_stats] done elapsed=0.1 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_math_stats vs P3pos_math_stats_A_far.json
+== P3cut_pos_econ (shift 0)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 0] P3cut_pos_econ rows=1500425 groups=90325 first ties=3615 events=111 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_pos_econ               ATE=-0.000615 (pair-clustered SE 0.000529, CI -0.001652~0.000422) joint-effect p=0.0000 | event-clustered SE 0.000933
+[P3cut_pos_econ] done elapsed=1.3 minutes
+EQUAL
+CONTROL EQUAL: P3cut_pos_econ vs P3pos_econ_A_far.json
+CONTROLS_EQUAL 6 cells + 3 predate shift-0 + 6 frames
+cut abs04/econ: rows=298520 pairs=18035 ties=798 events=90 cut=0.4
+cut p75/econ: rows=130042 pairs=7859 ties=351 events=68 cut=0.5536327163172166
+cut abs04/chemistry: rows=28933 pairs=1822 ties=205 events=31 cut=0.4
+cut p75/chemistry: rows=8929 pairs=561 ties=60 events=25 cut=0.6579571664333344
+cut abs04/math_stats: rows=3873 pairs=241 ties=23 events=20 cut=0.4
+cut p75/math_stats: rows=10000 pairs=612 ties=41 events=26 cut=0.26142419564124747
+FRAMES_CONTROL EQUAL
+== P3cut_abs04_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_abs04_chemistry rows=28933 groups=1822 first ties=205 events=31 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_abs04_chemistry        ATE=-0.008443 (pair-clustered SE 0.003493, CI -0.015289~-0.001597) joint-effect p=0.1735 | event-clustered SE 0.002321
+[P3cut_abs04_chemistry] done elapsed=0.1 minutes
+== P3cut_p75_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_p75_chemistry rows=8929 groups=561 first ties=60 events=25 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_p75_chemistry          ATE=-0.001223 (pair-clustered SE 0.003462, CI -0.008009~0.005562) joint-effect p=0.6606 | event-clustered SE 0.003144
+[P3cut_p75_chemistry] done elapsed=0.1 minutes
+== P3cut_abs04_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_abs04_math_stats rows=3873 groups=241 first ties=23 events=20 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_abs04_math_stats       ATE=+0.010165 (pair-clustered SE 0.004448, CI 0.001446~0.018883) joint-effect p=0.0051 | event-clustered SE 0.004541
+[P3cut_abs04_math_stats] done elapsed=0.1 minutes
+== P3cut_p75_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_p75_math_stats rows=10000 groups=612 first ties=41 events=26 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_p75_math_stats         ATE=+0.003440 (pair-clustered SE 0.003270, CI -0.002969~0.009849) joint-effect p=0.1416 | event-clustered SE 0.002370
+[P3cut_p75_math_stats] done elapsed=0.1 minutes
+== P3cut_abs04_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_abs04_econ rows=298520 groups=18035 first ties=798 events=90 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_abs04_econ             ATE=-0.000953 (pair-clustered SE 0.000440, CI -0.001815~-0.000090) joint-effect p=0.0278 | event-clustered SE 0.000438
+[P3cut_abs04_econ] done elapsed=0.3 minutes
+== P3cut_p75_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3cut_p75_econ rows=130042 groups=7859 first ties=351 events=68 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3cut_p75_econ               ATE=-0.000491 (pair-clustered SE 0.000630, CI -0.001727~0.000744) joint-effect p=0.9561 | event-clustered SE 0.000533
+[P3cut_p75_econ] done elapsed=0.2 minutes
+== P3pos_s2_chemistry (shift 2)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 2] P3pos_s2_chemistry rows=184960 groups=11466 first ties=1004 events=38 =====
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3pos_s2_chemistry           ATE=+0.000671 (pair-clustered SE 0.001111, CI -0.001506~0.002847) joint-effect p=NA | event-clustered SE 0.001158
+[P3pos_s2_chemistry] done elapsed=0.2 minutes
+== P3pos_s2_math_stats (shift 2)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 2] P3pos_s2_math_stats rows=256506 groups=15318 first ties=401 events=32 =====
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3pos_s2_math_stats          ATE=+0.000857 (pair-clustered SE 0.000493, CI -0.000109~0.001823) joint-effect p=NA | event-clustered SE 0.000527
+[P3pos_s2_math_stats] done elapsed=0.2 minutes
+== P3pos_s2_econ (shift 2)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs date-shift 2] P3pos_s2_econ rows=1500425 groups=90325 first ties=3615 events=111 =====
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3pos_s2_econ                ATE=+0.000496 (pair-clustered SE 0.000464, CI -0.000413~0.001406) joint-effect p=NA | event-clustered SE 0.000548
+[P3pos_s2_econ] done elapsed=1.5 minutes
+  econ       pos    cut=0.0                    pairs= 90,325  ate= -0.0615 pp (SE 0.0529) p=4.423e-05
+  econ       med    cut=0.34018290146315816    pairs= 24,110  ate= -0.0793 pp (SE 0.0378) p=0.001443
+  econ       abs04  cut=0.4                    pairs= 18,035  ate= -0.0953 pp (SE 0.0440) p=0.02781
+  econ       p75    cut=0.5536327163172166     pairs=  7,859  ate= -0.0491 pp (SE 0.0630) p=0.9561
+  chemistry  pos    cut=0.0                    pairs= 11,466  ate= -0.4662 pp (SE 0.2963) p=0.04286
+  chemistry  med    cut=0.3558482936330024     pairs=  2,286  ate= -0.6420 pp (SE 0.2935) p=0.207
+  chemistry  abs04  cut=0.4                    pairs=  1,822  ate= -0.8443 pp (SE 0.3493) p=0.1735
+  chemistry  p75    cut=0.6579571664333344     pairs=    561  ate= -0.1223 pp (SE 0.3462) p=0.6606
+  math_stats pos    cut=0.0                    pairs= 15,318  ate= +0.0413 pp (SE 0.0411) p=0.08033
+  math_stats med    cut=0.08066404978281591    pairs=  3,087  ate= -0.0155 pp (SE 0.1140) p=0.2197
+  math_stats abs04  cut=0.4                    pairs=    241  ate= +1.0165 pp (SE 0.4448) p=0.005095
+  math_stats p75    cut=0.26142419564124747    pairs=    612  ate= +0.3440 pp (SE 0.3270) p=0.1416
+grid written: data/cal2026-10/robustness/afar_cuts/afar_cut_grid.csv (12 rows)
+AFAR_CUTS_OK

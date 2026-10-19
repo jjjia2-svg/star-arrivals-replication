@@ -1,0 +1,96 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "test_big",
+  "instance_type": "r6i.8xlarge",
+  "price_hr": 2.016,
+  "est_min": 240,
+  "hard_min": 600,
+  "root_gb": 300,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_PATHS_CONFIG": "$REPO_DIR/config/r1/paths_aws.yaml",
+    "PYTHONHASHSEED": "0",
+    "SAR_V3NET_ORACLE": "/work/v3net/spec.json",
+    "SAR_V3NET_ORACLE_OUT": "/work/v3net/oracle"
+  },
+  "env_layers": [
+    "py",
+    "rmac",
+    "rcloud",
+    "tex"
+  ],
+  "pulls": [],
+  "required_dests": [
+    "/work/j0/"
+  ],
+  "data_sync": [
+    [
+      "r1/derived/",
+      "/data/openalex_pipeline/derived/"
+    ],
+    [
+      "r1/legacy/legacy_multiplex/",
+      "/data/legacy/thesis/multiplex_pipeline/"
+    ],
+    [
+      "r1/legacy/legacy_thesis/",
+      "/data/legacy/thesis/"
+    ],
+    [
+      "r1/legacy/legacy_v2_output/",
+      "/data/legacy/thesis/v2_output/"
+    ],
+    [
+      "r1/snapshot/authors/",
+      "/data/openalex_pipeline/snapshot/authors/"
+    ],
+    [
+      "r1/snapshot/institutions/",
+      "/data/openalex_pipeline/snapshot/institutions/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/"
+    ],
+    [
+      "u2_person_map_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u2_person_map_11school_2026-07-16/"
+    ],
+    [
+      "u3_panel_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u3_panel_11school_2026-07-16/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/run_tests_r1.py",
+      "/work/run_tests_r1.py"
+    ],
+    [
+      "pipeline/aws/r1/verify_inputs.py",
+      "/work/verify_inputs.py"
+    ],
+    [
+      "pipeline/aws/r1/restore_upstream.py",
+      "/work/restore_upstream.py"
+    ],
+    [
+      "pipeline/aws/r1/check_pin.py",
+      "/work/check_pin.py"
+    ],
+    [
+      "pipeline/aws/r1/v3net_oracle_spec.py",
+      "/work/v3net_oracle_spec.py"
+    ]
+  ],
+  "steps": [
+    "\"$PY\" /work/verify_inputs.py relink --map \"$REPO_DIR/data/cal2026-10r1/aws/uploads/symlinks_legacy_v2_output.tsv\" --root /data/legacy/thesis/v2_output --old \"<mac_data_disk>/openalex_pipeline\" --new /data/openalex_pipeline > /work/out/relink.log",
+    "mkdir -p /work/out/restore_j0 && \"$PY\" /work/restore_upstream.py --stages /work/j0 --layout \"$REPO_DIR/config/r1/layouts/test_big_from_j0.json\" --dest /work/overlay --out /work/out/restore_j0 && \"$PY\" /work/check_pin.py --file /work/overlay/output/cal_intermediates/cal2026-10/pairs_unified.csv --report \"$REPO_DIR/data/cal2026-10/frames_econ/build_report_econ920_2026-10.json\" --key october.pairs_unified --out /work/out/restore_j0/pin_cal2026-10 && \"$PY\" /work/check_pin.py --file /work/overlay/output/cal_intermediates/pairs_unified.csv --report \"$REPO_DIR/data/cal2026-10/frames_econ/build_report_econ920_2026-10.json\" --key october.pairs_unified --out /work/out/restore_j0/pin_staged",
+    "mkdir -p /work/out/v3net_spec && { SAR_R1_CONFIG=\"$REPO_DIR/config/r1/B0.json\" \"$PY\" /work/v3net_oracle_spec.py build --work /work/v3net/build --spec \"$SAR_V3NET_ORACLE\" --report /work/out/v3net_spec/report_v3net_spec.json > /work/out/v3net_spec/build.log 2>&1 || echo \"V3NET_SPEC_INCOMPLETE rc=$?\" >> /work/out/v3net_spec/build.log; }",
+    "\"$PY\" /work/run_tests_r1.py --spec /work/in/tests.tsv --repo \"$REPO_DIR\" --out /work/out --python \"$PY\" --overlay /work/overlay; rc=$?; mkdir -p /work/out/v3net_oracle && cp \"$SAR_V3NET_ORACLE_OUT/summary.json\" /work/out/v3net_oracle/ 2>/dev/null; exit \"$rc\""
+  ]
+}

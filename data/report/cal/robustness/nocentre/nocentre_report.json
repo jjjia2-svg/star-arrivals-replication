@@ -1,0 +1,70 @@
+{
+ "group": "nocentre (R1 M)",
+ "design": "chemistry/math_stats frames rebuilt on the incfel roster (chemmath_m.py --roster-variant incfel); cells by the verbatim drivers",
+ "population": {
+  "chemistry": {
+   "relationships": {
+    "relations_canon": 5266,
+    "relations_variant": 5255,
+    "persons_canon": 747,
+    "persons_variant": 744,
+    "persons_removed": 3,
+    "persons_added": 0,
+    "events_canon": 97,
+    "events_variant": 97
+   }
+  },
+  "math_stats": {
+   "relationships": {
+    "relations_canon": 8576,
+    "relations_variant": 8551,
+    "persons_canon": 1389,
+    "persons_variant": 1384,
+    "persons_removed": 5,
+    "persons_added": 0,
+    "events_canon": 107,
+    "events_variant": 107
+   }
+  }
+ },
+ "cells": {
+  "P1nc_chemistry": {
+   "label": "P1nc_chemistry",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P1nc_chemistry.json",
+   "json_sha256": "b87b90ca9ebce61630489a2b3696617387b078f48e9d95fecb59bc76ea8fa94d"
+  },
+  "P2nc_chemistry": {
+   "label": "P2nc_chemistry",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P2nc_chemistry.json",
+   "json_sha256": "94927a7d0e7c595688d0bda3dc87bc60aed88a4135e1f4e449c4f060dd5e5678"
+  },
+  "P3nc_pos_chemistry_A_far": {
+   "label": "P3nc_pos_chemistry_A_far",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P3nc_pos_chemistry_A_far.json",
+   "json_sha256": "6e744b00385ecf985e8ffa418641ccdd2e0edeef5797a88225360fc1251a2b9e"
+  },
+  "P1nc_math_stats": {
+   "label": "P1nc_math_stats",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P1nc_math_stats.json",
+   "json_sha256": "3253331ad5af8f7b3c260c77a05fdef4e6f57acce90ca140cb7589211a23c364"
+  },
+  "P2nc_math_stats": {
+   "label": "P2nc_math_stats",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P2nc_math_stats.json",
+   "json_sha256": "4bb3b04bf2ee73b5391990199d6174b3d8a60a253dadc631d3abfd3f70153665"
+  },
+  "P3nc_pos_math_stats_A_far": {
+   "label": "P3nc_pos_math_stats_A_far",
+   "status": "OK",
+   "json": "output/r1/robustness/nocentre/estimates/P3nc_pos_math_stats_A_far.json",
+   "json_sha256": "83cc9e425cf49894a9c3856af0eb816579cb4f60a8723638d41a380213a86a81"
+  }
+ },
+ "stops": [],
+ "status": "DONE"
+}

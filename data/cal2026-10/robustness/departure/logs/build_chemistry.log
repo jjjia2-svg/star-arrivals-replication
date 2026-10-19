@@ -1,0 +1,40 @@
+$ setup/.venv/bin/python analysis/robustness/sensitivity/build_departure_187.py --field chemistry --frames-dir data/frames --map data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_chemistry.csv --out data/cal2026-10/robustness/departure --stage $TMPDIR/sar_rob_sensitivity/dep_chemistry
+[env] {}
+--- stdout ---
+{
+ "A_dropped_in_frame": [
+  "A5006183789:monash",
+  "A5011013044:sydney",
+  "A5014057252:sydney",
+  "A5041868632:unsw",
+  "A5044696583:monash",
+  "A5055198364:unsw",
+  "A5100398634:sydney"
+ ],
+ "B_recoded_in_frame": {
+  "A5048687133:anu": 2019,
+  "A5070148430:melbourne": 2022,
+  "A5006430396:monash": 2016,
+  "A5044696583:monash": 2012,
+  "A5006183789:monash": 2016,
+  "A5014057252:sydney": 2013,
+  "A5011013044:sydney": 2023,
+  "A5100398634:sydney": 2021,
+  "A5041868632:unsw": 2016,
+  "A5055198364:unsw": 2017
+ },
+ "noop_control": "BYTE_EQUAL",
+ "afar": {
+  "frame": "data/frames/p3_afar_pos_chemistry.parquet",
+  "events_in_afar": 38,
+  "A_dropped_in_afar": 7,
+  "B_recoded_in_afar": 10,
+  "A_rows": 143710,
+  "B_rows_flipped": 15243
+ }
+}
+DEPARTURE187_BUILD_OK
+
+--- stderr ---
+
+--- rc=0 secs=0.6 ---

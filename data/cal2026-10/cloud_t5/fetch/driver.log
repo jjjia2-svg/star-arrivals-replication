@@ -1,0 +1,23 @@
+[driver] start 2026-09-22T18:30:50Z marker=2026_10C par=12 threads=4 host=<host>
+P1_econ_fnfix.json: OK
+P1_fnfix_chemistry.json: OK
+P1_fnfix_math_stats.json: OK
+P2_econ_fnfix.json: OK
+P2_fnfix_chemistry.json: OK
+P2_fnfix_math_stats.json: OK
+bootstrap.sh: OK
+driver.env: OK
+driver.sh: OK
+jobs_parallel.txt: OK
+jobs_serial.txt: OK
+p1_frame_chemistry.csv: OK
+p1_frame_econ.csv: OK
+p1_frame_math_stats.csv: OK
+p2_becoming_chemistry.csv: OK
+p2_becoming_econ.csv: OK
+p2_becoming_math_stats.csv: OK
+run_perm.R: OK
+MD5_OK 2026-09-22T18:30:50Z
+[parallel] 66 units, xargs -P 12, 4 threads each, start 2026-09-22T18:30:50Z
+[parallel] end 2026-09-22T18:58:08Z
+[driver] end 2026-09-22T18:58:08Z units=66/66 failed=0 result=ALL_DONE_MARKER_2026_10C

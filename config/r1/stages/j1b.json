@@ -1,0 +1,549 @@
+{
+ "schema": "sar.r1.stages.v1",
+ "job": "j1b",
+ "complete": true,
+ "note": "J1b = the robustness run on config M (W2-TJ1B: F19, N8, N5, F6). Launch with --pull r1/runs/<last j1a>/stages/=/work/j1a_stages/ (a resumed J1a re-pushes its skipped stages, so the set is complete). restore_j1a lays the J1a products out under /work/j1a, digest-checked against each J1a .done.json (config/r1/layouts/j1b_from_j1a.json), and keeps the J1a markers in its own output so every reader's fingerprint follows J1a. rob_jobs builds the unit list; par_plan (N8) plans PAR x threads and STOPs above 450 GiB; each run_units group stage first checks the plan's split_after: a group of launch 2 stops launch 1 (SPLIT_STOP, rc 5) until the split group's marker is in $SAR_RESUME_DIR, so J1b runs as two launches joined by --resume-from (R11). No rob_controls stage: controls run inside their cells' group (R1P3-29). Star departure (F20) is out of scope: author 2026-10-15, the paper prints no star-departure robustness. W3-FLIPS sets complete after the cross-model review.",
+ "stages": [
+  {
+   "name": "verify_inputs",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/verify_inputs.py",
+   "cmd": "\"$PY\" \"$WORK/verify_inputs.py\" data --job-spec \"$REPO_DIR/config/r1/jobs/j1b.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/jobs/j1b.json",
+    "repo:config/r1/input_pins.json"
+   ],
+   "outputs": [
+    "work:prod/verify_inputs"
+   ],
+   "est_min": 10,
+   "needs": [],
+   "resume": "always"
+  },
+  {
+   "name": "config",
+   "owner": "F9",
+   "script": "pipeline/aws/r1/config_check.py",
+   "cmd": "\"$PY\" \"$WORK/config_check.py\" check --config \"$REPO_DIR/config/r1/M.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/M.json",
+    "repo:pipeline/lib/r1_config.py"
+   ],
+   "outputs": [
+    "work:prod/config"
+   ],
+   "est_min": 1,
+   "needs": [
+    "verify_inputs"
+   ],
+   "resume": "always",
+   "requires": [
+    "config/r1/M.json"
+   ]
+  },
+  {
+   "name": "restore_j1a",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/restore_upstream.py",
+   "cmd": "\"$PY\" \"$WORK/restore_upstream.py\" --stages /work/j1a_stages --layout \"$REPO_DIR/config/r1/layouts/j1b_from_j1a.json\" --dest /work/j1a --out \"$STAGE_OUT\" && mkdir -p \"$STAGE_OUT/upstream\" && \"$PY\" -c 'import json,shutil,sys;t=json.load(open(sys.argv[1]));[shutil.copyfile(\"%s/%s.done.json\"%(sys.argv[2],s),\"%s/%s.done.json\"%(sys.argv[3],s)) for s in sorted({x[\"from\"][\"stage\"] for x in t[\"rows\"] if \"stage\" in x[\"from\"]})]' \"$REPO_DIR/config/r1/layouts/j1b_from_j1a.json\" /work/j1a_stages \"$STAGE_OUT/upstream\"",
+   "inputs": [
+    "repo:config/r1/layouts/j1b_from_j1a.json",
+    "repo:pipeline/aws/r1/run_stages.py"
+   ],
+   "outputs": [
+    "work:prod/restore_j1a"
+   ],
+   "est_min": 15,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "sandbox",
+   "owner": "F2",
+   "script": "pipeline/aws/r1/sandbox.py",
+   "cmd": "\"$PY\" \"$WORK/sandbox.py\" purge --repo \"$REPO_DIR\" --tsv \"$REPO_DIR/config/r1/base_inputs.tsv\" --ref /work/ref/october --config M --table \"$REPO_DIR/config/r1/stages/j1b.json\" --allowlist \"$REPO_DIR/config/r1/read_allowlist_0828.txt\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/base_inputs.tsv",
+    "repo:config/r1/read_allowlist_0828.txt"
+   ],
+   "outputs": [
+    "work:prod/sandbox"
+   ],
+   "est_min": 10,
+   "needs": [
+    "restore_j1a"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "rob_jobs",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "bash \"$WORK/run_robustness_r1.sh\" jobs",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "repo:config/r1/paths_aws.yaml",
+    "stage:restore_j1a",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/rob_jobs"
+   ],
+   "est_min": 2,
+   "needs": [
+    "restore_j1a",
+    "sandbox"
+   ]
+  },
+  {
+   "name": "par_plan",
+   "owner": "N8",
+   "script": "pipeline/aws/r1/par_plan.py",
+   "cmd": "\"$PY\" \"$WORK/par_plan.py\" --jobs \"$WORK/prod/rob_jobs/units.tsv\" --frames /work/j1a/frames --calib /work/j1a/mem_probe/mem_report.json --calib-cells /work/j1a/cells_rcloud/cells_report_rcloud.json --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:rob_jobs",
+    "stage:restore_j1a",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/par_plan"
+   ],
+   "est_min": 2,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs"
+   ]
+  },
+  {
+   "name": "afar_event_map",
+   "owner": "F6",
+   "script": "analysis/robustness/sensitivity/afar_event_map.py",
+   "cmd": "\"$PY\" \"$REPO_DIR/analysis/robustness/sensitivity/afar_event_map.py\" --spec pos --frames-dir /work/j1a/frames --pairs-dir /work/j1a/pairs --pairs-econ /work/j1a/pairs/pairs_unified.csv --outdir \"$STAGE_OUT\" --tmpdir \"$WORK/tmp/afar_map\" --threads 16 --memory-limit 64GB",
+   "inputs": [
+    "stage:restore_j1a",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/afar_event_map"
+   ],
+   "est_min": 15,
+   "needs": [
+    "restore_j1a",
+    "sandbox"
+   ]
+  },
+  {
+   "name": "rob_frames",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" frames && bash \"$WORK/run_robustness_r1.sh\" frames",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:afar_event_map",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud",
+    "repo:pipeline/aws/r1/chemmath_m.py",
+    "repo:config/r1/M.json",
+    "repo:data/cal2026-10r1/inputs/rosters/roster_gold_chemistry_r1_incfel.parquet",
+    "repo:data/cal2026-10r1/inputs/rosters/roster_gold_math_stats_r1_incfel.parquet",
+    "repo:pipeline/aws/r1/edge_table.py",
+    "repo:config/r1/paths_aws.yaml",
+    "repo:pipeline/frames/cal2026-10/econ920",
+    "repo:pipeline/frames/cal2026-10/stage.py",
+    "repo:pipeline/frames/cal2026-10/inpost_filter.py",
+    "repo:pipeline/frames/cal2026-10/configs",
+    "repo:pipeline/frames/cal2026-10/run_cal_frames_chemmath.py",
+    "repo:pipeline/frames/multidisc_gold_2026-08-10",
+    "repo:pipeline/frames/run_frames.py",
+    "repo:pipeline/frames/make_slim.py",
+    "repo:pipeline/units",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "repo:pipeline/aws/r1/dose_chemmath.py",
+    "repo:pipeline/aws/r1/network_freeze.py",
+    "repo:pipeline/aws/r1/missing_persons.py",
+    "repo:pipeline/aws/r1/verdict_source.py"
+   ],
+   "outputs": [
+    "work:prod/rob_frames",
+    "repo:output/r1/robustness/afar_cuts/frames",
+    "repo:output/r1/robustness/afar_cuts/cuts_build.json",
+    "repo:output/r1/robustness/d7/p05/control",
+    "repo:output/r1/robustness/d7/p05/filter_report_p05.json",
+    "repo:output/r1/robustness/doublestar/doublestar_build_report.json",
+    "repo:output/r1/robustness/doublestar/doublestar_drops.csv",
+    "repo:output/r1/robustness/doublestar/complement/dscomp_build_report.json",
+    "repo:output/r1/robustness/nocentre/p3pos"
+   ],
+   "est_min": 45,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "afar_event_map"
+   ],
+   "requires": [
+    "pipeline/aws/r1/chemmath_m.py",
+    "config/r1/M.json",
+    "data/cal2026-10r1/inputs/rosters/roster_gold_chemistry_r1_incfel.parquet",
+    "data/cal2026-10r1/inputs/rosters/roster_gold_math_stats_r1_incfel.parquet"
+   ]
+  },
+  {
+   "name": "rob_cells",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" cells && bash \"$WORK/run_robustness_r1.sh\" cells",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:rob_frames",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud"
+   ],
+   "outputs": [
+    "work:prod/rob_cells",
+    "repo:output/r1/robustness/battery/control",
+    "repo:output/r1/robustness/battery/P1bnd0_econ.json",
+    "repo:output/r1/robustness/battery/P1bnd0_chemistry.json",
+    "repo:output/r1/robustness/battery/P1bnd0_math_stats.json",
+    "repo:output/r1/robustness/battery/P1bndmean_econ.json",
+    "repo:output/r1/robustness/battery/P1bndmean_chemistry.json",
+    "repo:output/r1/robustness/battery/P1bndmean_math_stats.json",
+    "repo:output/r1/robustness/battery/P1lvl_econ.json",
+    "repo:output/r1/robustness/battery/P1lvl_chemistry.json",
+    "repo:output/r1/robustness/battery/P1lvl_math_stats.json",
+    "repo:output/r1/robustness/battery/P1nex_econ.json",
+    "repo:output/r1/robustness/battery/P1nex_chemistry.json",
+    "repo:output/r1/robustness/battery/P1nex_math_stats.json",
+    "repo:output/r1/robustness/leaver",
+    "repo:output/r1/robustness/predate_p1",
+    "repo:output/r1/robustness/predate",
+    "repo:output/r1/robustness/afar_cuts/predate",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_abs04_econ.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_abs04_chemistry.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_abs04_math_stats.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_p75_econ.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_p75_chemistry.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_p75_math_stats.json",
+    "repo:output/r1/robustness/d7/p05/estimates",
+    "repo:output/r1/robustness/doublestar/estimates",
+    "repo:output/r1/robustness/doublestar/complement/estimates",
+    "repo:output/r1/robustness/nocentre/estimates"
+   ],
+   "est_min": 45,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "rob_frames"
+   ]
+  },
+  {
+   "name": "rob_loeo",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" loeo && bash \"$WORK/run_robustness_r1.sh\" loeo",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:rob_cells",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud"
+   ],
+   "outputs": [
+    "work:prod/rob_loeo",
+    "repo:output/r1/robustness/battery/loeo"
+   ],
+   "est_min": 40,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "rob_cells"
+   ]
+  },
+  {
+   "name": "rob_perm",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" perm && bash \"$WORK/run_robustness_r1.sh\" perm",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:rob_loeo",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud"
+   ],
+   "outputs": [
+    "work:prod/rob_perm",
+    "repo:output/r1/robustness/cloud_t5/fetch",
+    "repo:output/r1/robustness/cloud/fetch/out_perm"
+   ],
+   "est_min": 120,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "rob_loeo"
+   ]
+  },
+  {
+   "name": "rob_null",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" null && bash \"$WORK/run_robustness_r1.sh\" null",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:rob_perm",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud"
+   ],
+   "outputs": [
+    "work:prod/rob_null",
+    "repo:output/r1/robustness/cloud/fetch/out_null"
+   ],
+   "est_min": 45,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "rob_perm"
+   ]
+  },
+  {
+   "name": "fig4_m",
+   "owner": "N5",
+   "script": "pipeline/aws/r1/run_cells.py",
+   "cmd": "\"$PY\" \"$WORK/run_cells.py\" --cells \"$REPO_DIR/config/r1/cells/fig4_M.tsv\" --stack rmac --repo \"$REPO_DIR\" --frames /work/j1a/frames --gold-dir /work/j1a/estimates --out \"$STAGE_OUT\" --par 9 --threads 4 --compare --require-equal",
+   "inputs": [
+    "repo:config/r1/cells/fig4_M.tsv",
+    "repo:analysis/robustness/figure4/run_save_sample.R",
+    "repo:analysis/lib/__init__.py",
+    "repo:analysis/lib/compare_json.py",
+    "stage:restore_j1a",
+    "env:rmac",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/fig4_m"
+   ],
+   "est_min": 15,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_null"
+   ]
+  },
+  {
+   "name": "fig4_counts",
+   "owner": "N5",
+   "script": "pipeline/aws/r1/fig4_counts.py",
+   "cmd": "\"$PY\" \"$WORK/fig4_counts.py\" --cells-out \"$WORK/prod/fig4_m\" --out \"$REPO_DIR/output/r1/robustness/fig4\"",
+   "inputs": [
+    "stage:fig4_m",
+    "env:py"
+   ],
+   "outputs": [
+    "repo:output/r1/robustness/fig4"
+   ],
+   "est_min": 3,
+   "needs": [
+    "fig4_m"
+   ]
+  },
+  {
+   "name": "rob_post",
+   "owner": "F19",
+   "script": "pipeline/aws/r1/run_robustness_r1.sh",
+   "cmd": "\"$PY\" -c 'import json,os,sys;p=json.load(open(sys.argv[1]));g=sys.argv[2];l=p.get(\"launches\") or [];s=p.get(\"split_after\");r=os.environ.get(\"SAR_RESUME_DIR\",\"\");ok=not(len(l)>1 and g in l[1]) or bool(r and os.path.isfile(os.path.join(r,\"rob_%s.done.json\"%s)));ok or open(os.path.join(os.environ[\"STAGE_OUT\"],\"stop_report_split.json\"),\"w\").write(json.dumps({\"code\":\"SPLIT_STOP\",\"stage\":\"rob_\"+g,\"gate\":\"rob_%s\"%s})+\"\\n\");ok or print(\"SPLIT_STOP: the N8 plan puts group %s in launch 2 (split after %s); relaunch J1b with --resume-from this job\"%(g,s),file=sys.stderr);sys.exit(0 if ok else 5)' \"$WORK/prod/par_plan/plan.json\" post && bash \"$WORK/run_robustness_r1.sh\" post",
+   "inputs": [
+    "repo:pipeline/aws/r1/rob_jobs_r1.py",
+    "repo:pipeline/aws/r1/run_units.py",
+    "repo:pipeline/aws/r1/rob_post_r1.py",
+    "repo:config/r1/robustness_r1.json",
+    "stage:fig4_counts",
+    "stage:rob_frames",
+    "stage:rob_cells",
+    "stage:rob_loeo",
+    "stage:rob_perm",
+    "stage:rob_null",
+    "stage:rob_jobs",
+    "stage:par_plan",
+    "stage:restore_j1a",
+    "repo:analysis/estimation",
+    "repo:analysis/robustness",
+    "repo:analysis/lib",
+    "repo:tools/content_equal.py",
+    "repo:tools/write_manifest.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "env:py",
+    "env:rmac",
+    "env:rcloud"
+   ],
+   "outputs": [
+    "work:prod/rob_post",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_pos_econ.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_pos_chemistry.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_pos_math_stats.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_med_econ.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_med_chemistry.json",
+    "repo:output/r1/robustness/afar_cuts/estimates/P3cut_med_math_stats.json",
+    "repo:output/r1/robustness/afar_cuts/afar_cut_grid.csv",
+    "repo:output/r1/robustness/battery/loeo_ranked.csv",
+    "repo:output/r1/robustness/cloud_t5/perm",
+    "repo:output/r1/robustness/cloud/perm",
+    "repo:output/r1/robustness/cloud/null",
+    "repo:output/r1/robustness/nocentre/nocentre_report.json",
+    "repo:output/r1/robustness/rob_custody.json",
+    "repo:output/r1/robustness/rob_report.json"
+   ],
+   "est_min": 10,
+   "needs": [
+    "restore_j1a",
+    "sandbox",
+    "rob_jobs",
+    "par_plan",
+    "rob_frames",
+    "rob_cells",
+    "rob_loeo",
+    "rob_perm",
+    "rob_null",
+    "fig4_counts"
+   ]
+  },
+  {
+   "name": "sandbox_check",
+   "owner": "F2",
+   "script": "pipeline/aws/r1/sandbox.py",
+   "cmd": "\"$PY\" \"$WORK/sandbox.py\" check --record \"$WORK/prod/sandbox/base_record.json\" --reads /work/reads --reads /work/resume/_reads --allowlist \"$REPO_DIR/config/r1/read_allowlist_0828.txt\" --config M --table \"$REPO_DIR/config/r1/stages/j1b.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/read_allowlist_0828.txt"
+   ],
+   "outputs": [
+    "work:prod/sandbox_check"
+   ],
+   "est_min": 10,
+   "needs": [
+    "sandbox",
+    "rob_post"
+   ],
+   "resume": "always"
+  }
+ ]
+}

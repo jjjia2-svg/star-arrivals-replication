@@ -1,0 +1,394 @@
+{
+ "current": {
+  "bor": {
+   "defs": {
+    "main.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ],
+    "main_clean.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ]
+   },
+   "files": {
+    "sections/sec3_strategy.tex": {
+     "BOR": 38,
+     "BORdel": 3,
+     "bodies_sha256": [
+      "3d0c7dd8c634364c6462505ecb70d8d2a44695f5015e999500fdf88c9ea5d5ea",
+      "437e0a6addc5e16a288c27a7f4fee9ca33d3253348371dbf9f954645fe0ecc27",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "7629342580eae1539618f3bfb7fdca1a9763ebbb2a65882bd255fce5146f338c",
+      "96c334c5276ca3950f37e7c2bcf8711b904dd927e4757d646675b95f2c048cd6",
+      "b43eda9924600669ba02c61be27ee390bdf04d6a560d7362202b8f7df5d061bd",
+      "b609cdb62cd121a44e46c9fb72d21329a19d90eadbc16d0d88d68d43c8c5f69e",
+      "b8bb8d0f01f5635f96cad26b865d7989ada34998536c1e78e3e95cbdc32bd47d",
+      "c7f0f6583f2a57379a0767f36ca5a0241767b73018963c80eea16b12437f1491",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p1.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p2.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    },
+    "sections/sec4_p3.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    }
+   }
+  },
+  "bytes": 1341440,
+  "ledger_date": "2026-10-23",
+  "n_files": 52,
+  "reference_pdf_sha256": "73a9f0b2851df19779ca14401546e0b7770360da98e3f59be7edf0ed16263c86",
+  "source": "base_tree_2026-10-11/thesis_tree (restricted archive)",
+  "tar_sha256": "b5d2288a3d15f4f2257ecdf5b69fc0ab39c544014829a2200a9c0b148dd34576"
+ },
+ "current_b0": {
+  "bor": {
+   "defs": {
+    "main.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ],
+    "main_clean.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ]
+   },
+   "files": {
+    "sections/sec3_strategy.tex": {
+     "BOR": 38,
+     "BORdel": 3,
+     "bodies_sha256": [
+      "3d0c7dd8c634364c6462505ecb70d8d2a44695f5015e999500fdf88c9ea5d5ea",
+      "437e0a6addc5e16a288c27a7f4fee9ca33d3253348371dbf9f954645fe0ecc27",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "7629342580eae1539618f3bfb7fdca1a9763ebbb2a65882bd255fce5146f338c",
+      "96c334c5276ca3950f37e7c2bcf8711b904dd927e4757d646675b95f2c048cd6",
+      "b43eda9924600669ba02c61be27ee390bdf04d6a560d7362202b8f7df5d061bd",
+      "b609cdb62cd121a44e46c9fb72d21329a19d90eadbc16d0d88d68d43c8c5f69e",
+      "b8bb8d0f01f5635f96cad26b865d7989ada34998536c1e78e3e95cbdc32bd47d",
+      "c7f0f6583f2a57379a0767f36ca5a0241767b73018963c80eea16b12437f1491",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p1.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p2.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    },
+    "sections/sec4_p3.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    }
+   }
+  },
+  "bytes": 1341440,
+  "ledger_date": "2026-10-23",
+  "n_files": 52,
+  "reference_pdf_sha256": "73a9f0b2851df19779ca14401546e0b7770360da98e3f59be7edf0ed16263c86",
+  "source": "base_tree_2026-10-11/thesis_tree (restricted archive)",
+  "tar_sha256": "0bd23cbbcf8a39611c68fd94db5b1e31d782df15db2c9d50543bb77345ad2a13"
+ },
+ "october": {
+  "bor": {
+   "defs": {
+    "main.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ],
+    "main_clean.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ]
+   },
+   "files": {
+    "sections/sec3_strategy.tex": {
+     "BOR": 38,
+     "BORdel": 3,
+     "bodies_sha256": [
+      "3d0c7dd8c634364c6462505ecb70d8d2a44695f5015e999500fdf88c9ea5d5ea",
+      "437e0a6addc5e16a288c27a7f4fee9ca33d3253348371dbf9f954645fe0ecc27",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "7629342580eae1539618f3bfb7fdca1a9763ebbb2a65882bd255fce5146f338c",
+      "96c334c5276ca3950f37e7c2bcf8711b904dd927e4757d646675b95f2c048cd6",
+      "b43eda9924600669ba02c61be27ee390bdf04d6a560d7362202b8f7df5d061bd",
+      "b609cdb62cd121a44e46c9fb72d21329a19d90eadbc16d0d88d68d43c8c5f69e",
+      "b8bb8d0f01f5635f96cad26b865d7989ada34998536c1e78e3e95cbdc32bd47d",
+      "c7f0f6583f2a57379a0767f36ca5a0241767b73018963c80eea16b12437f1491",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p1.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p2.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    },
+    "sections/sec4_p3.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    }
+   }
+  },
+  "bytes": 3358720,
+  "ledger_date": "2026-10-23",
+  "n_files": 54,
+  "reference_pdf_sha256": "73a9f0b2851df19779ca14401546e0b7770360da98e3f59be7edf0ed16263c86",
+  "source": "base_tree_2026-10-11/thesis_tree (restricted archive)",
+  "tar_sha256": "b95046c432eb93e22e148e26d623cd01e2e060c016d0080df1c7d9e2ee77c1d3"
+ },
+ "r1": {
+  "bor": {
+   "defs": {
+    "main.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ],
+    "main_clean.tex": [
+     "\\newcommand{\\BORdel}[1]{{\\color{borcol}\\sout{#1}}}",
+     "\\newcommand{\\BOR}[1]{{\\color{borcol}\\textbf{#1}}}"
+    ]
+   },
+   "files": {
+    "sections/sec3_strategy.tex": {
+     "BOR": 38,
+     "BORdel": 3,
+     "bodies_sha256": [
+      "3a2fedc50177d0c43b0dfa4bd1af9075340c66b68f03ddf91cff0259a9fb4aa8",
+      "3d0c7dd8c634364c6462505ecb70d8d2a44695f5015e999500fdf88c9ea5d5ea",
+      "437e0a6addc5e16a288c27a7f4fee9ca33d3253348371dbf9f954645fe0ecc27",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0",
+      "7629342580eae1539618f3bfb7fdca1a9763ebbb2a65882bd255fce5146f338c",
+      "96c334c5276ca3950f37e7c2bcf8711b904dd927e4757d646675b95f2c048cd6",
+      "b609cdb62cd121a44e46c9fb72d21329a19d90eadbc16d0d88d68d43c8c5f69e",
+      "b8bb8d0f01f5635f96cad26b865d7989ada34998536c1e78e3e95cbdc32bd47d",
+      "c7f0f6583f2a57379a0767f36ca5a0241767b73018963c80eea16b12437f1491",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e",
+      "d17d2d78d76e6a6cd13048de225e107ac73de4aa5f8914e58a0cfaa9698c373e"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p1.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": []
+    },
+    "sections/sec4_p2.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    },
+    "sections/sec4_p3.tex": {
+     "BOR": 1,
+     "BORdel": 0,
+     "bodies_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ],
+     "commented_sha256": [
+      "5e2c614c23f02239bc03c6c04fcb681950f9e72bf8fdff6be79c79841cbb10c0"
+     ]
+    }
+   }
+  },
+  "bytes": 1341440,
+  "ledger_date": "2026-10-24",
+  "n_files": 52,
+  "reference_pdf_sha256": null,
+  "source": "report_tree_2026-10-19/thesis_tree (not shipped)",
+  "tar_sha256": "a9bee6e70c1a773723f4bc383107d1d506bfd3c2224f08ebb0eb39342b07de3f"
+ }
+}

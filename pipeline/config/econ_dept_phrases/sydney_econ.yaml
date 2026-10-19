@@ -1,0 +1,13 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Sydney
+  word_boundary: false
+dept_key: sydney_econ
+exclude_tokens: []
+openalex_inst_id: I129604602
+phrases:
+- School of Economics
+- Discipline of Economics
+- School of Economics and Political Science
+- Discipline of Econometrics and Business Statistics
+window_chars: 80

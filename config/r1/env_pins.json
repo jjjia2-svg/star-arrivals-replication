@@ -1,0 +1,29 @@
+{
+ "schema": "sar.r1.env_pins.v1",
+ "layers": {
+  "py": {
+   "bytes": 182467097,
+   "key": "r1/env/py-246ba11e01ea7cde.tar.gz",
+   "sha256": "246ba11e01ea7cdeb252c158f5c893250597e257180d682bf8b7c2906a89cfc3"
+  },
+  "rmac": {
+   "key": "r1/env/rmac-e58249a0f6446ffa.tar.gz",
+   "sha256": "e58249a0f6446ffab6c6d8d26da26561543f8afecff50efa3865f196cf006fb3",
+   "bytes": 259417497
+  },
+  "rcloud": {
+   "key": "r1/env/rcloud-56585fa47a5b7e84.tar.gz",
+   "sha256": "56585fa47a5b7e845fb6a09aebadb7596d19baa86778bbced53b71c56471fb80",
+   "bytes": 243825170
+  },
+  "tex": {
+   "key": "r1/env/tex-0257d653912fb2f3.tar.gz",
+   "sha256": "0257d653912fb2f32039f900cafc321037a030162b3cab361957db65b3f2b632",
+   "bytes": 333545740
+  }
+ },
+ "smoke": {
+  "smoke_rmac_P1_fnfix_math_stats": "EQUAL",
+  "smoke_tex": "OK"
+ }
+}

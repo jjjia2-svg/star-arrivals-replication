@@ -1,0 +1,53 @@
+[driver] start 2026-09-22T16:57:41Z marker=2026_10C par=12 threads=4 host=<host>
+P3cut_pos_chemistry.json: OK
+P3cut_pos_econ.json: OK
+P3cut_pos_math_stats.json: OK
+bootstrap.sh: OK
+driver.env: OK
+driver.sh: OK
+jobs_parallel.txt: OK
+jobs_serial.txt: OK
+p3_afar_pos_chemistry.parquet: OK
+p3_afar_pos_econ.parquet: OK
+p3_afar_pos_math_stats.parquet: OK
+p3_slim_chemistry.parquet: OK
+p3_slim_chemistry_dosebin3.parquet: OK
+p3_slim_chemistry_p05.parquet: OK
+p3_slim_econ.parquet: OK
+p3_slim_econ_dosebin3.parquet: OK
+p3_slim_econ_p05.parquet: OK
+p3_slim_ev_chemistry.parquet: OK
+p3_slim_ev_econ.parquet: OK
+run_null.R: OK
+run_p3.R: OK
+run_p3_evcl.R: OK
+run_perm.R: OK
+run_predate.R: OK
+MD5_OK 2026-09-22T16:57:41Z
+[serial] P3_fnfix_chemistry start 2026-09-22T16:57:41Z
+SERIAL P3_fnfix_chemistry rc=0 2026-09-22T16:58:33Z
+[serial] P3_econ_fnfix start 2026-09-22T16:58:33Z
+SERIAL P3_econ_fnfix rc=0 2026-09-22T17:00:36Z
+[serial] P3evcl_chemistry start 2026-09-22T17:00:36Z
+SERIAL P3evcl_chemistry rc=0 2026-09-22T17:01:31Z
+[serial] P3evcl_econ start 2026-09-22T17:01:31Z
+SERIAL P3evcl_econ rc=0 2026-09-22T17:04:00Z
+[serial] P3_fnfix_chemistry_pd0 start 2026-09-22T17:04:00Z
+SERIAL P3_fnfix_chemistry_pd0 rc=0 2026-09-22T17:04:52Z
+[serial] P3pd2_chemistry_full start 2026-09-22T17:04:52Z
+SERIAL P3pd2_chemistry_full rc=0 2026-09-22T17:05:57Z
+[serial] P3_econ_fnfix_pd0 start 2026-09-22T17:05:57Z
+SERIAL P3_econ_fnfix_pd0 rc=0 2026-09-22T17:08:02Z
+[serial] P3pd2_econ_full start 2026-09-22T17:08:02Z
+SERIAL P3pd2_econ_full rc=0 2026-09-22T17:10:44Z
+[serial] P3p05_chemistry start 2026-09-22T17:10:44Z
+SERIAL P3p05_chemistry rc=0 2026-09-22T17:11:26Z
+[serial] P3dose3_chemistry start 2026-09-22T17:11:26Z
+SERIAL P3dose3_chemistry rc=0 2026-09-22T17:12:35Z
+[serial] P3p05_econ start 2026-09-22T17:12:35Z
+SERIAL P3p05_econ rc=0 2026-09-22T17:14:10Z
+[serial] P3dose3_econ start 2026-09-22T17:14:10Z
+SERIAL P3dose3_econ rc=0 2026-09-22T17:16:56Z
+[parallel] 171 units, xargs -P 12, 4 threads each, start 2026-09-22T17:16:56Z
+[parallel] end 2026-09-22T18:21:41Z
+[driver] end 2026-09-22T18:21:41Z units=183/183 failed=0 result=ALL_DONE_MARKER_2026_10C

@@ -1,0 +1,47 @@
+$ setup/.venv/bin/python analysis/robustness/sensitivity/build_departure_187.py --field math_stats --frames-dir data/frames --map data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_math_stats.csv --out data/cal2026-10/robustness/departure --stage $TMPDIR/sar_rob_sensitivity/dep_math_stats
+[env] {}
+--- stdout ---
+{
+ "A_dropped_in_frame": [
+  "A5000405788:melbourne",
+  "A5023907914:monash",
+  "A5035138469:monash",
+  "A5044731110:unsw",
+  "A5051533068:monash",
+  "A5052182828:sydney",
+  "A5069315147:unsw",
+  "A5074032970:monash",
+  "A5083769806:uwa",
+  "A5090916445:unsw"
+ ],
+ "B_recoded_in_frame": {
+  "A5083478373:melbourne": 2021,
+  "A5000405788:melbourne": 2025,
+  "A5036133145:monash": 2013,
+  "A5051533068:monash": 2010,
+  "A5035138469:monash": 2015,
+  "A5075602113:monash": 2023,
+  "A5074032970:monash": 2015,
+  "A5023907914:monash": 2018,
+  "A5052182828:sydney": 2021,
+  "A5090916445:unsw": 2008,
+  "A5044731110:unsw": 2016,
+  "A5069315147:unsw": 2016,
+  "A5031984571:uwa": 2015,
+  "A5083769806:uwa": 2013
+ },
+ "noop_control": "BYTE_EQUAL",
+ "afar": {
+  "frame": "data/frames/p3_afar_pos_math_stats.parquet",
+  "events_in_afar": 32,
+  "A_dropped_in_afar": 10,
+  "B_recoded_in_afar": 13,
+  "A_rows": 142629,
+  "B_rows_flipped": 57957
+ }
+}
+DEPARTURE187_BUILD_OK
+
+--- stderr ---
+
+--- rc=0 secs=0.5 ---

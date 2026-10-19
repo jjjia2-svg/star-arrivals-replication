@@ -1,0 +1,4 @@
+[poll 1/96 18:27:05Z] done=0 last='[driver] start 2026-08-15T18:26:23Z '
+[poll 2/96 18:32:13Z] done=0 last='[driver] start 2026-08-15T18:26:23Z JOB1_EXIT=0 '
+[poll 3/96 18:37:21Z] done=1 last=''
+STATUS=DONE  fetched to fetch/ and terminated i-092a27027ed3b4154

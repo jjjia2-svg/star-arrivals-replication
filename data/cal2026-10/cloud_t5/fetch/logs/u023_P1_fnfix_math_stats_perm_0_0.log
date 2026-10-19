@@ -1,0 +1,5 @@
+
+===== permutation p1 P1_fnfix_math_stats events=33 perms=0..0 seed=20260829 =====
+  CONTROL EQUAL: ate=-0.0602841460 se=0.1588201647 == ref (to the gold's 8-decimal rounding)
+  [P1_fnfix_math_stats] perm 0 done (7.9s)
+[P1_fnfix_math_stats] 0..0 完成 -> out_perm/P1_fnfix_math_stats_perm_0_0.csv

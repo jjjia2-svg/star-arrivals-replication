@@ -1,0 +1,450 @@
+{
+ "schema": "sar.r1.stages.v1",
+ "job": "final",
+ "complete": true,
+ "note": "V3-FINAL (W2-FINALJOB). The final job on canon M: unpack the October and current thesis trees; assemble the canon from the pulled J1a/J1b stage sets (digest-checked) and prove custody; run every paper generator (analysis/run_all.sh stages 1, 3est, 3light); the vault sentinel before the repin; the scratch repin (install, replace, sync_clean, repin.py; never in the repo); the sentinel after; compile; words, BOR and draft text; the red-ink diff; the number table; gate 2 and the deliverables in /work/out/final. Every row but verify_inputs, config and custody is a subcommand of pipeline/aws/r1/final_stage.py. config/r1/stages/finalb0.json is this table without the M_ONLY_STAGES rows, with final_stage.B0_SUBST applied (tests/test_r1_final.py). W3-FLIPS sets complete after the review. canon_pack (public package step 13) packs /work/canon_m, proved equal to stage:canon's manifest, into out/canon/canon_r1.tar for data/report/. tree_unpack_r1 and sentinel_r1 grade the hand-rewritten author tree with the post-repin checker and R1 overlay; its reports do not enter gate 2.",
+ "stages": [
+  {
+   "name": "verify_inputs",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/verify_inputs.py",
+   "cmd": "\"$PY\" \"$WORK/verify_inputs.py\" data --job-spec \"$REPO_DIR/config/r1/jobs/final.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/jobs/final.json",
+    "repo:config/r1/input_pins.json"
+   ],
+   "outputs": [
+    "work:prod/verify_inputs"
+   ],
+   "est_min": 10,
+   "needs": [],
+   "resume": "always"
+  },
+  {
+   "name": "config",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/config_check.py",
+   "requires": [
+    "pipeline/lib/r1_config.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/config_check.py\" check --config \"$REPO_DIR/config/r1/M.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/M.json",
+    "repo:pipeline/lib/r1_config.py"
+   ],
+   "outputs": [
+    "work:prod/config"
+   ],
+   "est_min": 2,
+   "needs": [
+    "verify_inputs"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "tree_unpack",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_pack_tree.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" unpack --mode M --repo \"$REPO_DIR\" --record \"$REPO_DIR/config/r1/final_tree.json\" --tar-october /work/in/tree_october.tar --tar-current /work/in/tree_current.tar --current-role current --dest /work/tree --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/final_tree.json",
+    "repo:tools/r1_pack_tree.py"
+   ],
+   "outputs": [
+    "work:prod/tree_unpack"
+   ],
+   "est_min": 5,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "tree_unpack_r1",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_pack_tree.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" unpack --mode M --repo \"$REPO_DIR\" --record \"$REPO_DIR/config/r1/final_tree.json\" --tar-october /work/in/tree_october.tar --tar-current /work/in/tree_r1_author.tar --current-role r1 --dest /work/tree_r1 --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/final_tree.json",
+    "repo:tools/r1_pack_tree.py"
+   ],
+   "outputs": [
+    "work:prod/tree_unpack_r1"
+   ],
+   "est_min": 5,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "canon",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "pipeline/aws/r1/restore_upstream.py",
+    "pipeline/aws/r1/run_stages.py",
+    "tools/r1_canon.py",
+    "tools/verify_manifest.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" canon --mode M --repo \"$REPO_DIR\" --stages j1a=/work/j1a --stages j1b=/work/j1b --layout \"$REPO_DIR/config/r1/canon_layout.json\" --config \"$REPO_DIR/config/r1/M.json\" --paths \"$REPO_DIR/config/r1/paths_aws_m.yaml\" --dest /work/canon_m --bin \"$WORK/bin\" --tsv \"$REPO_DIR/analysis/lib/canon_reads.tsv\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/canon_layout.json",
+    "repo:config/r1/M.json",
+    "repo:config/r1/paths_aws_m.yaml",
+    "repo:analysis/lib/canon_reads.tsv",
+    "repo:analysis/lib/canon.py",
+    "repo:tools/r1_canon.py",
+    "repo:tools/verify_manifest.py",
+    "repo:pipeline/aws/r1/restore_upstream.py",
+    "repo:pipeline/lib/r1_config.py"
+   ],
+   "outputs": [
+    "work:prod/canon"
+   ],
+   "est_min": 15,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "custody",
+   "owner": "F26",
+   "requires": [
+    "tools/r1_custody_spec.py",
+    "tools/verify_cloud_custody.py",
+    "tools/verify_manifest.py"
+   ],
+   "cmd": "mkdir -p \"$STAGE_OUT\" && \"$PY\" \"$REPO_DIR/tools/r1_custody_spec.py\" --cells \"$REPO_DIR/config/r1/cells/M.tsv\" \"$REPO_DIR/config/r1/cells/M_evcl.tsv\" --reports /work/j1a/cells_rmac/files/work/prod/cells_rmac /work/j1a/cells_rcloud/files/work/prod/cells_rcloud /work/j1a/cells_rmac_evcl/files/work/prod/cells_rmac_evcl /work/j1a/cells_rcloud_evcl/files/work/prod/cells_rcloud_evcl --est /work/j1a/cells_rmac/files/work/prod/cells_rmac /work/j1a/cells_rcloud/files/work/prod/cells_rcloud /work/j1a/cells_rmac_evcl/files/work/prod/cells_rmac_evcl /work/j1a/cells_rcloud_evcl/files/work/prod/cells_rcloud_evcl --frames-dir /work/canon_m/frames --gold-dir /work/canon_m/expected --drivers-root \"$REPO_DIR\" --marker /work/j1a_out/RESULT.txt --out \"$STAGE_OUT/custody\" && \"$PY\" \"$REPO_DIR/tools/verify_cloud_custody.py\" --custody \"$STAGE_OUT/custody\" --spec \"$STAGE_OUT/custody/custody_r1.json\" > \"$STAGE_OUT/custody.log\" && grep -qx CUSTODY_OK \"$STAGE_OUT/custody.log\" && \"$PY\" \"$REPO_DIR/tools/verify_manifest.py\" /work/canon_m/MANIFEST.sha256 > \"$STAGE_OUT/manifest_canon.log\" && \"$PY\" \"$REPO_DIR/tools/verify_manifest.py\" /work/j1a/promote/files/work/prod/promote/frames/MANIFEST.sha256 > \"$STAGE_OUT/manifest_frames.log\" && \"$PY\" \"$REPO_DIR/tools/verify_manifest.py\" /work/j1a/promote/files/work/prod/promote/expected/MANIFEST.sha256 > \"$STAGE_OUT/manifest_expected.log\"",
+   "inputs": [
+    "stage:canon",
+    "repo:config/r1/cells/M.tsv",
+    "repo:config/r1/cells/M_evcl.tsv",
+    "repo:tools/r1_custody_spec.py",
+    "repo:tools/verify_cloud_custody.py",
+    "repo:tools/verify_manifest.py",
+    "repo:analysis/lib/compare_json.py",
+    "repo:analysis/estimation"
+   ],
+   "outputs": [
+    "work:prod/custody"
+   ],
+   "est_min": 5,
+   "needs": [
+    "canon"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "paper",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "analysis/run_all.sh"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" paper --mode M --repo \"$REPO_DIR\" --paths \"$REPO_DIR/config/r1/paths_aws_m.yaml\" --run-stages 1,3est,3light --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "repo:analysis/run_all.sh",
+    "repo:analysis/paper",
+    "repo:analysis/lib",
+    "repo:config/r1/paths_aws_m.yaml",
+    "repo:config/r1/counts_B0.json",
+    "repo:pipeline/lib/r1_config.py",
+    "repo:tools/r1_canon.py",
+    "repo:tools/verify_manifest.py",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:r1/legacy/legacy_multiplex/",
+    "env:py",
+    "env:rmac",
+    "env:tex"
+   ],
+   "outputs": [
+    "repo:output/paper",
+    "repo:output/logs",
+    "work:prod/paper"
+   ],
+   "est_min": 40,
+   "needs": [
+    "config",
+    "custody"
+   ]
+  },
+  {
+   "name": "sentinel_pre",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" sentinel --mode M --phase pre --repo \"$REPO_DIR\" --check-paper \"$REPO_DIR/tools/check_paper.py\" --paths \"$REPO_DIR/config/r1/paths_aws_m.yaml\" --tree /work/tree/current --tree-kind base_2026_10_11 --record \"$REPO_DIR/config/r1/final_tree.json\" --role current --gold /work/canon_m/expected/P1_econ_fnfix.json --thesis-report /data/legacy/thesis/thesis_report --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:paper",
+    "stage:tree_unpack",
+    "repo:tools/check_paper.py",
+    "repo:analysis/lib",
+    "repo:config/r1/final_tree.json",
+    "repo:config/r1/paths_aws_m.yaml",
+    "data:r1/legacy/legacy_thesis/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/sentinel_pre"
+   ],
+   "est_min": 5,
+   "needs": [
+    "tree_unpack",
+    "paper"
+   ]
+  },
+  {
+   "name": "repin",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/repin_thesis_2026-10/install.py",
+    "tools/repin_thesis_2026-10/replace.py",
+    "tools/repin_thesis_2026-10/repin.py",
+    "tools/repin_thesis_2026-10/repin_lib.py",
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" repin --mode M --repo \"$REPO_DIR\" --commit \"$COMMIT\" --paper \"$REPO_DIR/config/r1/final_paper.json\" --record \"$REPO_DIR/config/r1/final_tree.json\" --role current --tree /work/tree/current --scratch /work/scratch --out-dir \"$REPO_DIR/output/paper\" --old-gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --new-gold /work/canon_m/expected/P1_econ_fnfix.json --paths \"$REPO_DIR/config/r1/paths_aws_m.yaml\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:paper",
+    "stage:tree_unpack",
+    "stage:sentinel_pre",
+    "repo:tools/repin_thesis_2026-10",
+    "repo:tools/check_paper.py",
+    "repo:analysis/expected/P1_econ_fnfix.json",
+    "repo:config/r1/final_paper.json",
+    "repo:config/r1/final_tree.json",
+    "repo:config/r1/paths_aws_m.yaml",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/repin"
+   ],
+   "est_min": 10,
+   "needs": [
+    "sentinel_pre"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "sentinel_post",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" sentinel --mode M --phase post --repo /work/scratch/repo --check-paper /work/scratch/repo/tools/check_paper.py --paths \"$WORK/prod/repin/scratch_paths.yaml\" --tree /work/scratch/tree --tree-kind base_2026_10_11 --ledger-date-from \"$WORK/prod/repin/repin.json\" --gold /work/canon_m/expected/P1_econ_fnfix.json --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:repin",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/sentinel_post"
+   ],
+   "est_min": 5,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "sentinel_r1",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" sentinel --mode M --phase post --repo /work/scratch/repo --check-paper /work/scratch/repo/tools/check_paper.py --paths \"$WORK/prod/repin/scratch_paths.yaml\" --tree /work/tree_r1/current --tree-kind base_2026_10_11 --profile r1 --record \"$REPO_DIR/config/r1/final_tree.json\" --role r1 --gold /work/canon_m/expected/P1_econ_fnfix.json --out /work/out/sentinel_r1",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:repin",
+    "env:py",
+    "stage:tree_unpack_r1",
+    "repo:config/r1/final_tree.json"
+   ],
+   "outputs": [
+    "work:out/sentinel_r1"
+   ],
+   "est_min": 5,
+   "needs": [
+    "repin",
+    "tree_unpack_r1"
+   ]
+  },
+  {
+   "name": "compile",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" compile --mode M --october /work/tree/october --scratch /work/scratch/tree --build /work/build --max-extra 4 --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "env:tex"
+   ],
+   "outputs": [
+    "work:prod/compile"
+   ],
+   "est_min": 25,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "texts",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/count_words.py",
+    "tools/check_draft_text.py",
+    "tools/count_bor.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" texts --mode M --repo \"$REPO_DIR\" --compile \"$WORK/prod/compile\" --reference /work/tree/october/reference/main_clean.pdf --record \"$REPO_DIR/config/r1/final_tree.json\" --role current --tree-current /work/tree/current --scratch /work/scratch/tree --thesis-report /data/legacy/thesis/thesis_report --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "stage:compile",
+    "repo:tools/count_words.py",
+    "repo:tools/check_draft_text.py",
+    "repo:tools/count_bor.py",
+    "repo:config/r1/final_tree.json",
+    "data:r1/legacy/legacy_thesis/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/texts"
+   ],
+   "est_min": 5,
+   "needs": [
+    "compile"
+   ]
+  },
+  {
+   "name": "red",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/red_diff_2026-10.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" red --mode M --repo \"$REPO_DIR\" --october /work/tree/october --scratch /work/scratch/tree --compile \"$WORK/prod/compile\" --reference /work/tree/october/reference/main_clean.pdf --build /work/build/red --stem thesis_r1 --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "stage:compile",
+    "repo:tools/red_diff_2026-10.py",
+    "env:py",
+    "env:tex"
+   ],
+   "outputs": [
+    "work:prod/red"
+   ],
+   "est_min": 30,
+   "needs": [
+    "compile"
+   ]
+  },
+  {
+   "name": "numbers",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_number_diff.py",
+    "tools/check_paper.py",
+    "tools/repin_thesis_2026-10/repin_lib.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" numbers --mode M --repo \"$REPO_DIR\" --old /data/ref/october/ledgers_base_tree --old-date 2026-10-23 --new /work/scratch/tree --ledger-date-from \"$WORK/prod/repin/repin.json\" --check-paper \"$REPO_DIR/tools/check_paper.py\" --gold /work/canon_m/expected/P1_econ_fnfix.json --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:repin",
+    "repo:tools/r1_number_diff.py",
+    "repo:tools/check_paper.py",
+    "repo:tools/repin_thesis_2026-10",
+    "data:r1/ref/october/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/numbers"
+   ],
+   "est_min": 5,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "gate2",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_pack_tree.py",
+    "tools/r1_number_diff.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" gate2 --mode M --repo \"$REPO_DIR\" --paper \"$REPO_DIR/config/r1/final_paper.json\" --expected-b0 \"$REPO_DIR/config/r1/final_b0_expected.json\" --prod \"$WORK/prod\" --output-paper \"$REPO_DIR/output/paper\" --ref-output-paper /data/ref/october/output_paper --tree-current /work/tree/current --scratch /work/scratch/tree --final-dir /work/out/final --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:canon",
+    "stage:custody",
+    "stage:paper",
+    "stage:sentinel_pre",
+    "stage:repin",
+    "stage:sentinel_post",
+    "stage:compile",
+    "stage:texts",
+    "stage:red",
+    "stage:numbers",
+    "repo:config/r1/final_paper.json",
+    "repo:config/r1/final_b0_expected.json",
+    "repo:tools/r1_pack_tree.py",
+    "data:r1/ref/october/",
+    "repo:tools/r1_number_diff.py"
+   ],
+   "outputs": [
+    "work:prod/gate2",
+    "work:out/final"
+   ],
+   "est_min": 5,
+   "needs": [
+    "sentinel_post",
+    "texts",
+    "red",
+    "numbers"
+   ]
+  },
+  {
+   "name": "canon_pack",
+   "owner": "public-13",
+   "requires": [
+    "tools/r1_canon_pack.py"
+   ],
+   "cmd": "\"$PY\" \"$REPO_DIR/tools/r1_canon_pack.py\" pack --canon /work/canon_m --expect /work/prod/canon/canon_manifest.sha256 --xz cal_intermediates/pairs_unified.csv --out /work/out/canon && tar --sort=name --mtime=@0 --owner=0 --group=0 --numeric-owner -cf /work/out/canon/custody_inputs_r1.tar -C / work/j1a/cells_rmac/files/work/prod/cells_rmac work/j1a/cells_rcloud/files/work/prod/cells_rcloud work/j1a/cells_rmac_evcl/files/work/prod/cells_rmac_evcl work/j1a/cells_rcloud_evcl/files/work/prod/cells_rcloud_evcl work/j1a_out/RESULT.txt",
+   "inputs": [
+    "stage:canon",
+    "repo:tools/r1_canon_pack.py"
+   ],
+   "outputs": [
+    "work:out/canon"
+   ],
+   "est_min": 20,
+   "needs": [
+    "canon"
+   ]
+  }
+ ]
+}

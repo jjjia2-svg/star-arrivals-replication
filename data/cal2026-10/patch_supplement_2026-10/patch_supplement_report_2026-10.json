@@ -1,0 +1,47 @@
+{
+ "generated": "2026-09-23T02:39:27",
+ "persons": [
+  "A5046503193",
+  "A5065862323"
+ ],
+ "api_key_present": true,
+ "source_report": "data/cal2026-10/frames_econ/build_report_econ920_2026-10.json",
+ "select": "id,publication_year,fwci,cited_by_count,primary_topic,authorships",
+ "per_author": {
+  "A5046503193": {
+   "works": 149,
+   "distinct_works": 149,
+   "with_year": 149,
+   "with_fwci": 53,
+   "with_subfield": 149,
+   "snapshot_overlap": {
+    "measured": true,
+    "snapshot_works_of_author": 149,
+    "api_works": 149,
+    "in_both": 149,
+    "api_only": 0,
+    "snapshot_only": 0
+   }
+  },
+  "A5065862323": {
+   "works": 41,
+   "distinct_works": 41,
+   "with_year": 40,
+   "with_fwci": 18,
+   "with_subfield": 41,
+   "snapshot_overlap": {
+    "measured": true,
+    "snapshot_works_of_author": 41,
+    "api_works": 41,
+    "in_both": 41,
+    "api_only": 0,
+    "snapshot_only": 0
+   }
+  }
+ },
+ "rows": 190,
+ "outputs": {
+  "works_by_author_supplement_2026-10.jsonl": "75d11f04c2acc1111826befa47a3a73b99a89fde56f335df6a3a01b23f4acd71",
+  "api_request_log_patch_supplement_2026-10.jsonl": "4f7955e041a4cd30eed6a58edfcf337e57e263a1234eb6e7bfacb11f82db1e11"
+ }
+}

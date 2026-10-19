@@ -1,0 +1,1526 @@
+{
+ "group": "battery",
+ "generated": "2026-09-23",
+ "repo_head": "7bf38f9055e59087b21404209adf9b5ed2a56255",
+ "canon": "cal2026-10 (promoted 73777aa): data/frames October frames (econ 113 / chemistry 38 / math_stats 33 events), analysis/expected October local golds",
+ "design_authority": "<legacy>/the author's design record of 2026-09-22 (private archive) (D1-D8); this group = Panel 1 battery T2-T4 + LOEO (T1), T7 leaver, verified pool (D4 check)",
+ "environment": {
+  "R": "R version 4.5.1 (2025-06-13)",
+  "DIDmultiplegtDYN": "2.3.3",
+  "python": "3.12.13",
+  "BATTERY_JOBS": 4
+ },
+ "script_edits": {
+  "analysis/robustness/battery_2026-08-29/run_all_battery.sh": "OUTDIR=\"${SAR_ROBUST_OUTDIR:-data/robustness_2026-08-29}\" (old value = default); the two python heredocs (LOEO ranked summary, MANIFEST) read the exported OUTDIR instead of the literal path. No estimation line, control or frame path changed. Its REPO_AUTHORED pin in tests/test_verbatim_pipeline.py is now STALE (ab6e2c82... -> b38ac643...); tests were not edited — run `bash tools/repin.sh` to refresh.",
+  "analysis/robustness/verified_pool/run_verified_pool.sh": "OUT=\"${SAR_ROBUST_OUTDIR:-data/robustness_2026-09-13_verified_pool}\" (old value = default). Not pinned.",
+  "analysis/robustness/verified_pool/build_verified_pool.py": "OUT = REPO / os.environ.get(\"SAR_ROBUST_OUTDIR\", \"data/robustness_2026-09-13_verified_pool\") (+ import os). Not pinned.",
+  "analysis/robustness/battery_2026-08-29/run_leaver.sh": "no edit needed (already reads $SAR_OUT)"
+ },
+ "new_files": {
+  "analysis/robustness/verified_pool/measure_d4_cal2026-10.py": "D4 measurement (builder's identity rule applied to the 08-09 and October rosters)",
+  "tests/test_verified_pool_cal2026_10.py": "6 tests: rosters 920/1008/88, no frame person off the October roster (P1, P2), the 74 off-08-09 persons are exactly October additions (P1, P2), report verdict pinned"
+ },
+ "inputs_sha256": {
+  "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+  "data/frames/p1_frame_chemistry.csv": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+  "data/frames/p1_frame_math_stats.csv": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+  "data/frames/p1_events_ledger_econ.csv": "2b0b21b53be6f8a68cd19326a5df4ef3314d1e1a232315918dff2e5ccb385767",
+  "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+  "analysis/expected/P1_econ_fnfix.json": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+  "analysis/expected/P2_econ_fnfix.json": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+  "analysis/robustness/battery_2026-08-29/run_p1_variant.R": "c9dd13c082e68b07d4b2c9e1ccd33c5aff55227f79cc83c3999be76f8aaa204a",
+  "analysis/estimation/run_p1.R": "d5423982ecbe96135066e99b32c6f543a6c74669deacbc57a7e575c28a1b6ea6",
+  "analysis/estimation/run_p2.R": "fc3c20970ffb52b2cfa72dfa9efbfa4f8320a21a30a74a30e6d27651e60ce44b",
+  "analysis/robustness/battery_2026-08-29/run_all_battery.sh": "b38ac643cd0c6ceac4e7f54032dbff44025055415b522d2d80ceaf8c58956d85",
+  "analysis/robustness/battery_2026-08-29/run_leaver.sh": "366e3724ea4c367f9bcfd460223ff5926ee44f21d2859ad3863d1bbe6504c622",
+  "analysis/robustness/verified_pool/run_verified_pool.sh": "6b1a865d94c4d6a446bf9d06e43fe4706a7a398b820834c83d7244a15128bd81",
+  "analysis/robustness/verified_pool/build_verified_pool.py": "71608f9b8962d12ea19b717b43710776117ed60f52dc7026744244f0d5020682",
+  "analysis/robustness/verified_pool/measure_d4_cal2026-10.py": "0642c6a38315824b8c65abf4cbff0fa1d745dfcda0695222b4237266ac3eff6d",
+  "data/raw_verified/roster_econ_verified.parquet": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "data/cal2026-10/roster_econ_verified_2026-10.parquet": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+  "data/cal2026-10/roster_added_2026-10.csv": "0a3f9f75e376eba5df2a7f5ee658823517e441b1c98396b6f5ce3ca636c03c58",
+  "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8"
+ },
+ "controls": {
+  "battery_control_full_none_vs_P1_econ_fnfix": {
+   "verdict": "EQUAL",
+   "log_line": true
+  },
+  "battery_control_loeo_NONE_vs_P1_econ_fnfix_union": {
+   "verdict": "EQUAL",
+   "note": "union channel of the gold, compared by the script"
+  },
+  "leaver_control_full_none_vs_P1_econ_fnfix": {
+   "verdict": "EQUAL",
+   "log_line": true
+  },
+  "verified_pool_control_P1_econ_fnfix": {
+   "verdict": "EQUAL"
+  },
+  "verified_pool_control_P2_econ_fnfix": {
+   "verdict": "EQUAL"
+  },
+  "verified_pool_builder_gate1_positive_control": {
+   "verdict": "STOP",
+   "detail": "build_verified_pool.py (unchanged apart from the output override) reads the 2026-08-09 roster (920 author_ids); on the October frames its gate 1 (every roster-route person on the verified roster) raises AssertionError: 'f1: 66 roster-route persons not on the verified roster'. Not fixed; recorded. Those 66 (74 persons in total across routes, identical set in Panel 2) are all October D3 roster additions (see d4_measurement). No filtered frames / build_report.json were produced, so run_verified_pool.sh (which requires build_report.json) was not run; its control and estimate commands were run verbatim by hand (runlog_2026-09-23.log)."
+  }
+ },
+ "battery": {
+  "outdir": "data/cal2026-10/robustness/battery",
+  "log": "data/cal2026-10/robustness/battery/runlog_2026-08-29.log",
+  "BATTERY_OK": true,
+  "CONTROLS_EQUAL_2_of_2": true,
+  "loeo": {
+   "cells": 113,
+   "all_status_OK": true,
+   "events_enumerated_from": "data/frames/p1_frame_econ.csv (sorted unique event_id, computed at run time by run_all_battery.sh; no hard-coded list — the script's header comment still says '116', text only)",
+   "events_in_frame": 113,
+   "loeo_events_equal_frame_events": true,
+   "canon_union": {
+    "status": "OK",
+    "ate": -0.3683824,
+    "se": 0.06590365,
+    "lb": -0.49755118,
+    "ub": -0.23921362,
+    "p_joint_placebo": 0.00277072,
+    "p_joint_effects": 6.58347394e-08,
+    "obs": 62188,
+    "rels": 6527,
+    "rels_with_dose": 5981,
+    "persons": 814,
+    "events": 113
+   },
+   "placebo_p_min": 0.00134888,
+   "placebo_p_max": 0.0111527,
+   "n_removals_with_placebo_p_gt_0.05": 0,
+   "n_removals_with_placebo_p_gt_0.10": 0,
+   "ate_min": -0.39696031,
+   "ate_max": -0.34526926,
+   "n_removals_with_ate_ge_0": 0,
+   "top10_by_placebo_p": [
+    {
+     "rank_by_placebo_p": "1",
+     "event_id": "A5086835452:2017",
+     "star_id": "A5086835452",
+     "school": "uq",
+     "arrival_year": "2017",
+     "ate": "-0.36907068",
+     "se": "0.06740984",
+     "p_joint_placebo": "0.0111527",
+     "delta_ate_vs_canon": "-0.0006882799999999856",
+     "delta_p_placebo_vs_canon": "0.00838198"
+    },
+    {
+     "rank_by_placebo_p": "2",
+     "event_id": "A5042125848:2017",
+     "star_id": "A5042125848",
+     "school": "monash",
+     "arrival_year": "2017",
+     "ate": "-0.3691029",
+     "se": "0.06588409",
+     "p_joint_placebo": "0.0062209",
+     "delta_ate_vs_canon": "-0.0007205000000000128",
+     "delta_p_placebo_vs_canon": "0.0034501799999999997"
+    },
+    {
+     "rank_by_placebo_p": "3",
+     "event_id": "A5015268530:2021",
+     "star_id": "A5015268530",
+     "school": "monash",
+     "arrival_year": "2021",
+     "ate": "-0.3773816",
+     "se": "0.06678929",
+     "p_joint_placebo": "0.0052405",
+     "delta_ate_vs_canon": "-0.008999199999999985",
+     "delta_p_placebo_vs_canon": "0.0024697800000000004"
+    },
+    {
+     "rank_by_placebo_p": "4",
+     "event_id": "A5059554264:2021",
+     "star_id": "A5059554264",
+     "school": "monash",
+     "arrival_year": "2021",
+     "ate": "-0.39696031",
+     "se": "0.06946324",
+     "p_joint_placebo": "0.00480755",
+     "delta_ate_vs_canon": "-0.028577909999999984",
+     "delta_p_placebo_vs_canon": "0.00203683"
+    },
+    {
+     "rank_by_placebo_p": "5",
+     "event_id": "A5008208999:2005",
+     "star_id": "A5008208999",
+     "school": "unsw",
+     "arrival_year": "2005",
+     "ate": "-0.36995108",
+     "se": "0.06606779",
+     "p_joint_placebo": "0.00461326",
+     "delta_ate_vs_canon": "-0.001568679999999989",
+     "delta_p_placebo_vs_canon": "0.0018425400000000001"
+    },
+    {
+     "rank_by_placebo_p": "6",
+     "event_id": "A5018518935:2003",
+     "star_id": "A5018518935",
+     "school": "monash",
+     "arrival_year": "2003",
+     "ate": "-0.36868138",
+     "se": "0.06623886",
+     "p_joint_placebo": "0.00455581",
+     "delta_ate_vs_canon": "-0.00029898000000000424",
+     "delta_p_placebo_vs_canon": "0.0017850900000000005"
+    },
+    {
+     "rank_by_placebo_p": "7",
+     "event_id": "A5059428122:2021",
+     "star_id": "A5059428122",
+     "school": "monash",
+     "arrival_year": "2021",
+     "ate": "-0.37470116",
+     "se": "0.06738673",
+     "p_joint_placebo": "0.0043701",
+     "delta_ate_vs_canon": "-0.006318759999999979",
+     "delta_p_placebo_vs_canon": "0.00159938"
+    },
+    {
+     "rank_by_placebo_p": "8",
+     "event_id": "A5047755944:2011",
+     "star_id": "A5047755944",
+     "school": "melbourne",
+     "arrival_year": "2011",
+     "ate": "-0.38095675",
+     "se": "0.06718497",
+     "p_joint_placebo": "0.00401732",
+     "delta_ate_vs_canon": "-0.012574350000000012",
+     "delta_p_placebo_vs_canon": "0.0012465999999999996"
+    },
+    {
+     "rank_by_placebo_p": "9",
+     "event_id": "A5008855963:2011",
+     "star_id": "A5008855963",
+     "school": "monash",
+     "arrival_year": "2011",
+     "ate": "-0.37128523",
+     "se": "0.06574186",
+     "p_joint_placebo": "0.00399072",
+     "delta_ate_vs_canon": "-0.002902830000000023",
+     "delta_p_placebo_vs_canon": "0.0012199999999999997"
+    },
+    {
+     "rank_by_placebo_p": "10",
+     "event_id": "A5079006965:2011",
+     "star_id": "A5079006965",
+     "school": "uts",
+     "arrival_year": "2011",
+     "ate": "-0.37564379",
+     "se": "0.06653858",
+     "p_joint_placebo": "0.00382498",
+     "delta_ate_vs_canon": "-0.007261389999999979",
+     "delta_p_placebo_vs_canon": "0.00105426"
+    }
+   ],
+   "ranked_csv": "data/cal2026-10/robustness/battery/loeo_ranked.csv",
+   "ranked_csv_sha256": "3f9bf4b451ebeaf2832dae038040e267ff458ba5962d59f493ff9719ac897596",
+   "old_canon_2026-08-28": {
+    "cells": 116,
+    "placebo_p_max": 0.03323228,
+    "n_removals_with_placebo_p_gt_0.05": 0,
+    "top3": [
+     [
+      "A5086835452:2017",
+      "uq",
+      "0.03323228"
+     ],
+     [
+      "A5042125848:2017",
+      "monash",
+      "0.01774482"
+     ],
+     [
+      "A5024973435:2013",
+      "sydney",
+      "0.01671977"
+     ]
+    ]
+   }
+  }
+ },
+ "cells": {
+  "P1bnd0_econ": {
+   "file": "data/cal2026-10/robustness/battery/P1bnd0_econ.json",
+   "sha256": "9daee0b82bdde9da735db9dd84fe89b68b32dbf34909388e92de26923eb2a91c",
+   "label": "P1bnd0_econ",
+   "variant": "fill0",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "filled_rows": 9609,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.54469292,
+     "se": 0.06274877,
+     "lb": -0.66767825,
+     "ub": -0.42170759,
+     "p_joint_placebo": 0.00012049,
+     "p_joint_effects": 0,
+     "obs": 71797,
+     "rels": 6527,
+     "rels_with_dose": 5981,
+     "persons": 814,
+     "events": 113
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.60908508,
+     "se": 0.08836323,
+     "lb": -0.78227383,
+     "ub": -0.43589633,
+     "p_joint_placebo": 0.02543203,
+     "p_joint_effects": 9.86988269e-14,
+     "obs": 27104,
+     "rels": 2464,
+     "rels_with_dose": 2328,
+     "persons": 520,
+     "events": 104
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.54487996,
+     "se": 0.07600125,
+     "lb": -0.69383967,
+     "ub": -0.39592025,
+     "p_joint_placebo": 0.00061023,
+     "p_joint_effects": 3.33066907e-16,
+     "obs": 52283,
+     "rels": 4753,
+     "rels_with_dose": 4293,
+     "persons": 766,
+     "events": 112
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.52900634,
+    "se": 0.04807959,
+    "lb": -0.6232406,
+    "ub": -0.43477209,
+    "p_joint_placebo": 0.00095575,
+    "p_joint_effects": 0,
+    "obs": 116204,
+    "rels": 10564,
+    "rels_with_dose": 8915,
+    "persons": 1031,
+    "events": 116
+   },
+   "old_file": "data/robustness_2026-08-29/P1bnd0_econ.json"
+  },
+  "P1bnd0_chemistry": {
+   "file": "data/cal2026-10/robustness/battery/P1bnd0_chemistry.json",
+   "sha256": "de7c2f2ffc5bdd43cd86262ae74ba74d945f5538e1a6816018d98a7b59cbe363",
+   "label": "P1bnd0_chemistry",
+   "variant": "fill0",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "filled_rows": 2447,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.29311719,
+     "se": 0.05876222,
+     "lb": -0.40828903,
+     "ub": -0.17794535,
+     "p_joint_placebo": 0.7435625,
+     "p_joint_effects": 1.10467786e-06,
+     "obs": 29414,
+     "rels": 2674,
+     "rels_with_dose": 2514,
+     "persons": 463,
+     "events": 38
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.17483724,
+     "se": 0.12575607,
+     "lb": -0.4213146,
+     "ub": 0.07164013,
+     "p_joint_placebo": 0.60889587,
+     "p_joint_effects": 0.02902795,
+     "obs": 18997,
+     "rels": 1727,
+     "rels_with_dose": 1680,
+     "persons": 213,
+     "events": 38
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.31980316,
+     "se": 0.07151417,
+     "lb": -0.45996836,
+     "ub": -0.17963797,
+     "p_joint_placebo": 0.85333923,
+     "p_joint_effects": 3.28162443e-08,
+     "obs": 15257,
+     "rels": 1387,
+     "rels_with_dose": 1249,
+     "persons": 452,
+     "events": 38
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.26209311,
+    "se": 0.04611104,
+    "lb": -0.35246909,
+    "ub": -0.17171713,
+    "p_joint_placebo": 0.2699079,
+    "p_joint_effects": 2.12161126e-06,
+    "obs": 48477,
+    "rels": 4407,
+    "rels_with_dose": 3937,
+    "persons": 480,
+    "events": 38
+   },
+   "old_file": "data/robustness_2026-08-29/P1bnd0_chemistry.json"
+  },
+  "P1bnd0_math_stats": {
+   "file": "data/cal2026-10/robustness/battery/P1bnd0_math_stats.json",
+   "sha256": "751b5fc0fa514f28f8b4b672d0b995fce24a7c4a0bfefdc16f6c12d742c8774e",
+   "label": "P1bnd0_math_stats",
+   "variant": "fill0",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "filled_rows": 2737,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.20479491,
+     "se": 0.13027643,
+     "lb": -0.46013203,
+     "ub": 0.0505422,
+     "p_joint_placebo": 0.33329612,
+     "p_joint_effects": 8.02172283e-06,
+     "obs": 18854,
+     "rels": 1714,
+     "rels_with_dose": 1185,
+     "persons": 441,
+     "events": 33
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.11793427,
+     "se": 0.17594043,
+     "lb": -0.46277117,
+     "ub": 0.22690264,
+     "p_joint_placebo": 0.58777556,
+     "p_joint_effects": 0.50761258,
+     "obs": 4004,
+     "rels": 364,
+     "rels_with_dose": 310,
+     "persons": 171,
+     "events": 29
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.22386648,
+     "se": 0.14952022,
+     "lb": -0.51692072,
+     "ub": 0.06918777,
+     "p_joint_placebo": 0.3589765,
+     "p_joint_effects": 2.428e-05,
+     "obs": 16181,
+     "rels": 1471,
+     "rels_with_dose": 977,
+     "persons": 427,
+     "events": 33
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.30276224,
+    "se": 0.11068792,
+    "lb": -0.51970658,
+    "ub": -0.0858179,
+    "p_joint_placebo": 0.56511918,
+    "p_joint_effects": 2.08330179e-06,
+    "obs": 23045,
+    "rels": 2095,
+    "rels_with_dose": 1398,
+    "persons": 457,
+    "events": 33
+   },
+   "old_file": "data/robustness_2026-08-29/P1bnd0_math_stats.json"
+  },
+  "P1bndmean_econ": {
+   "file": "data/cal2026-10/robustness/battery/P1bndmean_econ.json",
+   "sha256": "c7becff55f70780ad3982b7e0b97c822032ffa340c08028f72ffddc2e5e60b8d",
+   "label": "P1bndmean_econ",
+   "variant": "fillmean",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "filled_rows": 9587,
+   "all_na_persons": 2,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.17882715,
+     "se": 0.05008289,
+     "lb": -0.27698782,
+     "ub": -0.08066649,
+     "p_joint_placebo": 0.00384346,
+     "p_joint_effects": 2.065e-05,
+     "obs": 71775,
+     "rels": 6527,
+     "rels_with_dose": 5981,
+     "persons": 814,
+     "events": 113
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.28695678,
+     "se": 0.07563748,
+     "lb": -0.43520351,
+     "ub": -0.13871005,
+     "p_joint_placebo": 0.2005559,
+     "p_joint_effects": 2.85550118e-06,
+     "obs": 27104,
+     "rels": 2464,
+     "rels_with_dose": 2328,
+     "persons": 520,
+     "events": 104
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.14245964,
+     "se": 0.0602519,
+     "lb": -0.26055119,
+     "ub": -0.02436809,
+     "p_joint_placebo": 0.09849742,
+     "p_joint_effects": 0.00315214,
+     "obs": 52261,
+     "rels": 4753,
+     "rels_with_dose": 4293,
+     "persons": 766,
+     "events": 112
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.07643427,
+    "se": 0.03810352,
+    "lb": -0.1511158,
+    "ub": -0.00175274,
+    "p_joint_placebo": 0.00295071,
+    "p_joint_effects": 0.03157021,
+    "obs": 115808,
+    "rels": 10564,
+    "rels_with_dose": 8915,
+    "persons": 1031,
+    "events": 116
+   },
+   "old_file": "data/robustness_2026-08-29/P1bndmean_econ.json"
+  },
+  "P1bndmean_chemistry": {
+   "file": "data/cal2026-10/robustness/battery/P1bndmean_chemistry.json",
+   "sha256": "e1fd1684bf246c273a6883a8b8e4c5d9315cfb4654321645b3173344707d3202",
+   "label": "P1bndmean_chemistry",
+   "variant": "fillmean",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "filled_rows": 2447,
+   "all_na_persons": 0,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.16951308,
+     "se": 0.05941634,
+     "lb": -0.28596695,
+     "ub": -0.0530592,
+     "p_joint_placebo": 0.63576408,
+     "p_joint_effects": 0.0004138,
+     "obs": 29414,
+     "rels": 2674,
+     "rels_with_dose": 2514,
+     "persons": 463,
+     "events": 38
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.01668053,
+     "se": 0.10902203,
+     "lb": -0.23035978,
+     "ub": 0.19699872,
+     "p_joint_placebo": 0.76937442,
+     "p_joint_effects": 0.50849211,
+     "obs": 18997,
+     "rels": 1727,
+     "rels_with_dose": 1680,
+     "persons": 213,
+     "events": 38
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.18874535,
+     "se": 0.07388691,
+     "lb": -0.33356102,
+     "ub": -0.04392967,
+     "p_joint_placebo": 0.56999699,
+     "p_joint_effects": 4.209e-05,
+     "obs": 15257,
+     "rels": 1387,
+     "rels_with_dose": 1249,
+     "persons": 452,
+     "events": 38
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.1145294,
+    "se": 0.0421939,
+    "lb": -0.19722792,
+    "ub": -0.03183089,
+    "p_joint_placebo": 0.95287835,
+    "p_joint_effects": 0.02057235,
+    "obs": 48455,
+    "rels": 4407,
+    "rels_with_dose": 3937,
+    "persons": 480,
+    "events": 38
+   },
+   "old_file": "data/robustness_2026-08-29/P1bndmean_chemistry.json"
+  },
+  "P1bndmean_math_stats": {
+   "file": "data/cal2026-10/robustness/battery/P1bndmean_math_stats.json",
+   "sha256": "6cece7c9917be5d46701176ecb4880e6060e71c9f318828779d98dc5d49d674a",
+   "label": "P1bndmean_math_stats",
+   "variant": "fillmean",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "filled_rows": 2726,
+   "all_na_persons": 1,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.01294924,
+     "se": 0.12334638,
+     "lb": -0.2547037,
+     "ub": 0.22880521,
+     "p_joint_placebo": 0.4777674,
+     "p_joint_effects": 0.00362595,
+     "obs": 18843,
+     "rels": 1714,
+     "rels_with_dose": 1185,
+     "persons": 441,
+     "events": 33
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.06215568,
+     "se": 0.16203098,
+     "lb": -0.37973056,
+     "ub": 0.2554192,
+     "p_joint_placebo": 0.61967067,
+     "p_joint_effects": 0.69876983,
+     "obs": 4004,
+     "rels": 364,
+     "rels_with_dose": 310,
+     "persons": 171,
+     "events": 29
+    },
+    "dept": {
+     "status": "OK",
+     "ate": 0.01599518,
+     "se": 0.1388216,
+     "lb": -0.25609016,
+     "ub": 0.28808052,
+     "p_joint_placebo": 0.45429221,
+     "p_joint_effects": 0.00424843,
+     "obs": 16170,
+     "rels": 1471,
+     "rels_with_dose": 977,
+     "persons": 427,
+     "events": 33
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.02282041,
+    "se": 0.10050126,
+    "lb": -0.21979925,
+    "ub": 0.17415844,
+    "p_joint_placebo": 0.80492198,
+    "p_joint_effects": 0.02065526,
+    "obs": 23034,
+    "rels": 2095,
+    "rels_with_dose": 1398,
+    "persons": 457,
+    "events": 33
+   },
+   "old_file": "data/robustness_2026-08-29/P1bndmean_math_stats.json"
+  },
+  "P1lvl_econ": {
+   "file": "data/cal2026-10/robustness/battery/P1lvl_econ.json",
+   "sha256": "075a37c9e4206da88712ff178a4fba44e5aefa8e9e6f40b7f49450c662a56fb7",
+   "label": "P1lvl_econ",
+   "variant": "levels",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -3.4561709,
+     "se": 0.87141007,
+     "lb": -5.16410324,
+     "ub": -1.74823855,
+     "p_joint_placebo": 0.00247436,
+     "p_joint_effects": 2.712e-05,
+     "obs": 62188,
+     "rels": 6527,
+     "rels_with_dose": 5981,
+     "persons": 814,
+     "events": 113
+    },
+    "network": {
+     "status": "OK",
+     "ate": -3.30721453,
+     "se": 1.26996323,
+     "lb": -5.79629673,
+     "ub": -0.81813233,
+     "p_joint_placebo": 0.05114983,
+     "p_joint_effects": 0.00131631,
+     "obs": 24385,
+     "rels": 2464,
+     "rels_with_dose": 2328,
+     "persons": 520,
+     "events": 104
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -3.73305361,
+     "se": 1.08188435,
+     "lb": -5.85350798,
+     "ub": -1.61259925,
+     "p_joint_placebo": 0.04555571,
+     "p_joint_effects": 1.399e-05,
+     "obs": 44587,
+     "rels": 4753,
+     "rels_with_dose": 4293,
+     "persons": 766,
+     "events": 112
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.81996282,
+    "se": 1.41968099,
+    "lb": -3.60248643,
+    "ub": 1.96256079,
+    "p_joint_placebo": 0.28980799,
+    "p_joint_effects": 0.86811063,
+    "obs": 92903,
+    "rels": 10564,
+    "rels_with_dose": 8915,
+    "persons": 1031,
+    "events": 116
+   },
+   "old_file": "data/robustness_2026-08-29/P1lvl_econ.json"
+  },
+  "P1lvl_chemistry": {
+   "file": "data/cal2026-10/robustness/battery/P1lvl_chemistry.json",
+   "sha256": "88b4a15d1fc096055eed23fd12b1f2876cadc9d17039d5a244762846db4745a7",
+   "label": "P1lvl_chemistry",
+   "variant": "levels",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -1.09664665,
+     "se": 0.38183932,
+     "lb": -1.84503796,
+     "ub": -0.34825533,
+     "p_joint_placebo": 0.56911451,
+     "p_joint_effects": 1.137e-05,
+     "obs": 26967,
+     "rels": 2674,
+     "rels_with_dose": 2514,
+     "persons": 463,
+     "events": 38
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.43722387,
+     "se": 0.47144416,
+     "lb": -1.36123743,
+     "ub": 0.48678969,
+     "p_joint_placebo": 0.75744239,
+     "p_joint_effects": 0.08911006,
+     "obs": 17842,
+     "rels": 1727,
+     "rels_with_dose": 1680,
+     "persons": 213,
+     "events": 38
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -1.24371,
+     "se": 0.62455571,
+     "lb": -2.46781669,
+     "ub": -0.01960331,
+     "p_joint_placebo": 0.56228516,
+     "p_joint_effects": 5.39812575e-07,
+     "obs": 13569,
+     "rels": 1387,
+     "rels_with_dose": 1249,
+     "persons": 452,
+     "events": 38
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -1.50469426,
+    "se": 0.33495281,
+    "lb": -2.1611897,
+    "ub": -0.84819883,
+    "p_joint_placebo": 0.2644888,
+    "p_joint_effects": 1.237e-05,
+    "obs": 39947,
+    "rels": 4407,
+    "rels_with_dose": 3937,
+    "persons": 480,
+    "events": 38
+   },
+   "old_file": "data/robustness_2026-08-29/P1lvl_chemistry.json"
+  },
+  "P1lvl_math_stats": {
+   "file": "data/cal2026-10/robustness/battery/P1lvl_math_stats.json",
+   "sha256": "a38945f5be9b7def05d82436614e92b36551080b39c92db172edf58783129fa1",
+   "label": "P1lvl_math_stats",
+   "variant": "levels",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.53668949,
+     "se": 1.90620591,
+     "lb": -4.27278442,
+     "ub": 3.19940544,
+     "p_joint_placebo": 0.6173711,
+     "p_joint_effects": 0.01135056,
+     "obs": 16117,
+     "rels": 1714,
+     "rels_with_dose": 1185,
+     "persons": 441,
+     "events": 33
+    },
+    "network": {
+     "status": "OK",
+     "ate": -2.44754978,
+     "se": 1.54953821,
+     "lb": -5.48458886,
+     "ub": 0.5894893,
+     "p_joint_placebo": 0.62047488,
+     "p_joint_effects": 0.42844319,
+     "obs": 3628,
+     "rels": 364,
+     "rels_with_dose": 310,
+     "persons": 171,
+     "events": 29
+    },
+    "dept": {
+     "status": "OK",
+     "ate": 0.2674776,
+     "se": 2.37077818,
+     "lb": -4.37916225,
+     "ub": 4.91411744,
+     "p_joint_placebo": 0.38811348,
+     "p_joint_effects": 0.01316891,
+     "obs": 13635,
+     "rels": 1471,
+     "rels_with_dose": 977,
+     "persons": 427,
+     "events": 33
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -1.33323848,
+    "se": 1.64256746,
+    "lb": -4.55261155,
+    "ub": 1.88613458,
+    "p_joint_placebo": 0.7146392,
+    "p_joint_effects": 0.02177926,
+    "obs": 18371,
+    "rels": 2095,
+    "rels_with_dose": 1398,
+    "persons": 457,
+    "events": 33
+   },
+   "old_file": "data/robustness_2026-08-29/P1lvl_math_stats.json"
+  },
+  "P1nex_econ": {
+   "file": "data/cal2026-10/robustness/battery/P1nex_econ.json",
+   "sha256": "15cd746ecc2c81e0cbff249ecf91f6f9e709acc790ecd801c98f3400b3971174",
+   "label": "P1nex_econ",
+   "variant": "neverexp",
+   "rows_raw": 73073,
+   "rows_kept": 17770,
+   "rows_before_restriction": 71797,
+   "second_exposure_switcher_rels": 4986,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": 0.12414636,
+     "se": 0.1955571,
+     "lb": -0.25913852,
+     "ub": 0.50743124,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 13340,
+     "rels": 3389,
+     "rels_with_dose": 2941,
+     "persons": 814,
+     "events": 113
+    },
+    "network": {
+     "status": "OK",
+     "ate": 0.2745987,
+     "se": 0.29111613,
+     "lb": -0.29597844,
+     "ub": 0.84517584,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 5686,
+     "rels": 1348,
+     "rels_with_dose": 1232,
+     "persons": 487,
+     "events": 100
+    },
+    "dept": {
+     "status": "OK",
+     "ate": 0.04172228,
+     "se": 0.22927197,
+     "lb": -0.40764252,
+     "ub": 0.49108708,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 9167,
+     "rels": 2428,
+     "rels_with_dose": 2052,
+     "persons": 740,
+     "events": 111
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.2076318,
+    "se": 0.21469545,
+    "lb": -0.62842716,
+    "ub": 0.21316355,
+    "p_joint_placebo": null,
+    "p_joint_effects": null,
+    "obs": 8709,
+    "rels": 2601,
+    "rels_with_dose": 1778,
+    "persons": 1031,
+    "events": 110
+   },
+   "old_file": "data/robustness_2026-08-29/P1nex_econ.json"
+  },
+  "P1nex_chemistry": {
+   "file": "data/cal2026-10/robustness/battery/P1nex_chemistry.json",
+   "sha256": "2284908b1785c4f0a922a2512a63fb73f0ccad7b2711d5fefb6a95b86e35dcf2",
+   "label": "P1nex_chemistry",
+   "variant": "neverexp",
+   "rows_raw": 30635,
+   "rows_kept": 8211,
+   "rows_before_restriction": 29414,
+   "second_exposure_switcher_rels": 1980,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.15731229,
+     "se": 0.19829417,
+     "lb": -0.54596171,
+     "ub": 0.23133714,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 6911,
+     "rels": 1243,
+     "rels_with_dose": 1107,
+     "persons": 463,
+     "events": 38
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.17453105,
+     "se": 0.2574868,
+     "lb": -0.6791959,
+     "ub": 0.3301338,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 3495,
+     "rels": 672,
+     "rels_with_dose": 635,
+     "persons": 211,
+     "events": 37
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.14978934,
+     "se": 0.22657303,
+     "lb": -0.59386432,
+     "ub": 0.29428565,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 4826,
+     "rels": 823,
+     "rels_with_dose": 703,
+     "persons": 443,
+     "events": 35
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.05762383,
+    "se": 0.20311727,
+    "lb": -0.45572636,
+    "ub": 0.34047869,
+    "p_joint_placebo": null,
+    "p_joint_effects": null,
+    "obs": 5366,
+    "rels": 1401,
+    "rels_with_dose": 1091,
+    "persons": 480,
+    "events": 35
+   },
+   "old_file": "data/robustness_2026-08-29/P1nex_chemistry.json"
+  },
+  "P1nex_math_stats": {
+   "file": "data/cal2026-10/robustness/battery/P1nex_math_stats.json",
+   "sha256": "ef03d58ceca1e057b947af7f80dfa70be13d42725e573de7805621bdb673435d",
+   "label": "P1nex_math_stats",
+   "variant": "neverexp",
+   "rows_raw": 19910,
+   "rows_kept": 6059,
+   "rows_before_restriction": 18854,
+   "second_exposure_switcher_rels": 864,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": 0.29374621,
+     "se": 0.69267278,
+     "lb": -1.06386749,
+     "ub": 1.65135992,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 4682,
+     "rels": 1011,
+     "rels_with_dose": 623,
+     "persons": 441,
+     "events": 33
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.01312637,
+     "se": 0.40896773,
+     "lb": -0.81468839,
+     "ub": 0.78843565,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 1118,
+     "rels": 208,
+     "rels_with_dose": 163,
+     "persons": 150,
+     "events": 26
+    },
+    "dept": {
+     "status": "OK",
+     "ate": 0.28537996,
+     "se": 0.6994093,
+     "lb": -1.08543708,
+     "ub": 1.65619699,
+     "p_joint_placebo": null,
+     "p_joint_effects": null,
+     "obs": 4003,
+     "rels": 880,
+     "rels_with_dose": 522,
+     "persons": 417,
+     "events": 33
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.23533901,
+    "se": 0.9448504,
+    "lb": -2.08721177,
+    "ub": 1.61653374,
+    "p_joint_placebo": null,
+    "p_joint_effects": null,
+    "obs": 3761,
+    "rels": 934,
+    "rels_with_dose": 515,
+    "persons": 457,
+    "events": 33
+   },
+   "old_file": "data/robustness_2026-08-29/P1nex_math_stats.json"
+  },
+  "P1leave_econ": {
+   "file": "data/cal2026-10/robustness/leaver/P1leave_econ.json",
+   "sha256": "40aad328cc1c6f01b3731d1feca807254096132ec1b9fc987a03abfd45692701",
+   "label": "P1leave_econ",
+   "variant": "fill0leave",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "leave_filled_rows": 2746,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.39402215,
+     "se": 0.06988025,
+     "lb": -0.53098492,
+     "ub": -0.25705939,
+     "p_joint_placebo": 0.00751234,
+     "p_joint_effects": 1.87448266e-06,
+     "obs": 64934,
+     "rels": 6527,
+     "rels_with_dose": 5981,
+     "persons": 814,
+     "events": 113
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.46564227,
+     "se": 0.09726458,
+     "lb": -0.65627735,
+     "ub": -0.2750072,
+     "p_joint_placebo": 0.0451131,
+     "p_joint_effects": 1.09132945e-07,
+     "obs": 24938,
+     "rels": 2464,
+     "rels_with_dose": 2328,
+     "persons": 520,
+     "events": 104
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.38369574,
+     "se": 0.08715155,
+     "lb": -0.55450964,
+     "ub": -0.21288184,
+     "p_joint_placebo": 0.05880483,
+     "p_joint_effects": 0.0003769,
+     "obs": 46918,
+     "rels": 4753,
+     "rels_with_dose": 4293,
+     "persons": 766,
+     "events": 112
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.45236644,
+    "se": 0.05655494,
+    "lb": -0.56321209,
+    "ub": -0.34152079,
+    "p_joint_placebo": 0.0254433,
+    "p_joint_effects": 1.22124533e-14,
+    "obs": 101017,
+    "rels": 10564,
+    "rels_with_dose": 8915,
+    "persons": 1031,
+    "events": 116
+   },
+   "old_leave_filled_rows": 8114,
+   "old_file": "data/robustness_2026-08-31/P1leave_econ.json"
+  },
+  "P1leave_chemistry": {
+   "file": "data/cal2026-10/robustness/leaver/P1leave_chemistry.json",
+   "sha256": "f90ead7140bf504de35ab3b40c0c46c0d2223b60cc0c71e6c8ccef96d6b4e407",
+   "label": "P1leave_chemistry",
+   "variant": "fill0leave",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "leave_filled_rows": 1140,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.21809811,
+     "se": 0.06739962,
+     "lb": -0.35019893,
+     "ub": -0.08599729,
+     "p_joint_placebo": 0.8780853,
+     "p_joint_effects": 0.00142329,
+     "obs": 28107,
+     "rels": 2674,
+     "rels_with_dose": 2514,
+     "persons": 463,
+     "events": 38
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.08513182,
+     "se": 0.11163268,
+     "lb": -0.30392784,
+     "ub": 0.13366421,
+     "p_joint_placebo": 0.76127317,
+     "p_joint_effects": 0.33131396,
+     "obs": 18374,
+     "rels": 1727,
+     "rels_with_dose": 1680,
+     "persons": 213,
+     "events": 38
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.24713036,
+     "se": 0.08685853,
+     "lb": -0.41736994,
+     "ub": -0.07689077,
+     "p_joint_placebo": 0.93417518,
+     "p_joint_effects": 0.00026569,
+     "obs": 14343,
+     "rels": 1387,
+     "rels_with_dose": 1249,
+     "persons": 452,
+     "events": 38
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.24673836,
+    "se": 0.05276818,
+    "lb": -0.3501621,
+    "ub": -0.14331461,
+    "p_joint_placebo": 0.60633811,
+    "p_joint_effects": 0.00022817,
+    "obs": 44034,
+    "rels": 4407,
+    "rels_with_dose": 3937,
+    "persons": 480,
+    "events": 38
+   },
+   "old_leave_filled_rows": 4087,
+   "old_file": "data/robustness_2026-08-31/P1leave_chemistry.json"
+  },
+  "P1leave_math_stats": {
+   "file": "data/cal2026-10/robustness/leaver/P1leave_math_stats.json",
+   "sha256": "20b1765c7799f12a3f91be827334713548f0c585cf2a3762769fec1d5ca04505",
+   "label": "P1leave_math_stats",
+   "variant": "fill0leave",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "leave_filled_rows": 828,
+   "channels": {
+    "union": {
+     "status": "OK",
+     "ate": -0.0631608,
+     "se": 0.15310316,
+     "lb": -0.36323749,
+     "ub": 0.23691589,
+     "p_joint_placebo": 0.23442487,
+     "p_joint_effects": 0.00637255,
+     "obs": 16945,
+     "rels": 1714,
+     "rels_with_dose": 1185,
+     "persons": 441,
+     "events": 33
+    },
+    "network": {
+     "status": "OK",
+     "ate": -0.15084246,
+     "se": 0.20120229,
+     "lb": -0.54519171,
+     "ub": 0.24350678,
+     "p_joint_placebo": 0.68646902,
+     "p_joint_effects": 0.76425257,
+     "obs": 3710,
+     "rels": 364,
+     "rels_with_dose": 310,
+     "persons": 171,
+     "events": 29
+    },
+    "dept": {
+     "status": "OK",
+     "ate": -0.04085284,
+     "se": 0.17857694,
+     "lb": -0.39085721,
+     "ub": 0.30915154,
+     "p_joint_placebo": 0.30897671,
+     "p_joint_effects": 0.00699934,
+     "obs": 14430,
+     "rels": 1471,
+     "rels_with_dose": 977,
+     "persons": 427,
+     "events": 33
+    }
+   },
+   "status": "OK",
+   "old_canon_2026-08-28_union": {
+    "status": "OK",
+    "ate": -0.18388615,
+    "se": 0.13326727,
+    "lb": -0.44508519,
+    "ub": 0.0773129,
+    "p_joint_placebo": 0.34779752,
+    "p_joint_effects": 0.06562623,
+    "obs": 20017,
+    "rels": 2095,
+    "rels_with_dose": 1398,
+    "persons": 457,
+    "events": 33
+   },
+   "old_leave_filled_rows": 1646,
+   "old_file": "data/robustness_2026-08-31/P1leave_math_stats.json"
+  }
+ },
+ "leaver": {
+  "outdir": "data/cal2026-10/robustness/leaver",
+  "command": "SAR_OUT=data/cal2026-10/robustness/leaver bash analysis/robustness/battery_2026-08-29/run_leaver.sh (no --verify)",
+  "exit": 0
+ },
+ "verified_pool": {
+  "builder_run": {
+   "command": "SAR_ROBUST_OUTDIR=data/cal2026-10/robustness/verified_pool setup/.venv/bin/python analysis/robustness/verified_pool/build_verified_pool.py",
+   "exit": 1,
+   "stop": "AssertionError at gate 1: f1: 66 roster-route persons not on the verified roster — identity mapping broken",
+   "persons_the_builder_would_drop_against_its_0809_roster": {
+    "panel1": 74,
+    "panel2": 74,
+    "of_which_roster_route": {
+     "panel1": 66,
+     "panel2": 65
+    },
+    "of_which_network_only": {
+     "panel1": 8,
+     "panel2": 9
+    },
+    "all_are_october_D3_roster_additions": true
+   },
+   "products_written": "none (assert fires before any write)"
+  },
+  "d4_measurement": {
+   "generated": "2026-09-23",
+   "purpose": "D4 check on the October caliber: would build_verified_pool.py's rule drop anyone from the October frames?",
+   "identity_rule": "frame person id == 'P_'||author_id, or == person_id of that author_id in the 2026-07-16 11-school person map (build_verified_pool.py's rule, unchanged)",
+   "rosters": {
+    "roster_2026-08-09": {
+     "file": "data/raw_verified/roster_econ_verified.parquet",
+     "author_ids": 920,
+     "person_ids_both_forms": 970
+    },
+    "roster_2026-10": {
+     "file": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+     "author_ids": 1008,
+     "person_ids_both_forms": 1060
+    },
+    "additions_2026-10": {
+     "file": "data/cal2026-10/roster_added_2026-10.csv",
+     "author_ids": 88,
+     "person_ids_both_forms": 90
+    }
+   },
+   "panel1": {
+    "persons": 822,
+    "persons_by_channel": {
+     "both": 303,
+     "dept_only": 735,
+     "network": 463
+    },
+    "events": 113,
+    "rows": 73073,
+    "vs_roster_2026-08-09": {
+     "persons_not_on_roster": 74,
+     "roster_route_persons_not_on_roster": 66,
+     "network_only_persons_not_on_roster": 8,
+     "rows_of_persons_not_on_roster": 5467,
+     "not_on_roster_but_in_2026-10_additions": 74
+    },
+    "vs_roster_2026-10": {
+     "persons_not_on_roster": 0,
+     "roster_route_persons_not_on_roster": 0,
+     "network_only_persons_not_on_roster": 0,
+     "rows_of_persons_not_on_roster": 0,
+     "not_on_roster_but_in_2026-10_additions": 0
+    },
+    "additions_2026-10_present": 74
+   },
+   "panel2": {
+    "persons": 822,
+    "persons_by_channel": {
+     "both": 301,
+     "dept_only": 735,
+     "network": 463
+    },
+    "events": 113,
+    "rows": 111448,
+    "vs_roster_2026-08-09": {
+     "persons_not_on_roster": 74,
+     "roster_route_persons_not_on_roster": 65,
+     "network_only_persons_not_on_roster": 9,
+     "rows_of_persons_not_on_roster": 8278,
+     "not_on_roster_but_in_2026-10_additions": 74
+    },
+    "vs_roster_2026-10": {
+     "persons_not_on_roster": 0,
+     "roster_route_persons_not_on_roster": 0,
+     "network_only_persons_not_on_roster": 0,
+     "rows_of_persons_not_on_roster": 0,
+     "not_on_roster_but_in_2026-10_additions": 0
+    },
+    "additions_2026-10_present": 74
+   },
+   "inputs_sha256": {
+    "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+    "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+    "data/raw_verified/roster_econ_verified.parquet": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+    "data/cal2026-10/roster_econ_verified_2026-10.parquet": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+    "data/cal2026-10/roster_added_2026-10.csv": "0a3f9f75e376eba5df2a7f5ee658823517e441b1c98396b6f5ce3ca636c03c58",
+    "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8"
+   },
+   "d4_verdict": "PASS: 0 persons off the October roster in both frames — the builder would drop 0 persons; the filtered frames are the unfiltered frames"
+  },
+  "d4_measure_report_sha256": "4b4b17bd303f78e87629fd7269bc9b8afc477db8cdf709076c5e2a264b4044cb",
+  "persons_dropped_under_october_roster": 0,
+  "cells": {
+   "P1ver_econ": {
+    "file": "data/cal2026-10/robustness/verified_pool/estimates/P1ver_econ.json",
+    "sha256": "2362bacb61b476ec24550df6ee8744467633465951d5989d5642fbc37d1b01ff",
+    "label": "P1ver_econ",
+    "variant": null,
+    "rows_raw": 73073,
+    "rows_kept": 71797,
+    "channels": {
+     "union": {
+      "status": "OK",
+      "ate": -0.3683824,
+      "se": 0.06590365,
+      "lb": -0.49755118,
+      "ub": -0.23921362,
+      "p_joint_placebo": 0.00277072,
+      "p_joint_effects": 6.58347394e-08,
+      "obs": 62188,
+      "rels": 6527,
+      "rels_with_dose": 5981,
+      "persons": 814,
+      "events": 113
+     },
+     "network": {
+      "status": "OK",
+      "ate": -0.43063011,
+      "se": 0.10129897,
+      "lb": -0.62917244,
+      "ub": -0.23208778,
+      "p_joint_placebo": 0.03445503,
+      "p_joint_effects": 9.53504204e-07,
+      "obs": 24385,
+      "rels": 2464,
+      "rels_with_dose": 2328,
+      "persons": 520,
+      "events": 104
+     },
+     "dept": {
+      "status": "OK",
+      "ate": -0.35492618,
+      "se": 0.07802759,
+      "lb": -0.50785744,
+      "ub": -0.20199491,
+      "p_joint_placebo": 0.02398694,
+      "p_joint_effects": 9.7660983e-07,
+      "obs": 44587,
+      "rels": 4753,
+      "rels_with_dose": 4293,
+      "persons": 766,
+      "events": 112
+     }
+    },
+    "status": "OK",
+    "vs_gold_P1_econ_fnfix_ignoring_secs_file": [
+     "label: 'P1ver_econ' != 'P1_econ_fnfix'"
+    ],
+    "vs_gold_ignoring_label_too": "EQUAL",
+    "frame": "data/frames/p1_frame_econ.csv (identical to the would-be filtered frame: 0 persons dropped)"
+   },
+   "P2ver_econ": {
+    "file": "data/cal2026-10/robustness/verified_pool/estimates/P2ver_econ.json",
+    "sha256": "5e45680ee4d65db953e2d0d74af91106b72eb403400d1babf44bf865dd875567",
+    "label": "P2ver_econ",
+    "variant": null,
+    "rows_raw": null,
+    "rows_kept": null,
+    "headline": {
+     "status": "OK",
+     "ate": 0.00194924,
+     "se": 0.00076654,
+     "lb": 0.00044685,
+     "ub": 0.00345163,
+     "p_joint_placebo": null,
+     "p_joint_effects": 1.324e-05,
+     "rels": 6632,
+     "persons": 822,
+     "events": 113
+    },
+    "status": "OK",
+    "vs_gold_P2_econ_fnfix_ignoring_secs_file": [
+     "label: 'P2ver_econ' != 'P2_econ_fnfix'",
+     "clean: None != 'fnfix'"
+    ],
+    "vs_gold_ignoring_label_and_clean_too": "EQUAL",
+    "note": "`clean` is derived from the label by run_p2.R (the 2026-09-13 P2ver_econ.json carries clean=null as well); every estimate key is EQUAL",
+    "frame": "data/frames/p2_becoming_econ.csv (identical to the would-be filtered frame: 0 persons dropped)"
+   }
+  },
+  "old_canon_2026-08-28": {
+   "build_report": 162,
+   "P1ver_econ_union": {
+    "status": "OK",
+    "ate": -0.36832286,
+    "se": 0.06170227,
+    "lb": -0.48925709,
+    "ub": -0.24738863,
+    "p_joint_placebo": 0.01207448,
+    "p_joint_effects": 2.17844234e-07,
+    "obs": 81592,
+    "rels": 9211,
+    "rels_with_dose": 7866,
+    "persons": 870,
+    "events": 116
+   }
+  },
+  "verdict": "D4 PASS: 0 persons dropped; filtered cells == unfiltered controls (EQUAL on every estimate key)"
+ },
+ "manifests": {
+  "battery": {
+   "path": "data/cal2026-10/robustness/battery/MANIFEST.sha256",
+   "files": 129,
+   "sha256_of_manifest": "7a22a1f0f8f8fffafb913374b7582042f4e0e749ba0d1af7e2f98265119cabee",
+   "all_entries_verified": true
+  },
+  "leaver": {
+   "path": "data/cal2026-10/robustness/leaver/MANIFEST.sha256",
+   "files": 5,
+   "sha256_of_manifest": "424bda7009c3bb01c0c9f77eba04bb1b448addb7271617c9160217800a6eeb1b",
+   "all_entries_verified": true
+  },
+  "verified_pool": {
+   "path": "data/cal2026-10/robustness/verified_pool/MANIFEST.sha256",
+   "files": 6,
+   "sha256_of_manifest": "8f4599ae2211552cf07eeb0f58f5d5f18f1d8a4743df4a51bf2c09dff75f8b8d",
+   "all_entries_verified": true
+  }
+ }
+}

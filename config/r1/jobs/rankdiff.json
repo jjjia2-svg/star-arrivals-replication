@@ -1,0 +1,29 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rankdiff",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "required_dests": [
+    "/work/ref/",
+    "/work/new/"
+  ],
+  "data_sync": [],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/rank_r1.py",
+      "/work/rank_r1.py"
+    ]
+  ],
+  "env_layers": [
+    "py"
+  ],
+  "steps": [
+    "\"$PY\" /work/rank_r1.py diff --new /work/new --ref /work/ref --allowed-ids /work/in/allowed_ids.txt --out /work/out"
+  ]
+}

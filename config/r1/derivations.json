@@ -1,0 +1,73 @@
+{
+ "schema": "sar.r1.derivations.v1",
+ "about": "V3-REC (job recder): the 10-02 heredoc derivations, replayed from the evidence by pipeline/aws/r1/replay_derivations.py. Each step runs only the python heredoc of its recorded command; the body is the reviewed copy under config/r1/derivations/ (sha-pinned here, re-lifted at run time: LIFT_DRIFT on any difference). K = replay:rk1 (the 10-02 working folder rk1), S = replay:sweep/v2 (sweep/v2), except T:4722 where S = replay:sweep. rk1/in, rk1/fetch/out, rk1/fetch4/out and rk1/fetch5/out are the rec-01 copies of the RK1 payload in/ and the RK1/RK4/RK5 out/ folders (how the 10-02 shell fetched them).",
+ "mkdirs": ["sweep/v2", "rk1/papers", "rk1/rk4in", "rk1/v3", "rk1/q1", "rk1/census", "rk1/rk5in"],
+ "stage": [
+  ["recovered:rk1/payload/in", "rk1/in"],
+  ["recovered:rk1/out", "rk1/fetch/out"],
+  ["recovered:rk4/out", "rk1/fetch4/out"],
+  ["recovered:rk5/out", "rk1/fetch5/out"]
+ ],
+ "steps": [
+  {"line": 2348, "file": "config/r1/derivations/T02348.py", "sha256": "f183ae374e9b14869482f16f86fca65e048f5170321f442e15fb69d012e9aeb8",
+   "argv": ["F", "S"], "args": {"F": "evidence:workflows/wf_9b087077-158.json", "S": "replay:sweep/v2"},
+   "why": "dump of the missed-star verify result (task wbkfupkax = wf_9b087077) -> sweep/v2/verify_result.json"},
+  {"line": 2371, "file": "config/r1/derivations/T02371.py", "sha256": "c42b5df8a1d80dcdfbf879cfb15960ef967bd922a826cc736ce8a3661b2223b6",
+   "argv": ["S"], "args": {"S": "replay:sweep/v2"},
+   "why": "adds joined with their review -> sweep/v2/adds_with_review.json"},
+  {"line": 2963, "file": "config/r1/derivations/T02963.py", "sha256": "2136ead720ee9b421e44eb6c8b48b187dfadd864e160d1c75f68b9473ecb91b4",
+   "argv": ["K", "S"], "args": {"K": "replay:rk1", "S": "replay:sweep/v2"},
+   "why": "per-person paper files for the cleaning workflow -> rk1/papers/*.json and _files.json"},
+  {"line": 3354, "file": "config/r1/derivations/T03354.py", "sha256": "210861f990596501c2bf1bc61a5b1811f23efaed01585cfea7c6c33330b2fc9b",
+   "argv": ["K", "F"], "args": {"K": "replay:rk1", "F": "evidence:workflows/wf_acd28146-89c.json"},
+   "why": "two-round per-paper cleaning (task whw8qc6ip = wf_acd28146) -> rk1/papers/cleaning_final.json"},
+  {"line": 3360, "file": "config/r1/derivations/T03360.py", "sha256": "2425925e6bea1880ce40d643207a59041548d49ea770c9d3051a3ab8adb46f79",
+   "argv": ["K"], "args": {"K": "replay:rk1"},
+   "why": "the only writer of the RK4 requests -> rk1/rk4in/requests.json (the trailing cp/tar/sed is not run)"},
+  {"line": 3407, "file": "config/r1/derivations/T03407.py", "sha256": "587f2fce18a5d28bc93ee7b6ee6064ab7dc1ae3af1a890bc7546d8596f4ec857",
+   "argv": ["K"], "args": {"K": "replay:rk1"},
+   "why": "RK4 cleaned ranks per person -> rk1/rk4_cleaned.csv (the named value)"},
+  {"line": 3522, "file": "config/r1/derivations/T03522.py", "sha256": "1601803d28d743ad99d5f7177364e708643b41f46604538bd74b598ee5360d92",
+   "argv": ["F", "K"], "args": {"F": "evidence:workflows/wf_60c4244f-18b.json", "K": "replay:rk1"},
+   "why": "dump of the full-roster verify (task wu3mfnj0j = wf_60c4244f) -> rk1/v3/verify3_result.json"},
+  {"line": 3961, "file": "config/r1/derivations/T03961.py", "sha256": "c94dab390ea3f0935b27b7d8438426fb5132725078d49b0239845c76a72f2966",
+   "argv": ["F", "K"], "args": {"F": "evidence:workflows/wf_602982ed-e6b.json", "K": "replay:rk1"},
+   "why": "dump of the q1 re-judgement (task wnca4e354 = wf_602982ed) -> rk1/q1/q1_result.json"},
+  {"line": 4376, "file": "config/r1/derivations/T04376.py", "sha256": "91d4bd1ea83acef96209a337b45ce2a1b7e9038b7a65dcf29fcf5394f49b495e",
+   "argv": ["F", "K"], "args": {"F": "evidence:workflows/wf_5ae972c9-33c.json", "K": "replay:rk1"},
+   "why": "dump of the chem/maths department census (task wwxprm6wl = wf_5ae972c9) -> rk1/census/census_full.json"},
+  {"line": 4558, "file": "config/r1/derivations/T04558.py", "sha256": "4cb24efe4f90101985f6c797013097a37f84c36bbf71e19b5f18ed6f5da2d75d",
+   "argv": ["K"], "args": {"K": "replay:rk1"},
+   "why": "the only writer of the RK5 requests -> rk1/rk5in/requests.json and extra_universe.json (the trailing cp is not run)"},
+  {"line": 4722, "file": "config/r1/derivations/T04722.py", "sha256": "0d235e509b8d3d7a6dd0e62f61de35c2762153e60c9caf879873fc484415c8f5",
+   "argv": ["K", "S", "R", "L"], "args": {"K": "replay:rk1", "S": "replay:sweep", "R": "repo", "L": "legacy"},
+   "why": "census ranked against the RK5 matches and screen_11 -> rk1/census/census_ranked.csv (the counts)"},
+  {"line": 4736, "file": "config/r1/derivations/T04736.py", "sha256": "d683bc4863b1e1fef29e6f41f591f238d526cd0e0454121568594aca4b52cb84",
+   "argv": ["K"], "args": {"K": "replay:rk1"},
+   "why": "new census candidates with origin -> rk1/census/census_new_candidates.csv (no gate)"},
+  {"line": 4980, "file": "config/r1/derivations/T04980.py", "sha256": "04a45f6a9da77848e1febb53bec148d57f556462424bcae290cd110ae86c0b86",
+   "argv": ["F", "K"], "args": {"F": "evidence:workflows/wf_2551f090-831.json", "K": "replay:rk1"},
+   "why": "dump of the census verify (task w1vqy6txi = wf_2551f090) -> rk1/census/census_verify_result.json (no gate)"}
+ ],
+ "bytes": [
+  {"name": "rk4in_requests", "got": "rk1/rk4in/requests.json", "want": "recovered:rk4/payload/in/requests.json"},
+  {"name": "census_full", "got": "rk1/census/census_full.json", "want": "recovered:rk5/payload/in/census_full.json"},
+  {"name": "rk5in_requests", "got": "rk1/rk5in/requests.json", "want": "recovered:rk5/payload/in/requests.json"},
+  {"name": "rk5in_extra_universe", "got": "rk1/rk5in/extra_universe.json", "want": "recovered:rk5/payload/in/extra_universe.json"}
+ ],
+ "counts": [
+  {"code": "census_top10", "file": "rk1/census/census_ranked.csv", "true": ["top10"], "want": 845},
+  {"code": "census_events", "file": "rk1/census/census_ranked.csv", "true": ["top10", "is_event"], "want": 70}
+ ],
+ "notes": [
+  {"code": "matched", "file": "rk1/census/census_ranked.csv", "true": [], "want": 1318},
+  {"code": "decided_before", "file": "rk1/census/census_ranked.csv", "true": ["top10", "decided_before"], "false": ["is_event"], "want": 245},
+  {"code": "new", "file": "rk1/census/census_ranked.csv", "true": ["top10"], "false": ["is_event", "decided_before"], "want": 530}
+ ],
+ "named": [
+  {"code": "T03407", "file": "rk1/rk4_cleaned.csv", "key_column": "person",
+   "key_sha256": "bdd343f311df2fdeec57470520d90711a98367defcaa281e8e7cbf0193e1a8c6",
+   "column": "prod_clean_pct", "want": 0.718, "dp": 3,
+   "why": "v2 §2.3 step 4, the named 0.718: RK4's cleaned production rank (07-05 table for maths, pass B), printed at T:3408 as (0.7179, aage 5)"}
+ ]
+}

@@ -1,0 +1,14 @@
+LAUNCHED i-0ec873f66546a0b87 r6i.16xlarge on-demand 2026-08-28T04:22:33Z
+SSH_UP 2026-08-28T04:23:09Z
+BOOTSTRAP_DONE 2026-08-28T04:36:27Z (recovered: local bootstrap ssh hung on mem-sentinel stdout; instance-side bootstrap completed with PKG_OK; continuation via t5_finish.sh)
+PAYLOAD_SHIPPED_MD5_OK 2026-08-28T04:37:03Z
+DRIVER_STARTED 2026-08-28T04:37:09Z (driver.log; local ssh session hang note: nohup lacked </dev/null — remote run unaffected)
+[poll 1/60 04:40:41Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 '
+[poll 2/60 04:42:47Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 '
+[poll 3/60 04:44:54Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 '
+[poll 4/60 04:47:00Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 '
+[poll 5/60 04:49:06Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 JOB3_EXIT=0 '
+[poll 6/60 04:51:12Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 JOB3_EXIT=0 '
+[poll 7/60 04:53:18Z] result='' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 JOB3_EXIT=0 '
+[poll 8/60 04:55:24Z] result='ALL_DONE_MARKER_2026_08_28C' log='[driver] start 2026-08-28T04:37:09Z p3_slim_chemistry.parquet: OK p3_slim_econ.parquet: OK p3_slim_ev_chemistry.parquet: OK p3_slim_ev_econ.parquet: OK run_p3.R: OK run_p3_evcl.R: OK JOB1_EXIT=0 JOB2_EXIT=0 JOB3_EXIT=0 J'
+TERMINATED i-0ec873f66546a0b87 state=terminated

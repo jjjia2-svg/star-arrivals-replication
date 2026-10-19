@@ -1,0 +1,19 @@
+$ Rscript analysis/estimation/run_p2.R P2_fnfix_math_stats data/frames/p2_becoming_math_stats.csv
+[env] {"SAR_OUT": "data/cal2026-10/robustness/nocentre/estimates_control", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 2 P2_fnfix_math_stats rows=30314 relations=1795 first ties=35 =====
+P2_fnfix_math_stats                joint-effect p=0.0664 placebo p=NA ATE=+0.001505 (SE 0.000482, CI 0.000561~0.002449)
+[P2_fnfix_math_stats] done
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+
+--- rc=0 secs=3.1 ---

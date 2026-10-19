@@ -1,0 +1,22 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "addlist",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "required_dests": [
+    "/work/report/",
+    "/work/merged/",
+    "/work/rk6b/"
+  ],
+  "data_sync": [],
+  "copy_from_tip": [],
+  "steps": [
+    "\"$PY\" \"$REPO_DIR/tools/r1_add_list.py\" --candidates /work/report/candidate_list.csv --merged /work/merged/candidates_merged.csv --rulings-p1 \"$REPO_DIR/data/cal2026-10r1/inputs/author_rulings_p1.json\" --decisions \"$REPO_DIR/data/cal2026-10r1/inputs/p2_decisions.json\" --roster \"$REPO_DIR/data/cal2026-10r1/inputs/rosters/roster_econ_verified_r1.parquet\" --roster \"$REPO_DIR/data/cal2026-10r1/inputs/rosters/roster_gold_chemistry_r1.parquet\" --roster \"$REPO_DIR/data/cal2026-10r1/inputs/rosters/roster_gold_math_stats_r1.parquet\" --flips /work/rk6b/flips.csv --out /work/out"
+  ]
+}

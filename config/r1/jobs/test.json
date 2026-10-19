@@ -1,0 +1,25 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "test",
+  "instance_type": "m6i.xlarge",
+  "price_hr": 0.192,
+  "est_min": 75,
+  "hard_min": 180,
+  "root_gb": 40,
+  "sar_host": "ec2-r1-test",
+  "env": {},
+  "pulls": [],
+  "data_sync": [],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/run_tests_r1.py",
+      "/work/run_tests_r1.py"
+    ]
+  ],
+  "steps": [
+    "\"$PY\" /work/run_tests_r1.py --spec /work/in/tests.tsv --repo \"$REPO_DIR\" --out /work/out --python \"$PY\""
+  ],
+  "env_layers": [
+    "py"
+  ]
+}

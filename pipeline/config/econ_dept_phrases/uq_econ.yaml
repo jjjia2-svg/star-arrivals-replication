@@ -1,0 +1,17 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Queensland
+  word_boundary: false
+- case_sensitive: true
+  text: UQ
+  word_boundary: true
+dept_key: uq_econ
+exclude_tokens: []
+openalex_inst_id: I165143802
+phrases:
+- School of Economics
+- Department of Economics
+- Economics Department
+- Centre for Efficiency and Productivity Analysis
+- Centre for Unified Behavioural and Economic Sciences
+window_chars: 80

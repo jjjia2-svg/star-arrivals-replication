@@ -1,0 +1,312 @@
+{
+ "generated": "2026-09-23T04:24:19",
+ "frames": {
+  "p1_events_ledger_econ.csv": {
+   "old_sha256": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+   "new_sha256": "2b0b21b53be6f8a68cd19326a5df4ef3314d1e1a232315918dff2e5ccb385767"
+  },
+  "p1_frame_chemistry.csv": {
+   "old_sha256": "1a7dbbba836946a7a9eedaeecc9b8c24fea04198abcf1f98ab32611a0e3283e1",
+   "new_sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5"
+  },
+  "p1_frame_econ.csv": {
+   "old_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+   "new_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80"
+  },
+  "p1_frame_econ_new37.csv": {
+   "old_sha256": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+   "new_sha256": "800528b41ab18cfc9cff1b79359cd66441025b3f2f4ec3036d6442a50b3c83af"
+  },
+  "p1_frame_econ_old79.csv": {
+   "old_sha256": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+   "new_sha256": "d8943c99c63262b15e71f8b1ab8daf3584312bd1defbd7d10bad28db2661d1eb"
+  },
+  "p1_frame_math_stats.csv": {
+   "old_sha256": "8d5a7087245ff26c9155f8eb3de417d1fa9edc82f7497478693846c630aff1a0",
+   "new_sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9"
+  },
+  "p2_becoming_chemistry.csv": {
+   "old_sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424",
+   "new_sha256": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d"
+  },
+  "p2_becoming_econ.csv": {
+   "old_sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+   "new_sha256": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de"
+  },
+  "p2_becoming_math_stats.csv": {
+   "old_sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a",
+   "new_sha256": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0"
+  },
+  "p3_afar_chemistry.parquet": {
+   "old_sha256": "507930451ccb31c06d62b0a85d9e54e16d0ece4516d4d154dc816dd58a04a20d",
+   "new_sha256": "19dbd0e5a2d7947d8abe0b8f51666a63d9aaef4d0df223dd890aca41d185eb42"
+  },
+  "p3_afar_counts.csv": {
+   "old_sha256": "08e1210572a058e78b1ff571f0c0660a71d15df6364454ac942762d64c80dd6e",
+   "new_sha256": "d04ceed8313bd8e2c9aeb091bea57aa6cb0d89337451a7d2843adf24349f4a5a"
+  },
+  "p3_afar_counts_by_spec.csv": {
+   "old_sha256": "491832be4f26f4448c9fa04ba42133f3e092ac34d80850f8a84ec1f45442bd53",
+   "new_sha256": "9b9bb93a480a8ffe19c088924846267b5d1e64fc5367a5b1f71ab0770ecd4ddb"
+  },
+  "p3_afar_econ.parquet": {
+   "old_sha256": "05612d000387ed7f175725ee07bd41c54bbecb616658f5a2d3bc9a47e33e8725",
+   "new_sha256": "418c110bfe3bfeff1d41a299354b89c0ef915e4080a195dd82fffc37c2bdcf9d"
+  },
+  "p3_afar_math_stats.parquet": {
+   "old_sha256": "a1e96931efbed88932a4c50285e9f1fddcade631ae57aca7cf75c5e548e62981",
+   "new_sha256": "35a169aa495bb27955777247f45c0820785ca634a73c04ed2350a48c7a2febbf"
+  },
+  "p3_afar_med_chemistry.parquet": {
+   "old_sha256": "a6fcdc0f7d56955a054431a9d33049f8faac1ad23cb57a184f481716b518eca9",
+   "new_sha256": "37eb5ea7b8e352af8cb3c6d171e5397a7951551ed0bf39e5e48ecec277f9db70"
+  },
+  "p3_afar_med_econ.parquet": {
+   "old_sha256": "a1f11948837abe98da0068ad1ef778fa1233635605fac10c72b5adfbeb3e37cc",
+   "new_sha256": "67a51ebda2e4ea5d065f5484f95f445864eeb56d565cf8c8145889982d448da3"
+  },
+  "p3_afar_med_math_stats.parquet": {
+   "old_sha256": "d1dc1c76d37652945f800f16260864d5b8c50fef65ffcfdca4760984aac923bd",
+   "new_sha256": "5cb40d2cc22d3c9d0be580bb2079529e056f1527b17800ad8dda17092b30654d"
+  },
+  "p3_afar_pos_chemistry.parquet": {
+   "old_sha256": "32a0a061aabf23c6cf960bef53b6500ffea1eb29b9313e8b2ddeb4806392afa8",
+   "new_sha256": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc"
+  },
+  "p3_afar_pos_econ.parquet": {
+   "old_sha256": "5854a390d87ba6c499e5861f14bf134f4909067e14ac78367975ce7c98111186",
+   "new_sha256": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e"
+  },
+  "p3_afar_pos_math_stats.parquet": {
+   "old_sha256": "cb855dba3fd5e0490b283f4f96ebc1c491bce25f5866be4a2018b43d9dcf26de",
+   "new_sha256": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c"
+  },
+  "p3_afar_speed_bracket.csv": {
+   "old_sha256": "02864602be9b2192644ca9a5976affe6baacb6c911b68fbf5af58c97b1d0fdd0",
+   "new_sha256": "02864602be9b2192644ca9a5976affe6baacb6c911b68fbf5af58c97b1d0fdd0"
+  },
+  "p3_afar_tau_profile.csv": {
+   "old_sha256": "c3b2533e4fd122bc0e92812237eb1acafa7a2d8052f93bb83756141d0ac8c4ea",
+   "new_sha256": "30f6c46e895cc7827f276277b2229bdcf07f503c042e3b721a39d2943b428b71"
+  },
+  "p3_slim_chemistry.parquet": {
+   "old_sha256": "202952957c4327374f683ab73d655881dfdbf26dd08dba50e5cb5d809e090f08",
+   "new_sha256": "a6a5ec093c608f765713e020a8501fa50297acc2f5c8173647b243157656b2f8"
+  },
+  "p3_slim_chemistry_dosebin3.parquet": {
+   "old_sha256": null,
+   "new_sha256": "54363b6b1bc18a749d78f882c86b752766cd3d53c5a67a934f363d6f2c40d5e6"
+  },
+  "p3_slim_chemistry_p05.parquet": {
+   "old_sha256": null,
+   "new_sha256": "5f58838576a77220c43623d9e0a4a34bca449ae4e782cd1863b41568ae948282"
+  },
+  "p3_slim_econ.parquet": {
+   "old_sha256": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d",
+   "new_sha256": "39d474983abec809d28d0a46a26d9c9c3d4d123c1984943fe5933961244b422b"
+  },
+  "p3_slim_econ_dosebin3.parquet": {
+   "old_sha256": null,
+   "new_sha256": "69c8bf1c2b19f05a3bf3e51baa17d22fb3678bc5688ab6f3f900035b08eff069"
+  },
+  "p3_slim_econ_p05.parquet": {
+   "old_sha256": null,
+   "new_sha256": "5b1b386b750595e217035632c15c85514fad80b6bd264599f5729c959de39028"
+  },
+  "p3_slim_ev_chemistry.parquet": {
+   "old_sha256": "137a1f8bbdd1f85df2daf3f746aba00bef9b6561200acb4da855d0c4ce7e336c",
+   "new_sha256": "22736c0a7ea9b625caf012bf9b0ccbf037789d531bbe24b4ef1086df19a8bd4f"
+  },
+  "p3_slim_ev_econ.parquet": {
+   "old_sha256": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a",
+   "new_sha256": "325e43198fae8a57e5395988f6c250f26953b41e5300c62a794478a73815d128"
+  },
+  "p3_slim_ev_math_stats.parquet": {
+   "old_sha256": "8b279ed132448bf038d62c451fd8fd81cd2d63dd16ec7373d4ae958a0a9aa5c7",
+   "new_sha256": "3616bfd0cf73a26ef743a78d914cd89685f20e921ea08bfd305bbd0bf7b0c4b1"
+  },
+  "p3_slim_math_stats.parquet": {
+   "old_sha256": "7b578967b9a550c365783f65b59f4b33a029381ed1c83db359b0161ad0833544",
+   "new_sha256": "18e68a55b48ead3902e05e384d925968f0a943526df40a1586a221d2b6e5bf19"
+  },
+  "p3_slim_math_stats_dosebin3.parquet": {
+   "old_sha256": null,
+   "new_sha256": "7f1a38df1d40fa22bf59f1e04d919d5f69b61c7144c128845f2d80c49f90c41d"
+  },
+  "p3_slim_math_stats_p05.parquet": {
+   "old_sha256": null,
+   "new_sha256": "ff9bebbaa3ff708b59cc5375affe74f60412cf5e45146fe7dc6a8ae8e69214d1"
+  },
+  "pairs_none_chemistry.parquet": {
+   "old_sha256": null,
+   "new_sha256": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247"
+  },
+  "pairs_none_math_stats.parquet": {
+   "old_sha256": null,
+   "new_sha256": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4"
+  },
+  "relationships_econ.csv": {
+   "old_sha256": null,
+   "new_sha256": "e614850850f82f0bfb5b29d52f264bae148571f10679154f4abeae1b716f2e5c"
+  }
+ },
+ "expected": {
+  "P1_econ_fnfix": {
+   "old_sha256": "549e07b24e9ecacebc667e93be653352e1656c2b1969661fc806e15956366aae",
+   "new_sha256": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+   "changed": true
+  },
+  "P1_fnfix_chemistry": {
+   "old_sha256": "9f42c5f4693f46a8ed09a43be1aee1fe34e90b73203bf849cb738c381cc163d3",
+   "new_sha256": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+   "changed": true
+  },
+  "P1_fnfix_math_stats": {
+   "old_sha256": "a29ac3c633a2f7978675811362b3b370b5d101de73d1c5af57781f136e5d6586",
+   "new_sha256": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+   "changed": true
+  },
+  "P1_econ_fnfix_old79": {
+   "old_sha256": "ca37eb2e3bfcb0c994a19c33f6e3118564a3ff4a9fff229225da80c41df4eccd",
+   "new_sha256": "2891bdb1e67b4603cb00b62dfcaf9971138ff6fcdc44a052eeaeab1228351fdb",
+   "changed": true
+  },
+  "P1_econ_fnfix_new37": {
+   "old_sha256": "0594fc1206414ec93dd186a2c724a3ab96a8afa7525019ac62b3193395909894",
+   "new_sha256": "8d599d8888c1ad22547dab1ab493b95b0fe6a84cd23e4694e9cafa159456f46f",
+   "changed": true
+  },
+  "P2_econ_fnfix": {
+   "old_sha256": "d9d16dbfb84e2a6595d231e10792e5e29f957c3f2489dab5bc0d3f55485c3257",
+   "new_sha256": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+   "changed": true
+  },
+  "P2_fnfix_chemistry": {
+   "old_sha256": "afcc8dd8cfc7a47be0924de0a90f8aaf6f1f77d75133f76244f1efcdea28fb37",
+   "new_sha256": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+   "changed": true
+  },
+  "P2_fnfix_math_stats": {
+   "old_sha256": "bd0c512bda78034c84b88b5cc279ce15155eb145025fa5b886a2a3f99e6bc938",
+   "new_sha256": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+   "changed": true
+  },
+  "P3_fnfix_math_stats": {
+   "old_sha256": "8a07ea86b2857570663b4bb964e4a5361f8ef05f09ad7aa3bffb053631280d70",
+   "new_sha256": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+   "changed": true
+  },
+  "P1evcl_econ": {
+   "old_sha256": "119c834bda5075c4722e10fd4f7eb2ee4c0b19659bd053150adb31c4e621e8b5",
+   "new_sha256": "66deaa0b90c5b572de93e88e1241d66b2b472b9954208ca4906554b16610dd96",
+   "changed": true
+  },
+  "P1evcl_chemistry": {
+   "old_sha256": "d9f34b1b9268fa80dc6c38260a55d0ea7664b488d9a6bdf6659c1dca9c95135d",
+   "new_sha256": "564023195a79f5a660ad34abb8df2d5803aaece315da24358565e39a66c00141",
+   "changed": true
+  },
+  "P1evcl_math_stats": {
+   "old_sha256": "2834959c3a8d3354e2f0b5891c738c47be247d065515adc9184184a880171fae",
+   "new_sha256": "42bccf0d1442b2af9b20fae2869f5467151ab28cb5ce78272d4c4aa13e2e88a2",
+   "changed": true
+  },
+  "P2evcl_econ": {
+   "old_sha256": "bfc1663954a74be3911ffca73e13327f4c2efc1af7596de52e209a1b7e773998",
+   "new_sha256": "2cda1ac57613a3239678600436ec0182acd1a1462df52007724c02974340ca5c",
+   "changed": true
+  },
+  "P2evcl_chemistry": {
+   "old_sha256": "e2e05ae224edf28bd1a3f59843a088e7c44f592acc58999997faddd0b36bde3c",
+   "new_sha256": "db251a694063d92057ff8371b863eefa8c65cec0b3692eadcfaa34b81b905dcf",
+   "changed": true
+  },
+  "P2evcl_math_stats": {
+   "old_sha256": "468fb896f599b429629710bef56af101c9a56ea9c4ebf752666617ff2bb9d79c",
+   "new_sha256": "a47c9c2c68acacfecb6793aaaa37cb31a1030c190d507538fc006cd064ff5807",
+   "changed": true
+  },
+  "P3evcl_math_stats": {
+   "old_sha256": "6221de93831dbe438a76d1a5d1e3b0b857b19ae96041101e01f5a4f4843d753e",
+   "new_sha256": "d0279794ab2a3d1ad14329adb541f474b3e627beec52d2ca8d386b934b2e6298",
+   "changed": true
+  },
+  "P3lb_econ_A_far": {
+   "old_sha256": "88584e6a2a375b762ecf31cac4d01ac4bc14afa686f2cb8c5baf0d2b7a3724b2",
+   "new_sha256": "f3909249de50e19b7f7f5a220c0d4daf934c3988fe90d37ba7fd523f0ce86eb6",
+   "changed": true
+  },
+  "P3lb_chemistry_A_far": {
+   "old_sha256": "4bc2094e18e544e453b301b728fb34a4bb674fd204e51500fba29399906ef3b4",
+   "new_sha256": "977c00c596b24fba479e10acd17d3b7fc14d7a7fe3177d80e1154277121eaa07",
+   "changed": true
+  },
+  "P3lb_math_stats_A_far": {
+   "old_sha256": "e4b021949bf2d520401cf3c21abcdc093ba88edf71eba4d18907f1e2b853b509",
+   "new_sha256": "f1d6f829c2b3199e506f983fd4cea0c8f8adc1c8ec0b5baa2a13c3a0f82527f6",
+   "changed": true
+  },
+  "P3pos_math_stats_A_far": {
+   "old_sha256": "dc404703b64831a16e9fa44233bdeee875e33fff40fbe706645531c1ef031b3b",
+   "new_sha256": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+   "changed": true
+  },
+  "P3med_math_stats_A_far": {
+   "old_sha256": "6167b722847ad3e30c6bb7fa3e04bb20185df669a84edd91f7ebaee602f2bcaa",
+   "new_sha256": "a8b4b12c696d96042e1c5e24cb2f98e43ae084095d57a10d44cdfa0780701f39",
+   "changed": true
+  },
+  "P3pos_chemistry_A_far": {
+   "old_sha256": "bbff32aad0cc6e5d7a1ecd6298e8f16b73985c70028e5f8d4ad9ad15267599f4",
+   "new_sha256": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+   "changed": true
+  },
+  "P3med_chemistry_A_far": {
+   "old_sha256": "766731de17972c72de6bbc6b778b15bc9a33ba05477bf3c71fa35b0571b8a6d6",
+   "new_sha256": "0ae93781d3645f13629100aa048b6f67b763d193de0fe5e095e240480c8a2c33",
+   "changed": true
+  },
+  "P3pos_econ_A_far": {
+   "old_sha256": "cde699586673ddbec2a9b475278c8a0f03c4cd769ea3bf1aea2cd0b73504fc0b",
+   "new_sha256": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+   "changed": true
+  },
+  "P3med_econ_A_far": {
+   "old_sha256": "fdfa92e62f48147275deea98e9cd6264efdc2c3f766dd35ce1ce8bad3a658ce2",
+   "new_sha256": "c77d0d0a7044a82740df2d84e975f94bf5ae0c084a3fcc55b2ed88d31c4d8c23",
+   "changed": true
+  },
+  "P3_econ_fnfix": {
+   "old_sha256": "7e544c7bcfbbc038f5abb73f536c1f6ade772fbfeb2e3b0d07da4cb44f4670a9",
+   "new_sha256": "0b077d4f127b2b0ead3322ccf7cd98d5c299a6e4a0716b974fb61d9075934fd9",
+   "changed": true
+  },
+  "P3_fnfix_chemistry": {
+   "old_sha256": "085ce76eddef07ecca35bd1edd913d8a63f80ebc8b6cb9c0d0bbbd94f4fdb195",
+   "new_sha256": "4fefc218a554f8a0caae680fec28427b9bc58f4e7d3ef9a1cf95c2be86f1e152",
+   "changed": true
+  },
+  "P3evcl_econ": {
+   "old_sha256": "1c1a9546bb10f5d72ef0f29f7fbeda874eead6a263c2c14ee490e174e78e7e30",
+   "new_sha256": "c32dc03df4a8a5f9303946a105fd52fbbcb4b6f27a18b3f235450f0bd78f7d89",
+   "changed": true
+  },
+  "P3evcl_chemistry": {
+   "old_sha256": "28c3c0908551f7fbe29d1e6df1fd79c19a6c41b54b0e2cc6f2574ad7ae7d31a3",
+   "new_sha256": "7f8507b666839948dbea9f7e4d05693347f5ebc1e78d7eaa2b8418f15d74b4cf",
+   "changed": true
+  }
+ },
+ "cloud": "october",
+ "history": [
+  {
+   "generated": "2026-09-23T02:49:12",
+   "step": "local promotion (25 golds, 37 frames)"
+  },
+  {
+   "generated": "2026-09-23T04:24:19",
+   "step": "cloud golds promoted (--cloud-out)"
+  }
+ ],
+ "note": "old_sha256 = what data/frames / analysis/expected held BEFORE the first promotion (2026-09-23, 73777aa); for the four cloud golds, before the cloud promotion. Restored 2026-09-23 after the --cloud-out re-run had overwritten the frame/local-gold old values with the already-promoted October bytes."
+}

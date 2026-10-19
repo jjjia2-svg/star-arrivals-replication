@@ -1,0 +1,14 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Adelaide
+  word_boundary: false
+- case_sensitive: false
+  text: Adelaide University
+  word_boundary: false
+dept_key: adelaide_econ
+exclude_tokens: []
+openalex_inst_id: I5681781
+phrases:
+- School of Economics
+- School of Economics and Public Policy
+window_chars: 80

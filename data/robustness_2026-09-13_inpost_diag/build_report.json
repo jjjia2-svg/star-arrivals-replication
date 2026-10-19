@@ -1,0 +1,26 @@
+{
+ "generated": "2026-09-13",
+ "status": "diagnostic only; not a specification",
+ "relations_by_class": {
+  "roster_channel": 4652,
+  "network_notinpost": 3430,
+  "network_no_spell": 819,
+  "network_inpost": 1862
+ },
+ "both_relations_not_in_post_by_spells": 0,
+ "rows_by_frame_and_class": {
+  "A_inpost": {
+   "network_inpost": 20482,
+   "roster_channel": 51172
+  },
+  "B_notinpost": {
+   "network_notinpost": 37730,
+   "roster_channel": 51172
+  }
+ },
+ "spells": {
+  "roster_920_persons_both_id_forms": 1050,
+  "confirmed_2026_09_13": 80
+ },
+ "control": "roster channel (dept_only + both) is unchanged in both frames; its run must equal the frozen gold"
+}

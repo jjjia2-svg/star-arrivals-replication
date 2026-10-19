@@ -1,0 +1,134 @@
+{
+ "schema": "sar.r1.robustness.v1",
+ "note": "The R1 robustness battery for J1b (P3e F19, unit W1-ROB). Read by pipeline/aws/r1/rob_jobs_r1.py (unit list), run_units.py (stacks) and rob_post_r1.py. Every value that October fixed is checked against its October source by tests/test_r1_robustness.py. Star-departure robustness (F20) is out of scope: author 2026-10-15, the paper prints no star-departure number.",
+ "fields": ["econ", "chemistry", "math_stats"],
+ "groups": ["frames", "cells", "loeo", "perm", "null", "post"],
+ "group_note": "No separate 'controls' group: each control runs in the same group as the cells that need it, so a control mismatch skips only its dependents (ruling R1P3-29) instead of failing a whole stage before any cell runs.",
+ "stage_of_group": {"jobs": "rob_jobs", "frames": "rob_frames", "cells": "rob_cells", "loeo": "rob_loeo",
+                    "perm": "rob_perm", "null": "rob_null", "post": "rob_post"},
+ "roots": {
+  "rob_root": "repo:output/r1/robustness",
+  "j1a": "/work/j1a",
+  "map_dir": "work:prod/afar_event_map",
+  "bin": "work:bin",
+  "tmp": "work:tmp/rob",
+  "paths_output": "work:tmp/rob_paths_output"
+ },
+ "j1a_layout": {
+  "frames": "frames",
+  "estimates": "estimates",
+  "events": "events",
+  "calls": "calls",
+  "pairs_econ": "pairs/pairs_unified.csv",
+  "p05_flags": "events/p05_flags_r1.csv"
+ },
+ "golds": {
+  "P1": {"econ": "P1_econ_fnfix", "chemistry": "P1_fnfix_chemistry", "math_stats": "P1_fnfix_math_stats"},
+  "P2": {"econ": "P2_econ_fnfix", "chemistry": "P2_fnfix_chemistry", "math_stats": "P2_fnfix_math_stats"},
+  "P3pos": "P3pos_{field}_A_far",
+  "P3med": "P3med_{field}_A_far",
+  "note": "J1a writes its estimates under the October gold basenames (config/r1/cells M.tsv out_name); the P3pos/P3med JSONs carry label P3cut_<spec>_<field>."
+ },
+ "seeds": {
+  "perm_p1p2": 20260829,
+  "perm_p3": 20260830,
+  "null": 20260830,
+  "sources": {
+   "perm_p1p2": "config/seeds.yaml permutation_seed == analysis/robustness/inference/run_all_perm.sh SEED (prep_t5_batch.sh asserts the two agree)",
+   "perm_p3": "the October cloud kit's --perm-seed default (cloudkit.py A2: the 2026-08-30 batch grammar; tests/test_r1_robustness.py::test_seeds_and_grammar_come_from_config checks the two agree)",
+   "null": "the October cloud kit's --null-seed default (cloudkit.py A2; checked by the same test)"
+  }
+ },
+ "perm": {
+  "B": 500,
+  "chunk_p1p2": 50,
+  "chunk_p3": {"econ": 5, "chemistry": 50, "math_stats": 50},
+  "cells_p1p2": [
+   ["p1", "P1_econ_fnfix", "p1_frame_econ.csv", "P1_econ_fnfix.json"],
+   ["p1", "P1_fnfix_chemistry", "p1_frame_chemistry.csv", "P1_fnfix_chemistry.json"],
+   ["p1", "P1_fnfix_math_stats", "p1_frame_math_stats.csv", "P1_fnfix_math_stats.json"],
+   ["p2", "P2_econ_fnfix", "p2_becoming_econ.csv", "P2_econ_fnfix.json"],
+   ["p2", "P2_fnfix_chemistry", "p2_becoming_chemistry.csv", "P2_fnfix_chemistry.json"],
+   ["p2", "P2_fnfix_math_stats", "p2_becoming_math_stats.csv", "P2_fnfix_math_stats.json"]
+  ],
+  "sources": "B/CHUNK/cells_p1p2 = run_all_perm.sh (B=${SAR_PERM_B:-500}, CHUNK=50, the p1/p2 rows of CELLS); chunk_p3 = cloudkit A2 (econ 5, others 50)"
+ },
+ "null": {"nsim": 200, "chunk": {"econ": 5, "chemistry": 50, "math_stats": 50},
+          "source": "cloudkit.py --null-n 200, --null-chunk-econ 5, --null-chunk-other 50 (A2)"},
+ "stacks": {
+  "default": "rmac",
+  "perm_p1": "rcloud", "perm_p2": "rcloud", "perm_p3tp": "rcloud", "null": "rcloud",
+  "note": "October ran the permutation and null units on the cloud R (cloud_t5, cloud batches) and every other robustness cell locally; J1a runs its P1/P2/P3-A_far cells under rmac, so the in-run controls compare like with like."
+ },
+ "threads": {"p1": 4, "p2": 4, "p3tp": 4, "p3full": 8, "perm_p1": 4, "perm_p2": 4, "perm_p3tp": 4, "null": 4,
+             "build": 4, "control": 1, "post": 1},
+ "est_min": {"p1": 3, "p2": 3, "p3tp": 6, "p3full": 30, "perm_p1": 6, "perm_p2": 5, "perm_p3tp": 7, "null": 8,
+             "build": 5, "build_nocentre": 25, "control": 1, "post": 2,
+             "basis": "October wall: T5 66 perm units in 27 min at 12 parallel (cloud_t5/fetch/progress.log); the P3 perm/null phase about 80 min at 12 parallel for 171 units; local P1/P2 cells 1-7 min (battery runlog); nocentre driver ~1 min per field on the Mac, x20 margin for the M chain"},
+ "checks": {
+  "battery": {"variants": [["P1bnd0", "fill0"], ["P1bndmean", "fillmean"], ["P1lvl", "levels"], ["P1nex", "neverexp"]],
+              "loop_order": [["P1bnd0", "P1bndmean"], ["P1lvl"], ["P1nex"]],
+              "source": "analysis/robustness/battery_2026-08-29/run_all_battery.sh (T2 bounds x3, T3 levels x3, T4 never-exposed x3)"},
+  "leaver": {"variant": "fill0leave", "source": "analysis/robustness/battery_2026-08-29/run_leaver.sh"},
+  "predate_p1": {"fields_order": ["math_stats", "chemistry", "econ"], "shift": 2,
+                 "source": "analysis/robustness/predate/run_p1_predate.sh"},
+  "predate_p2": {"control_field": "econ", "shift": 2, "source": "analysis/robustness/predate/run_all_predate.sh (the p2 rows)"},
+  "cuts": {"specs_copied": ["pos", "med"], "specs_estimated": ["abs04", "p75"], "fields_order": ["chemistry", "math_stats", "econ"],
+           "source": "analysis/robustness/p3_afar_cuts/run_cuts.sh"},
+  "cut_predate": {"fields_order": ["chemistry", "math_stats", "econ"], "shift": 2, "source": "run_cuts.sh pdcell lines"},
+  "d7_p05": {"suffix": "_p05", "source": "analysis/robustness/threshold_p05/filter_frames.py (author decision D7)"},
+  "doublestar": {"spec": "pos", "frame_fields": ["econ"],
+                 "note": "the drop table and the report's per-field counts always cover all three fields; only the econ frames are built because only P1ds_econ (and its complement P1dsC_econ) is printed"},
+  "nocentre": {"fields": ["chemistry", "math_stats"],
+               "note": "economics has no centre roster variant (run_nocentre.py:10-12); frames rebuilt by W2-CHEMM chemmath_m.py --roster-variant incfel"}
+ },
+ "nocentre_build": {
+  "cmd": "bash -c 'unset SAR_SSD_ROOT; rm -rf \"{tmp}/nocentre_scratch\" && mkdir -p \"{tmp}/nocentre_scratch\" && export SAR_OUT_ROOT=\"{tmp}/nocentre_scratch\" R_LIBS=\"$SAR_RLIB_RMAC\" PATH=\"$(dirname \"$SAR_RSCRIPT_RMAC\"):$PATH\" && \"$PY\" \"{repo}/pipeline/aws/r1/edge_table.py\" shadow --target /data/openalex_pipeline/derived/u1_full_11school_2026-07-16 --out \"{work}/edge_table_rob\" --base-paths \"{repo}/config/r1/paths_aws.yaml\" > \"{tmp}/nocentre_edge_paths.txt\" && export SAR_PATHS_CONFIG=\"$(tail -n 1 \"{tmp}/nocentre_edge_paths.txt\")\" && test -f \"$SAR_PATHS_CONFIG\" && \"$PY\" \"{bin}/chemmath_m.py\" --mode m --config \"{repo}/config/r1/M.json\" --events-dir \"{events}\" --roster-chemistry \"{roster_chemistry}\" --roster-math-stats \"{roster_math_stats}\" --roster-variant incfel --stars-excluded-base \"{stars_excluded_base}\" --event-tables-all \"{event_tables_all}\" --calls \"{calls}\" --out \"{out}\" --fields chemistry,math_stats'",
+  "values": {
+   "roster_chemistry": "repo:data/cal2026-10r1/inputs/rosters/roster_gold_chemistry_r1_incfel.parquet",
+   "roster_math_stats": "repo:data/cal2026-10r1/inputs/rosters/roster_gold_math_stats_r1_incfel.parquet",
+   "stars_excluded_base": "repo:data/cal2026-08-28/stars_excluded_cal2026-08-28.parquet",
+   "event_tables_all": "{events}",
+   "calls": "{calls}"
+  },
+  "note": "The J1a frames_chemmath_m call (config/r1/stages/j1a.json) with the incfel rosters and --roster-variant incfel, in J1a's environment: run_units runs a unit without a shell, so the unit is one `bash -c` script that sets J1a's scratch root and R stack, builds (or reuses) the 11-school edge-table shadow from paths_aws.yaml exactly as J1a's row does and exports its paths file (chemmath_m.edge_env STOPs EDGE_ENV otherwise), then calls chemmath_m. Values: repo:<path> = the clone; {events} / {calls} = the restored J1a products /work/j1a/events and /work/j1a/calls (rob_jobs_r1.m_roots, j1a_layout); stars_excluded_base = the same 08-28 list J1a's row reads (M review #7)."
+ },
+ "forbidden_exempt": {
+  "paths": ["data/cal2026-08-28/stars_excluded_cal2026-08-28.parquet"],
+  "reason": "rob_jobs_r1 STOPs any M unit naming data/frames or cal2026-08-28 (an October path left behind). The one exception is the 08-28 excluded-star list the no-centre rebuild starts its M stars_excluded list from, exactly as J1a's frames_chemmath_m does (read_allowlist_0828.txt: frames_econ920, frames_chemmath_m, rob_frames); only this exact path is removed before the scan (M review #7)."
+ },
+ "cut": [
+  {"cell": "P1ver_econ / P2ver_econ", "reason": "verified-pool rows are not printed (inventory F19 step 3)"},
+  {"cell": "P1dosebin3_<field> / P3dose3_<field>", "reason": "row 'Dose in three bins' deleted by the author (tab_rob_p1.tex comment 2026-10-04)"},
+  {"cell": "P3p05_<field> (full pair panel)", "reason": "the D7 full-panel Panel 3 cells are not printed (81 GiB in October)"},
+  {"cell": "P3nc_math_stats_full", "reason": "the all-pairs no-centre cell is not printed"},
+  {"cell": "P1ds/P2ds/P3ds other than P1ds_econ", "reason": "only the econ Panel 1 double-star split and its complement are printed"},
+  {"cell": "P3pd2_<field>_full", "reason": "full-panel date-shift cells are not printed"},
+  {"cell": "P3pd2_<field>_A_far (median cut) and its P3lb control", "reason": "the old A_far-median predate was replaced by the dose>0 P3pos_s2 cells"},
+  {"cell": "P1/P2/P3 departure A/B", "reason": "author 2026-10-15: the paper prints no star-departure robustness (F20 out of scope)"},
+  {"cell": "nocentre with-centre rebuild control", "reason": "a determinism rerun (spec out of scope; c_rulings M_rerun = no)"}
+ ],
+ "group_outputs": {
+  "note": "rob-root-relative paths each group writes (for the J1b stage output tokens); disjoint across groups. The post group's manifest unit also writes <top>/MANIFEST.sha256 into every top directory of the root (October's per-directory MANIFEST); those files are not listed because they sit inside other groups' directories.",
+  "frames": ["afar_cuts/frames", "afar_cuts/cuts_build.json", "d7/p05/control", "d7/p05/filter_report_p05.json",
+             "doublestar/doublestar_build_report.json", "doublestar/doublestar_drops.csv",
+             "doublestar/complement/dscomp_build_report.json", "nocentre/p3pos"],
+  "cells": ["battery/control", "battery/P1bnd0_econ.json", "battery/P1bnd0_chemistry.json", "battery/P1bnd0_math_stats.json",
+            "battery/P1bndmean_econ.json", "battery/P1bndmean_chemistry.json", "battery/P1bndmean_math_stats.json",
+            "battery/P1lvl_econ.json", "battery/P1lvl_chemistry.json", "battery/P1lvl_math_stats.json",
+            "battery/P1nex_econ.json", "battery/P1nex_chemistry.json", "battery/P1nex_math_stats.json",
+            "leaver", "predate_p1", "predate", "afar_cuts/predate",
+            "afar_cuts/estimates/P3cut_abs04_econ.json", "afar_cuts/estimates/P3cut_abs04_chemistry.json",
+            "afar_cuts/estimates/P3cut_abs04_math_stats.json", "afar_cuts/estimates/P3cut_p75_econ.json",
+            "afar_cuts/estimates/P3cut_p75_chemistry.json", "afar_cuts/estimates/P3cut_p75_math_stats.json",
+            "d7/p05/estimates", "doublestar/estimates", "doublestar/complement/estimates", "nocentre/estimates"],
+  "loeo": ["battery/loeo"],
+  "perm": ["cloud_t5/fetch", "cloud/fetch/out_perm"],
+  "null": ["cloud/fetch/out_null"],
+  "post": ["afar_cuts/estimates/P3cut_pos_econ.json", "afar_cuts/estimates/P3cut_pos_chemistry.json",
+           "afar_cuts/estimates/P3cut_pos_math_stats.json", "afar_cuts/estimates/P3cut_med_econ.json",
+           "afar_cuts/estimates/P3cut_med_chemistry.json", "afar_cuts/estimates/P3cut_med_math_stats.json",
+           "afar_cuts/afar_cut_grid.csv", "battery/loeo_ranked.csv", "cloud_t5/perm", "cloud/perm", "cloud/null",
+           "nocentre/nocentre_report.json", "rob_custody.json", "rob_report.json"]
+ }
+}

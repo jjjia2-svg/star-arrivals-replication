@@ -1,0 +1,191 @@
+# canon_reads.tsv - every file a paper generator reads through a canon root (R1 P3 F7, W1-CANON).
+# The contract an M canon (/work/canon_m, config/r1/paths_aws_m.yaml) must satisfy: the producers
+# (F3/F4/F26/F19/N5/F21) write the 'product' rows under the October basenames, the final job's
+# assembler lays them out and copies the 'carried' rows from October, and `tools/r1_canon.py check
+# ROOT` must print CANON_OK before any generator runs. tests/test_r1_canon_generators.py proves that
+# the files each Python generator opens under the canon roots are exactly its rows.
+#
+# columns (tab-separated):
+#   generator  analysis/paper/<script> (or tools/compare_all.py) that reads the file
+#   key        a canon key (cal frames expected raw_verified paper_inputs cal_intermediates) - the row
+#              lives in the canon at <prefix>/<rel> and its October source is canon.october_path(key, rel);
+#              or another paths.yaml key (legacy_v2_output legacy_multiplex fwci repo_root): read in
+#              place, never copied, listed so F24' can show the numbers it feeds as not recomputed
+#              or canon_root: a file at the canon root beside the six key folders (a canon tree only;
+#              tools/r1_canon.py check covers the six keys, not this)
+#   rel        path under the key's root; may hold fnmatch wildcards (* ?) - check needs >= 1 match
+#   kind       product  - written by an M stage; the canon must carry it (CANON_FAIL if absent)
+#              carried  - no M producer; the assembler copies the October file unchanged
+#              optional - a product the M job may omit (F19 cut it, or F20 is out of scope by the
+#                         author's ruling of 2026-10-15); the generator skips its block in M
+#   reason     the producer, or why the file is carried / optional
+# MANIFEST.sha256 files and CANON.json are infrastructure and are not rows.
+#
+generator	key	rel	kind	reason
+ledger_p3afar.py	frames	p3_afar_counts_by_spec.csv	product	J1a Panel 3 A_far frame build (counts by topic spec)
+ledger_p3afar.py	frames	p3_afar_pos_econ.parquet	product	J1a Panel 3 A_far frame (main spec, dose > 0)
+ledger_p3afar.py	frames	p3_afar_pos_chemistry.parquet	product	J1a Panel 3 A_far frame (main spec, dose > 0)
+ledger_p3afar.py	frames	p3_afar_pos_math_stats.parquet	product	J1a Panel 3 A_far frame (main spec, dose > 0)
+ledger_p3afar.py	expected	P3pos_econ_A_far.json	product	J1a promote_r1 gold row (Panel 3 main cell)
+ledger_p3afar.py	expected	P3pos_chemistry_A_far.json	product	J1a promote_r1 gold row (Panel 3 main cell)
+ledger_p3afar.py	expected	P3pos_math_stats_A_far.json	product	J1a promote_r1 gold row (Panel 3 main cell)
+ledger_p3afar.py	expected	P3med_econ_A_far.json	product	J1a promote_r1 gold row (Panel 3 former median cut)
+ledger_p3afar.py	expected	P3med_chemistry_A_far.json	product	J1a promote_r1 gold row (Panel 3 former median cut)
+ledger_p3afar.py	expected	P3med_math_stats_A_far.json	product	J1a promote_r1 gold row (Panel 3 former median cut)
+ledger_p3afar.py	cal	cloud/custody_cal2026-10.json	product	J1b cloud batch custody record (null + permutations)
+ledger_p3afar.py	cal	cloud/null/NULLpos_*.json	product	J1b no-effect simulation, merged per field
+ledger_p3afar.py	cal	cloud/fetch/out_null/NULLpos_*_null_*.csv	product	J1b no-effect simulation slices (custody-pinned)
+ledger_p3afar.py	cal	cloud/perm/perm_summary.json	product	J1b Panel 3 permutation summary
+ledger_p3afar.py	cal	cloud/perm/raw/P3cutpos_*_perm_*.csv	product	J1b Panel 3 permutation draws (custody-pinned)
+ledger_p3afar.py	cal	cloud/perm/control/P3cutpos_*_perm_0_0.csv	product	J1b Panel 3 identity permutation (custody-pinned)
+ledger_p3afar.py	cal	robustness/afar_cuts/afar_cut_grid.csv	product	J1b F19 dose-cut grid
+ledger_p3afar.py	cal	robustness/afar_cuts/estimates/P3cut_*.json	product	J1b F19 dose-cut cells
+ledger_p3afar.py	cal	robustness/afar_cuts/predate/P3pos_s2_*.json	product	J1b F19 two-year date shift, Panel 3 main spec
+ledger_main.py	frames	p1_frame_econ.csv	product	J1a Panel 1 frame
+ledger_main.py	frames	p1_frame_chemistry.csv	product	J1a Panel 1 frame
+ledger_main.py	frames	p1_frame_math_stats.csv	product	J1a Panel 1 frame
+ledger_main.py	cal	frames_econ/g_econ_rebuild_econ.json	product	J1a econ frame build (FWCI NA decomposition)
+ledger_main.py	cal	yrebuild_chemmath/g_yrebuild_chemistry.json	product	J1a chem/math y-rebuild report
+ledger_main.py	cal	yrebuild_chemmath/g_yrebuild_math_stats.json	product	J1a chem/math y-rebuild report
+ledger_main.py	cal	frames_econ/inpost_report_econ.json	product	J1a econ in-post report (cross-check)
+ledger_main.py	cal	frames_econ/build_report_econ920_2026-10.json	product	J1a econ build report (cross-check)
+ledger_main.py	cal	frames_chemistry/build_report_chemistry.json	product	J1a chemistry build report (cross-check)
+ledger_main.py	cal	frames_math_stats/build_report_math_stats.json	product	J1a mathematics build report (cross-check)
+ledger_main.py	cal	new_numbers/data_numbers_new_2026-10.json	product	ledger_new_2026_10.py run on the M frames (needs the data disk)
+ledger_carried.py	cal	frames_econ/build_report_econ920_2026-10.json	product	J1a econ build report
+ledger_carried.py	cal	frames_chemistry/build_report_chemistry.json	product	J1a chemistry build report
+ledger_carried.py	cal	frames_math_stats/build_report_math_stats.json	product	J1a mathematics build report
+ledger_carried.py	cal	yrebuild_chemmath/g_yrebuild_chemistry.json	product	J1a chem/math y-rebuild report
+ledger_carried.py	cal	yrebuild_chemmath/g_yrebuild_math_stats.json	product	J1a chem/math y-rebuild report
+ledger_carried.py	cal	_invalid_run2/restake_2026-10.csv	product	star layer restake (chem/math after_stock); M keeps the October folder name
+ledger_carried.py	cal	events_chemistry_cal2026-10.csv	product	F3 events_r1 (verdict_source) event table
+ledger_carried.py	cal	events_math_stats_cal2026-10.csv	product	F3 events_r1 (verdict_source) event table
+ledger_carried.py	cal	events_econ_cal2026-10.csv	product	F3 events_r1 (verdict_source) event table
+ledger_carried.py	cal	counts.json	product	the run's sar.r1.counts.v1 counts (write_events / events_r1); read by canon.counts() in M only
+ledger_carried.py	cal	roster_added_2026-10.csv	product	econ roster additions with evidence (P3a roster merge)
+ledger_carried.py	cal	roster_econ_verified_2026-10.parquet	product	econ verified roster (P3a roster merge)
+ledger_carried.py	raw_verified	roster_gold_chemistry.parquet	product	chemistry roster the in-post filter reads (P3a rosters: Monash 2001/2005)
+ledger_carried.py	raw_verified	roster_gold_math_stats.parquet	product	mathematics roster the in-post filter reads (P3a rosters: Adelaide whole school)
+ledger_carried.py	frames	p1_frame_econ.csv	product	J1a Panel 1 frame
+ledger_carried.py	frames	p1_frame_chemistry.csv	product	J1a Panel 1 frame
+ledger_carried.py	frames	p1_frame_math_stats.csv	product	J1a Panel 1 frame
+ledger_carried.py	frames	p2_becoming_econ.csv	product	J1a Panel 2 frame
+ledger_carried.py	frames	p2_becoming_chemistry.csv	product	J1a Panel 2 frame
+ledger_carried.py	frames	p2_becoming_math_stats.csv	product	J1a Panel 2 frame
+ledger_carried.py	frames	p3_slim_econ.parquet	product	J1a Panel 3 pairs_slim
+ledger_carried.py	frames	p3_slim_chemistry.parquet	product	J1a Panel 3 pairs_slim
+ledger_carried.py	frames	p3_slim_math_stats.parquet	product	J1a Panel 3 pairs_slim
+ledger_carried.py	legacy_v2_output	multidisc_gold_2026-08-10/data/final/prep_final_report.json	carried	legacy evidence (centre_added); not recomputed
+ledger_carried.py	legacy_v2_output	econ_roster_verify_2026-08-09/econ_roster_verified_all.csv	carried	legacy evidence sheet of the 2026-08-09 roster check; not recomputed
+ledger_carried.py	legacy_v2_output	multidisc_gold_2026-08-10/data/star_threshold_restake_final_2026-08-13.csv	carried	pre-October stock cross-check, read only when mounted
+ledger_carried.py	legacy_v2_output	multidisc_gold_2026-08-10/data/fnfix_restake_2026-08-15.csv	carried	pre-October stock cross-check, read only when mounted
+ledger_carried.py	repo_root	data/cal2026-08-28/restake_2026-08-28.csv	carried	08-28 stock cross-check, read only when the legacy tree is mounted
+gaps_zenou.py	frames	relationships_econ.csv	product	J1a econ relationships
+gaps_zenou.py	frames	p1_frame_econ.csv	product	J1a Panel 1 frame
+gaps_zenou.py	frames	p2_becoming_econ.csv	product	J1a Panel 2 frame
+gaps_zenou.py	cal	frames_econ/build_report_econ920_2026-10.json	product	J1a econ build report (pins pairs_unified)
+gaps_zenou.py	cal	frames_econ/star_set_econ_cal2026-10.parquet	product	J1a econ star set
+gaps_zenou.py	cal_intermediates	pairs_unified.csv	product	F1 econ pair table, rebuilt on AWS
+gaps_zenou.py	cal	events_econ_cal2026-10.csv	product	F10 events_r1 econ event table; N11 identity check (M mode only)
+gaps_zenou.py	cal	counts.json	product	the run's sar.r1.counts.v1 counts; its config (M or B0) decides whether the N11 signed-rank percentile check applies (M mode only)
+gaps_zero_dose.py	frames	p1_frame_econ.csv	product	J1a Panel 1 frame
+gaps_zero_dose.py	frames	p1_frame_chemistry.csv	product	J1a Panel 1 frame
+gaps_zero_dose.py	frames	p1_frame_math_stats.csv	product	J1a Panel 1 frame
+gaps_switchers.R	frames	p1_frame_econ.csv	product	J1a Panel 1 frame
+gaps_switchers.R	expected	P1_econ_fnfix.json	product	J1a promote_r1 gold row
+gaps_switchers_p1p2.R	frames	p1_frame_*.csv	product	J1a Panel 1 frames
+gaps_switchers_p1p2.R	frames	p2_becoming_*.csv	product	J1a Panel 2 frames
+gaps_switchers_p1p2.R	expected	P1_*.json	product	J1a promote_r1 gold rows
+gaps_switchers_p1p2.R	expected	P2_*.json	product	J1a promote_r1 gold rows
+ledger_funnel.py	paper_inputs	dose_context.json	carried	pre-October pair-pool facts (declared UNREPRODUCIBLE; self-check only)
+ledger_funnel.py	paper_inputs	attrition.csv	carried	pre-October pair-pool facts (declared UNREPRODUCIBLE; self-check only)
+ledger_funnel.py	cal	roster_econ_verified_2026-10.parquet	product	econ verified roster (P3a roster merge)
+ledger_funnel.py	raw_verified	roster_gold_chemistry.parquet	product	chemistry roster (P3a rosters)
+ledger_funnel.py	raw_verified	roster_gold_math_stats.parquet	product	mathematics roster (P3a rosters)
+ledger_funnel.py	raw_verified	roster_chemmath_verified.parquet	product	every verified chem/math spell (P3a rosters)
+ledger_funnel.py	fwci	scan_manifest.json	carried	snapshot fact (FWCI baseline scan); caliber-independent
+ledger_funnel.py	fwci	gate_a_reconcile.json	carried	snapshot fact (FWCI baseline scan); caliber-independent
+ledger_funnel.py	fwci	fwci_baseline_pop_full.parquet	carried	FWCI baseline (subfield count); caliber-independent
+ledger_funnel.py	fwci	fwci_expected_fullsnapshot_2026-08-09.parquet	carried	FWCI baseline (subfield count); caliber-independent
+ledger_funnel.py	legacy_multiplex	_handoff_2026-07-05_hist_roster/step0_review/事实速查表_实测复核_2026-07-05.md	carried	the U1 fact sheet (U1_FACT_SHEET); legacy evidence, not shipped, not recomputed
+fig_star_origins.py	cal	events_econ_cal2026-10.csv	product	F3 events_r1 event table
+fig_star_origins.py	cal	events_chemistry_cal2026-10.csv	product	F3 events_r1 event table
+fig_star_origins.py	cal	events_math_stats_cal2026-10.csv	product	F3 events_r1 event table
+fig_star_origins.py	cal	counts.json	product	the run's sar.r1.counts.v1 counts: fig_star_origins_dots.expected_counts() (R1 F21, the dots per field) reads canon.counts() in M only (October: config/r1/counts_B0.json)
+fig_star_origins.py	paper_inputs	star_origins_2026-10/star_author_ids.csv	product	W2-ORIGINS inputs for the M star set
+fig_star_origins.py	paper_inputs	star_origins_2026-10/affiliation_years.csv	product	W2-ORIGINS inputs for the M star set
+fig_star_origins.py	paper_inputs	star_origins_2026-10/institutions.csv	product	W2-ORIGINS inputs for the M star set
+fig_star_origins.py	paper_inputs	star_origins_2026-10/destinations.csv	product	W2-ORIGINS inputs for the M star set
+fig_star_origins.py	paper_inputs	star_origins_2026-10/human_origin_overrides.csv	product	W2-ORIGINS hand overrides for the M events
+fig_star_origins.py	paper_inputs	basemap/land_mask_etopo5_1deg.txt	carried	basemap (public land mask), not run-dependent
+fig_star_origins.py	paper_inputs	basemap/ne_50m_land.geojson	carried	basemap (Natural Earth, public), read by fig_star_origins_dots.py
+ledger_p1p2.py	expected	P1_econ_fnfix.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P1_fnfix_chemistry.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P1_fnfix_math_stats.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P1evcl_econ.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P1evcl_chemistry.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P1evcl_math_stats.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2_econ_fnfix.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2_fnfix_chemistry.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2_fnfix_math_stats.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2evcl_econ.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2evcl_chemistry.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	expected	P2evcl_math_stats.json	product	J1a promote_r1 gold row
+ledger_p1p2.py	frames	p2_becoming_econ.csv	product	J1a Panel 2 frame
+ledger_p1p2.py	frames	p2_becoming_chemistry.csv	product	J1a Panel 2 frame
+ledger_p1p2.py	frames	p2_becoming_math_stats.csv	product	J1a Panel 2 frame
+ledger_p1p2.py	frames	p1_events_ledger_econ.csv	product	J1a econ events ledger
+ledger_p1p2.py	cal	robustness/battery/loeo_ranked.csv	product	J1b F19 leave-one-event-out
+ledger_p1p2.py	cal	robustness/doublestar/estimates/P1ds_econ.json	product	J1b F19 double-star cell (the only P1ds cell kept)
+ledger_p1p2.py	cal	robustness/doublestar/doublestar_build_report.json	product	J1b F19 double-star build report
+ledger_p1p2.py	cal	robustness/doublestar/doublestar_drops.csv	product	J1b F19 double-star drop list
+ledger_p1p2.py	cal	robustness/doublestar/complement/estimates/P1dsC_econ.json	product	J1b F19 double-star complement cell
+ledger_p1p2.py	cal	robustness/doublestar/complement/dscomp_build_report.json	product	J1b F19 double-star complement build report
+ledger_p1p2.py	cal	cloud_t5/custody_cal2026-10.json	product	J1b T5 permutation batch custody record
+ledger_p1p2.py	cal	cloud_t5/perm/perm_summary.json	product	J1b T5 permutation summary
+ledger_p1p2.py	cal	cloud_t5/perm/raw/*_perm_*.csv	product	J1b T5 permutation draws (custody-pinned)
+ledger_p1p2.py	cal	cloud_t5/perm/control/*_perm_0_0.csv	product	J1b T5 identity permutations (custody-pinned)
+ledger_robustness.py	expected	P1_econ_fnfix.json	product	J1a promote_r1 gold row
+ledger_robustness.py	expected	P1_fnfix_chemistry.json	product	J1a promote_r1 gold row
+ledger_robustness.py	expected	P1_fnfix_math_stats.json	product	J1a promote_r1 gold row
+ledger_robustness.py	expected	P2_econ_fnfix.json	product	J1a promote_r1 gold row (verified-pool equality check)
+ledger_robustness.py	cal	cloud/custody_cal2026-10.json	product	J1b cloud batch custody record
+ledger_robustness.py	cal	robustness/battery/P1bnd0_*.json	product	J1b F19 missing-as-zero bound
+ledger_robustness.py	cal	robustness/battery/P1bndmean_*.json	product	J1b F19 missing-as-own-mean bound
+ledger_robustness.py	cal	robustness/battery/P1lvl_*.json	product	J1b F19 levels
+ledger_robustness.py	cal	robustness/battery/P1nex_*.json	product	J1b F19 never-exposed pool
+ledger_robustness.py	cal	robustness/leaver/P1leave_*.json	product	J1b F19 post-departure zeros
+ledger_robustness.py	cal	robustness/predate_p1/P1pd2_*.json	product	J1b F19 Panel 1 date shift
+ledger_robustness.py	cal	robustness/predate/P2pd2_*.json	product	J1b F19 Panel 2 date shift
+ledger_robustness.py	cal	robustness/afar_cuts/predate/P3pos_s2_*.json	product	J1b F19 Panel 3 date shift
+ledger_robustness.py	cal	robustness/afar_cuts/estimates/P3cut_*.json	product	J1b F19 dose-cut cells
+ledger_robustness.py	repo_root	data/departure_verification_2026-09-10/departure_verified_2026-09-10.csv	optional	October departure ledger (not shipped); F20 is out of scope since 2026-10-15, M has no departure cells
+ledger_robustness.py	cal	robustness/departure/departure187_build_report_*.json	optional	F20 departure frames; out of scope (author ruling 2026-10-15)
+ledger_robustness.py	cal	robustness/departure/estimates/P*dep*.json	optional	F20 departure cells; out of scope (author ruling 2026-10-15)
+ledger_robustness.py	frames	p1_frame_*.csv	optional	departure coverage (events in frame); read only with the departure block
+ledger_robustness.py	cal	robustness/nocentre/nocentre_report.json	product	J1b F19 research-centre rosters removed
+ledger_robustness.py	cal	robustness/nocentre/estimates/P1nc_*.json	product	J1b F19 no-centre Panel 1
+ledger_robustness.py	cal	robustness/nocentre/estimates/P2nc_*.json	product	J1b F19 no-centre Panel 2
+ledger_robustness.py	cal	robustness/nocentre/estimates/P3nc_pos_*_A_far.json	product	J1b F19 no-centre Panel 3
+ledger_robustness.py	cal	robustness/nocentre/estimates/P3nc_math_stats_full.json	optional	F19 cut (P3nc_math_stats_full)
+ledger_robustness.py	cal	robustness/d7/p05/filter_report_p05.json	product	J1b F19 top-5% event subsets
+ledger_robustness.py	cal	robustness/d7/p05/estimates/P1p05_*.json	product	J1b F19 top-5% Panel 1
+ledger_robustness.py	cal	robustness/d7/p05/estimates/P2p05_*.json	product	J1b F19 top-5% Panel 2
+ledger_robustness.py	cal	robustness/d7/p05/estimates/P3p05pos_*_A_far.json	product	J1b F19 top-5% Panel 3
+ledger_robustness.py	cal	robustness/d7/p05/estimates/P3p05_math_stats.json	optional	F19 cut (full-panel D7 P3)
+ledger_robustness.py	cal	cloud/fetch/out/P3p05_*.json	optional	F19 cut (full-panel D7 P3, cloud cells)
+ledger_robustness.py	cal	robustness/d7/dosebin3/P1dosebin3_*.json	optional	F19 cut (dose three bins)
+ledger_robustness.py	cal	robustness/d7/dosebin3/P3dose3_math_stats.json	optional	F19 cut (dose three bins)
+ledger_robustness.py	cal	cloud/fetch/out/P3dose3_*.json	optional	F19 cut (dose three bins, cloud cells)
+ledger_robustness.py	cal	robustness/verified_pool/d4_measure_report.json	optional	F19 cut (verified pool)
+ledger_robustness.py	cal	robustness/verified_pool/estimates/P1ver_econ.json	optional	F19 cut (verified pool)
+ledger_robustness.py	cal	robustness/verified_pool/estimates/P2ver_econ.json	optional	F19 cut (verified pool)
+draft_2026_09_13_tables.py	expected	P1_*.json	product	J1a promote_r1 gold rows (age_gap cap)
+ledger_new_2026_10.py	frames	p1_frame_*.csv	product	J1a Panel 1 frames (the new-numbers ledger runs on the data disk; not in run_all)
+ledger_new_2026_10.py	cal	events_*_cal2026-10.csv	product	F3 events_r1 event tables
+ledger_new_2026_10.py	raw_verified	edges_supplement_econ_fnfix.jsonl	carried	econ edge supplement stage.py feeds prodlib (unchanged)
+ledger_new_2026_10.py	cal	edges_supplement_star_id_corrections_2026-10.jsonl	product	star-id correction supplement of the run stage.py feeds prodlib
+ledger_new_2026_10.py	repo_root	data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl	carried	08-28 edge supplement stage.py feeds prodlib (unchanged)
+compare_all.py	expected	*.json	product	J1a promote_r1 gold rows (the comparison set)
+compare_all.py	canon_root	custody/custody_r1.json	product	custody record of the four large cells (tools/r1_custody_spec.py --stack rcloud): verify_cloud_custody --custody <canon>/custody --spec this file; October reads <cal>/cloud instead
+check_paper.py	paper_inputs	external_stats_2026-09-11.json	carried	ABS HERD record pinned by the main.tex hook (not data-derived); without it the two ABS pins vanish in an M run

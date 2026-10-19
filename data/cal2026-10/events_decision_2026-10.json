@@ -1,0 +1,43 @@
+{
+ "dropped": [
+  {
+   "field": "econ",
+   "event": "A5110738002:2009",
+   "star": "A5110738002"
+  },
+  {
+   "field": "econ",
+   "event": "A5102739182:2010",
+   "star": "A5102739182"
+  },
+  {
+   "field": "econ",
+   "event": "A5041849660:2003",
+   "star": "A5041849660"
+  }
+ ],
+ "kept_by_author_ruling": [
+  {
+   "star": "A5083769806",
+   "why": "kept by author ruling 2026-08-13",
+   "machine_pct": "0.7941"
+  }
+ ],
+ "id_corrected": {
+  "A5090515599": "A5091326353"
+ },
+ "p05": {
+  "econ": {
+   "events": 113,
+   "p05_events": 79
+  },
+  "chemistry": {
+   "events": 38,
+   "p05_events": 31
+  },
+  "math_stats": {
+   "events": 33,
+   "p05_events": 22
+  }
+ }
+}

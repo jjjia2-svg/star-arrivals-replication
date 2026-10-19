@@ -1,0 +1,8 @@
+# R1 V3-FINAL.a: PyMuPDF (import fitz) for tools/count_words.py, tools/check_draft_text.py and red_diff verify.
+# Installed into the py layer by pipeline/aws/r1/build_env.sh build_py() with --require-hashes, after
+# setup/requirements.txt (which, with setup/uv.lock, stays the replication package's lock); checked at every
+# boot by versions_check.py through its own 'py requirements' row in config/r1/expected_versions.txt.
+# Version: the one in the author's Mac venv that ran count_words.py (PyMuPDF 1.27.2.2, installed 2026-04-20).
+# The wheel declares no dependencies (no Requires-Dist). Hash: the manylinux x86_64 wheel that pip picks on
+# Ubuntu 24.04 / CPython 3.12.3 (cp310-abi3), from https://pypi.org/pypi/pymupdf/1.27.2.2/json.
+pymupdf==1.27.2.2 --hash=sha256:892698c9768457eb0991c102c96a856c0a7062539371df5e6bee0816f3ef498e

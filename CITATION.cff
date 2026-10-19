@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite it as below."
+type: software
+title: "Star Arrivals and Their Colleagues: Evidence from Australian Academia (replication package)"
+authors:
+  - family-names: Jia
+    given-names: Jia
+    affiliation: "Department of Economics, The University of Melbourne"
+    email: jjjia2@student.unimelb.edu.au
+version: "1.0"
+date-released: "2026-10-19"
+repository-code: "https://github.com/jjjia2-svg/star-arrivals-replication"
+url: "https://github.com/jjjia2-svg/star-arrivals-replication"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - star scientists
+  - academic mobility
+  - coauthorship networks
+  - difference-in-differences
+  - OpenAlex
+  - Australia
+abstract: >-
+  Code and derived data that reproduce the estimates in the Master of Economics research report
+  "Star Arrivals and Their Colleagues: Evidence from Australian Academia" (The University of
+  Melbourne, 2026): 377 star arrivals at eleven Australian universities, 1999-2024. One command
+  re-estimates 23 of the 27 headline estimates and checks the other 4 against their recorded runs.
+  The table and figure generators also need the author's manuscript and working trees, which are not
+  included; the numbers the report prints are. Code is MIT-licensed; derived data are CC BY 4.0
+  (upstream OpenAlex data are CC0).
+preferred-citation:
+  type: report
+  title: "Star Arrivals and Their Colleagues: Evidence from Australian Academia"
+  authors:
+    - family-names: Jia
+      given-names: Jia
+  year: 2026
+  institution:
+    name: "The University of Melbourne"
+  notes: "ECON90072 Economics Research Report, Master of Economics"

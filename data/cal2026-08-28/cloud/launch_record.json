@@ -1,0 +1,13 @@
+{
+ "instance_id": "i-0ec873f66546a0b87",
+ "instance_type": "r6i.16xlarge",
+ "region": "us-east-1",
+ "az": "us-east-1c",
+ "market": "on-demand",
+ "image_id": "ami-052355af2a014bd2c",
+ "launch_time_utc": "2026-08-28T04:22:33Z",
+ "rate_usd_per_h": 4.032,
+ "rate_source": "pipeline/aws/ runbook on-demand price (us-east-1)",
+ "terminate_time_utc": "2026-08-28T04:56:37Z",
+ "termination_state": "terminated"
+}

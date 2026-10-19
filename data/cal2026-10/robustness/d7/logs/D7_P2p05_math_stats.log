@@ -1,0 +1,12 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 2 P2p05_math_stats rows=18447 relations=1093 first ties=25 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+  [P2p05_math_stats] FAIL: infinite or missing values in 'x'
+[P2p05_math_stats] done
+SAR_OUT=$O Rscript $E/run_p2.R P2p05_${F} $S/p05/p2_becoming_${F}.csv  3.67s user 0.55s system 86% cpu 4.856 total

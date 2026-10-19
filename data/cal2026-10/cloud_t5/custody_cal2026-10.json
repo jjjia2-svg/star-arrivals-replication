@@ -1,0 +1,400 @@
+{
+ "task": "cal2026-10 cloud batch — custody chain",
+ "verified_utc": "2026-09-22T18:58:51Z",
+ "ok": true,
+ "problems": [],
+ "marker": "2026_10C",
+ "instance": {
+  "instance_id": "i-00947591ab405fefe",
+  "instance_type": "r6i.16xlarge",
+  "region": "us-east-1",
+  "az": "us-east-1f",
+  "market": "on-demand",
+  "image_id": "ami-052355af2a014bd2c",
+  "launch_time_utc": "2026-09-22T18:23:13Z",
+  "terminate_time_utc": "2026-09-22T18:58:51Z",
+  "termination_state": "terminated",
+  "rate_usd_per_h": 4.032
+ },
+ "billed_minutes": 35.6,
+ "cost_usd_actual": 2.39,
+ "cost_estimate_preflight": {
+  "basis": "A6 in cloudkit.py: 08-28 measured wall per cell, predate x1.6, 08-30 batch wall for the parallel phase, 14 min overhead",
+  "serial_cells_min": {},
+  "parallel_phase_min": 81.0,
+  "overhead_min": 14.0,
+  "wall_min_projected": 95.0,
+  "on_demand_usd_per_h": 4.032,
+  "cost_usd_projected_on_demand": 6.38
+ },
+ "payload_md5_sha256": "a94df9c1f0ac8ea38cf3a425407fee457cba839944ebece0a30cdf40112a1c2c",
+ "payloads_before": {
+  "P1_econ_fnfix.json": {
+   "source": "analysis/expected/P1_econ_fnfix.json",
+   "sha256_before": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+   "md5_before": "eb91f28e0bbe7ae817bddbac0ca8443d",
+   "bytes": 3664
+  },
+  "P1_fnfix_chemistry.json": {
+   "source": "analysis/expected/P1_fnfix_chemistry.json",
+   "sha256_before": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+   "md5_before": "151fdfca76d18eb7356753e9683b66cc",
+   "bytes": 3643
+  },
+  "P1_fnfix_math_stats.json": {
+   "source": "analysis/expected/P1_fnfix_math_stats.json",
+   "sha256_before": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+   "md5_before": "991aaadb7350160cafbd960b65c956e8",
+   "bytes": 3622
+  },
+  "P2_econ_fnfix.json": {
+   "source": "analysis/expected/P2_econ_fnfix.json",
+   "sha256_before": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+   "md5_before": "7545e68067fac9c637e3a95ee7cff14f",
+   "bytes": 1076
+  },
+  "P2_fnfix_chemistry.json": {
+   "source": "analysis/expected/P2_fnfix_chemistry.json",
+   "sha256_before": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+   "md5_before": "c20cc64b60a19571d3b568351cecfc9c",
+   "bytes": 1083
+  },
+  "P2_fnfix_math_stats.json": {
+   "source": "analysis/expected/P2_fnfix_math_stats.json",
+   "sha256_before": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+   "md5_before": "da8aece1eb98b16f0620b36ff30e1850",
+   "bytes": 1077
+  },
+  "bootstrap.sh": {
+   "source": null,
+   "sha256_before": "d2450bd072de321faf13893dd90eaf7d5b4d7a540fe08a1f89033e8e1f8b0394",
+   "md5_before": "ff6cfed1e9cd8b0e64e860835a2ffa70",
+   "bytes": 2859
+  },
+  "driver.env": {
+   "source": null,
+   "sha256_before": "132717f36a011d17e481d7e962efd24fc6304f6dd63fac82b8e2379af9028701",
+   "md5_before": "42732249811b6d91db41f51579cdf0d3",
+   "bytes": 33
+  },
+  "driver.sh": {
+   "source": null,
+   "sha256_before": "ce1a06121507eccb0da0aea034f813fafe3f09844f44ce10564e0dae803ee7c7",
+   "md5_before": "de309e39688a5351706ed589e5bb319b",
+   "bytes": 5136
+  },
+  "jobs_parallel.txt": {
+   "source": null,
+   "sha256_before": "f79244c09107f09120ba6c4b132a9c1986410be48b899889f0eea7e24eb63818",
+   "md5_before": "cbc50581ad553d25bf5f0206e603ec1d",
+   "bytes": 9287
+  },
+  "jobs_serial.txt": {
+   "source": null,
+   "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+   "bytes": 0
+  },
+  "p1_frame_chemistry.csv": {
+   "source": "data/frames/p1_frame_chemistry.csv",
+   "sha256_before": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+   "md5_before": "64b0b928d5203a39ebbe5a0f4eab818a",
+   "bytes": 4875239
+  },
+  "p1_frame_econ.csv": {
+   "source": "data/frames/p1_frame_econ.csv",
+   "sha256_before": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+   "md5_before": "10cf5304372e36eba18112ac8d90dfda",
+   "bytes": 11894212
+  },
+  "p1_frame_math_stats.csv": {
+   "source": "data/frames/p1_frame_math_stats.csv",
+   "sha256_before": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+   "md5_before": "ffb2a50ac2653ffe961ae9b2436660b8",
+   "bytes": 2871951
+  },
+  "p2_becoming_chemistry.csv": {
+   "source": "data/frames/p2_becoming_chemistry.csv",
+   "sha256_before": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+   "md5_before": "89036df942e6c141d8aa90b96d3aa1c1",
+   "bytes": 2869496
+  },
+  "p2_becoming_econ.csv": {
+   "source": "data/frames/p2_becoming_econ.csv",
+   "sha256_before": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+   "md5_before": "d0ccd0f59012392422c42879f4c6730b",
+   "bytes": 6839699
+  },
+  "p2_becoming_math_stats.csv": {
+   "source": "data/frames/p2_becoming_math_stats.csv",
+   "sha256_before": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+   "md5_before": "3fb39b276871da1db1ff67f008cc96a4",
+   "bytes": 1928708
+  },
+  "run_perm.R": {
+   "source": "analysis/robustness/inference/run_perm.R",
+   "sha256_before": "2dc98b40cb1f76ce84169efcc578bd67c71d78ffd8f4ca26ca9d3b0278fe6f40",
+   "md5_before": "1c8dba4f398c09f130a3e80611a29b30",
+   "bytes": 9476
+  }
+ },
+ "remote_md5_ok": [
+  "P1_econ_fnfix.json",
+  "P1_fnfix_chemistry.json",
+  "P1_fnfix_math_stats.json",
+  "P2_econ_fnfix.json",
+  "P2_fnfix_chemistry.json",
+  "P2_fnfix_math_stats.json",
+  "bootstrap.sh",
+  "driver.env",
+  "driver.sh",
+  "jobs_parallel.txt",
+  "jobs_serial.txt",
+  "p1_frame_chemistry.csv",
+  "p1_frame_econ.csv",
+  "p1_frame_math_stats.csv",
+  "p2_becoming_chemistry.csv",
+  "p2_becoming_econ.csv",
+  "p2_becoming_math_stats.csv",
+  "run_perm.R"
+ ],
+ "versions_remote": "R 4.6.1 DIDmultiplegtDYN 2.4.0 polars 1.9000.9000.9000 data.table 1.18.6.1 jsonlite 2.0.0 fixest 0.14.2 \nr-cran-didmultiplegtdyn:\n  Installed: 2.4.0-1.ca2404.1\n  Candidate: 2.4.0-1.ca2404.1\nr-cran-fixest:\n  Installed: 0.14.2-1.ca2404.1\n  Candidate: 0.14.2-1.ca2404.1\nLinux <host> 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:53:06 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux",
+ "result_marker": "ALL_DONE_MARKER_2026_10C",
+ "units": {
+  "expected": 66,
+  "reported": 66,
+  "nonzero": {},
+  "absent": []
+ },
+ "cells": {},
+ "predate_controls": {},
+ "parallel_outputs": {
+  "P1_econ_fnfix": {
+   "files": 11,
+   "rows": 501
+  },
+  "P1_fnfix_chemistry": {
+   "files": 11,
+   "rows": 501
+  },
+  "P1_fnfix_math_stats": {
+   "files": 11,
+   "rows": 501
+  },
+  "P2_econ_fnfix": {
+   "files": 11,
+   "rows": 501
+  },
+  "P2_fnfix_chemistry": {
+   "files": 11,
+   "rows": 501
+  },
+  "P2_fnfix_math_stats": {
+   "files": 11,
+   "rows": 501
+  }
+ },
+ "fetch_sha256": {
+  "RESULT.txt": "b715b818c5a7fb3b24fc8d073948f80135d1ddc03689017bce73bf13575e2441",
+  "bootstrap.log": "49e320548e272e3a456a769af834ab07e2c8eb614e104ca5f45d0296bef55eef",
+  "bootstrap_ready.txt": "c550da705fc3f6af66df88deea44d3176c1ea4c61d99db3216ced395ad9a7a55",
+  "driver.log": "2125813ec180bdbb59f3cec593b0d25759d8c28f11c16ad2e210d0d1cbb84592",
+  "driver.out": "2125813ec180bdbb59f3cec593b0d25759d8c28f11c16ad2e210d0d1cbb84592",
+  "logs/u001_P1_econ_fnfix_perm_0_0.log": "b2267a4b3e8ea1c9a05d9065ec162d73ce0dad27f736f4506d0240bf67cec6ed",
+  "logs/u002_P1_econ_fnfix_perm_1_50.log": "6d68d92e8dbf24bedcb3b892af12db964a3a6604a4d9bf0babf1147d53d25afc",
+  "logs/u003_P1_econ_fnfix_perm_51_100.log": "6c8982297798dc34bc3f64dbb1677af208a8b124fff044d623bf24f6509aa92f",
+  "logs/u004_P1_econ_fnfix_perm_101_150.log": "f1cc64ff41fae5d203efe82e67ede976dd26dd45d201f58f96817d5d8494d3ff",
+  "logs/u005_P1_econ_fnfix_perm_151_200.log": "cabecbfd66e8b24ba1720920de5001e0026f3687fafecef9dd308b6ffbf768f7",
+  "logs/u006_P1_econ_fnfix_perm_201_250.log": "523ddf250985c127b511326ea9172af7847fcd3845042a44d8ce79e65f9e773c",
+  "logs/u007_P1_econ_fnfix_perm_251_300.log": "bc6ea58bb4069e73273f247b6bdea81ac917442e4a22e7b7bb8909104dbbc405",
+  "logs/u008_P1_econ_fnfix_perm_301_350.log": "8519ed309a53869ccade9e1d76391de47e4e3c33e45d8cda37a385f9572c81ca",
+  "logs/u009_P1_econ_fnfix_perm_351_400.log": "aa1759c3766d290c3b4af5d685757bc62818bc76dd159e3c9d3f2775a32056da",
+  "logs/u010_P1_econ_fnfix_perm_401_450.log": "653f98075223082d2020ce1c74abeb4153442e8ea11d134668167690abb29264",
+  "logs/u011_P1_econ_fnfix_perm_451_500.log": "b165cfeb384919d91d7fd6af1e2366444a7002e039342c6b1615cc4655c585da",
+  "logs/u012_P1_fnfix_chemistry_perm_0_0.log": "441d7ff4de1081af92c2d41827996676218111ddaccc41f1f2749feab3e720f9",
+  "logs/u013_P1_fnfix_chemistry_perm_1_50.log": "782a32f15e7abb67f76065d17b64a7df07a078c8a491f5c096ed6e2de2cccb5c",
+  "logs/u014_P1_fnfix_chemistry_perm_51_100.log": "0ae7e8bb37ccc4d185bd70511264922d4506371e500c389485f1afb9bd31e4a2",
+  "logs/u015_P1_fnfix_chemistry_perm_101_150.log": "b0de78f74792b5b7c78fa7b9fd8263fb4241837fbbbeaf729f56f8c04577451e",
+  "logs/u016_P1_fnfix_chemistry_perm_151_200.log": "8d60a59bcb8840de5a89cd9450e68075f514e83057decdba29286545f2302d58",
+  "logs/u017_P1_fnfix_chemistry_perm_201_250.log": "d76119fe5106ce1f675b619659b50fcdf924cfa225f4b9117268d6db14cbcb02",
+  "logs/u018_P1_fnfix_chemistry_perm_251_300.log": "cce225f2b34264fbeabbf552abb20cec3979ff53313b933417e8d0e9d834693c",
+  "logs/u019_P1_fnfix_chemistry_perm_301_350.log": "d70d3c433ca3e99db4df2dbca3de6f3b5023c608e006dca23a77580851a8cbdc",
+  "logs/u020_P1_fnfix_chemistry_perm_351_400.log": "e554e57e980e99654fa3d6ad016c7787a2bd78c6277a423026a022bd9273fb46",
+  "logs/u021_P1_fnfix_chemistry_perm_401_450.log": "007fdb96a81986baccff03964029ddbd29acea14c5b59ade2fb9f9b54bc4116c",
+  "logs/u022_P1_fnfix_chemistry_perm_451_500.log": "1472b3381babe82c7ba7fd3a4b1102d963860e175a6b91dd9608ceeb8761da4e",
+  "logs/u023_P1_fnfix_math_stats_perm_0_0.log": "8dff0db6966abc697a00b74e24aa2f75ec9fef52d83591baef9072a54a60c0bb",
+  "logs/u024_P1_fnfix_math_stats_perm_1_50.log": "208806d9f72c3c85896f8852be1f041987973a1cf2235ca4d5665b3ee6bfe8c7",
+  "logs/u025_P1_fnfix_math_stats_perm_51_100.log": "b22683b0c5e9da12690673c912f8779b1438ab7732ee6856930a391c8af2bfdc",
+  "logs/u026_P1_fnfix_math_stats_perm_101_150.log": "025381920cf1e34d2850368026224ecd4019ad7ca864a681e9203e194fffbbf1",
+  "logs/u027_P1_fnfix_math_stats_perm_151_200.log": "dd4c2eb4415037cdf047206075d37a15e2babed8ed9f516aa1291bc63ca271c8",
+  "logs/u028_P1_fnfix_math_stats_perm_201_250.log": "b1122afae7a193f9b6a7833dbf85bc4a6d6884d529be0176f1a13780f6f6e079",
+  "logs/u029_P1_fnfix_math_stats_perm_251_300.log": "82fc7b5ae09334f7a56ccb24fa8514811bedccede01d8025d9a605f439bb8cee",
+  "logs/u030_P1_fnfix_math_stats_perm_301_350.log": "2b4c560346579a669364394326050495e710d259567fdfb64e2057514db5b27b",
+  "logs/u031_P1_fnfix_math_stats_perm_351_400.log": "c5334edd249e8c0ff154280a79e76aeffa18970581c48c8af5708bbcd39aa465",
+  "logs/u032_P1_fnfix_math_stats_perm_401_450.log": "4c0cf0cfa87a6ed223126d59d8d8b2cbd173dc7cda94ab3b029ee58ecbf641b8",
+  "logs/u033_P1_fnfix_math_stats_perm_451_500.log": "3912f5b0d968c4d8e0ec1492671c0268fd61a994c814dd0502e33a1bbad62154",
+  "logs/u034_P2_econ_fnfix_perm_0_0.log": "4e95889a27c156901d9d4a61e5ca370a4699194766959ba4a092064428a8b7b3",
+  "logs/u035_P2_econ_fnfix_perm_1_50.log": "3b2a99938eb5cd9e0524a76421a896c912f15b353c5abed1f9e657fbda71e6ba",
+  "logs/u036_P2_econ_fnfix_perm_51_100.log": "0c656dc51d2cc0301d4dc25edc10ce5e317f8dc84e7cad9e0e642169bd52427a",
+  "logs/u037_P2_econ_fnfix_perm_101_150.log": "780aa8d1d53f0171943230454d196499c379766cdae106fe459a3c45cb0baff9",
+  "logs/u038_P2_econ_fnfix_perm_151_200.log": "2c6f40840de18d77b18dbb36e00f4ae7b8bfaca7c991cf1b4fd333751ffa7353",
+  "logs/u039_P2_econ_fnfix_perm_201_250.log": "bff4004018ad0515e67d7b819a9cf4daaed185a272924f46763ac8a62713d784",
+  "logs/u040_P2_econ_fnfix_perm_251_300.log": "0d132147446483d7cd423b318c531433479f8a08cbbdf8e759f61aaf4c777341",
+  "logs/u041_P2_econ_fnfix_perm_301_350.log": "fc24322b6f021c33eb09f6c02cfc95cd47c0146e1db2dccc7b6d30c65306cbad",
+  "logs/u042_P2_econ_fnfix_perm_351_400.log": "8d44000e7c244698fb000dd07f3fab848aea3327a7fd3f360a672129a26fc877",
+  "logs/u043_P2_econ_fnfix_perm_401_450.log": "095ebac379e90ab80015abeb919dd686a25edec8c48e04460a1e29667ea1c964",
+  "logs/u044_P2_econ_fnfix_perm_451_500.log": "baaedbf905afe95447d0485e7f34f3e4108a17f80a7464dc9273f30821639bc2",
+  "logs/u045_P2_fnfix_chemistry_perm_0_0.log": "1fc938d9ee4d33f92c79e05086fbe58c9aa9df8d9a0839d9519fd8310fd60488",
+  "logs/u046_P2_fnfix_chemistry_perm_1_50.log": "c5c89728e25436b0bcc855edd42d775a818a625410c891c36067dfe66fa3b8e7",
+  "logs/u047_P2_fnfix_chemistry_perm_51_100.log": "94f79b91d408225a06eaa2d906b2694586ab62357349ac4bb437f1cf3ff222db",
+  "logs/u048_P2_fnfix_chemistry_perm_101_150.log": "5a4fbac50467f8b38555a4e3e3be751c172f4f8f78917f29b8c8ef5a7e1c1d0b",
+  "logs/u049_P2_fnfix_chemistry_perm_151_200.log": "543d25104636a3d972e8270a1134c17c13d05221b9b7dfccef1d7acca0c801e6",
+  "logs/u050_P2_fnfix_chemistry_perm_201_250.log": "078930ad9ac1647fe86e3e618878c5be9764ba5bc124e3171d3da9772db35397",
+  "logs/u051_P2_fnfix_chemistry_perm_251_300.log": "ca75fd894f0746753ba273de087bd1111a7a49ee0056f14a5aa4277ca22e538b",
+  "logs/u052_P2_fnfix_chemistry_perm_301_350.log": "75c4da9145416453429e437a855d001c9428260b6cafd7f70ef76f180ac9c8b9",
+  "logs/u053_P2_fnfix_chemistry_perm_351_400.log": "3f5fce874c3f367f386c0dea5dd462dd652adfd2f48c814debc19a5f065551ee",
+  "logs/u054_P2_fnfix_chemistry_perm_401_450.log": "d22d8f330ceeb67036788c377f798d8a3c261c7e84ab3e39d66b40c53e6e54b7",
+  "logs/u055_P2_fnfix_chemistry_perm_451_500.log": "910e454022f3a093ba9bb50d64c2712cf61b7188c8a94c0a6b51d52687072495",
+  "logs/u056_P2_fnfix_math_stats_perm_0_0.log": "c782838537adab4f4df984d8f6e11f013c8f4355327018d0fcf69a3180afe2b0",
+  "logs/u057_P2_fnfix_math_stats_perm_1_50.log": "4dd00e93e60461de09b990d2290c73f01f9541610c29c90d54f28f62546be45c",
+  "logs/u058_P2_fnfix_math_stats_perm_51_100.log": "d3cfa156fb8f898a40c3d8892086ece152fa54108534de6bd4be5d7eb805b7da",
+  "logs/u059_P2_fnfix_math_stats_perm_101_150.log": "ae5d37861ae2cb7d115b9b813d9c9e1d4aeb5705e32f8ca4f7bb9649d3c36121",
+  "logs/u060_P2_fnfix_math_stats_perm_151_200.log": "f23d2ecde72de822a91c8c8b778e891cb32fb2e1cd3b0376efd69b6ed3f4f42a",
+  "logs/u061_P2_fnfix_math_stats_perm_201_250.log": "e662010de03843b1e4edeb2e33acb19e060ccbc540218c100aa7cf72b28cc1a9",
+  "logs/u062_P2_fnfix_math_stats_perm_251_300.log": "bb81ae91b66902e152ff9af25cdcdc785a4c14bc7ddc260534bc6163f5b10312",
+  "logs/u063_P2_fnfix_math_stats_perm_301_350.log": "c9c05fcac937bf62288ade7c4b34f1a4de28e013a7aa11c08b517a3abee9b76e",
+  "logs/u064_P2_fnfix_math_stats_perm_351_400.log": "db33d3686af591d32de708626b0ad19997c63aadc77bdc63004920ca9793e15d",
+  "logs/u065_P2_fnfix_math_stats_perm_401_450.log": "b1a39dbde42084e38c4671e6e57a45c22527a5cdbe9c1555651d0932751f0df2",
+  "logs/u066_P2_fnfix_math_stats_perm_451_500.log": "aa8a16511bf21a615c86c6489090af63d6d436467db23e8c0511bd20cc27d6a2",
+  "md5check.log": "1166dbc768f828b44ca94ace94d1bbeb37d153177ba336a43a685aaf4eef7f55",
+  "mem.log": "92caec38a714169843d42f163c7336907f3f4012fbae2021bb741f0a1840774a",
+  "out_perm/P1_econ_fnfix_perm_0_0.csv": "467007514c2743542a296f2414c7f2550f8fdaacf1ab03d007b6b17db446f703",
+  "out_perm/P1_econ_fnfix_perm_101_150.csv": "2f55f2e62d2ce6f3246d91e7994473d5346149fc7eb92a4a535b0f34214ee9d2",
+  "out_perm/P1_econ_fnfix_perm_151_200.csv": "27a5f856cf1a5eca4091773766e623f601a756fddfc9d7c9e446eec5e2397774",
+  "out_perm/P1_econ_fnfix_perm_1_50.csv": "f55dde01749431e87e4d868ffeef6eba516225c1e8ac03ea40172443d3c9c283",
+  "out_perm/P1_econ_fnfix_perm_201_250.csv": "c3f15be8c2a1101e9dfce1fee2dbdff8b4d2f8ea88fe2a02df90cf9070c28db9",
+  "out_perm/P1_econ_fnfix_perm_251_300.csv": "3040c1f6f04f84ee6dc0666f14135dab098df626d0ada1c3b27d194757a468d1",
+  "out_perm/P1_econ_fnfix_perm_301_350.csv": "dcb6217a7fcdafb80f3a72aeb64dd45856403176d6ab5413a8b8af592dab6086",
+  "out_perm/P1_econ_fnfix_perm_351_400.csv": "048e498913b965f9b52a7156dc32cabff89d88a49156dedcc34ba774459b1eb8",
+  "out_perm/P1_econ_fnfix_perm_401_450.csv": "2b2a9dd8eee47ce86390616d36e863b1a542b55407970003dbaceb37e8442015",
+  "out_perm/P1_econ_fnfix_perm_451_500.csv": "fd75cab4f1e0bb8517c16dc5b70d95a588722d6e8331a962b572335d0f670ea1",
+  "out_perm/P1_econ_fnfix_perm_51_100.csv": "23bc620f1d390bfbf3ad654c6a85b1437f4589f66aa6b8595862812ef787d6a3",
+  "out_perm/P1_fnfix_chemistry_perm_0_0.csv": "5b6a69cadae57f2cd8be736a37a0a8fa9b81bfc7d0f2731fb3d759193ec66801",
+  "out_perm/P1_fnfix_chemistry_perm_101_150.csv": "026aaae72f9d2b4ba421438370c3cf4f376bc5acffe32dc54d815f242a811b1c",
+  "out_perm/P1_fnfix_chemistry_perm_151_200.csv": "fcd29b7aad00b5d75ddeed44b9e5044dfb3ea94a9b65bba6571430bfaa75efbc",
+  "out_perm/P1_fnfix_chemistry_perm_1_50.csv": "045b5499832fdcdb64c6001878074d0ecc998dea6660082af39ecd2fba9424d4",
+  "out_perm/P1_fnfix_chemistry_perm_201_250.csv": "fe0f4fe2f4d7da812efc1ba96c6f67fec7631f546fb9319fb3243fc6935a157e",
+  "out_perm/P1_fnfix_chemistry_perm_251_300.csv": "2f0163fa279f6b260a4dc1997f74b6cdbe6d85e19315ad2e472509612064d46d",
+  "out_perm/P1_fnfix_chemistry_perm_301_350.csv": "9f17156ca702306d3a26824f19baaf12c6e9da46bd59294a32437f783a1a4c11",
+  "out_perm/P1_fnfix_chemistry_perm_351_400.csv": "c2b83923f5e3a5f8a8552267cb99859f93cee676e63f7c1991fab8065364dccf",
+  "out_perm/P1_fnfix_chemistry_perm_401_450.csv": "3c822ab4b0e6db2ba205ba2a8d682dde2cf8c6326bd6c63501eba176b5fc33be",
+  "out_perm/P1_fnfix_chemistry_perm_451_500.csv": "ebc0c3df2ed7e7cba227b78ad8c232bf15a863a647045c2c3c9f4999305cb005",
+  "out_perm/P1_fnfix_chemistry_perm_51_100.csv": "711bb464e4146b011abc86bf15546668f8786f4fe6c5db294ea5d70417ec5286",
+  "out_perm/P1_fnfix_math_stats_perm_0_0.csv": "ce75873308b0a470f00b6ad821bd8b37b364a54aea76845335fe1112c84c3893",
+  "out_perm/P1_fnfix_math_stats_perm_101_150.csv": "4658da894ea80e4e3ecf95f240c704193639fe8a4af7b1f0d04efc277f11c84d",
+  "out_perm/P1_fnfix_math_stats_perm_151_200.csv": "7a26701ef714a11fbbff9a01a8aa651127b303a4c1fa3d3ec567bb59315eb284",
+  "out_perm/P1_fnfix_math_stats_perm_1_50.csv": "b29794a98df56562fb788338ef8b88d681e027ee28aa3a78669d9ec6d5cf98cd",
+  "out_perm/P1_fnfix_math_stats_perm_201_250.csv": "3c712d71299d47b3c2ab086f001af95fc6a6ae1e705c09d36cbb25fc32caf357",
+  "out_perm/P1_fnfix_math_stats_perm_251_300.csv": "a8fc90791e329a959bcc1cf43f39a84bd00969d1c6e712d3f897644b1d1fbc6d",
+  "out_perm/P1_fnfix_math_stats_perm_301_350.csv": "f1ec115e492c3bed78b78bb6e3443daac51744bddeecaf135d1c8b2d450a9c9a",
+  "out_perm/P1_fnfix_math_stats_perm_351_400.csv": "2239ec068fc6d5e94dbd983e3f21147ed2ffc78875418cd744aa63e40ffd7433",
+  "out_perm/P1_fnfix_math_stats_perm_401_450.csv": "42cab0927fe545d07dadf5d612b098795cb2f33966474fe0a8494b3be0166c05",
+  "out_perm/P1_fnfix_math_stats_perm_451_500.csv": "18baa1ea48e8b7dad73db41f0f477f31aac7252fe0a039560196f4e75f547c5b",
+  "out_perm/P1_fnfix_math_stats_perm_51_100.csv": "4aeac1fc9e06541b16a33956d57207173c4f02f0a5b77b4e7063a7d91b13a12f",
+  "out_perm/P2_econ_fnfix_perm_0_0.csv": "a130c179c06460095e38ecbf8d874ad5bd8bb8430b574d347d022580af6e7ac7",
+  "out_perm/P2_econ_fnfix_perm_101_150.csv": "28c7898b3d65583b7e7c778b320aa9924bf3c13dd9b1c945da3c7e0f3f351297",
+  "out_perm/P2_econ_fnfix_perm_151_200.csv": "0dd5fa8ef2197df306043deeee0975b51207b442145bfab85ebe29f53c99d8b0",
+  "out_perm/P2_econ_fnfix_perm_1_50.csv": "ce3e626a11dd29e1142065c9e9c2b71a2ec0ecbc39d9dde7cc31bd0b174be417",
+  "out_perm/P2_econ_fnfix_perm_201_250.csv": "36e99e18af66fcb3db1252b9074b2770fc5c01ba14ee46bca6db386cda5ee8be",
+  "out_perm/P2_econ_fnfix_perm_251_300.csv": "eaf633b1d970304fb9da289a7e9a019d25bf09d913c38f0a092fbf6e28a92938",
+  "out_perm/P2_econ_fnfix_perm_301_350.csv": "19336e974f658634cced084c98d11d780008032eadd57eab2ca8d29982b90670",
+  "out_perm/P2_econ_fnfix_perm_351_400.csv": "13aba74b5fd66d4454028141653c757437dd1175308bd5a472e579113c7dab68",
+  "out_perm/P2_econ_fnfix_perm_401_450.csv": "3b45687845006d1c60eb5c26bdb5f618ea9838d6cc1b4fbc772acf187ee8b32e",
+  "out_perm/P2_econ_fnfix_perm_451_500.csv": "a1893d4fa0d5cd9c1014eb51a836b6fbf2a3d65258da75b37a8e79ecffa620d5",
+  "out_perm/P2_econ_fnfix_perm_51_100.csv": "eed139a25c40df63fbeae459e04a62025340ae9bacb6b4852070884e8e4adbfb",
+  "out_perm/P2_fnfix_chemistry_perm_0_0.csv": "dcdb70a7baf30ade488ffc62488b2840edcfa8ca7d5c6a967393477b08ac4e45",
+  "out_perm/P2_fnfix_chemistry_perm_101_150.csv": "fcb3c21652454e324e68aecae7028ab0f95deb5d675acfd9c4a3da97e159bc39",
+  "out_perm/P2_fnfix_chemistry_perm_151_200.csv": "bb60d3bc516af1ed0d41c49d51676c967e2dce6b498b1e2160403f2b230e2eb9",
+  "out_perm/P2_fnfix_chemistry_perm_1_50.csv": "3804e108a9dfbf733620e9bed921402722eec227d99667231a68fcf2f1c08976",
+  "out_perm/P2_fnfix_chemistry_perm_201_250.csv": "bc39dbd3473216776fa4ef1023495b08afd6a06cadd4dde444dad02ed8b9a90b",
+  "out_perm/P2_fnfix_chemistry_perm_251_300.csv": "c43b0b623861c9c7f23ff802b932f696559e66f6663e04551c3bb85caf04012b",
+  "out_perm/P2_fnfix_chemistry_perm_301_350.csv": "a2a5f10d534c05bbd3725ac5e339fa753eae5dc593aebf0f5db6ecbb35a243d9",
+  "out_perm/P2_fnfix_chemistry_perm_351_400.csv": "29fe92bcd09bff07ae11cb2585f572de0d317446275792d66e931e05c9d495e5",
+  "out_perm/P2_fnfix_chemistry_perm_401_450.csv": "d14366dc3f2d2fde860cd7e4fa99c772e2831c9d03372aaa51e7cfc8ea80dd56",
+  "out_perm/P2_fnfix_chemistry_perm_451_500.csv": "948768678b5678f64fb34ecb54e3c20d84a4f375fffcf43e895e92702da527a7",
+  "out_perm/P2_fnfix_chemistry_perm_51_100.csv": "f5d456e9f36d36b24962315352b8fb5c7329aa1fbd1013dde15ccd900108e8dc",
+  "out_perm/P2_fnfix_math_stats_perm_0_0.csv": "3f0aac380d99e30972c41fb351bdcde9b794538ff3b874448b78c92a8c428f58",
+  "out_perm/P2_fnfix_math_stats_perm_101_150.csv": "cb5016b4e7114429a4bd918d4ddde897384d567516d6a755d418c7ddd33f1d26",
+  "out_perm/P2_fnfix_math_stats_perm_151_200.csv": "0169c102f422379e52077a7757d63bbee59d4a1d2a02a98832313148277b3d09",
+  "out_perm/P2_fnfix_math_stats_perm_1_50.csv": "ca55501029098e1e58fd32cf0369778337272849a5260ffd52a8673363048743",
+  "out_perm/P2_fnfix_math_stats_perm_201_250.csv": "30538b09e2ae40e0ed8c91ad051f61850f96b4f38323a9863e90a222f1ea25ed",
+  "out_perm/P2_fnfix_math_stats_perm_251_300.csv": "f7619e35e6fe3fd30d2a2813f1183a5b1cbbc71c929ec5f526e69fa174ef336b",
+  "out_perm/P2_fnfix_math_stats_perm_301_350.csv": "74d08769d57e87872c4e865486bafd16651a2556e0ad8eeb09a4907572a2247b",
+  "out_perm/P2_fnfix_math_stats_perm_351_400.csv": "9e3eecf837dd2b2a2936657615fc86d6da0ec0e22ecf3f8f15613e8c0885eb51",
+  "out_perm/P2_fnfix_math_stats_perm_401_450.csv": "b89411d3c116b81ab53028676b43112f49aabf7a556438604c4fc124d1b679d1",
+  "out_perm/P2_fnfix_math_stats_perm_451_500.csv": "d30f203c883eb265583572bc12d5b1aad10d01446d2eb37f6d348e802780fda5",
+  "out_perm/P2_fnfix_math_stats_perm_51_100.csv": "c9daab98572a944724cb0c0891151470d55f8f432a8fbfb87aa04e9502bc5bb4",
+  "progress.log": "d1da357798a99ed22106c3d435baf5e81ecfe4c0158f1975d2dccb01786a1fce",
+  "versions.txt": "ad2d7ca9ac497c1595fc5c45dd47078535e1b5cba9ee698c8d445c94ec5a8e5c"
+ },
+ "verify": {
+  "frame_pairs": [
+   [
+    "analysis/expected/P1_econ_fnfix.json",
+    "P1_econ_fnfix.json"
+   ],
+   [
+    "analysis/expected/P1_fnfix_chemistry.json",
+    "P1_fnfix_chemistry.json"
+   ],
+   [
+    "analysis/expected/P1_fnfix_math_stats.json",
+    "P1_fnfix_math_stats.json"
+   ],
+   [
+    "analysis/expected/P2_econ_fnfix.json",
+    "P2_econ_fnfix.json"
+   ],
+   [
+    "analysis/expected/P2_fnfix_chemistry.json",
+    "P2_fnfix_chemistry.json"
+   ],
+   [
+    "analysis/expected/P2_fnfix_math_stats.json",
+    "P2_fnfix_math_stats.json"
+   ],
+   [
+    "data/frames/p1_frame_chemistry.csv",
+    "p1_frame_chemistry.csv"
+   ],
+   [
+    "data/frames/p1_frame_econ.csv",
+    "p1_frame_econ.csv"
+   ],
+   [
+    "data/frames/p1_frame_math_stats.csv",
+    "p1_frame_math_stats.csv"
+   ],
+   [
+    "data/frames/p2_becoming_chemistry.csv",
+    "p2_becoming_chemistry.csv"
+   ],
+   [
+    "data/frames/p2_becoming_econ.csv",
+    "p2_becoming_econ.csv"
+   ],
+   [
+    "data/frames/p2_becoming_math_stats.csv",
+    "p2_becoming_math_stats.csv"
+   ],
+   [
+    "analysis/robustness/inference/run_perm.R",
+    "run_perm.R"
+   ]
+  ],
+  "fetched_pairs": [],
+  "gold_dir": null,
+  "require_marker": "ALL_DONE_MARKER_2026_10C",
+  "frame_pairs_note": "2026-09-23: the three run_perm.R identity references were shipped from a scratch copy (cloud_refs/P3cut_pos_<f>.json) of data/cal2026-10/estimates/P3pos_<f>_A_far.json (md5-identical); the pairs name the tracked file"
+ }
+}

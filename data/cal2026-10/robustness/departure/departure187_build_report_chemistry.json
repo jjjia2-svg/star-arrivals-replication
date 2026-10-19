@@ -1,0 +1,104 @@
+{
+ "ledger": "data/departure_verification_2026-09-10/departure_verified_2026-09-10.csv",
+ "rows": 38,
+ "verdicts": {
+  "stayed_through_window": 27,
+  "left_after_window": 5,
+  "left_within_window": 5,
+  "unknown": 1
+ },
+ "confidence": {
+  "high": 28,
+  "medium": 9,
+  "low": 1
+ },
+ "A_dropped_events": [
+  "A5006183789:monash",
+  "A5011013044:sydney",
+  "A5014057252:sydney",
+  "A5041868632:unsw",
+  "A5044696583:monash",
+  "A5055198364:unsw",
+  "A5100398634:sydney"
+ ],
+ "B_recode_events": {
+  "A5006183789:monash": 2016,
+  "A5006430396:monash": 2016,
+  "A5011013044:sydney": 2023,
+  "A5014057252:sydney": 2013,
+  "A5041868632:unsw": 2016,
+  "A5044696583:monash": 2012,
+  "A5048687133:anu": 2019,
+  "A5055198364:unsw": 2017,
+  "A5070148430:melbourne": 2022,
+  "A5100398634:sydney": 2021
+ },
+ "unparseable_departure_years": [],
+ "note": "LLM-assisted verdicts from public records; 45 listed rows flagged for a manual check",
+ "events_in_frame": 38,
+ "A_dropped_in_frame": [
+  "A5006183789:monash",
+  "A5011013044:sydney",
+  "A5014057252:sydney",
+  "A5041868632:unsw",
+  "A5044696583:monash",
+  "A5055198364:unsw",
+  "A5100398634:sydney"
+ ],
+ "B_recoded_in_frame": {
+  "A5048687133:anu": 2019,
+  "A5070148430:melbourne": 2022,
+  "A5006430396:monash": 2016,
+  "A5044696583:monash": 2012,
+  "A5006183789:monash": 2016,
+  "A5014057252:sydney": 2013,
+  "A5011013044:sydney": 2023,
+  "A5100398634:sydney": 2021,
+  "A5041868632:unsw": 2016,
+  "A5055198364:unsw": 2017
+ },
+ "ledger_events_not_in_frame": [],
+ "frames": {
+  "p1_A": {
+   "rows_in": 30635,
+   "dropped": 6325,
+   "edited": 0,
+   "kept_byte_identical": 24310
+  },
+  "p1_B": {
+   "rows_in": 30635,
+   "dropped": 0,
+   "edited": 555,
+   "kept_byte_identical": 30080
+  },
+  "p2_A": {
+   "rows_in": 46168,
+   "dropped": 9591,
+   "edited": 0,
+   "kept_byte_identical": 36577
+  },
+  "p2_B": {
+   "rows_in": 46168,
+   "dropped": 0,
+   "edited": 3538,
+   "kept_byte_identical": 42630
+  }
+ },
+ "noop_control": "BYTE_EQUAL",
+ "afar": {
+  "frame": "data/frames/p3_afar_pos_chemistry.parquet",
+  "events_in_afar": 38,
+  "A_dropped_in_afar": 7,
+  "B_recoded_in_afar": 10,
+  "A_rows": 143710,
+  "B_rows_flipped": 15243
+ },
+ "staged_sha256": {
+  "p1_dep_A_chemistry.csv": "036d839f51808713cdd1bd7bf12bcd6a94dd784e69e422dc8a7e94fe9837099a",
+  "p1_dep_B_chemistry.csv": "73656716cde7e820665b73965f438797c0209e2b18cc71353e6c2220de3ce726",
+  "p2_dep_A_chemistry.csv": "373cfb998df37351fec81d2b0bbaa3255bd70fb6e37e74cd930ab8ee042792bd",
+  "p2_dep_B_chemistry.csv": "aadba2c38711487dafdee5542a6e82e2f64e8667a7835b45e4050ee5e3c94814",
+  "p3_afar_dep_A_chemistry.parquet": "8c4ab06c77decf90d2fc0e7eac32c7bf13d77ff8852a8cc54e1f8799b2b01c36",
+  "p3_afar_dep_B_chemistry.parquet": "c4f4114fc55e2b099cf256fbfbbe120b4fa6c4db0f92f20d26b92d051f4df96c"
+ }
+}

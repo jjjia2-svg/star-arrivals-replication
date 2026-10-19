@@ -1,0 +1,24 @@
+$ setup/.venv/bin/python analysis/robustness/sensitivity/run_nocentre.py --execute
+[env] {"SAR_OUT_ROOT": "$TMPDIR/sar_rob_sensitivity/nc_p1p2", "SAR_ROBUST_OUTDIR": "data/cal2026-10/robustness/nocentre", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+== control build (fnfix roster = with centres)
+[run_cal_frames] prodlib chemistry (cal) finished in 9.9 s
+[run_cal_frames] stage union-gold --field chemistry finished in 6.3 s (4 outputs) [shadow]
+[run_cal_frames] stage p1-gold --field chemistry finished in 5.7 s (3 outputs) [shadow]
+[run_cal_frames] stage p2-gold --field chemistry --panel3 full finished in 4.2 s (3 outputs) [shadow]
+[run_cal_frames] prodlib math_stats (cal) finished in 6.9 s
+[run_cal_frames] stage union-gold --field math_stats finished in 7.0 s (4 outputs) [shadow]
+[run_cal_frames] stage p1-gold --field math_stats finished in 3.5 s (3 outputs) [shadow]
+[run_cal_frames] stage p2-gold --field math_stats --panel3 full finished in 1.8 s (3 outputs) [shadow]
+
+--- stderr ---
+Traceback (most recent call last):
+  File "analysis/robustness/sensitivity/run_nocentre.py", line 221, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "analysis/robustness/sensitivity/run_nocentre.py", line 190, in main
+    assert not hard_fail, f"control did NOT reproduce the canon frames: {hard_fail} — STOP"
+           ^^^^^^^^^^^^^
+AssertionError: control did NOT reproduce the canon frames: ['becoming_chemistry', 'p1_frame_chemistry', 'becoming_math_stats', 'p1_frame_math_stats'] — STOP
+
+--- rc=1 secs=46.3 ---

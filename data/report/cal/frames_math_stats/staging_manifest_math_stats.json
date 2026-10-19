@@ -1,0 +1,227 @@
+{
+ "m": {
+  "root": "/work/tmp/frames_chemmath_m/shadow_m/v2_output",
+  "entries": [
+   {
+    "rel": "econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "origin": "frozen:/data/legacy/thesis/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+   },
+   {
+    "rel": "r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "frozen:/data/legacy/thesis/v2_output/r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "sha256": "6c7e51457aad48e4381b48a1f4b88e890aac0134eafbd7b183816b60e305076f"
+   },
+   {
+    "rel": "event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "origin": "frozen:/data/legacy/thesis/v2_output/event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "sha256": "f7b37b41a0a4bbb91f8c8678f8a9cb14795bb9cc6be16eb8a2f20ab68bdb55e1"
+   },
+   {
+    "rel": "econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "origin": "frozen:/data/legacy/thesis/v2_output/econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "sha256": "9ab038093f6be2874e7ea82307b91be520d254da70d804a8878627272fef17d6"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "sha256": "3950cec3ed2c2b82a2a66b4dc3102c50dd58ada01da897890c8980f4b9b7572e"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "sha256": "1fc323a37dc78f227885bb3d245769c2ee593fe39bf46e1e5de8a0ff19603dfe"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "origin": "frozen:/data/legacy/thesis/v2_output/netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "sha256": "8d80487f08797cd4b26f491c3d6be03a185edd657bea913880ad46980a372e19"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "origin": "frozen:/data/legacy/thesis/v2_output/netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "sha256": "254342df47f3f83b0044b0002a85545781a8ba3271e0cf598b5dfafe677b0a3d"
+   },
+   {
+    "rel": "multidisc_2026-07-24/code/roster_lib.py",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_2026-07-24/code/roster_lib.py",
+    "sha256": "774f1bcc4c87c4da6adf18d690a37f0008923a29ae43a9a096d17c0b413b1230"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "sha256": "7b6bf13ade985c1a38d6aaf84f44511d480e130f45ff55fa4968529f74c83589"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "sha256": "8e91a93479b4c1f1b9c58dc51e28719f707f1ca552977226dc56114992ae0eba"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "sha256": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542"
+   },
+   {
+    "rel": "multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "sha256": "a5990726d66f139ff701ffcd6e2483d11c70a98b443766284df19693472eb07a"
+   },
+   {
+    "rel": "fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "origin": "frozen:/data/legacy/thesis/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "sha256": "03ce4144a1ba423737717fc97ce183ef01c337297765ea3f5dc679aaa538dd31"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "origin": "r1:roster_gold_chemistry <- data/cal2026-10r1/inputs/rosters/roster_gold_chemistry_r1.parquet",
+    "sha256": "05477213bf3103fb3622502f5258af0ec79ca14d5568916f5f8f3ec860a73880"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "origin": "r1:roster_gold_math_stats <- data/cal2026-10r1/inputs/rosters/roster_gold_math_stats_r1.parquet",
+    "sha256": "b5ed5faf828059e461cac6d81f825ac6f157f1dcd85e8e5f2e794989d9b0877c"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfix_2026-08-10.csv",
+    "origin": "cal:/work/prod/events/events_chemistry_cal2026-10.csv (explicit)",
+    "sha256": "360687612eea77ac4ef0652ecb545c50c792300595c5653dd9ad7764599b2cf0"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "1f7ff0787589f8e73b6b3759d4caf595cf13f6741e3dea1dc1f3e026bd1478ba"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfix_2026-08-10.csv",
+    "origin": "cal:/work/prod/events/events_math_stats_cal2026-10.csv (explicit)",
+    "sha256": "63f42ee01e66ed6ddde04199b4b590adb0d091a8ab9c9759b8dbbd7b0decbc01"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "a00882a3fd78b768044816477b007e8d36cb8cb4579448115c0d433318035189"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/shortlist_fnfix.csv",
+    "origin": "derived:frozen shortlist_fnfix + cal admissions",
+    "sha256": "24764452c882402c601e93ce0350be2620f66dc8037a0bfc96e38f23520fd588"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet",
+    "origin": "r1:/work/tmp/frames_chemmath_m/stars_excluded_r1.parquet (the run's stars_excluded for chemistry/math_stats)",
+    "sha256": "49668b535b9fd3d9d4bb32e6b2510713a7ba0582829b851fb37e7089b6cccf08"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl",
+    "origin": "cal:edges_supplement_cal2026-08-28.jsonl (unchanged for chemistry/math_stats)",
+    "sha256": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "m-stage:inpost_filter chemistry (on the prodlib frame b7da1fcbc23a) + network_freeze (V3-NET)",
+    "sha256": "e028b9d204e94117314d8889bf240ddac52201e0f45d0c52c1a2f5e52470b257"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/analysis_frame_chemistry_2026-08-10.csv",
+    "origin": "m-stage:union-gold chemistry",
+    "sha256": "46424184d411ffb548b8ffa0a2284cfd3b0c3a6af493bc6eece13b726891cafa"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/relationships.csv",
+    "origin": "m-stage:union-gold chemistry",
+    "sha256": "73ff3d24d8beee36bd53fe4022ed352860e14180ca9abe41fce4cc01d2c9a6e0"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/build_report.json",
+    "origin": "m-stage:union-gold chemistry",
+    "sha256": "e428622c4b0065aeaf7f9010bcf99f23ba275fc07129a125ea9e84673c848556"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/funnel.json",
+    "origin": "m-stage:union-gold chemistry",
+    "sha256": "e08180425b0183e6bf377e563e0aa104d42cdfb8d6c8b6b8ebaf9df364227b34"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/analysis_frame_chemistry_2026-08-10.csv",
+    "origin": "m-stage:r1 S6 dose_chemmath (delta) chemistry",
+    "sha256": "d1231c7859d7c0a5baaa2b9b13875db9c70c9f8d8478c0f9c7734bddaebcf86e"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv",
+    "origin": "m-stage:p1-gold chemistry",
+    "sha256": "358d4041d1647e130ba429f922f8baf973acf9637a25fa31b1ecf6d78f251c98"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/becoming_none.csv",
+    "origin": "m-stage:p2-gold chemistry",
+    "sha256": "411309493d3b676f1cdeb251c5396c7740865357920f212e7dbba5cb9a75f3ca"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_none.parquet",
+    "origin": "m-stage:p2-gold chemistry",
+    "sha256": "39e688162f0d6d2037440728e15b8859d5b58677a88a622be92cb935902b82f5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_slim_none.parquet",
+    "origin": "m-stage:p2-gold chemistry",
+    "sha256": "2469fca6a328843c10b06f127d99e8caec91f4e0b5f09e668107347f42e4f47c"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "m-stage:inpost_filter math_stats (on the prodlib frame 706c598eda2e) + network_freeze (V3-NET)",
+    "sha256": "ded0e2ba9c09e1e857d1d937ec8b6fc09a47889e6c30b60cdca6fb6c2fbf7394"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/analysis_frame_math_stats_2026-08-10.csv",
+    "origin": "m-stage:union-gold math_stats",
+    "sha256": "1193b807d89a21c3066cb3c56e6bf4b8a67ebe5a1d9ed1f789c63fb54a0b7546"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/relationships.csv",
+    "origin": "m-stage:union-gold math_stats",
+    "sha256": "184f77896a36d6649ea66036fde9c629308439c66ab9fb8a2d9834ca4821f0eb"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/build_report.json",
+    "origin": "m-stage:union-gold math_stats",
+    "sha256": "35a508d33c1d9e5a20fbe1c1593008b32ea4f85c606a68a02992aafc503d3dd4"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/funnel.json",
+    "origin": "m-stage:union-gold math_stats",
+    "sha256": "24b9763fd8d440f6aa1e852f1b4e1f3f12ea76a456b6abd62b8f19080e7e204d"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/analysis_frame_math_stats_2026-08-10.csv",
+    "origin": "m-stage:r1 S6 dose_chemmath (delta) math_stats",
+    "sha256": "73f5d28b51a1544b6c5b9a8d340fdc3991c22ba4238d5319db5ab2449f46850b"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_math_stats_new_gold_2026-08-10.csv",
+    "origin": "m-stage:p1-gold math_stats",
+    "sha256": "b2d34cb83c2fc0085756f6c0bc054dbc3d633e648c440e24875daf55bd5e8d14"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/becoming_none.csv",
+    "origin": "m-stage:p2-gold math_stats",
+    "sha256": "2a9e2d51090f477bf0bdbff0a099dc79fcdb3841cd2abffb501f6cad888b3edc"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_none.parquet",
+    "origin": "m-stage:p2-gold math_stats",
+    "sha256": "c39826f2ae8b93bcbaca794902e4ba10da6c0b8d1b3da78e1de04fb6bc9701e1"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_slim_none.parquet",
+    "origin": "m-stage:p2-gold math_stats",
+    "sha256": "c0398602e6f57b7bb11d210c466928d5c1645bd6b0efdcf9aff16438e7fbf3c2"
+   }
+  ]
+ }
+}

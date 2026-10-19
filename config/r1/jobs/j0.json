@@ -1,0 +1,69 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "j0",
+  "instance_type": "r6i.16xlarge",
+  "price_hr": 4.032,
+  "est_min": 300,
+  "hard_min": 600,
+  "root_gb": 400,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_PATHS_CONFIG": "$REPO_DIR/config/r1/paths_aws.yaml",
+    "PYTHONHASHSEED": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "SAR_R1_CONFIG": "$REPO_DIR/config/r1/B0.json"
+  },
+  "pulls": [],
+  "required_dests": [
+    "/work/jp/"
+  ],
+  "data_sync": [
+    [
+      "r1/derived/",
+      "/data/openalex_pipeline/derived/"
+    ],
+    [
+      "r1/legacy/legacy_multiplex/",
+      "/data/legacy/thesis/multiplex_pipeline/"
+    ],
+    [
+      "r1/legacy/legacy_thesis/",
+      "/data/legacy/thesis/"
+    ],
+    [
+      "r1/legacy/legacy_v2_output/",
+      "/data/legacy/thesis/v2_output/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/"
+    ],
+    [
+      "u2_person_map_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u2_person_map_11school_2026-07-16/"
+    ],
+    [
+      "u3_panel_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u3_panel_11school_2026-07-16/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/run_stages.py",
+      "/work/run_stages.py"
+    ]
+  ],
+  "env_layers": [
+    "py",
+    "rmac",
+    "rcloud"
+  ],
+  "stages": "config/r1/stages/j0.json",
+  "steps": [
+    "\"$PY\" /work/run_stages.py --table \"$REPO_DIR/config/r1/stages/j0.json\" --repo \"$REPO_DIR\" --commit \"$COMMIT\" --prefix \"$P\" --work /work --out /work/out ${SAR_RESUME_DIR:+--resume-dir \"$SAR_RESUME_DIR\"}"
+  ]
+}

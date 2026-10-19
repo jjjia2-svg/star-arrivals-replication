@@ -1,0 +1,1385 @@
+{
+ "task": "group d7_t5 — D7 local cells (top-5% star threshold, three-bin dose) + T5 permutation batch preparation",
+ "generated_utc": "2026-09-22T17:30:06Z",
+ "git_head": "47dfceac76c7ccf1a3ce1e6d47067db28d4438d5",
+ "interpreter": "setup/.venv/bin/python",
+ "R": "4.5.1 2.3.3",
+ "design_authority": "the author's design record of 2026-09-22 (private archive) D7; analysis/robustness/inference/README.md (T5)",
+ "inputs_sha256": {
+  "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+  "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+  "data/frames/p3_afar_pos_econ.parquet": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e",
+  "data/cal2026-10/events_econ_cal2026-10.csv": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+  "data/cal2026-10/events_econ_cal2026-10_p05.csv": "754136dc7fdd167a54fa91d26b83c26feb30ba16af0aa660201851d36dd96b0a",
+  "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_econ.csv": "a2edb6f857306972faf28cadfff683e904768046023e0ec60db855cd9dc77aa9",
+  "data/frames/p1_frame_chemistry.csv": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+  "data/frames/p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+  "data/frames/p3_afar_pos_chemistry.parquet": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+  "data/cal2026-10/events_chemistry_cal2026-10.csv": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+  "data/cal2026-10/events_chemistry_cal2026-10_p05.csv": "d0be9ef9d5512ab0425bc6c284fa12cdc13b5d5d52ea2b9437114c8908ddf94e",
+  "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_chemistry.csv": "8a9ff10178346b33b83fe878c9ed3619daa43a179ce52ab36b441572523aa769",
+  "data/frames/p1_frame_math_stats.csv": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+  "data/frames/p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+  "data/frames/p3_afar_pos_math_stats.parquet": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+  "data/cal2026-10/events_math_stats_cal2026-10.csv": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+  "data/cal2026-10/events_math_stats_cal2026-10_p05.csv": "606a5a4d94831a05ebc93ff26655c9b8cd6a2f33d2804ccc6f680307ef6bdd28",
+  "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_math_stats.csv": "a064617628eecde800a0889dd834ed3f0bed842295b52f430a48b082883a4950",
+  "data/frames/p3_slim_math_stats_p05.parquet": "ff9bebbaa3ff708b59cc5375affe74f60412cf5e45146fe7dc6a8ae8e69214d1",
+  "data/frames/p3_slim_math_stats_dosebin3.parquet": "7f1a38df1d40fa22bf59f1e04d919d5f69b61c7144c128845f2d80c49f90c41d",
+  "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_report.json": "ca4e97079c0f5839f321462502dd8acfd751d3f10a305e5a2577259ff35eec98",
+  "analysis/expected/P1_econ_fnfix.json": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+  "analysis/expected/P1_fnfix_chemistry.json": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+  "analysis/expected/P1_fnfix_math_stats.json": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+  "analysis/expected/P2_econ_fnfix.json": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+  "analysis/expected/P2_fnfix_chemistry.json": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+  "analysis/expected/P2_fnfix_math_stats.json": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+  "analysis/expected/P3pos_math_stats_A_far.json": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+  "analysis/expected/P3pos_econ_A_far.json": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+  "analysis/expected/P3pos_chemistry_A_far.json": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+  "analysis/expected/P3_fnfix_math_stats.json": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+  "analysis/robustness/battery_2026-08-29/run_p1_variant.R": "c9dd13c082e68b07d4b2c9e1ccd33c5aff55227f79cc83c3999be76f8aaa204a",
+  "analysis/robustness/threshold_p05/filter_frames.py": "3e48683f9e0cd3837d8c3375f49b8cc6b22c1cee78b0cfb3fca9b6e7d4044ff6",
+  "analysis/estimation/run_p1.R": "d5423982ecbe96135066e99b32c6f543a6c74669deacbc57a7e575c28a1b6ea6",
+  "analysis/estimation/run_p2.R": "fc3c20970ffb52b2cfa72dfa9efbfa4f8320a21a30a74a30e6d27651e60ce44b",
+  "analysis/estimation/run_p3_tp.R": "45c89f70aba44bedb2558a51972840a466a4c0c115b508335c352a3b7448ccf1",
+  "analysis/estimation/run_p3.R": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+  "analysis/robustness/inference/run_perm.R": "2dc98b40cb1f76ce84169efcc578bd67c71d78ffd8f4ca26ca9d3b0278fe6f40",
+  "analysis/robustness/inference/run_all_perm.sh": "e5cb5949f4be37e8bd034f3d7a52985ca87b85b0b33d6a72f13d13fd9a140644",
+  "config/seeds.yaml": "7db153d8a3c16a817f6846a75b631662de2856da318abfdbfcaa6810dbbc19ba",
+  "pipeline/aws/cal2026-10/cloudkit.py": "64fbd2869954dd1a130db51442e9cf013b00bb1a2276da71386974999d6b5133",
+  "pipeline/aws/cal2026-10/run_cloud.sh": "62138a80e33f2293edd063e001cbbfb73db8f6813e4ee8f5ce3772190ebaf4bc",
+  "pipeline/aws/cal2026-10/driver.sh": "ce1a06121507eccb0da0aea034f813fafe3f09844f44ce10564e0dae803ee7c7",
+  "pipeline/aws/cal2026-10/bootstrap.sh": "d2450bd072de321faf13893dd90eaf7d5b4d7a540fe08a1f89033e8e1f8b0394",
+  "pipeline/aws/cal2026-10/prep_t5_batch.sh": "bcc2bce5a0739dc7c78bd64ff880def25049aa410096e5b070a72863e8771d14",
+  "tests/test_aws_cal2026_10_t5.py": "a09077cf7f2d6db06aa504169fdd344e070137cb9c4c94f82c4d9b778c529809"
+ },
+ "inputs_stable_during_run": true,
+ "controls": {
+  "C1_p1_variant_none_equals_gold": {
+   "verdict": "EQUAL",
+   "cell": "run_p1_variant.R full P1_econ_fnfix data/frames/p1_frame_econ.csv none",
+   "expected": "analysis/expected/P1_econ_fnfix.json",
+   "product": "data/cal2026-10/robustness/d7/dosebin3/control/P1_econ_fnfix.json"
+  },
+  "C2_filter_frames_suffix_empty_is_a_noop": {
+   "verdict": "PASS",
+   "csv_byte_identical_to_input": {
+    "p1_frame_econ.csv": true,
+    "p2_becoming_econ.csv": true,
+    "p1_frame_chemistry.csv": true,
+    "p2_becoming_chemistry.csv": true,
+    "p1_frame_math_stats.csv": true,
+    "p2_becoming_math_stats.csv": true
+   },
+   "parquet_rows_events_unchanged": {
+    "p3_afar_pos_econ.parquet": {
+     "rows_in": 1500425,
+     "rows_out": 1500425,
+     "events_in": 111,
+     "events_out": 111
+    },
+    "p3_afar_pos_chemistry.parquet": {
+     "rows_in": 184960,
+     "rows_out": 184960,
+     "events_in": 38,
+     "events_out": 38
+    },
+    "p3_afar_pos_math_stats.parquet": {
+     "rows_in": 256506,
+     "rows_out": 256506,
+     "events_in": 32,
+     "events_out": 32
+    }
+   },
+   "parquet_content_equal_to_input_pyarrow": "True for econ/chemistry/math_stats (checked 03:35, table.equals)",
+   "report": "data/cal2026-10/robustness/d7/p05/control/filter_report_control_suffix_empty.json"
+  },
+  "C3_verbatim_drivers_on_the_noop_frames_equal_the_October_golds": {
+   "verdict": "PASS",
+   "cells": {
+    "P1_fnfix_math_stats": "EQUAL",
+    "P2_fnfix_math_stats": "EQUAL",
+    "P3cut_pos_math_stats (gold file P3pos_math_stats_A_far.json)": "EQUAL"
+   },
+   "note": "run_p1.R / run_p2.R / run_p3_tp.R on the suffix-'' filtered math_stats frames (CSV byte-identical, parquet re-written by pyarrow) vs analysis/expected"
+  },
+  "C4_T5_perm0_identity_controls_local": {
+   "verdict": "PASS",
+   "note": "run_perm.R <mode> <label> <frame> <ref> 20260829 0 0 on data/frames with refs = analysis/expected (October golds); the in-driver stopifnot(|ate-ref|<5.1e-9, |se-ref|<5.1e-9) passed for all six cells",
+   "cells": {
+    "P1_econ_fnfix": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p1",
+     "n_events": 113,
+     "status": "OK",
+     "ate": -0.3683823992,
+     "se": 0.06590364848,
+     "t": -5.58971,
+     "p_joint_effects": 6.58347e-08,
+     "p_joint_placebo": 0.00277072,
+     "secs_one_estimation_local": 7.16,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P1_econ_fnfix_perm_0_0.csv",
+     "sha256": "143aa6a7a91f7ca4c86ab117f3d9eac34acacd20bd206be1abbcfde467e98a1f"
+    },
+    "P1_fnfix_chemistry": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p1",
+     "n_events": 38,
+     "status": "OK",
+     "ate": -0.2189705165,
+     "se": 0.07068565967,
+     "t": -3.09781,
+     "p_joint_effects": 0.00776049,
+     "p_joint_placebo": 0.856271,
+     "secs_one_estimation_local": 4.27,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P1_fnfix_chemistry_perm_0_0.csv",
+     "sha256": "8d0ac022e2ef166ab9d5a46710ee404c85d7214e028411adda360186ae7d9167"
+    },
+    "P1_fnfix_math_stats": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p1",
+     "n_events": 33,
+     "status": "OK",
+     "ate": -0.06028414603,
+     "se": 0.1588201647,
+     "t": -0.379575,
+     "p_joint_effects": 0.0085479,
+     "p_joint_placebo": 0.174889,
+     "secs_one_estimation_local": 3.71,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P1_fnfix_math_stats_perm_0_0.csv",
+     "sha256": "6df8fea90b766f4c3e06522565bdd0b245de0427202dca06bcbdac7453c91e09"
+    },
+    "P2_econ_fnfix": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p2",
+     "n_events": 113,
+     "status": "OK",
+     "ate": 0.001949235738,
+     "se": 0.0007665393634,
+     "t": 2.5429,
+     "p_joint_effects": 1.32395e-05,
+     "p_joint_placebo": null,
+     "secs_one_estimation_local": 5.19,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P2_econ_fnfix_perm_0_0.csv",
+     "sha256": "22e4baf32280fc90cf90e41b7ff677e71859e536d59cfe9c7027d597c30256c5"
+    },
+    "P2_fnfix_chemistry": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p2",
+     "n_events": 38,
+     "status": "OK",
+     "ate": 0.006097677208,
+     "se": 0.0008506182996,
+     "t": 7.16852,
+     "p_joint_effects": 2.05879e-11,
+     "p_joint_placebo": null,
+     "secs_one_estimation_local": 3.9,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P2_fnfix_chemistry_perm_0_0.csv",
+     "sha256": "dddd6236f2fd9f68504d5271ee749e0a346fa1fe6a5b590f59274cd0eeecfe00"
+    },
+    "P2_fnfix_math_stats": {
+     "in_driver_assertion": "CONTROL EQUAL",
+     "mode": "p2",
+     "n_events": 33,
+     "status": "OK",
+     "ate": 0.001505313039,
+     "se": 0.000481650534,
+     "t": 3.12532,
+     "p_joint_effects": 0.0664282,
+     "p_joint_placebo": null,
+     "secs_one_estimation_local": 3.03,
+     "csv": "data/cal2026-10/cloud_t5/preflight_local_identity/P2_fnfix_math_stats_perm_0_0.csv",
+     "sha256": "d7acced7eda48b44e4710454a59a50d99b098c080da76f450711d5f1217b915c"
+    }
+   }
+  },
+  "C5_tests": {
+   "tests/test_aws_cal2026_10_t5.py (new)": "6 passed",
+   "tests/test_aws_cal2026_10.py after the cloudkit edit": "15 passed, 1 deselected (test_run_cloud_end_to_end_on_fake_aws_under_a_path_with_a_space)",
+   "tests/test_aws_cal2026_10.py BEFORE any edit (baseline, 03:00-03:10)": "3 failed, 13 passed: test_prep_on_the_pos_frames_reproduces_the_0830_shipped_hashes_and_unit_grammar and test_default_verify_cloud_custody_is_unchanged (both consequences of the October promotion: data/frames pos frames no longer carry the 08-30 md5s; the default verify_cloud_custody block compared 08-28 payload md5s against the October frames) and the e2e test (TimeoutExpired 600 s)",
+   "why the two promotion failures pass now": "git status shows tests/test_aws_cal2026_10.py and tools/verify_cloud_custody.py MODIFIED concurrently during this run; with those working-tree versions 15/15 pass",
+   "e2e test (deselected)": "environment-blocked, not a code regression: the fake ssh runs run_cloud.sh's probe `pgrep -f \"[b]ash driver.sh\"` on THIS Mac, where the live batch-1 launcher's own `ssh ... nohup bash driver.sh` process (pid 89099, data/cal2026-10/cloud) matches it, so the fake driver is reported 'already running', never started, and the test polls to its 600 s timeout; it cannot pass while that ssh process exists"
+  }
+ },
+ "controls_all_pass": true,
+ "cells": {
+  "P1dosebin3_econ": {
+   "group": "dosebin3",
+   "driver": "analysis/robustness/battery_2026-08-29/run_p1_variant.R full <lab> data/frames/p1_frame_<f>.csv dosebin3",
+   "product": "data/cal2026-10/robustness/d7/dosebin3/P1dosebin3_econ.json",
+   "sha256": "5793e3db58a58463d002de6c55c733ca418e8bd85e65b1946ab4adf7cbdf5bee",
+   "wall": "19.426",
+   "label": "P1dosebin3_econ",
+   "file": "p1_frame_econ.csv",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "variant": "dosebin3",
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dosebin3(dose_topic) * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 62188,
+     "rels": 6527,
+     "rels_with_dose": 5981,
+     "persons": 814,
+     "events": 113,
+     "ate": -0.07031178,
+     "se": 0.01246076,
+     "lb": -0.09473442,
+     "ub": -0.04588914,
+     "p_joint_effects": 5.11041366e-08,
+     "p_joint_placebo": 0.0025516,
+     "secs": 9.01408815
+    },
+    "network": {
+     "status": "OK",
+     "obs": 24385,
+     "rels": 2464,
+     "rels_with_dose": 2328,
+     "persons": 520,
+     "events": 104,
+     "ate": -0.08374267,
+     "se": 0.01960847,
+     "lb": -0.12217457,
+     "ub": -0.04531077,
+     "p_joint_effects": 5.73476322e-07,
+     "p_joint_placebo": 0.034476,
+     "secs": 3.67263007
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 44587,
+     "rels": 4753,
+     "rels_with_dose": 4293,
+     "persons": 766,
+     "events": 112,
+     "ate": -0.06723604,
+     "se": 0.01472787,
+     "lb": -0.09610214,
+     "ub": -0.03836995,
+     "p_joint_effects": 9.38504477e-07,
+     "p_joint_placebo": 0.02267806,
+     "secs": 5.02442908
+    }
+   },
+   "dose_bins": {
+    "cuts": [
+     0.22881309,
+     0.47058736
+    ],
+    "relations_per_bin": [
+     1994,
+     1993,
+     1994
+    ],
+    "D": "tercile rank of dose_topic (1/2/3; 0 for zero dose) x post"
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 62188,
+    "rels": 6527,
+    "rels_with_dose": 5981,
+    "persons": 814,
+    "events": 113,
+    "ate": -0.3683824,
+    "se": 0.06590365,
+    "lb": -0.49755118,
+    "ub": -0.23921362,
+    "p_joint_effects": 6.58347394e-08,
+    "p_joint_placebo": 0.00277072,
+    "secs": 5.64814687
+   }
+  },
+  "P1dosebin3_chemistry": {
+   "group": "dosebin3",
+   "driver": "analysis/robustness/battery_2026-08-29/run_p1_variant.R full <lab> data/frames/p1_frame_<f>.csv dosebin3",
+   "product": "data/cal2026-10/robustness/d7/dosebin3/P1dosebin3_chemistry.json",
+   "sha256": "27805180893a59a59f92f90147d2be669df638a4cdbcb2cabfffc2087cd83d68",
+   "wall": "11.915",
+   "label": "P1dosebin3_chemistry",
+   "file": "p1_frame_chemistry.csv",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "variant": "dosebin3",
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dosebin3(dose_topic) * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 26967,
+     "rels": 2674,
+     "rels_with_dose": 2514,
+     "persons": 463,
+     "events": 38,
+     "ate": -0.04447995,
+     "se": 0.01432894,
+     "lb": -0.07256416,
+     "ub": -0.01639574,
+     "p_joint_effects": 0.0076005,
+     "p_joint_placebo": 0.85632765,
+     "secs": 4.92259812
+    },
+    "network": {
+     "status": "OK",
+     "obs": 17842,
+     "rels": 1727,
+     "rels_with_dose": 1680,
+     "persons": 213,
+     "events": 38,
+     "ate": -0.02195758,
+     "se": 0.02360166,
+     "lb": -0.06821599,
+     "ub": 0.02430083,
+     "p_joint_effects": 0.32857531,
+     "p_joint_placebo": 0.90953386,
+     "secs": 2.72416687
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 13569,
+     "rels": 1387,
+     "rels_with_dose": 1249,
+     "persons": 452,
+     "events": 38,
+     "ate": -0.04479656,
+     "se": 0.01840118,
+     "lb": -0.08086221,
+     "ub": -0.00873092,
+     "p_joint_effects": 0.00065696,
+     "p_joint_placebo": 0.80712812,
+     "secs": 2.82621503
+    }
+   },
+   "dose_bins": {
+    "cuts": [
+     0.19931733,
+     0.55092801
+    ],
+    "relations_per_bin": [
+     838,
+     838,
+     838
+    ],
+    "D": "tercile rank of dose_topic (1/2/3; 0 for zero dose) x post"
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 26967,
+    "rels": 2674,
+    "rels_with_dose": 2514,
+    "persons": 463,
+    "events": 38,
+    "ate": -0.21897052,
+    "se": 0.07068566,
+    "lb": -0.35751186,
+    "ub": -0.08042917,
+    "p_joint_effects": 0.00776049,
+    "p_joint_placebo": 0.85627104,
+    "secs": 3.77303314
+   }
+  },
+  "P1dosebin3_math_stats": {
+   "group": "dosebin3",
+   "driver": "analysis/robustness/battery_2026-08-29/run_p1_variant.R full <lab> data/frames/p1_frame_<f>.csv dosebin3",
+   "product": "data/cal2026-10/robustness/d7/dosebin3/P1dosebin3_math_stats.json",
+   "sha256": "ac89c4f6a5c9c135ccbb0c66063a5056d438c63cef5f40b17d9c2ba5c75e5a9c",
+   "wall": "13.437",
+   "label": "P1dosebin3_math_stats",
+   "file": "p1_frame_math_stats.csv",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "variant": "dosebin3",
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dosebin3(dose_topic) * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 16117,
+     "rels": 1714,
+     "rels_with_dose": 1185,
+     "persons": 441,
+     "events": 33,
+     "ate": -0.00583224,
+     "se": 0.01527835,
+     "lb": -0.03577725,
+     "ub": 0.02411277,
+     "p_joint_effects": 0.00672501,
+     "p_joint_placebo": 0.1756954,
+     "secs": 4.73710895
+    },
+    "network": {
+     "status": "OK",
+     "obs": 3628,
+     "rels": 364,
+     "rels_with_dose": 310,
+     "persons": 171,
+     "events": 29,
+     "ate": -0.01822832,
+     "se": 0.02780494,
+     "lb": -0.07272501,
+     "ub": 0.03626837,
+     "p_joint_effects": 0.50386875,
+     "p_joint_placebo": 0.63849143,
+     "secs": 3.45436311
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 13635,
+     "rels": 1471,
+     "rels_with_dose": 977,
+     "persons": 427,
+     "events": 33,
+     "ate": -0.00281741,
+     "se": 0.01690966,
+     "lb": -0.03595975,
+     "ub": 0.03032492,
+     "p_joint_effects": 0.00767136,
+     "p_joint_placebo": 0.23444586,
+     "secs": 3.54345202
+    }
+   },
+   "dose_bins": {
+    "cuts": [
+     0.03574061,
+     0.16815126
+    ],
+    "relations_per_bin": [
+     395,
+     395,
+     395
+    ],
+    "D": "tercile rank of dose_topic (1/2/3; 0 for zero dose) x post"
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 16117,
+    "rels": 1714,
+    "rels_with_dose": 1185,
+    "persons": 441,
+    "events": 33,
+    "ate": -0.06028415,
+    "se": 0.15882016,
+    "lb": -0.37156595,
+    "ub": 0.25099766,
+    "p_joint_effects": 0.0085479,
+    "p_joint_placebo": 0.17488937,
+    "secs": 2.86827207
+   }
+  },
+  "P1p05_econ": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p1.R (verbatim) on the p05-filtered p1_frame_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P1p05_econ.json",
+   "sha256": "ea330bb2801d404e74bcfebf688eaef1a52469863d8202d70ddf9f4f1fd7bf07",
+   "wall": "28.816",
+   "label": "P1p05_econ",
+   "file": "p1_frame_econ.csv",
+   "rows_raw": 54637,
+   "rows_kept": 53680,
+   "variant": null,
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dose_topic * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 46599,
+     "rels": 4880,
+     "rels_with_dose": 4508,
+     "persons": 770,
+     "events": 79,
+     "ate": -0.32885169,
+     "se": 0.07695848,
+     "lb": -0.47968755,
+     "ub": -0.17801584,
+     "p_joint_effects": 0.00013388,
+     "p_joint_placebo": 0.02505812,
+     "secs": 10.93189287
+    },
+    "network": {
+     "status": "OK",
+     "obs": 18183,
+     "rels": 1831,
+     "rels_with_dose": 1741,
+     "persons": 466,
+     "events": 71,
+     "ate": -0.45790213,
+     "se": 0.13168497,
+     "lb": -0.71599993,
+     "ub": -0.19980433,
+     "p_joint_effects": 3.963e-05,
+     "p_joint_placebo": 0.00676352,
+     "secs": 5.48467803
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 33604,
+     "rels": 3577,
+     "rels_with_dose": 3264,
+     "persons": 709,
+     "events": 78,
+     "ate": -0.30974933,
+     "se": 0.0880717,
+     "lb": -0.48236669,
+     "ub": -0.13713198,
+     "p_joint_effects": 0.00038371,
+     "p_joint_placebo": 0.09886951,
+     "secs": 10.02504301
+    }
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 62188,
+    "rels": 6527,
+    "rels_with_dose": 5981,
+    "persons": 814,
+    "events": 113,
+    "ate": -0.3683824,
+    "se": 0.06590365,
+    "lb": -0.49755118,
+    "ub": -0.23921362,
+    "p_joint_effects": 6.58347394e-08,
+    "p_joint_placebo": 0.00277072,
+    "secs": 5.64814687
+   }
+  },
+  "P2p05_econ": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p2.R (verbatim) on the p05-filtered p2_becoming_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P2p05_econ.json",
+   "sha256": "167d505082a06c2322775b3a936c8ae9a4bb7acbe6add8fc826659bcc6095e14",
+   "wall": "9.915",
+   "label": "P2p05_econ",
+   "file": "p2_becoming_econ.csv",
+   "status": "OK",
+   "rels": 4958,
+   "persons": 778,
+   "events": 79,
+   "rows": 83353,
+   "first_ties": 137,
+   "ate": 0.00257795,
+   "se": 0.00044027,
+   "lb": 0.00171503,
+   "ub": 0.00344087,
+   "p_joint_effects": 4.29167062e-07,
+   "p_joint_placebo": null,
+   "secs": 8.10894895,
+   "reference_main": {
+    "status": "OK",
+    "rels": 6632,
+    "persons": 822,
+    "events": 113,
+    "rows": 111448,
+    "first_ties": 197,
+    "ate": 0.00194924,
+    "se": 0.00076654,
+    "lb": 0.00044685,
+    "ub": 0.00345163,
+    "p_joint_effects": 1.324e-05,
+    "p_joint_placebo": null,
+    "secs": 4.4824791
+   }
+  },
+  "P3p05pos_econ_A_far": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p3_tp.R (verbatim) on the p05-filtered p3_afar_pos_<f>.parquet (ev codes mapped through afar_event_map_pos)",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P3p05pos_econ_A_far.json",
+   "sha256": "96faf04f77462bbfb99b1d5a11404d4e80a52e0dcd1efa352aa2949fbd93f171",
+   "wall": "14.54",
+   "label": "P3p05pos_econ_A_far",
+   "file": "p3_afar_pos_econ.parquet",
+   "rows": 1166416,
+   "grps": 70233,
+   "first_ties": 2842,
+   "events": 78,
+   "secs": 72.99017692,
+   "pair_cluster": {
+    "ate": -0.00069838,
+    "se": 0.00054816,
+    "lb": -0.00177275,
+    "ub": 0.00037599,
+    "p_joint_effects": 6.556e-05
+   },
+   "event_cluster": {
+    "ate": -0.00069838,
+    "se": 0.00099351,
+    "lb": -0.00264562,
+    "ub": 0.00124886,
+    "p_joint_effects": 0.0011265
+   },
+   "reference_main": {
+    "label": "P3cut_pos_econ",
+    "file": "p3_afar_pos_econ.parquet",
+    "rows": 1500425,
+    "grps": 90325,
+    "first_ties": 3615,
+    "events": 111,
+    "secs": 55.77441192,
+    "pair_cluster": {
+     "ate": -0.0006151,
+     "se": 0.00052893,
+     "lb": -0.00165179,
+     "ub": 0.0004216,
+     "p_joint_effects": 4.423e-05
+    },
+    "event_cluster": {
+     "ate": -0.0006151,
+     "se": 0.00093316,
+     "lb": -0.00244406,
+     "ub": 0.00121387,
+     "p_joint_effects": 0.00262355
+    }
+   }
+  },
+  "P1p05_chemistry": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p1.R (verbatim) on the p05-filtered p1_frame_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P1p05_chemistry.json",
+   "sha256": "76e707b048d381a1284cb212f5bdde8a595efbf29aed0118f6e92a60973c9deb",
+   "wall": "14.390",
+   "label": "P1p05_chemistry",
+   "file": "p1_frame_chemistry.csv",
+   "rows_raw": 25080,
+   "rows_kept": 24090,
+   "variant": null,
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dose_topic * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 22034,
+     "rels": 2190,
+     "rels_with_dose": 2050,
+     "persons": 440,
+     "events": 31,
+     "ate": -0.20922752,
+     "se": 0.08120593,
+     "lb": -0.36838823,
+     "ub": -0.05006682,
+     "p_joint_effects": 0.01582049,
+     "p_joint_placebo": 0.78705153,
+     "secs": 7.25393486
+    },
+    "network": {
+     "status": "OK",
+     "obs": 13944,
+     "rels": 1349,
+     "rels_with_dose": 1316,
+     "persons": 196,
+     "events": 31,
+     "ate": -0.03376788,
+     "se": 0.12006175,
+     "lb": -0.26908459,
+     "ub": 0.20154883,
+     "p_joint_effects": 0.09175189,
+     "p_joint_placebo": 0.23442051,
+     "secs": 2.87136698
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 11741,
+     "rels": 1202,
+     "rels_with_dose": 1075,
+     "persons": 413,
+     "events": 31,
+     "ate": -0.25434402,
+     "se": 0.1034175,
+     "lb": -0.45703861,
+     "ub": -0.05164944,
+     "p_joint_effects": 0.00048551,
+     "p_joint_placebo": 0.71120578,
+     "secs": 2.20536995
+    }
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 26967,
+    "rels": 2674,
+    "rels_with_dose": 2514,
+    "persons": 463,
+    "events": 38,
+    "ate": -0.21897052,
+    "se": 0.07068566,
+    "lb": -0.35751186,
+    "ub": -0.08042917,
+    "p_joint_effects": 0.00776049,
+    "p_joint_placebo": 0.85627104,
+    "secs": 3.77303314
+   }
+  },
+  "P2p05_chemistry": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p2.R (verbatim) on the p05-filtered p2_becoming_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P2p05_chemistry.json",
+   "sha256": "4d85c8e58c625be39fa073716924f577929820595d50c33161d736f789076469",
+   "wall": "5.482",
+   "label": "P2p05_chemistry",
+   "file": "p2_becoming_chemistry.csv",
+   "status": "OK",
+   "rels": 2273,
+   "persons": 448,
+   "events": 31,
+   "rows": 37791,
+   "first_ties": 121,
+   "ate": 0.00649817,
+   "se": 0.00089718,
+   "lb": 0.00473973,
+   "ub": 0.00825661,
+   "p_joint_effects": 8.14710521e-11,
+   "p_joint_placebo": null,
+   "secs": 4.16217017,
+   "reference_main": {
+    "status": "OK",
+    "rels": 2778,
+    "persons": 470,
+    "events": 38,
+    "rows": 46168,
+    "first_ties": 155,
+    "ate": 0.00609768,
+    "se": 0.00085062,
+    "lb": 0.0044305,
+    "ub": 0.00776486,
+    "p_joint_effects": 2.05878647e-11,
+    "p_joint_placebo": null,
+    "secs": 3.7449379
+   }
+  },
+  "P3p05pos_chemistry_A_far": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p3_tp.R (verbatim) on the p05-filtered p3_afar_pos_<f>.parquet (ev codes mapped through afar_event_map_pos)",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P3p05pos_chemistry_A_far.json",
+   "sha256": "ce49f8c4413f7b4162730f1ce1b47526d2c8f91735328375dbc86eb0ea80b234",
+   "wall": "13.395",
+   "label": "P3p05pos_chemistry_A_far",
+   "file": "p3_afar_pos_chemistry.parquet",
+   "rows": 168156,
+   "grps": 10433,
+   "first_ties": 925,
+   "events": 31,
+   "secs": 12.19250798,
+   "pair_cluster": {
+    "ate": -0.00476921,
+    "se": 0.00324215,
+    "lb": -0.01112371,
+    "ub": 0.00158529,
+    "p_joint_effects": 0.0498259
+   },
+   "event_cluster": {
+    "ate": -0.00476921,
+    "se": 0.00332679,
+    "lb": -0.0112896,
+    "ub": 0.00175117,
+    "p_joint_effects": 9.259e-05
+   },
+   "reference_main": {
+    "label": "P3cut_pos_chemistry",
+    "file": "p3_afar_pos_chemistry.parquet",
+    "rows": 184960,
+    "grps": 11466,
+    "first_ties": 1004,
+    "events": 38,
+    "secs": 7.52838087,
+    "pair_cluster": {
+     "ate": -0.00466235,
+     "se": 0.00296265,
+     "lb": -0.01046904,
+     "ub": 0.00114434,
+     "p_joint_effects": 0.04285725
+    },
+    "event_cluster": {
+     "ate": -0.00466235,
+     "se": 0.00293027,
+     "lb": -0.01040558,
+     "ub": 0.00108088,
+     "p_joint_effects": 8.159e-05
+    }
+   }
+  },
+  "P1p05_math_stats": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p1.R (verbatim) on the p05-filtered p1_frame_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P1p05_math_stats.json",
+   "sha256": "f6b32f0dc7b382410e8d963f8b5b2af704b4befc5865a15cbb95f7ccbd7c6dcc",
+   "wall": "9.965",
+   "label": "P1p05_math_stats",
+   "file": "p1_frame_math_stats.csv",
+   "rows_raw": 12078,
+   "rows_kept": 11792,
+   "variant": null,
+   "spec": {
+    "effects": 6,
+    "placebo": 4,
+    "cluster": "person_id",
+    "group": "person x event",
+    "y": "log1p(fwci_frac)",
+    "D": "dose_topic * post",
+    "filter": "|age_gap|<=60"
+   },
+   "channels": {
+    "union": {
+     "status": "OK",
+     "obs": 10416,
+     "rels": 1072,
+     "rels_with_dose": 802,
+     "persons": 315,
+     "events": 22,
+     "ate": 0.04808977,
+     "se": 0.23774772,
+     "lb": -0.4178872,
+     "ub": 0.51406673,
+     "p_joint_effects": 0.01465449,
+     "p_joint_placebo": 0.58534967,
+     "secs": 4.03318596
+    },
+    "network": {
+     "status": "OK",
+     "obs": 2416,
+     "rels": 237,
+     "rels_with_dose": 195,
+     "persons": 126,
+     "events": 20,
+     "ate": -0.17068221,
+     "se": 0.29544162,
+     "lb": -0.74973714,
+     "ub": 0.40837272,
+     "p_joint_effects": 0.38218079,
+     "p_joint_placebo": 0.82756088,
+     "secs": 1.85014296
+    },
+    "dept": {
+     "status": "OK",
+     "obs": 8780,
+     "rels": 914,
+     "rels_with_dose": 671,
+     "persons": 300,
+     "events": 22,
+     "ate": 0.07352425,
+     "se": 0.27199885,
+     "lb": -0.4595837,
+     "ub": 0.60663219,
+     "p_joint_effects": 0.01352866,
+     "p_joint_placebo": 0.35621289,
+     "secs": 2.62802291
+    }
+   },
+   "reference_main_union": {
+    "status": "OK",
+    "obs": 16117,
+    "rels": 1714,
+    "rels_with_dose": 1185,
+    "persons": 441,
+    "events": 33,
+    "ate": -0.06028415,
+    "se": 0.15882016,
+    "lb": -0.37156595,
+    "ub": 0.25099766,
+    "p_joint_effects": 0.0085479,
+    "p_joint_placebo": 0.17488937,
+    "secs": 2.86827207
+   }
+  },
+  "P2p05_math_stats": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p2.R (verbatim) on the p05-filtered p2_becoming_<f>.csv",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P2p05_math_stats.json",
+   "sha256": "e54dfb918dbfd77ab0edc693eb59acf116221967bf8a9f7834126b50c31184de",
+   "wall": "4.856",
+   "label": "P2p05_math_stats",
+   "file": "p2_becoming_math_stats.csv",
+   "status": "FAILED",
+   "rels": 1093,
+   "persons": 329,
+   "events": 22,
+   "rows": 18447,
+   "first_ties": 25,
+   "secs": 3.30984116,
+   "reference_main": {
+    "status": "OK",
+    "rels": 1795,
+    "persons": 479,
+    "events": 33,
+    "rows": 30314,
+    "first_ties": 35,
+    "ate": 0.00150531,
+    "se": 0.00048165,
+    "lb": 0.0005613,
+    "ub": 0.00244933,
+    "p_joint_effects": 0.06642823,
+    "p_joint_placebo": null,
+    "secs": 3.23597193
+   },
+   "r_messages": [
+    "Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.",
+    "Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.",
+    "[P2p05_math_stats] FAIL: infinite or missing values in 'x'"
+   ]
+  },
+  "P3p05pos_math_stats_A_far": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p3_tp.R (verbatim) on the p05-filtered p3_afar_pos_<f>.parquet (ev codes mapped through afar_event_map_pos)",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P3p05pos_math_stats_A_far.json",
+   "sha256": "3f7db4ef5070bb642c41b0e772d0bb3943dac2eb22af66a0b19cb786549e7467",
+   "wall": "16.681",
+   "label": "P3p05pos_math_stats_A_far",
+   "file": "p3_afar_pos_math_stats.parquet",
+   "rows": 195777,
+   "grps": 11687,
+   "first_ties": 300,
+   "events": 21,
+   "secs": 14.88747597,
+   "pair_cluster": {
+    "ate": 9.998e-05,
+    "se": 0.00053878,
+    "lb": -0.00095602,
+    "ub": 0.00115597,
+    "p_joint_effects": 0.53775272
+   },
+   "event_cluster": {
+    "ate": 9.998e-05,
+    "se": 0.00034093,
+    "lb": -0.00056824,
+    "ub": 0.00076819,
+    "p_joint_effects": 0.87697239
+   },
+   "reference_main": {
+    "label": "P3cut_pos_math_stats",
+    "file": "p3_afar_pos_math_stats.parquet",
+    "rows": 256506,
+    "grps": 15318,
+    "first_ties": 401,
+    "events": 32,
+    "secs": 8.15173602,
+    "pair_cluster": {
+     "ate": 0.00041345,
+     "se": 0.00041079,
+     "lb": -0.00039168,
+     "ub": 0.00121858,
+     "p_joint_effects": 0.08032729
+    },
+    "event_cluster": {
+     "ate": 0.00041345,
+     "se": 0.00028871,
+     "lb": -0.00015241,
+     "ub": 0.00097931,
+     "p_joint_effects": 0.10274708
+    }
+   }
+  },
+  "P3p05_math_stats": {
+   "group": "p05",
+   "driver": "analysis/estimation/run_p3.R (verbatim) P3p05_math_stats data/frames/p3_slim_math_stats_p05.parquet",
+   "product": "data/cal2026-10/robustness/d7/p05/estimates/P3p05_math_stats.json",
+   "sha256": "a7d0cab3d608ba17e57396e29bc482cd7cc68f262163cc57e6a4c0aab2a7481c",
+   "wall": "19.318",
+   "label": "P3p05_math_stats",
+   "file": "p3_slim_math_stats_p05.parquet",
+   "spec": {
+    "effects": 5,
+    "placebo": 4,
+    "cluster": "grp (pair x event, dCDH default)",
+    "group": "pair x event",
+    "D": "post(0/1)"
+   },
+   "status": "OK",
+   "rows": 499898,
+   "grps": 29750,
+   "first_ties": 629,
+   "ate": -0.00021579,
+   "se": 0.0003255,
+   "lb": -0.00085376,
+   "ub": 0.00042219,
+   "p_joint_effects": 0.91577223,
+   "p_joint_placebo": null,
+   "secs": 17.2369349,
+   "reference_main": {
+    "status": "OK",
+    "rows": 929324,
+    "grps": 55237,
+    "first_ties": 1031,
+    "ate": 1.145e-05,
+    "se": 0.00017512,
+    "lb": -0.00033177,
+    "ub": 0.00035467,
+    "p_joint_effects": 0.22362596,
+    "p_joint_placebo": null,
+    "secs": 14.43747807
+   }
+  },
+  "P3dose3_math_stats": {
+   "group": "dosebin3",
+   "driver": "analysis/estimation/run_p3.R (verbatim) P3dose3_math_stats data/frames/p3_slim_math_stats_dosebin3.parquet",
+   "product": "data/cal2026-10/robustness/d7/dosebin3/P3dose3_math_stats.json",
+   "sha256": "f507981386e13ddc2eb327706fdd6144f6471583b585ee9fa3779f654020f87f",
+   "wall": "44.925",
+   "label": "P3dose3_math_stats",
+   "file": "p3_slim_math_stats_dosebin3.parquet",
+   "spec": {
+    "effects": 5,
+    "placebo": 4,
+    "cluster": "grp (pair x event, dCDH default)",
+    "group": "pair x event",
+    "D": "post(0/1)"
+   },
+   "status": "OK",
+   "rows": 929324,
+   "grps": 55237,
+   "first_ties": 1031,
+   "ate": 5.938e-05,
+   "se": 6.018e-05,
+   "lb": -5.857e-05,
+   "ub": 0.00017733,
+   "p_joint_effects": 0.48251473,
+   "p_joint_placebo": null,
+   "secs": 41.193501,
+   "reference_main": {
+    "status": "OK",
+    "rows": 929324,
+    "grps": 55237,
+    "first_ties": 1031,
+    "ate": 1.145e-05,
+    "se": 0.00017512,
+    "lb": -0.00033177,
+    "ub": 0.00035467,
+    "p_joint_effects": 0.22362596,
+    "p_joint_placebo": null,
+    "secs": 14.43747807
+   }
+  }
+ },
+ "cell_status": {
+  "P1dosebin3_econ": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P1dosebin3_chemistry": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P1dosebin3_math_stats": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P1p05_econ": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P2p05_econ": "OK",
+  "P3p05pos_econ_A_far": {
+   "pair_cluster": "OK",
+   "event_cluster": "OK"
+  },
+  "P1p05_chemistry": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P2p05_chemistry": "OK",
+  "P3p05pos_chemistry_A_far": {
+   "pair_cluster": "OK",
+   "event_cluster": "OK"
+  },
+  "P1p05_math_stats": {
+   "union": "OK",
+   "network": "OK",
+   "dept": "OK"
+  },
+  "P2p05_math_stats": "FAILED",
+  "P3p05pos_math_stats_A_far": {
+   "pair_cluster": "OK",
+   "event_cluster": "OK"
+  },
+  "P3p05_math_stats": "OK",
+  "P3dose3_math_stats": "OK"
+ },
+ "p05_filter": {
+  "command": "setup/.venv/bin/python analysis/robustness/threshold_p05/filter_frames.py --frames data/frames --events-dir data/cal2026-10 --suffix _p05 --map-dir data/cal2026-10/robustness/afar_event_map_pos --out $TMPDIR/sar_rob_d7_t5/p05",
+  "events_kept": {
+   "events_econ": 79,
+   "events_chemistry": 31,
+   "events_math_stats": 22
+  },
+  "frames": {
+   "p1_frame_chemistry.csv": {
+    "sha256": "c7f4da22570fd77404d63cb23d161cd6168d39435216c43e329a3b07049a5849",
+    "bytes": 3977489,
+    "rows_in": 30635,
+    "rows_out": 25080,
+    "events_in": 38,
+    "events_out": 31,
+    "byte_identical_to_input": false
+   },
+   "p1_frame_econ.csv": {
+    "sha256": "f95f5399d02b2a029b547abe99babf691309054b6e5158dbc2922d7bf3f0870a",
+    "bytes": 8905369,
+    "rows_in": 73073,
+    "rows_out": 54637,
+    "events_in": 113,
+    "events_out": 79,
+    "byte_identical_to_input": false
+   },
+   "p1_frame_math_stats.csv": {
+    "sha256": "5275051a36d06548ebf174a0d21acff7a55cc7851c0a35087c04f47f7403def0",
+    "bytes": 1799940,
+    "rows_in": 19910,
+    "rows_out": 12078,
+    "events_in": 33,
+    "events_out": 22,
+    "byte_identical_to_input": false
+   },
+   "p2_becoming_chemistry.csv": {
+    "sha256": "c2d3e6cf08a6199904f340c206cb947b0237eeb315b594bad5ee3e40c237bcf7",
+    "bytes": 2351334,
+    "rows_in": 46168,
+    "rows_out": 37791,
+    "events_in": 38,
+    "events_out": 31,
+    "byte_identical_to_input": false
+   },
+   "p2_becoming_econ.csv": {
+    "sha256": "9a4d1b8b6f19d80dfb81c8e96c8261250463aabcc716209c389f4e6acf97f051",
+    "bytes": 5115069,
+    "rows_in": 111448,
+    "rows_out": 83353,
+    "events_in": 113,
+    "events_out": 79,
+    "byte_identical_to_input": false
+   },
+   "p2_becoming_math_stats.csv": {
+    "sha256": "b8378ae8b3bc4173fc4aff8b09babf83b9289cb5d6ba3b961e3e52888267f3c5",
+    "bytes": 1160856,
+    "rows_in": 30314,
+    "rows_out": 18447,
+    "events_in": 33,
+    "events_out": 22,
+    "byte_identical_to_input": false
+   },
+   "p3_afar_pos_chemistry.parquet": {
+    "sha256": "3dc5528305a04eb2dcac913348a8a7df5e22bf9ec7a4a97abb1ba02ea67fdf84",
+    "bytes": 281828,
+    "rows_in": 184960,
+    "rows_out": 168156,
+    "events_in": 38,
+    "events_out": 31
+   },
+   "p3_afar_pos_econ.parquet": {
+    "sha256": "ab738bffbc3344258fbecd64fbbfe3a99189f72cf9470ccbb269d0114cc83c8e",
+    "bytes": 1592476,
+    "rows_in": 1500425,
+    "rows_out": 1166416,
+    "events_in": 111,
+    "events_out": 78
+   },
+   "p3_afar_pos_math_stats.parquet": {
+    "sha256": "7247e287917bf544e41834d90beb834165bed15157e4d8c6a6eb5debe3fca116",
+    "bytes": 339176,
+    "rows_in": 256506,
+    "rows_out": 195777,
+    "events_in": 32,
+    "events_out": 21
+   }
+  },
+  "where": "the filtered frames stay in scratch (regenerable from the hashed inputs by the command above); their sha256 is frozen here; the filter report is data/cal2026-10/robustness/d7/p05/filter_report_p05.json",
+  "note": "econ: 79 p05 events, 78 in the pos frame (the pos frame carries 111 of the 113 events; one p05 event has no dose>0 pair); math_stats: 22 p05 events, 21 in the pos frame (32 of 33)"
+ },
+ "t5_batch": {
+  "status": "PREPARED_AND_DRY_RUN_ONLY — NOT LAUNCHED",
+  "payload_dir": "$TMPDIR/cal2026-10_payload_t5",
+  "custody_dir": "data/cal2026-10/cloud_t5",
+  "prep_command": "bash pipeline/aws/cal2026-10/prep_t5_batch.sh  (defaults: --frames data/frames --refs analysis/expected --payload $TMPDIR/cal2026-10_payload_t5 --custody data/cal2026-10/cloud_t5)",
+  "dry_run_command": "bash pipeline/aws/cal2026-10/run_cloud.sh --payload $TMPDIR/cal2026-10_payload_t5 --custody data/cal2026-10/cloud_t5 --dry-run",
+  "dry_run_result": "DRY RUN OK (payload.md5 verified locally: 18/18 OK; no aws call; no instance id)",
+  "dry_run_log": "data/cal2026-10/cloud_t5/prep_t5_batch_dryrun.log",
+  "units": 66,
+  "serial_cells": 0,
+  "unit_grammar": "Rscript run_perm.R <mode> <label> <frame> <ref> <seed> <from> <to>; SAR_OUT=out_perm; identity control 0 0 per cell then chunks of 50 up to 500 (run_all_perm.sh)",
+  "cells": [
+   "P1_econ_fnfix",
+   "P1_fnfix_chemistry",
+   "P1_fnfix_math_stats",
+   "P2_econ_fnfix",
+   "P2_fnfix_chemistry",
+   "P2_fnfix_math_stats"
+  ],
+  "seed": 20260829,
+  "seed_source": "config/seeds.yaml permutation_seed == run_all_perm.sh SEED (asserted by prep_t5_batch.sh)",
+  "groups": [],
+  "parallel": 12,
+  "threads": 4,
+  "marker": "2026_10C",
+  "payload_files": {
+   "P1_econ_fnfix.json": {
+    "source": "analysis/expected/P1_econ_fnfix.json",
+    "sha256": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+    "bytes": 3664
+   },
+   "P1_fnfix_chemistry.json": {
+    "source": "analysis/expected/P1_fnfix_chemistry.json",
+    "sha256": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+    "bytes": 3643
+   },
+   "P1_fnfix_math_stats.json": {
+    "source": "analysis/expected/P1_fnfix_math_stats.json",
+    "sha256": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+    "bytes": 3622
+   },
+   "P2_econ_fnfix.json": {
+    "source": "analysis/expected/P2_econ_fnfix.json",
+    "sha256": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+    "bytes": 1076
+   },
+   "P2_fnfix_chemistry.json": {
+    "source": "analysis/expected/P2_fnfix_chemistry.json",
+    "sha256": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+    "bytes": 1083
+   },
+   "P2_fnfix_math_stats.json": {
+    "source": "analysis/expected/P2_fnfix_math_stats.json",
+    "sha256": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+    "bytes": 1077
+   },
+   "bootstrap.sh": {
+    "source": null,
+    "sha256": "d2450bd072de321faf13893dd90eaf7d5b4d7a540fe08a1f89033e8e1f8b0394",
+    "bytes": 2859
+   },
+   "driver.env": {
+    "source": null,
+    "sha256": "132717f36a011d17e481d7e962efd24fc6304f6dd63fac82b8e2379af9028701",
+    "bytes": 33
+   },
+   "driver.sh": {
+    "source": null,
+    "sha256": "ce1a06121507eccb0da0aea034f813fafe3f09844f44ce10564e0dae803ee7c7",
+    "bytes": 5136
+   },
+   "jobs_parallel.txt": {
+    "source": null,
+    "sha256": "f79244c09107f09120ba6c4b132a9c1986410be48b899889f0eea7e24eb63818",
+    "bytes": 9287
+   },
+   "jobs_serial.txt": {
+    "source": null,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "p1_frame_chemistry.csv": {
+    "source": "data/frames/p1_frame_chemistry.csv",
+    "sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+    "bytes": 4875239
+   },
+   "p1_frame_econ.csv": {
+    "source": "data/frames/p1_frame_econ.csv",
+    "sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+    "bytes": 11894212
+   },
+   "p1_frame_math_stats.csv": {
+    "source": "data/frames/p1_frame_math_stats.csv",
+    "sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+    "bytes": 2871951
+   },
+   "p2_becoming_chemistry.csv": {
+    "source": "data/frames/p2_becoming_chemistry.csv",
+    "sha256": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+    "bytes": 2869496
+   },
+   "p2_becoming_econ.csv": {
+    "source": "data/frames/p2_becoming_econ.csv",
+    "sha256": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+    "bytes": 6839699
+   },
+   "p2_becoming_math_stats.csv": {
+    "source": "data/frames/p2_becoming_math_stats.csv",
+    "sha256": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+    "bytes": 1928708
+   },
+   "run_perm.R": {
+    "source": "analysis/robustness/inference/run_perm.R",
+    "sha256": "2dc98b40cb1f76ce84169efcc578bd67c71d78ffd8f4ca26ca9d3b0278fe6f40",
+    "bytes": 9476
+   }
+  },
+  "payload_md5_sha256": "a94df9c1f0ac8ea38cf3a425407fee457cba839944ebece0a30cdf40112a1c2c",
+  "custody_preflight_sha256": "5ce2380e704fd15f90ad4aa7dbdfe45fabdc8f413416406768c2bf2e152751c4",
+  "custody_payload_md5_sha256": "a94df9c1f0ac8ea38cf3a425407fee457cba839944ebece0a30cdf40112a1c2c",
+  "cost_estimate_A6_from_dry_run": {
+   "basis": "A6 in cloudkit.py: 08-28 measured wall per cell, predate x1.6, 08-30 batch wall for the parallel phase, 14 min overhead",
+   "serial_cells_min": {},
+   "parallel_phase_min": 81.0,
+   "overhead_min": 14.0,
+   "wall_min_projected": 95.0,
+   "on_demand_usd_per_h": 4.032,
+   "cost_usd_projected_on_demand": 6.38
+  },
+  "independent_projection_from_local_perm0_timings": {
+   "basis": "secs per estimation of the six local identity controls (this Mac, 2 polars threads) x 500 draws, 12-wide xargs as driver.env PAR=12; plus cloudkit's 14 min overhead; cloud per-core speed assumed comparable",
+   "secs_per_estimation_local": {
+    "P1_econ_fnfix": 7.16,
+    "P1_fnfix_chemistry": 4.27,
+    "P1_fnfix_math_stats": 3.71,
+    "P2_econ_fnfix": 5.19,
+    "P2_fnfix_chemistry": 3.9,
+    "P2_fnfix_math_stats": 3.03
+   },
+   "cpu_minutes_total": 227.2,
+   "wall_minutes_projected_12_wide": 32.9,
+   "cost_usd_projected": 2.21,
+   "note": "the A6 figure applies the fixed 81-minute 08-30 parallel-phase basis to any batch with parallel units; both are shown, the A6 one is the launcher's"
+  },
+  "local_identity_controls": "data/cal2026-10/cloud_t5/preflight_local_identity",
+  "launch_command_NOT_RUN": "bash pipeline/aws/cal2026-10/run_cloud.sh --payload $TMPDIR/cal2026-10_payload_t5 --custody data/cal2026-10/cloud_t5"
+ },
+ "products_dir": "data/cal2026-10/robustness/d7",
+ "report": "data/cal2026-10/robustness/d7_t5_report.json",
+ "files_edited": [
+  "pipeline/aws/cal2026-10/cloudkit.py (--extra-parallel; --groups '' = no group; docstring)",
+  "pipeline/aws/cal2026-10/README.md (T5 batch section + table row)",
+  "tests/test_verbatim_pipeline.py (REPO_AUTHORED pins of README.md/cloudkit.py refreshed for the edits above; prep_t5_batch.sh registered — registration only, no assertion changed)",
+  "the author's build log (private) (one line)"
+ ],
+ "files_added": [
+  "pipeline/aws/cal2026-10/prep_t5_batch.sh",
+  "tests/test_aws_cal2026_10_t5.py",
+  "data/cal2026-10/robustness/d7/** (cells, controls, logs, MANIFEST.sha256)",
+  "data/cal2026-10/robustness/d7_t5_report.json",
+  "data/cal2026-10/cloud_t5/ (custody_preflight.json, payload.md5, userdata.txt, state/ fetch/ empty, preflight_local_identity/, prep_t5_batch_dryrun.log)"
+ ]
+}

@@ -1,0 +1,38 @@
+# The October 2026 version (184 events) of config/paths.yaml. The tests read it by default: sar_f0_plugin.py
+# sets $SAR_PATHS_CONFIG to this file when it is unset or blank. Any other command selects it with
+# SAR_PATHS_CONFIG=$PWD/config/paths_october.yaml. Only the six canon keys (cal, frames, expected,
+# raw_verified, paper_inputs, cal_intermediates) may differ from config/paths.yaml (tests/test_paths.py).
+#
+# Relative values are resolved against the repository root. A value of the form
+# "${VAR:-default}" takes $VAR when it is set and non-empty, otherwise the default; both
+# analysis/lib/paths.py and analysis/lib/paths.R expand it the same way.
+#
+# Stages 1-2 of analysis/run_all.sh (integrity checks and estimation) use only the in-repo keys.
+# The four external roots below are NOT shipped with this package. They are the author's private
+# working trees and the 15 GB OpenAlex extraction; nothing in the default run needs them.
+repo_root: "."
+frames: data/frames
+raw_verified: data/raw_verified
+fwci: data/fwci
+estimates: data/estimates
+expected: analysis/expected
+output: output
+# The roots the paper readers take from config, so a canon tree can replace them through
+# $SAR_PATHS_CONFIG alone (as config/r1/paths_aws_m.yaml does). October values below.
+cal: data/cal2026-10                                                                                   # the October cal root (events, restake, frames_*)
+paper_inputs: data/paper_inputs                                                                        # frozen inputs of the paper generators
+cal_intermediates: output/cal_intermediates/cal2026-10                                                 # pairs_unified.csv and the other cal intermediates
+pipeline_root: pipeline      # the pipeline tree (contracts/ + config/ + units/ must stay at this depth)
+
+# --- external, not shipped -----------------------------------------------------------------------
+# The author's manuscript tree (thesis_report/ holds the LaTeX sources the paper stage checks).
+# Needed only by stage 3 of analysis/run_all.sh (RUN_PAPER=1) and by author-only tests.
+legacy_thesis: "${SAR_LEGACY_THESIS:-../sar_private/thesis}"
+# The author's frozen intermediate outputs (read by several paper generators and author-only tests).
+legacy_v2_output: "${SAR_LEGACY_V2_OUTPUT:-../sar_private/thesis/v2_output}"
+# The original data-collection code the pipeline/ tree was ported from (author-only provenance tests).
+legacy_multiplex: "${SAR_LEGACY_MULTIPLEX:-../sar_private/thesis/multiplex_pipeline}"
+# The OpenAlex extraction (about 15 GB of derived tables). Its LAST component must be
+# `openalex_pipeline`: the pipeline derives <ssd_root>/derived and <ssd_root>/snapshot from it.
+# Only the pipeline/ stages that read the extraction need it to exist.
+ssd_root: "${SAR_SSD_ROOT:-../sar_data/openalex_pipeline}"

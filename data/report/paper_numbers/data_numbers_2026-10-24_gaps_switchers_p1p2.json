@@ -1,0 +1,363 @@
+{
+ "p1": {
+  "econ": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 8542,
+     "n": 48493
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 7966,
+     "n": 38933
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 7682,
+     "n": 29402
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 7408,
+     "n": 20563
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 6971,
+     "n": 11835
+    },
+    {
+     "k": 6,
+     "ell": 5,
+     "switchers": 6652,
+     "n": 10286
+    }
+   ],
+   "placebos": [
+    {
+     "k": -1,
+     "ell": -2,
+     "switchers": 7807,
+     "n": 36827
+    },
+    {
+     "k": -2,
+     "ell": -3,
+     "switchers": 7092,
+     "n": 19777
+    },
+    {
+     "k": -3,
+     "ell": -4,
+     "switchers": 6564,
+     "n": 10144
+    },
+    {
+     "k": -4,
+     "ell": -5,
+     "switchers": 6081,
+     "n": 7843
+    }
+   ],
+   "switchers_total": 45221,
+   "ate_row_switchers": 45221,
+   "weighted_avg_effect": -0.11982424934,
+   "avg_dose_switchers": 0.35895082441,
+   "coef_check": {
+    "pass": true,
+    "ate": -0.33381800845,
+    "expected_ate": -0.33381801,
+    "max_abs_diff_effects": 4.795095071e-09
+   }
+  },
+  "chemistry": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 4350,
+     "n": 23609
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 4218,
+     "n": 18895
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 4132,
+     "n": 14357
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 4017,
+     "n": 9902
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 3789,
+     "n": 5429
+    },
+    {
+     "k": 6,
+     "ell": 5,
+     "switchers": 3581,
+     "n": 4826
+    }
+   ],
+   "placebos": [
+    {
+     "k": -1,
+     "ell": -2,
+     "switchers": 4262,
+     "n": 18975
+    },
+    {
+     "k": -2,
+     "ell": -3,
+     "switchers": 4123,
+     "n": 10161
+    },
+    {
+     "k": -3,
+     "ell": -4,
+     "switchers": 4031,
+     "n": 5359
+    },
+    {
+     "k": -4,
+     "ell": -5,
+     "switchers": 3866,
+     "n": 4548
+    }
+   ],
+   "switchers_total": 24087,
+   "ate_row_switchers": 24087,
+   "weighted_avg_effect": -0.095008436957,
+   "avg_dose_switchers": 0.40818772123,
+   "coef_check": {
+    "pass": true,
+    "ate": -0.23275672446,
+    "expected_ate": -0.23275672,
+    "max_abs_diff_effects": 4.7691188498e-09
+   }
+  },
+  "math_stats": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 4473,
+     "n": 38766
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 4055,
+     "n": 32159
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 3925,
+     "n": 25858
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 3723,
+     "n": 19468
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 3465,
+     "n": 13143
+    },
+    {
+     "k": 6,
+     "ell": 5,
+     "switchers": 3263,
+     "n": 10799
+    }
+   ],
+   "placebos": [
+    {
+     "k": -1,
+     "ell": -2,
+     "switchers": 4105,
+     "n": 30192
+    },
+    {
+     "k": -2,
+     "ell": -3,
+     "switchers": 3669,
+     "n": 18327
+    },
+    {
+     "k": -3,
+     "ell": -4,
+     "switchers": 3515,
+     "n": 10647
+    },
+    {
+     "k": -4,
+     "ell": -5,
+     "switchers": 3265,
+     "n": 7118
+    }
+   ],
+   "switchers_total": 22904,
+   "ate_row_switchers": 22904,
+   "weighted_avg_effect": -0.064323957667,
+   "avg_dose_switchers": 0.20184173186,
+   "coef_check": {
+    "pass": true,
+    "ate": -0.31868512558,
+    "expected_ate": -0.31868513,
+    "max_abs_diff_effects": 4.5384934144e-09
+   }
+  }
+ },
+ "p2": {
+  "econ": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 12598,
+     "n": 72405
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 11946,
+     "n": 59561
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 11756,
+     "n": 46926
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 11064,
+     "n": 34337
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 10808,
+     "n": 22241
+    }
+   ],
+   "switchers_total": 58172,
+   "ate_row_switchers": 58172,
+   "weighted_avg_effect": 0.0022459469081,
+   "coef_check": {
+    "pass": true,
+    "ate": 0.0022459469081,
+    "expected_ate": 0.00224595,
+    "max_abs_diff_effects": 4.4393276501e-09
+   }
+  },
+  "chemistry": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 5086,
+     "n": 28627
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 4895,
+     "n": 23468
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 4696,
+     "n": 18382
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 4565,
+     "n": 13580
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 4359,
+     "n": 8787
+    }
+   ],
+   "switchers_total": 23601,
+   "ate_row_switchers": 23601,
+   "weighted_avg_effect": 0.0060959063657,
+   "coef_check": {
+    "pass": true,
+    "ate": 0.0060959063657,
+    "expected_ate": 0.00609591,
+    "max_abs_diff_effects": 4.7100471223e-09
+   }
+  },
+  "math_stats": {
+   "horizons": [
+    {
+     "k": 1,
+     "ell": 0,
+     "switchers": 8334,
+     "n": 49751
+    },
+    {
+     "k": 2,
+     "ell": 1,
+     "switchers": 7976,
+     "n": 40956
+    },
+    {
+     "k": 3,
+     "ell": 2,
+     "switchers": 7710,
+     "n": 32316
+    },
+    {
+     "k": 4,
+     "ell": 3,
+     "switchers": 7606,
+     "n": 23914
+    },
+    {
+     "k": 5,
+     "ell": 4,
+     "switchers": 7155,
+     "n": 15224
+    }
+   ],
+   "switchers_total": 38781,
+   "ate_row_switchers": 38781,
+   "weighted_avg_effect": 0.00070580686078,
+   "coef_check": {
+    "pass": true,
+    "ate": 0.00070580686078,
+    "expected_ate": 0.00070581,
+    "max_abs_diff_effects": 2.7939416582e-09
+   }
+  }
+ }
+}

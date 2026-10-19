@@ -1,0 +1,353 @@
+== P1_econ_fnfix
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/none] P1_econ_fnfix  original=73073 rows after decontamination=71797 rows =====
+P1_econ_fnfix/union                      obs=62188   rel=6527   joint-effect p=0.0000 placebo p=0.0028 ATE=-0.36838 (SE 0.06590, CI -0.49755~-0.23921)
+P1_econ_fnfix/network                    obs=24385   rel=2464   joint-effect p=0.0000 placebo p=0.0345 ATE=-0.43063 (SE 0.10130, CI -0.62917~-0.23209)
+P1_econ_fnfix/dept                       obs=44587   rel=4753   joint-effect p=0.0000 placebo p=0.0240 ATE=-0.35493 (SE 0.07803, CI -0.50786~-0.20199)
+[P1_econ_fnfix] done
+EQUAL
+CONTROL EQUAL: full/none vs P1_econ_fnfix
+== P1_econ_fnfix
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[loeo/NONE] P1_econ_fnfix  original=73073 rows after decontamination=71797 rows =====
+P1_econ_fnfix/union                      obs=62188   rel=6527   joint-effect p=0.0000 placebo p=0.0028 ATE=-0.36838 (SE 0.06590, CI -0.49755~-0.23921)
+[P1_econ_fnfix] done
+EQUAL
+CONTROL EQUAL: loeo/NONE vs P1_econ_fnfix(union)
+CONTROLS_EQUAL 2/2
+== P1bnd0_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0] P1bnd0_econ  original=73073 rows after decontamination=71797 rows =====
+P1bnd0_econ/union                        obs=71797   rel=6527   joint-effect p=0.0000 placebo p=0.0001 ATE=-0.54469 (SE 0.06275, CI -0.66768~-0.42171)
+P1bnd0_econ/network                      obs=27104   rel=2464   joint-effect p=0.0000 placebo p=0.0254 ATE=-0.60909 (SE 0.08836, CI -0.78227~-0.43590)
+P1bnd0_econ/dept                         obs=52283   rel=4753   joint-effect p=0.0000 placebo p=0.0006 ATE=-0.54488 (SE 0.07600, CI -0.69384~-0.39592)
+[P1bnd0_econ] done
+== P1bndmean_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fillmean] P1bndmean_econ  original=73073 rows after decontamination=71797 rows =====
+P1bndmean_econ/union                     obs=71775   rel=6527   joint-effect p=0.0000 placebo p=0.0038 ATE=-0.17883 (SE 0.05008, CI -0.27699~-0.08067)
+P1bndmean_econ/network                   obs=27104   rel=2464   joint-effect p=0.0000 placebo p=0.2006 ATE=-0.28696 (SE 0.07564, CI -0.43520~-0.13871)
+P1bndmean_econ/dept                      obs=52261   rel=4753   joint-effect p=0.0032 placebo p=0.0985 ATE=-0.14246 (SE 0.06025, CI -0.26055~-0.02437)
+[P1bndmean_econ] done
+== P1bnd0_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0] P1bnd0_chemistry  original=30635 rows after decontamination=29414 rows =====
+P1bnd0_chemistry/union                   obs=29414   rel=2674   joint-effect p=0.0000 placebo p=0.7436 ATE=-0.29312 (SE 0.05876, CI -0.40829~-0.17795)
+P1bnd0_chemistry/network                 obs=18997   rel=1727   joint-effect p=0.0290 placebo p=0.6089 ATE=-0.17484 (SE 0.12576, CI -0.42131~0.07164)
+P1bnd0_chemistry/dept                    obs=15257   rel=1387   joint-effect p=0.0000 placebo p=0.8533 ATE=-0.31980 (SE 0.07151, CI -0.45997~-0.17964)
+[P1bnd0_chemistry] done
+== P1bndmean_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fillmean] P1bndmean_chemistry  original=30635 rows after decontamination=29414 rows =====
+P1bndmean_chemistry/union                obs=29414   rel=2674   joint-effect p=0.0004 placebo p=0.6358 ATE=-0.16951 (SE 0.05942, CI -0.28597~-0.05306)
+P1bndmean_chemistry/network              obs=18997   rel=1727   joint-effect p=0.5085 placebo p=0.7694 ATE=-0.01668 (SE 0.10902, CI -0.23036~0.19700)
+P1bndmean_chemistry/dept                 obs=15257   rel=1387   joint-effect p=0.0000 placebo p=0.5700 ATE=-0.18875 (SE 0.07389, CI -0.33356~-0.04393)
+[P1bndmean_chemistry] done
+== P1bnd0_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0] P1bnd0_math_stats  original=19910 rows after decontamination=18854 rows =====
+P1bnd0_math_stats/union                  obs=18854   rel=1714   joint-effect p=0.0000 placebo p=0.3333 ATE=-0.20479 (SE 0.13028, CI -0.46013~0.05054)
+P1bnd0_math_stats/network                obs=4004    rel=364    joint-effect p=0.5076 placebo p=0.5878 ATE=-0.11793 (SE 0.17594, CI -0.46277~0.22690)
+P1bnd0_math_stats/dept                   obs=16181   rel=1471   joint-effect p=0.0000 placebo p=0.3590 ATE=-0.22387 (SE 0.14952, CI -0.51692~0.06919)
+[P1bnd0_math_stats] done
+== P1bndmean_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fillmean] P1bndmean_math_stats  original=19910 rows after decontamination=18854 rows =====
+P1bndmean_math_stats/union               obs=18843   rel=1714   joint-effect p=0.0036 placebo p=0.4778 ATE=-0.01295 (SE 0.12335, CI -0.25470~0.22881)
+P1bndmean_math_stats/network             obs=4004    rel=364    joint-effect p=0.6988 placebo p=0.6197 ATE=-0.06216 (SE 0.16203, CI -0.37973~0.25542)
+P1bndmean_math_stats/dept                obs=16170   rel=1471   joint-effect p=0.0042 placebo p=0.4543 ATE=+0.01600 (SE 0.13882, CI -0.25609~0.28808)
+[P1bndmean_math_stats] done
+== P1lvl_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/levels] P1lvl_econ  original=73073 rows after decontamination=71797 rows =====
+P1lvl_econ/union                         obs=62188   rel=6527   joint-effect p=0.0000 placebo p=0.0025 ATE=-3.45617 (SE 0.87141, CI -5.16410~-1.74824)
+P1lvl_econ/network                       obs=24385   rel=2464   joint-effect p=0.0013 placebo p=0.0511 ATE=-3.30721 (SE 1.26996, CI -5.79630~-0.81813)
+P1lvl_econ/dept                          obs=44587   rel=4753   joint-effect p=0.0000 placebo p=0.0456 ATE=-3.73305 (SE 1.08188, CI -5.85351~-1.61260)
+[P1lvl_econ] done
+== P1lvl_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/levels] P1lvl_chemistry  original=30635 rows after decontamination=29414 rows =====
+P1lvl_chemistry/union                    obs=26967   rel=2674   joint-effect p=0.0000 placebo p=0.5691 ATE=-1.09665 (SE 0.38184, CI -1.84504~-0.34826)
+P1lvl_chemistry/network                  obs=17842   rel=1727   joint-effect p=0.0891 placebo p=0.7574 ATE=-0.43722 (SE 0.47144, CI -1.36124~0.48679)
+P1lvl_chemistry/dept                     obs=13569   rel=1387   joint-effect p=0.0000 placebo p=0.5623 ATE=-1.24371 (SE 0.62456, CI -2.46782~-0.01960)
+[P1lvl_chemistry] done
+== P1lvl_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/levels] P1lvl_math_stats  original=19910 rows after decontamination=18854 rows =====
+P1lvl_math_stats/union                   obs=16117   rel=1714   joint-effect p=0.0114 placebo p=0.6174 ATE=-0.53669 (SE 1.90621, CI -4.27278~3.19941)
+P1lvl_math_stats/network                 obs=3628    rel=364    joint-effect p=0.4284 placebo p=0.6205 ATE=-2.44755 (SE 1.54954, CI -5.48459~0.58949)
+P1lvl_math_stats/dept                    obs=13635   rel=1471   joint-effect p=0.0132 placebo p=0.3881 ATE=+0.26748 (SE 2.37078, CI -4.37916~4.91412)
+[P1lvl_math_stats] done
+== P1nex_econ
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/neverexp] P1nex_econ  original=73073 rows after decontamination=17770 rows =====
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_econ/union                         obs=13340   rel=3389   joint-effect p=NA placebo p=NA ATE=+0.12415 (SE 0.19556, CI -0.25914~0.50743)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_econ/network                       obs=5686    rel=1348   joint-effect p=NA placebo p=NA ATE=+0.27460 (SE 0.29112, CI -0.29598~0.84518)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_econ/dept                          obs=9167    rel=2428   joint-effect p=NA placebo p=NA ATE=+0.04172 (SE 0.22927, CI -0.40764~0.49109)
+[P1nex_econ] done
+== P1nex_chemistry
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/neverexp] P1nex_chemistry  original=30635 rows after decontamination=8211 rows =====
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_chemistry/union                    obs=6911    rel=1243   joint-effect p=NA placebo p=NA ATE=-0.15731 (SE 0.19829, CI -0.54596~0.23134)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_chemistry/network                  obs=3495    rel=672    joint-effect p=NA placebo p=NA ATE=-0.17453 (SE 0.25749, CI -0.67920~0.33013)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_chemistry/dept                     obs=4826    rel=823    joint-effect p=NA placebo p=NA ATE=-0.14979 (SE 0.22657, CI -0.59386~0.29429)
+[P1nex_chemistry] done
+== P1nex_math_stats
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/neverexp] P1nex_math_stats  original=19910 rows after decontamination=6059 rows =====
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_math_stats/union                   obs=4682    rel=1011   joint-effect p=NA placebo p=NA ATE=+0.29375 (SE 0.69267, CI -1.06387~1.65136)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_math_stats/network                 obs=1118    rel=208    joint-effect p=NA placebo p=NA ATE=-0.01313 (SE 0.40897, CI -0.81469~0.78844)
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Effect_6 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1nex_math_stats/dept                    obs=4003    rel=880    joint-effect p=NA placebo p=NA ATE=+0.28538 (SE 0.69941, CI -1.08544~1.65620)
+[P1nex_math_stats] done
+== LOEO: 113 events, 4 parallel jobs
+done P1loeo_A5000292946_2009
+done P1loeo_A5001177483_2023
+done P1loeo_A5000674091_2006
+done P1loeo_A5001034699_2017
+done P1loeo_A5001820944_2016
+done P1loeo_A5002969626_2012
+done P1loeo_A5005868773_2014
+done P1loeo_A5004109149_2012
+done P1loeo_A5006190609_2003
+done P1loeo_A5006435210_2011
+done P1loeo_A5007734019_2016
+done P1loeo_A5008208999_2005
+done P1loeo_A5008296992_2018
+done P1loeo_A5008470795_2011
+done P1loeo_A5008855963_2011
+done P1loeo_A5011262618_2018
+done P1loeo_A5011776630_2024
+done P1loeo_A5012590199_2019
+done P1loeo_A5013630114_2008
+done P1loeo_A5015268530_2021
+done P1loeo_A5016931502_2018
+done P1loeo_A5017960988_2019
+done P1loeo_A5017376589_2016
+done P1loeo_A5017694921_2007
+done P1loeo_A5018453582_2018
+done P1loeo_A5020729611_2017
+done P1loeo_A5018518935_2003
+done P1loeo_A5020774613_2019
+done P1loeo_A5022446221_2020
+done P1loeo_A5024737956_2014
+done P1loeo_A5024973435_2013
+done P1loeo_A5024745682_2015
+done P1loeo_A5026828190_2017
+done P1loeo_A5027090359_2023
+done P1loeo_A5027424571_2010
+done P1loeo_A5027077000_2017
+done P1loeo_A5032550291_2017
+done P1loeo_A5034503874_2016
+done P1loeo_A5029151069_2019
+done P1loeo_A5028731684_2010
+done P1loeo_A5034628923_2005
+done P1loeo_A5034784553_2008
+done P1loeo_A5038001711_2017
+done P1loeo_A5035157505_2018
+done P1loeo_A5039737173_2016
+done P1loeo_A5042125848_2017
+done P1loeo_A5042121724_2014
+done P1loeo_A5041837451_2008
+done P1loeo_A5044501609_2023
+done P1loeo_A5046163960_2007
+done P1loeo_A5044076496_2022
+done P1loeo_A5046379417_2006
+done P1loeo_A5047755944_2011
+done P1loeo_A5047686030_2010
+done P1loeo_A5049007275_2006
+done P1loeo_A5050761986_2010
+done P1loeo_A5054037290_2008
+done P1loeo_A5050962159_2017
+done P1loeo_A5056114255_2011
+done P1loeo_A5053503664_2023
+done P1loeo_A5059344939_2022
+done P1loeo_A5059554264_2021
+done P1loeo_A5059426203_2018
+done P1loeo_A5059428122_2021
+done P1loeo_A5063040920_2009
+done P1loeo_A5063951119_2010
+done P1loeo_A5063920479_2002
+done P1loeo_A5067564085_2017
+done P1loeo_A5068400819_2021
+done P1loeo_A5069424866_2023
+done P1loeo_A5070264657_2009
+done P1loeo_A5070067353_2005
+done P1loeo_A5070527085_2015
+done P1loeo_A5070304330_2013
+done P1loeo_A5071785739_2020
+done P1loeo_A5071656006_2000
+done P1loeo_A5072079903_2006
+done P1loeo_A5073639630_2010
+done P1loeo_A5075194454_2008
+done P1loeo_A5075360079_2018
+done P1loeo_A5076526695_2018
+done P1loeo_A5079006965_2011
+done P1loeo_A5080033018_2011
+done P1loeo_A5078564370_2014
+done P1loeo_A5082658369_2018
+done P1loeo_A5080057811_2006
+done P1loeo_A5082663721_2010
+done P1loeo_A5080689800_2024
+done P1loeo_A5085246004_2017
+done P1loeo_A5082727271_2019
+done P1loeo_A5083649140_2013
+done P1loeo_A5083549223_2005
+done P1loeo_A5086835452_2017
+done P1loeo_A5086206624_2012
+done P1loeo_A5086581525_2017
+done P1loeo_A5086383420_2019
+done P1loeo_A5086933077_1999
+done P1loeo_A5087235620_2016
+done P1loeo_A5087261858_2019
+done P1loeo_A5087653408_2019
+done P1loeo_A5087933968_2020
+done P1loeo_A5090013218_2015
+done P1loeo_A5088950236_2006
+done P1loeo_A5089150146_2013
+done P1loeo_A5100451834_2018
+done P1loeo_A5091326353_2009
+done P1loeo_A5102189800_2013
+done P1loeo_A5100765181_2017
+done P1loeo_A5103238589_2011
+done P1loeo_A5102491748_2015
+done P1loeo_A5103218091_2010
+done P1loeo_A5105828272_2011
+done P1loeo_A5111971785_2009
+LOEO_COMPLETE 113/113
+canon union: ate=-0.368382 p_placebo=0.002771
+top 10 removals by placebo p:
+    1 A5086835452:2017   uq           p=0.0112 ate=-0.3691
+    2 A5042125848:2017   monash       p=0.0062 ate=-0.3691
+    3 A5015268530:2021   monash       p=0.0052 ate=-0.3774
+    4 A5059554264:2021   monash       p=0.0048 ate=-0.3970
+    5 A5008208999:2005   unsw         p=0.0046 ate=-0.3700
+    6 A5018518935:2003   monash       p=0.0046 ate=-0.3687
+    7 A5059428122:2021   monash       p=0.0044 ate=-0.3747
+    8 A5047755944:2011   melbourne    p=0.0040 ate=-0.3810
+    9 A5008855963:2011   monash       p=0.0040 ate=-0.3713
+   10 A5079006965:2011   uts          p=0.0038 ate=-0.3756
+BATTERY_OK

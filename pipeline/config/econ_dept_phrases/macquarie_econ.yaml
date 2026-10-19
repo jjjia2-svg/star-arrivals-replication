@@ -1,0 +1,10 @@
+bind_tokens:
+- case_sensitive: false
+  text: Macquarie University
+  word_boundary: false
+dept_key: macquarie_econ
+exclude_tokens: []
+openalex_inst_id: I99043593
+phrases:
+- Department of Economics
+window_chars: 80

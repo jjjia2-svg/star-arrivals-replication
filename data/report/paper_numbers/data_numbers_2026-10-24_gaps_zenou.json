@@ -1,0 +1,17 @@
+{
+ "roster": 125,
+ "network": 11,
+ "network_only": 3,
+ "union": 128,
+ "outside_network": 117,
+ "dose_below_01": 21,
+ "dose_ge_05": 47,
+ "dose_median": 0.32,
+ "p2_followed": 127,
+ "p2_first_ties_post": 5,
+ "same_topic_outside": 103,
+ "pairs_possible": 5253,
+ "pairs": 4227,
+ "pairs_excluded_prewindow": 1026,
+ "star_percentile": 99.9
+}

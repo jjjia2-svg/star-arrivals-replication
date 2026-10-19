@@ -1,0 +1,22 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "pin",
+  "instance_type": "m6i.4xlarge",
+  "price_hr": 0.768,
+  "est_min": 60,
+  "hard_min": 180,
+  "root_gb": 300,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "data_sync": [],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/verify_inputs.py",
+      "/work/verify_inputs.py"
+    ]
+  ],
+  "steps": [
+    "\"$PY\" /work/verify_inputs.py pin --bucket \"$B\" --inventory \"$REPO_DIR/config/r1/input_inventory.tsv\" --repo \"$REPO_DIR\" --work /work/pin --out /work/out --job \"$JOB\""
+  ]
+}

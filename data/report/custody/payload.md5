@@ -1,0 +1,8 @@
+143a9b17cf7c100c922a87ea2ebb59e4  P3_econ_fnfix.json
+638311a79745adadc3203c0c2550529c  P3_fnfix_chemistry.json
+c9c0ced61b6108ea88283d92c660e04c  p3_slim_chemistry.parquet
+e84d88abc51da98949640d1862a4971b  p3_slim_econ.parquet
+d8de71bd12607828865598d671f008a8  p3_slim_ev_chemistry.parquet
+3ecc60764137221a1e9d2307aa08c8f6  p3_slim_ev_econ.parquet
+efe580e76a70b9ba678312c05b8ef837  run_p3.R
+b9c8a7afd3d5df8d043d4a18b00c8e1c  run_p3_evcl.R

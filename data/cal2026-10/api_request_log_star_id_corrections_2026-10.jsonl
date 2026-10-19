@@ -1,0 +1,1 @@
+{"ts": "2026-09-22T21:52:02", "endpoint": "https://api.openalex.org/works", "seed": "A5091326353", "params": {"filter": "author.id:A5091326353", "per-page": 200, "cursor": "*", "select": "id,doi,publication_year,type,authorships,cited_by_count", "mailto": "jjjia2@student.unimelb.edu.au"}, "status": 200, "n_results": 129, "ms": 2962, "attempt": 0}

@@ -1,0 +1,25 @@
+$ bash analysis/robustness/sensitivity/run_nocentre_afar_pos.sh
+[env] {"SAR_OUT_ROOT": "$TMPDIR/sar_rob_sensitivity/nc_p3pos", "SAR_ROBUST_OUTDIR_P3POS": "data/cal2026-10/robustness/nocentre/p3pos", "SAR_ROBUST_MANIFEST_DIR": "data/cal2026-10/robustness/nocentre", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+== 0. preconditions (data disk, legacy tree)
+== 1. control build -> control pos cut + estimate -> no-centre build -> pos cells (scratch: $TMPDIR/sar_rob_sensitivity/nc_p3pos)
+== control build (fnfix roster = with centres)
+[run_cal_frames] prodlib chemistry (cal) finished in 8.6 s
+[run_cal_frames] stage union-gold --field chemistry finished in 6.4 s (4 outputs) [shadow]
+[run_cal_frames] stage p1-gold --field chemistry finished in 7.1 s (3 outputs) [shadow]
+[run_cal_frames] stage p2-gold --field chemistry --panel3 full finished in 2.2 s (3 outputs) [shadow]
+[run_cal_frames] prodlib math_stats (cal) finished in 3.7 s
+[run_cal_frames] stage union-gold --field math_stats finished in 4.3 s (4 outputs) [shadow]
+[run_cal_frames] stage p1-gold --field math_stats finished in 2.8 s (3 outputs) [shadow]
+[run_cal_frames] stage p2-gold --field math_stats --panel3 full finished in 1.1 s (3 outputs) [shadow]
+
+--- stderr ---
+Traceback (most recent call last):
+  File "analysis/robustness/sensitivity/run_nocentre_afar_pos.py", line 224, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "analysis/robustness/sensitivity/run_nocentre_afar_pos.py", line 157, in main
+    raise AssertionError(f"control did NOT reproduce the canon frames: {hard_fail} — STOP")
+AssertionError: control did NOT reproduce the canon frames: ['becoming_chemistry', 'p1_frame_chemistry', 'becoming_math_stats', 'p1_frame_math_stats'] — STOP
+
+--- rc=1 secs=37.8 ---

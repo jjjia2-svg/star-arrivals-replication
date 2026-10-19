@@ -1,0 +1,14 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p2 P2_fnfix_math_stats events=33 perms=0..0 seed=20260829 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  CONTROL EQUAL: ate=0.0015053130 se=0.0004816505 == ref (to the gold's 8-decimal rounding)
+  [P2_fnfix_math_stats] perm 0 done (3.0s)
+[P2_fnfix_math_stats] 0..0 done -> data/cal2026-10/cloud_t5/preflight_local_identity/P2_fnfix_math_stats_perm_0_0.csv
+SAR_OUT=$T Rscript $R $MODE $LAB $FR $REF $SEED 0 0  3.60s user 0.35s system 98% cpu 4.019 total

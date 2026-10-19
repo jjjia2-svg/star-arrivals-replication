@@ -1,0 +1,186 @@
+{
+ "schema": "sar.r1.layout.v1",
+ "note": "J1b restore_j1a (W2-TJ1B): J1a stage products -> /work/j1a, the layout robustness_r1.json j1a_layout and the J1b rows read. frames/ is J1a's assembled frames dir (the October frame basenames, R10; its own MANIFEST.sha256); estimates/ = stage estimates_m's declared output work:prod/estimates_M (the M cells under the October gold basenames, flat; the stage's own STAGE_OUT work/prod/estimates_m holds only its report and is not an output); events/ = the M event tables under October basenames + rank_tables' p05_flags_r1.csv; pairs/ = the M econ920 chain's pairs_unified.csv + becoming_unified.csv (the afar_event_map becoming check) and the chem/maths pairs_none of the frames dir; mem_probe/ and the two cells reports calibrate N8; calls/ feeds the no-centre rebuild (robustness_r1.json nocentre_build). Every token is digest-checked against its J1a .done.json before anything is copied (pipeline/aws/r1/restore_upstream.py).",
+ "rows": [
+  {
+   "dest": "frames",
+   "from": {
+    "job": "j1a",
+    "stage": "frames",
+    "token": "work:prod/frames",
+    "rel": ""
+   }
+  },
+  {
+   "dest": "estimates",
+   "from": {
+    "job": "j1a",
+    "stage": "estimates_m",
+    "token": "work:prod/estimates_M",
+    "rel": ""
+   }
+  },
+  {
+   "dest": "events/events_econ_cal2026-10.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_econ_cal2026-10.csv"
+   }
+  },
+  {
+   "dest": "events/events_econ_cal2026-10_p05.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_econ_cal2026-10_p05.csv"
+   }
+  },
+  {
+   "dest": "events/events_chemistry_cal2026-10.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_chemistry_cal2026-10.csv"
+   }
+  },
+  {
+   "dest": "events/events_chemistry_cal2026-10_p05.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_chemistry_cal2026-10_p05.csv"
+   }
+  },
+  {
+   "dest": "events/events_math_stats_cal2026-10.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_math_stats_cal2026-10.csv"
+   }
+  },
+  {
+   "dest": "events/events_math_stats_cal2026-10_p05.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_math_stats_cal2026-10_p05.csv"
+   }
+  },
+  {
+   "dest": "events/events_decision_2026-10.json",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "events_decision_2026-10.json"
+   }
+  },
+  {
+   "dest": "events/counts.json",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "counts.json"
+   }
+  },
+  {
+   "dest": "events/star_aliases_r1.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "events",
+    "token": "work:prod/events",
+    "rel": "star_aliases_r1.csv"
+   }
+  },
+  {
+   "dest": "events/p05_flags_r1.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "rank_tables",
+    "token": "work:prod/rank_tables",
+    "rel": "p05_flags_r1.csv"
+   }
+  },
+  {
+   "dest": "pairs/pairs_unified.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "frames_econ920",
+    "token": "work:prod/frames_econ920",
+    "rel": "pairs/pairs_unified.csv"
+   }
+  },
+  {
+   "dest": "pairs/becoming_unified.csv",
+   "from": {
+    "job": "j1a",
+    "stage": "frames_econ920",
+    "token": "work:prod/frames_econ920",
+    "rel": "pairs/becoming_unified.csv"
+   }
+  },
+  {
+   "dest": "pairs/pairs_none_chemistry.parquet",
+   "from": {
+    "job": "j1a",
+    "stage": "frames",
+    "token": "work:prod/frames",
+    "rel": "pairs_none_chemistry.parquet"
+   }
+  },
+  {
+   "dest": "pairs/pairs_none_math_stats.parquet",
+   "from": {
+    "job": "j1a",
+    "stage": "frames",
+    "token": "work:prod/frames",
+    "rel": "pairs_none_math_stats.parquet"
+   }
+  },
+  {
+   "dest": "mem_probe",
+   "from": {
+    "job": "j1a",
+    "stage": "mem_probe",
+    "token": "work:prod/mem_probe",
+    "rel": ""
+   }
+  },
+  {
+   "dest": "cells_rmac/cells_report_rmac.json",
+   "from": {
+    "job": "j1a",
+    "stage": "cells_rmac",
+    "token": "work:prod/cells_rmac",
+    "rel": "cells_report_rmac.json"
+   }
+  },
+  {
+   "dest": "cells_rcloud/cells_report_rcloud.json",
+   "from": {
+    "job": "j1a",
+    "stage": "cells_rcloud",
+    "token": "work:prod/cells_rcloud",
+    "rel": "cells_report_rcloud.json"
+   }
+  },
+  {
+   "dest": "calls",
+   "from": {
+    "job": "j1a",
+    "stage": "calls",
+    "token": "work:prod/calls",
+    "rel": ""
+   }
+  }
+ ]
+}

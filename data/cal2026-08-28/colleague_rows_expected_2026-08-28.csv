@@ -1,0 +1,27 @@
+author_id,field,layer,source,rows,task3_expectation
+A5027778630,chemistry,rel_fnfix,legacy fnfix union_frame_chemistry/relationships.csv,20,removed
+A5027778630,chemistry,p1_frame,data/frames/p1_frame_chemistry.csv (incumbent_person_id),220,removed
+A5027778630,chemistry,p2_becoming,data/frames/p2_becoming_chemistry.csv (pid),340,removed
+A5027778630,chemistry,pairs_legacy,legacy fnfix panels23_chemistry_gold/pairs_none.parquet (i_id or j_id),43475,removed
+A5091826237,chemistry,rel_fnfix,legacy fnfix union_frame_chemistry/relationships.csv,18,removed
+A5091826237,chemistry,p1_frame,data/frames/p1_frame_chemistry.csv (incumbent_person_id),198,removed
+A5091826237,chemistry,p2_becoming,data/frames/p2_becoming_chemistry.csv (pid),306,removed
+A5091826237,chemistry,pairs_legacy,legacy fnfix panels23_chemistry_gold/pairs_none.parquet (i_id or j_id),39250,removed
+A5017222669,math_stats,rel_fnfix,legacy fnfix union_frame_math_stats/relationships.csv,5,removed
+A5017222669,math_stats,p1_frame,data/frames/p1_frame_math_stats.csv (incumbent_person_id),55,removed
+A5017222669,math_stats,p2_becoming,data/frames/p2_becoming_math_stats.csv (pid),85,removed
+A5017222669,math_stats,pairs_legacy,legacy fnfix panels23_math_stats_gold/pairs_none.parquet (i_id or j_id),6169,removed
+A5090916445,math_stats,rel_fnfix,legacy fnfix union_frame_math_stats/relationships.csv,2,removed
+A5090916445,math_stats,p1_frame,data/frames/p1_frame_math_stats.csv (incumbent_person_id),22,removed
+A5090916445,math_stats,p2_becoming,data/frames/p2_becoming_math_stats.csv (pid),34,removed
+A5090916445,math_stats,pairs_legacy,legacy fnfix panels23_math_stats_gold/pairs_none.parquet (i_id or j_id),2499,removed
+A5062352558,chemistry,rel_fnfix,legacy fnfix union_frame_chemistry/relationships.csv,17,removed
+A5062352558,chemistry,p1_frame,data/frames/p1_frame_chemistry.csv (incumbent_person_id),187,removed
+A5062352558,chemistry,p2_becoming,data/frames/p2_becoming_chemistry.csv (pid),289,removed
+A5062352558,chemistry,pairs_legacy,legacy fnfix panels23_chemistry_gold/pairs_none.parquet (i_id or j_id),39586,removed
+A5044432173,econ,p1_star_side,data/frames/p1_frame_econ.csv (star_person_id=P_...),1012,removed
+A5044432173,econ,p1_colleague_side,data/frames/p1_frame_econ.csv (incumbent_person_id=P_...),88,persists
+A5044432173,econ,p2_star_side,data/frames/p2_becoming_econ.csv (star),1547,removed
+A5044432173,econ,p2_colleague_side,data/frames/p2_becoming_econ.csv (pid),136,persists
+A5044432173,econ,pairs_event_side,legacy econ_fnfix pairs_unified.csv (event_id=A5044432173:*),70028,removed
+A5044432173,econ,pairs_member_side,"legacy econ_fnfix pairs_unified.csv (i_id/j_id, other events)",17545,persists

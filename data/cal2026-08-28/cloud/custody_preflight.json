@@ -1,0 +1,57 @@
+{
+ "task": "T5 cloud cells cal2026-08-28 \u2014 preflight (BEFORE upload)",
+ "generated_utc": "2026-08-28T04:20:59Z",
+ "authority": "plan Task 5 + author approval 2026-08-27 (~$5-10) + T4 registry",
+ "payloads": {
+  "p3_slim_chemistry.parquet": {
+   "cell": "P3_fnfix_chemistry",
+   "sha256_before": "202952957c4327374f683ab73d655881dfdbf26dd08dba50e5cb5d809e090f08",
+   "md5_before": "3050ca6572b4159ae7a3b367fc7b44c0",
+   "bytes": 4570037
+  },
+  "p3_slim_econ.parquet": {
+   "cell": "P3_econ_fnfix",
+   "sha256_before": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d",
+   "md5_before": "a873fb540182981014aef82717519e20",
+   "bytes": 14224615
+  },
+  "p3_slim_ev_chemistry.parquet": {
+   "cell": "P3evcl_chemistry",
+   "sha256_before": "137a1f8bbdd1f85df2daf3f746aba00bef9b6561200acb4da855d0c4ce7e336c",
+   "md5_before": "b9c1fa4a8222c63e10bc91e4f3304cf4",
+   "bytes": 4620680
+  },
+  "p3_slim_ev_econ.parquet": {
+   "cell": "P3evcl_econ",
+   "sha256_before": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a",
+   "md5_before": "56921067aba2e3ff6cf370a75c43c36b",
+   "bytes": 14244235
+  }
+ },
+ "r_drivers": {
+  "run_p3.R": {
+   "sha256": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+   "md5": "efe580e76a70b9ba678312c05b8ef837"
+  },
+  "run_p3_evcl.R": {
+   "sha256": "e653e669b0743728e0055f90ef0a775a3075918739169264761713fb57e0859e",
+   "md5": "b9c8a7afd3d5df8d043d4a18b00c8e1c"
+  }
+ },
+ "payload_md5_sha256": "2478b0229a6651ddda3734da53901d113687d853b186e9c9280038c419170668",
+ "bootstrap_sha256": "b4c8ecb603f7306fcfa8e47688331898c3812ef8b878e10fa1fd4de6fba12944",
+ "driver_sh_sha256": "77426827b7e958666d9046cea9120eef1c391dda0efe2d3bef5286ace062fd6a",
+ "cost_estimate": {
+  "basis": "pipeline/aws/README.md measured timings (M1, 2026-08-16) + runbook overhead",
+  "cells_min": {
+   "P3_fnfix_chemistry": 1.8,
+   "P3_econ_fnfix": 5.6,
+   "P3evcl_chemistry": 2.2,
+   "P3evcl_econ": 6.9
+  },
+  "overhead_min": 14.0,
+  "wall_min_projected": 30.5,
+  "on_demand_usd_per_h": 4.032,
+  "cost_usd_projected_on_demand": 2.05
+ }
+}

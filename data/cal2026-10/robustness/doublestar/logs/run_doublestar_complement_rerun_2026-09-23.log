@@ -1,0 +1,32 @@
+{
+ "rule": "complement of the double-star drop (data/cal2026-10/robustness/doublestar): keep only the 95 economics events that arrived within five years of an earlier same-department arrival",
+ "events_in_complement": 95,
+ "events_excluded_clean": 18,
+ "p1": {
+  "rows_in": 73073,
+  "dropped": 7128,
+  "edited": 0,
+  "kept_byte_identical": 65945
+ },
+ "control_lines_subset_of_canon": true,
+ "control_rows_complement_plus_clean_equals_canon": true,
+ "source_frame": "data/frames/p1_frame_econ.csv",
+ "source_frame_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+ "staged_sha256": {
+  "p1_dsC_econ.csv": "8c40b59debefe01e97d26b8dae2c074cab0a7f4ff0e215be24e999d901e0f4de"
+ }
+}
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1 P1dsC_econ  original=65945 rows after decontamination=64812 rows =====
+P1dsC_econ/union                         obs=56127   rel=5892   joint-effect p=0.0000 placebo p=0.0029 ATE=-0.38028 (SE 0.07271, CI -0.52278~-0.23778)
+P1dsC_econ/network                       obs=21341   rel=2151   joint-effect p=0.0000 placebo p=0.0137 ATE=-0.43454 (SE 0.12497, CI -0.67947~-0.18961)
+P1dsC_econ/dept                          obs=40608   rel=4331   joint-effect p=0.0000 placebo p=0.0198 ATE=-0.37042 (SE 0.08422, CI -0.53549~-0.20535)
+[P1dsC_econ] done
+data/cal2026-10/robustness/doublestar/complement: 3 files pinned
+EXIT 0
+data/cal2026-10/robustness/doublestar: 26 files pinned

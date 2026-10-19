@@ -1,0 +1,4387 @@
+{
+ "generated": "2026-09-23T02:40:10",
+ "authority": "The 2026-09-22 input specification, D1-D5 (restricted archive).",
+ "task": "cal2026-10 economics through the canonical econ chain (econ920)",
+ "preconditions": {
+  "legacy_pins": {
+   "econ_fnfix_2026-08-15/data/network_frame_fnfix.csv": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+   "econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv": "dc9817f2758bfa1e880160960bde97148db01e419e3217ec67cb2d164b36fb60",
+   "econ_fnfix_2026-08-15/data/relationships.csv": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+   "econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv": "c7f7b870bcdc32264ce31bc80238082ae6cc16459c0ed57bcaa629e0cff34882",
+   "econ_fnfix_2026-08-15/data/new_events_econ.csv": "a17a61bec22ebac9a14dfd94c1f2b72b30b9cf681f75d7d26187d2767725ff25",
+   "econ_fnfix_2026-08-15/u4_aug/star_set/star_set.parquet": "b8a73d89e1416353b6963e2c802a3c47353582c458b21e0895d0f6ea5f3a61fc",
+   "econ_fnfix_2026-08-15/code/00_build_frame_econ920.py": "233485392b8e9ca7c17e3f5b72c7a66c347ef3b60aefdf81c50699f740dda4c3"
+  },
+  "roster_920_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "frozen_frames": {
+   "p1_frame_econ.csv": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+   "p1_frame_econ_old79.csv": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+   "p1_frame_econ_new37.csv": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+   "p2_becoming_econ.csv": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+   "p3_slim_econ.parquet": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d",
+   "p3_slim_ev_econ.parquet": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a",
+   "p1_events_ledger_econ.csv": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd"
+  },
+  "verified_pool": {
+   "excluded_persons.csv": "6066b969b4243f5e8890768ba5212c37958c795dbb08405ab3e4485ff3afa43f",
+   "frames/p1_frame_econ_verified.csv": "eece914f549c4b2b8e3a8d06cc6b6e00a4b0e0e9f79cb00d37cb9c95ab28bcae",
+   "frames/p2_becoming_econ_verified.csv": "d464f1fa860605c971c0081fce045f805ea30b12027b42f26351874a62d6e7ea",
+   "estimates/P1ver_econ.json": "270681f4e5b9a04313b938e8dee5565261ba8a394bfad89145de04a84d6e9501",
+   "estimates/P2ver_econ.json": "ae3a81212db7ac9e4cbe2833666acaf689dd36942d8791744bc0a218c4e33a64"
+  },
+  "october_inputs": {
+   "data/cal2026-10/events_econ_cal2026-10.csv": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+   "data/cal2026-10/roster_econ_verified_2026-10.parquet": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+   "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d",
+   "data/cal2026-10/star_id_corrections_2026-10.csv": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe",
+   "data/cal2026-10/restake_econ11_aug_2026-10.csv": "fc4f7424070d12b7ac7d6564715ca456ab59cd14b66600628048d255c4c342bd",
+   "data/cal2026-10/events_chemistry_cal2026-10.csv": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+   "data/cal2026-10/events_math_stats_cal2026-10.csv": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7"
+  },
+  "id_correction": {
+   "events": {
+    "A5090515599:2009": "A5091326353:2009"
+   },
+   "stars": {
+    "A5090515599": "A5091326353"
+   },
+   "table": "data/cal2026-10/star_id_corrections_2026-10.csv",
+   "sha256": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe"
+  },
+  "events": {
+   "october": 113,
+   "cal2026-08-28": 116,
+   "removed_old_events": [
+    "A5041849660:2003",
+    "A5102739182:2010",
+    "A5110738002:2009"
+   ],
+   "regenerated": {
+    "A5090515599:2009": "A5091326353:2009"
+   },
+   "new_star_removed_before_the_ledger_stage": [
+    "A5044432173:2006"
+   ]
+  },
+  "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+  "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a"
+ },
+ "stops": [],
+ "controls": {
+  "c1a": {
+   "inputs": {
+    "old_frame": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06"
+    },
+    "roster": {
+     "path": "<legacy>/v2_output/econ_roster_verify_2026-08-09/roster_clean_11school_verified.parquet",
+     "sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6"
+    },
+    "ledger": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+     "sha256": "c7f7b870bcdc32264ce31bc80238082ae6cc16459c0ed57bcaa629e0cff34882"
+    },
+    "star_set": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/u4_aug/star_set/star_set.parquet",
+     "sha256": "b8a73d89e1416353b6963e2c802a3c47353582c458b21e0895d0f6ea5f3a61fc"
+    },
+    "sup_fnfix": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+     "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+    },
+    "new_events": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/new_events_econ.csv",
+     "sha256": "a17a61bec22ebac9a14dfd94c1f2b72b30b9cf681f75d7d26187d2767725ff25"
+    }
+   },
+   "runs": [
+    {
+     "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+     "config": "<scratch>/econ920_run1/c1a/run1/config_econ920.json",
+     "secs": 18.6,
+     "exit": 0,
+     "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "log": "<scratch>/econ920_run1/c1a/run1/union.log",
+     "report": {
+      "relationships": {
+       "dept": 4690,
+       "network_old": 6844,
+       "both": 679,
+       "dept_only_new": 4011,
+       "union": 10855,
+       "v9_drop_self_alias": 1,
+       "v9_drop_star_prearrival": 31,
+       "v9_drop_alias_dup": 59,
+       "v9_dropped_examples": {
+        "self": [
+         [
+          "A5038387911",
+          "A5001177483:2023"
+         ]
+        ],
+        "prearrival": [
+         [
+          "A5044501609",
+          "A5087653408:2019"
+         ],
+         [
+          "A5044501609",
+          "A5063040920:2009"
+         ],
+         [
+          "A5017376589",
+          "A5056114255:2011"
+         ],
+         [
+          "A5044501609",
+          "A5075360079:2018"
+         ],
+         [
+          "A5017376589",
+          "A5008855963:2011"
+         ],
+         [
+          "A5044501609",
+          "A5105828272:2011"
+         ]
+        ],
+        "alias_dup": [
+         [
+          "A5046020567",
+          "A5007734019:2016"
+         ],
+         [
+          "A5046020567",
+          "A5076526695:2018"
+         ],
+         [
+          "A5059521360",
+          "A5022446221:2020"
+         ],
+         [
+          "A5059521360",
+          "A5029151069:2019"
+         ],
+         [
+          "A5059521360",
+          "A5069424866:2023"
+         ],
+         [
+          "A5059521360",
+          "A5087235620:2016"
+         ]
+        ]
+       }
+      },
+      "alias": {
+       "persons": 1105,
+       "author_rows": 1903,
+       "mapped_persons": 1090,
+       "selfrows_unmapped": 15,
+       "multi_alias_persons": 270
+      },
+      "need_outcomes": 108,
+      "outcome_src": {
+       "api_persons": 105,
+       "edges_fallback_persons": 3
+      },
+      "sup_fallback_stars": [],
+      "api_only_pids": [
+       "A5006625214",
+       "A5027786961",
+       "A5032378120",
+       "A5049629760",
+       "A5050120204",
+       "A5054240727",
+       "A5065343528",
+       "A5090637418",
+       "A5100436731"
+      ],
+      "G_SUM": {
+       "total": 119405,
+       "old": 75284,
+       "new": 44121,
+       "ok": true
+      },
+      "frame": {
+       "rows": 119405,
+       "relationships": 10855,
+       "persons": 1045,
+       "events": 117,
+       "by_channel": {
+        "network": 67815,
+        "dept_only": 44121,
+        "both": 7469
+       },
+       "dose_null_new_rows": 0,
+       "age_gap_null_new_rows": 0
+      },
+      "GATE": "PASS",
+      "dose_override_new_rows": {
+       "rows": 26114,
+       "overridden": 26114,
+       "note": "Production-library dose is recomputed with the supplemented star edges."
+      },
+      "G_DOSE": {
+       "n": 200,
+       "missing_side": 0,
+       "max_abs_diff": 0.0018986229421242284,
+       "share_exact_1e-9": 0.905
+      },
+      "G_ROW": {
+       "sampled_both": 60,
+       "mismatches": 0,
+       "dose_tolerated_le_0.01": 44,
+       "fill_divergence": 46
+      }
+     },
+     "OUT_FRAME": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+      "lines": 119406
+     },
+     "OUT_REPORT": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/build_report.json",
+      "sha256": "791c67f176d7c8f8d4b02840cac635915e1df22e9438e8bee171a001d6ef1564",
+      "lines": 391
+     },
+     "OUT_REL": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/relationships.csv",
+      "sha256": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+      "lines": 10856
+     },
+     "frame_byte_equal": false,
+     "relationships_byte_equal": true
+    },
+    {
+     "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+     "config": "<scratch>/econ920_run1/c1a/run2/config_econ920.json",
+     "secs": 14.4,
+     "exit": 0,
+     "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "log": "<scratch>/econ920_run1/c1a/run2/union.log",
+     "report": {
+      "relationships": {
+       "dept": 4690,
+       "network_old": 6844,
+       "both": 679,
+       "dept_only_new": 4011,
+       "union": 10855,
+       "v9_drop_self_alias": 1,
+       "v9_drop_star_prearrival": 31,
+       "v9_drop_alias_dup": 59,
+       "v9_dropped_examples": {
+        "self": [
+         [
+          "A5038387911",
+          "A5001177483:2023"
+         ]
+        ],
+        "prearrival": [
+         [
+          "A5044501609",
+          "A5087653408:2019"
+         ],
+         [
+          "A5044501609",
+          "A5063040920:2009"
+         ],
+         [
+          "A5017376589",
+          "A5056114255:2011"
+         ],
+         [
+          "A5044501609",
+          "A5075360079:2018"
+         ],
+         [
+          "A5017376589",
+          "A5008855963:2011"
+         ],
+         [
+          "A5044501609",
+          "A5105828272:2011"
+         ]
+        ],
+        "alias_dup": [
+         [
+          "A5046020567",
+          "A5007734019:2016"
+         ],
+         [
+          "A5046020567",
+          "A5076526695:2018"
+         ],
+         [
+          "A5059521360",
+          "A5022446221:2020"
+         ],
+         [
+          "A5059521360",
+          "A5029151069:2019"
+         ],
+         [
+          "A5059521360",
+          "A5069424866:2023"
+         ],
+         [
+          "A5059521360",
+          "A5087235620:2016"
+         ]
+        ]
+       }
+      },
+      "alias": {
+       "persons": 1105,
+       "author_rows": 1903,
+       "mapped_persons": 1090,
+       "selfrows_unmapped": 15,
+       "multi_alias_persons": 270
+      },
+      "need_outcomes": 108,
+      "outcome_src": {
+       "api_persons": 105,
+       "edges_fallback_persons": 3
+      },
+      "sup_fallback_stars": [],
+      "api_only_pids": [
+       "A5006625214",
+       "A5027786961",
+       "A5032378120",
+       "A5049629760",
+       "A5050120204",
+       "A5054240727",
+       "A5065343528",
+       "A5090637418",
+       "A5100436731"
+      ],
+      "G_SUM": {
+       "total": 119405,
+       "old": 75284,
+       "new": 44121,
+       "ok": true
+      },
+      "frame": {
+       "rows": 119405,
+       "relationships": 10855,
+       "persons": 1045,
+       "events": 117,
+       "by_channel": {
+        "network": 67815,
+        "dept_only": 44121,
+        "both": 7469
+       },
+       "dose_null_new_rows": 0,
+       "age_gap_null_new_rows": 0
+      },
+      "GATE": "PASS",
+      "dose_override_new_rows": {
+       "rows": 26114,
+       "overridden": 26114,
+       "note": "Production-library dose is recomputed with the supplemented star edges."
+      },
+      "G_DOSE": {
+       "n": 200,
+       "missing_side": 0,
+       "max_abs_diff": 0.0018986229421242284,
+       "share_exact_1e-9": 0.905
+      },
+      "G_ROW": {
+       "sampled_both": 60,
+       "mismatches": 0,
+       "dose_tolerated_le_0.01": 44,
+       "fill_divergence": 46
+      }
+     },
+     "OUT_FRAME": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "123f41e16a4abb9614fc9be18187afb1d9d5dec14b1ea400e2ca2d8e6cade2bd",
+      "lines": 119406
+     },
+     "OUT_REPORT": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/build_report.json",
+      "sha256": "791c67f176d7c8f8d4b02840cac635915e1df22e9438e8bee171a001d6ef1564",
+      "lines": 391
+     },
+     "OUT_REL": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/relationships.csv",
+      "sha256": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+      "lines": 10856
+     },
+     "frame_byte_equal": false,
+     "relationships_byte_equal": true
+    }
+   ],
+   "determinism": {
+    "two_runs_byte_equal": false,
+    "run_vs_run": {
+     "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+     "reference": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "reference_sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+     "new": "<scratch>/econ920_run1/c1a/run2/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "new_sha256": "123f41e16a4abb9614fc9be18187afb1d9d5dec14b1ea400e2ca2d8e6cade2bd",
+     "rows_reference": 119405,
+     "rows_new": 119405,
+     "rows_added": 0,
+     "rows_removed": 0,
+     "rows_identical": 119402,
+     "rows_modified": 3,
+     "modified_by_columns": {
+      "fwci_frac,fwci_frac_ex_star": 2,
+      "fwci_frac": 1
+     },
+     "worst_ulp_by_column": {
+      "fwci_frac": 1,
+      "fwci_frac_ex_star": 1
+     },
+     "non_float_differences_by_column": {},
+     "samples_modified": [
+      {
+       "key": [
+        "P_A5116851906",
+        "A5069424866:2023",
+        "2020"
+       ],
+       "cols": [
+        "fwci_frac",
+        "fwci_frac_ex_star"
+       ],
+       "ulps": {
+        "fwci_frac": 1,
+        "fwci_frac_ex_star": 1
+       },
+       "frozen": {
+        "fwci_frac": "5.6833857142857145",
+        "fwci_frac_ex_star": "5.6833857142857145"
+       },
+       "new": {
+        "fwci_frac": "5.683385714285714",
+        "fwci_frac_ex_star": "5.683385714285714"
+       }
+      },
+      {
+       "key": [
+        "P_A5002969626",
+        "A5086581525:2017",
+        "2017"
+       ],
+       "cols": [
+        "fwci_frac"
+       ],
+       "ulps": {
+        "fwci_frac": 1
+       },
+       "frozen": {
+        "fwci_frac": "29.482949999999995"
+       },
+       "new": {
+        "fwci_frac": "29.48295"
+       }
+      },
+      {
+       "key": [
+        "P_A5116851906",
+        "A5069424866:2023",
+        "2019"
+       ],
+       "cols": [
+        "fwci_frac",
+        "fwci_frac_ex_star"
+       ],
+       "ulps": {
+        "fwci_frac": 1,
+        "fwci_frac_ex_star": 1
+       },
+       "frozen": {
+        "fwci_frac": "23.42309666666667",
+        "fwci_frac_ex_star": "23.42309666666667"
+       },
+       "new": {
+        "fwci_frac": "23.423096666666666",
+        "fwci_frac_ex_star": "23.423096666666666"
+       }
+      }
+     ],
+     "samples_added": [],
+     "samples_removed": []
+    }
+   },
+   "frame": {
+    "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+    "reference": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "reference_sha256": "dc9817f2758bfa1e880160960bde97148db01e419e3217ec67cb2d164b36fb60",
+    "new": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "new_sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+    "rows_reference": 119405,
+    "rows_new": 119405,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "rows_identical": 119401,
+    "rows_modified": 4,
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "non_float_differences_by_column": {},
+    "samples_modified": [
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2020"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "5.683385714285714",
+       "fwci_frac_ex_star": "5.683385714285714"
+      },
+      "new": {
+       "fwci_frac": "5.6833857142857145",
+       "fwci_frac_ex_star": "5.6833857142857145"
+      }
+     },
+     {
+      "key": [
+       "P_A5002969626",
+       "A5086581525:2017",
+       "2017"
+      ],
+      "cols": [
+       "fwci_frac"
+      ],
+      "ulps": {
+       "fwci_frac": 2
+      },
+      "frozen": {
+       "fwci_frac": "29.482950000000002"
+      },
+      "new": {
+       "fwci_frac": "29.482949999999995"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2019"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 2,
+       "fwci_frac_ex_star": 2
+      },
+      "frozen": {
+       "fwci_frac": "23.423096666666662",
+       "fwci_frac_ex_star": "23.423096666666662"
+      },
+      "new": {
+       "fwci_frac": "23.42309666666667",
+       "fwci_frac_ex_star": "23.42309666666667"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2021"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "22.726746666666664",
+       "fwci_frac_ex_star": "22.726746666666664"
+      },
+      "new": {
+       "fwci_frac": "22.726746666666667",
+       "fwci_frac_ex_star": "22.726746666666667"
+      }
+     }
+    ],
+    "samples_added": [],
+    "samples_removed": []
+   },
+   "relationships": "BYTE_EQUAL",
+   "verdict": "CLEAR"
+  },
+  "c1b": {
+   "shadow": {
+    "new_events_removed": [
+     "A5044432173"
+    ],
+    "prodlib_frame_rows_removed": {
+     "A5044432173:2006": 704
+    }
+   },
+   "ledger_stage": {
+    "run_dir": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15",
+    "secs": 0.2,
+    "ledger": {
+     "path": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+     "sha256": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+     "byte_equal_to_data_frames_p1_events_ledger_econ": true
+    },
+    "network_frame": {
+     "path": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "d8267f4cb6821a5f6729ef803ceedd304a388e0543350343b7472ec062a759a7",
+     "vs_frozen_minus_A5044432173": {
+      "closed": true,
+      "rows_removed": 704,
+      "rows_kept": 74580
+     }
+    },
+    "ok": true
+   },
+   "filter_c": {
+    "input": {
+     "frame": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+     "rows": 75284
+    },
+    "rows_kept_frozen": 74580,
+    "rows_dropped_event_not_in_set": {
+     "A5044432173:2006": {
+      "rows": 704,
+      "persons": 64
+     }
+    },
+    "rows_dropped_regenerated_old_id": {},
+    "rows_spliced": {},
+    "output": {
+     "frame": "<scratch>/econ920_run1/c1b/network_frame_minus_A5044432173.csv",
+     "sha256": "d8267f4cb6821a5f6729ef803ceedd304a388e0543350343b7472ec062a759a7",
+     "rows": 74580
+    }
+   },
+   "union": {
+    "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+    "config": "<scratch>/econ920_run1/c1b/config_econ920.json",
+    "secs": 16.2,
+    "exit": 0,
+    "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+    "log": "<scratch>/econ920_run1/c1b/union.log",
+    "report": {
+     "relationships": {
+      "dept": 4652,
+      "network_old": 6780,
+      "both": 669,
+      "dept_only_new": 3983,
+      "union": 10763,
+      "v9_drop_self_alias": 1,
+      "v9_drop_star_prearrival": 31,
+      "v9_drop_alias_dup": 58,
+      "v9_dropped_examples": {
+       "self": [
+        [
+         "A5038387911",
+         "A5001177483:2023"
+        ]
+       ],
+       "prearrival": [
+        [
+         "A5017376589",
+         "A5018518935:2003"
+        ],
+        [
+         "A5044501609",
+         "A5015268530:2021"
+        ],
+        [
+         "A5017376589",
+         "A5071656006:2000"
+        ],
+        [
+         "A5044501609",
+         "A5105828272:2011"
+        ],
+        [
+         "A5082663721",
+         "A5070264657:2009"
+        ],
+        [
+         "A5044501609",
+         "A5063040920:2009"
+        ]
+       ],
+       "alias_dup": [
+        [
+         "A5046020567",
+         "A5007734019:2016"
+        ],
+        [
+         "A5046020567",
+         "A5076526695:2018"
+        ],
+        [
+         "A5059521360",
+         "A5022446221:2020"
+        ],
+        [
+         "A5059521360",
+         "A5029151069:2019"
+        ],
+        [
+         "A5059521360",
+         "A5069424866:2023"
+        ],
+        [
+         "A5059521360",
+         "A5087235620:2016"
+        ]
+       ]
+      }
+     },
+     "alias": {
+      "persons": 1103,
+      "author_rows": 1901,
+      "mapped_persons": 1088,
+      "selfrows_unmapped": 15,
+      "multi_alias_persons": 270
+     },
+     "need_outcomes": 108,
+     "outcome_src": {
+      "api_persons": 105,
+      "edges_fallback_persons": 3
+     },
+     "sup_fallback_stars": [],
+     "api_only_pids": [
+      "A5006625214",
+      "A5027786961",
+      "A5032378120",
+      "A5049629760",
+      "A5050120204",
+      "A5054240727",
+      "A5065343528",
+      "A5090637418",
+      "A5100436731"
+     ],
+     "G_SUM": {
+      "total": 118393,
+      "old": 74580,
+      "new": 43813,
+      "ok": true
+     },
+     "frame": {
+      "rows": 118393,
+      "relationships": 10763,
+      "persons": 1043,
+      "events": 116,
+      "by_channel": {
+       "network": 67221,
+       "dept_only": 43813,
+       "both": 7359
+      },
+      "dose_null_new_rows": 0,
+      "age_gap_null_new_rows": 0
+     },
+     "GATE": "PASS",
+     "dose_override_new_rows": {
+      "rows": 25410,
+      "overridden": 25410,
+      "note": "Production-library dose is recomputed with the supplemented star edges."
+     },
+     "G_DOSE": {
+      "n": 200,
+      "missing_side": 0,
+      "max_abs_diff": 0.0018986229421242284,
+      "share_exact_1e-9": 0.905
+     },
+     "G_ROW": {
+      "sampled_both": 60,
+      "mismatches": 0,
+      "dose_tolerated_le_0.01": 44,
+      "fill_divergence": 22
+     }
+    },
+    "OUT_FRAME": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+     "lines": 118394
+    },
+    "OUT_REPORT": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/build_report.json",
+     "sha256": "0ed74c29d3876d220778f6286485c1399df0dd2eacd6f9eb57e0101e972d1191",
+     "lines": 391
+    },
+    "OUT_REL": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/relationships.csv",
+     "sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8",
+     "lines": 10764
+    }
+   },
+   "vs_surgery": {
+    "frame_byte_equal": false,
+    "relationships_byte_equal": true,
+    "surgered_frame_sha256": "8acd4a030961e2888c62e91a6af1b85eece5083bd62026e841c95516718116c1",
+    "surgered_relationships_sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8"
+   },
+   "frame": {
+    "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+    "reference": "<scratch>/econ920_run1/c1b/surgery_reference/pre_y_surgered.csv",
+    "reference_sha256": "8acd4a030961e2888c62e91a6af1b85eece5083bd62026e841c95516718116c1",
+    "new": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "new_sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+    "rows_reference": 118393,
+    "rows_new": 118393,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "rows_identical": 118389,
+    "rows_modified": 4,
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "non_float_differences_by_column": {},
+    "samples_modified": [
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2020"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "5.683385714285714",
+       "fwci_frac_ex_star": "5.683385714285714"
+      },
+      "new": {
+       "fwci_frac": "5.6833857142857145",
+       "fwci_frac_ex_star": "5.6833857142857145"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2021"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "22.726746666666664",
+       "fwci_frac_ex_star": "22.726746666666664"
+      },
+      "new": {
+       "fwci_frac": "22.726746666666667",
+       "fwci_frac_ex_star": "22.726746666666667"
+      }
+     },
+     {
+      "key": [
+       "P_A5002969626",
+       "A5086581525:2017",
+       "2017"
+      ],
+      "cols": [
+       "fwci_frac"
+      ],
+      "ulps": {
+       "fwci_frac": 1
+      },
+      "frozen": {
+       "fwci_frac": "29.482950000000002"
+      },
+      "new": {
+       "fwci_frac": "29.48295"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2019"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 2,
+       "fwci_frac_ex_star": 2
+      },
+      "frozen": {
+       "fwci_frac": "23.423096666666662",
+       "fwci_frac_ex_star": "23.423096666666662"
+      },
+      "new": {
+       "fwci_frac": "23.42309666666667",
+       "fwci_frac_ex_star": "23.42309666666667"
+      }
+     }
+    ],
+    "samples_added": [],
+    "samples_removed": []
+   },
+   "relationships": "BYTE_EQUAL",
+   "verdict": "CLEAR",
+   "shadow_entries": 28
+  },
+  "c2": {
+   "chain": {
+    "p1_econ": {
+     "run_dir": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15",
+     "secs": 4.0,
+     "status": "OK",
+     "g_econ_rebuild": {
+      "PASS": true,
+      "C_PC_structural_anchor": {
+       "bad_rows": 0,
+       "examples": [],
+       "pass": true
+      },
+      "C_PC_fnfix_newevent_rows": {
+       "rows_written_from_agg": 66504,
+       "rows_agg_missing_NA": 58,
+       "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+      },
+      "old_value_reproduction_anchor": {
+       "hard_fail_cells": 0,
+       "float32_roundtrip_cells": 138418,
+       "max_relative_deviation": 5.907526619061491e-08,
+       "tolerance": 1e-06,
+       "pass": true,
+       "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+      },
+      "variants": {
+       "unified": {
+        "out": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 87144,
+         "val2na": 221,
+         "na2val": 462,
+         "na2na": 5124,
+         "zero_fill": 7328,
+         "row_na": 18085,
+         "py_missing": 29
+        }
+       },
+       "denomonly": {
+        "out": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 87365,
+         "val2na": 0,
+         "na2val": 1,
+         "na2na": 5585,
+         "zero_fill": 7328,
+         "row_na": 18085,
+         "py_missing": 29
+        }
+       }
+      },
+      "path": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/g_econ_rebuild.json"
+     },
+     "unified_frame_written": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv"
+    },
+    "p1_frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+    "split": {
+     "run_dir": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15",
+     "secs": 0.5
+    },
+    "old79": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_old79.csv",
+    "new37": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_new38.csv",
+    "p2_econ": {
+     "run_dir": "<scratch>/econ920_run1/c2_p2/frames/p2-econ/econ_fnfix_2026-08-15",
+     "secs": 23.7
+    },
+    "p2_frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/becoming_unified.csv",
+    "pairs": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/pairs_unified.csv",
+    "panels23_report": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/panels23_report.json",
+    "slim": {
+     "ev": "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet",
+     "noev": "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet",
+     "stats": {
+      "rows": 12108166,
+      "pairs": 719839,
+      "ties": 15235,
+      "events": 116,
+      "produced": {
+       "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet": "328cc2f680adc55fb45f75326e6ff394e336246ccc581ca4c2536f70311eaf83",
+       "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet": "3eb3feaf9bf704d3aeceb29cc6c35f765f4630cea0acbad927a885e9911d9cee"
+      },
+      "noev_columns": [
+       "grp",
+       "year",
+       "y",
+       "D"
+      ]
+     }
+    }
+   },
+   "frames": {
+    "p1_frame_econ.csv": {
+     "sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+     "frozen_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p1_frame_econ_old79.csv": {
+     "sha256": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+     "frozen_sha256": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p1_frame_econ_new37.csv": {
+     "sha256": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+     "frozen_sha256": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p2_becoming_econ.csv": {
+     "sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+     "frozen_sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p3_slim_econ.parquet": {
+     "a": "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet",
+     "b": "data/frames/p3_slim_econ.parquet",
+     "mode": "content",
+     "equal": true,
+     "rows_a": 12108166,
+     "rows_b": 12108166,
+     "only_in_a": 0,
+     "only_in_b": 0,
+     "schema_diff": [],
+     "accepted": [],
+     "sha256_a": "",
+     "sha256_b": ""
+    },
+    "p3_slim_ev_econ.parquet": {
+     "a": "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet",
+     "b": "data/frames/p3_slim_ev_econ.parquet",
+     "mode": "content",
+     "equal": true,
+     "rows_a": 12108166,
+     "rows_b": 12108166,
+     "only_in_a": 0,
+     "only_in_b": 0,
+     "schema_diff": [],
+     "accepted": [],
+     "sha256_a": "",
+     "sha256_b": ""
+    },
+    "pairs_unified_sha256": "41d9f7e3fd5ae60165589ed9848a4bfb0d2dea80df35a1c87dcc310dc596b7de"
+   },
+   "cells": {
+    "P1_econ_fnfix": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix.json",
+     "expected": "analysis/expected/P1_econ_fnfix.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P1_econ_fnfix_old79": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix_old79.json",
+     "expected": "analysis/expected/P1_econ_fnfix_old79.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P1_econ_fnfix_new37": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix_new37.json",
+     "expected": "analysis/expected/P1_econ_fnfix_new37.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P2_econ_fnfix": {
+     "new": "<scratch>/econ920_run1/c2_cells/P2_econ_fnfix.json",
+     "expected": "analysis/expected/P2_econ_fnfix.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    }
+   },
+   "verdict": "CLEAR"
+  },
+  "c3": {
+   "verified_forms": {
+    "roster": "data/raw_verified/roster_econ_verified.parquet",
+    "roster_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+    "roster_authors": 920,
+    "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+    "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+    "id_forms": 970
+   },
+   "exclusion_control_on_frozen_frames": {
+    "expected_162": 162,
+    "rule_on_data_frames_p1_p2": 162,
+    "equal": true,
+    "only_in_rule": [],
+    "only_in_expected": []
+   },
+   "postfilter_a": {
+    "input": {
+     "pre_y": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+     "rows": 118393,
+     "relationships": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/relationships.csv",
+     "relationships_sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8"
+    },
+    "a_verified_roster": {
+     "input": {
+      "frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+      "rows": 118393
+     },
+     "rows_dropped": 15037,
+     "relations_dropped": 1367,
+     "persons_dropped": 162,
+     "persons_dropped_ids": [
+      "P_A5000129921",
+      "P_A5000195995",
+      "P_A5000248582",
+      "P_A5000261020",
+      "P_A5001034699",
+      "P_A5001689232",
+      "P_A5001701778",
+      "P_A5002921489",
+      "P_A5003065581",
+      "P_A5003503790",
+      "P_A5004088802",
+      "P_A5004337400",
+      "P_A5005195196",
+      "P_A5005221518",
+      "P_A5005424373",
+      "P_A5005506402",
+      "P_A5005591120",
+      "P_A5006064697",
+      "P_A5007086439",
+      "P_A5007696926",
+      "P_A5007934498",
+      "P_A5008667656",
+      "P_A5008921610",
+      "P_A5009126134",
+      "P_A5009676824",
+      "P_A5009685890",
+      "P_A5009986539",
+      "P_A5010518543",
+      "P_A5010717360",
+      "P_A5012746449",
+      "P_A5012774695",
+      "P_A5013214751",
+      "P_A5013583966",
+      "P_A5015052701",
+      "P_A5015809924",
+      "P_A5016230213",
+      "P_A5016659048",
+      "P_A5017214359",
+      "P_A5018043519",
+      "P_A5018588825",
+      "P_A5018982917",
+      "P_A5019358946",
+      "P_A5020852699",
+      "P_A5024266358",
+      "P_A5024398863",
+      "P_A5024990189",
+      "P_A5025340820",
+      "P_A5025359159",
+      "P_A5026228820",
+      "P_A5027138247",
+      "P_A5027155920",
+      "P_A5027685493",
+      "P_A5029088543",
+      "P_A5030040920",
+      "P_A5030346628",
+      "P_A5030823472",
+      "P_A5030919957",
+      "P_A5031621086",
+      "P_A5033118098",
+      "P_A5034076398",
+      "P_A5034647910",
+      "P_A5035801976",
+      "P_A5035818265",
+      "P_A5035998304",
+      "P_A5036193836",
+      "P_A5037426155",
+      "P_A5037530222",
+      "P_A5037962814",
+      "P_A5040191030",
+      "P_A5040485438",
+      "P_A5041227235",
+      "P_A5042115782",
+      "P_A5042616276",
+      "P_A5042802170",
+      "P_A5042828330",
+      "P_A5043275264",
+      "P_A5043335933",
+      "P_A5043678493",
+      "P_A5043876283",
+      "P_A5044343044",
+      "P_A5044706532",
+      "P_A5045605764",
+      "P_A5046551478",
+      "P_A5047138320",
+      "P_A5048519597",
+      "P_A5049010126",
+      "P_A5049060006",
+      "P_A5049848088",
+      "P_A5050357458",
+      "P_A5051284301",
+      "P_A5051613817",
+      "P_A5051703009",
+      "P_A5052068405",
+      "P_A5053325516",
+      "P_A5053497885",
+      "P_A5053509775",
+      "P_A5053765396",
+      "P_A5053798323",
+      "P_A5054485095",
+      "P_A5056551664",
+      "P_A5057072512",
+      "P_A5057137444",
+      "P_A5057148289",
+      "P_A5057459075",
+      "P_A5057608497",
+      "P_A5058872286",
+      "P_A5059507519",
+      "P_A5059989242",
+      "P_A5060589792",
+      "P_A5061335885",
+      "P_A5061523893",
+      "P_A5062089038",
+      "P_A5062522216",
+      "P_A5062895126",
+      "P_A5064512830",
+      "P_A5065344299",
+      "P_A5065572953",
+      "P_A5065659844",
+      "P_A5066605209",
+      "P_A5066605332",
+      "P_A5067812060",
+      "P_A5068470091",
+      "P_A5072051358",
+      "P_A5073251863",
+      "P_A5074137702",
+      "P_A5077362668",
+      "P_A5080866914",
+      "P_A5082598611",
+      "P_A5083522462",
+      "P_A5083945877",
+      "P_A5085271178",
+      "P_A5086095616",
+      "P_A5086151825",
+      "P_A5086296952",
+      "P_A5086505981",
+      "P_A5086655719",
+      "P_A5087413363",
+      "P_A5088881688",
+      "P_A5089364263",
+      "P_A5089745005",
+      "P_A5100386783",
+      "P_A5100413693",
+      "P_A5100681845",
+      "P_A5101496702",
+      "P_A5101596594",
+      "P_A5101684938",
+      "P_A5102447716",
+      "P_A5102819936",
+      "P_A5102902369",
+      "P_A5103122192",
+      "P_A5103196866",
+      "P_A5107479283",
+      "P_A5108225675",
+      "P_A5108867956",
+      "P_A5110074185",
+      "P_A5110468588",
+      "P_A5110954730",
+      "P_A5113440291",
+      "P_A5113577786",
+      "P_A5113845776",
+      "P_A5113969362",
+      "P_A5120638581"
+     ],
+     "output": {
+      "frame": "<scratch>/econ920_run1/c3/postfilter/pre_y_a_verified.csv",
+      "sha256": "9fe7d0f409e50c911bded9a6d56a12fe248ac9b9401eed229431a316a5a4b0dd",
+      "rows": 103356
+     },
+     "forms": {
+      "roster": "data/raw_verified/roster_econ_verified.parquet",
+      "roster_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+      "roster_authors": 920,
+      "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+      "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+      "id_forms": 970
+     }
+    },
+    "b_in_post": null,
+    "dropped_relations": 1367,
+    "dropped_rows_by_channel": {
+     "network": 15037
+    },
+    "relationships_lines_dropped": 1367,
+    "events_left_with_zero_relations": [],
+    "output": {
+     "pre_y": "<scratch>/econ920_run1/c3/postfilter/pre_y_a_verified.csv",
+     "sha256": "9fe7d0f409e50c911bded9a6d56a12fe248ac9b9401eed229431a316a5a4b0dd",
+     "rows": 103356,
+     "relationships": "<scratch>/econ920_run1/c3/postfilter/relationships.csv",
+     "relationships_sha256": "f2664fcb3e528e203c0e92a829054a2ba5e1224d95e1fa1d9f6930449bc27aad",
+     "relationships_lines": 9396
+    },
+    "dropped_persons_equal_the_162": true,
+    "only_dropped_here": [],
+    "expected_not_dropped_here": []
+   },
+   "relationships_vs_c1b": {
+    "closed": true,
+    "rows_removed": 1367,
+    "rows_kept": 9396
+   },
+   "chain": {
+    "p1_econ": {
+     "run_dir": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15",
+     "secs": 3.5,
+     "status": "OK",
+     "g_econ_rebuild": {
+      "PASS": true,
+      "C_PC_structural_anchor": {
+       "bad_rows": 0,
+       "examples": [],
+       "pass": true
+      },
+      "C_PC_fnfix_newevent_rows": {
+       "rows_written_from_agg": 60194,
+       "rows_agg_missing_NA": 58,
+       "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+      },
+      "old_value_reproduction_anchor": {
+       "hard_fail_cells": 0,
+       "float32_roundtrip_cells": 107210,
+       "max_relative_deviation": 5.907526619061491e-08,
+       "tolerance": 1e-06,
+       "pass": true,
+       "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+      },
+      "variants": {
+       "unified": {
+        "out": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 75836,
+         "val2na": 221,
+         "na2val": 462,
+         "na2na": 4822,
+         "zero_fill": 7174,
+         "row_na": 14812,
+         "py_missing": 29
+        }
+       },
+       "denomonly": {
+        "out": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 76057,
+         "val2na": 0,
+         "na2val": 1,
+         "na2na": 5283,
+         "zero_fill": 7174,
+         "row_na": 14812,
+         "py_missing": 29
+        }
+       }
+      },
+      "path": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/g_econ_rebuild.json"
+     },
+     "unified_frame_written": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv"
+    },
+    "p1_frame": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+    "p2_econ": {
+     "run_dir": "<scratch>/econ920_run1/c3_p2/frames/p2-econ/econ_fnfix_2026-08-15",
+     "secs": 15.5
+    },
+    "p2_frame": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/becoming_unified.csv",
+    "pairs": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/pairs_unified.csv",
+    "panels23_report": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/panels23_report.json"
+   },
+   "frames": {
+    "frames/p1_frame_econ_verified.csv": {
+     "sha256": "eece914f549c4b2b8e3a8d06cc6b6e00a4b0e0e9f79cb00d37cb9c95ab28bcae",
+     "verdict": "BYTE_EQUAL"
+    },
+    "frames/p2_becoming_econ_verified.csv": {
+     "sha256": "d464f1fa860605c971c0081fce045f805ea30b12027b42f26351874a62d6e7ea",
+     "verdict": "BYTE_EQUAL"
+    }
+   },
+   "cells": {
+    "P1ver_econ": {
+     "new": "<scratch>/econ920_run1/c3_cells/P1ver_econ.json",
+     "expected": "data/robustness_2026-09-13_verified_pool/estimates/P1ver_econ.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P2ver_econ": {
+     "new": "<scratch>/econ920_run1/c3_cells/P2ver_econ.json",
+     "expected": "data/robustness_2026-09-13_verified_pool/estimates/P2ver_econ.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    }
+   },
+   "verdict": "CLEAR"
+  }
+ },
+ "deviations": [
+  {
+   "where": "c1a",
+   "what": "the clone on the frozen inputs is not byte-equal to the frozen pre-y frame; the original is NON-deterministic (two runs differ); every difference is in the four y columns 04 overwrites, <= 8 ULP",
+   "detail": {
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "rows_modified": 4,
+    "rows_new": 119405
+   }
+  },
+  {
+   "where": "c1b",
+   "what": "the re-run union rung on the 08-28 inputs is not byte-equal to the 08-28 SURGERED pre-y frame; differences confined to the four y columns 04 overwrites",
+   "detail": {
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "rows_modified": 4,
+    "rows_new": 118393
+   }
+  },
+  {
+   "where": "october union rung",
+   "what": "the clone's G-DOSE gate (exit 2) was overridden under the evidence gate; products PROVISIONAL pending the author's ruling",
+   "detail": {
+    "conditions": {
+     "population_measured": true,
+     "draw_predicted_FAIL": true,
+     "prediction_matches_run": true,
+     "every_failing_relation_is_a_frozen_population_residual": true,
+     "failure_is_gdose_only": true,
+     "G_ROW_zero_mismatches_and_G_SUM_ok": true,
+     "gate_was_intercepted_exactly_once": true
+    },
+    "failing_drawn_relations": [
+     {
+      "pid": "A5105845982",
+      "event_id": "A5105828272:2011",
+      "frozen_dose": 0.6484369942598012,
+      "recomputed": 0.6610667189586307,
+      "abs_diff": 0.012629724698829503
+     },
+     {
+      "pid": "A5047860864",
+      "event_id": "A5046379417:2006",
+      "frozen_dose": 0.466393244601883,
+      "recomputed": 0.39663017304978226,
+      "abs_diff": 0.06976307155210071
+     },
+     {
+      "pid": "A5050473533",
+      "event_id": "A5018453582:2018",
+      "frozen_dose": 0.3012297424386393,
+      "recomputed": 0.3566681869039141,
+      "abs_diff": 0.055438444465274794
+     }
+    ],
+    "population": {
+     "n": 4470,
+     "share_exact_1e-9": 0.892841163310962,
+     "max_abs_diff": 0.13435585579294373,
+     "n_gt_0.01": 34,
+     "n_gt_0.05": 5
+    },
+    "frozen_0813_draw": {
+     "max_abs_diff": 0.0018986229421242284,
+     "share_exact_1e-9": 0.905
+    },
+    "this_draw": {
+     "n": 200,
+     "missing_side": 0,
+     "max_abs_diff": 0.06976307155210071,
+     "share_exact_1e-9": 0.885
+    },
+    "ruling": "PENDING AUTHOR RULING (2026-09-23): the union rung's G-DOSE gate on this draw fails by sample composition alone — every failing drawn relation is a residual the frozen 08-15 rows carry (measured over the whole population, gdose phase); the gate decides only whether the clone writes its file and changes no row. Products built under this override are PROVISIONAL until the author signs the ruling; nothing canonical (data/frames, analysis/expected) is touched."
+   }
+  }
+ ],
+ "phase_secs": {
+  "c1a": 35.2,
+  "c1b": 17.8,
+  "c2": 78.3,
+  "c3": 38.7,
+  "gdose": 13.9,
+  "october": 53.2
+ },
+ "measurements": {
+  "gdose_population": {
+   "mode": "MEASUREMENT: DataFrame.sample -> identity; every old relation evaluated",
+   "n": 4470,
+   "missing_side": 0,
+   "share_exact_1e-9": 0.892841163310962,
+   "max_abs_diff": 0.13435585579294373,
+   "n_gt_1e-9": 479,
+   "n_gt_0.01": 34,
+   "n_gt_0.05": 5,
+   "gate_exit": 2,
+   "residuals_gt_0.01": [
+    {
+     "pid": "A5069703593",
+     "event_id": "A5090013218:2015",
+     "frozen_dose": 0.3971333581348657,
+     "recomputed": 0.5314892139278095,
+     "abs_diff": 0.13435585579294373
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5013630114:2008",
+     "frozen_dose": 0.3997635234791834,
+     "recomputed": 0.3264055501003741,
+     "abs_diff": 0.07335797337880934
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5046379417:2006",
+     "frozen_dose": 0.466393244601883,
+     "recomputed": 0.39663017304978226,
+     "abs_diff": 0.06976307155210071
+    },
+    {
+     "pid": "A5050473533",
+     "event_id": "A5018453582:2018",
+     "frozen_dose": 0.3012297424386393,
+     "recomputed": 0.3566681869039141,
+     "abs_diff": 0.055438444465274794
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.1794025447166775,
+     "recomputed": 0.23371274885928206,
+     "abs_diff": 0.05431020414260457
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5022446221:2020",
+     "frozen_dose": 0.206461944161838,
+     "recomputed": 0.25393018190184036,
+     "abs_diff": 0.04746823774000236
+    },
+    {
+     "pid": "A5100413693",
+     "event_id": "A5013630114:2008",
+     "frozen_dose": 0.3285485573120022,
+     "recomputed": 0.3669185084451229,
+     "abs_diff": 0.038369951133120694
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5079006965:2011",
+     "frozen_dose": 0.8022701470485215,
+     "recomputed": 0.7662323063659667,
+     "abs_diff": 0.03603784068255478
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.4150286783196448,
+     "recomputed": 0.4407412773535267,
+     "abs_diff": 0.0257125990338819
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5080057811:2006",
+     "frozen_dose": 0.7339515277674842,
+     "recomputed": 0.7117431568915316,
+     "abs_diff": 0.02220837087595262
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.7101945448297474,
+     "recomputed": 0.7319619045863754,
+     "abs_diff": 0.021767359756628024
+    },
+    {
+     "pid": "A5001622420",
+     "event_id": "A5075360079:2018",
+     "frozen_dose": 0.1312001569666744,
+     "recomputed": 0.11095646380796875,
+     "abs_diff": 0.02024369315870564
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5103238589:2011",
+     "frozen_dose": 0.4276408648141786,
+     "recomputed": 0.4075696393382059,
+     "abs_diff": 0.02007122547597273
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5080033018:2011",
+     "frozen_dose": 0.6964026125782159,
+     "recomputed": 0.6778684488247342,
+     "abs_diff": 0.018534163753481714
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5000292946:2009",
+     "frozen_dose": 0.2358333153182891,
+     "recomputed": 0.21884405476620425,
+     "abs_diff": 0.016989260552084856
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5027077000:2017",
+     "frozen_dose": 0.8721028496007166,
+     "recomputed": 0.8552058086620439,
+     "abs_diff": 0.016897040938672725
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5089150146:2013",
+     "frozen_dose": 0.5065879606638778,
+     "recomputed": 0.49063678958382717,
+     "abs_diff": 0.01595117108005062
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5086206624:2012",
+     "frozen_dose": 0.5392114146900089,
+     "recomputed": 0.5237706583703503,
+     "abs_diff": 0.015440756319658577
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5090013218:2015",
+     "frozen_dose": 0.8321387777032866,
+     "recomputed": 0.8473895994450867,
+     "abs_diff": 0.015250821741800147
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5017376589:2016",
+     "frozen_dose": 0.6419704417114399,
+     "recomputed": 0.6571102808725297,
+     "abs_diff": 0.015139839161089741
+    },
+    {
+     "pid": "A5085183308",
+     "event_id": "A5103238589:2011",
+     "frozen_dose": 0.5652065132287469,
+     "recomputed": 0.5800058938744568,
+     "abs_diff": 0.014799380645709848
+    },
+    {
+     "pid": "A5085183308",
+     "event_id": "A5008470795:2011",
+     "frozen_dose": 0.3537255714710841,
+     "recomputed": 0.3676758840252448,
+     "abs_diff": 0.013950312554160738
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5070264657:2009",
+     "frozen_dose": 0.6437970918278505,
+     "recomputed": 0.656902490925946,
+     "abs_diff": 0.013105399098095494
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5008470795:2011",
+     "frozen_dose": 0.5386517330399262,
+     "recomputed": 0.5257583363384118,
+     "abs_diff": 0.012893396701514348
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5105828272:2011",
+     "frozen_dose": 0.6484369942598012,
+     "recomputed": 0.6610667189586307,
+     "abs_diff": 0.012629724698829503
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5079006965:2011",
+     "frozen_dose": 0.5742683641903055,
+     "recomputed": 0.5864452529135388,
+     "abs_diff": 0.012176888723233303
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5080033018:2011",
+     "frozen_dose": 0.6826631057059849,
+     "recomputed": 0.6944896816201819,
+     "abs_diff": 0.011826575914197002
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5034503874:2016",
+     "frozen_dose": 0.4840314275979343,
+     "recomputed": 0.4722324717254726,
+     "abs_diff": 0.011798955872461714
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5076526695:2018",
+     "frozen_dose": 0.6342524089751846,
+     "recomputed": 0.6236914350855007,
+     "abs_diff": 0.010560973889683911
+    },
+    {
+     "pid": "A5009838261",
+     "event_id": "A5035157505:2018",
+     "frozen_dose": 0.0696185575207123,
+     "recomputed": 0.08012396369959662,
+     "abs_diff": 0.010505406178884319
+    },
+    {
+     "pid": "A5050357458",
+     "event_id": "A5027077000:2017",
+     "frozen_dose": 0.446102810740783,
+     "recomputed": 0.4356606595791525,
+     "abs_diff": 0.010442151161630497
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5008296992:2018",
+     "frozen_dose": 0.8693084336526197,
+     "recomputed": 0.8588943196054657,
+     "abs_diff": 0.010414114047153977
+    },
+    {
+     "pid": "A5059507519",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.2074898276620804,
+     "recomputed": 0.19716171980001382,
+     "abs_diff": 0.010328107862066588
+    },
+    {
+     "pid": "A5063481505",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.4866642633922875,
+     "recomputed": 0.4765808824737225,
+     "abs_diff": 0.010083380918565032
+    }
+   ],
+   "inputs": "the frozen 2026-08-15 inputs (c1a arrangement)",
+   "frozen_0813_draw": {
+    "max_abs_diff": 0.0018986229421242284,
+    "share_exact_1e-9": 0.905
+   }
+  }
+ },
+ "total_secs": 53.3,
+ "october": {
+  "shadow": {
+   "patch_supplement": {
+    "frozen_lines": 17191,
+    "extra_lines": 190,
+    "extra": "data/cal2026-10/patch_supplement_2026-10/works_by_author_supplement_2026-10.jsonl",
+    "extra_sha256": "75d11f04c2acc1111826befa47a3a73b99a89fde56f335df6a3a01b23f4acd71"
+   },
+   "new_events_removed": [
+    "A5044432173"
+   ],
+   "prodlib_frame_rows_removed": {
+    "A5044432173:2006": 704
+   },
+   "supplement": {
+    "frozen_lines": 4655,
+    "extra_lines": 126,
+    "extra": "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl",
+    "extra_sha256": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d"
+   }
+  },
+  "ledger_stage": {
+   "run_dir": "<scratch>/econ920_run2/oct_ledger/frames/ledger/econ_fnfix_2026-08-15",
+   "secs": 0.1,
+   "ledger": {
+    "path": "<scratch>/econ920_run2/oct_ledger/frames/ledger/econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+    "sha256": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+    "byte_equal_to_data_frames_p1_events_ledger_econ": true
+   },
+   "network_frame": {
+    "path": "<scratch>/econ920_run2/oct_ledger/frames/ledger/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+    "sha256": "d8267f4cb6821a5f6729ef803ceedd304a388e0543350343b7472ec062a759a7",
+    "vs_frozen_minus_A5044432173": {
+     "closed": true,
+     "rows_removed": 704,
+     "rows_kept": 74580
+    }
+   },
+   "ok": true
+  },
+  "ledger_october": {
+   "path": "<scratch>/econ920_run2/oct/event_ledger_econ_cal2026-10.csv",
+   "sha256": "2b0b21b53be6f8a68cd19326a5df4ef3314d1e1a232315918dff2e5ccb385767",
+   "rows": 113,
+   "removed_old_events": {
+    "A5041849660:2003": 1,
+    "A5102739182:2010": 1,
+    "A5110738002:2009": 1
+   },
+   "id_corrected": {
+    "A5090515599:2009": 1
+   }
+  },
+  "regeneration": {
+   "tables": {
+    "econ": {
+     "path": "data/cal2026-10/events_econ_cal2026-10.csv",
+     "sha256": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+     "n_events": 113
+    },
+    "chemistry": {
+     "path": "data/cal2026-10/events_chemistry_cal2026-10.csv",
+     "sha256": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+     "n_events": 38
+    },
+    "math_stats": {
+     "path": "data/cal2026-10/events_math_stats_cal2026-10.csv",
+     "sha256": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+     "n_events": 33
+    }
+   },
+   "stars_excluded": {
+    "base_08_28": 1837,
+    "event_stars": 184,
+    "added": [
+     "A5000292946",
+     "A5000674091",
+     "A5001034699",
+     "A5001177483",
+     "A5001820944",
+     "A5002969626",
+     "A5004109149",
+     "A5005868773",
+     "A5006190609",
+     "A5006435210",
+     "A5007734019",
+     "A5008208999",
+     "A5008296992",
+     "A5008470795",
+     "A5008855963",
+     "A5011262618",
+     "A5011776630",
+     "A5012590199",
+     "A5013630114",
+     "A5015268530",
+     "A5016931502",
+     "A5017376589",
+     "A5017694921",
+     "A5017960988",
+     "A5018453582",
+     "A5018518935",
+     "A5020729611",
+     "A5020774613",
+     "A5022446221",
+     "A5024737956",
+     "A5024745682",
+     "A5024973435",
+     "A5026828190",
+     "A5027077000",
+     "A5027090359",
+     "A5027424571",
+     "A5028731684",
+     "A5029151069",
+     "A5032550291",
+     "A5034503874",
+     "A5034628923",
+     "A5034784553",
+     "A5035157505",
+     "A5038001711",
+     "A5039737173",
+     "A5041837451",
+     "A5042121724",
+     "A5042125848",
+     "A5044076496",
+     "A5044501609",
+     "A5046163960",
+     "A5046379417",
+     "A5047686030",
+     "A5047755944",
+     "A5049007275",
+     "A5050761986",
+     "A5050962159",
+     "A5053503664",
+     "A5054037290",
+     "A5056114255",
+     "A5059344939",
+     "A5059426203",
+     "A5059428122",
+     "A5059554264",
+     "A5063040920",
+     "A5063920479",
+     "A5063951119",
+     "A5067564085",
+     "A5068400819",
+     "A5069424866",
+     "A5070067353",
+     "A5070264657",
+     "A5070304330",
+     "A5070527085",
+     "A5071656006",
+     "A5071785739",
+     "A5072079903",
+     "A5073639630",
+     "A5075194454",
+     "A5076526695",
+     "A5078564370",
+     "A5079006965",
+     "A5080033018",
+     "A5080057811",
+     "A5080689800",
+     "A5082658369",
+     "A5082663721",
+     "A5082727271",
+     "A5083549223",
+     "A5083649140",
+     "A5085246004",
+     "A5086206624",
+     "A5086383420",
+     "A5086581525",
+     "A5086835452",
+     "A5086933077",
+     "A5087235620",
+     "A5087261858",
+     "A5087653408",
+     "A5087933968",
+     "A5088950236",
+     "A5089150146",
+     "A5090013218",
+     "A5091326353",
+     "A5100451834",
+     "A5100765181",
+     "A5102189800",
+     "A5103218091",
+     "A5103238589",
+     "A5105828272",
+     "A5111971785"
+    ],
+    "total": 2040,
+    "fragment_rule": "every U2 fragment of each event star's person for econ (08-15 ship_plevel_poach semantics)",
+    "stars_with_fragments": 21,
+    "fragments_added": [
+     "A5019914499",
+     "A5026169409",
+     "A5027035277",
+     "A5029296899",
+     "A5031387731",
+     "A5038288305",
+     "A5038387911",
+     "A5050677102",
+     "A5050794979",
+     "A5050836698",
+     "A5055760026",
+     "A5061324808",
+     "A5067534730",
+     "A5071956595",
+     "A5089618821",
+     "A5090515599",
+     "A5093486437",
+     "A5096936153",
+     "A5100451826",
+     "A5100451831",
+     "A5100451833",
+     "A5100451836",
+     "A5100451844",
+     "A5100451846",
+     "A5102252047",
+     "A5103206776",
+     "A5106428855",
+     "A5106535361",
+     "A5107107531",
+     "A5107989060",
+     "A5108295899",
+     "A5108826589",
+     "A5110473209",
+     "A5112832731",
+     "A5115597379",
+     "A5115958006",
+     "A5117412550",
+     "A5117814508",
+     "A5118614735",
+     "A5119460088",
+     "A5120990587",
+     "A5121453252",
+     "A5121618101",
+     "A5121619553",
+     "A5122848157",
+     "A5123733782",
+     "A5124270228",
+     "A5124365597",
+     "A5124527316",
+     "A5125128785",
+     "A5125286222",
+     "A5125482796",
+     "A5125761666",
+     "A5126331433",
+     "A5126529010",
+     "A5126704735",
+     "A5126763459",
+     "A5127038670",
+     "A5127832783",
+     "A5128114168",
+     "A5128163588",
+     "A5128165966",
+     "A5128338852",
+     "A5128353855",
+     "A5128726831",
+     "A5128822393",
+     "A5129066769",
+     "A5130265772",
+     "A5130410671",
+     "A5130561902",
+     "A5130718702",
+     "A5131099769",
+     "A5132596277",
+     "A5132687250",
+     "A5132978504",
+     "A5133152037",
+     "A5133198674",
+     "A5134383478",
+     "A5134979385",
+     "A5135143059",
+     "A5135200931",
+     "A5135666933",
+     "A5135927290",
+     "A5136143576",
+     "A5136223895",
+     "A5136471767",
+     "A5137141629",
+     "A5137412359",
+     "A5137634090",
+     "A5137800729",
+     "A5138449195",
+     "A5139142023"
+    ],
+    "fragments_by_star": {
+     "A5001177483": [
+      "A5019914499",
+      "A5029296899",
+      "A5038387911",
+      "A5067534730",
+      "A5071956595",
+      "A5089618821",
+      "A5130410671",
+      "A5130718702",
+      "A5132687250"
+     ],
+     "A5008296992": [
+      "A5137800729"
+     ],
+     "A5008470795": [
+      "A5031387731",
+      "A5055760026",
+      "A5102252047",
+      "A5107989060"
+     ],
+     "A5015268530": [
+      "A5027035277",
+      "A5110473209",
+      "A5125761666"
+     ],
+     "A5017376589": [
+      "A5106428855",
+      "A5107107531",
+      "A5128726831",
+      "A5131099769",
+      "A5135666933"
+     ],
+     "A5024737956": [
+      "A5061324808"
+     ],
+     "A5029151069": [
+      "A5103206776",
+      "A5108295899",
+      "A5122848157",
+      "A5123733782",
+      "A5125286222",
+      "A5125482796",
+      "A5127038670"
+     ],
+     "A5034503874": [
+      "A5118614735",
+      "A5120990587",
+      "A5124365597",
+      "A5126763459",
+      "A5127832783",
+      "A5128163588",
+      "A5128353855",
+      "A5133198674",
+      "A5135200931",
+      "A5136223895",
+      "A5137634090"
+     ],
+     "A5035157505": [
+      "A5050836698",
+      "A5108826589"
+     ],
+     "A5039737173": [
+      "A5117412550",
+      "A5124527316",
+      "A5126529010",
+      "A5130265772",
+      "A5133152037",
+      "A5135927290"
+     ],
+     "A5041837451": [
+      "A5137412359"
+     ],
+     "A5063040920": [
+      "A5136471767"
+     ],
+     "A5069424866": [
+      "A5115958006",
+      "A5117814508",
+      "A5128165966",
+      "A5136143576"
+     ],
+     "A5076526695": [
+      "A5106535361"
+     ],
+     "A5080689800": [
+      "A5093486437",
+      "A5119460088"
+     ],
+     "A5082663721": [
+      "A5112832731",
+      "A5121453252",
+      "A5121619553",
+      "A5125128785",
+      "A5128822393",
+      "A5137141629"
+     ],
+     "A5086383420": [
+      "A5096936153",
+      "A5134383478"
+     ],
+     "A5090013218": [
+      "A5124270228",
+      "A5128114168",
+      "A5129066769",
+      "A5130561902",
+      "A5132596277",
+      "A5132978504",
+      "A5135143059",
+      "A5138449195",
+      "A5139142023"
+     ],
+     "A5091326353": [
+      "A5090515599"
+     ],
+     "A5100451834": [
+      "A5026169409",
+      "A5038288305",
+      "A5050677102",
+      "A5050794979",
+      "A5100451826",
+      "A5100451831",
+      "A5100451833",
+      "A5100451836",
+      "A5100451844",
+      "A5100451846",
+      "A5115597379",
+      "A5126331433",
+      "A5134979385"
+     ],
+     "A5100765181": [
+      "A5121618101",
+      "A5126704735",
+      "A5128338852"
+     ]
+    },
+    "rule_version": "working-tree stage.py: 08-28 list ∪ event stars ∪ U2 fragments"
+   },
+   "roster_pool": {
+    "source": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+    "source_sha256": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+    "rows_in": 1008,
+    "rows_out": 935,
+    "dropped_star_rows": [
+     "A5001034699",
+     "A5001296475",
+     "A5001820944",
+     "A5002129110",
+     "A5002969626",
+     "A5005868773",
+     "A5006435210",
+     "A5007734019",
+     "A5008855963",
+     "A5011180365",
+     "A5014777899",
+     "A5015268530",
+     "A5017376589",
+     "A5017694921",
+     "A5017976186",
+     "A5018518935",
+     "A5020729611",
+     "A5020774613",
+     "A5023602090",
+     "A5024737956",
+     "A5024745682",
+     "A5024973435",
+     "A5028731684",
+     "A5034628923",
+     "A5034784553",
+     "A5038001711",
+     "A5038387911",
+     "A5041837451",
+     "A5042125848",
+     "A5043842721",
+     "A5044501609",
+     "A5046163960",
+     "A5046379417",
+     "A5047686030",
+     "A5047755944",
+     "A5050761986",
+     "A5050962159",
+     "A5053503664",
+     "A5054037290",
+     "A5054843123",
+     "A5056114255",
+     "A5059428122",
+     "A5059554264",
+     "A5063040920",
+     "A5063920479",
+     "A5063951119",
+     "A5065659844",
+     "A5067564085",
+     "A5069424866",
+     "A5070304330",
+     "A5070527085",
+     "A5071656006",
+     "A5075194454",
+     "A5076036807",
+     "A5080033018",
+     "A5080057811",
+     "A5080841301",
+     "A5082658369",
+     "A5082663721",
+     "A5086383420",
+     "A5086581525",
+     "A5086835452",
+     "A5087653408",
+     "A5087933968",
+     "A5088950236",
+     "A5089150146",
+     "A5100451834",
+     "A5102189800",
+     "A5102491748",
+     "A5103177543",
+     "A5103218091",
+     "A5103238589",
+     "A5111971785"
+    ]
+   },
+   "u4_aug": {
+    "n_events": 113,
+    "restake_source": "data/cal2026-08-28/restake_2026-08-28.csv (08-28 candidates only; October table absent)",
+    "n_with_restake_row": 37,
+    "flags_note": "is_star_1pct/5pct/is_foreign_poach/age_eligible True for every event star (seeding), econ subfield code read from the 08-15 star_set"
+   },
+   "supplement": {
+    "parts": [
+     {
+      "part": "data/raw_verified/edges_supplement_econ_fnfix.jsonl",
+      "lines": 4151,
+      "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+     },
+     {
+      "part": "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl",
+      "lines": 15569,
+      "sha256": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+     },
+     {
+      "part": "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl",
+      "lines": 126,
+      "sha256": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d"
+     }
+    ],
+    "lines": 19846
+   },
+   "person_map": {
+    "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+    "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+    "n_stars": 113,
+    "stars_sharing_a_person": {}
+   },
+   "prodlib": {
+    "code_sha256": {
+     "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+     "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+     "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+    },
+    "secs": 7.4,
+    "config": "<scratch>/econ920_run2/oct_regen/prodlib_econ/config_econ.json",
+    "frame": "<scratch>/econ920_run2/oct_regen/prodlib_econ/runs/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "frame_sha256": "ff3bc24be0bf5ee42e1c45c8625afc761372f8efc3f7856a0fbb0a80f8231f41",
+    "frame_lines": 65869,
+    "build_report": {
+     "pool": {
+      "n_authors_with_edges": 1301,
+      "n_member_frag_authors": 1301,
+      "n_pool_persons": 910,
+      "n_roster_authors": 935
+     },
+     "deg2_hops": {
+      "n_hop1_pairs": 6854,
+      "n_hop2_pairs": 9305
+     },
+     "export": {
+      "dropped_event_ids": [
+       "A5017960988:2019",
+       "A5018518935:2003",
+       "A5053503664:2023",
+       "A5059554264:2021",
+       "A5080689800:2024",
+       "A5087933968:2020"
+      ],
+      "frame_csv": "<scratch>/econ920_run2/oct_regen/prodlib_econ/runs/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+      "n_events_in_frame": 107,
+      "n_rows": 65868
+     },
+     "roster_diag": {
+      "fold": {
+       "n_persons": 910,
+       "n_roster_rows": 935,
+       "n_unmapped_author_rows": 24,
+       "unmapped_author_ids": [
+        "A5006625214",
+        "A5015146653",
+        "A5018239900",
+        "A5020933050",
+        "A5021062818",
+        "A5021746248",
+        "A5027786961",
+        "A5030927392",
+        "A5032747649",
+        "A5033153433",
+        "A5033977762",
+        "A5040055615",
+        "A5041083925",
+        "A5044618645",
+        "A5049629760",
+        "A5054530767",
+        "A5060950282",
+        "A5067717013",
+        "A5075517152",
+        "A5084834868",
+        "A5085804894",
+        "A5101402156",
+        "A5101403206",
+        "A5129415214"
+       ]
+      },
+      "n_roster_rows": 935
+     },
+     "events_diag": {
+      "n_events": 113,
+      "n_events_flag_filtered_out": 0,
+      "n_events_frozen_table": 113
+     },
+     "topic_dose": {
+      "n_pairs": 5988,
+      "n_topic_pos": 4803
+     },
+     "subgraph": {
+      "n_merged_edges": 812261,
+      "n_null_year_edges": 305,
+      "n_pedges": 366745,
+      "n_seed_authors": 1506,
+      "n_seed_works": 109696,
+      "n_works_domain": 125109,
+      "n_works_off_snapshot": 15435
+     }
+    }
+   },
+   "unit_modules": [
+    "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+    "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+    "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+    "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+    "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+    "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+    "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+    "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+    "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+    "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+    "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+    "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+    "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+    "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+   ],
+   "A5091326353_rows": {
+    "event_id": "A5091326353:2009",
+    "rows": 715,
+    "persons": 65,
+    "source": "<scratch>/econ920_run2/oct_regen/prodlib_econ/runs/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "source_sha256": "ff3bc24be0bf5ee42e1c45c8625afc761372f8efc3f7856a0fbb0a80f8231f41"
+   }
+  },
+  "network_filter_c_d": {
+   "frozen_frame": {
+    "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+    "sha256": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+    "rows": 75284
+   },
+   "rows_kept_frozen": 72633,
+   "rows_dropped_event_not_in_set": {
+    "A5041849660:2003": {
+     "rows": 825,
+     "persons": 75
+    },
+    "A5044432173:2006": {
+     "rows": 704,
+     "persons": 64
+    },
+    "A5110738002:2009": {
+     "rows": 198,
+     "persons": 18
+    }
+   },
+   "rows_dropped_regenerated_old_id": {
+    "A5090515599:2009": {
+     "rows": 924,
+     "persons": 84,
+     "new_id": "A5091326353:2009"
+    }
+   },
+   "rows_spliced": {
+    "A5091326353:2009": 715
+   },
+   "output": {
+    "frame": "<scratch>/econ920_run2/oct/net_1_events.csv",
+    "sha256": "2875452da8ce60fc84325a37eeef54dddb45a23875062aef52a2c79f74a38b64",
+    "rows": 73348
+   },
+   "kept_rows_byte_identity": {
+    "rows": 73348,
+    "from_frozen_frame": 72633,
+    "from_regenerated_block": 715,
+    "closed": true
+   }
+  },
+  "star_set": {
+   "source": "<legacy>/v2_output/econ_fnfix_2026-08-15/u4_aug/star_set/star_set.parquet",
+   "source_sha256": "b8a73d89e1416353b6963e2c802a3c47353582c458b21e0895d0f6ea5f3a61fc",
+   "rows": 277,
+   "rekeyed": [
+    {
+     "old": "A5090515599",
+     "new": "A5091326353",
+     "arrival": 2009,
+     "academic_age": 4,
+     "restake_aage": 4,
+     "restake_arrival_true": "2009"
+    }
+   ],
+   "out_sha256": "790b0fb2242249a6c0e5d662856a6b8d1e85c1bdb8c51cd96b8a6a8ad071b4c7"
+  },
+  "provenance_table": {
+   "path": "<scratch>/econ920_run2/oct/prodlib_events_econ.csv",
+   "sha256": "e5c38df9ec37854489188ec5a78cc74f2c73a8a23936d5464db43a1e83407a1f",
+   "rows": 38,
+   "age_table_rows": 37
+  },
+  "gdose_prediction": {
+   "population_relations": 4293,
+   "drawn": 200,
+   "predicted_max_abs_diff": 0.06976307155210071,
+   "predicted_share_exact_1e-9": 0.885,
+   "predicted_gate": "FAIL",
+   "drawn_relations_gt_0.01": [
+    [
+     "A5105845982",
+     "A5105828272:2011",
+     0.012629724698829503
+    ],
+    [
+     "A5047860864",
+     "A5046379417:2006",
+     0.06976307155210071
+    ],
+    [
+     "A5050473533",
+     "A5018453582:2018",
+     0.055438444465274794
+    ]
+   ]
+  },
+  "union": {
+   "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+   "config": "<scratch>/econ920_run2/oct_union/config_econ920.json",
+   "secs": 13.6,
+   "exit": 0,
+   "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+   "log": "<scratch>/econ920_run2/oct_union/union.log",
+   "gate_overridden": true,
+   "drawn_residuals_gt_1e-9": [
+    {
+     "pid": "A5019087212",
+     "event_id": "A5080057811:2006",
+     "frozen_dose": 0.71195252979513,
+     "recomputed": 0.7110723134900457,
+     "abs_diff": 0.0008802163050842804
+    },
+    {
+     "pid": "A5019649221",
+     "event_id": "A5073639630:2010",
+     "frozen_dose": 0.3026680522260759,
+     "recomputed": 0.30222756728868233,
+     "abs_diff": 0.0004404849373935704
+    },
+    {
+     "pid": "A5034685255",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.7598213113574006,
+     "recomputed": 0.7598464686812825,
+     "abs_diff": 2.5157323881863647e-05
+    },
+    {
+     "pid": "A5032934214",
+     "event_id": "A5039737173:2016",
+     "frozen_dose": 0.2205230348340454,
+     "recomputed": 0.2202347064891234,
+     "abs_diff": 0.0002883283449219842
+    },
+    {
+     "pid": "A5019087212",
+     "event_id": "A5083649140:2013",
+     "frozen_dose": 0.794629378181719,
+     "recomputed": 0.7938479182154902,
+     "abs_diff": 0.0007814599662288035
+    },
+    {
+     "pid": "A5044759541",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.6023493654805241,
+     "recomputed": 0.6023224588917788,
+     "abs_diff": 2.6906588745267968e-05
+    },
+    {
+     "pid": "A5016172684",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.560281915066695,
+     "recomputed": 0.5602696687025356,
+     "abs_diff": 1.2246364159418377e-05
+    },
+    {
+     "pid": "A5000129921",
+     "event_id": "A5090013218:2015",
+     "frozen_dose": 0.0568596790334435,
+     "recomputed": 0.056661603286780174,
+     "abs_diff": 0.00019807574666332733
+    },
+    {
+     "pid": "A5018588825",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.0459405211114339,
+     "recomputed": 0.04568335883202941,
+     "abs_diff": 0.0002571622794044909
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5105828272:2011",
+     "frozen_dose": 0.6484369942598012,
+     "recomputed": 0.6610667189586307,
+     "abs_diff": 0.012629724698829503
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5046379417:2006",
+     "frozen_dose": 0.466393244601883,
+     "recomputed": 0.39663017304978226,
+     "abs_diff": 0.06976307155210071
+    },
+    {
+     "pid": "A5005506402",
+     "event_id": "A5035157505:2018",
+     "frozen_dose": 0.1509690481982295,
+     "recomputed": 0.15214219023355047,
+     "abs_diff": 0.0011731420353209565
+    },
+    {
+     "pid": "A5005506402",
+     "event_id": "A5000292946:2009",
+     "frozen_dose": 0.0276594753967314,
+     "recomputed": 0.02806168417779163,
+     "abs_diff": 0.00040220878106022803
+    },
+    {
+     "pid": "A5079773963",
+     "event_id": "A5017376589:2016",
+     "frozen_dose": 0.2036529342113293,
+     "recomputed": 0.20219808047616333,
+     "abs_diff": 0.0014548537351659618
+    },
+    {
+     "pid": "A5013214751",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.0081475634077865,
+     "recomputed": 0.008097382190374279,
+     "abs_diff": 5.018121741222174e-05
+    },
+    {
+     "pid": "A5022868198",
+     "event_id": "A5035157505:2018",
+     "frozen_dose": 0.8682422985264147,
+     "recomputed": 0.8664676573281066,
+     "abs_diff": 0.0017746411983080579
+    },
+    {
+     "pid": "A5079497865",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.8095802850172873,
+     "recomputed": 0.8092820098583192,
+     "abs_diff": 0.00029827515896807544
+    },
+    {
+     "pid": "A5018588825",
+     "event_id": "A5087235620:2016",
+     "frozen_dose": 0.0466462541605267,
+     "recomputed": 0.04664549345716346,
+     "abs_diff": 7.607033632381355e-07
+    },
+    {
+     "pid": "A5050473533",
+     "event_id": "A5018453582:2018",
+     "frozen_dose": 0.3012297424386393,
+     "recomputed": 0.3566681869039141,
+     "abs_diff": 0.055438444465274794
+    },
+    {
+     "pid": "A5072051358",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.5504139496305432,
+     "recomputed": 0.5504817246006731,
+     "abs_diff": 6.777497012988576e-05
+    },
+    {
+     "pid": "A5005506402",
+     "event_id": "A5079006965:2011",
+     "frozen_dose": 0.0486096211814183,
+     "recomputed": 0.04968546609775157,
+     "abs_diff": 0.0010758449163332656
+    },
+    {
+     "pid": "A5005506402",
+     "event_id": "A5022446221:2020",
+     "frozen_dose": 0.0504439460403892,
+     "recomputed": 0.05149357521433308,
+     "abs_diff": 0.0010496291739438765
+    },
+    {
+     "pid": "A5035998304",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.4034968940987078,
+     "recomputed": 0.40344632809804903,
+     "abs_diff": 5.0566000658780474e-05
+    }
+   ],
+   "report": {
+    "relationships": {
+     "dept": 4826,
+     "network_old": 6668,
+     "both": 700,
+     "dept_only_new": 4126,
+     "union": 10794,
+     "v9_drop_self_alias": 1,
+     "v9_drop_star_prearrival": 31,
+     "v9_drop_alias_dup": 58,
+     "v9_dropped_examples": {
+      "self": [
+       [
+        "A5038387911",
+        "A5001177483:2023"
+       ]
+      ],
+      "prearrival": [
+       [
+        "A5044501609",
+        "A5103218091:2010"
+       ],
+       [
+        "A5044501609",
+        "A5017376589:2016"
+       ],
+       [
+        "A5017376589",
+        "A5000674091:2006"
+       ],
+       [
+        "A5044501609",
+        "A5020729611:2017"
+       ],
+       [
+        "A5017376589",
+        "A5018518935:2003"
+       ],
+       [
+        "A5044501609",
+        "A5075360079:2018"
+       ]
+      ],
+      "alias_dup": [
+       [
+        "A5046020567",
+        "A5007734019:2016"
+       ],
+       [
+        "A5046020567",
+        "A5076526695:2018"
+       ],
+       [
+        "A5059521360",
+        "A5022446221:2020"
+       ],
+       [
+        "A5059521360",
+        "A5029151069:2019"
+       ],
+       [
+        "A5059521360",
+        "A5069424866:2023"
+       ],
+       [
+        "A5059521360",
+        "A5087235620:2016"
+       ]
+      ]
+     }
+    },
+    "alias": {
+     "persons": 1103,
+     "author_rows": 1904,
+     "mapped_persons": 1088,
+     "selfrows_unmapped": 15,
+     "multi_alias_persons": 272
+    },
+    "need_outcomes": 110,
+    "outcome_src": {
+     "api_persons": 107,
+     "edges_fallback_persons": 3
+    },
+    "sup_fallback_stars": [
+     "A5090515599"
+    ],
+    "api_only_pids": [
+     "A5006625214",
+     "A5027786961",
+     "A5032378120",
+     "A5049629760",
+     "A5050120204",
+     "A5054240727",
+     "A5065343528",
+     "A5090637418",
+     "A5100436731"
+    ],
+    "G_SUM": {
+     "total": 118734,
+     "old": 73348,
+     "new": 45386,
+     "ok": true
+    },
+    "frame": {
+     "rows": 118734,
+     "relationships": 10794,
+     "persons": 1043,
+     "events": 113,
+     "by_channel": {
+      "network": 65648,
+      "dept_only": 45386,
+      "both": 7700
+     },
+     "dose_null_new_rows": 0,
+     "age_gap_null_new_rows": 0
+    },
+    "GATE": "FAIL",
+    "dose_override_new_rows": {
+     "rows": 26125,
+     "overridden": 26125,
+     "note": "Production-library dose is recomputed with the supplemented star edges."
+    },
+    "G_DOSE": {
+     "n": 200,
+     "missing_side": 0,
+     "max_abs_diff": 0.06976307155210071,
+     "share_exact_1e-9": 0.885
+    },
+    "G_ROW": {
+     "sampled_both": 60,
+     "mismatches": 0,
+     "dose_tolerated_le_0.01": 22,
+     "fill_divergence": 10
+    }
+   },
+   "OUT_FRAME": {
+    "path": "<scratch>/econ920_run2/oct/union/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "sha256": "199d4504fa24dbcee18898445fe3ea13e987aa0789583cdadc587e14e92f1d1a",
+    "lines": 118735
+   },
+   "OUT_REPORT": {
+    "path": "<scratch>/econ920_run2/oct/union/build_report.json",
+    "sha256": "6898be787326ade72811625d459eb7253e18b8a85722ebc5a1ec5b0dd0e4ad22",
+    "lines": 393
+   },
+   "OUT_REL": {
+    "path": "<scratch>/econ920_run2/oct/union/relationships.csv",
+    "sha256": "69a18410c756babe6f4e36eb2d1b4b1d9768170cace540096c8b845ef7c71396",
+    "lines": 10795
+   }
+  },
+  "gdose_gate_override": {
+   "conditions": {
+    "population_measured": true,
+    "draw_predicted_FAIL": true,
+    "prediction_matches_run": true,
+    "every_failing_relation_is_a_frozen_population_residual": true,
+    "failure_is_gdose_only": true,
+    "G_ROW_zero_mismatches_and_G_SUM_ok": true,
+    "gate_was_intercepted_exactly_once": true
+   },
+   "failing_drawn_relations": [
+    {
+     "pid": "A5105845982",
+     "event_id": "A5105828272:2011",
+     "frozen_dose": 0.6484369942598012,
+     "recomputed": 0.6610667189586307,
+     "abs_diff": 0.012629724698829503
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5046379417:2006",
+     "frozen_dose": 0.466393244601883,
+     "recomputed": 0.39663017304978226,
+     "abs_diff": 0.06976307155210071
+    },
+    {
+     "pid": "A5050473533",
+     "event_id": "A5018453582:2018",
+     "frozen_dose": 0.3012297424386393,
+     "recomputed": 0.3566681869039141,
+     "abs_diff": 0.055438444465274794
+    }
+   ],
+   "population": {
+    "n": 4470,
+    "share_exact_1e-9": 0.892841163310962,
+    "max_abs_diff": 0.13435585579294373,
+    "n_gt_0.01": 34,
+    "n_gt_0.05": 5
+   },
+   "frozen_0813_draw": {
+    "max_abs_diff": 0.0018986229421242284,
+    "share_exact_1e-9": 0.905
+   },
+   "this_draw": {
+    "n": 200,
+    "missing_side": 0,
+    "max_abs_diff": 0.06976307155210071,
+    "share_exact_1e-9": 0.885
+   },
+   "ruling": "PENDING AUTHOR RULING (2026-09-23): the union rung's G-DOSE gate on this draw fails by sample composition alone — every failing drawn relation is a residual the frozen 08-15 rows carry (measured over the whole population, gdose phase); the gate decides only whether the clone writes its file and changes no row. Products built under this override are PROVISIONAL until the author signs the ruling; nothing canonical (data/frames, analysis/expected) is touched."
+  },
+  "postfilter_a_b": {
+   "input": {
+    "pre_y": "<scratch>/econ920_run2/oct/union/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "sha256": "199d4504fa24dbcee18898445fe3ea13e987aa0789583cdadc587e14e92f1d1a",
+    "rows": 118734,
+    "relationships": "<scratch>/econ920_run2/oct/union/relationships.csv",
+    "relationships_sha256": "69a18410c756babe6f4e36eb2d1b4b1d9768170cace540096c8b845ef7c71396"
+   },
+   "a_verified_roster": {
+    "input": {
+     "frame": "<scratch>/econ920_run2/oct/union/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "sha256": "199d4504fa24dbcee18898445fe3ea13e987aa0789583cdadc587e14e92f1d1a",
+     "rows": 118734
+    },
+    "rows_dropped": 7744,
+    "relations_dropped": 704,
+    "persons_dropped": 74,
+    "persons_dropped_ids": [
+     "P_A5000129921",
+     "P_A5000195995",
+     "P_A5000248582",
+     "P_A5001689232",
+     "P_A5001701778",
+     "P_A5003065581",
+     "P_A5003503790",
+     "P_A5004337400",
+     "P_A5005195196",
+     "P_A5005221518",
+     "P_A5005506402",
+     "P_A5005591120",
+     "P_A5007086439",
+     "P_A5010518543",
+     "P_A5012746449",
+     "P_A5013214751",
+     "P_A5013583966",
+     "P_A5015052701",
+     "P_A5018043519",
+     "P_A5018588825",
+     "P_A5019358946",
+     "P_A5024990189",
+     "P_A5030040920",
+     "P_A5030823472",
+     "P_A5030919957",
+     "P_A5031621086",
+     "P_A5033118098",
+     "P_A5034647910",
+     "P_A5035801976",
+     "P_A5036193836",
+     "P_A5040485438",
+     "P_A5041227235",
+     "P_A5042115782",
+     "P_A5042616276",
+     "P_A5043335933",
+     "P_A5044343044",
+     "P_A5049010126",
+     "P_A5050357458",
+     "P_A5051613817",
+     "P_A5052068405",
+     "P_A5053325516",
+     "P_A5053497885",
+     "P_A5053798323",
+     "P_A5056551664",
+     "P_A5057148289",
+     "P_A5057459075",
+     "P_A5059507519",
+     "P_A5060589792",
+     "P_A5061335885",
+     "P_A5061523893",
+     "P_A5064512830",
+     "P_A5065344299",
+     "P_A5065572953",
+     "P_A5066605209",
+     "P_A5072051358",
+     "P_A5073251863",
+     "P_A5074137702",
+     "P_A5082598611",
+     "P_A5083945877",
+     "P_A5086095616",
+     "P_A5086655719",
+     "P_A5087413363",
+     "P_A5089364263",
+     "P_A5089745005",
+     "P_A5100386783",
+     "P_A5101596594",
+     "P_A5102447716",
+     "P_A5102819936",
+     "P_A5102902369",
+     "P_A5103122192",
+     "P_A5110468588",
+     "P_A5110954730",
+     "P_A5113440291",
+     "P_A5113577786"
+    ],
+    "output": {
+     "frame": "<scratch>/econ920_run2/oct/postfilter/pre_y_a_verified.csv",
+     "sha256": "e21889f604742fc33ff4e47b95261691568023d4da78bd4ead72c24052b9f925",
+     "rows": 110990
+    },
+    "forms": {
+     "roster": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+     "roster_sha256": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+     "roster_authors": 1008,
+     "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+     "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+     "id_forms": 1060
+    }
+   },
+   "b_in_post": {
+    "relations_by_class": {
+     "kept": 6643,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 3447
+    },
+    "rows_by_class": {
+     "kept": 73073,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 37917
+    },
+    "persons_by_class": {
+     "kept": 822,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 664
+    },
+    "events_left_with_zero_rows": [],
+    "spells": {
+     "roster": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+     "roster_sha256": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+     "roster_rows": 1008,
+     "roster_persons": 1008,
+     "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+     "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+     "id_forms": "bare author_id + P_author_id + U2 person_id",
+     "persons_with_spells": 2068
+    },
+    "output": {
+     "frame": "<scratch>/econ920_run2/oct/postfilter/pre_y_b_inpost.csv",
+     "sha256": "08fb93728e201cd19e984a6579aff7767624ff73e49bd68992d22ada23c66cdd",
+     "rows": 73073,
+     "byte_preserving": true
+    }
+   },
+   "dropped_relations": 4151,
+   "dropped_rows_by_channel": {
+    "network": 45661
+   },
+   "relationships_lines_dropped": 4151,
+   "events_left_with_zero_relations": [],
+   "output": {
+    "pre_y": "<scratch>/econ920_run2/oct/postfilter/pre_y_b_inpost.csv",
+    "sha256": "08fb93728e201cd19e984a6579aff7767624ff73e49bd68992d22ada23c66cdd",
+    "rows": 73073,
+    "relationships": "<scratch>/econ920_run2/oct/postfilter/relationships.csv",
+    "relationships_sha256": "e614850850f82f0bfb5b29d52f264bae148571f10679154f4abeae1b716f2e5c",
+    "relationships_lines": 6643
+   }
+  },
+  "g_row_proof": {
+   "closed": true,
+   "counts": {
+    "byte_identical": 27060,
+    "channel_only": 407,
+    "regenerated:network": 209,
+    "regenerated:both": 11,
+    "dept_only_rebuilt": 45342,
+    "regenerated:dept_only": 44,
+    "dept_only_rebuilt_identical": 42687,
+    "dept_only_rebuilt_changed": 4
+   },
+   "channel_moves": {
+    "network->both": 407
+   },
+   "samples": [],
+   "dept_only_rebuilt_changed": [
+    {
+     "key": [
+      "P_A5002969626",
+      "A5086581525:2017",
+      "2017"
+     ],
+     "cols": [
+      "fwci_frac"
+     ],
+     "ulps": {
+      "fwci_frac": 2
+     },
+     "frozen": {
+      "fwci_frac": "29.482950000000002"
+     },
+     "new": {
+      "fwci_frac": "29.482949999999995"
+     }
+    },
+    {
+     "key": [
+      "P_A5002969626",
+      "A5086581525:2017",
+      "2022"
+     ],
+     "cols": [
+      "fwci_frac"
+     ],
+     "ulps": {
+      "fwci_frac": 1
+     },
+     "frozen": {
+      "fwci_frac": "3.608766666666667"
+     },
+     "new": {
+      "fwci_frac": "3.6087666666666665"
+     }
+    },
+    {
+     "key": [
+      "P_A5116851906",
+      "A5069424866:2023",
+      "2019"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star"
+     ],
+     "ulps": {
+      "fwci_frac": 2,
+      "fwci_frac_ex_star": 2
+     },
+     "frozen": {
+      "fwci_frac": "23.423096666666662",
+      "fwci_frac_ex_star": "23.423096666666662"
+     },
+     "new": {
+      "fwci_frac": "23.42309666666667",
+      "fwci_frac_ex_star": "23.42309666666667"
+     }
+    },
+    {
+     "key": [
+      "P_A5116851906",
+      "A5069424866:2023",
+      "2021"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star"
+     ],
+     "ulps": {
+      "fwci_frac": 1,
+      "fwci_frac_ex_star": 1
+     },
+     "frozen": {
+      "fwci_frac": "22.726746666666664",
+      "fwci_frac_ex_star": "22.726746666666664"
+     },
+     "new": {
+      "fwci_frac": "22.726746666666667",
+      "fwci_frac_ex_star": "22.726746666666667"
+     }
+    }
+   ],
+   "dept_only_changed_note": "a rebuilt dept_only row differing from the frozen row only in the four y columns 04 overwrites (<= 8 ULP) is the union rung's own non-determinism (c1a); anything else opens the proof",
+   "frozen": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+   "frozen_sha256": "dc9817f2758bfa1e880160960bde97148db01e419e3217ec67cb2d164b36fb60",
+   "union": "<scratch>/econ920_run2/oct/postfilter/pre_y_b_inpost.csv",
+   "union_sha256": "08fb93728e201cd19e984a6579aff7767624ff73e49bd68992d22ada23c66cdd"
+  },
+  "chain": {
+   "p1_econ": {
+    "run_dir": "<scratch>/econ920_run2/oct_p1/frames/p1-econ/econ_fnfix_2026-08-15",
+    "secs": 3.1,
+    "status": "OK",
+    "g_econ_rebuild": {
+     "PASS": true,
+     "C_PC_structural_anchor": {
+      "bad_rows": 0,
+      "examples": [],
+      "pass": true
+     },
+     "C_PC_fnfix_newevent_rows": {
+      "rows_written_from_agg": 47474,
+      "rows_agg_missing_NA": 58,
+      "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+     },
+     "old_value_reproduction_anchor": {
+      "hard_fail_cells": 0,
+      "float32_roundtrip_cells": 54040,
+      "max_relative_deviation": 5.907526619061491e-08,
+      "tolerance": 1e-06,
+      "pass": true,
+      "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+     },
+     "variants": {
+      "unified": {
+       "out": "<scratch>/econ920_run2/oct_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+       "transition": {
+        "val2val": 55779,
+        "val2na": 211,
+        "na2val": 457,
+        "na2na": 3533,
+        "zero_fill": 7173,
+        "row_na": 5891,
+        "py_missing": 29
+       }
+      },
+      "denomonly": {
+       "out": "<scratch>/econ920_run2/oct_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+       "transition": {
+        "val2val": 55990,
+        "val2na": 0,
+        "na2val": 0,
+        "na2na": 3990,
+        "zero_fill": 7173,
+        "row_na": 5891,
+        "py_missing": 29
+       }
+      }
+     },
+     "path": "<scratch>/econ920_run2/oct_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/g_econ_rebuild.json"
+    },
+    "unified_frame_written": "<scratch>/econ920_run2/oct_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv"
+   },
+   "p1_frame": "<scratch>/econ920_run2/shadow_oct/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+   "p2_econ": {
+    "run_dir": "<scratch>/econ920_run2/oct_p2/frames/p2-econ/econ_fnfix_2026-08-15",
+    "secs": 8.6
+   },
+   "p2_frame": "<scratch>/econ920_run2/shadow_oct/v2_output/econ_fnfix_2026-08-15/data/becoming_unified.csv",
+   "pairs": "<scratch>/econ920_run2/shadow_oct/v2_output/econ_fnfix_2026-08-15/data/pairs_unified.csv",
+   "panels23_report": "<scratch>/econ920_run2/shadow_oct/v2_output/econ_fnfix_2026-08-15/data/panels23_report.json",
+   "split": {
+    "run_dir": "<scratch>/econ920_run2/oct_split/frames/split/econ_fnfix_2026-08-15",
+    "secs": 0.3
+   },
+   "old79": "<scratch>/econ920_run2/oct_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_old79.csv",
+   "new37": "<scratch>/econ920_run2/oct_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_new38.csv",
+   "slim": {
+    "ev": "<scratch>/econ920_run2/oct_slim/p3_slim_ev_econ.parquet",
+    "noev": "<scratch>/econ920_run2/oct_slim/p3_slim_econ.parquet",
+    "stats": {
+     "rows": 4349964,
+     "pairs": 260332,
+     "ties": 7964,
+     "events": 113,
+     "produced": {
+      "<scratch>/econ920_run2/oct_slim/p3_slim_ev_econ.parquet": "325e43198fae8a57e5395988f6c250f26953b41e5300c62a794478a73815d128",
+      "<scratch>/econ920_run2/oct_slim/p3_slim_econ.parquet": "39d474983abec809d28d0a46a26d9c9c3d4d123c1984943fe5933961244b422b"
+     },
+     "noev_columns": [
+      "grp",
+      "year",
+      "y",
+      "D"
+     ]
+    }
+   }
+  },
+  "cells": {
+   "P1_econ_cal10": {
+    "path": "<scratch>/econ920_run2/oct_cells/P1_econ_cal10.json",
+    "sha256": "74148da4bfa2d61bde9b49052b9e1644949523a6ddabbc8d5f8d462ac9097f7f",
+    "summary": {
+     "rows_raw": 73073,
+     "rows_kept": 71797,
+     "union": {
+      "status": "OK",
+      "obs": 62188,
+      "rels": 6527,
+      "persons": 814,
+      "events": 113,
+      "ate": -0.3683824,
+      "se": 0.06590365,
+      "p_joint_effects": 6.58347394e-08,
+      "p_joint_placebo": 0.00277072
+     },
+     "network": {
+      "status": "OK",
+      "obs": 24385,
+      "rels": 2464,
+      "persons": 520,
+      "events": 104,
+      "ate": -0.43063011,
+      "se": 0.10129897,
+      "p_joint_effects": 9.53504204e-07,
+      "p_joint_placebo": 0.03445503
+     },
+     "dept": {
+      "status": "OK",
+      "obs": 44587,
+      "rels": 4753,
+      "persons": 766,
+      "events": 112,
+      "ate": -0.35492618,
+      "se": 0.07802759,
+      "p_joint_effects": 9.7660983e-07,
+      "p_joint_placebo": 0.02398694
+     }
+    }
+   },
+   "P2_econ_cal10": {
+    "path": "<scratch>/econ920_run2/oct_cells/P2_econ_cal10.json",
+    "sha256": "b82bb1f7e391954a85aa343912e62d92c18eba89fe0d7e73067932c48b91ee75",
+    "summary": {
+     "status": "OK",
+     "rows": 111448,
+     "rels": 6632,
+     "persons": 822,
+     "events": 113,
+     "first_ties": 197,
+     "ate": 0.00194924,
+     "se": 0.00076654,
+     "p_joint_effects": 1.324e-05,
+     "p_joint_placebo": null
+    }
+   }
+  },
+  "accounting": {
+   "rows": {
+    "frozen_network_frame": 75284,
+    "minus_events_not_in_october_set": -1727,
+    "minus_regenerated_event_old_rows": -924,
+    "plus_regenerated_event_rows": 715,
+    "network_rows_into_the_union_rung": 73348,
+    "plus_dept_only_rows_from_union": 45386,
+    "union_output_rows": 118734,
+    "minus_not_on_october_roster (network rows)": -7744,
+    "minus_not_in_post_at_arrival (network rows)": -37917,
+    "minus_no_spell": 0,
+    "pre_y_frame_rows": 73073
+   },
+   "relationships": {
+    "union_output_by_channel": {
+     "dept": 4826,
+     "network_old": 6668,
+     "both": 700,
+     "dept_only_new": 4126,
+     "union": 10794,
+     "v9_drop_self_alias": 1,
+     "v9_drop_star_prearrival": 31,
+     "v9_drop_alias_dup": 58,
+     "v9_dropped_examples": {
+      "self": [
+       [
+        "A5038387911",
+        "A5001177483:2023"
+       ]
+      ],
+      "prearrival": [
+       [
+        "A5044501609",
+        "A5103218091:2010"
+       ],
+       [
+        "A5044501609",
+        "A5017376589:2016"
+       ],
+       [
+        "A5017376589",
+        "A5000674091:2006"
+       ],
+       [
+        "A5044501609",
+        "A5020729611:2017"
+       ],
+       [
+        "A5017376589",
+        "A5018518935:2003"
+       ],
+       [
+        "A5044501609",
+        "A5075360079:2018"
+       ]
+      ],
+      "alias_dup": [
+       [
+        "A5046020567",
+        "A5007734019:2016"
+       ],
+       [
+        "A5046020567",
+        "A5076526695:2018"
+       ],
+       [
+        "A5059521360",
+        "A5022446221:2020"
+       ],
+       [
+        "A5059521360",
+        "A5029151069:2019"
+       ],
+       [
+        "A5059521360",
+        "A5069424866:2023"
+       ],
+       [
+        "A5059521360",
+        "A5087235620:2016"
+       ]
+      ]
+     }
+    },
+    "union_output_persons": 1043,
+    "union_output_events": 113,
+    "after_post_filter_by_channel": {
+     "network": 1817,
+     "dept_only": 4126,
+     "both": 700
+    },
+    "after_post_filter_total": 6643
+   },
+   "per_event": {
+    "A5000292946:2009": {
+     "network": 8,
+     "dept_only": 11,
+     "both": 8,
+     "relations": 27,
+     "p1_rows": 297,
+     "p2_rows": 439
+    },
+    "A5000674091:2006": {
+     "network": 9,
+     "dept_only": 42,
+     "both": 1,
+     "relations": 52,
+     "p1_rows": 572,
+     "p2_rows": 884
+    },
+    "A5001034699:2017": {
+     "network": 2,
+     "dept_only": 21,
+     "both": 4,
+     "relations": 27,
+     "p1_rows": 297,
+     "p2_rows": 448
+    },
+    "A5001177483:2023": {
+     "network": 1,
+     "dept_only": 80,
+     "both": 0,
+     "relations": 81,
+     "p1_rows": 891,
+     "p2_rows": 1377
+    },
+    "A5001820944:2016": {
+     "network": 46,
+     "dept_only": 32,
+     "both": 3,
+     "relations": 81,
+     "p1_rows": 891,
+     "p2_rows": 1364
+    },
+    "A5002969626:2012": {
+     "network": 13,
+     "dept_only": 21,
+     "both": 4,
+     "relations": 38,
+     "p1_rows": 418,
+     "p2_rows": 644
+    },
+    "A5004109149:2012": {
+     "network": 6,
+     "dept_only": 86,
+     "both": 2,
+     "relations": 94,
+     "p1_rows": 1034,
+     "p2_rows": 1598
+    },
+    "A5005868773:2014": {
+     "network": 22,
+     "dept_only": 50,
+     "both": 41,
+     "relations": 113,
+     "p1_rows": 1243,
+     "p2_rows": 1867
+    },
+    "A5006190609:2003": {
+     "network": 3,
+     "dept_only": 6,
+     "both": 1,
+     "relations": 10,
+     "p1_rows": 110,
+     "p2_rows": 170
+    },
+    "A5006435210:2011": {
+     "network": 26,
+     "dept_only": 11,
+     "both": 5,
+     "relations": 42,
+     "p1_rows": 462,
+     "p2_rows": 707
+    },
+    "A5007734019:2016": {
+     "network": 50,
+     "dept_only": 57,
+     "both": 11,
+     "relations": 118,
+     "p1_rows": 1298,
+     "p2_rows": 1967
+    },
+    "A5008208999:2005": {
+     "network": 3,
+     "dept_only": 6,
+     "both": 1,
+     "relations": 10,
+     "p1_rows": 110,
+     "p2_rows": 161
+    },
+    "A5008296992:2018": {
+     "network": 24,
+     "dept_only": 44,
+     "both": 3,
+     "relations": 71,
+     "p1_rows": 781,
+     "p2_rows": 1197
+    },
+    "A5008470795:2011": {
+     "network": 133,
+     "dept_only": 7,
+     "both": 10,
+     "relations": 150,
+     "p1_rows": 1650,
+     "p2_rows": 2473
+    },
+    "A5008855963:2011": {
+     "network": 19,
+     "dept_only": 60,
+     "both": 11,
+     "relations": 90,
+     "p1_rows": 990,
+     "p2_rows": 1494
+    },
+    "A5011262618:2018": {
+     "network": 8,
+     "dept_only": 4,
+     "both": 0,
+     "relations": 12,
+     "p1_rows": 132,
+     "p2_rows": 194
+    },
+    "A5011776630:2024": {
+     "network": 1,
+     "dept_only": 1,
+     "both": 0,
+     "relations": 2,
+     "p1_rows": 22,
+     "p2_rows": 22
+    },
+    "A5012590199:2019": {
+     "network": 11,
+     "dept_only": 84,
+     "both": 6,
+     "relations": 101,
+     "p1_rows": 1111,
+     "p2_rows": 1717
+    },
+    "A5013630114:2008": {
+     "network": 45,
+     "dept_only": 2,
+     "both": 2,
+     "relations": 49,
+     "p1_rows": 539,
+     "p2_rows": 826
+    },
+    "A5015268530:2021": {
+     "network": 7,
+     "dept_only": 76,
+     "both": 0,
+     "relations": 83,
+     "p1_rows": 913,
+     "p2_rows": 1397
+    },
+    "A5016931502:2018": {
+     "network": 5,
+     "dept_only": 67,
+     "both": 5,
+     "relations": 77,
+     "p1_rows": 847,
+     "p2_rows": 1309
+    },
+    "A5017376589:2016": {
+     "network": 42,
+     "dept_only": 36,
+     "both": 24,
+     "relations": 102,
+     "p1_rows": 1122,
+     "p2_rows": 1651
+    },
+    "A5017694921:2007": {
+     "network": 0,
+     "dept_only": 18,
+     "both": 0,
+     "relations": 18,
+     "p1_rows": 198,
+     "p2_rows": 306
+    },
+    "A5017960988:2019": {
+     "network": 0,
+     "dept_only": 29,
+     "both": 0,
+     "relations": 29,
+     "p1_rows": 319,
+     "p2_rows": 493
+    },
+    "A5018453582:2018": {
+     "network": 2,
+     "dept_only": 15,
+     "both": 0,
+     "relations": 17,
+     "p1_rows": 187,
+     "p2_rows": 289
+    },
+    "A5018518935:2003": {
+     "network": 0,
+     "dept_only": 36,
+     "both": 0,
+     "relations": 36,
+     "p1_rows": 396,
+     "p2_rows": 612
+    },
+    "A5020729611:2017": {
+     "network": 19,
+     "dept_only": 60,
+     "both": 3,
+     "relations": 82,
+     "p1_rows": 902,
+     "p2_rows": 1352
+    },
+    "A5020774613:2019": {
+     "network": 23,
+     "dept_only": 58,
+     "both": 32,
+     "relations": 113,
+     "p1_rows": 1243,
+     "p2_rows": 1865
+    },
+    "A5022446221:2020": {
+     "network": 25,
+     "dept_only": 83,
+     "both": 10,
+     "relations": 118,
+     "p1_rows": 1298,
+     "p2_rows": 2006
+    },
+    "A5024737956:2014": {
+     "network": 29,
+     "dept_only": 65,
+     "both": 26,
+     "relations": 120,
+     "p1_rows": 1320,
+     "p2_rows": 2002
+    },
+    "A5024745682:2015": {
+     "network": 0,
+     "dept_only": 88,
+     "both": 1,
+     "relations": 89,
+     "p1_rows": 979,
+     "p2_rows": 1513
+    },
+    "A5024973435:2013": {
+     "network": 43,
+     "dept_only": 29,
+     "both": 7,
+     "relations": 79,
+     "p1_rows": 869,
+     "p2_rows": 1331
+    },
+    "A5026828190:2017": {
+     "network": 6,
+     "dept_only": 63,
+     "both": 1,
+     "relations": 70,
+     "p1_rows": 770,
+     "p2_rows": 1190
+    },
+    "A5027077000:2017": {
+     "network": 15,
+     "dept_only": 26,
+     "both": 7,
+     "relations": 48,
+     "p1_rows": 528,
+     "p2_rows": 816
+    },
+    "A5027090359:2023": {
+     "network": 2,
+     "dept_only": 29,
+     "both": 0,
+     "relations": 31,
+     "p1_rows": 341,
+     "p2_rows": 527
+    },
+    "A5027424571:2010": {
+     "network": 51,
+     "dept_only": 47,
+     "both": 16,
+     "relations": 114,
+     "p1_rows": 1254,
+     "p2_rows": 1896
+    },
+    "A5028731684:2010": {
+     "network": 4,
+     "dept_only": 10,
+     "both": 0,
+     "relations": 14,
+     "p1_rows": 154,
+     "p2_rows": 238
+    },
+    "A5029151069:2019": {
+     "network": 41,
+     "dept_only": 69,
+     "both": 21,
+     "relations": 131,
+     "p1_rows": 1441,
+     "p2_rows": 2218
+    },
+    "A5032550291:2017": {
+     "network": 5,
+     "dept_only": 29,
+     "both": 4,
+     "relations": 38,
+     "p1_rows": 418,
+     "p2_rows": 635
+    },
+    "A5034503874:2016": {
+     "network": 35,
+     "dept_only": 28,
+     "both": 5,
+     "relations": 68,
+     "p1_rows": 748,
+     "p2_rows": 1142
+    },
+    "A5034628923:2005": {
+     "network": 33,
+     "dept_only": 12,
+     "both": 5,
+     "relations": 50,
+     "p1_rows": 550,
+     "p2_rows": 850
+    },
+    "A5034784553:2008": {
+     "network": 4,
+     "dept_only": 7,
+     "both": 12,
+     "relations": 23,
+     "p1_rows": 253,
+     "p2_rows": 360
+    },
+    "A5035157505:2018": {
+     "network": 8,
+     "dept_only": 27,
+     "both": 7,
+     "relations": 42,
+     "p1_rows": 462,
+     "p2_rows": 714
+    },
+    "A5038001711:2017": {
+     "network": 1,
+     "dept_only": 63,
+     "both": 0,
+     "relations": 64,
+     "p1_rows": 704,
+     "p2_rows": 1088
+    },
+    "A5039737173:2016": {
+     "network": 58,
+     "dept_only": 33,
+     "both": 0,
+     "relations": 91,
+     "p1_rows": 1001,
+     "p2_rows": 1539
+    },
+    "A5041837451:2008": {
+     "network": 14,
+     "dept_only": 14,
+     "both": 4,
+     "relations": 32,
+     "p1_rows": 352,
+     "p2_rows": 530
+    },
+    "A5042121724:2014": {
+     "network": 19,
+     "dept_only": 32,
+     "both": 4,
+     "relations": 55,
+     "p1_rows": 605,
+     "p2_rows": 935
+    },
+    "A5042125848:2017": {
+     "network": 4,
+     "dept_only": 53,
+     "both": 10,
+     "relations": 67,
+     "p1_rows": 737,
+     "p2_rows": 1119
+    },
+    "A5044076496:2022": {
+     "network": 32,
+     "dept_only": 8,
+     "both": 1,
+     "relations": 41,
+     "p1_rows": 451,
+     "p2_rows": 697
+    },
+    "A5044501609:2023": {
+     "network": 3,
+     "dept_only": 73,
+     "both": 7,
+     "relations": 83,
+     "p1_rows": 913,
+     "p2_rows": 1394
+    },
+    "A5046163960:2007": {
+     "network": 12,
+     "dept_only": 38,
+     "both": 0,
+     "relations": 50,
+     "p1_rows": 550,
+     "p2_rows": 850
+    },
+    "A5046379417:2006": {
+     "network": 4,
+     "dept_only": 32,
+     "both": 9,
+     "relations": 45,
+     "p1_rows": 495,
+     "p2_rows": 757
+    },
+    "A5047686030:2010": {
+     "network": 1,
+     "dept_only": 18,
+     "both": 2,
+     "relations": 21,
+     "p1_rows": 231,
+     "p2_rows": 349
+    },
+    "A5047755944:2011": {
+     "network": 23,
+     "dept_only": 47,
+     "both": 34,
+     "relations": 104,
+     "p1_rows": 1144,
+     "p2_rows": 1704
+    },
+    "A5049007275:2006": {
+     "network": 7,
+     "dept_only": 9,
+     "both": 1,
+     "relations": 17,
+     "p1_rows": 187,
+     "p2_rows": 289
+    },
+    "A5050761986:2010": {
+     "network": 16,
+     "dept_only": 41,
+     "both": 33,
+     "relations": 90,
+     "p1_rows": 990,
+     "p2_rows": 1481
+    },
+    "A5050962159:2017": {
+     "network": 1,
+     "dept_only": 76,
+     "both": 2,
+     "relations": 79,
+     "p1_rows": 869,
+     "p2_rows": 1343
+    },
+    "A5053503664:2023": {
+     "network": 0,
+     "dept_only": 80,
+     "both": 0,
+     "relations": 80,
+     "p1_rows": 880,
+     "p2_rows": 1360
+    },
+    "A5054037290:2008": {
+     "network": 4,
+     "dept_only": 40,
+     "both": 1,
+     "relations": 45,
+     "p1_rows": 495,
+     "p2_rows": 765
+    },
+    "A5056114255:2011": {
+     "network": 16,
+     "dept_only": 57,
+     "both": 14,
+     "relations": 87,
+     "p1_rows": 957,
+     "p2_rows": 1460
+    },
+    "A5059344939:2022": {
+     "network": 0,
+     "dept_only": 7,
+     "both": 2,
+     "relations": 9,
+     "p1_rows": 99,
+     "p2_rows": 127
+    },
+    "A5059426203:2018": {
+     "network": 4,
+     "dept_only": 4,
+     "both": 0,
+     "relations": 8,
+     "p1_rows": 88,
+     "p2_rows": 136
+    },
+    "A5059428122:2021": {
+     "network": 0,
+     "dept_only": 76,
+     "both": 0,
+     "relations": 76,
+     "p1_rows": 836,
+     "p2_rows": 1292
+    },
+    "A5059554264:2021": {
+     "network": 0,
+     "dept_only": 76,
+     "both": 0,
+     "relations": 76,
+     "p1_rows": 836,
+     "p2_rows": 1278
+    },
+    "A5063040920:2009": {
+     "network": 28,
+     "dept_only": 36,
+     "both": 20,
+     "relations": 84,
+     "p1_rows": 924,
+     "p2_rows": 1380
+    },
+    "A5063920479:2002": {
+     "network": 13,
+     "dept_only": 13,
+     "both": 2,
+     "relations": 28,
+     "p1_rows": 308,
+     "p2_rows": 450
+    },
+    "A5063951119:2010": {
+     "network": 2,
+     "dept_only": 21,
+     "both": 0,
+     "relations": 23,
+     "p1_rows": 253,
+     "p2_rows": 391
+    },
+    "A5067564085:2017": {
+     "network": 4,
+     "dept_only": 54,
+     "both": 9,
+     "relations": 67,
+     "p1_rows": 737,
+     "p2_rows": 1131
+    },
+    "A5068400819:2021": {
+     "network": 3,
+     "dept_only": 29,
+     "both": 0,
+     "relations": 32,
+     "p1_rows": 352,
+     "p2_rows": 533
+    },
+    "A5069424866:2023": {
+     "network": 2,
+     "dept_only": 79,
+     "both": 4,
+     "relations": 85,
+     "p1_rows": 935,
+     "p2_rows": 1445
+    },
+    "A5070067353:2005": {
+     "network": 17,
+     "dept_only": 7,
+     "both": 8,
+     "relations": 32,
+     "p1_rows": 352,
+     "p2_rows": 528
+    },
+    "A5070264657:2009": {
+     "network": 15,
+     "dept_only": 10,
+     "both": 11,
+     "relations": 36,
+     "p1_rows": 396,
+     "p2_rows": 604
+    },
+    "A5070304330:2013": {
+     "network": 4,
+     "dept_only": 89,
+     "both": 2,
+     "relations": 95,
+     "p1_rows": 1045,
+     "p2_rows": 1615
+    },
+    "A5070527085:2015": {
+     "network": 29,
+     "dept_only": 28,
+     "both": 4,
+     "relations": 61,
+     "p1_rows": 671,
+     "p2_rows": 1007
+    },
+    "A5071656006:2000": {
+     "network": 9,
+     "dept_only": 16,
+     "both": 9,
+     "relations": 34,
+     "p1_rows": 374,
+     "p2_rows": 558
+    },
+    "A5071785739:2020": {
+     "network": 3,
+     "dept_only": 6,
+     "both": 0,
+     "relations": 9,
+     "p1_rows": 99,
+     "p2_rows": 153
+    },
+    "A5072079903:2006": {
+     "network": 0,
+     "dept_only": 8,
+     "both": 0,
+     "relations": 8,
+     "p1_rows": 88,
+     "p2_rows": 136
+    },
+    "A5073639630:2010": {
+     "network": 12,
+     "dept_only": 5,
+     "both": 1,
+     "relations": 18,
+     "p1_rows": 198,
+     "p2_rows": 306
+    },
+    "A5075194454:2008": {
+     "network": 1,
+     "dept_only": 3,
+     "both": 1,
+     "relations": 5,
+     "p1_rows": 55,
+     "p2_rows": 85
+    },
+    "A5075360079:2018": {
+     "network": 20,
+     "dept_only": 68,
+     "both": 4,
+     "relations": 92,
+     "p1_rows": 1012,
+     "p2_rows": 1564
+    },
+    "A5076526695:2018": {
+     "network": 44,
+     "dept_only": 66,
+     "both": 10,
+     "relations": 120,
+     "p1_rows": 1320,
+     "p2_rows": 2040
+    },
+    "A5078564370:2014": {
+     "network": 2,
+     "dept_only": 36,
+     "both": 0,
+     "relations": 38,
+     "p1_rows": 418,
+     "p2_rows": 646
+    },
+    "A5079006965:2011": {
+     "network": 37,
+     "dept_only": 9,
+     "both": 13,
+     "relations": 59,
+     "p1_rows": 649,
+     "p2_rows": 1002
+    },
+    "A5080033018:2011": {
+     "network": 7,
+     "dept_only": 21,
+     "both": 3,
+     "relations": 31,
+     "p1_rows": 341,
+     "p2_rows": 521
+    },
+    "A5080057811:2006": {
+     "network": 23,
+     "dept_only": 12,
+     "both": 8,
+     "relations": 43,
+     "p1_rows": 473,
+     "p2_rows": 728
+    },
+    "A5080689800:2024": {
+     "network": 0,
+     "dept_only": 29,
+     "both": 0,
+     "relations": 29,
+     "p1_rows": 319,
+     "p2_rows": 493
+    },
+    "A5082658369:2018": {
+     "network": 17,
+     "dept_only": 66,
+     "both": 5,
+     "relations": 88,
+     "p1_rows": 968,
+     "p2_rows": 1472
+    },
+    "A5082663721:2010": {
+     "network": 22,
+     "dept_only": 5,
+     "both": 16,
+     "relations": 43,
+     "p1_rows": 473,
+     "p2_rows": 607
+    },
+    "A5082727271:2019": {
+     "network": 18,
+     "dept_only": 24,
+     "both": 3,
+     "relations": 45,
+     "p1_rows": 495,
+     "p2_rows": 765
+    },
+    "A5083549223:2005": {
+     "network": 3,
+     "dept_only": 3,
+     "both": 1,
+     "relations": 7,
+     "p1_rows": 77,
+     "p2_rows": 105
+    },
+    "A5083649140:2013": {
+     "network": 3,
+     "dept_only": 58,
+     "both": 6,
+     "relations": 67,
+     "p1_rows": 737,
+     "p2_rows": 1131
+    },
+    "A5085246004:2017": {
+     "network": 21,
+     "dept_only": 3,
+     "both": 2,
+     "relations": 26,
+     "p1_rows": 286,
+     "p2_rows": 438
+    },
+    "A5086206624:2012": {
+     "network": 14,
+     "dept_only": 44,
+     "both": 5,
+     "relations": 63,
+     "p1_rows": 693,
+     "p2_rows": 1071
+    },
+    "A5086383420:2019": {
+     "network": 66,
+     "dept_only": 67,
+     "both": 5,
+     "relations": 138,
+     "p1_rows": 1518,
+     "p2_rows": 2321
+    },
+    "A5086581525:2017": {
+     "network": 14,
+     "dept_only": 40,
+     "both": 7,
+     "relations": 61,
+     "p1_rows": 671,
+     "p2_rows": 1007
+    },
+    "A5086835452:2017": {
+     "network": 6,
+     "dept_only": 62,
+     "both": 11,
+     "relations": 79,
+     "p1_rows": 869,
+     "p2_rows": 1331
+    },
+    "A5086933077:1999": {
+     "network": 6,
+     "dept_only": 0,
+     "both": 0,
+     "relations": 6,
+     "p1_rows": 66,
+     "p2_rows": 102
+    },
+    "A5087235620:2016": {
+     "network": 32,
+     "dept_only": 79,
+     "both": 7,
+     "relations": 118,
+     "p1_rows": 1298,
+     "p2_rows": 2006
+    },
+    "A5087261858:2019": {
+     "network": 6,
+     "dept_only": 12,
+     "both": 1,
+     "relations": 19,
+     "p1_rows": 209,
+     "p2_rows": 306
+    },
+    "A5087653408:2019": {
+     "network": 22,
+     "dept_only": 67,
+     "both": 6,
+     "relations": 95,
+     "p1_rows": 1045,
+     "p2_rows": 1586
+    },
+    "A5087933968:2020": {
+     "network": 0,
+     "dept_only": 35,
+     "both": 0,
+     "relations": 35,
+     "p1_rows": 385,
+     "p2_rows": 595
+    },
+    "A5088950236:2006": {
+     "network": 19,
+     "dept_only": 29,
+     "both": 11,
+     "relations": 59,
+     "p1_rows": 649,
+     "p2_rows": 998
+    },
+    "A5089150146:2013": {
+     "network": 41,
+     "dept_only": 38,
+     "both": 26,
+     "relations": 105,
+     "p1_rows": 1155,
+     "p2_rows": 1744
+    },
+    "A5090013218:2015": {
+     "network": 41,
+     "dept_only": 24,
+     "both": 9,
+     "relations": 74,
+     "p1_rows": 814,
+     "p2_rows": 1250
+    },
+    "A5091326353:2009": {
+     "network": 19,
+     "dept_only": 4,
+     "both": 1,
+     "relations": 24,
+     "p1_rows": 264,
+     "p2_rows": 408
+    },
+    "A5100451834:2018": {
+     "network": 56,
+     "dept_only": 62,
+     "both": 29,
+     "relations": 147,
+     "p1_rows": 1617,
+     "p2_rows": 2463
+    },
+    "A5100765181:2017": {
+     "network": 9,
+     "dept_only": 31,
+     "both": 2,
+     "relations": 42,
+     "p1_rows": 462,
+     "p2_rows": 708
+    },
+    "A5102189800:2013": {
+     "network": 8,
+     "dept_only": 23,
+     "both": 3,
+     "relations": 34,
+     "p1_rows": 374,
+     "p2_rows": 578
+    },
+    "A5102491748:2015": {
+     "network": 1,
+     "dept_only": 32,
+     "both": 0,
+     "relations": 33,
+     "p1_rows": 363,
+     "p2_rows": 554
+    },
+    "A5103218091:2010": {
+     "network": 2,
+     "dept_only": 60,
+     "both": 2,
+     "relations": 64,
+     "p1_rows": 704,
+     "p2_rows": 1087
+    },
+    "A5103238589:2011": {
+     "network": 14,
+     "dept_only": 20,
+     "both": 1,
+     "relations": 35,
+     "p1_rows": 385,
+     "p2_rows": 595
+    },
+    "A5105828272:2011": {
+     "network": 4,
+     "dept_only": 71,
+     "both": 1,
+     "relations": 76,
+     "p1_rows": 836,
+     "p2_rows": 1292
+    },
+    "A5111971785:2009": {
+     "network": 30,
+     "dept_only": 13,
+     "both": 8,
+     "relations": 51,
+     "p1_rows": 561,
+     "p2_rows": 858
+    }
+   },
+   "p2_rows": 111448,
+   "pairs_rows": 4349964,
+   "slim": {
+    "rows": 4349964,
+    "pairs": 260332,
+    "ties": 7964,
+    "events": 113,
+    "produced": {
+     "<scratch>/econ920_run2/oct_slim/p3_slim_ev_econ.parquet": "325e43198fae8a57e5395988f6c250f26953b41e5300c62a794478a73815d128",
+     "<scratch>/econ920_run2/oct_slim/p3_slim_econ.parquet": "39d474983abec809d28d0a46a26d9c9c3d4d123c1984943fe5933961244b422b"
+    },
+    "noev_columns": [
+     "grp",
+     "year",
+     "y",
+     "D"
+    ]
+   },
+   "events_with_zero_relations": [],
+   "assumptions": [
+    "A5091326353's regenerated rows follow piece A's econ config (works_robust first-pub; October roster pool; stars_excluded_cal2026-10 incl. U2 fragments), so their age_gap rule differs from the kept July/fnfix rows (08-15 star_set_academic_age / panel_then_wfp) — an OPEN caliber item recorded by piece A (E2)",
+    "the regenerated event is in the union clone's and 04's prodlib-row set (dose_topic override, y from the aggregate) and in the old-79 group of the ledger and the split (it was never a fn-fix event)",
+    "(a) and (b) are applied to the union OUTPUT (network rows only), equivalent to the input-side filter by construction (econ920_lib.postfilter_union) with the one caveat measured (events_left_with_zero_relations)",
+    "filters (a) and (b) join on the person only (any department of the economics sample); the union clone's roster channel keeps its school-matched in-post join"
+   ]
+  },
+  "pairs_unified": {
+   "path": "output/cal_intermediates/cal2026-10/pairs_unified.csv",
+   "sha256": "e5c98b848882523a9b48f7cd39edb9c67bf79214f8bd600e95044b6c42abd10a",
+   "bytes": 236705320,
+   "note": "git-ignored; input of the A_far build"
+  },
+  "frozen": [
+   "estimates/P1_econ_cal10.json",
+   "estimates/P2_econ_cal10.json",
+   "g_econ_rebuild_econ.json",
+   "inpost_report_econ.json",
+   "p1_events_ledger_econ.csv",
+   "p1_frame_econ.csv",
+   "p1_frame_econ_new37.csv",
+   "p1_frame_econ_old79.csv",
+   "p2_becoming_econ.csv",
+   "p3_slim_econ.parquet",
+   "p3_slim_ev_econ.parquet",
+   "panels23_report_econ.json",
+   "prodlib_events_econ.csv",
+   "relationships_econ.csv",
+   "star_set_econ_cal2026-10.parquet",
+   "union_build_report_econ.json",
+   "staging_manifest_econ920_2026-10.json",
+   "build_report_econ920_2026-10.json"
+  ],
+  "not_frozen": []
+ }
+}

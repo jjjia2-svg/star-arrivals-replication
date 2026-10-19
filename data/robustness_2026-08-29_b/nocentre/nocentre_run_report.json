@@ -1,0 +1,151 @@
+{
+ "unit_modules": [
+  "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+  "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+  "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+  "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+  "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+  "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+  "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+  "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+  "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+  "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+  "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+  "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+  "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+  "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py",
+  "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+  "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+  "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+  "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+  "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+  "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+  "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+  "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+  "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+  "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+  "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+  "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+  "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+  "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py",
+  "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+  "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+  "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+  "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+  "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+  "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+  "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+  "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+  "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+  "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+  "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+  "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+  "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+  "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py",
+  "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+  "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+  "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+  "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+  "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+  "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+  "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+  "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+  "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+  "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+  "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+  "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+  "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+  "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+ ],
+ "prodlib": {
+  "chemistry:cal": {
+   "code_sha256": {
+    "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+    "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+    "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+   },
+   "secs": 7.9,
+   "frame": "$TMPDIR/sar_nocentre_2026-08-29/nocentre/prodlib_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "frame_sha256": "10d457f68a0255abf4ff6225b152c91484d04aa579bbd282ca380b0d56f9af84"
+  },
+  "math_stats:cal": {
+   "code_sha256": {
+    "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+    "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+    "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+   },
+   "secs": 5.8,
+   "frame": "$TMPDIR/sar_nocentre_2026-08-29/nocentre/prodlib_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "frame_sha256": "75a4b54b934fe4d9e8d554669b5ee0011813670241bae28beb4fc3c777cc32fc"
+  }
+ },
+ "slim_stats": {
+  "control": {
+   "rows": 1353396,
+   "pairs": 80320,
+   "ties": 1395,
+   "events": 33,
+   "produced": {
+    "$TMPDIR/sar_nocentre_2026-08-29/control/slim_math/p3_slim_ev_math_stats.parquet": "001b428a589703653511bf231a6ed3984f4d257800810a31665b2a1915a9d6d3",
+    "$TMPDIR/sar_nocentre_2026-08-29/control/slim_math/p3_slim_math_stats.parquet": "dc4fe87e6f489865d67107eb6d596e3a017edfb447746e3543fca960e892da72"
+   },
+   "noev_columns": [
+    "grp",
+    "year",
+    "y",
+    "D"
+   ]
+  },
+  "nocentre": {
+   "rows": 1231888,
+   "pairs": 73119,
+   "ties": 1283,
+   "events": 33,
+   "produced": {
+    "$TMPDIR/sar_nocentre_2026-08-29/nocentre/slim_math/p3_slim_ev_math_stats.parquet": "7f3445e5e1d3845a09f06a69207fdef863b140704748ac88b3bfc0652a9d621b",
+    "$TMPDIR/sar_nocentre_2026-08-29/nocentre/slim_math/p3_slim_math_stats.parquet": "6400c5fe4bb7f5fdf06be104b5ca4f219e8d58a28b25a01f2f2c59ad66fd184c"
+   },
+   "noev_columns": [
+    "grp",
+    "year",
+    "y",
+    "D"
+   ]
+  }
+ },
+ "control_checks": {
+  "relationships_chemistry": "BYTE_EQUAL",
+  "becoming_chemistry": "BYTE_EQUAL",
+  "p1_frame_chemistry": {
+   "ok": true,
+   "differing_lines": 5989,
+   "worst_ulp": 3,
+   "unexpected_columns": []
+  },
+  "relationships_math_stats": "BYTE_EQUAL",
+  "becoming_math_stats": "BYTE_EQUAL",
+  "p1_frame_math_stats": {
+   "ok": true,
+   "differing_lines": 1551,
+   "worst_ulp": 3,
+   "unexpected_columns": []
+  }
+ },
+ "control_estimates": {
+  "P1_fnfix_chemistry": "EQUAL",
+  "P1_fnfix_math_stats": "EQUAL"
+ },
+ "variant_frames_sha256": {
+  "p1_chemistry": "986574f4e3a8ca7be7f3793dbd28cb18c6a1d093adc6d5b794c8798351b07170",
+  "p1_math_stats": "5f52986b206053a16f1235c045f5bcbc83e1b9bba229628b4a44f85f0e60b04a",
+  "p2_chemistry": "79641d1dcbd196a480d47aca32000f86c07c50e64ed5310bfe4d2ce5b6bd5cab",
+  "p2_math_stats": "36e9ce67fc497922925aa1bd2bb8b5943511c2e6e1b8f50bb113606cfe1a1602",
+  "pairs_chemistry": "cf1e4cc2adb432b9b870bb637202c7311e0a786cc063ac6bb3de0894c9bff5c6",
+  "pairs_math_stats": "e4fe7477cc1063b96e3c5ae87f222e48019cb10ff75f00de2b3ac9c0af505645",
+  "relationships_chemistry": "e9f0f6b0fcacc7ca68e6fa7efffc9929ac22bf504d6934865dc82b40dd06fafa",
+  "relationships_math_stats": "50ae4c3d5643de18fbba0c66d79f35d6ab6cd731feeda807ca3713f617c84b07",
+  "slim_ev_math_stats": "7f3445e5e1d3845a09f06a69207fdef863b140704748ac88b3bfc0652a9d621b",
+  "slim_math_stats": "6400c5fe4bb7f5fdf06be104b5ca4f219e8d58a28b25a01f2f2c59ad66fd184c"
+ },
+ "secs": 229.8
+}

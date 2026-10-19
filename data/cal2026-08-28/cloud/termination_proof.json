@@ -1,0 +1,11 @@
+{
+    "InstanceId": "i-0ec873f66546a0b87",
+    "State": {
+        "Code": 48,
+        "Name": "terminated"
+    },
+    "StateTransitionReason": "User initiated (2026-08-28 04:56:36 GMT)",
+    "InstanceType": "r6i.16xlarge",
+    "Placement": "us-east-1c",
+    "LaunchTime": "2026-08-28T04:22:33.000Z"
+}

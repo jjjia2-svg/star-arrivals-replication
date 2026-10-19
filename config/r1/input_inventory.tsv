@@ -1,0 +1,62 @@
+root	name	availability	s3_prefix	instance_path	needed_by	used_by
+derived	u0p5_roster	s3	r1/derived/u0p5_roster/	/data/openalex_pipeline/derived/u0p5_roster/	j0,j1a,j1b,test_big	analysis/robustness/verified_pool/build_verified_pool.py;pipeline/rosters/econ_roster_verify_2026-08-09/code/build_audit.py;pipeline/units/u0p5_dept_roster/src/roster/run_u0p5.py;+1
+derived	u1_edges_full_2026-07-05	s3	u1_edges_full_2026-07-05/	/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/	j0,j1a,j1b,final,test_big,finalb0	analysis/paper/ledger_funnel.py;pipeline/frames/cal2026-10/configs/chemistry.json;pipeline/frames/cal2026-10/configs/math_stats.json;+12
+derived	u1_full_11school_2026-07-16	s3	u1_full_11school_2026-07-16/	/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/	j0,j1a,j1b,test_big	analysis/robustness/sensitivity/run_p3pos_sensitivity.sh;pipeline/frames/cal2026-10/configs/econ.json;pipeline/frames/cal2026-10/econ920/00_build_frame_econ920_cal.py;+4
+derived	u2_person_map_11school_2026-07-16	s3	u2_person_map_11school_2026-07-16/	/data/openalex_pipeline/derived/u2_person_map_11school_2026-07-16/	j0,j1a,j1b,test_big	analysis/robustness/verified_pool/build_verified_pool.py;analysis/robustness/verified_pool/measure_d4_cal2026-10.py;analysis/robustness/verified_pool/verify102/build_input.py;+11
+derived	u3_panel_11school_2026-07-16	s3	u3_panel_11school_2026-07-16/	/data/openalex_pipeline/derived/u3_panel_11school_2026-07-16/	j0,j1a,j1b	pipeline/frames/cal2026-10/econ920/00_build_frame_econ920_cal.py
+derived	u4_star_set_2026-07-08	s3	r1/derived/u4_star_set_2026-07-08/	/data/openalex_pipeline/derived/u4_star_set_2026-07-08/	test_big	pipeline/units/u0_foundation/src/common/schema.py;pipeline/units/u0_foundation/tests/test_schema.py
+derived	u4_star_set_p10_80ev_2026-07-22	s3	r1/derived/u4_star_set_p10_80ev_2026-07-22/	/data/openalex_pipeline/derived/u4_star_set_p10_80ev_2026-07-22/	j0,j1a,j1b,test_big	pipeline/frames/econ_fnfix_2026-08-15/code/04_rebuild_y.py;pipeline/stars/caliber_2026-10/restake_econ11.py;pipeline/stars/econ_fnfix_2026-08-15/code/00_make_u4_aug.py;+1
+derived	u5_ship_11school_p10_80ev_2026-07-22	s3	r1/derived/u5_ship_11school_p10_80ev_2026-07-22/	/data/openalex_pipeline/derived/u5_ship_11school_p10_80ev_2026-07-22/	j0,j1a,j1b	pipeline/frames/cal2026-10/econ920/00_build_frame_econ920_cal.py
+derived	u5u6_final_2026-07-18_work	s3	r1/derived/u5u6_final_2026-07-18_work/	/data/openalex_pipeline/derived/u5u6_final_2026-07-18_work/	j1b	analysis/robustness/verified_pool/build_verified_pool.py
+legacy_multiplex	_handoff_2026-07-05_hist_roster	s3	r1/legacy/legacy_multiplex/_handoff_2026-07-05_hist_roster/	/data/legacy/thesis/multiplex_pipeline/_handoff_2026-07-05_hist_roster/	final,finalb0	analysis/paper/ledger_funnel.py
+legacy_multiplex	_retro_aws_handoff_2026-07-04	s3	r1/legacy/legacy_multiplex/_retro_aws_handoff_2026-07-04/	/data/legacy/thesis/multiplex_pipeline/_retro_aws_handoff_2026-07-04/		pipeline/contracts/redlines.yaml
+legacy_multiplex	contracts	s3	r1/legacy/legacy_multiplex/contracts/	/data/legacy/thesis/multiplex_pipeline/contracts/	j0,j1a	pipeline/stars/multidisc_2026-07-24/code/star_screening/screening_lib.py
+legacy_multiplex	units	s3	r1/legacy/legacy_multiplex/units/	/data/legacy/thesis/multiplex_pipeline/units/	j0,j1a,j1b,test_big	pipeline/frames/cal2026-10/econ920/00_build_frame_econ920_cal.py;pipeline/frames/cal2026-10/econ920/make_clone.py;pipeline/frames/cal2026-10/econ_gold/10_build_union_frame_gold_econ.py;+10
+legacy_thesis	thesis_report	s3	r1/legacy/legacy_thesis/thesis_report/	/data/legacy/thesis/thesis_report/	j0,j1a,j1b,final,test_big,finalb0	analysis/paper/draft_2026_09_13_tables.py;analysis/paper/fig_dose_distribution.py;analysis/paper/fig_exposure_population.py;+8
+legacy_v2_output	cluster_event_2026-08-16	s3	r1/legacy/legacy_v2_output/cluster_event_2026-08-16/	/data/legacy/thesis/v2_output/cluster_event_2026-08-16/	j0,j1a,j1b,final,finalb0	analysis/estimation/run_p1_evcl.R;analysis/estimation/run_p2_evcl.R;analysis/estimation/run_p3_evcl.R;+1
+legacy_v2_output	econ_final_2026-08-13	s3	r1/legacy/legacy_v2_output/econ_final_2026-08-13/	/data/legacy/thesis/v2_output/econ_final_2026-08-13/	j0,j1a,j1b	pipeline/frames/cal2026-10/econ920/make_clone.py;pipeline/frames/econ_fnfix_2026-08-15/code/04_rebuild_y.py;pipeline/frames/econ_fnfix_2026-08-15/code/10_panels23_econ920.py
+legacy_v2_output	econ_fnfix_2026-08-15	s3	r1/legacy/legacy_v2_output/econ_fnfix_2026-08-15/	/data/legacy/thesis/v2_output/econ_fnfix_2026-08-15/	j0,j1a,j1b,test_big	pipeline/frames/cal2026-10/econ920/00_build_frame_econ920_cal.py;pipeline/frames/cal2026-10/econ920/make_clone.py;pipeline/frames/econ_fnfix_2026-08-15/code/04_rebuild_y.py;+6
+legacy_v2_output	econ_roster_verify_2026-08-09	s3	r1/legacy/legacy_v2_output/econ_roster_verify_2026-08-09/	/data/legacy/thesis/v2_output/econ_roster_verify_2026-08-09/	j0,j1a,j1b	analysis/robustness/verified_pool/build_verified_pool.py;pipeline/frames/cal2026-10/econ920/make_clone.py;pipeline/rosters/econ_roster_verify_2026-08-09/code/build_audit.py;+2
+legacy_v2_output	event_ledger_2026-07-27	s3	r1/legacy/legacy_v2_output/event_ledger_2026-07-27/	/data/legacy/thesis/v2_output/event_ledger_2026-07-27/	j0,j1a,j1b	pipeline/frames/econ_fnfix_2026-08-15/code/01_merge_inputs.py
+legacy_v2_output	explore_within_dept_2026-07-20	s3	r1/legacy/legacy_v2_output/explore_within_dept_2026-07-20/	/data/legacy/thesis/v2_output/explore_within_dept_2026-07-20/	j0,j1a,j1b	analysis/robustness/verified_pool/build_verified_pool.py;pipeline/rosters/econ_roster_verify_2026-08-09/code/build_audit.py
+legacy_v2_output	frame_dept_2026-07-31	s3	r1/legacy/legacy_v2_output/frame_dept_2026-07-31/	/data/legacy/thesis/v2_output/frame_dept_2026-07-31/	j0,j1a,j1b	pipeline/frames/econ_fnfix_2026-08-15/code/04_rebuild_y.py;pipeline/stars/multidisc_gold_2026-08-10/code/60_poach_gate_false_negatives.py
+legacy_v2_output	frame_rebuild_2026-07-24	s3	r1/legacy/legacy_v2_output/frame_rebuild_2026-07-24/	/data/legacy/thesis/v2_output/frame_rebuild_2026-07-24/	j0,j1a,j1b	pipeline/frames/cal2026-10/run_controls.py;pipeline/frames/cal2026-10/stage.py
+legacy_v2_output	fwci_baseline_fullsnapshot_2026-08-09	s3	r1/legacy/legacy_v2_output/fwci_baseline_fullsnapshot_2026-08-09/	/data/legacy/thesis/v2_output/fwci_baseline_fullsnapshot_2026-08-09/	j0,j1a,j1b	pipeline/frames/cal2026-10/configs/chemistry.json;pipeline/frames/cal2026-10/configs/math_stats.json;pipeline/fwci/fwci_fullsnapshot_rebuild_2026-08-09/code/01_build_expected_full.py;+1
+legacy_v2_output	fwci_fullsnapshot_rebuild_2026-08-09	s3	r1/legacy/legacy_v2_output/fwci_fullsnapshot_rebuild_2026-08-09/	/data/legacy/thesis/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/	j0,j1a,j1b	analysis/estimation/run_p1.R;pipeline/frames/cal2026-10/econ_gold/20_rebuild_y_gold_econ.py;pipeline/frames/econ_fnfix_2026-08-15/code/04_rebuild_y.py;+1
+legacy_v2_output	multidisc_2026-07-24	s3	r1/legacy/legacy_v2_output/multidisc_2026-07-24/	/data/legacy/thesis/v2_output/multidisc_2026-07-24/	j0,j1a,j1b,test_big	pipeline/frames/cal2026-10/econ_gold/10_build_union_frame_gold_econ.py;pipeline/frames/cal2026-10/econ_gold/20_rebuild_y_gold_econ.py;pipeline/frames/cal2026-10/econ_gold/30_build_panels23_gold_econ.py;+7
+legacy_v2_output	multidisc_gold_2026-08-10	s3	r1/legacy/legacy_v2_output/multidisc_gold_2026-08-10/	/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/	j0,j1a,j1b,test_big	analysis/robustness/sensitivity/run_nocentre.py;pipeline/frames/cal2026-10/configs/chemistry.json;pipeline/frames/cal2026-10/configs/math_stats.json;+14
+legacy_v2_output	multidisc_prod_2026-07-24	s3	r1/legacy/legacy_v2_output/multidisc_prod_2026-07-24/	/data/legacy/thesis/v2_output/multidisc_prod_2026-07-24/	j0,j1a,j1b	pipeline/frames/cal2026-10/econ_gold/10_build_union_frame_gold_econ.py;pipeline/frames/multidisc_gold_2026-08-10/code/10_build_union_frame_gold.py;pipeline/stars/econ_fnfix_2026-08-15/code/00_make_u4_aug.py
+legacy_v2_output	multidisc_roster_econ_grade_2026-08-09	s3	r1/legacy/legacy_v2_output/multidisc_roster_econ_grade_2026-08-09/	/data/legacy/thesis/v2_output/multidisc_roster_econ_grade_2026-08-09/	j0,j1a	pipeline/rosters/multidisc_gold_2026-08-10/code/00b2_prep_incfel_variant.py;pipeline/rosters/multidisc_gold_2026-08-10/code/00b_prep_roster_variants.py;pipeline/rosters/multidisc_gold_2026-08-10/code/00c_prep_final_population.py;+1
+legacy_v2_output	multidisc_v2_2026-08-04	s3	r1/legacy/legacy_v2_output/multidisc_v2_2026-08-04/	/data/legacy/thesis/v2_output/multidisc_v2_2026-08-04/	j0,j1a,j1b	analysis/estimation/run_p2.R;analysis/estimation/run_p3.R;analysis/robustness/sensitivity/build_departure.py;+6
+legacy_v2_output	netbase_supplement_2026-07-23	s3	r1/legacy/legacy_v2_output/netbase_supplement_2026-07-23/	/data/legacy/thesis/v2_output/netbase_supplement_2026-07-23/	j0,j1a,j1b	pipeline/frames/cal2026-10/econ920/make_clone.py;pipeline/frames/econ_fnfix_2026-08-15/code/10_panels23_econ920.py
+legacy_v2_output	p3_topicpair_2026-08-17	s3	r1/legacy/legacy_v2_output/p3_topicpair_2026-08-17/	/data/legacy/thesis/v2_output/p3_topicpair_2026-08-17/	j0,j1a,j1b,final,finalb0	analysis/estimation/run_p3_tp.R;analysis/paper/ledger_p3afar.py;analysis/robustness/null_sim/run_null.R;+1
+legacy_v2_output	r_51ev_2026-07-20	s3	r1/legacy/legacy_v2_output/r_51ev_2026-07-20/	/data/legacy/thesis/v2_output/r_51ev_2026-07-20/		pipeline/drivers/final80_p10_2026-07-22/common80.py
+legacy_v2_output	r_52ev_2026-07-21	s3	r1/legacy/legacy_v2_output/r_52ev_2026-07-21/	/data/legacy/thesis/v2_output/r_52ev_2026-07-21/		pipeline/drivers/final80_p10_2026-07-22/step4_export_r.py
+legacy_v2_output	r_p10_80ev_2026-07-22	s3	r1/legacy/legacy_v2_output/r_p10_80ev_2026-07-22/	/data/legacy/thesis/v2_output/r_p10_80ev_2026-07-22/	j0,j1a,j1b,test_big	pipeline/drivers/final80_p10_2026-07-22/common80.py;pipeline/frames/econ_fnfix_2026-08-15/code/01_merge_inputs.py;pipeline/lib/paths.py;+2
+output	afar_cuts	generated			j0,j1a,j1b,test_big	analysis/robustness/p3_afar_cuts/run_cuts.sh;tests/test_afar_cuts_2026_08_30.py
+output	battery_tmp	generated			j1b	analysis/robustness/battery_2026-08-29/run_all_battery.sh
+output	cal_intermediates	generated			j0,j1a,j1b,final,test_big,finalb0	analysis/lib/canon.py;analysis/paper/gaps_zenou.py;analysis/robustness/p3_afar/build_afar.py;+8
+output	dose	generated			final,finalb0	tools/check_paper.py
+output	estimates	generated				analysis/run_all.sh
+output	fwci	generated			test_big	tests/test_pipeline_rebuild.py;tests/test_verbatim_pipeline.py
+output	leaver_rerun	generated			j1b	analysis/robustness/battery_2026-08-29/run_leaver.sh
+output	logs	generated			j1b	analysis/robustness/battery_2026-08-29/run_all_battery.sh;analysis/run_all.sh;pipeline/run_all.sh
+output	paper	generated			final,test_big,finalb0	analysis/paper/_fig34_style.py;analysis/paper/draft_2026_09_13_tables.py;analysis/paper/fig_compare_years.py;+31
+output	paper_check.md	generated			final,test_big,finalb0	analysis/run_all.sh;tests/_paper_author_pending.py;tools/check_paper.py
+output	repin_thesis_2026-10	generated			final,finalb0	tools/check_paper.py
+output	rosters	generated			test_big	tests/test_pipeline_rebuild.py
+output	stage	generated			j0,j1a,j1b	analysis/robustness/sensitivity/run_sensitivity_cal2026_10.py
+output	stars	generated			test_big	tests/test_pipeline_rebuild.py;tests/test_verbatim_pipeline.py
+output	x.json	generated			test_big	tests/test_star_origins_2026_10.py
+snapshot	authors	s3	r1/snapshot/authors/	/data/openalex_pipeline/snapshot/authors/	j1a	tools/star_origins_extract_2026-10.py
+snapshot	institutions	s3	r1/snapshot/institutions/	/data/openalex_pipeline/snapshot/institutions/	j1a	tools/star_origins_extract_2026-10.py
+repo	data/cal2026-10r1/inputs/p2_decisions.json	repo			j1a	
+repo	data/cal2026-10r1/inputs/add_list_r1.json	repo			j1a	
+repo	data/cal2026-10r1/inputs/flips_r1.json	repo			j1a	
+repo	data/cal2026-10r1/inputs/p2_discipline	repo			j1a	
+repo	data/cal2026-10r1/inputs/paper_checks	repo			j1a	
+repo	data/cal2026-10r1/inputs/p3_roster	repo			j1a	
+repo	data/cal2026-10r1/inputs/add_list_r1_summary.json	repo			j1a	
+repo	data/cal2026-10r1/inputs/person_overrides.csv	repo			j1a	
+repo	data/cal2026-10r1/inputs/fixes_1001.csv	repo			j1a	
+repo	data/cal2026-10r1/inputs/arrival_checks	repo			j1a	

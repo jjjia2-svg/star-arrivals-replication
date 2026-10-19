@@ -1,0 +1,367 @@
+{
+ "schema": "sar.r1.stages.v1",
+ "job": "finalb0",
+ "complete": true,
+ "note": "V3-FINAL (W2-FINALJOB). finalb0 = config/r1/stages/final.json on October data (config B0, canon unset = data/cal2026-10, data/frames, analysis/expected, data/paper_inputs): no canon and no custody row, final_stage.B0_SUBST applied to every other row, and the October MANIFESTs plus stage:pairs_b0 in place of stage:canon/stage:custody; its one B0-only row pairs_b0 (final_stage.B0_ONLY_STAGES) restores J0's rebuilt October pairs_unified.csv, the counterpart of the canon's cal_intermediates (git-ignored, never uploaded: ruling R2; review R7 #1) (tests/test_r1_final.py proves the twin). Its gate 2 (--mode B0) accepts only the differences declared in config/r1/final_b0_expected.json: output/paper against /data/ref/october/output_paper, the vault sentinel before (declared pins) and after (0 FAIL) the repin, thesis_report default path = --thesis-root, the scratch tree against the current tree, the October PDF compiled here against the author's reference PDF (page, word, glyph position), count_words equal on both, BOR equal, red runs. The finalb0 runs (finalb0-01 the measurement, finalb0-02 must print B0_PASS) need no J1 pull, and one J0 stage-set pull: --pull r1/runs/<J0 run with RESULT OK>/stages/=/work/j0/ (required_dests). W3-FLIPS sets complete after this path's review.",
+ "stages": [
+  {
+   "name": "verify_inputs",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/verify_inputs.py",
+   "cmd": "\"$PY\" \"$WORK/verify_inputs.py\" data --job-spec \"$REPO_DIR/config/r1/jobs/finalb0.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/jobs/finalb0.json",
+    "repo:config/r1/input_pins.json"
+   ],
+   "outputs": [
+    "work:prod/verify_inputs"
+   ],
+   "est_min": 10,
+   "needs": [],
+   "resume": "always"
+  },
+  {
+   "name": "config",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/config_check.py",
+   "requires": [
+    "pipeline/lib/r1_config.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/config_check.py\" check --config \"$REPO_DIR/config/r1/B0.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/B0.json",
+    "repo:pipeline/lib/r1_config.py"
+   ],
+   "outputs": [
+    "work:prod/config"
+   ],
+   "est_min": 2,
+   "needs": [
+    "verify_inputs"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "tree_unpack",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_pack_tree.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" unpack --mode B0 --repo \"$REPO_DIR\" --record \"$REPO_DIR/config/r1/final_tree.json\" --tar-october /work/in/tree_october.tar --tar-current /work/in/tree_current.tar --current-role current_b0 --dest /work/tree --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/final_tree.json",
+    "repo:tools/r1_pack_tree.py"
+   ],
+   "outputs": [
+    "work:prod/tree_unpack"
+   ],
+   "est_min": 5,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "pairs_b0",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/restore_upstream.py",
+   "requires": [
+    "pipeline/aws/r1/check_pin.py"
+   ],
+   "cmd": "cp \"$REPO_DIR/pipeline/aws/r1/check_pin.py\" \"$WORK/check_pin.py\" && \"$PY\" \"$WORK/restore_upstream.py\" --stages j0=/work/j0 --layout \"$REPO_DIR/config/r1/layouts/finalb0_from_j0.json\" --dest \"$REPO_DIR/output/cal_intermediates/cal2026-10\" --out \"$STAGE_OUT\" && \"$PY\" \"$WORK/check_pin.py\" --file \"$REPO_DIR/output/cal_intermediates/cal2026-10/pairs_unified.csv\" --report \"$REPO_DIR/data/cal2026-10/frames_econ/build_report_econ920_2026-10.json\" --key october.pairs_unified --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/layouts/finalb0_from_j0.json",
+    "repo:pipeline/aws/r1/restore_upstream.py",
+    "repo:pipeline/aws/r1/check_pin.py",
+    "repo:data/cal2026-10/MANIFEST.sha256"
+   ],
+   "outputs": [
+    "repo:output/cal_intermediates/cal2026-10/pairs_unified.csv",
+    "work:prod/pairs_b0"
+   ],
+   "est_min": 3,
+   "needs": [
+    "config"
+   ]
+  },
+  {
+   "name": "paper",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "analysis/run_all.sh"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" paper --mode B0 --repo \"$REPO_DIR\" --paths \"$REPO_DIR/config/r1/paths_aws.yaml\" --run-stages 1,3est,3light --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "repo:analysis/run_all.sh",
+    "repo:analysis/paper",
+    "repo:analysis/lib",
+    "repo:config/r1/paths_aws.yaml",
+    "repo:config/r1/counts_B0.json",
+    "repo:pipeline/lib/r1_config.py",
+    "repo:tools/r1_canon.py",
+    "repo:tools/verify_manifest.py",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:r1/legacy/legacy_multiplex/",
+    "env:py",
+    "env:rmac",
+    "env:tex"
+   ],
+   "outputs": [
+    "repo:output/paper",
+    "repo:output/logs",
+    "work:prod/paper"
+   ],
+   "est_min": 40,
+   "needs": [
+    "config",
+    "pairs_b0"
+   ]
+  },
+  {
+   "name": "sentinel_pre",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" sentinel --mode B0 --phase pre --repo \"$REPO_DIR\" --check-paper \"$REPO_DIR/tools/check_paper.py\" --paths \"$REPO_DIR/config/r1/paths_aws.yaml\" --tree /work/tree/current --tree-kind base_2026_10_11 --record \"$REPO_DIR/config/r1/final_tree.json\" --role current_b0 --gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --thesis-report /data/legacy/thesis/thesis_report --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "stage:paper",
+    "stage:tree_unpack",
+    "repo:tools/check_paper.py",
+    "repo:analysis/lib",
+    "repo:config/r1/final_tree.json",
+    "repo:config/r1/paths_aws.yaml",
+    "data:r1/legacy/legacy_thesis/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/sentinel_pre"
+   ],
+   "est_min": 5,
+   "needs": [
+    "tree_unpack",
+    "paper"
+   ]
+  },
+  {
+   "name": "repin",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/repin_thesis_2026-10/install.py",
+    "tools/repin_thesis_2026-10/replace.py",
+    "tools/repin_thesis_2026-10/repin.py",
+    "tools/repin_thesis_2026-10/repin_lib.py",
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" repin --mode B0 --repo \"$REPO_DIR\" --commit \"$COMMIT\" --paper \"$REPO_DIR/config/r1/final_paper.json\" --record \"$REPO_DIR/config/r1/final_tree.json\" --role current_b0 --tree /work/tree/current --scratch /work/scratch --out-dir \"$REPO_DIR/output/paper\" --old-gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --new-gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --paths \"$REPO_DIR/config/r1/paths_aws.yaml\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "stage:paper",
+    "stage:tree_unpack",
+    "stage:sentinel_pre",
+    "repo:tools/repin_thesis_2026-10",
+    "repo:tools/check_paper.py",
+    "repo:analysis/expected/P1_econ_fnfix.json",
+    "repo:config/r1/final_paper.json",
+    "repo:config/r1/final_tree.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/repin"
+   ],
+   "est_min": 10,
+   "needs": [
+    "sentinel_pre"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "sentinel_post",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/check_paper.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" sentinel --mode B0 --phase post --repo /work/scratch/repo --check-paper /work/scratch/repo/tools/check_paper.py --paths \"$WORK/prod/repin/scratch_paths.yaml\" --tree /work/scratch/tree --tree-kind base_2026_10_11 --ledger-date-from \"$WORK/prod/repin/repin.json\" --gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "stage:repin",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/sentinel_post"
+   ],
+   "est_min": 5,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "compile",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" compile --mode B0 --october /work/tree/october --scratch /work/scratch/tree --build /work/build --max-extra 4 --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "env:tex"
+   ],
+   "outputs": [
+    "work:prod/compile"
+   ],
+   "est_min": 25,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "texts",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/count_words.py",
+    "tools/check_draft_text.py",
+    "tools/count_bor.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" texts --mode B0 --repo \"$REPO_DIR\" --compile \"$WORK/prod/compile\" --reference /work/tree/october/reference/main_clean.pdf --record \"$REPO_DIR/config/r1/final_tree.json\" --role current_b0 --tree-current /work/tree/current --scratch /work/scratch/tree --thesis-report /data/legacy/thesis/thesis_report --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "stage:compile",
+    "repo:tools/count_words.py",
+    "repo:tools/check_draft_text.py",
+    "repo:tools/count_bor.py",
+    "repo:config/r1/final_tree.json",
+    "data:r1/legacy/legacy_thesis/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/texts"
+   ],
+   "est_min": 5,
+   "needs": [
+    "compile"
+   ]
+  },
+  {
+   "name": "red",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/red_diff_2026-10.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" red --mode B0 --repo \"$REPO_DIR\" --october /work/tree/october --scratch /work/scratch/tree --compile \"$WORK/prod/compile\" --reference /work/tree/october/reference/main_clean.pdf --build /work/build/red --stem thesis_r1 --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:tree_unpack",
+    "stage:repin",
+    "stage:compile",
+    "repo:tools/red_diff_2026-10.py",
+    "env:py",
+    "env:tex"
+   ],
+   "outputs": [
+    "work:prod/red"
+   ],
+   "est_min": 30,
+   "needs": [
+    "compile"
+   ]
+  },
+  {
+   "name": "numbers",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_number_diff.py",
+    "tools/check_paper.py",
+    "tools/repin_thesis_2026-10/repin_lib.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" numbers --mode B0 --repo \"$REPO_DIR\" --old /data/ref/october/ledgers_base_tree --old-date 2026-10-23 --new /work/scratch/tree --ledger-date-from \"$WORK/prod/repin/repin.json\" --check-paper \"$REPO_DIR/tools/check_paper.py\" --gold \"$REPO_DIR/analysis/expected/P1_econ_fnfix.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "stage:repin",
+    "repo:tools/r1_number_diff.py",
+    "repo:tools/check_paper.py",
+    "repo:tools/repin_thesis_2026-10",
+    "data:r1/ref/october/",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/numbers"
+   ],
+   "est_min": 5,
+   "needs": [
+    "repin"
+   ]
+  },
+  {
+   "name": "gate2",
+   "owner": "V3-FINAL",
+   "script": "pipeline/aws/r1/final_stage.py",
+   "requires": [
+    "tools/r1_pack_tree.py",
+    "tools/r1_number_diff.py"
+   ],
+   "cmd": "\"$PY\" \"$WORK/final_stage.py\" gate2 --mode B0 --repo \"$REPO_DIR\" --paper \"$REPO_DIR/config/r1/final_paper.json\" --expected-b0 \"$REPO_DIR/config/r1/final_b0_expected.json\" --prod \"$WORK/prod\" --output-paper \"$REPO_DIR/output/paper\" --ref-output-paper /data/ref/october/output_paper --tree-current /work/tree/current --scratch /work/scratch/tree --final-dir /work/out/final --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256",
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/paper_inputs/MANIFEST.sha256",
+    "stage:pairs_b0",
+    "stage:paper",
+    "stage:sentinel_pre",
+    "stage:repin",
+    "stage:sentinel_post",
+    "stage:compile",
+    "stage:texts",
+    "stage:red",
+    "stage:numbers",
+    "repo:config/r1/final_paper.json",
+    "repo:config/r1/final_b0_expected.json",
+    "repo:tools/r1_pack_tree.py",
+    "data:r1/ref/october/",
+    "repo:tools/r1_number_diff.py"
+   ],
+   "outputs": [
+    "work:prod/gate2",
+    "work:out/final"
+   ],
+   "est_min": 5,
+   "needs": [
+    "sentinel_post",
+    "texts",
+    "red",
+    "numbers"
+   ]
+  }
+ ]
+}

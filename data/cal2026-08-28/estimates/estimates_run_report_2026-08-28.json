@@ -1,0 +1,1111 @@
+{
+ "task": "T4 local estimation under cal2026-08-28",
+ "generated": "2026-08-28T13:41:45",
+ "authority": "the author's decision record of 2026-08-28 (private archive)",
+ "r_env": "4.5.1 2.3.3 1.10.0.9000 1.17.8 2.0.0",
+ "cell_timeout_s": 1860,
+ "input_hashes": {
+  "data/cal2026-08-28/frames/p1_frame_econ.csv": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+  "data/cal2026-08-28/frames/p1_frame_chemistry.csv": "1a7dbbba836946a7a9eedaeecc9b8c24fea04198abcf1f98ab32611a0e3283e1",
+  "data/cal2026-08-28/frames/p1_frame_math_stats.csv": "8d5a7087245ff26c9155f8eb3de417d1fa9edc82f7497478693846c630aff1a0",
+  "data/cal2026-08-28/frames/p1_frame_econ_old79.csv": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+  "data/cal2026-08-28/frames/p1_frame_econ_new37.csv": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+  "data/cal2026-08-28/frames/p2_becoming_econ.csv": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+  "data/cal2026-08-28/frames/p2_becoming_chemistry.csv": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424",
+  "data/cal2026-08-28/frames/p2_becoming_math_stats.csv": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a",
+  "data/cal2026-08-28/frames/p3_slim_math_stats.parquet": "7b578967b9a550c365783f65b59f4b33a029381ed1c83db359b0161ad0833544",
+  "data/cal2026-08-28/frames/p3_slim_ev_math_stats.parquet": "8b279ed132448bf038d62c451fd8fd81cd2d63dd16ec7373d4ae958a0a9aa5c7",
+  "data/cal2026-08-28/frames/p3_afar_econ.parquet": "05612d000387ed7f175725ee07bd41c54bbecb616658f5a2d3bc9a47e33e8725",
+  "data/cal2026-08-28/frames/p3_afar_chemistry.parquet": "507930451ccb31c06d62b0a85d9e54e16d0ece4516d4d154dc816dd58a04a20d",
+  "data/cal2026-08-28/frames/p3_afar_math_stats.parquet": "a1e96931efbed88932a4c50285e9f1fddcade631ae57aca7cf75c5e548e62981"
+ },
+ "cells": [
+  {
+   "cell": "P1_econ_fnfix",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_econ.csv",
+   "ref": null,
+   "secs": 13.3,
+   "status": "OK",
+   "json_sha": "549e07b24e9ecacebc667e93be653352e1656c2b1969661fc806e15956366aae"
+  },
+  {
+   "cell": "P1_econ_fnfix#run2",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_econ.csv",
+   "ref": null,
+   "secs": 16.0,
+   "status": "OK",
+   "json_sha": "5540c85957b7006a3c938f7aafd85e133b34a8b618483e13b4b297ae60fa1465"
+  },
+  {
+   "cell": "P1_fnfix_chemistry",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_chemistry.csv",
+   "ref": null,
+   "secs": 9.8,
+   "status": "OK",
+   "json_sha": "9f42c5f4693f46a8ed09a43be1aee1fe34e90b73203bf849cb738c381cc163d3"
+  },
+  {
+   "cell": "P1_fnfix_math_stats",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_math_stats.csv",
+   "ref": null,
+   "secs": 7.6,
+   "status": "OK",
+   "json_sha": "a29ac3c633a2f7978675811362b3b370b5d101de73d1c5af57781f136e5d6586"
+  },
+  {
+   "cell": "P1_econ_fnfix_old79",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_econ_old79.csv",
+   "ref": null,
+   "secs": 11.9,
+   "status": "OK",
+   "json_sha": "ca37eb2e3bfcb0c994a19c33f6e3118564a3ff4a9fff229225da80c41df4eccd"
+  },
+  {
+   "cell": "P1_econ_fnfix_new37",
+   "driver": "run_p1.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_econ_new37.csv",
+   "ref": null,
+   "secs": 11.2,
+   "status": "OK",
+   "json_sha": "0594fc1206414ec93dd186a2c724a3ab96a8afa7525019ac62b3193395909894"
+  },
+  {
+   "cell": "P2_econ_fnfix",
+   "driver": "run_p2.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_econ.csv",
+   "ref": null,
+   "secs": 7.6,
+   "status": "OK",
+   "json_sha": "d9d16dbfb84e2a6595d231e10792e5e29f957c3f2489dab5bc0d3f55485c3257"
+  },
+  {
+   "cell": "P2_fnfix_chemistry",
+   "driver": "run_p2.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_chemistry.csv",
+   "ref": null,
+   "secs": 4.9,
+   "status": "OK",
+   "json_sha": "afcc8dd8cfc7a47be0924de0a90f8aaf6f1f77d75133f76244f1efcdea28fb37"
+  },
+  {
+   "cell": "P2_fnfix_math_stats",
+   "driver": "run_p2.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_math_stats.csv",
+   "ref": null,
+   "secs": 3.5,
+   "status": "OK",
+   "json_sha": "bd0c512bda78034c84b88b5cc279ce15155eb145025fa5b886a2a3f99e6bc938"
+  },
+  {
+   "cell": "P3_fnfix_math_stats",
+   "driver": "run_p3.R",
+   "frame": "data/cal2026-08-28/frames/p3_slim_math_stats.parquet",
+   "ref": null,
+   "secs": 22.7,
+   "status": "OK",
+   "json_sha": "8a07ea86b2857570663b4bb964e4a5361f8ef05f09ad7aa3bffb053631280d70"
+  },
+  {
+   "cell": "P1evcl_econ",
+   "driver": "run_p1_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_econ.csv",
+   "ref": "P1_econ_fnfix",
+   "secs": 13.8,
+   "status": "OK",
+   "json_sha": "119c834bda5075c4722e10fd4f7eb2ee4c0b19659bd053150adb31c4e621e8b5"
+  },
+  {
+   "cell": "P1evcl_chemistry",
+   "driver": "run_p1_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_chemistry.csv",
+   "ref": "P1_fnfix_chemistry",
+   "secs": 9.6,
+   "status": "OK",
+   "json_sha": "d9f34b1b9268fa80dc6c38260a55d0ea7664b488d9a6bdf6659c1dca9c95135d"
+  },
+  {
+   "cell": "P1evcl_math_stats",
+   "driver": "run_p1_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p1_frame_math_stats.csv",
+   "ref": "P1_fnfix_math_stats",
+   "secs": 7.2,
+   "status": "OK",
+   "json_sha": "2834959c3a8d3354e2f0b5891c738c47be247d065515adc9184184a880171fae"
+  },
+  {
+   "cell": "P2evcl_econ",
+   "driver": "run_p2_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_econ.csv",
+   "ref": "P2_econ_fnfix",
+   "secs": 5.9,
+   "status": "OK",
+   "json_sha": "bfc1663954a74be3911ffca73e13327f4c2efc1af7596de52e209a1b7e773998"
+  },
+  {
+   "cell": "P2evcl_chemistry",
+   "driver": "run_p2_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_chemistry.csv",
+   "ref": "P2_fnfix_chemistry",
+   "secs": 4.2,
+   "status": "OK",
+   "json_sha": "e2e05ae224edf28bd1a3f59843a088e7c44f592acc58999997faddd0b36bde3c"
+  },
+  {
+   "cell": "P2evcl_math_stats",
+   "driver": "run_p2_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p2_becoming_math_stats.csv",
+   "ref": "P2_fnfix_math_stats",
+   "secs": 3.3,
+   "status": "OK",
+   "json_sha": "468fb896f599b429629710bef56af101c9a56ea9c4ebf752666617ff2bb9d79c"
+  },
+  {
+   "cell": "P3evcl_math_stats",
+   "driver": "run_p3_evcl.R",
+   "frame": "data/cal2026-08-28/frames/p3_slim_ev_math_stats.parquet",
+   "ref": "P3_fnfix_math_stats",
+   "secs": 24.6,
+   "status": "OK",
+   "json_sha": "6221de93831dbe438a76d1a5d1e3b0b857b19ae96041101e01f5a4f4843d753e"
+  },
+  {
+   "cell": "P3lb_econ_A_far",
+   "driver": "run_p3_tp.R",
+   "frame": "data/cal2026-08-28/frames/p3_afar_econ.parquet",
+   "ref": null,
+   "secs": 14.2,
+   "status": "OK",
+   "json_sha": "88584e6a2a375b762ecf31cac4d01ac4bc14afa686f2cb8c5baf0d2b7a3724b2"
+  },
+  {
+   "cell": "P3lb_chemistry_A_far",
+   "driver": "run_p3_tp.R",
+   "frame": "data/cal2026-08-28/frames/p3_afar_chemistry.parquet",
+   "ref": null,
+   "secs": 5.1,
+   "status": "OK",
+   "json_sha": "4bc2094e18e544e453b301b728fb34a4bb674fd204e51500fba29399906ef3b4"
+  },
+  {
+   "cell": "P3lb_math_stats_A_far",
+   "driver": "run_p3_tp.R",
+   "frame": "data/cal2026-08-28/frames/p3_afar_math_stats.parquet",
+   "ref": null,
+   "secs": 5.1,
+   "status": "OK",
+   "json_sha": "e4b021949bf2d520401cf3c21abcdc093ba88edf71eba4d18907f1e2b853b509"
+  }
+ ],
+ "secs_total": 201.2,
+ "determinism": {
+  "cell": "P1_econ_fnfix",
+  "run1_sha": "549e07b24e9ecacebc667e93be653352e1656c2b1969661fc806e15956366aae",
+  "run2_sha": "5540c85957b7006a3c938f7aafd85e133b34a8b618483e13b4b297ae60fa1465",
+  "compare": "EQUAL",
+  "diffs": []
+ },
+ "old79_control": {
+  "compare": "EQUAL",
+  "diffs": []
+ },
+ "comparison_rows": [
+  {
+   "cell": "P1_econ_fnfix",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.3710364,
+    "se": 0.06177647,
+    "p_je": 1.5843035e-07,
+    "p_pl": 0.01391376,
+    "n": 93584,
+    "events": 117
+   },
+   "new": {
+    "ate": -0.37821843,
+    "se": 0.06162966,
+    "p_je": 6.73761551e-08,
+    "p_pl": 0.01024602,
+    "n": 92903,
+    "events": 116
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix",
+   "variant": "network",
+   "flags": [],
+   "old": {
+    "ate": -0.51162725,
+    "se": 0.09334073,
+    "p_je": 1.50027215e-07,
+    "p_pl": 0.00323023,
+    "n": 56847,
+    "events": 110
+   },
+   "new": {
+    "ate": -0.51691964,
+    "se": 0.09319515,
+    "p_je": 1.10532583e-07,
+    "p_pl": 0.00508558,
+    "n": 56427,
+    "events": 109
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix",
+   "variant": "dept",
+   "flags": [],
+   "old": {
+    "ate": -0.3599896,
+    "se": 0.08081218,
+    "p_je": 5.762e-05,
+    "p_pl": 0.02782606,
+    "n": 43386,
+    "events": 112
+   },
+   "new": {
+    "ate": -0.36801606,
+    "se": 0.08095493,
+    "p_je": 3.21e-05,
+    "p_pl": 0.01587097,
+    "n": 43025,
+    "events": 111
+   }
+  },
+  {
+   "cell": "P1_fnfix_chemistry",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.25721299,
+    "se": 0.05650688,
+    "p_je": 0.00033644,
+    "p_pl": 0.39334709,
+    "n": 37505,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.23401506,
+    "se": 0.05442009,
+    "p_je": 0.00108679,
+    "p_pl": 0.38691891,
+    "n": 39947,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1_fnfix_chemistry",
+   "variant": "network",
+   "flags": [
+    "effect_dATE>20%_k=1,2,4"
+   ],
+   "old": {
+    "ate": -0.22997334,
+    "se": 0.07220489,
+    "p_je": 0.00058266,
+    "p_pl": 0.01200094,
+    "n": 28737,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.21370696,
+    "se": 0.06842077,
+    "p_je": 0.00131931,
+    "p_pl": 0.01103328,
+    "n": 30822,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1_fnfix_chemistry",
+   "variant": "dept",
+   "flags": [
+    "effect_dATE>20%_k=1,2"
+   ],
+   "old": {
+    "ate": -0.26172033,
+    "se": 0.09826019,
+    "p_je": 0.0006169,
+    "p_pl": 0.87710779,
+    "n": 12919,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.22885905,
+    "se": 0.09466572,
+    "p_je": 0.00069117,
+    "p_pl": 0.80673914,
+    "n": 13569,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1_fnfix_math_stats",
+   "variant": "union",
+   "flags": [
+    "effect_sign_change_k=2",
+    "effect_dATE>20%_k=2,3"
+   ],
+   "old": {
+    "ate": -0.11637269,
+    "se": 0.14762251,
+    "p_je": 0.04638766,
+    "p_pl": 0.39418933,
+    "n": 17714,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.12710666,
+    "se": 0.1440637,
+    "p_je": 0.04309522,
+    "p_pl": 0.31159445,
+    "n": 18371,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P1_fnfix_math_stats",
+   "variant": "network",
+   "flags": [
+    "effect_sign_change_k=2",
+    "effect_dATE>20%_k=2,4,5"
+   ],
+   "old": {
+    "ate": -0.22770983,
+    "se": 0.18923432,
+    "p_je": 0.34926459,
+    "p_pl": 0.98431822,
+    "n": 5758,
+    "events": 28
+   },
+   "new": {
+    "ate": -0.20708976,
+    "se": 0.18794727,
+    "p_je": 0.47143501,
+    "p_pl": 0.97874692,
+    "n": 5882,
+    "events": 30
+   }
+  },
+  {
+   "cell": "P1_fnfix_math_stats",
+   "variant": "dept",
+   "flags": [
+    "dATE_2504%",
+    "effect_sign_change_k=4",
+    "effect_dATE>20%_k=2,4"
+   ],
+   "old": {
+    "ate": -0.00119055,
+    "se": 0.1920792,
+    "p_je": 0.02137486,
+    "p_pl": 0.25626028,
+    "n": 13044,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.03100046,
+    "se": 0.18531792,
+    "p_je": 0.01028101,
+    "p_pl": 0.23664006,
+    "n": 13635,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_old79",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.32221364,
+    "se": 0.06111177,
+    "p_je": 1.546e-05,
+    "p_pl": 0.20712877,
+    "n": 59616,
+    "events": 79
+   },
+   "new": {
+    "ate": -0.32221364,
+    "se": 0.06111177,
+    "p_je": 1.546e-05,
+    "p_pl": 0.20712877,
+    "n": 59616,
+    "events": 79
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_old79",
+   "variant": "network",
+   "flags": [],
+   "old": {
+    "ate": -0.43305308,
+    "se": 0.09270168,
+    "p_je": 0.00070365,
+    "p_pl": 0.5932804,
+    "n": 37263,
+    "events": 75
+   },
+   "new": {
+    "ate": -0.43305308,
+    "se": 0.09270168,
+    "p_je": 0.00070365,
+    "p_pl": 0.5932804,
+    "n": 37263,
+    "events": 75
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_old79",
+   "variant": "dept",
+   "flags": [],
+   "old": {
+    "ate": -0.31932825,
+    "se": 0.07704489,
+    "p_je": 0.00014578,
+    "p_pl": 0.04032781,
+    "n": 25546,
+    "events": 74
+   },
+   "new": {
+    "ate": -0.31932825,
+    "se": 0.07704489,
+    "p_je": 0.00014578,
+    "p_pl": 0.04032781,
+    "n": 25546,
+    "events": 74
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_new37",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.67104553,
+    "se": 0.16843237,
+    "p_je": 0.00153608,
+    "p_pl": 0.04643238,
+    "n": 33968,
+    "events": 38
+   },
+   "new": {
+    "ate": -0.70449939,
+    "se": 0.1693286,
+    "p_je": 0.00074064,
+    "p_pl": 0.04625368,
+    "n": 33287,
+    "events": 37
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_new37",
+   "variant": "network",
+   "flags": [
+    "effect_dATE>20%_k=1,2"
+   ],
+   "old": {
+    "ate": -0.85234873,
+    "se": 0.27304998,
+    "p_je": 0.00743751,
+    "p_pl": 8.6693387e-06,
+    "n": 19584,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.87642148,
+    "se": 0.27576259,
+    "p_je": 0.00566956,
+    "p_pl": 1.746e-05,
+    "n": 19164,
+    "events": 34
+   }
+  },
+  {
+   "cell": "P1_econ_fnfix_new37",
+   "variant": "dept",
+   "flags": [
+    "p_effects_crosses_0.01(0.01793->0.006923)"
+   ],
+   "old": {
+    "ate": -0.65560175,
+    "se": 0.18198428,
+    "p_je": 0.01793346,
+    "p_pl": 0.22469262,
+    "n": 17840,
+    "events": 38
+   },
+   "new": {
+    "ate": -0.69896302,
+    "se": 0.18306135,
+    "p_je": 0.00692332,
+    "p_pl": 0.22282319,
+    "n": 17479,
+    "events": 37
+   }
+  },
+  {
+   "cell": "P2_econ_fnfix",
+   "variant": "main",
+   "flags": [],
+   "old": {
+    "ate": 0.00272919,
+    "se": 0.00045571,
+    "p_je": 5.71100722e-10,
+    "p_pl": null,
+    "n": 181695,
+    "events": 117
+   },
+   "new": {
+    "ate": 0.00271947,
+    "se": 0.00046018,
+    "p_je": 8.68124905e-10,
+    "p_pl": null,
+    "n": 180148,
+    "events": 116
+   }
+  },
+  {
+   "cell": "P2_fnfix_chemistry",
+   "variant": "main",
+   "flags": [],
+   "old": {
+    "ate": 0.00430195,
+    "se": 0.00065266,
+    "p_je": 2.02938888e-10,
+    "p_pl": null,
+    "n": 70545,
+    "events": 35
+   },
+   "new": {
+    "ate": 0.00415442,
+    "se": 0.00061462,
+    "p_je": 9.06689168e-11,
+    "p_pl": null,
+    "n": 76087,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P2_fnfix_math_stats",
+   "variant": "main",
+   "flags": [
+    "effect_dATE>20%_k=1"
+   ],
+   "old": {
+    "ate": 0.00157224,
+    "se": 0.00044553,
+    "p_je": 0.02028941,
+    "p_pl": null,
+    "n": 35316,
+    "events": 31
+   },
+   "new": {
+    "ate": 0.001481,
+    "se": 0.00042938,
+    "p_je": 0.02500278,
+    "p_pl": null,
+    "n": 36824,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P3_fnfix_math_stats",
+   "variant": "main",
+   "flags": [
+    "effect_dATE>20%_k=3"
+   ],
+   "old": {
+    "ate": -7.414e-05,
+    "se": 0.00014194,
+    "p_je": 0.34405384,
+    "p_pl": null,
+    "n": 1322287,
+    "events": null
+   },
+   "new": {
+    "ate": -7.783e-05,
+    "se": 0.00014173,
+    "p_je": 0.34209833,
+    "p_pl": null,
+    "n": 1353396,
+    "events": null
+   }
+  },
+  {
+   "cell": "P1evcl_econ",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.3710364,
+    "se": 0.06305419,
+    "p_je": 6.65362432e-10,
+    "p_pl": 0.0001052,
+    "n": 93584,
+    "events": 117
+   },
+   "new": {
+    "ate": -0.37821843,
+    "se": 0.06294049,
+    "p_je": 2.11631157e-10,
+    "p_pl": 6.653e-05,
+    "n": 92903,
+    "events": 116
+   }
+  },
+  {
+   "cell": "P1evcl_econ",
+   "variant": "network",
+   "flags": [],
+   "old": {
+    "ate": -0.51162725,
+    "se": 0.0895314,
+    "p_je": 3.24086173e-08,
+    "p_pl": 0.00244439,
+    "n": 56847,
+    "events": 110
+   },
+   "new": {
+    "ate": -0.51691964,
+    "se": 0.08987797,
+    "p_je": 2.44709443e-08,
+    "p_pl": 0.00292154,
+    "n": 56427,
+    "events": 109
+   }
+  },
+  {
+   "cell": "P1evcl_econ",
+   "variant": "dept",
+   "flags": [],
+   "old": {
+    "ate": -0.3599896,
+    "se": 0.07765256,
+    "p_je": 4.06481293e-10,
+    "p_pl": 0.00311673,
+    "n": 43386,
+    "events": 112
+   },
+   "new": {
+    "ate": -0.36801606,
+    "se": 0.07753834,
+    "p_je": 1.02071795e-10,
+    "p_pl": 0.00046633,
+    "n": 43025,
+    "events": 111
+   }
+  },
+  {
+   "cell": "P1evcl_chemistry",
+   "variant": "union",
+   "flags": [],
+   "old": {
+    "ate": -0.25721299,
+    "se": 0.05488979,
+    "p_je": 1.46501556e-06,
+    "p_pl": 0.29041984,
+    "n": 37505,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.23401506,
+    "se": 0.05092764,
+    "p_je": 5.0659764e-06,
+    "p_pl": 0.22024237,
+    "n": 39947,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1evcl_chemistry",
+   "variant": "network",
+   "flags": [
+    "effect_dATE>20%_k=1,2,4"
+   ],
+   "old": {
+    "ate": -0.22997334,
+    "se": 0.06179426,
+    "p_je": 3.339e-05,
+    "p_pl": 4.218e-05,
+    "n": 28737,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.21370696,
+    "se": 0.05716381,
+    "p_je": 0.00056853,
+    "p_pl": 4.358e-05,
+    "n": 30822,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1evcl_chemistry",
+   "variant": "dept",
+   "flags": [
+    "effect_dATE>20%_k=1,2"
+   ],
+   "old": {
+    "ate": -0.26172033,
+    "se": 0.10348051,
+    "p_je": 0.00187654,
+    "p_pl": 0.64277638,
+    "n": 12919,
+    "events": 35
+   },
+   "new": {
+    "ate": -0.22885905,
+    "se": 0.09861648,
+    "p_je": 0.00150203,
+    "p_pl": 0.50169542,
+    "n": 13569,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P1evcl_math_stats",
+   "variant": "union",
+   "flags": [
+    "effect_sign_change_k=2",
+    "effect_dATE>20%_k=2,3"
+   ],
+   "old": {
+    "ate": -0.11637269,
+    "se": 0.12910667,
+    "p_je": 0.05325764,
+    "p_pl": 0.36508296,
+    "n": 17714,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.12710666,
+    "se": 0.12314997,
+    "p_je": 0.06033841,
+    "p_pl": 0.38252931,
+    "n": 18371,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P1evcl_math_stats",
+   "variant": "network",
+   "flags": [
+    "ATE_CI_zero_crossing_change",
+    "effect_sign_change_k=2",
+    "effect_dATE>20%_k=2,4,5"
+   ],
+   "old": {
+    "ate": -0.22770983,
+    "se": 0.11138602,
+    "p_je": 0.09163923,
+    "p_pl": 0.9836809,
+    "n": 5758,
+    "events": 28
+   },
+   "new": {
+    "ate": -0.20708976,
+    "se": 0.11867091,
+    "p_je": 0.1514093,
+    "p_pl": 0.97548914,
+    "n": 5882,
+    "events": 30
+   }
+  },
+  {
+   "cell": "P1evcl_math_stats",
+   "variant": "dept",
+   "flags": [
+    "dATE_2504%",
+    "effect_sign_change_k=4",
+    "effect_dATE>20%_k=2,4"
+   ],
+   "old": {
+    "ate": -0.00119055,
+    "se": 0.18682783,
+    "p_je": 0.00909948,
+    "p_pl": 0.17433952,
+    "n": 13044,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.03100046,
+    "se": 0.17650527,
+    "p_je": 0.00447924,
+    "p_pl": 0.20846721,
+    "n": 13635,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P2evcl_econ",
+   "variant": "main",
+   "flags": [],
+   "old": {
+    "ate": 0.00272919,
+    "se": 0.00061086,
+    "p_je": 3.79077194e-07,
+    "p_pl": null,
+    "n": 181695,
+    "events": 117
+   },
+   "new": {
+    "ate": 0.00271947,
+    "se": 0.00061591,
+    "p_je": 5.23777772e-07,
+    "p_pl": null,
+    "n": 180148,
+    "events": 116
+   }
+  },
+  {
+   "cell": "P2evcl_chemistry",
+   "variant": "main",
+   "flags": [],
+   "old": {
+    "ate": 0.00430195,
+    "se": 0.00096277,
+    "p_je": 0.00053929,
+    "p_pl": null,
+    "n": 70545,
+    "events": 35
+   },
+   "new": {
+    "ate": 0.00415442,
+    "se": 0.00089743,
+    "p_je": 0.00023346,
+    "p_pl": null,
+    "n": 76087,
+    "events": 38
+   }
+  },
+  {
+   "cell": "P2evcl_math_stats",
+   "variant": "main",
+   "flags": [
+    "effect_dATE>20%_k=1"
+   ],
+   "old": {
+    "ate": 0.00157224,
+    "se": 0.00061749,
+    "p_je": 0.09714997,
+    "p_pl": null,
+    "n": 35316,
+    "events": 31
+   },
+   "new": {
+    "ate": 0.001481,
+    "se": 0.00059045,
+    "p_je": 0.09651378,
+    "p_pl": null,
+    "n": 36824,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P3evcl_math_stats",
+   "variant": "main",
+   "flags": [
+    "effect_dATE>20%_k=3"
+   ],
+   "old": {
+    "ate": -7.414e-05,
+    "se": 0.00015505,
+    "p_je": 0.79314372,
+    "p_pl": null,
+    "n": 1322287,
+    "events": 31
+   },
+   "new": {
+    "ate": -7.783e-05,
+    "se": 0.00015101,
+    "p_je": 0.7993869,
+    "p_pl": null,
+    "n": 1353396,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P3lb_econ_A_far",
+   "variant": "pair_cluster",
+   "flags": [],
+   "old": {
+    "ate": -0.00132182,
+    "se": 0.00049114,
+    "p_je": 0.00023317,
+    "p_pl": null,
+    "n": 394221,
+    "events": 87
+   },
+   "new": {
+    "ate": -0.00133257,
+    "se": 0.00048869,
+    "p_je": 0.00018724,
+    "p_pl": null,
+    "n": 393007,
+    "events": 86
+   }
+  },
+  {
+   "cell": "P3lb_econ_A_far",
+   "variant": "event_cluster",
+   "flags": [],
+   "old": {
+    "ate": -0.00132182,
+    "se": 0.00043545,
+    "p_je": 1.4070163e-07,
+    "p_pl": null,
+    "n": 394221,
+    "events": 87
+   },
+   "new": {
+    "ate": -0.00133257,
+    "se": 0.00043204,
+    "p_je": 5.38044113e-08,
+    "p_pl": null,
+    "n": 393007,
+    "events": 86
+   }
+  },
+  {
+   "cell": "P3lb_chemistry_A_far",
+   "variant": "pair_cluster",
+   "flags": [
+    "effect_dATE>20%_k=2,5"
+   ],
+   "old": {
+    "ate": -0.00626113,
+    "se": 0.00275088,
+    "p_je": 0.28991594,
+    "p_pl": null,
+    "n": 37950,
+    "events": 30
+   },
+   "new": {
+    "ate": -0.0060448,
+    "se": 0.0026377,
+    "p_je": 0.24005184,
+    "p_pl": null,
+    "n": 39242,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P3lb_chemistry_A_far",
+   "variant": "event_cluster",
+   "flags": [
+    "effect_dATE>20%_k=2,5"
+   ],
+   "old": {
+    "ate": -0.00626113,
+    "se": 0.0016806,
+    "p_je": 7.278e-05,
+    "p_pl": null,
+    "n": 37950,
+    "events": 30
+   },
+   "new": {
+    "ate": -0.0060448,
+    "se": 0.00162116,
+    "p_je": 0.0001009,
+    "p_pl": null,
+    "n": 39242,
+    "events": 33
+   }
+  },
+  {
+   "cell": "P3lb_math_stats_A_far",
+   "variant": "pair_cluster",
+   "flags": [
+    "dATE_185%",
+    "effect_dATE>20%_k=1"
+   ],
+   "old": {
+    "ate": -0.0001488,
+    "se": 0.00127655,
+    "p_je": 0.26681294,
+    "p_pl": null,
+    "n": 44706,
+    "events": 29
+   },
+   "new": {
+    "ate": -0.00042461,
+    "se": 0.00127813,
+    "p_je": 0.34308189,
+    "p_pl": null,
+    "n": 46010,
+    "events": 31
+   }
+  },
+  {
+   "cell": "P3lb_math_stats_A_far",
+   "variant": "event_cluster",
+   "flags": [
+    "dATE_185%",
+    "effect_dATE>20%_k=1"
+   ],
+   "old": {
+    "ate": -0.0001488,
+    "se": 0.00117975,
+    "p_je": 0.23264586,
+    "p_pl": null,
+    "n": 44706,
+    "events": 29
+   },
+   "new": {
+    "ate": -0.00042461,
+    "se": 0.00120027,
+    "p_je": 0.27437528,
+    "p_pl": null,
+    "n": 46010,
+    "events": 31
+   }
+  }
+ ],
+ "registered_for_t5": [
+  {
+   "cell": "P3_econ_fnfix",
+   "reason": "cloud-only estimation cell (tools/compare_all.py CLOUD_ONLY): the dCDH run on this pair panel exceeded local memory for the frozen numbers (M3: r6i.16xlarge, 495 GB) — same footing under the caliber.",
+   "payload": "data/cal2026-08-28/frames/p3_slim_econ.parquet",
+   "payload_sha": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d"
+  },
+  {
+   "cell": "P3_fnfix_chemistry",
+   "reason": "cloud-only estimation cell (tools/compare_all.py CLOUD_ONLY): the dCDH run on this pair panel exceeded local memory for the frozen numbers (M3: r6i.16xlarge, 495 GB) — same footing under the caliber.",
+   "payload": "data/cal2026-08-28/frames/p3_slim_chemistry.parquet",
+   "payload_sha": "202952957c4327374f683ab73d655881dfdbf26dd08dba50e5cb5d809e090f08"
+  },
+  {
+   "cell": "P3evcl_econ",
+   "reason": "cloud-only estimation cell (tools/compare_all.py CLOUD_ONLY): the dCDH run on this pair panel exceeded local memory for the frozen numbers (M3: r6i.16xlarge, 495 GB) — same footing under the caliber.",
+   "payload": "data/cal2026-08-28/frames/p3_slim_ev_econ.parquet",
+   "payload_sha": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a"
+  },
+  {
+   "cell": "P3evcl_chemistry",
+   "reason": "cloud-only estimation cell (tools/compare_all.py CLOUD_ONLY): the dCDH run on this pair panel exceeded local memory for the frozen numbers (M3: r6i.16xlarge, 495 GB) — same footing under the caliber.",
+   "payload": "data/cal2026-08-28/frames/p3_slim_ev_chemistry.parquet",
+   "payload_sha": "137a1f8bbdd1f85df2daf3f746aba00bef9b6561200acb4da855d0c4ce7e336c"
+  }
+ ],
+ "out_of_scope": [
+  {
+   "item": "p3_afar_speed_bracket",
+   "reason": "not an estimation cell, and it has no cal counterpart: its pairs_slim_cap_* inputs have no builder anywhere (pipeline/NOT_REPRODUCIBLE.md entry 9; registered again in T3) — there is nothing to estimate"
+  },
+  {
+   "item": "B0_null_test.R",
+   "reason": "the null-simulation robustness driver is not part of this repository (config/seeds.yaml: 'robustness, not in M0/M1'); no frozen expected cell exists for it, so it is outside the old-vs-new comparison by construction"
+  },
+  {
+   "item": "analysis/robustness/",
+   "reason": "holds only p3_afar/build_afar.py — a FRAME builder (its cal output was built and frozen in Task 3), not an estimation cell; the old79/new37 split cells ARE estimation cells and sit in the local inventory"
+  },
+  {
+   "item": "analysis/paper generators",
+   "reason": "a later step: the paper artifacts were regenerated only after the new numbers were approved (stop point)"
+  }
+ ]
+}

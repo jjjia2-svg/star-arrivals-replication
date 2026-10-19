@@ -1,0 +1,38 @@
+== T5 batch: 6 P1/P2 cells x (1 identity control + chunks of 50 up to B=500) = 66 parallel units; seed 20260829 (config/seeds.yaml == run_all_perm.sh); frames data/frames; refs analysis/expected
+[cloudkit] payload $TMPDIR/cal2026-10_payload_t5: 18 files, 0 serial cells, 66 parallel units; md5 list -> payload.md5
+[cloudkit] estimate ~95 min @ $4.032/h ≈ $6.38 (A6)
+[cloudkit] preflight record -> data/cal2026-10/cloud_t5/custody_preflight.json
+== dry run (verifies payload.md5 locally, prints the plan; nothing is armed)
+== local md5 check of $TMPDIR/cal2026-10_payload_t5 (what the instance will repeat)
+P1_econ_fnfix.json: OK
+P1_fnfix_chemistry.json: OK
+P1_fnfix_math_stats.json: OK
+P2_econ_fnfix.json: OK
+P2_fnfix_chemistry.json: OK
+P2_fnfix_math_stats.json: OK
+bootstrap.sh: OK
+driver.env: OK
+driver.sh: OK
+jobs_parallel.txt: OK
+jobs_serial.txt: OK
+p1_frame_chemistry.csv: OK
+p1_frame_econ.csv: OK
+p1_frame_math_stats.csv: OK
+p2_becoming_chemistry.csv: OK
+p2_becoming_econ.csv: OK
+p2_becoming_math_stats.csv: OK
+run_perm.R: OK
+== DRY RUN: nothing is launched. The plan:
+   instance   r6i.16xlarge in us-east-1, AMI ami-052355af2a014bd2c, key-name openalex-run, sg sg-047b8db2bb9452695, 100 GB gp3 root
+   fuse       user-data: #!/bin/bash shutdown -h +600 
+   payload    $TMPDIR/cal2026-10_payload_t5 (18 files in payload.md5; 0 serial cells, 66 parallel units)
+   custody    data/cal2026-10/cloud_t5
+   poll       every 120s, give up after 9h (fuse at 10h)
+   rate       $4.032/h -> cost line = (terminate - launch) x rate
+   estimate   ~95 min ≈ $6.38 (A6)
+[dry-run] aws --region us-east-1 ec2 run-instances --image-id ami-052355af2a014bd2c --instance-type r6i.16xlarge --key-name openalex-run --security-group-ids sg-047b8db2bb9452695 --block-device-mappings [{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":100,"VolumeType":"gp3"}}] --user-data file://data/cal2026-10/cloud_t5/userdata.txt --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=cal2026-10},{Key=purpose,Value=star-arrivals-cal2026-10}] --query Instances[0].InstanceId --output text
+[dry-run] aws --region us-east-1 ec2 terminate-instances --instance-ids <instance id>
+== DRY RUN OK
+== T5 batch PREPARED, NOT LAUNCHED: payload $TMPDIR/cal2026-10_payload_t5 (66 parallel units, 0 serial cells), custody data/cal2026-10/cloud_t5
+   launching is a separate, deliberate command: run_cloud.sh --payload "$TMPDIR/cal2026-10_payload_t5" --custody "data/cal2026-10/cloud_t5" (no --dry-run)
+bash pipeline/aws/cal2026-10/prep_t5_batch.sh  0.17s user 0.05s system 95% cpu 0.223 total

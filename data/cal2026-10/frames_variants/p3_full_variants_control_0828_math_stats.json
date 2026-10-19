@@ -1,0 +1,44 @@
+{
+ "field": "math_stats",
+ "inputs": {
+  "pairs": "data/cal2026-08-28/frames/pairs_none_math_stats.parquet",
+  "pairs_sha256": "631f499bc78ed55f16384f13a159022ac99ab7c8302101eb7194b6ab2dea19cb",
+  "frame": "data/frames/p1_frame_math_stats.csv",
+  "frame_sha256": "8d5a7087245ff26c9155f8eb3de417d1fa9edc82f7497478693846c630aff1a0",
+  "events": "data/raw_verified/events_math_stats_cal2026-08-28.csv"
+ },
+ "suffix": "",
+ "events_kept": 33,
+ "p05_filter": {
+  "rows_in": 1353396,
+  "events_in": 33,
+  "rows_out": 1353396,
+  "events_out": 33
+ },
+ "p05_slim": {
+  "rows": 1353396,
+  "pairs": 80320,
+  "ties": 1395,
+  "events": 33,
+  "file": "p3_slim_math_stats_all.parquet",
+  "sha256": "0df3a125f7e3ab30eb5c2be78afd5591cd9644bc6925a680871f891d9614a4eb"
+ },
+ "dosebin": {
+  "bins": 1,
+  "cuts": [],
+  "pairs_by_bin": {
+   "1": 80320
+  },
+  "rows": 1353396,
+  "pairs": 80320,
+  "ties": 1395,
+  "events": 33,
+  "max_D": 1,
+  "sha256": "1d2803df33524b6e5ad6da533e023c9c88d567f3fc1cc447a5d74e8e3cf5d969",
+  "file": "p3_slim_math_stats_dosebin1.parquet"
+ },
+ "control": {
+  "p05_all_events_vs_frozen_slim": true,
+  "dosebin_vs_frozen_slim": true
+ }
+}

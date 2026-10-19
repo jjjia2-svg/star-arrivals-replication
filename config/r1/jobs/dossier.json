@@ -1,0 +1,61 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "dossier",
+  "instance_type": "r6i.8xlarge",
+  "price_hr": 2.016,
+  "est_min": 30,
+  "hard_min": 120,
+  "root_gb": 100,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_SSD_ROOT": "/data/openalex_pipeline"
+  },
+  "pulls": [],
+  "required_dests": [
+    "/work/derived/",
+    "/work/rk6a/"
+  ],
+  "data_sync": [
+    [
+      "u1_edges_full_2026-07-05/authorship_edges/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/authorship_edges/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/work_text/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/work_text/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/works/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/works/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/authorship_edges/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/authorship_edges/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/work_text/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/work_text/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/works/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/works/"
+    ],
+    [
+      "u2_person_map_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u2_person_map_11school_2026-07-16/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/dossier_pack.py",
+      "/work/dossier_pack.py"
+    ],
+    [
+      "pipeline/aws/r1/rk6b_rank.py",
+      "/work/rk6b_rank.py"
+    ]
+  ],
+  "steps": [
+    "\"$PY\" /work/dossier_pack.py --repo \"$REPO_DIR\" --targets \"$REPO_DIR/data/cal2026-10r1/inputs/j0_dossier_targets.json\" --add-list \"$REPO_DIR/data/cal2026-10r1/inputs/add_list_r1.json\" --flips \"$REPO_DIR/data/cal2026-10r1/inputs/flips_r1.json\" --paper-checks \"$REPO_DIR/data/cal2026-10r1/inputs/paper_checks\" --derived /work/derived --rk6a /work/rk6a --out /work/out"
+  ]
+}

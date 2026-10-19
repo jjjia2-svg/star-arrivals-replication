@@ -1,0 +1,9 @@
+DIDmultiplegtDYN==2.3.3
+polars==1.10.0.9000
+data.table==1.17.8
+jsonlite==2.0.0
+fixest==0.14.0
+yaml==2.3.10
+remotes==2.5.0
+renv==1.2.4
+R==R version 4.5.1 (2025-06-13)

@@ -1,0 +1,202 @@
+# =============================================================================
+# redlines.yaml — single entry point for thresholds / identification calibers (multiplex_pipeline)
+# =============================================================================
+# Mechanism: edit the YAML by hand; common/_redlines.py imports a literal dict (identity does zero IO);
+#       the preflight environment gate (3) checks that the RED dict equals safe_load(YAML) by SHA.
+# Rules:
+#   - Fixed-value blocks hold final values, not placeholders (start-of-work gate 06-27 + AWS migration S1 07-04).
+#   - The 13 items still None (null) = placeholders for red lines not yet fixed; identity functions raise on null
+#     and never quietly use a default. Changing these values is a deliberate decision, never left to the code.
+#     (07-04: the stale "13 items" was corrected to the actual 17; the same day C9 set reconcile.diff_tolerance -> now 16.)
+# Source: the U0 foundation spec v3 of 2026-06-28, section 5 (internal, not shipped).
+# =============================================================================
+
+rule_version: redlines_v4_signed_2026-07-05
+
+# --- Fixed values (v3, 06-27; not placeholders) ----------------------------------
+
+cohort:
+  same_gen_max_gap_years: 5          # Upper limit of the academic-age gap within the same cohort (#15)
+  robustness_gap_years: [4, 8, 10]   # Robustness bandwidth
+  event_window_years: 5
+  endpoint_binning: true
+
+academic_age:
+  baseline: career_first_pub_year    # Academic-age baseline = true first-publication year of the career (#9)
+  robust_first_pub_max_gap: 10       # Drop "isolated leading old papers" —
+                                     #   a paper separated from the rest of the real career by >10 years is a namesake wrongly merged by OpenAlex (two cases measured: a namesake's
+                                     #   1963 / 1965 old papers were merged in, pushing the first-publication year back by decades ->
+                                     #   inflated academic age -> falsely ranked in the top 5%). Real start year = the earliest year whose gap to the next publication year is <=10;
+                                     #   a continuous career is untouched (Yves Zenou's 1991 start is unaffected). This is a contamination-resistant implementation faithful to the original intent of #9 "true first publication of the career",
+                                     #   not a change of caliber. ★Value = 10 (no real career has a 10-year gap at its start); to be re-checked.
+
+fwci:
+  primary_denominator: self_built_in_frozen_snapshot
+  native_fwci_role: comparison_only
+  field_level: subfield              # #7
+  paratext_symmetric_drop: true
+  expected_method: mean              # mean (the 32-bucket quantile is discarded)
+  denominator_leave_star: false      # Denominator does not exclude stars
+  numerator_leave_star: true         # Only the numerator excludes star co-authors
+  winsorize_pct: 99
+  missing_fill: NA
+  included_types: [article, review]
+  outlier_handling: drop_paratext_then_winsor_p99
+  snapshot_year: "snapshot_2026-06-29_merkle_da78e4b9"  # S8-2 (2026-07-06): all FWCI citation counts use the frozen 2026-06-29 snapshot
+
+arrival:
+  method: modal_institution          # Modal-institution method (#3)
+  sustain_window_years: 2
+  migrant_only_in_main: true
+  trust_affiliations_years: false    # Never trust affiliations.years (Yves Zenou gold standard)
+  source_priority:
+    - orcid_employment
+    - arc
+    - wayback
+    - official_roster
+    - modal_inst_shift
+    - per_work_first_seen
+  legacy_depart_rule:
+    orcid_end_date: true
+    zero_authorship_years: 4
+
+star:
+  percentile_primary: 0.01           # Headline caliber: top 1%
+  percentile_robustness: [0.01, 0.05]
+  multi_output_physical: two_named_tables   # Two named tables, p01 / p05
+  source_filter: foreign_poach_only         # Pure foreign poaching first
+  na_warn_threshold: 0.20
+  age_bins: milojevic
+  cell_min_n:                        # Per-p estimation gate = max(cell_min_n[pct_p], floor) — GAP-1 (2026-07-07):
+    pct_1: 100                       #   top 1% -> max(100,30)=100; top 5% -> max(20,30)=30 (the floor of 30 applies).
+    pct_5: 20                        #   pct_5=20 records the rationale "a 5% cell holds at least 1 star" but is dominated by the floor; the old v4 #23 "5% 20 estimable" is superseded.
+    floor: 30                        #   floor=30 = hard gate for degenerate -> NA (estimation layer; decoupled from the GAP-2 min_authors_per_bin soft flag).
+  min_academic_age: 2                # Seniority threshold (2026-07-08; value=2 = drop the degenerate academic-age 0/1 bins).
+                                     #   Why: within-cohort ranking normalised by academic age is noise at ages 0-1 (everyone in a fresh cohort has citations ~0, tiny differences flip the percentile;
+                                     #   the m-quotient does not converge at low academic age, a known h-index result, PNAS 2005) -> drop "fresh graduates misjudged as stars" (one case measured:
+                                     #   42 citations / academic age 0). This is a measurement-reliability gate, not age discrimination. The literature mostly uses absolute / all-age thresholds
+                                     #   (the star-scientist literature, QJE 2010, Clarivate); none uses within-cohort ranking at the same academic age.
+                                     #   ★Value = 2 (drops the single-year degenerate bins 0/1, matching GAP-3 "list the first two years 0/1 separately"); the new star set is under manual review.
+  nominal_affiliation_min_share: 0.05   # 2026-07-16 (root cause C, the "real in-post gate"; threshold 0.05, flag only, no hard drop):
+                                     #   share of the person's papers carrying this school < 0.05 -> nominal_affiliation_flag raises a flag and puts the person on the manual-review list,
+                                     #   **never dropped automatically** (who is dropped is decided person by person; one borderline case at 0.0468 is kept on the strength of the earlier poach finding, noted in the flag table).
+                                     #   Caliber = same as nominal_affil_audit_2026-07-16 of the E1 wave (works_affil DISTINCT work_id,
+                                     #   the school's institution set folded by lineage); evidence = 38 people flagged (the 0-paper cases and the 0.019 case are all caught).
+  min_authors_per_bin: 50            # GAP-2 (2026-07-07) — "thin bin" soft warning gate for cohort / academic-age bins:
+                                     #   generation_person.bin_below_min = (bin_n_authors < 50).
+                                     #   ★Decoupled from cell_min_n.floor(30) — that is the percentile hard gate (estimation layer);
+                                     #   this is a group-level "do not over-trust" soft flag (display layer). The continuous bin_n_authors is stored separately, so no information is lost.
+                                     #   Evidence = the scientometric convention of a minimum reference set of ~50 (see the methodological-threshold group in verified_citations).
+
+subfield_whitelist:
+  include: ["2002"]                  # G5: Economics and Econometrics
+  exclude: ["2003"]                  # Exclude the Finance subfield
+  exclude_field: "14"                # Exclude the entire Business/Management/Accounting field
+  flagged_optional: ["2000"]
+  history_backfill_from_year: 2000
+
+education_whitelist: ["education"]   # fold_to_canonical: whitelist of parent-institution relations (#1)
+
+control_default:
+  primary: not_yet_treated           # Main control group = not yet treated (#2)
+  robustness: never_treated
+  estimator_primary: dCDH_2020_continuous_dose      # Headline estimator (#13)
+  estimator_robustness: callaway_santanna_2021
+  inference_triple:
+    - wild_cluster_bootstrap
+    - randomization_inference
+    - ferman_pinto
+
+population_gate:
+  pop_min: ge_2_distinct_publication_years   # Population gate: at least 2 distinct publication years
+  is_sample_composition_default: true
+  robustness_optional: ge_3_works
+
+output_quality:
+  quality_method: self_built_field_normalized_citation_ratio
+  quality_formula: "per_work_cited / mean(same_year_same_type_same_subfield)"
+  quality_numerator_drop_star_coauthored: true
+  quality_drop_paratext_winsor99_missing_NA: true
+  need_leave_star_output: true       # S8-6 (2026-07-06): produce the leave-star version of OUTPUT; the p01/p05 tables come from the same source
+
+generation:
+  gen_pk_includes_year: false        # The cohort grouping key is frozen once at the arrival year and does not vary with the panel year (#7)
+
+groups_control:
+  never_treated_pool_source: non_recruiting_dept_plus_incumbents_B
+  never_treated_definition: zero_foreign_star_arrival_over_2000_2025
+  match_vars: [output_trend, career_length, output_cadence, collaboration_scale]
+  match_method: CEM
+  exclude_field_proximity_from_match: true
+  thin_arm_fallback: report_not_yet_treated_only
+
+power:
+  target_power: 0.80
+  alpha: 0.05
+  cluster_unit: department
+  icc: self_estimated
+  inference_triple:
+    - wild_cluster_bootstrap
+    - randomization_inference
+    - ferman_pinto
+
+quota:
+  scopus_quota_min_floor: 100        # Engineering placeholder, not an identification red line
+
+# pass_c section (S1, 2026-07-04):
+#   Dangling OpenAlex referenced_works (pointing to merged / deleted works) are an expected consequence of the official mechanism,
+#   9.7% measured on the full 2026-07 snapshot; the threshold 0.15 = observed value + margin for quarterly snapshot drift (5% would HALT by mistake every time,
+#   30% would miss real accidents). <= threshold: dangling edges are still recorded + sidecar record; > threshold: exit(20).
+pass_c:
+  missing_ratio_halt: 0.15           # S1 — frontier dangling-ratio HALT threshold
+
+# --- ★Placeholders still None (identity raises on null; value not fixed yet) ------------
+# 15 items (after entity_resolve.score_threshold was fixed on 07-05): changing any value is a deliberate decision, never a default filled in by the code.
+# Note: fwci.snapshot_year is fixed (S8-2) and output_quality.need_leave_star_output is fixed (S8-6) (2026-07-06).
+#     (On 07-10 the three dose keys were fixed -> 10 items remain, in the entity_resolve /
+#      reverse_validate / resolve / failure_class sections below; the dose section is fully fixed.)
+
+# roster section (historical roster, 2026-07-05)
+roster:
+  dept_membership_min: 2             # Q1 (2026-07-05) — department-membership criterion: the department has >=2 distinct years
+                                     #   Independent red line, never reuse population_gate.pop_min (that is the panel inclusion threshold;
+                                     #   safeguard against caliber migration = the 6/30 adversarial review #3 + sentinel #2).
+
+# entity_resolve section (U2 disambiguation scoring / cluster-quality thresholds)
+entity_resolve:
+  score_threshold: 0.8               # 2026-07-05 — calibrated on real data: the two-school population of 162,000
+                                     #   ORCID ground truth 246,000 pairs, the curve has a 0.75 cliff, equivalent within the band [0.75,1.00], take the middle of the band;
+                                     #   evidence = the U2 calibration on ORCID pairs (2026-07-05)
+  homogeneity_min: null              # RED — unset (lower bound on cluster homogeneity; to be set after the U2 production run and the exit-gate measurements on real data)
+  completeness_min: null             # RED — unset (lower bound on cluster completeness; same as above)
+
+# reverse_validate section (P-6 reverse validation, six thresholds, all unset)
+reverse_validate:
+  recall_large_dept: null            # RED — unset (recall floor for large departments)
+  recall_small_dept: null            # RED — #11-c recall floor for small departments (measure real small departments first, then set)
+  precision_min: null                # RED — unset (precision floor)
+  completeness_min: null             # RED — unset (completeness floor)
+  homogeneity_min: null              # RED — unset (homogeneity floor)
+  faceting_recall_min: null          # RED — P-6 faceting recall threshold
+
+# resolve section (U2 disambiguation: safety net for subfield coverage, unset; added at U2 G2, 2026-06-30)
+resolve:
+  subfield_coverage_floor: null      # RED — unset (floor for non-null subfield coverage; C-4 safety net, downgraded since U1 measurement shows the field present)
+
+failure_class:
+  unknown_default_class: null        # RED — direction of data loss when there is no signal (the contract once held the placeholder "permanent" -> left null)
+
+# reconcile section (C9, 2026-07-04):
+#   Four-number reconciliation (to fetch = fetched + failed + skipped) tolerance = 0 — a byte-deterministic pipeline should show no difference, stop and investigate at a difference of one record
+#   (lesson from the silent loss of 28,500 UQ records). This is the layer of "our own processing", separate from the pass_c 15% (dangling source data).
+reconcile:
+  diff_tolerance: 0                  # C9 — four-number reconciliation with zero tolerance
+
+# dose section (main dose = coupling_share, bibliographic coupling of shared references up to t-1, #16; the secondary dose never enters dose_coupling)
+# Values fixed on 2026-07-10 as in the closing values of the U5 dose spec v3
+#   (cosine main normalisation inside identity, jaccard robustness variant at the M4 call layer; both floors closed at 0.0);
+#   the earlier null placeholders that contradicted the spec are thereby settled. Guard mechanism unchanged: setting back to null -> require() still raises.
+dose:
+  coupling_normalization: cosine     # 2026-07-10 — normalisation of the main dose (U5 v3: cosine main)
+  hub_ref_idf_floor: 0.0             # 2026-07-10 — idf floor for down-weighting hub references (U5 v3 closing value)
+  coverage_floor: 0.0                # 2026-07-10 — refs coverage floor (downgrade gate for boundary_sensitive; U5 v3 closing value)

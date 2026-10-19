@@ -1,0 +1,21 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rosteraudit",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "required_dests": [
+    "/work/merge/"
+  ],
+  "data_sync": [],
+  "copy_from_tip": [],
+  "steps": [
+    "I=\"$REPO_DIR/data/cal2026-10r1/inputs\"; C=\"$REPO_DIR/data/cal2026-10\"; \"$PY\" \"$REPO_DIR/tools/r1_roster_audit.py\" --add-list \"$I/add_list_r1.json\" --flips \"$I/flips_r1.json\" --october-events econ=\"$C/events_econ_cal2026-10.csv\" chemistry=\"$C/events_chemistry_cal2026-10.csv\" math_stats=\"$C/events_math_stats_cal2026-10.csv\" --restake \"$C/restake_econ11_aug_all_2026-10.csv\" --person-overrides \"$I/person_overrides.csv\" --roster econ=\"$C/roster_econ_verified_2026-10.parquet\" chemistry=\"$REPO_DIR/data/raw_verified/roster_gold_chemistry.parquet\" math_stats=\"$REPO_DIR/data/raw_verified/roster_gold_math_stats.parquet\" --out /work/out/october_baseline || true",
+    "I=\"$REPO_DIR/data/cal2026-10r1/inputs\"; C=\"$REPO_DIR/data/cal2026-10\"; \"$PY\" \"$REPO_DIR/tools/r1_roster_audit.py\" --add-list \"$I/add_list_r1.json\" --flips \"$I/flips_r1.json\" --october-events econ=\"$C/events_econ_cal2026-10.csv\" chemistry=\"$C/events_chemistry_cal2026-10.csv\" math_stats=\"$C/events_math_stats_cal2026-10.csv\" --restake \"$C/restake_econ11_aug_all_2026-10.csv\" --person-overrides \"$I/person_overrides.csv\" --roster econ=/work/merge/roster_econ_verified_r1.parquet chemistry=/work/merge/roster_gold_chemistry_r1.parquet math_stats=/work/merge/roster_gold_math_stats_r1.parquet --out /work/out"
+  ]
+}

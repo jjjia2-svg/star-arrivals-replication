@@ -1,0 +1,2 @@
+label,mode,perm,seed_used,n_events,n_treated_events,status,ate,se,t,p_joint_effects,p_joint_placebo,secs
+MEMPROBE_econ,p3tp,1,20260831,108,100,OK,-0.0002694145562,0.000451164278,-0.597154,0.0993184,,56.70

@@ -1,0 +1,137 @@
+{
+  "cuts": {
+    "pos_econ": {
+      "field": "econ",
+      "cut_spec": "pos",
+      "cut": 0.0,
+      "cut_full": 0.0,
+      "rows": 5496953,
+      "pairs": 329708,
+      "ties": 11245,
+      "events": 173,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_pos_econ.parquet"
+    },
+    "med_econ": {
+      "field": "econ",
+      "cut_spec": "med",
+      "cut": 0.3062,
+      "cut_full": 0.30618621784789724,
+      "rows": 1458358,
+      "pairs": 87969,
+      "ties": 3724,
+      "events": 167,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_med_econ.parquet"
+    },
+    "pos_chemistry": {
+      "field": "chemistry",
+      "cut_spec": "pos",
+      "cut": 0.0,
+      "cut_full": 0.0,
+      "rows": 680120,
+      "pairs": 42648,
+      "ties": 4858,
+      "events": 96,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_pos_chemistry.parquet"
+    },
+    "med_chemistry": {
+      "field": "chemistry",
+      "cut_spec": "med",
+      "cut": 0.3445,
+      "cut_full": 0.3445231196100261,
+      "rows": 153789,
+      "pairs": 9834,
+      "ties": 1401,
+      "events": 85,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_med_chemistry.parquet"
+    },
+    "pos_math_stats": {
+      "field": "math_stats",
+      "cut_spec": "pos",
+      "cut": 0.0,
+      "cut_full": 0.0,
+      "rows": 2185194,
+      "pairs": 130148,
+      "ties": 2808,
+      "events": 107,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_pos_math_stats.parquet"
+    },
+    "med_math_stats": {
+      "field": "math_stats",
+      "cut_spec": "med",
+      "cut": 0.0912,
+      "cut_full": 0.09118682756667203,
+      "rows": 559055,
+      "pairs": 33359,
+      "ties": 798,
+      "events": 106,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_med_math_stats.parquet"
+    },
+    "abs04_econ": {
+      "field": "econ",
+      "cut_spec": "abs04",
+      "cut": 0.4,
+      "cut_full": 0.4,
+      "rows": 882969,
+      "pairs": 53352,
+      "ties": 2385,
+      "events": 161,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_abs04_econ.parquet"
+    },
+    "p75_econ": {
+      "field": "econ",
+      "cut_spec": "p75",
+      "cut": 0.531,
+      "cut_full": 0.530955871683646,
+      "rows": 424665,
+      "pairs": 25722,
+      "ties": 1247,
+      "events": 144,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_p75_econ.parquet"
+    },
+    "abs04_chemistry": {
+      "field": "chemistry",
+      "cut_spec": "abs04",
+      "cut": 0.4,
+      "cut_full": 0.4,
+      "rows": 128294,
+      "pairs": 8206,
+      "ties": 1173,
+      "events": 82,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_abs04_chemistry.parquet"
+    },
+    "p75_chemistry": {
+      "field": "chemistry",
+      "cut_spec": "p75",
+      "cut": 0.6682,
+      "cut_full": 0.6682034581899643,
+      "rows": 39952,
+      "pairs": 2561,
+      "ties": 353,
+      "events": 67,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_p75_chemistry.parquet"
+    },
+    "abs04_math_stats": {
+      "field": "math_stats",
+      "cut_spec": "abs04",
+      "cut": 0.4,
+      "cut_full": 0.4,
+      "rows": 91290,
+      "pairs": 5474,
+      "ties": 173,
+      "events": 83,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_abs04_math_stats.parquet"
+    },
+    "p75_math_stats": {
+      "field": "math_stats",
+      "cut_spec": "p75",
+      "cut": 0.2892,
+      "cut_full": 0.289246510556032,
+      "rows": 146676,
+      "pairs": 8782,
+      "ties": 258,
+      "events": 92,
+      "frame": "<scratch>/launch_wt3/output/r1/robustness/afar_cuts/frames/p3_afar_p75_math_stats.parquet"
+    }
+  },
+  "control_content_equal": {}
+}

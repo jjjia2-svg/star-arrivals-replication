@@ -1,0 +1,507 @@
+{
+ "schema": "sar.r1.stages.v1",
+ "job": "j0",
+ "complete": true,
+ "note": "J0 = gate 1 (F23/F2/F3): the October (B0) chain rebuilt step by step inside the sandbox (config/r1/chain.json through run_config.py, one row per step), the 29 October cells on the rebuilt frames, the sandbox check, then gates.py gate1 against the read-only reference copy /work/ref/october. Launch with --pull r1/runs/<jp>/stages/=/work/jp/. F30 sets complete after the cross-model review. Every chain row carries one data:<prefix> token per pinned data_sync prefix of config/r1/jobs/j0.json (it reaches /data through config/r1/paths_aws.yaml), so a re-uploaded and repinned data layer reruns it on --resume-from instead of restoring products built from the old one (J0 review #4).",
+ "stages": [
+  {
+   "name": "verify_inputs",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/verify_inputs.py",
+   "cmd": "\"$PY\" \"$WORK/verify_inputs.py\" data --job-spec \"$REPO_DIR/config/r1/jobs/j0.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/jobs/j0.json",
+    "repo:config/r1/input_pins.json"
+   ],
+   "outputs": [
+    "work:prod/verify_inputs"
+   ],
+   "est_min": 10,
+   "needs": [],
+   "resume": "always"
+  },
+  {
+   "name": "relink",
+   "owner": "V3-UP",
+   "script": "pipeline/aws/r1/verify_inputs.py",
+   "requires": [
+    "data/cal2026-10r1/aws/uploads/symlinks_legacy_v2_output.tsv"
+   ],
+   "cmd": "\"$PY\" \"$WORK/verify_inputs.py\" relink --map \"$REPO_DIR/data/cal2026-10r1/aws/uploads/symlinks_legacy_v2_output.tsv\" --root /data/legacy/thesis/v2_output --old \"<mac_data_disk>/openalex_pipeline\" --new /data/openalex_pipeline > \"$STAGE_OUT/relink.log\"",
+   "inputs": [
+    "repo:data/cal2026-10r1/aws/uploads/symlinks_legacy_v2_output.tsv"
+   ],
+   "outputs": [
+    "work:prod/relink"
+   ],
+   "est_min": 2,
+   "needs": [
+    "verify_inputs"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "config",
+   "owner": "F9",
+   "script": "pipeline/aws/r1/config_check.py",
+   "cmd": "\"$PY\" \"$WORK/config_check.py\" check --config \"$REPO_DIR/config/r1/B0.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/B0.json",
+    "repo:pipeline/lib/r1_config.py"
+   ],
+   "outputs": [
+    "work:prod/config"
+   ],
+   "est_min": 1,
+   "needs": [
+    "verify_inputs"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "sandbox",
+   "owner": "F2",
+   "script": "pipeline/aws/r1/sandbox.py",
+   "cmd": "\"$PY\" \"$WORK/sandbox.py\" purge --repo \"$REPO_DIR\" --tsv \"$REPO_DIR/config/r1/base_inputs.tsv\" --ref /work/ref/october --config B0 --table \"$REPO_DIR/config/r1/stages/j0.json\" --allowlist \"$REPO_DIR/config/r1/read_allowlist_0828.txt\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/base_inputs.tsv",
+    "repo:config/r1/read_allowlist_0828.txt"
+   ],
+   "outputs": [
+    "work:prod/sandbox"
+   ],
+   "est_min": 10,
+   "needs": [
+    "config"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "restake_econ11_aug",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step restake_econ11_aug --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/stars/caliber_2026-10/restake_econ11.py",
+    "repo:pipeline/stars/caliber_2026-10/run_caliber.py",
+    "repo:pipeline/stars/multidisc_2026-07-24/code/star_screening",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/restake_econ11_aug_2026-10.csv",
+    "repo:data/cal2026-10/restake_econ11_control_aug_2026-10.csv",
+    "repo:data/cal2026-10/restake_econ11_report_aug_2026-10.json",
+    "work:prod/restake_econ11_aug"
+   ],
+   "est_min": 25,
+   "needs": [
+    "sandbox"
+   ]
+  },
+  {
+   "name": "restake_econ11_aug_all",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step restake_econ11_aug_all --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/stars/caliber_2026-10/restake_econ11.py",
+    "repo:pipeline/stars/caliber_2026-10/run_caliber.py",
+    "repo:pipeline/stars/multidisc_2026-07-24/code/star_screening",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/restake_econ11_aug_all_2026-10.csv",
+    "repo:data/cal2026-10/restake_econ11_control_aug_2026-10.csv",
+    "repo:data/cal2026-10/restake_econ11_report_aug_all_2026-10.json",
+    "work:prod/restake_econ11_aug_all"
+   ],
+   "est_min": 30,
+   "needs": [
+    "restake_econ11_aug"
+   ]
+  },
+  {
+   "name": "write_events",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step write_events --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/stars/caliber_2026-10/write_events.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:restake_econ11_aug",
+    "stage:restake_econ11_aug_all"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/MANIFEST.sha256",
+    "repo:data/cal2026-10/events_chemistry_cal2026-10.csv",
+    "repo:data/cal2026-10/events_chemistry_cal2026-10_p05.csv",
+    "repo:data/cal2026-10/events_decision_2026-10.json",
+    "repo:data/cal2026-10/events_econ_cal2026-10.csv",
+    "repo:data/cal2026-10/events_econ_cal2026-10_p05.csv",
+    "repo:data/cal2026-10/events_math_stats_cal2026-10.csv",
+    "repo:data/cal2026-10/events_math_stats_cal2026-10_p05.csv",
+    "work:prod/write_events"
+   ],
+   "est_min": 2,
+   "needs": [
+    "restake_econ11_aug",
+    "restake_econ11_aug_all"
+   ]
+  },
+  {
+   "name": "frames_econ920",
+   "owner": "F3/F5",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step frames_econ920 --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/frames/cal2026-10/econ920",
+    "repo:pipeline/frames/cal2026-10/stage.py",
+    "repo:pipeline/frames/cal2026-10/inpost_filter.py",
+    "repo:pipeline/frames/cal2026-10/configs",
+    "repo:pipeline/frames/econ_fnfix_2026-08-15",
+    "repo:pipeline/frames/multidisc_gold_2026-08-10",
+    "repo:pipeline/frames/p3_topicpair_2026-08-17",
+    "repo:pipeline/frames/run_frames.py",
+    "repo:pipeline/frames/make_slim.py",
+    "repo:pipeline/units",
+    "repo:tools/content_equal.py",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "repo:analysis/estimation",
+    "repo:analysis/lib",
+    "env:rmac",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:write_events",
+    "stage:restake_econ11_aug"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/frames_econ",
+    "repo:output/cal_intermediates/cal2026-10/pairs_unified.csv",
+    "work:prod/frames_econ920"
+   ],
+   "est_min": 90,
+   "needs": [
+    "write_events"
+   ]
+  },
+  {
+   "name": "pairs_pin",
+   "owner": "F1",
+   "script": "pipeline/aws/r1/check_pin.py",
+   "cmd": "\"$PY\" \"$WORK/check_pin.py\" --file \"$REPO_DIR/output/cal_intermediates/cal2026-10/pairs_unified.csv\" --report \"/work/ref/october/data/cal2026-10/frames_econ/build_report_econ920_2026-10.json\" --key october.pairs_unified --out \"$STAGE_OUT\"",
+   "inputs": [
+    "stage:frames_econ920",
+    "repo:data/cal2026-10/frames_econ/build_report_econ920_2026-10.json"
+   ],
+   "outputs": [
+    "work:prod/pairs_pin"
+   ],
+   "est_min": 1,
+   "needs": [
+    "frames_econ920"
+   ]
+  },
+  {
+   "name": "frames_chemmath",
+   "owner": "F3",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step frames_chemmath --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/frames/cal2026-10/run_cal_frames_chemmath.py",
+    "repo:pipeline/frames/cal2026-10/stage.py",
+    "repo:pipeline/frames/cal2026-10/inpost_filter.py",
+    "repo:pipeline/frames/cal2026-10/configs",
+    "repo:pipeline/frames/multidisc_gold_2026-08-10",
+    "repo:pipeline/frames/run_frames.py",
+    "repo:pipeline/frames/make_slim.py",
+    "repo:pipeline/units",
+    "repo:tools/content_equal.py",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "repo:analysis/estimation",
+    "repo:analysis/lib",
+    "env:rmac",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:write_events",
+    "stage:restake_econ11_aug"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/frames_chemistry",
+    "repo:data/cal2026-10/frames_math_stats",
+    "work:prod/frames_chemmath"
+   ],
+   "est_min": 20,
+   "needs": [
+    "write_events"
+   ]
+  },
+  {
+   "name": "afar",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step afar --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/frames/cal2026-10/run_cal_afar.py",
+    "repo:pipeline/frames/p3_topicpair_2026-08-17",
+    "repo:analysis/robustness/p3_afar_cuts/build_afar_cut.py",
+    "repo:analysis/robustness/p3_afar/build_afar.py",
+    "repo:analysis/lib",
+    "repo:pipeline/frames/run_frames.py",
+    "repo:tools/content_equal.py",
+    "repo:pipeline/stars/caliber_2026-08-28",
+    "repo:pipeline/lib",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:frames_econ920",
+    "stage:frames_chemmath"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/frames_afar",
+    "work:prod/afar"
+   ],
+   "est_min": 10,
+   "needs": [
+    "frames_econ920",
+    "frames_chemmath"
+   ]
+  },
+  {
+   "name": "p3_variants",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step p3_variants --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:analysis/robustness/threshold_p05/build_p3_full_variants.py",
+    "repo:analysis/robustness/threshold_p05/filter_frames.py",
+    "repo:pipeline/frames/make_slim.py",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:write_events",
+    "stage:frames_econ920",
+    "stage:frames_chemmath"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/frames_variants/p3_full_variants_report_chemistry.json",
+    "repo:data/cal2026-10/frames_variants/p3_full_variants_report_econ.json",
+    "repo:data/cal2026-10/frames_variants/p3_full_variants_report_math_stats.json",
+    "repo:data/cal2026-10/frames_variants/p3_slim_chemistry_dosebin3.parquet",
+    "repo:data/cal2026-10/frames_variants/p3_slim_chemistry_p05.parquet",
+    "repo:data/cal2026-10/frames_variants/p3_slim_econ_dosebin3.parquet",
+    "repo:data/cal2026-10/frames_variants/p3_slim_econ_p05.parquet",
+    "repo:data/cal2026-10/frames_variants/p3_slim_math_stats_dosebin3.parquet",
+    "repo:data/cal2026-10/frames_variants/p3_slim_math_stats_p05.parquet",
+    "work:prod/p3_variants"
+   ],
+   "est_min": 10,
+   "needs": [
+    "write_events",
+    "frames_econ920",
+    "frames_chemmath"
+   ]
+  },
+  {
+   "name": "frames",
+   "owner": "F3",
+   "script": "pipeline/aws/r1/run_config.py",
+   "cmd": "\"$PY\" \"$WORK/run_config.py\" --config \"$REPO_DIR/config/r1/B0.json\" --chain \"$REPO_DIR/config/r1/chain.json\" --step frames --repo \"$REPO_DIR\" --work \"$WORK\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/chain.json",
+    "repo:config/r1/B0.json",
+    "repo:config/r1/paths_aws.yaml",
+    "env:py",
+    "repo:pipeline/frames/cal2026-10/assemble_frames.py",
+    "repo:pipeline/lib",
+    "data:r1/derived/",
+    "data:r1/legacy/legacy_multiplex/",
+    "data:r1/legacy/legacy_thesis/",
+    "data:r1/legacy/legacy_v2_output/",
+    "data:u1_edges_full_2026-07-05/",
+    "data:u1_full_11school_2026-07-16/",
+    "data:u2_person_map_11school_2026-07-16/",
+    "data:u3_panel_11school_2026-07-16/",
+    "stage:frames_econ920",
+    "stage:frames_chemmath",
+    "stage:afar",
+    "stage:p3_variants"
+   ],
+   "outputs": [
+    "repo:data/cal2026-10/frames",
+    "repo:output/cal_intermediates/pairs_unified.csv",
+    "work:prod/frames"
+   ],
+   "est_min": 5,
+   "needs": [
+    "frames_econ920",
+    "frames_chemmath",
+    "afar",
+    "p3_variants"
+   ]
+  },
+  {
+   "name": "cells_rmac",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/run_cells.py",
+   "cmd": "\"$PY\" \"$WORK/run_cells.py\" --cells \"$REPO_DIR/config/r1/cells/oct29.tsv\" --stack rmac --repo \"$REPO_DIR\" --frames \"$WORK/prod/frames\" --gold-dir \"/work/ref/october/analysis/expected\" --out \"$STAGE_OUT\" --par 8 --threads 8 --compare",
+   "inputs": [
+    "repo:config/r1/cells/oct29.tsv",
+    "repo:analysis/estimation",
+    "stage:frames",
+    "env:rmac",
+    "repo:analysis/expected/MANIFEST.sha256"
+   ],
+   "outputs": [
+    "work:prod/cells_rmac"
+   ],
+   "est_min": 15,
+   "needs": [
+    "frames"
+   ]
+  },
+  {
+   "name": "cells_rcloud",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/run_cells.py",
+   "cmd": "\"$PY\" \"$WORK/run_cells.py\" --cells \"$REPO_DIR/config/r1/cells/oct29.tsv\" --stack rcloud --repo \"$REPO_DIR\" --frames \"$WORK/prod/frames\" --gold-dir \"/work/ref/october/analysis/expected\" --out \"$STAGE_OUT\" --par 1 --threads 32 --compare",
+   "inputs": [
+    "repo:config/r1/cells/oct29.tsv",
+    "repo:analysis/estimation",
+    "stage:frames",
+    "env:rcloud",
+    "repo:analysis/expected/MANIFEST.sha256"
+   ],
+   "outputs": [
+    "work:prod/cells_rcloud"
+   ],
+   "est_min": 20,
+   "needs": [
+    "frames"
+   ]
+  },
+  {
+   "name": "sandbox_check",
+   "owner": "F2",
+   "script": "pipeline/aws/r1/sandbox.py",
+   "cmd": "\"$PY\" \"$WORK/sandbox.py\" check --record \"$WORK/prod/sandbox/base_record.json\" --reads /work/reads --reads /work/resume/_reads --allowlist \"$REPO_DIR/config/r1/read_allowlist_0828.txt\" --config B0 --table \"$REPO_DIR/config/r1/stages/j0.json\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/read_allowlist_0828.txt"
+   ],
+   "outputs": [
+    "work:prod/sandbox_check"
+   ],
+   "est_min": 10,
+   "needs": [
+    "sandbox",
+    "frames",
+    "cells_rmac",
+    "cells_rcloud"
+   ],
+   "resume": "always"
+  },
+  {
+   "name": "gate1",
+   "owner": "F23",
+   "script": "pipeline/aws/r1/gates.py",
+   "cmd": "\"$PY\" \"$WORK/gates.py\" gate1 --cells-reports \"$WORK/prod/cells_rmac\" \"$WORK/prod/cells_rcloud\" --jp /work/jp --ref /work/ref/october --rules \"$REPO_DIR/config/r1/gate1_rules.tsv\" --tsv \"$REPO_DIR/config/r1/base_inputs.tsv\" --frames-manifest \"$WORK/prod/frames/MANIFEST.sha256\" --sandbox \"$WORK/prod/sandbox_check/sandbox_check.json\" --repo \"$REPO_DIR\" --out \"$STAGE_OUT\"",
+   "inputs": [
+    "repo:config/r1/gate1_rules.tsv",
+    "repo:config/r1/base_inputs.tsv",
+    "repo:analysis/lib",
+    "stage:frames",
+    "stage:cells_rmac",
+    "stage:cells_rcloud",
+    "stage:sandbox_check"
+   ],
+   "outputs": [
+    "work:prod/gate1"
+   ],
+   "est_min": 30,
+   "needs": [
+    "pairs_pin",
+    "frames",
+    "cells_rmac",
+    "cells_rcloud",
+    "sandbox_check"
+   ],
+   "resume": "always"
+  }
+ ]
+}

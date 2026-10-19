@@ -1,0 +1,38 @@
+pattern	rule	arg	reason
+# Gate 1 (F23): one rule per October product (config/r1/base_inputs.tsv class 'product'); first match wins; an unmatched product STOPs.
+# Rebuilt by J0's B0 chain and compared with the reference copy under October's own rule:
+data/cal2026-10/frames*/p1_frame_chemistry.csv	h1	fwci_frac,fwci_frac_ex_star	H1 (run_cal_frames.union_characterise): same lines and header, only the two fwci columns may differ, each within 8 ULP
+data/cal2026-10/frames*/p1_frame_math_stats.csv	h1	fwci_frac,fwci_frac_ex_star	H1 (run_cal_frames.union_characterise): same lines and header, only the two fwci columns may differ, each within 8 ULP
+data/cal2026-10/frames*/p1_frame_econ*.csv	h1_econ	-	econ920_lib.characterise_frame: BYTE_EQUAL or EQUAL_MODULO_Y_SWAPPED_BY_04 (the four y columns 04 swaps, within 8 ULP)
+data/cal2026-10/frames_run_report*	not_rebuilt	-	the chem/maths run report carries timestamps and scratch paths and a dated name; the frames it describes are compared
+data/cal2026-10/frames*/**/*.parquet	content	-	parquet frames are compared by content, not bytes (deviation D1: the builders do not write stable bytes)
+data/cal2026-10/frames*/**/*.csv	byte	-	every other frame CSV must be byte-identical (repo hard rule)
+data/cal2026-10/frames*/**/*.json	record	-	run, build, staging and control reports under the frames dirs carry timestamps and scratch paths: sha recorded, not compared
+data/cal2026-10/frames*/**/*.md	record	-	notes under the frames dirs are prose written by hand or by a run: sha recorded, not compared
+data/cal2026-10/frames*/**/MANIFEST.sha256	record	-	a frames MANIFEST lists parquet shas, which are not byte-stable (D1); each listed file is compared by its own rule
+data/cal2026-10/restake_econ11_aug_2026-10.csv	byte	-	restake_econ11.py with SAR_ECON_CONVENTION=aug, October's first invocation: byte-identical
+data/cal2026-10/restake_econ11_aug_all_2026-10.csv	byte	-	restake_econ11.py with SAR_ECON_CONVENTION=aug SAR_ECON_ALL=1, October's second invocation: byte-identical
+data/cal2026-10/restake_econ11_control_aug_2026-10.csv	byte	-	the aug control table both aug invocations write: byte-identical
+data/cal2026-10/restake_econ11_report_aug_2026-10.json	json_except	generated	October's keys except the timestamp; the October aug report predates the fold_person_map and convention keys
+data/cal2026-10/restake_econ11_report_aug_all_2026-10.json	json_except	generated	October's keys except the timestamp
+data/cal2026-10/events_*.csv	byte	-	write_events.py (unedited) event tables: byte-identical
+data/cal2026-10/events_decision_2026-10.json	json_except	generated	write_events.py decision record: October's keys except a timestamp, if any
+# Not rebuilt in B0 (J0 holds only the gate-1 chain; the 29 golds are compared as cells, not as files):
+data/cal2026-10/restake_econ11_*july*	not_rebuilt	-	the July-convention restake variant is not a J0 step (ruling: J0 runs only the aug and aug_all invocations)
+data/cal2026-10/restake_econ11_*aug_fold*	not_rebuilt	-	the person-map-folded restake variant is not a J0 step (ruling: J0 runs only the aug and aug_all invocations)
+data/cal2026-10/restake_control_e*	not_rebuilt	-	run_caliber.py's E1/E2 controls; run_caliber is not a J0 step (its run-2 outputs are base in _invalid_run2)
+data/cal2026-10/controls_report_*	not_rebuilt	-	October's control reports; J0's econ920 step writes its controls report to its own stage dir (--controls-report)
+data/cal2026-10/afar_control_0828_report_*	not_rebuilt	-	the A_far 08-28 control run is not a J0 step; J0 rebuilds the October A_far frames themselves
+data/cal2026-10/expected_refreeze_2026-10.json	not_rebuilt	-	promote.py's refreeze record; promotion is not in J0 (R1 promotion is promote_r1.py in J1a)
+data/cal2026-10/MANIFEST.sha256	not_rebuilt	-	the top-level sweep MANIFEST over the whole October tree; J0 rebuilds part of it and custody uses the frames MANIFEST
+data/cal2026-10/yrebuild_chemmath/**	not_rebuilt	-	y-rebuild reports hand-copied (cp -p) from the October scratch run for the paper layer; not a J0 output path
+data/cal2026-10/estimates*/**	not_rebuilt	-	October estimate JSONs: the 29 golds are compared as cells in gate 1 step 1; the 08-28 control estimates are not rerun
+data/cal2026-10/econ_gold_control/**	not_rebuilt	-	the econ gold control package is a one-off control run, not a J0 step
+data/cal2026-10/robustness/**	not_rebuilt	-	robustness runs are not reproduced in B0 (F12 = no, M_rerun = no; F19 has no B0 robustness gate)
+data/cal2026-10/paper_layer/**	not_rebuilt	-	paper-layer sync records; the paper is rebuilt by the final job, not by J0
+data/cal2026-10/new_numbers/**	not_rebuilt	-	ledger_new_2026_10.py output; not a J0 step (paper layer)
+data/cal2026-10/cloud/**	not_rebuilt	-	October EC2 cell, permutation and null runs fetched back with their custody: product per F2 (in the reference copy), not a J0 step
+data/cal2026-10/cloud_t5/**	not_rebuilt	-	October T5 EC2 batch fetched back with its custody: product per F2 (in the reference copy), not a J0 step
+data/cal2026-10/_invalid_run2/**	not_rebuilt	-	run-2 outputs kept as base inputs (F2); never rebuilt
+data/frames/**	not_rebuilt	-	the canon copy of the October frames; compared through its source data/cal2026-10/frames
+analysis/expected/**	not_rebuilt	-	the 29 golds are compared as cells (compare_json, no tolerance) in gate 1 step 1, not as files

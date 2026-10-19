@@ -1,0 +1,112 @@
+{
+ "task": "T5 cloud cells cal2026-08-28 \u2014 custody chain",
+ "verified_utc": "2026-08-28T04:57:20Z",
+ "instance": {
+  "instance_id": "i-0ec873f66546a0b87",
+  "instance_type": "r6i.16xlarge",
+  "region": "us-east-1",
+  "az": "us-east-1c",
+  "market": "on-demand",
+  "image_id": "ami-052355af2a014bd2c",
+  "launch_time_utc": "2026-08-28T04:22:33Z",
+  "terminate_time_utc": "2026-08-28T04:56:37Z",
+  "termination_state": "terminated",
+  "rate_usd_per_h": 4.032
+ },
+ "billed_minutes": 34.1,
+ "cost_usd_actual": 2.29,
+ "cost_estimate_preflight": {
+  "basis": "pipeline/aws/README.md measured timings (M1, 2026-08-16) + runbook overhead",
+  "cells_min": {
+   "P3_fnfix_chemistry": 1.8,
+   "P3_econ_fnfix": 5.6,
+   "P3evcl_chemistry": 2.2,
+   "P3evcl_econ": 6.9
+  },
+  "overhead_min": 14.0,
+  "wall_min_projected": 30.5,
+  "on_demand_usd_per_h": 4.032,
+  "cost_usd_projected_on_demand": 2.05
+ },
+ "r_drivers": {
+  "run_p3.R": {
+   "sha256": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+   "md5": "efe580e76a70b9ba678312c05b8ef837"
+  },
+  "run_p3_evcl.R": {
+   "sha256": "e653e669b0743728e0055f90ef0a775a3075918739169264761713fb57e0859e",
+   "md5": "b9c8a7afd3d5df8d043d4a18b00c8e1c"
+  }
+ },
+ "payload_md5_sha256": "2478b0229a6651ddda3734da53901d113687d853b186e9c9280038c419170668",
+ "versions_remote": "R 4.6.1 DIDmultiplegtDYN 2.4.0 polars 1.14.0.9000 data.table 1.18.6.1 jsonlite 2.0.0 \nr-cran-didmultiplegtdyn:\n  Installed: 2.4.0-1.ca2404.1\n  Candidate: 2.4.0-1.ca2404.1\nLinux <host> 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:53:06 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux",
+ "cells": {
+  "P3_fnfix_chemistry": {
+   "payload": "p3_slim_chemistry.parquet",
+   "payload_sha256_before": "202952957c4327374f683ab73d655881dfdbf26dd08dba50e5cb5d809e090f08",
+   "payload_md5_before": "3050ca6572b4159ae7a3b367fc7b44c0",
+   "remote_md5_line": "p3_slim_chemistry.parquet: OK",
+   "result_sha256_after": "085ce76eddef07ecca35bd1edd913d8a63f80ebc8b6cb9c0d0bbbd94f4fdb195",
+   "job_exit": 0,
+   "driver": "run_p3.R",
+   "secs_r": 119.705863,
+   "wall_clock": "2:04.84",
+   "peak_rss_gib": 104.2
+  },
+  "P3_econ_fnfix": {
+   "payload": "p3_slim_econ.parquet",
+   "payload_sha256_before": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d",
+   "payload_md5_before": "a873fb540182981014aef82717519e20",
+   "remote_md5_line": "p3_slim_econ.parquet: OK",
+   "result_sha256_after": "7e544c7bcfbbc038f5abb73f536c1f6ade772fbfeb2e3b0d07da4cb44f4670a9",
+   "job_exit": 0,
+   "driver": "run_p3.R",
+   "secs_r": 322.23464918,
+   "wall_clock": "5:33.94",
+   "peak_rss_gib": 297.7
+  },
+  "P3evcl_chemistry": {
+   "payload": "p3_slim_ev_chemistry.parquet",
+   "payload_sha256_before": "137a1f8bbdd1f85df2daf3f746aba00bef9b6561200acb4da855d0c4ce7e336c",
+   "payload_md5_before": "b9c1fa4a8222c63e10bc91e4f3304cf4",
+   "remote_md5_line": "p3_slim_ev_chemistry.parquet: OK",
+   "result_sha256_after": "28c3c0908551f7fbe29d1e6df1fd79c19a6c41b54b0e2cc6f2574ad7ae7d31a3",
+   "job_exit": 0,
+   "driver": "run_p3_evcl.R",
+   "secs_r": 145.13397717,
+   "wall_clock": "2:30.68",
+   "peak_rss_gib": 117.1
+  },
+  "P3evcl_econ": {
+   "payload": "p3_slim_ev_econ.parquet",
+   "payload_sha256_before": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a",
+   "payload_md5_before": "56921067aba2e3ff6cf370a75c43c36b",
+   "remote_md5_line": "p3_slim_ev_econ.parquet: OK",
+   "result_sha256_after": "1c1a9546bb10f5d72ef0f29f7fbeda874eead6a263c2c14ee490e174e78e7e30",
+   "job_exit": 0,
+   "driver": "run_p3_evcl.R",
+   "secs_r": 398.807688,
+   "wall_clock": "6:51.53",
+   "peak_rss_gib": 303.3
+  }
+ },
+ "result_marker": "ALL_DONE_MARKER_2026_08_28C",
+ "fetch_sha256": {
+  "P3_econ_fnfix.json": "7e544c7bcfbbc038f5abb73f536c1f6ade772fbfeb2e3b0d07da4cb44f4670a9",
+  "P3_fnfix_chemistry.json": "085ce76eddef07ecca35bd1edd913d8a63f80ebc8b6cb9c0d0bbbd94f4fdb195",
+  "P3evcl_chemistry.json": "28c3c0908551f7fbe29d1e6df1fd79c19a6c41b54b0e2cc6f2574ad7ae7d31a3",
+  "P3evcl_econ.json": "1c1a9546bb10f5d72ef0f29f7fbeda874eead6a263c2c14ee490e174e78e7e30",
+  "RESULT.txt": "361f0fb124571ef71c2d27a91ca2ba24c3657c393c42312460d1db2ae223809e",
+  "driver.log": "464c82a2afe960c0965747eda7b58f046c0075156c3ad1ecf39cf2ad24f6e69e",
+  "log_chem.txt": "694ceff2e444fa096c67b36123ed64ba18a3f7ce05fd0f40eef37c061ff260a2",
+  "log_econ.txt": "29ce6245a177556445e6888884c00d3bb4fed773ed9f52aa1a2a7fb034737a3d",
+  "log_evchem.txt": "f4f03e6f13b342e4143017a41a2352e0f6750c9dff9e3157f205b3e4f0c0fb70",
+  "log_evecon.txt": "4cbc8f2e506f6c5b5c24bb20e3519cdff035293684d140851f5c7d21d1422b02",
+  "mem.log": "7fa88615984dc389f28c9879a268bbbb0850fb655a4eeecb21423aabc5f83b5e",
+  "timev_chem.txt": "b6747412d53f9b48e3492ada6cf3d31506f267d31a1697a8d193b03c564ca9d3",
+  "timev_econ.txt": "15da0a509b98086a36c4cb379430d7fa9a2d9a346b214305268c2a88aadab9ba",
+  "timev_evchem.txt": "cfa25fb44d2bc1c55a825617d3515e255ca9de15bef231884df663c1c8d2d9bd",
+  "timev_evecon.txt": "33d4a23dd9097d83ecc6f563b8e7e22042a64e2d1e3e9e846f7f2b0331699f9d",
+  "versions.txt": "c9be306c5bb35b408aed3737c40c3d32b14f750b85b90302bc7546c551d0dc83"
+ }
+}

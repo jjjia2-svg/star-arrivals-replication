@@ -1,0 +1,18 @@
+$ Rscript analysis/estimation/run_p2.R P2ds_math_stats $TMPDIR/sar_rob_sensitivity/ds/p2_ds_math_stats.csv
+[env] {"SAR_OUT": "data/cal2026-10/robustness/doublestar/estimates", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 2 P2ds_math_stats rows=5504 relations=326 first ties=7 =====
+  [P2ds_math_stats] FAIL: infinite or missing values in 'x'
+[P2ds_math_stats] done
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+
+--- rc=0 secs=3.9 ---

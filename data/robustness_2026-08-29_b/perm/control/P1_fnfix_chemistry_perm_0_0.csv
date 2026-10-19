@@ -1,0 +1,2 @@
+label,mode,perm,seed_used,n_events,n_treated_events,status,ate,se,t,p_joint_effects,p_joint_placebo,secs
+P1_fnfix_chemistry,p1,0,,38,38,OK,-0.2340150613,0.05442008845,-4.30016,0.00108679,0.386919,10.20

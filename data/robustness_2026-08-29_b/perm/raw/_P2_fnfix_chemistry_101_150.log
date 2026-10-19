@@ -1,0 +1,10 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p2 P2_fnfix_chemistry events=38 perms=101..150 seed=20260829 =====
+  [P2_fnfix_chemistry] perm 125 done (7.7s)
+  [P2_fnfix_chemistry] perm 150 done (6.1s)
+[P2_fnfix_chemistry] 101..150 done -> data/robustness_2026-08-29_b/perm/raw/P2_fnfix_chemistry_perm_101_150.csv

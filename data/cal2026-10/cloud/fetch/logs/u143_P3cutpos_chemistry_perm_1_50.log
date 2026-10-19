@@ -1,0 +1,5 @@
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=1..50 seed=20260830 =====
+  [P3cutpos_chemistry] perm 25 done (9.4s)
+  [P3cutpos_chemistry] perm 50 done (9.5s)
+[P3cutpos_chemistry] 1..50 完成 -> out_perm/P3cutpos_chemistry_perm_1_50.csv

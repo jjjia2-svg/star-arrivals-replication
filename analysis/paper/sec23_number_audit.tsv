@@ -1,0 +1,327 @@
+# sec23_number_audit.tsv - R1 P3 N12 part 3 (W2-SENTINEL, 2026-10-16). One row per numeral the base manuscript tree
+# (check_paper.BASE_TREE_REL) prints in
+# sections/sec2_data.tex and sections/sec3_strategy.tex, plus the one sec4_p3.tex sentence N12 names. Built on the Mac by
+# reading the .tex text only (comments stripped; \label/\ref/\cite keys, \includegraphics options and layout commands are
+# not printed and not listed). Number words are listed only where they carry data or answer a NEWPIN marker.
+# category: pinned = a tools/check_paper.py pin covers it (ref = pin name; on the base tree its regex may need the
+#   'vault' overlay, filled from finalb0-01); key_needs_pin = an existing ledger key, pinned by check_paper's
+#   BASE_TREE_CLAIMS under --tree base_2026_10_11 (ref = claim name); design_constant = a design value, label or
+#   notation, not data (ref = -, note = reason); needs_key = no generated source today, or a carried legacy source that
+#   will not follow M (ref = proposed key of a new non-thesis ledger output/paper/data_numbers_r1_counts.json; owner in note).
+# newpin_line: the sec3 '% NEWPIN:' marker line this row answers (- if none).
+file	line	numeral	category	ref	newpin_line	note
+sec2_data.tex	30	26	key_needs_pin	base sec2 opening release day	-	funnel snapshot_release_date (day)
+sec2_data.tex	30	2026	key_needs_pin	base sec2 opening release year	-	funnel snapshot_release_date (year)
+sec2_data.tex	40	26	pinned	sec2 snapshot release day 26	-	funnel snapshot_release_date (day)
+sec2_data.tex	40	2026	pinned	sec2 snapshot release year 2026	-	funnel snapshot_release_date (year)
+sec2_data.tex	40	510	pinned	sec2 snapshot 510 million works	-	funnel works_snapshot / 1e6
+sec2_data.tex	53	376	pinned	sec2 benchmark 376 million works	-	funnel works_benchmarkable / 1e6
+sec2_data.tex	54	543{,}037	pinned	sec2 benchmark 543,037 cells	-	funnel benchmark_cells
+sec2_data.tex	54	258	pinned	sec2 articles+reviews 258 million works	-	funnel works_articles_reviews / 1e6 (SYNC_REANCHOR)
+sec2_data.tex	63	10	design_constant	-	-	star threshold: top 10 percent of the subfield x academic-age cell (main threshold)
+sec2_data.tex	66	10.5	pinned	sec2 ranking pool 10.5 million authors	-	funnel u1_universe.authors / 1e6 (SYNC_REANCHOR)
+sec2_data.tex	71	two (word)	needs_key	data_numbers_r1_counts:chem_stars_prior_au_postdoc	-	stars admitted with an earlier short Australian postdoc (two in chemistry); no ledger key; owner: the M events/star-origin generator (events_r1 or fig_star_origins). New stars in M may change it
+sec2_data.tex	91	1999	design_constant	-	-	observation window for arrivals 1999-2024 (signed 2026-08-28)
+sec2_data.tex	91	2024	design_constant	-	-	observation window for arrivals 1999-2024 (signed 2026-08-28)
+sec2_data.tex	92	2024	pinned	sec2 chem roster edge nominal in 2024	-	funnel roster_spell_max_start.chem + 1
+sec2_data.tex	92	2020	pinned	sec2 math roster edge after 2020	-	funnel roster_spell_max_start.math
+sec2_data.tex	93	11	pinned	sec2 departments econ 11	-	carried events_by_school_econ (number of schools)
+sec2_data.tex	94	8	pinned	sec2 departments chem 8	-	carried events_by_school_chem (number of schools)
+sec2_data.tex	94	6	pinned	sec2 departments math 6	-	carried events_by_school_math (number of schools)
+sec2_data.tex	95	1999	pinned	sec2 arrival span econ first 1999	-	carried events_by_school_econ (earliest year)
+sec2_data.tex	95	2024	pinned	sec2 arrival span econ last 2024	-	carried events_by_school_econ (latest year)
+sec2_data.tex	95	2001	pinned	sec2 arrival span chem first 2001	-	carried events_by_school_chem (earliest year)
+sec2_data.tex	95	2023	pinned	sec2 arrival span chem last 2023	-	carried events_by_school_chem (latest year)
+sec2_data.tex	96	2002	pinned	sec2 arrival span math first 2002	-	carried events_by_school_math (earliest year)
+sec2_data.tex	96	2020	pinned	sec2 arrival span math last 2020	-	carried events_by_school_math (latest year)
+sec2_data.tex	96	11	design_constant	-	-	the 11 screened universities (Group of Eight + Deakin, Macquarie, UTS): sample design
+sec2_data.tex	110	134	needs_key	data_numbers_r1_counts:chem_centre_added	-	pinned today by 'sec2 centre roster added chem 134', but carried chem_centre_added reads the legacy multidisc_gold_2026-08-10 prep_final_report.json (canon_reads.tsv: carried, not recomputed); P3a rebuilt the chemistry rosters (Monash 2001/2005), so M would print a stale count. Owner: ledger_carried.py from the M roster merge report
+sec2_data.tex	111	28	needs_key	data_numbers_r1_counts:math_centre_added	-	pinned today by 'sec2 centre roster added math 28', same legacy source as chem_centre_added; P3a rebuilt the mathematics rosters (Adelaide whole school). Owner: ledger_carried.py from the M roster merge report
+sec2_data.tex	111	1{,}008	pinned	sec2 rosters econ 1008	-	carried roster_people.econ (canon cal roster_econ_verified, follows M)
+sec2_data.tex	111	518	pinned	sec2 rosters chem 518	-	carried roster_people.chem (canon raw_verified roster_gold_chemistry, follows M)
+sec2_data.tex	111	573	pinned	sec2 rosters math 573	-	carried roster_people.math (canon raw_verified roster_gold_math_stats, follows M)
+sec2_data.tex	113	1	pinned	sec2 zero-roster events 1	-	main econ_zero_roster_events
+sec2_data.tex	113	113	pinned	sec2 zero-roster of 113 events	-	main econ_events
+sec2_data.tex	114	2000	needs_key	data_numbers_r1_counts:econ_zero_roster_event_roster_start	-	first year of the ANU economics staff lists (the zero-roster event's department); read by hand from the roster parquet (% src), no ledger key; the university named in the sentence also comes from the data. Owner: ledger_main.py / ledger_carried.py from the M econ roster
+sec2_data.tex	124	99	pinned	r4 sec2 footnote econ two-hop share 99 percent	-	cal new_numbers/data_numbers_new_2026-10.json econ.share_twohop_network_channel (section_d_r4_claims; read via P['cal'] since F7)
+sec2_data.tex	127	11	design_constant	-	-	the 11 screened universities: sample design
+sec2_data.tex	151	1{,}817	pinned	sec2 exposure caption network-only 1,817	-	main econ_relations.network (SYNC_REANCHOR)
+sec2_data.tex	151	6{,}643	pinned	sec2 exposure caption relations 6,643	-	main econ_relations.total (SYNC_REANCHOR)
+sec2_data.tex	162	11	design_constant	-	-	the 11 screened universities: sample design (figure caption)
+sec2_data.tex	163	2016	key_needs_pin	base sec2 hops caption Zenou arrival year	-	gaps_zenou _event arrival year
+sec2_data.tex	176	0.1	design_constant	-	-	lowest dose bin edge (dose below 0.1)
+sec2_data.tex	176	20	pinned	sec2 lowest dose bin econ 20%	-	main econ_dose_bins_pct.0 (SYNC_REANCHOR)
+sec2_data.tex	176	24	pinned	sec2 lowest dose bin chem 24%	-	main chem_dose_bins_pct.0 (SYNC_REANCHOR)
+sec2_data.tex	177	69	pinned	sec2 lowest dose bin math 69%	-	main math_dose_bins_pct.0 (SYNC_REANCHOR)
+sec2_data.tex	178	3	pinned	sec2_data subfields per discipline: econ 3	-	main econ_own_field_subfields_in_extraction_table
+sec2_data.tex	178	6	pinned	sec2_data subfields per discipline: chem 6	-	main chem_own_field_subfields_in_extraction_table
+sec2_data.tex	179	10	pinned	sec2_data subfields per discipline: math 10	-	main math_own_field_subfields_in_extraction_table
+sec2_data.tex	186	1	design_constant	-	-	panel label (Panel 1)
+sec2_data.tex	188	1	design_constant	-	-	panel label (Panel 1)
+sec2_data.tex	188	2026	needs_key	data_numbers_r1_counts:p1_last_output_year_econ_chem	-	last year with output in the economics and chemistry Panel 1 frames (fwci_frac non-null); only a % src note, no ledger key. Owner: ledger_carried.py from the M P1 frames
+sec2_data.tex	188	2025	needs_key	data_numbers_r1_counts:p1_last_output_year_math	-	last year with output in the mathematics Panel 1 frame (2026 has no non-null row in October); only a % src note. Owner: ledger_carried.py from the M P1 frames
+sec2_data.tex	188	26	key_needs_pin	base sec2 P1 footnote release day	-	funnel snapshot_release_date (day)
+sec2_data.tex	188	2026	key_needs_pin	base sec2 P1 footnote release year	-	funnel snapshot_release_date (year)
+sec2_data.tex	188	2026	key_needs_pin	base sec2 P1 footnote first-half year	-	funnel snapshot_release_date (year): the release covers only the first half of its year
+sec2_data.tex	191	60	design_constant	-	-	age-gap cap: abs(academic-age gap) <= 60 (P1 spec.filter in analysis/expected)
+sec2_data.tex	191	2	design_constant	-	-	panel label (Panel 2)
+sec2_data.tex	193	3	design_constant	-	-	panel label (Panel 3)
+sec2_data.tex	194	1	design_constant	-	-	panel label (Panels 1 and 2)
+sec2_data.tex	194	2	design_constant	-	-	panel label (Panels 1 and 2)
+sec2_data.tex	195	3	design_constant	-	-	panel label (Panel 3)
+sec2_data.tex	204	2	design_constant	-	-	panel label (Panels 2 and 3)
+sec2_data.tex	204	3	design_constant	-	-	panel label (Panels 2 and 3)
+sec2_data.tex	211	2016	key_needs_pin	base sec2 window footnote example arrival year	-	gaps_zenou _event arrival year
+sec2_data.tex	211	2010	key_needs_pin	base sec2 window footnote first followed year	-	gaps_zenou arrival year - 6 (Panels 2-3 window -6/+10)
+sec2_data.tex	212	2013	design_constant	-	-	hypothetical first-tie year inside the window (illustration)
+sec2_data.tex	212	2010	key_needs_pin	base sec2 window footnote followed-from year (second mention)	-	gaps_zenou arrival year - 6
+sec2_data.tex	212	2013	design_constant	-	-	hypothetical first-tie year inside the window (illustration, second mention)
+sec2_data.tex	213	2009	design_constant	-	-	hypothetical first-tie year before the window starts (illustration)
+sec2_data.tex	215	3	design_constant	-	-	panel label (Panel 3)
+sec2_data.tex	215	90{,}325	pinned	sec2 P3 econ pairs 23,758	-	p3afar econ.pairs (SYNC_REANCHOR; also 'p3 cut pos econ pairs 90,325')
+sec2_data.tex	215	11{,}466	pinned	sec2 P3 chem pairs 2,466	-	p3afar chemistry.pairs (SYNC_REANCHOR)
+sec2_data.tex	216	15{,}318	pinned	sec2 P3 math pairs 2,770	-	p3afar math_stats.pairs (SYNC_REANCHOR)
+sec2_data.tex	218	3	design_constant	-	-	panel label (Panel 3)
+sec2_data.tex	219	2	pinned	sec2 P3 econ events-without-pairs 30	-	main econ_events - p3afar econ.events_with_pairs (SYNC_REANCHOR)
+sec2_data.tex	219	113	pinned	sec2 P3 no-pair arrivals: economics events 113	-	main econ_events
+sec2_data.tex	219	1	key_needs_pin	base sec2 P3 no-pair math arrivals	-	main math_events - p3afar math_stats.events_with_pairs
+sec2_data.tex	219	33	key_needs_pin	base sec2 P3 math arrivals (of all)	-	main math_events
+sec2_data.tex	227	2016	key_needs_pin	base sec2 Zenou arrival year	-	gaps_zenou _event arrival year
+sec2_data.tex	228	99.7	pinned	sec2_data Zenou: star percentile 99.7	-	gaps_zenou star_percentile
+sec2_data.tex	229	2016	key_needs_pin	base sec2 Zenou roster year	-	gaps_zenou _event arrival year
+sec2_data.tex	230	60	pinned	sec2_data Zenou: roster 60	-	gaps_zenou roster
+sec2_data.tex	230	66	pinned	sec2_data Zenou: two-hop network 66	-	gaps_zenou network
+sec2_data.tex	231	42	pinned	sec2_data Zenou: network-only 42	-	gaps_zenou network_only
+sec2_data.tex	232	102	pinned	sec2_data Zenou: union 102	-	gaps_zenou union (SYNC_REANCHOR)
+sec2_data.tex	233	0.51	pinned	sec2_data Zenou: median dose 0.51	-	gaps_zenou dose_median (SYNC_REANCHOR)
+sec2_data.tex	233	1	design_constant	-	-	panel label (Panel 1)
+sec2_data.tex	233	102	key_needs_pin	base sec2 Zenou Panel 1 follows all (union)	-	gaps_zenou union (second mention)
+sec2_data.tex	233	2	design_constant	-	-	panel label (Panel 2)
+sec2_data.tex	233	100	pinned	sec2_data Zenou: Panel 2 follows 100	-	gaps_zenou p2_followed
+sec2_data.tex	234	two (word)	key_needs_pin	base sec2 Zenou Panel 2 pre-window count (word)	-	gaps_zenou union - p2_followed
+sec2_data.tex	234	2010	key_needs_pin	base sec2 Zenou Panel 2 pre-window year	-	gaps_zenou arrival year - 6
+sec2_data.tex	234	6	pinned	sec2_data Zenou: first ties post 6	-	gaps_zenou p2_first_ties_post (SYNC_REANCHOR)
+sec2_data.tex	235	60	key_needs_pin	base sec2 Zenou roster count (second mention)	-	gaps_zenou roster
+sec2_data.tex	235	36	pinned	sec2_data Zenou: outside network 36	-	gaps_zenou outside_network
+sec2_data.tex	236	36	pinned	sec2_data Zenou: same-topic outside 36	-	gaps_zenou same_topic_outside (SYNC_REANCHOR)
+sec2_data.tex	236	all (word)	key_needs_pin	base sec2 Zenou all same-topic outside (word)	-	gaps_zenou same_topic_outside == outside_network
+sec2_data.tex	236	630	pinned	sec2_data Zenou: possible pairs 630	-	gaps_zenou pairs_possible (SYNC_REANCHOR)
+sec2_data.tex	237	3	design_constant	-	-	panel label (Panel 3)
+sec2_data.tex	237	624	pinned	sec2_data Zenou: pairs 624	-	gaps_zenou pairs (SYNC_REANCHOR)
+sec2_data.tex	237	six (word)	key_needs_pin	base sec2 Zenou Panel 3 pre-window pairs (word)	-	gaps_zenou pairs_excluded_prewindow
+sec2_data.tex	238	2010	key_needs_pin	base sec2 Zenou Panel 3 pre-window year	-	gaps_zenou arrival year - 6
+sec2_data.tex	242	1	design_constant	-	-	panel label (Panel 1)
+sec2_data.tex	243	8.1	pinned	sec2 empty-by-design share econ	-	main econ_py_decomp empty/rows (N12 part 2)
+sec2_data.tex	244	5.2	pinned	sec2 no-FWCI share econ	-	main econ_py_decomp genuine_missing/rows (N12 part 2)
+sec2_data.tex	246	6.8	pinned	sec2 empty-by-design share chem	-	carried chem_py_decomp empty/rows (N12 part 2)
+sec2_data.tex	246	1.4	pinned	sec2 no-FWCI share chem	-	carried chem_py_decomp genuine_missing/rows (N12 part 2)
+sec2_data.tex	247	10.5	pinned	sec2 empty-by-design share math	-	carried math_py_decomp empty/rows (N12 part 2)
+sec2_data.tex	247	5.0	pinned	sec2 no-FWCI share math	-	carried math_py_decomp genuine_missing/rows (N12 part 2)
+sec3_strategy.tex	76	1	design_constant	-	-	panel label (Panels 1 to 3)
+sec3_strategy.tex	76	3	design_constant	-	-	panel label (Panels 1 to 3)
+sec3_strategy.tex	77	2.3	design_constant	-	-	section number inside the supervisor's deleted text (\BORdel), not printed in the clean PDF
+sec3_strategy.tex	95	11	design_constant	-	-	the 11 screened universities: sample design
+sec3_strategy.tex	97	1	design_constant	-	-	panel label (Panels 1 and 2)
+sec3_strategy.tex	97	2	design_constant	-	-	panel label (Panels 1 and 2)
+sec3_strategy.tex	98	3	design_constant	-	-	panel label (Panel 3)
+sec3_strategy.tex	102	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	106	-5	design_constant	-	-	equation (1): event window ell from -5 to 5 (Model 1 window +-5, signed 2026-06-25)
+sec3_strategy.tex	106	-1	design_constant	-	-	equation (1): base year ell = -1
+sec3_strategy.tex	106	5	design_constant	-	-	equation (1): event window upper end 5
+sec3_strategy.tex	107	1	design_constant	-	-	indicator notation 1[.]
+sec3_strategy.tex	116	0	design_constant	-	-	ell >= 0 (post-arrival coefficients)
+sec3_strategy.tex	119	-2	design_constant	-	-	ell <= -2 (placebo coefficients)
+sec3_strategy.tex	125	8	pinned	sec3 zero-dose econ 8%	-	gaps_zero_dose econ_zero_dose_share_pct
+sec3_strategy.tex	126	6	pinned	sec3 zero-dose chem 6%	-	gaps_zero_dose chem_zero_dose_share_pct
+sec3_strategy.tex	126	31	pinned	sec3 zero-dose math 31%	-	gaps_zero_dose math_zero_dose_share_pct
+sec3_strategy.tex	131	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	131	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	132	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	132	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	137	0	design_constant	-	-	equation (2): ell from 0
+sec3_strategy.tex	137	4	design_constant	-	-	equation (2): to ell = 4 (Models 2-3 stop at the fourth year: no zero-dose relations)
+sec3_strategy.tex	137	1	design_constant	-	-	indicator notation 1[.]
+sec3_strategy.tex	140	0	design_constant	-	-	equation (3): ell from 0
+sec3_strategy.tex	140	4	design_constant	-	-	equation (3): to ell = 4
+sec3_strategy.tex	140	1	design_constant	-	-	indicator notation 1[.]
+sec3_strategy.tex	143	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	143	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	144	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	145	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	146	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	147	3	design_constant	-	-	panel label (Panel 3)
+sec3_strategy.tex	149	1	design_constant	-	-	model label (Models 1, 2 and 3)
+sec3_strategy.tex	149	2	design_constant	-	-	model label (Models 1, 2 and 3)
+sec3_strategy.tex	149	3	design_constant	-	-	model label (Models 1, 2 and 3)
+sec3_strategy.tex	149	1	design_constant	-	-	panel label (Panels 1, 2 and 3)
+sec3_strategy.tex	149	2	design_constant	-	-	panel label (Panels 1, 2 and 3)
+sec3_strategy.tex	149	3	design_constant	-	-	panel label (Panels 1, 2 and 3)
+sec3_strategy.tex	156	1	design_constant	-	-	outcome indicator f = 1 (first joint paper)
+sec3_strategy.tex	173	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	174	-1	design_constant	-	-	base year ell = -1
+sec3_strategy.tex	175	-2	design_constant	-	175	placebo pairing rule ell=-2 with 0 ... -5 with 3 (dossier 3.5 v2, Y6); no data number printed
+sec3_strategy.tex	175	0	design_constant	-	175	placebo pairing rule (ell=-2 with ell=0)
+sec3_strategy.tex	175	-5	design_constant	-	175	placebo pairing rule (ell=-5 with ell=3)
+sec3_strategy.tex	175	3	design_constant	-	175	placebo pairing rule (ell=-5 with ell=3)
+sec3_strategy.tex	182	2	design_constant	-	-	panel label (Panels 2 and 3)
+sec3_strategy.tex	182	3	design_constant	-	-	panel label (Panels 2 and 3)
+sec3_strategy.tex	184	2	design_constant	-	184	panel label (Panels 2 and 3); the NEWPIN numbers (four, five years) are the window rule: Model 1 +-5, base year a-1 (dossier 3.2)
+sec3_strategy.tex	184	3	design_constant	-	184	panel label (Panels 2 and 3)
+sec3_strategy.tex	185	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	186	(none: words)	design_constant	-	186	NEWPIN: only zero-dose comparisons at ell=4,5 and -4,-5 (dossier 3.2); no numeral on the line; the claim is checked on the Section 3.3 example (row 493)
+sec3_strategy.tex	188	two, three (words)	design_constant	-	188	NEWPIN: ell=-4,-5 pair with ell=2,3 (pairing rule, dossier 3.5 v2 Y6)
+sec3_strategy.tex	190	2	design_constant	-	190	model label (Models 2 and 3); NEWPIN: Models 2-3 none at ell=5 (window -6/+10, dossier 3.2)
+sec3_strategy.tex	190	3	design_constant	-	190	model label (Models 2 and 3)
+sec3_strategy.tex	193	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	193	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	201	0	design_constant	-	-	outcome indicator f = 0 in the year before arrival
+sec3_strategy.tex	204	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	206	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	206	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	211	six (word)	design_constant	-	211	NEWPIN: pre-arrival rate window = the six years before arrival (Panels 2-3 window -6/+10)
+sec3_strategy.tex	224	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	232	0.38	key_needs_pin	base sec3 average dose of switching relations econ	232	gaps_switchers_p1p2 p1.econ.avg_dose_switchers, rounded once to 2 dp
+sec3_strategy.tex	232	0.40	key_needs_pin	base sec3 average dose of switching relations chem	232	gaps_switchers_p1p2 p1.chemistry.avg_dose_switchers, rounded once (the p1p2 ledger's 0.405 would round twice to 0.41)
+sec3_strategy.tex	233	0.19	key_needs_pin	base sec3 average dose of switching relations math	234	gaps_switchers_p1p2 p1.math_stats.avg_dose_switchers, rounded once
+sec3_strategy.tex	239	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	239	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	243	1	design_constant	-	-	panel label (Panel 1)
+sec3_strategy.tex	247	1	design_constant	-	-	model label (Models 1 and 2)
+sec3_strategy.tex	248	2	design_constant	-	-	model label (Models 1 and 2)
+sec3_strategy.tex	248	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	257	113	pinned	sec3 econ 113 events	-	main econ_events
+sec3_strategy.tex	257	111	pinned	sec3 econ 86 events with pairs	-	p3afar econ.events_with_pairs
+sec3_strategy.tex	258	3	design_constant	-	-	panel label (Panel 3)
+sec3_strategy.tex	260	38	pinned	sec3 chem 38 events	-	main chem_events
+sec3_strategy.tex	260	33	pinned	sec3 math 33 events	-	main math_events
+sec3_strategy.tex	260	32	key_needs_pin	base sec3 math Panel 3 events with pairs	260	p3afar math_stats.events_with_pairs
+sec3_strategy.tex	260	3	design_constant	-	-	panel label (Panel 3)
+sec3_strategy.tex	268	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	276	500	key_needs_pin	base sec3 shuffled runs	276	p1p2 perm_pvalues.B (number of shuffled-years runs)
+sec3_strategy.tex	279	0.05	design_constant	-	-	pass threshold of a pre-arrival / shuffled-years test (p above 0.05)
+sec3_strategy.tex	293	1	design_constant	-	-	assumption label (A1)
+sec3_strategy.tex	295	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	296	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	297	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	301	2	design_constant	-	-	assumption label (A2)
+sec3_strategy.tex	304	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	304	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	307	3	design_constant	-	-	assumption label (A3)
+sec3_strategy.tex	312	4	design_constant	-	-	assumption label (A4)
+sec3_strategy.tex	316	4	design_constant	-	-	assumption label (A4)
+sec3_strategy.tex	321	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	322	95	key_needs_pin	base sec3 econ arrivals after an earlier star	322	p1p2 p1_doublestar_econ.events_dropped (as sec4_robustness.tex)
+sec3_strategy.tex	322	113	key_needs_pin	base sec3 econ arrivals (of all)	-	p1p2 p1_econ.events
+sec3_strategy.tex	323	4	design_constant	-	-	assumption label (A4)
+sec3_strategy.tex	328	5	design_constant	-	-	assumption label (A5)
+sec3_strategy.tex	333	1	design_constant	-	-	assumption label (A1)
+sec3_strategy.tex	333	2	design_constant	-	-	assumption label (A2)
+sec3_strategy.tex	334	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	338	0.05	design_constant	-	337	NEWPIN: pass threshold p > 0.05 (design rule, sec4_robustness.tex:12)
+sec3_strategy.tex	345	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	345	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	371	1.1	design_constant	-	-	clause number of the cited University of Melbourne policy (citation locator)
+sec3_strategy.tex	371	1	design_constant	-	-	assumption label (A1)
+sec3_strategy.tex	371	3	design_constant	-	-	assumption label (A3)
+sec3_strategy.tex	378	4	design_constant	-	-	assumption label (A4)
+sec3_strategy.tex	387	2	design_constant	-	-	assumption label (A2)
+sec3_strategy.tex	395	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	397	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	397	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	404	5	design_constant	-	-	assumption label (A5)
+sec3_strategy.tex	405	3	design_constant	-	-	panel label (Panel 3)
+sec3_strategy.tex	406	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	408	2	design_constant	-	-	panel label (Panel 2)
+sec3_strategy.tex	411	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	416	5	design_constant	-	-	assumption label (A5)
+sec3_strategy.tex	418	1	design_constant	-	-	illustration: log(1+y) (change of output unit)
+sec3_strategy.tex	418	1	design_constant	-	-	illustration: log(1+10y), its 1 (change of output unit)
+sec3_strategy.tex	418	10	design_constant	-	-	illustration: log(1+10y) (change of output unit)
+sec3_strategy.tex	419	10	design_constant	-	-	illustration: log 10
+sec3_strategy.tex	431	5	design_constant	-	-	assumption label (A5)
+sec3_strategy.tex	441	3	design_constant	-	-	assumption label (A3)
+sec3_strategy.tex	450	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	450	2	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	450	3	design_constant	-	-	model label (Models 2 and 3)
+sec3_strategy.tex	458	2016	key_needs_pin	base sec3 example subsection title year	-	gaps_zenou _event arrival year (the example cohort)
+sec3_strategy.tex	461	2016	key_needs_pin	base sec3 example arrivals year	461	gaps_zenou _event arrival year
+sec3_strategy.tex	463	2016	key_needs_pin	base sec3 example ell=0 year	463	gaps_zenou _event arrival year
+sec3_strategy.tex	463	0	design_constant	-	-	ell = 0 (arrival year)
+sec3_strategy.tex	463	2015	key_needs_pin	base sec3 example ell=-1 year	463	gaps_zenou _event arrival year - 1
+sec3_strategy.tex	464	-1	design_constant	-	-	ell = -1 (base year)
+sec3_strategy.tex	468	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	469	2016	design_constant	-	-	example cohort G = 2016 (analysis/paper/_fig34_style.G; Zenou identity guarded by N11)
+sec3_strategy.tex	469	2018	design_constant	-	-	G + 2 (the coefficient two years after arrival)
+sec3_strategy.tex	470	2015	design_constant	-	-	G - 1 (base year)
+sec3_strategy.tex	470	2018	design_constant	-	-	G + 2
+sec3_strategy.tex	472	2019	key_needs_pin	base sec3 example M1 2018 comparisons (first year)	472	fig_comparison_pools pools.M1_pos.2018.arrival_years (economics arrival years that exist)
+sec3_strategy.tex	472	2020	key_needs_pin	base sec3 example M1 2018 comparisons (last year)	-	fig_comparison_pools pools.M1_pos.2018.arrival_years
+sec3_strategy.tex	477	1	design_constant	-	-	model label (Model 1), paragraph title
+sec3_strategy.tex	477	2014	design_constant	-	-	G - 2 (placebo year)
+sec3_strategy.tex	478	2016	design_constant	-	-	example cohort G
+sec3_strategy.tex	478	2014	design_constant	-	-	G - 2 (placebo year)
+sec3_strategy.tex	479	2016	design_constant	-	-	example cohort G
+sec3_strategy.tex	480	2015	design_constant	-	480	G - 1 (base year); NEWPIN: placebo pairing rule ell=-2 with 0 ... -5 with 3 (dossier 3.5 v2 Y6)
+sec3_strategy.tex	480	2014	design_constant	-	480	G - 2
+sec3_strategy.tex	480	2016	design_constant	-	480	G (the 2016 effect)
+sec3_strategy.tex	480	2013	design_constant	-	480	G - 3 (placebo)
+sec3_strategy.tex	480	2012	design_constant	-	480	G - 4 (placebo)
+sec3_strategy.tex	480	2011	design_constant	-	480	G - 5 (placebo)
+sec3_strategy.tex	480	2017	design_constant	-	480	G + 1 (paired effect)
+sec3_strategy.tex	480	2018	design_constant	-	480	G + 2 (paired effect)
+sec3_strategy.tex	481	2019	design_constant	-	-	G + 3 (paired effect)
+sec3_strategy.tex	483	1	design_constant	-	-	model label (Model 1), Figure 3 caption
+sec3_strategy.tex	483	2016	design_constant	-	-	example cohort G (Figure 3 caption; fig_compare_years draws G)
+sec3_strategy.tex	483	2015	design_constant	-	-	G - 1 (Figure 3 caption)
+sec3_strategy.tex	487	1	design_constant	-	-	model label (Model 1)
+sec3_strategy.tex	488	(none: words)	design_constant	-	488	NEWPIN: Model 1 not-yet-arrived comparisons come from arrivals within the following 4 years (window +-5, base year a-1, dossier 3.2); no numeral on the line, the years follow on 490-492
+sec3_strategy.tex	490	2015	design_constant	-	-	G - 1: a comparison must be observed in the base year
+sec3_strategy.tex	490	2020	design_constant	-	-	window arithmetic: observed in 2015 under +-5 means arrival by 2020
+sec3_strategy.tex	490	2021	design_constant	-	-	window arithmetic: an arrival in 2021 is observed from 2016
+sec3_strategy.tex	491	1	design_constant	-	-	panel label (Panel 1)
+sec3_strategy.tex	491	2016	design_constant	-	-	window arithmetic: an arrival in 2021 appears in Panel 1 only from 2021 - 5
+sec3_strategy.tex	491	2016	design_constant	-	-	example cohort G (the 2016 coefficient)
+sec3_strategy.tex	492	2017	key_needs_pin	base sec3 example M1 2016 comparisons from	492	fig_comparison_pools pools.M1_pos.2016.arrival_years (first)
+sec3_strategy.tex	492	2020	key_needs_pin	base sec3 example M1 2016 comparisons to	-	fig_comparison_pools pools.M1_pos.2016.arrival_years (last; contiguous)
+sec3_strategy.tex	492	2019	design_constant	-	-	G + 3 (the 2019 coefficient)
+sec3_strategy.tex	492	2020	key_needs_pin	base sec3 example M1 2019 comparisons	-	fig_comparison_pools pools.M1_pos.2019.arrival_years (exactly one year)
+sec3_strategy.tex	492	2020	design_constant	-	-	G + 4 (four years after)
+sec3_strategy.tex	492	2021	design_constant	-	-	G + 5 (five years after)
+sec3_strategy.tex	493	four, five (words)	key_needs_pin	base sec3 example M1 four and five years after: zero-dose only	-	fig_comparison_pools cells.M1_pos 2020 and 2021 = none
+sec3_strategy.tex	494	2012	design_constant	-	-	G - 4 (placebo)
+sec3_strategy.tex	494	2011	design_constant	-	-	G - 5 (placebo)
+sec3_strategy.tex	494	2018	design_constant	-	-	G + 2 (paired effect)
+sec3_strategy.tex	495	2019	design_constant	-	-	G + 3 (paired effect)
+sec3_strategy.tex	495	2019	key_needs_pin	base sec3 example placebo comparisons (first year)	495	fig_comparison_pools pools.M1_pos 2018 and 2019 arrival years (union, first)
+sec3_strategy.tex	495	2020	key_needs_pin	base sec3 example placebo comparisons (last year)	-	fig_comparison_pools pools.M1_pos 2018 and 2019 arrival years (union, last)
+sec3_strategy.tex	496	2014	key_needs_pin	base sec3 example placebo comparisons followed from (first)	-	first pooled arrival year - 5 (Model 1 window)
+sec3_strategy.tex	496	2015	key_needs_pin	base sec3 example placebo comparisons followed from (last)	-	last pooled arrival year - 5 (Model 1 window)
+sec3_strategy.tex	496	2012	key_needs_pin	base sec3 example M1 placebos 2012/2011 not followed back	-	fig_comparison_pools cells.M1_pos 2012 and 2011 = none (the years are G - 4, G - 5)
+sec3_strategy.tex	496	2011	key_needs_pin	base sec3 example M1 placebos 2012/2011 not followed back	-	fig_comparison_pools cells.M1_pos 2012 and 2011 = none
+sec3_strategy.tex	498	2016	design_constant	-	-	example cohort G, Figure 4 caption (fig_comparison_pools draws G)
+sec3_strategy.tex	498	2	design_constant	-	-	panel label (Panel 2 or 3), Figure 4 caption
+sec3_strategy.tex	498	3	design_constant	-	-	panel label (Panel 2 or 3), Figure 4 caption
+sec3_strategy.tex	498	2021	design_constant	-	-	G + 5, Figure 4 caption (window arithmetic: no Panels 2-3 comparison at ell=5)
+sec3_strategy.tex	498	2015	design_constant	-	-	G - 1, Figure 4 caption
+sec3_strategy.tex	502	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	503	2016	design_constant	-	-	example cohort G
+sec3_strategy.tex	503	2018	design_constant	-	-	G + 2
+sec3_strategy.tex	505	2019	key_needs_pin	base sec3 example M2 2018 comparisons from	-	fig_comparison_pools pools.M23.2018.arrival_years (first)
+sec3_strategy.tex	505	2021	key_needs_pin	base sec3 example M2 2018 comparisons to	-	fig_comparison_pools pools.M23.2018.arrival_years (last; contiguous)
+sec3_strategy.tex	505	2017	design_constant	-	-	G + 1 (no joint paper by the year before 2018)
+sec3_strategy.tex	506	2018	design_constant	-	-	G + 2
+sec3_strategy.tex	507	2017	design_constant	-	-	G + 1
+sec3_strategy.tex	508	2020	key_needs_pin	base sec3 example M2 estimates stop	508	fig_comparison_pools: last M23 effect year with a non-empty pool
+sec3_strategy.tex	509	2021	key_needs_pin	base sec3 example M2 last comparisons arrival year	509	fig_comparison_pools pools.M23.<stop year>.arrival_years (exactly one year)
+sec3_strategy.tex	509	2015	key_needs_pin	base sec3 example M2 last comparisons followed from	-	that arrival year - 6 (Panels 2-3 window -6/+10)
+sec3_strategy.tex	510	2021	key_needs_pin	base sec3 example M2 last comparisons treated from	510	fig_comparison_pools pools.M23.<stop year>.arrival_years (the arrival year)
+sec3_strategy.tex	510	none (word)	key_needs_pin	base sec3 example Models 2-3 none left at the fifth year	-	fig_comparison_pools cells.M23.2021 = no_estimate
+sec3_strategy.tex	513	3	design_constant	-	-	model label (Model 3)
+sec3_strategy.tex	513	2	design_constant	-	-	model label (Model 2)
+sec3_strategy.tex	513	2016	design_constant	-	-	example cohort G
+sec3_strategy.tex	513	2018	design_constant	-	-	G + 2
+sec3_strategy.tex	515	2018	design_constant	-	-	G + 2
+sec3_strategy.tex	516	2019	key_needs_pin	base sec3 example M3 2018 comparisons from	-	fig_comparison_pools pools.M23.2018.arrival_years (first; Model 3 uses the Panels 2-3 window)
+sec3_strategy.tex	516	2021	key_needs_pin	base sec3 example M3 2018 comparisons to	-	fig_comparison_pools pools.M23.2018.arrival_years (last)
+sec3_strategy.tex	516	2017	design_constant	-	-	G + 1
+sec4_p3.tex	26	0.235	key_needs_pin	base sec4_p3 shuffled arrival years p (econ)	-	p3afar econ.randomization_inference.p_two_sided at 3 dp (N12 part 1 full precision prints 0.236 in M)

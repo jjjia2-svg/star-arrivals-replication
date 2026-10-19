@@ -1,0 +1,15 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rec",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 20,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [["r1/evidence/history/", "/work/evidence/history/"], ["r1/evidence/workflows/", "/work/evidence/workflows/"]],
+  "data_sync": [],
+  "copy_from_tip": [["pipeline/aws/r1/recover_rk.py", "/work/recover_rk.py"]],
+  "steps": ["\"$PY\" /work/recover_rk.py --bucket \"$B\" --date 20261002 --evidence /work/evidence --repo \"$REPO_DIR\" --work /work/rec --out /work/out --dest \"r1/recovered/$JOB\" --python \"$PY\""]
+}

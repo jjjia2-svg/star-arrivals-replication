@@ -1,0 +1,3 @@
+label,mode,perm,seed_used,n_events,n_treated_events,status,ate,se,t,p_joint_effects,p_joint_placebo,secs
+P3cutpos_econ,p3tp,499,20261329,108,99,OK,-0.0005237398027,0.0002664018758,-1.96598,0.00123026,,61.50
+P3cutpos_econ,p3tp,500,20261330,108,96,OK,-0.0008215647438,0.0003345640906,-2.45563,0.0557667,,44.84

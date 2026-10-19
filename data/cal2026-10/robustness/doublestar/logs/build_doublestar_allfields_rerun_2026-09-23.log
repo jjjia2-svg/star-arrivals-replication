@@ -1,0 +1,25 @@
+{
+ "rule": "drop e iff an earlier same-department arrival is within 5 years (the \u00a73 Model-1 coverage window); same-year pairs kept (no 'earlier' member), counts disclosed",
+ "spec": "pos",
+ "afar_frame": "data/frames/p3_afar_pos_{field}.parquet",
+ "econ": {
+  "events": 113,
+  "dropped": 95,
+  "kept": 18,
+  "same_year_pair_events_kept": 48
+ },
+ "chemistry": {
+  "events": 38,
+  "dropped": 23,
+  "kept": 15,
+  "same_year_pair_events_kept": 6
+ },
+ "math_stats": {
+  "events": 33,
+  "dropped": 24,
+  "kept": 9,
+  "same_year_pair_events_kept": 10
+ }
+}
+DOUBLESTAR_BUILD_OK
+EXIT 0

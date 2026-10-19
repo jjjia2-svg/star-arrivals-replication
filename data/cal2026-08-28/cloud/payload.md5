@@ -1,0 +1,6 @@
+3050ca6572b4159ae7a3b367fc7b44c0  p3_slim_chemistry.parquet
+a873fb540182981014aef82717519e20  p3_slim_econ.parquet
+b9c1fa4a8222c63e10bc91e4f3304cf4  p3_slim_ev_chemistry.parquet
+56921067aba2e3ff6cf370a75c43c36b  p3_slim_ev_econ.parquet
+efe580e76a70b9ba678312c05b8ef837  run_p3.R
+b9c8a7afd3d5df8d043d4a18b00c8e1c  run_p3_evcl.R

@@ -1,0 +1,13 @@
+bind_tokens:
+- case_sensitive: false
+  text: Deakin University
+  word_boundary: false
+dept_key: deakin_econ
+exclude_tokens: []
+openalex_inst_id: I149704539
+phrases:
+- School of Economics
+- School of Accounting, Economics and Finance
+- Department of Economics
+- Economics Discipline Group
+window_chars: 80

@@ -1,0 +1,6 @@
+author_id,field,school,arrival_true,before_stock,before_cell,before_pct,before_pass,after_stock,after_cell,after_cell_n,after_pct,after_pass,aage
+A5027778630,chemistry,anu,2002,14414,1312|14-17,0.9981,True,14414,1312|14-17,9921,0.9981,True,16
+A5091826237,chemistry,anu,2001,321,1605|10-13,0.9201,True,321,1605|10-13,4317,0.9201,True,12
+A5017222669,math_stats,uq,2002,1454,1312|6-9,0.9643,True,1454,1312|6-9,21178,0.9643,True,8
+A5090916445,math_stats,unsw,2002,157,2610|2-5,0.9057,True,157,2610|2-5,244,0.9057,True,4
+A5062352558,chemistry,melbourne,2003,1514,1605|10-13,0.9851,True,927,1605|10-13,5026,0.9717,True,11

@@ -1,0 +1,272 @@
+{
+ "task": "cal2026-10 cloud batch — preflight (BEFORE upload)",
+ "generated_utc": "2026-09-22T16:49:12Z",
+ "marker": "2026_10C",
+ "instance": {
+  "instance_type": "r6i.16xlarge",
+  "region": "us-east-1",
+  "image_id": "ami-052355af2a014bd2c",
+  "market": "on-demand"
+ },
+ "groups": [
+  "null",
+  "p3evcl",
+  "p3main",
+  "perm",
+  "predate"
+ ],
+ "fields": [
+  "econ",
+  "chemistry",
+  "math_stats"
+ ],
+ "seeds": {
+  "perm": 20260830,
+  "null": 20260830
+ },
+ "perm_b": 500,
+ "null_n": 200,
+ "chunks": {
+  "perm_econ": 5,
+  "perm_chemistry": 50,
+  "perm_math_stats": 50,
+  "null_econ": 5,
+  "null_chemistry": 50,
+  "null_math_stats": 50
+ },
+ "parallel": 12,
+ "threads": 4,
+ "payload_dir": "$TMPDIR/cal2026-10_payload",
+ "payloads": {
+  "P3cut_pos_chemistry.json": {
+   "source": "<scratch>/cloud_refs/P3cut_pos_chemistry.json",
+   "sha256_before": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+   "md5_before": "bf0e54fbf72a91ce2349a6bd37e8022a",
+   "bytes": 1257
+  },
+  "P3cut_pos_econ.json": {
+   "source": "<scratch>/cloud_refs/P3cut_pos_econ.json",
+   "sha256_before": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+   "md5_before": "ce4fa2d9006705d958b5bf6bf96eba73",
+   "bytes": 1262
+  },
+  "P3cut_pos_math_stats.json": {
+   "source": "<scratch>/cloud_refs/P3cut_pos_math_stats.json",
+   "sha256_before": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+   "md5_before": "5526b81a33f903f5bd0cbb43ae3a97fc",
+   "bytes": 1261
+  },
+  "bootstrap.sh": {
+   "source": null,
+   "sha256_before": "d2450bd072de321faf13893dd90eaf7d5b4d7a540fe08a1f89033e8e1f8b0394",
+   "md5_before": "ff6cfed1e9cd8b0e64e860835a2ffa70",
+   "bytes": 2859
+  },
+  "driver.env": {
+   "source": null,
+   "sha256_before": "132717f36a011d17e481d7e962efd24fc6304f6dd63fac82b8e2379af9028701",
+   "md5_before": "42732249811b6d91db41f51579cdf0d3",
+   "bytes": 33
+  },
+  "driver.sh": {
+   "source": null,
+   "sha256_before": "ce1a06121507eccb0da0aea034f813fafe3f09844f44ce10564e0dae803ee7c7",
+   "md5_before": "de309e39688a5351706ed589e5bb319b",
+   "bytes": 5136
+  },
+  "jobs_parallel.txt": {
+   "source": null,
+   "sha256_before": "762bfd483d5bc1323963a22f86036d76847a38234dbae5b1adaf777f599548d6",
+   "md5_before": "4eea60d4f06363bd98934ae29caab651",
+   "bytes": 22784
+  },
+  "jobs_serial.txt": {
+   "source": null,
+   "sha256_before": "e9d9b18fb6480f794ba2e6b36f4d8578a70a2511b6ab158f4224e7950ee8b203",
+   "md5_before": "76b81a6ff51378f544ec1862776b3d39",
+   "bytes": 1158
+  },
+  "p3_afar_pos_chemistry.parquet": {
+   "source": "data/cal2026-10/frames/p3_afar_pos_chemistry.parquet",
+   "sha256_before": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+   "md5_before": "bbd872db48552f1716854e2ca0d4bf93",
+   "bytes": 283639
+  },
+  "p3_afar_pos_econ.parquet": {
+   "source": "data/cal2026-10/frames/p3_afar_pos_econ.parquet",
+   "sha256_before": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e",
+   "md5_before": "8149b74d3b193486e3e20f5711e74d81",
+   "bytes": 1822327
+  },
+  "p3_afar_pos_math_stats.parquet": {
+   "source": "data/cal2026-10/frames/p3_afar_pos_math_stats.parquet",
+   "sha256_before": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+   "md5_before": "130fc97bf2236e23ce2e6affc260d037",
+   "bytes": 388796
+  },
+  "p3_slim_chemistry.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_chemistry.parquet",
+   "sha256_before": "a6a5ec093c608f765713e020a8501fa50297acc2f5c8173647b243157656b2f8",
+   "md5_before": "af36a1a9c8388c3be217adc4da9793ab",
+   "bytes": 1864546
+  },
+  "p3_slim_chemistry_dosebin3.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_chemistry_dosebin3.parquet",
+   "sha256_before": "54363b6b1bc18a749d78f882c86b752766cd3d53c5a67a934f363d6f2c40d5e6",
+   "md5_before": "35de9479ed370da94049077f9ce93f1e",
+   "bytes": 1954330
+  },
+  "p3_slim_chemistry_p05.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_chemistry_p05.parquet",
+   "sha256_before": "5f58838576a77220c43623d9e0a4a34bca449ae4e782cd1863b41568ae948282",
+   "md5_before": "ce479abb2003acac30f06382732595a5",
+   "bytes": 1652686
+  },
+  "p3_slim_econ.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_econ.parquet",
+   "sha256_before": "39d474983abec809d28d0a46a26d9c9c3d4d123c1984943fe5933961244b422b",
+   "md5_before": "bf9d636fec4774f5705fefa3cfbaf37e",
+   "bytes": 5311592
+  },
+  "p3_slim_econ_dosebin3.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_econ_dosebin3.parquet",
+   "sha256_before": "69c8bf1c2b19f05a3bf3e51baa17d22fb3678bc5688ab6f3f900035b08eff069",
+   "md5_before": "74a804f4326983b3fd9d282f7774aae5",
+   "bytes": 5678560
+  },
+  "p3_slim_econ_p05.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_econ_p05.parquet",
+   "sha256_before": "5b1b386b750595e217035632c15c85514fad80b6bd264599f5729c959de39028",
+   "md5_before": "4cb4bc7f16cdfca55c0f3c80af8811d9",
+   "bytes": 4077187
+  },
+  "p3_slim_ev_chemistry.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_ev_chemistry.parquet",
+   "sha256_before": "22736c0a7ea9b625caf012bf9b0ccbf037789d531bbe24b4ef1086df19a8bd4f",
+   "md5_before": "d3e16b841bad91cfc47628c09e1a8745",
+   "bytes": 1878242
+  },
+  "p3_slim_ev_econ.parquet": {
+   "source": "data/cal2026-10/frames/p3_slim_ev_econ.parquet",
+   "sha256_before": "325e43198fae8a57e5395988f6c250f26953b41e5300c62a794478a73815d128",
+   "md5_before": "d683ea53b36b27cd2508a1591fd36e0c",
+   "bytes": 5319274
+  },
+  "run_null.R": {
+   "source": "analysis/robustness/null_sim/run_null.R",
+   "sha256_before": "2570adef7ca3f167cdeef1a97dbff85d5eb5efe71d5497e5bc72d04e24791f7c",
+   "md5_before": "27b33377a9998ab55baf490661e286bc",
+   "bytes": 5366
+  },
+  "run_p3.R": {
+   "source": "analysis/estimation/run_p3.R",
+   "sha256_before": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+   "md5_before": "efe580e76a70b9ba678312c05b8ef837",
+   "bytes": 3610
+  },
+  "run_p3_evcl.R": {
+   "source": "analysis/estimation/run_p3_evcl.R",
+   "sha256_before": "e653e669b0743728e0055f90ef0a775a3075918739169264761713fb57e0859e",
+   "md5_before": "b9c8a7afd3d5df8d043d4a18b00c8e1c",
+   "bytes": 3671
+  },
+  "run_perm.R": {
+   "source": "analysis/robustness/inference/run_perm.R",
+   "sha256_before": "2dc98b40cb1f76ce84169efcc578bd67c71d78ffd8f4ca26ca9d3b0278fe6f40",
+   "md5_before": "1c8dba4f398c09f130a3e80611a29b30",
+   "bytes": 9476
+  },
+  "run_predate.R": {
+   "source": "analysis/robustness/predate/run_predate.R",
+   "sha256_before": "07a8b7288e2c061a9f48eef397f42aa6b7b521dae3a705b386cbbc8a0d292fde",
+   "md5_before": "dffade654ce2d6c37569ae4e4466db3f",
+   "bytes": 18959
+  }
+ },
+ "payload_md5_sha256": "c9ff87944b5b5f3e2f7130e12f55d1757bca8ede3fcb6811c1033cbf20cec6e4",
+ "jobs_serial": [
+  [
+   "P3_fnfix_chemistry",
+   "out",
+   "Rscript run_p3.R P3_fnfix_chemistry p3_slim_chemistry.parquet"
+  ],
+  [
+   "P3_econ_fnfix",
+   "out",
+   "Rscript run_p3.R P3_econ_fnfix p3_slim_econ.parquet"
+  ],
+  [
+   "P3evcl_chemistry",
+   "out",
+   "Rscript run_p3_evcl.R P3evcl_chemistry p3_slim_ev_chemistry.parquet"
+  ],
+  [
+   "P3evcl_econ",
+   "out",
+   "Rscript run_p3_evcl.R P3evcl_econ p3_slim_ev_econ.parquet"
+  ],
+  [
+   "P3_fnfix_chemistry_pd0",
+   "out_predate_control",
+   "Rscript run_predate.R p3 P3_fnfix_chemistry p3_slim_chemistry.parquet 0 p3_slim_ev_chemistry.parquet"
+  ],
+  [
+   "P3pd2_chemistry_full",
+   "out_predate",
+   "Rscript run_predate.R p3 P3pd2_chemistry_full p3_slim_chemistry.parquet 2 p3_slim_ev_chemistry.parquet"
+  ],
+  [
+   "P3_econ_fnfix_pd0",
+   "out_predate_control",
+   "Rscript run_predate.R p3 P3_econ_fnfix p3_slim_econ.parquet 0 p3_slim_ev_econ.parquet"
+  ],
+  [
+   "P3pd2_econ_full",
+   "out_predate",
+   "Rscript run_predate.R p3 P3pd2_econ_full p3_slim_econ.parquet 2 p3_slim_ev_econ.parquet"
+  ],
+  [
+   "P3p05_chemistry",
+   "out",
+   "Rscript run_p3.R P3p05_chemistry p3_slim_chemistry_p05.parquet"
+  ],
+  [
+   "P3dose3_chemistry",
+   "out",
+   "Rscript run_p3.R P3dose3_chemistry p3_slim_chemistry_dosebin3.parquet"
+  ],
+  [
+   "P3p05_econ",
+   "out",
+   "Rscript run_p3.R P3p05_econ p3_slim_econ_p05.parquet"
+  ],
+  [
+   "P3dose3_econ",
+   "out",
+   "Rscript run_p3.R P3dose3_econ p3_slim_econ_dosebin3.parquet"
+  ]
+ ],
+ "jobs_parallel_n": 171,
+ "cost_estimate": {
+  "basis": "A6 in cloudkit.py: 08-28 measured wall per cell, predate x1.6, 08-30 batch wall for the parallel phase, 14 min overhead",
+  "serial_cells_min": {
+   "P3_fnfix_chemistry": 2.1,
+   "P3_econ_fnfix": 5.6,
+   "P3evcl_chemistry": 2.5,
+   "P3evcl_econ": 6.9,
+   "P3_fnfix_chemistry_pd0": 2.1,
+   "P3pd2_chemistry_full": 3.4,
+   "P3_econ_fnfix_pd0": 5.6,
+   "P3pd2_econ_full": 9.0,
+   "P3p05_chemistry": 5.6,
+   "P3dose3_chemistry": 5.6,
+   "P3p05_econ": 5.6,
+   "P3dose3_econ": 5.6
+  },
+  "parallel_phase_min": 81.0,
+  "overhead_min": 14.0,
+  "wall_min_projected": 154.6,
+  "on_demand_usd_per_h": 4.032,
+  "cost_usd_projected_on_demand": 10.39
+ }
+}

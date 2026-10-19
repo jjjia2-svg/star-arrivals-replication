@@ -1,0 +1,271 @@
+{
+ "stage": "inpost_filter (D2, 2026-09-22)",
+ "rule": "keep (person, event) iff some spell of the person in the field's roster has year_start <= arrival <= year_end; join on the person only",
+ "input": {
+  "frame": "<scratch>/chemmath_run2/october_prodlib_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+  "sha256": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7",
+  "rows": 39721,
+  "relations": 3611,
+  "events": 38
+ },
+ "spells": {
+  "roster": "data/raw_verified/roster_gold_chemistry.parquet",
+  "roster_sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb",
+  "roster_rows": 533,
+  "roster_persons": 518,
+  "id_forms": "bare author_id",
+  "persons_with_spells": 518
+ },
+ "relations_by_class": {
+  "kept": 1833,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 1778
+ },
+ "rows_by_class": {
+  "kept": 20163,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 19558
+ },
+ "persons_by_class": {
+  "kept": 217,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 240
+ },
+ "events_left_with_zero_rows": [],
+ "per_event": {
+  "A5000883844:unsw": {
+   "arrival": 2019,
+   "kept": 40,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 35
+  },
+  "A5005527509:adelaide": {
+   "arrival": 2016,
+   "kept": 38,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 19
+  },
+  "A5006183789:monash": {
+   "arrival": 2011,
+   "kept": 62,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 33
+  },
+  "A5006430396:monash": {
+   "arrival": 2007,
+   "kept": 72,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 37
+  },
+  "A5006982852:monash": {
+   "arrival": 2023,
+   "kept": 9,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 43
+  },
+  "A5011013044:sydney": {
+   "arrival": 2017,
+   "kept": 67,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 77
+  },
+  "A5011785645:unsw": {
+   "arrival": 2018,
+   "kept": 39,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 23
+  },
+  "A5013729810:sydney": {
+   "arrival": 2006,
+   "kept": 72,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 43
+  },
+  "A5014057252:sydney": {
+   "arrival": 2007,
+   "kept": 66,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 64
+  },
+  "A5014715335:deakin": {
+   "arrival": 2004,
+   "kept": 49,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 83
+  },
+  "A5017128684:anu": {
+   "arrival": 2020,
+   "kept": 38,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 42
+  },
+  "A5020302210:anu": {
+   "arrival": 2015,
+   "kept": 63,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 63
+  },
+  "A5026146428:monash": {
+   "arrival": 2015,
+   "kept": 20,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 8
+  },
+  "A5027128497:adelaide": {
+   "arrival": 2012,
+   "kept": 79,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 61
+  },
+  "A5027699970:sydney": {
+   "arrival": 2006,
+   "kept": 66,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 33
+  },
+  "A5027778630:anu": {
+   "arrival": 2002,
+   "kept": 34,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 102
+  },
+  "A5027893501:unsw": {
+   "arrival": 2005,
+   "kept": 34,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 64
+  },
+  "A5029928521:uwa": {
+   "arrival": 2018,
+   "kept": 79,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 70
+  },
+  "A5030193476:melbourne": {
+   "arrival": 2017,
+   "kept": 61,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 62
+  },
+  "A5035305002:uwa": {
+   "arrival": 2011,
+   "kept": 39,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 25
+  },
+  "A5041868632:unsw": {
+   "arrival": 2011,
+   "kept": 66,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 45
+  },
+  "A5044696583:monash": {
+   "arrival": 2007,
+   "kept": 72,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 34
+  },
+  "A5048687133:anu": {
+   "arrival": 2004,
+   "kept": 33,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 81
+  },
+  "A5055198364:unsw": {
+   "arrival": 2014,
+   "kept": 26,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 23
+  },
+  "A5060018496:adelaide": {
+   "arrival": 2007,
+   "kept": 89,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 83
+  },
+  "A5062352558:melbourne": {
+   "arrival": 2003,
+   "kept": 42,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 82
+  },
+  "A5066540462:monash": {
+   "arrival": 2018,
+   "kept": 56,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 42
+  },
+  "A5069626817:sydney": {
+   "arrival": 2014,
+   "kept": 61,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 56
+  },
+  "A5069934510:unsw": {
+   "arrival": 2013,
+   "kept": 68,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 50
+  },
+  "A5070148430:melbourne": {
+   "arrival": 2011,
+   "kept": 50,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 33
+  },
+  "A5074090421:anu": {
+   "arrival": 2017,
+   "kept": 64,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 57
+  },
+  "A5076950458:unsw": {
+   "arrival": 2022,
+   "kept": 22,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 41
+  },
+  "A5083998405:monash": {
+   "arrival": 2017,
+   "kept": 35,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 33
+  },
+  "A5091407117:sydney": {
+   "arrival": 2017,
+   "kept": 29,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 21
+  },
+  "A5091826237:anu": {
+   "arrival": 2001,
+   "kept": 30,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 61
+  },
+  "A5100398634:sydney": {
+   "arrival": 2019,
+   "kept": 14,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 20
+  },
+  "A5102954096:monash": {
+   "arrival": 2014,
+   "kept": 15,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 8
+  },
+  "A5109260299:monash": {
+   "arrival": 2006,
+   "kept": 34,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 21
+  }
+ },
+ "output": {
+  "frame": "<scratch>/chemmath_run2/october_inpost_chemistry/frame_inpost.csv",
+  "sha256": "8852fb1d7ff34009cf3b30e48b20b0c3aa97587178d25cfed3ca5207793ad787",
+  "rows": 20163,
+  "byte_preserving": true
+ }
+}

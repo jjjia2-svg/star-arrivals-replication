@@ -1,0 +1,8 @@
+
+===== permutation p2 P2_fnfix_math_stats events=33 perms=1..50 seed=20260829 =====
+  [P2_fnfix_math_stats] FAIL: infinite or missing values in 'x'
+  [P2_fnfix_math_stats] perm 25 done (4.7s)
+  [P2_fnfix_math_stats] FAIL: infinite or missing values in 'x'
+  [P2_fnfix_math_stats] FAIL: infinite or missing values in 'x'
+  [P2_fnfix_math_stats] FAIL: infinite or missing values in 'x'
+[P2_fnfix_math_stats] 1..50 完成 -> out_perm/P2_fnfix_math_stats_perm_1_50.csv

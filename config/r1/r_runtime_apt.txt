@@ -1,0 +1,25 @@
+# R1 V3-ENV: system libraries the P3M R binaries of both stacks load at run time (envbuild-02: rgl -> libGLU).
+# Installed by build_env.sh when building an R layer and by the boot restore of every job with an R layer.
+gfortran
+libcurl4-openssl-dev
+libssl-dev
+libxml2-dev
+libfontconfig1-dev
+libfreetype6-dev
+libharfbuzz-dev
+libfribidi-dev
+libpng-dev
+libtiff5-dev
+libjpeg-dev
+libgit2-dev
+libicu-dev
+zlib1g-dev
+libblas-dev
+liblapack-dev
+libgsl-dev
+libuv1-dev
+libnlopt-dev
+libglu1-mesa-dev
+libgl1-mesa-dev
+libx11-dev
+libxt-dev

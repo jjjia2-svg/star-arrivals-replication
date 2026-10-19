@@ -1,0 +1,5 @@
+
+===== permutation p2 P2_fnfix_chemistry events=38 perms=201..250 seed=20260829 =====
+  [P2_fnfix_chemistry] perm 225 done (4.6s)
+  [P2_fnfix_chemistry] perm 250 done (5.4s)
+[P2_fnfix_chemistry] 201..250 完成 -> out_perm/P2_fnfix_chemistry_perm_201_250.csv

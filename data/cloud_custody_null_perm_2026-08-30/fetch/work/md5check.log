@@ -1,0 +1,11 @@
+P3cut_pos_chemistry.json: OK
+P3cut_pos_econ.json: OK
+P3cut_pos_math_stats.json: OK
+bootstrap.sh: OK
+driver.sh: OK
+jobs.txt: OK
+p3_afar_pos_chemistry.parquet: OK
+p3_afar_pos_econ.parquet: OK
+p3_afar_pos_math_stats.parquet: OK
+run_null.R: OK
+run_perm.R: OK

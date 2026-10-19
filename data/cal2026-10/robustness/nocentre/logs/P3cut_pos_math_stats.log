@@ -1,0 +1,22 @@
+$ Rscript analysis/estimation/run_p3_tp.R P3cut_pos_math_stats $TMPDIR/sar_rob_nocentre/afar_control/p3_afar_pos_math_stats.parquet
+[env] {"SAR_OUT": "data/cal2026-10/robustness/nocentre/estimates_control", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 3[topic-similar pairs] P3cut_pos_math_stats rows=256506 groups=15318 first ties=401 events=32 =====
+P3cut_pos_math_stats         ATE=+0.000413 (pair-clustered SE 0.000411, CI -0.000392~0.001219) joint-effect p=0.0803 | event-clustered SE 0.000289
+[P3cut_pos_math_stats] done elapsed=0.2 minutes
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+
+--- rc=0 secs=10.0 ---

@@ -1,0 +1,5 @@
+openalex_snapshot_release: "2026-06-26"
+s3_path: "s3://openalex/data/"
+local_copy_rel: "snapshot"   # resolved under config/paths.yaml:ssd_root
+merkle_root_prefix: "da78e4b9"      # from multiplex_pipeline U1 manifest; full value recorded in pipeline/ (M3)
+note: "OpenAlex does not guarantee old snapshots remain available; our exact extract is the archival object (spec §7)."

@@ -1,0 +1,18 @@
+$ Rscript analysis/estimation/run_p1.R P1depA_econ $TMPDIR/sar_rob_sensitivity/dep_econ/p1_dep_A_econ.csv
+[env] {"SAR_OUT": "data/cal2026-10/robustness/departure/estimates", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 1 P1depA_econ  original=53174 rows after decontamination=52195 rows =====
+P1depA_econ/union                        obs=44904   rel=4745   joint-effect p=0.0000 placebo p=0.0231 ATE=-0.38695 (SE 0.07902, CI -0.54183~-0.23207)
+P1depA_econ/network                      obs=17865   rel=1812   joint-effect p=0.0026 placebo p=0.2146 ATE=-0.29170 (SE 0.11171, CI -0.51065~-0.07275)
+P1depA_econ/dept                         obs=31838   rel=3427   joint-effect p=0.0000 placebo p=0.0493 ATE=-0.40059 (SE 0.09902, CI -0.59466~-0.20652)
+[P1depA_econ] done
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+--- rc=0 secs=16.2 ---

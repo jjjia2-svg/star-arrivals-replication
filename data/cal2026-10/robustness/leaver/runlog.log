@@ -1,0 +1,50 @@
+== P1_econ_fnfix (none)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/none] P1_econ_fnfix  original=73073 rows after decontamination=71797 rows =====
+P1_econ_fnfix/union                      obs=62188   rel=6527   joint-effect p=0.0000 placebo p=0.0028 ATE=-0.36838 (SE 0.06590, CI -0.49755~-0.23921)
+P1_econ_fnfix/network                    obs=24385   rel=2464   joint-effect p=0.0000 placebo p=0.0345 ATE=-0.43063 (SE 0.10130, CI -0.62917~-0.23209)
+P1_econ_fnfix/dept                       obs=44587   rel=4753   joint-effect p=0.0000 placebo p=0.0240 ATE=-0.35493 (SE 0.07803, CI -0.50786~-0.20199)
+[P1_econ_fnfix] done
+EQUAL
+CONTROL EQUAL: full/none vs P1_econ_fnfix
+== P1leave_econ (fill0leave)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0leave] P1leave_econ  original=73073 rows after decontamination=71797 rows =====
+P1leave_econ/union                       obs=64934   rel=6527   joint-effect p=0.0000 placebo p=0.0075 ATE=-0.39402 (SE 0.06988, CI -0.53098~-0.25706)
+P1leave_econ/network                     obs=24938   rel=2464   joint-effect p=0.0000 placebo p=0.0451 ATE=-0.46564 (SE 0.09726, CI -0.65628~-0.27501)
+P1leave_econ/dept                        obs=46918   rel=4753   joint-effect p=0.0004 placebo p=0.0588 ATE=-0.38370 (SE 0.08715, CI -0.55451~-0.21288)
+[P1leave_econ] done
+== P1leave_chemistry (fill0leave)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0leave] P1leave_chemistry  original=30635 rows after decontamination=29414 rows =====
+P1leave_chemistry/union                  obs=28107   rel=2674   joint-effect p=0.0014 placebo p=0.8781 ATE=-0.21810 (SE 0.06740, CI -0.35020~-0.08600)
+P1leave_chemistry/network                obs=18374   rel=1727   joint-effect p=0.3313 placebo p=0.7613 ATE=-0.08513 (SE 0.11163, CI -0.30393~0.13366)
+P1leave_chemistry/dept                   obs=14343   rel=1387   joint-effect p=0.0003 placebo p=0.9342 ATE=-0.24713 (SE 0.08686, CI -0.41737~-0.07689)
+[P1leave_chemistry] done
+== P1leave_math_stats (fill0leave)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/fill0leave] P1leave_math_stats  original=19910 rows after decontamination=18854 rows =====
+P1leave_math_stats/union                 obs=16945   rel=1714   joint-effect p=0.0064 placebo p=0.2344 ATE=-0.06316 (SE 0.15310, CI -0.36324~0.23692)
+P1leave_math_stats/network               obs=3710    rel=364    joint-effect p=0.7643 placebo p=0.6865 ATE=-0.15084 (SE 0.20120, CI -0.54519~0.24351)
+P1leave_math_stats/dept                  obs=14430   rel=1471   joint-effect p=0.0070 placebo p=0.3090 ATE=-0.04085 (SE 0.17858, CI -0.39086~0.30915)
+[P1leave_math_stats] done

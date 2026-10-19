@@ -1,0 +1,85 @@
+#!/bin/bash
+shutdown -h +@@HARD_MIN@@
+# R1 boot script, rendered by pipeline/aws/r1/r1kit.py from pipeline/aws/r1/userdata.sh.tmpl.
+# Line 2 is the hard fuse; the deadline unit below re-arms the same deadline on any reboot. The
+# instance was launched with shutdown-behaviour=terminate, so power-off means terminate.
+exec > /var/log/sar-r1-boot.log 2>&1
+set -x
+cat > /usr/local/sbin/sar-deadline.sh <<'SAR_DEADLINE'
+#!/bin/bash
+left=$(( @@DEADLINE_EPOCH@@ - $(date +%s) ))
+if [ "$left" -gt 0 ]; then sleep "$left"; fi
+systemctl poweroff
+SAR_DEADLINE
+chmod 755 /usr/local/sbin/sar-deadline.sh
+cat > /etc/systemd/system/sar-deadline.service <<'SAR_UNIT'
+[Unit]
+Description=SAR R1 hard deadline, re-armed on every boot
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/sar-deadline.sh
+[Install]
+WantedBy=multi-user.target
+SAR_UNIT
+systemctl daemon-reload
+systemctl enable --now sar-deadline.service
+B="s3://@@BUCKET@@"
+JOB="@@JOB@@"
+P="$B/r1/runs/$JOB"
+COMMIT="@@COMMIT@@"
+REPO_DIR="@@REPO_DIR@@"
+export PATH=/snap/bin:$PATH
+st() { echo "$(date -u +%FT%TZ) $*" > /tmp/sar-st; aws s3 cp --only-show-errors /tmp/sar-st "$P/status.txt"; }
+fin() {
+  rc=$?
+  set +x
+  mkdir -p /work/out
+  if [ ! -s /work/out/RESULT.txt ]; then
+    echo "NO_RESULT rc=$rc" > /work/out/RESULT.txt
+  elif [ "$rc" -ne 0 ]; then
+    echo "STEP_FAIL rc=$rc (was: $(head -1 /work/out/RESULT.txt))" > /work/out/RESULT.txt
+  fi
+  # the uploaded boot log carries no bucket name, ARN or 12-digit account id (FIX-JP 5): bucket first, so an
+  # id inside the bucket name goes with it; the id rule runs twice for ids that share one separator
+  san=(-e 's/arn:aws:[^[:space:]]+/<arn>/g' -e 's/(^|[^0-9])[0-9]{12}([^0-9]|$)/\1<account>\2/g' -e 's/(^|[^0-9])[0-9]{12}([^0-9]|$)/\1<account>\2/g')
+  [ -n "${B#s3://}" ] && san=(-e "s|$(printf '%s' "${B#s3://}" | sed 's/[.]/\\./g')|\$SAR_S3_BUCKET|g" "${san[@]}")
+  sed -E "${san[@]}" /var/log/sar-r1-boot.log > /work/out/boot.log 2>/dev/null
+  up=OK
+  { cd /work && tar czf out.tar.gz --exclude='out/duck_*' out && sha256sum out.tar.gz > out.sha256; } || up=FAIL
+  aws s3 cp --only-show-errors /work/out.tar.gz "$P/out/out.tar.gz" || up=FAIL
+  aws s3 cp --only-show-errors /work/out.sha256 "$P/out/out.sha256" || up=FAIL
+  aws s3 sync --only-show-errors --exclude 'duck_*' /work/out "$P/out/files/" || up=FAIL
+  # DONE only after every transfer succeeded, else UPLOAD_FAIL (FIX-JP 4); the power-off stays unconditional
+  if [ "$up" = OK ]; then st "DONE rc=$rc $(head -1 /work/out/RESULT.txt)"; else st "UPLOAD_FAIL rc=$rc $(head -1 /work/out/RESULT.txt)"; fi
+  shutdown -h now
+}
+trap fin EXIT
+snap install aws-cli --classic || { apt-get update -y && apt-get install -y awscli; }
+st BOOT
+apt-get update -y && apt-get install -y python3-venv python3-pip git time patch || { st "FAIL apt"; exit 1; }
+mkdir -p /work/in /work/out && cd /work || exit 1
+aws s3 cp --only-show-errors --recursive "$P/in/" /work/in/ || { st "FAIL payload download"; exit 1; }
+( cd /work/in && sha256sum -c --quiet payload.sha256 ) || { st "FAIL payload sha"; exit 1; }
+aws s3 cp --only-show-errors "$B/r1/repo/base.bundle" /work/base.bundle || { st "FAIL base bundle"; exit 1; }
+echo "@@BASE_BUNDLE_SHA@@  /work/base.bundle" | sha256sum -c --quiet - || { st "FAIL base bundle sha"; exit 1; }
+mkdir -p "$(dirname "$REPO_DIR")"
+git clone -q /work/base.bundle "$REPO_DIR" || { st "FAIL clone"; exit 1; }
+git -C "$REPO_DIR" fetch -q /work/in/inc.bundle '+refs/heads/*:refs/remotes/inc/*' || { st "FAIL fetch"; exit 1; }
+git -C "$REPO_DIR" -c advice.detachedHead=false checkout -q "$COMMIT" || { st "FAIL checkout"; exit 1; }
+[ "$(git -C "$REPO_DIR" rev-parse HEAD)" = "$COMMIT" ] || { st "FAIL head"; exit 1; }
+git -C "$REPO_DIR" rev-parse HEAD > /work/out/git_head.txt
+@@ENV_RESTORE@@
+@@COPY_FROM_TIP@@
+st PULL
+@@PULLS@@
+st DATA
+@@DATA_SYNC@@
+cat > /work/steps.sh <<'SAR_STEPS'
+@@STEPS_SCRIPT@@
+SAR_STEPS
+chown -R ubuntu:ubuntu /work "$REPO_DIR"
+# Ported October scripts read ~/.zshrc for an optional API key. An empty file keeps them offline (no key, no fetch).
+[ -e /home/ubuntu/.zshrc ] || install -m 600 -o ubuntu -g ubuntu /dev/null /home/ubuntu/.zshrc
+if [ -d /data ]; then chown -R ubuntu:ubuntu /data; for d in /data/openalex_pipeline/derived /data/openalex_pipeline/snapshot /data/legacy /data/ref; do [ -d "$d" ] && chmod -R a-w "$d"; done; fi
+st RUN
+runuser -u ubuntu -- bash /work/steps.sh

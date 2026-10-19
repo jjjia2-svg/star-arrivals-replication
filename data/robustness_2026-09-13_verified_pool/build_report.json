@@ -1,0 +1,65 @@
+{
+ "generated": "2026-09-13",
+ "rule": "drop incumbents whose person_id (via the 2026-07-16 11-school person map) is not on the 2026-08-09 verified economics roster; all such incumbents enter through the network route only",
+ "verified_persons": 970,
+ "old_pool_persons": 1164,
+ "verified_persons_not_in_old_pool": 0,
+ "excluded_persons": 162,
+ "excluded_by_category": {
+  "rejected_in_2026-08-09_verification": 60,
+  "removed_in_2026-07-20_roster_cleaning": 102
+ },
+ "panel1": {
+  "rows_in": 118393,
+  "rows_excluded": 15037,
+  "persons_in": 1043,
+  "persons_excluded": 162,
+  "relations_in": 10763,
+  "relations_excluded": 1367,
+  "events_in": 116,
+  "events_touched": 101,
+  "events_after": 116,
+  "network_route_persons_in": 860,
+  "filtered_frame": "data/robustness_2026-09-13_verified_pool/frames/p1_frame_econ_verified.csv"
+ },
+ "panel2": {
+  "rows_in": 180148,
+  "rows_excluded": 22760,
+  "persons_in": 1043,
+  "persons_excluded": 162,
+  "relations_in": 10741,
+  "relations_excluded": 1365,
+  "events_in": 116,
+  "events_touched": 100,
+  "events_after": 116,
+  "network_route_persons_in": 860,
+  "filtered_frame": "data/robustness_2026-09-13_verified_pool/frames/p2_becoming_econ_verified.csv"
+ },
+ "gates": [
+  "roster-route persons all verified (both frames)",
+  "excluded persons network-route only",
+  "excluded persons all in old pool",
+  "filtered frames = original minus excluded lines"
+ ],
+ "inputs_sha256": {
+  "data/frames/p1_frame_econ.csv": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+  "data/frames/p2_becoming_econ.csv": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+  "data/raw_verified/roster_econ_verified.parquet": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+  "<legacy>/v2_output/econ_roster_verify_2026-08-09/rejected_persons.csv": "0c5dd47cd8e3bfe182a2f89b9b0a2aa61f2bc794cddbb50457e3673cb570e303",
+  "<legacy>/v2_output/explore_within_dept_2026-07-20/data/roster_clean_11school.parquet": "b9c2098ef744f5a1a313793a56d0a2044cdef54c85de23b23864ac419a149e9c",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_adelaide.parquet": "5aff10835c25d2c7fb9e2c983b6ed690277775b328a07f288daa3c5381f061f2",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_anu.parquet": "8c12736b09726c20718e6126bd2a0f2c2cd9111b869c0113e47eecb6799cdf19",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_deakin.parquet": "81b938b400b7ae485dc3b4e1ffdc035ec3e49159950c1b578bdd2a4595c4ee68",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_macquarie.parquet": "fb9b901fcdf10e3ad02d66814275ec0a607d4a72f27d89b78ddbf1d6491503b0",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_melbourne.parquet": "c40f20eebee678a216b9868cd81173e422b544581268b0e9cfbd2eaa392d8590",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_sydney.parquet": "7ec24223aca19fd753ca2355d998271736cd1f4d73bca45192d2b0b8ae44ee1e",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_uq.parquet": "8807773cac019c24f4a30daffd493648d033c07afc76fe6d72498de526ae9275",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_uts.parquet": "892aa1b59095259e68f148ce5498145030a3cefd2c65a8dbef85038d3fef5cdc",
+  "<openalex_extraction>/derived/u0p5_roster/registry_v5_2026-07-20/dept_roster_panel_uwa.parquet": "345b1ca9b35342340d69a71763555a45add8aeb04dda30586c163067f3a44bf5",
+  "<openalex_extraction>/derived/u5u6_final_2026-07-18_work/roster_v4_proj8/dept_roster_panel_monash.parquet": "48ad340d0351ca580d9b62872bf2e595195ecb8c6d0b57848b056be8247db7ec",
+  "<openalex_extraction>/derived/u5u6_final_2026-07-18_work/roster_v4_proj8/dept_roster_panel_unsw.parquet": "e7be2ae53ef6528c920898e51a7f7bcb5c893a6412dbc090a2ac8d1bd66d2f8a",
+  "<openalex_extraction>/derived/u0p5_roster/adelaide_backfill_2007_2021_2026-07-20/dept_roster_panel_adelaide_MERGED_209plus_gapfill.parquet": "c4907ef9c1b5e0796c388eab96e8383fb8834f6d1a23f2e97a0dd1ab533eb71e",
+  "<openalex_extraction>/derived/u0p5_roster/adelaide_backfill_2007_2021_2026-07-20/dept_roster_panel_adelaide_backfill_2007_2021.parquet": "7c895f7dce9fda1af7961405cc25356c6add842ca09d171353c7a36a12d60211"
+ }
+}

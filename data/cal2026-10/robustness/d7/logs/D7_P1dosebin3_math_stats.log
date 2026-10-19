@@ -1,0 +1,12 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[full/dosebin3] P1dosebin3_math_stats  original=19910 rows after decontamination=18854 rows =====
+P1dosebin3_math_stats/union              obs=16117   rel=1714   joint-effect p=0.0067 placebo p=0.1757 ATE=-0.00583 (SE 0.01528, CI -0.03578~0.02411)
+P1dosebin3_math_stats/network            obs=3628    rel=364    joint-effect p=0.5039 placebo p=0.6385 ATE=-0.01823 (SE 0.02780, CI -0.07273~0.03627)
+P1dosebin3_math_stats/dept               obs=13635   rel=1471   joint-effect p=0.0077 placebo p=0.2344 ATE=-0.00282 (SE 0.01691, CI -0.03596~0.03032)
+[P1dosebin3_math_stats] done
+SAR_OUT=$O Rscript $DRV full P1dosebin3_${F} data/frames/p1_frame_${F}.csv   8.93s user 2.01s system 81% cpu 13.437 total

@@ -1,0 +1,33 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "jp",
+  "instance_type": "r6i.16xlarge",
+  "price_hr": 4.032,
+  "est_min": 60,
+  "hard_min": 180,
+  "root_gb": 200,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_PATHS_CONFIG": "$REPO_DIR/config/r1/paths_aws.yaml",
+    "PYTHONHASHSEED": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "pulls": [],
+  "required_dests": [],
+  "data_sync": [],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/run_stages.py",
+      "/work/run_stages.py"
+    ]
+  ],
+  "env_layers": [
+    "py",
+    "rmac",
+    "rcloud"
+  ],
+  "stages": "config/r1/stages/jp.json",
+  "steps": [
+    "\"$PY\" /work/run_stages.py --table \"$REPO_DIR/config/r1/stages/jp.json\" --repo \"$REPO_DIR\" --commit \"$COMMIT\" --prefix \"$P\" --work /work --out /work/out ${SAR_RESUME_DIR:+--resume-dir \"$SAR_RESUME_DIR\"}"
+  ]
+}

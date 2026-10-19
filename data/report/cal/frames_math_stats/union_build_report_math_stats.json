@@ -1,0 +1,966 @@
+{
+ "caliber": "dept-exposure multidisc math_stats (ported from econ v9) GOLD 2026-08-10",
+ "roster_clean_variant": "none",
+ "fp_gap": 10,
+ "age_gap_guard_max": 60,
+ "caliber_notes": [
+  "Old-frame rows (07-24 network frame) are preserved byte for byte in the network/both channels; new rows are dept_only.",
+  "y uses the existing SSD works.fwci column; the old frame recomputed it from cited_by_count and a baseline. G-VAL checks a sample.",
+  "The |gap|>60 guard removes only new dept_only relations; old-frame relations above the threshold are recorded and retained.",
+  "A star is excluded only from its own event, as in econ v9; other stars may be colleagues. Counts are in the funnel.",
+  "Empty arrival_corrected retains the 07-24 ledger year, matching prodlib COALESCE.",
+  "Roster cleaning applies only to the dept channel; the old-frame network channel is unaffected."
+ ],
+ "events": {
+  "n_events": 107,
+  "n_arrival_fallback_to_0724_ledger": 0,
+  "fallback_events": []
+ },
+ "anchor_check": {
+  "old_events_all_in_ledger": true,
+  "arrival_all_match": true
+ },
+ "alias": {
+  "persons": 1421,
+  "author_rows": 1638,
+  "mapped_persons": 397,
+  "selfrows_unmapped": 1024,
+  "multi_alias_persons": 79
+ },
+ "sup_merge": {
+  "star_extra_works_from_supplement": 33
+ },
+ "dose_src": {
+  "persons": 1301,
+  "rows": 136953
+ },
+ "relationships_pre_guard": {
+  "dept": 8446,
+  "network_old": 476,
+  "both": 146,
+  "dept_only_new": 8294,
+  "union": 8770,
+  "v9_drop_self_alias": 1,
+  "v9_drop_star_prearrival": 3,
+  "v9_drop_alias_dup": 6,
+  "v9_dropped_examples": {
+   "self": [
+    [
+     "A5101314954",
+     "A5042200719:unsw"
+    ]
+   ],
+   "prearrival": [
+    [
+     "A5045670674",
+     "A5102507890:adelaide"
+    ],
+    [
+     "A5069315147",
+     "A5044731110:unsw"
+    ],
+    [
+     "A5069315147",
+     "A5024668916:unsw"
+    ]
+   ],
+   "alias_dup": [
+    [
+     "A5016967320",
+     "A5049704913:anu"
+    ],
+    [
+     "A5123242797",
+     "A5061150027:unsw"
+    ],
+    [
+     "A5124065402",
+     "A5023336304:melbourne"
+    ],
+    [
+     "A5124065402",
+     "A5076284681:melbourne"
+    ],
+    [
+     "A5124454489",
+     "A5061150027:unsw"
+    ],
+    [
+     "A5126347177",
+     "A5061150027:unsw"
+    ]
+   ]
+  }
+ },
+ "G_DOSE_advisory": {
+  "n": 200,
+  "missing_side": 0,
+  "max_abs_diff": 0.1543920393625005,
+  "share_exact_1e-9": 0.245,
+  "share_le_0.01": 0.98,
+  "worst": [
+   [
+    "A5087195687",
+    "A5049704913:anu",
+    "0.1766473650932312",
+    "0.3310394044557317"
+   ],
+   [
+    "A5052052514",
+    "A5042200719:unsw",
+    "0.3779644668102264",
+    "0.47809144373375745"
+   ],
+   [
+    "A5075920512",
+    "A5031984571:uwa",
+    "0.0270397383719682",
+    "0.10858993356534882"
+   ],
+   [
+    "A5103604637",
+    "A5003450294:unsw",
+    "0.0971702635288238",
+    "0.16071477321403385"
+   ],
+   [
+    "A5004501214",
+    "A5100397166:sydney",
+    "0.2034997642040252",
+    "0.19436951751399306"
+   ],
+   [
+    "A5027423843",
+    "A5003450294:unsw",
+    "0.0170879364013671",
+    "0.013606527229069488"
+   ],
+   [
+    "A5064892629",
+    "A5049704913:anu",
+    "0.3339674472808838",
+    "0.3310394044557317"
+   ],
+   [
+    "A5100326206",
+    "A5015055144:uwa",
+    "0.1267643868923187",
+    "0.12831473307942506"
+   ]
+  ]
+ },
+ "first_pub": {
+  "persons_with_fp": 1301,
+  "new_rel_persons_no_fp": 120
+ },
+ "age_gap_guard": {
+  "new_rel_dropped": 194,
+  "new_rel_na_gap_kept": 474,
+  "old_frame_rel_gt60_NOT_dropped": 22,
+  "dropped_examples": [
+   [
+    "A5001788962",
+    "A5000405788:melbourne",
+    "118.0"
+   ],
+   [
+    "A5001788962",
+    "A5002352629:melbourne",
+    "118.0"
+   ],
+   [
+    "A5001788962",
+    "A5006276965:melbourne",
+    "102.0"
+   ],
+   [
+    "A5001788962",
+    "A5008021446:melbourne",
+    "117.0"
+   ],
+   [
+    "A5001788962",
+    "A5012602442:melbourne",
+    "102.0"
+   ],
+   [
+    "A5001788962",
+    "A5015466996:melbourne",
+    "69.0"
+   ],
+   [
+    "A5001788962",
+    "A5017243306:melbourne",
+    "105.0"
+   ],
+   [
+    "A5001788962",
+    "A5020652963:melbourne",
+    "89.0"
+   ],
+   [
+    "A5001788962",
+    "A5028906399:melbourne",
+    "109.0"
+   ],
+   [
+    "A5001788962",
+    "A5029600817:melbourne",
+    "116.0"
+   ]
+  ]
+ },
+ "ship_alias": {
+  "n_star_authors_excl_list": 2218,
+  "n_after_alias_closure": 3575
+ },
+ "outcome_src": {
+  "persons_needed": 1370,
+  "unit_rows": 126854,
+  "person_years": 24396
+ },
+ "diag_new_rel_persons_in_star_excl_list": 179,
+ "G_VAL_advisory": {
+  "sampled_both": 40,
+  "mismatches": 1300,
+  "dose_tolerated_le_0.01": 11,
+  "fill_divergence": 126,
+  "fill_examples": [
+   [
+    "A5006986921",
+    "A5006276965:melbourne",
+    "2021",
+    "fwci_frac",
+    "old_NA",
+    "nan",
+    "0.16119999999999998"
+   ],
+   [
+    "A5006986921",
+    "A5006276965:melbourne",
+    "2021",
+    "fwci_frac_ex_star",
+    "old_NA",
+    "nan",
+    "0.16119999999999998"
+   ],
+   [
+    "A5006986921",
+    "A5006276965:melbourne",
+    "2021",
+    "fwci_mean",
+    "old_NA",
+    "nan",
+    "0.4836"
+   ],
+   [
+    "A5006986921",
+    "A5006276965:melbourne",
+    "2021",
+    "fwci_mean_ex_star",
+    "old_NA",
+    "nan",
+    "0.4836"
+   ],
+   [
+    "A5052446020",
+    "A5089754758:melbourne",
+    "2024",
+    "fwci_frac",
+    "old_NA",
+    "nan",
+    "4.77966"
+   ],
+   [
+    "A5052446020",
+    "A5089754758:melbourne",
+    "2024",
+    "fwci_frac_ex_star",
+    "old_NA",
+    "nan",
+    "4.77966"
+   ],
+   [
+    "A5052446020",
+    "A5089754758:melbourne",
+    "2024",
+    "fwci_mean",
+    "old_NA",
+    "nan",
+    "7.089333333333333"
+   ],
+   [
+    "A5052446020",
+    "A5089754758:melbourne",
+    "2024",
+    "fwci_mean_ex_star",
+    "old_NA",
+    "nan",
+    "7.089333333333333"
+   ]
+  ],
+  "examples": [
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2019",
+    "fwci_frac",
+    "0.1311882138252258",
+    "0.04275"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2019",
+    "fwci_frac_ex_star",
+    "0.1311882138252258",
+    "0.04275"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2019",
+    "fwci_mean",
+    "0.2623764276504516",
+    "0.0855"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2019",
+    "fwci_mean_ex_star",
+    "0.2623764276504516",
+    "0.0855"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2020",
+    "fwci_frac",
+    "0.341562420129776",
+    "0.229325"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2020",
+    "fwci_frac_ex_star",
+    "0.341562420129776",
+    "0.229325"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2020",
+    "fwci_mean",
+    "1.366249680519104",
+    "0.9173"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2020",
+    "fwci_mean_ex_star",
+    "1.366249680519104",
+    "0.9173"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2021",
+    "fwci_frac",
+    "0.3203380703926086",
+    "0.26337333333333335"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2021",
+    "fwci_frac_ex_star",
+    "0.3203380703926086",
+    "0.26337333333333335"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2021",
+    "fwci_mean",
+    "4.8050713539123535",
+    "3.9506"
+   ],
+   [
+    "A5027919534",
+    "A5076284681:melbourne",
+    "2021",
+    "fwci_mean_ex_star",
+    "4.8050713539123535",
+    "3.9506"
+   ]
+  ]
+ },
+ "G_ROW": {
+  "old_rel": 476,
+  "found": 476,
+  "share": 1.0,
+  "missing": []
+ },
+ "G_SUM": {
+  "total": 94336,
+  "old_rows": 5236,
+  "new_rows": 89100,
+  "new_rel_x11": 89100,
+  "ok": true
+ },
+ "frame": {
+  "rows": 94336,
+  "relationships": 8576,
+  "persons": 1389,
+  "events": 107,
+  "by_channel": {
+   "network": 330,
+   "both": 146,
+   "dept_only": 8100
+  },
+  "events_zero_dept_members": [],
+  "dose_null_new_rows": 5214,
+  "age_gap_null_new_rows": 5214
+ },
+ "per_event": {
+  "A5000405788:melbourne": {
+   "network": 1,
+   "dept_only": 145,
+   "both": 1
+  },
+  "A5002352629:melbourne": {
+   "network": 0,
+   "dept_only": 121,
+   "both": 0
+  },
+  "A5003450294:unsw": {
+   "network": 7,
+   "dept_only": 56,
+   "both": 0
+  },
+  "A5006276965:melbourne": {
+   "network": 18,
+   "dept_only": 94,
+   "both": 12
+  },
+  "A5006388085:anu": {
+   "network": 0,
+   "dept_only": 85,
+   "both": 0
+  },
+  "A5006802589:sydney": {
+   "network": 9,
+   "dept_only": 86,
+   "both": 1
+  },
+  "A5008021446:melbourne": {
+   "network": 0,
+   "dept_only": 142,
+   "both": 0
+  },
+  "A5009198230:sydney": {
+   "network": 0,
+   "dept_only": 53,
+   "both": 0
+  },
+  "A5010027385:sydney": {
+   "network": 0,
+   "dept_only": 49,
+   "both": 0
+  },
+  "A5012363763:anu": {
+   "network": 0,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5012602442:melbourne": {
+   "network": 12,
+   "dept_only": 118,
+   "both": 3
+  },
+  "A5014083931:monash": {
+   "network": 0,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5014535747:monash": {
+   "network": 3,
+   "dept_only": 73,
+   "both": 1
+  },
+  "A5015055144:uwa": {
+   "network": 14,
+   "dept_only": 30,
+   "both": 6
+  },
+  "A5015466996:melbourne": {
+   "network": 9,
+   "dept_only": 83,
+   "both": 1
+  },
+  "A5016233400:uwa": {
+   "network": 8,
+   "dept_only": 48,
+   "both": 7
+  },
+  "A5016692246:sydney": {
+   "network": 1,
+   "dept_only": 87,
+   "both": 1
+  },
+  "A5017243306:melbourne": {
+   "network": 15,
+   "dept_only": 140,
+   "both": 2
+  },
+  "A5020652963:melbourne": {
+   "network": 0,
+   "dept_only": 86,
+   "both": 0
+  },
+  "A5022427262:unsw": {
+   "network": 2,
+   "dept_only": 87,
+   "both": 1
+  },
+  "A5022560324:anu": {
+   "network": 0,
+   "dept_only": 86,
+   "both": 0
+  },
+  "A5023336304:melbourne": {
+   "network": 19,
+   "dept_only": 153,
+   "both": 7
+  },
+  "A5023638482:uwa": {
+   "network": 1,
+   "dept_only": 32,
+   "both": 0
+  },
+  "A5023719219:anu": {
+   "network": 0,
+   "dept_only": 85,
+   "both": 0
+  },
+  "A5023907914:monash": {
+   "network": 8,
+   "dept_only": 69,
+   "both": 5
+  },
+  "A5024668916:unsw": {
+   "network": 1,
+   "dept_only": 77,
+   "both": 1
+  },
+  "A5025379457:anu": {
+   "network": 0,
+   "dept_only": 58,
+   "both": 0
+  },
+  "A5026128270:adelaide": {
+   "network": 2,
+   "dept_only": 50,
+   "both": 0
+  },
+  "A5027646711:sydney": {
+   "network": 1,
+   "dept_only": 76,
+   "both": 1
+  },
+  "A5028219015:melbourne": {
+   "network": 8,
+   "dept_only": 79,
+   "both": 3
+  },
+  "A5028372442:monash": {
+   "network": 1,
+   "dept_only": 68,
+   "both": 0
+  },
+  "A5028906399:melbourne": {
+   "network": 1,
+   "dept_only": 85,
+   "both": 0
+  },
+  "A5029600817:melbourne": {
+   "network": 5,
+   "dept_only": 146,
+   "both": 0
+  },
+  "A5031422954:sydney": {
+   "network": 0,
+   "dept_only": 50,
+   "both": 0
+  },
+  "A5031984571:uwa": {
+   "network": 10,
+   "dept_only": 43,
+   "both": 0
+  },
+  "A5035954014:anu": {
+   "network": 0,
+   "dept_only": 58,
+   "both": 0
+  },
+  "A5036070439:uwa": {
+   "network": 14,
+   "dept_only": 26,
+   "both": 8
+  },
+  "A5036133145:monash": {
+   "network": 3,
+   "dept_only": 31,
+   "both": 1
+  },
+  "A5038947183:melbourne": {
+   "network": 2,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5040962966:uq": {
+   "network": 1,
+   "dept_only": 46,
+   "both": 1
+  },
+  "A5042200719:unsw": {
+   "network": 1,
+   "dept_only": 54,
+   "both": 0
+  },
+  "A5042374611:monash": {
+   "network": 3,
+   "dept_only": 67,
+   "both": 0
+  },
+  "A5042789303:melbourne": {
+   "network": 20,
+   "dept_only": 137,
+   "both": 5
+  },
+  "A5044036779:melbourne": {
+   "network": 2,
+   "dept_only": 91,
+   "both": 0
+  },
+  "A5044223666:melbourne": {
+   "network": 0,
+   "dept_only": 142,
+   "both": 0
+  },
+  "A5044731110:unsw": {
+   "network": 7,
+   "dept_only": 72,
+   "both": 6
+  },
+  "A5045670674:adelaide": {
+   "network": 15,
+   "dept_only": 47,
+   "both": 4
+  },
+  "A5045978476:melbourne": {
+   "network": 1,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5046503140:uq": {
+   "network": 2,
+   "dept_only": 55,
+   "both": 1
+  },
+  "A5047493332:melbourne": {
+   "network": 1,
+   "dept_only": 142,
+   "both": 0
+  },
+  "A5048960543:sydney": {
+   "network": 6,
+   "dept_only": 89,
+   "both": 0
+  },
+  "A5049704913:anu": {
+   "network": 17,
+   "dept_only": 77,
+   "both": 8
+  },
+  "A5051228281:melbourne": {
+   "network": 0,
+   "dept_only": 106,
+   "both": 0
+  },
+  "A5051266677:uq": {
+   "network": 0,
+   "dept_only": 44,
+   "both": 0
+  },
+  "A5051304022:monash": {
+   "network": 0,
+   "dept_only": 74,
+   "both": 0
+  },
+  "A5051430675:anu": {
+   "network": 0,
+   "dept_only": 59,
+   "both": 0
+  },
+  "A5051533068:monash": {
+   "network": 0,
+   "dept_only": 31,
+   "both": 0
+  },
+  "A5052182828:sydney": {
+   "network": 0,
+   "dept_only": 87,
+   "both": 0
+  },
+  "A5052697053:melbourne": {
+   "network": 4,
+   "dept_only": 144,
+   "both": 4
+  },
+  "A5054179871:adelaide": {
+   "network": 0,
+   "dept_only": 45,
+   "both": 0
+  },
+  "A5054676758:anu": {
+   "network": 4,
+   "dept_only": 64,
+   "both": 3
+  },
+  "A5055338740:uq": {
+   "network": 1,
+   "dept_only": 44,
+   "both": 0
+  },
+  "A5055475308:anu": {
+   "network": 0,
+   "dept_only": 53,
+   "both": 0
+  },
+  "A5057355656:anu": {
+   "network": 0,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5057940024:sydney": {
+   "network": 6,
+   "dept_only": 75,
+   "both": 2
+  },
+  "A5060731844:sydney": {
+   "network": 1,
+   "dept_only": 89,
+   "both": 0
+  },
+  "A5060972783:sydney": {
+   "network": 0,
+   "dept_only": 56,
+   "both": 0
+  },
+  "A5061150027:unsw": {
+   "network": 1,
+   "dept_only": 82,
+   "both": 1
+  },
+  "A5062407259:monash": {
+   "network": 7,
+   "dept_only": 80,
+   "both": 1
+  },
+  "A5062657762:uwa": {
+   "network": 0,
+   "dept_only": 41,
+   "both": 0
+  },
+  "A5067931953:monash": {
+   "network": 1,
+   "dept_only": 69,
+   "both": 0
+  },
+  "A5068763843:anu": {
+   "network": 4,
+   "dept_only": 52,
+   "both": 1
+  },
+  "A5069315147:unsw": {
+   "network": 3,
+   "dept_only": 86,
+   "both": 0
+  },
+  "A5071818847:monash": {
+   "network": 1,
+   "dept_only": 60,
+   "both": 0
+  },
+  "A5072212118:melbourne": {
+   "network": 0,
+   "dept_only": 143,
+   "both": 0
+  },
+  "A5072290038:monash": {
+   "network": 3,
+   "dept_only": 62,
+   "both": 0
+  },
+  "A5074011742:monash": {
+   "network": 0,
+   "dept_only": 72,
+   "both": 0
+  },
+  "A5074032970:monash": {
+   "network": 0,
+   "dept_only": 76,
+   "both": 0
+  },
+  "A5074884339:sydney": {
+   "network": 1,
+   "dept_only": 47,
+   "both": 0
+  },
+  "A5075245013:anu": {
+   "network": 7,
+   "dept_only": 67,
+   "both": 1
+  },
+  "A5075602113:monash": {
+   "network": 0,
+   "dept_only": 70,
+   "both": 0
+  },
+  "A5075677942:sydney": {
+   "network": 10,
+   "dept_only": 8,
+   "both": 0
+  },
+  "A5075896470:uwa": {
+   "network": 6,
+   "dept_only": 45,
+   "both": 4
+  },
+  "A5076157811:sydney": {
+   "network": 0,
+   "dept_only": 56,
+   "both": 0
+  },
+  "A5076284681:melbourne": {
+   "network": 22,
+   "dept_only": 164,
+   "both": 13
+  },
+  "A5077319118:monash": {
+   "network": 2,
+   "dept_only": 82,
+   "both": 1
+  },
+  "A5077954390:melbourne": {
+   "network": 29,
+   "dept_only": 79,
+   "both": 4
+  },
+  "A5078197291:unsw": {
+   "network": 0,
+   "dept_only": 92,
+   "both": 0
+  },
+  "A5078447699:melbourne": {
+   "network": 0,
+   "dept_only": 106,
+   "both": 0
+  },
+  "A5079308734:monash": {
+   "network": 4,
+   "dept_only": 73,
+   "both": 0
+  },
+  "A5080074993:anu": {
+   "network": 1,
+   "dept_only": 84,
+   "both": 1
+  },
+  "A5080783187:adelaide": {
+   "network": 0,
+   "dept_only": 57,
+   "both": 0
+  },
+  "A5083416384:sydney": {
+   "network": 1,
+   "dept_only": 52,
+   "both": 0
+  },
+  "A5083769806:uwa": {
+   "network": 22,
+   "dept_only": 25,
+   "both": 9
+  },
+  "A5085296117:melbourne": {
+   "network": 10,
+   "dept_only": 96,
+   "both": 0
+  },
+  "A5089288259:sydney": {
+   "network": 0,
+   "dept_only": 47,
+   "both": 0
+  },
+  "A5089754758:melbourne": {
+   "network": 16,
+   "dept_only": 140,
+   "both": 8
+  },
+  "A5089978878:uq": {
+   "network": 0,
+   "dept_only": 41,
+   "both": 0
+  },
+  "A5090757028:unsw": {
+   "network": 6,
+   "dept_only": 53,
+   "both": 0
+  },
+  "A5090768053:monash": {
+   "network": 2,
+   "dept_only": 77,
+   "both": 0
+  },
+  "A5090897140:anu": {
+   "network": 1,
+   "dept_only": 66,
+   "both": 0
+  },
+  "A5090916445:unsw": {
+   "network": 3,
+   "dept_only": 49,
+   "both": 2
+  },
+  "A5100397166:sydney": {
+   "network": 1,
+   "dept_only": 51,
+   "both": 0
+  },
+  "A5101410597:anu": {
+   "network": 1,
+   "dept_only": 59,
+   "both": 0
+  },
+  "A5102507890:adelaide": {
+   "network": 1,
+   "dept_only": 47,
+   "both": 0
+  },
+  "A5107225078:melbourne": {
+   "network": 1,
+   "dept_only": 142,
+   "both": 0
+  },
+  "A5113900323:monash": {
+   "network": 42,
+   "dept_only": 72,
+   "both": 4
+  }
+ },
+ "GATE": "PASS"
+}

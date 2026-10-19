@@ -1,0 +1,153 @@
+{
+ "_generator": "analysis/paper/ledger_new_2026_10.py",
+ "chemistry": {
+  "_inputs": {
+   "edges_glob": "/work/edge_table/openalex_pipeline/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_chemistry_cal2026-10.csv",
+   "events_sha256": "360687612eea77ac4ef0652ecb545c50c792300595c5653dd9ad7764599b2cf0",
+   "p1_frame": "/work/prod/frames/p1_frame_chemistry.csv",
+   "p1_sha256": "358d4041d1647e130ba429f922f8baf973acf9637a25fa31b1ecf6d78f251c98",
+   "person_map": null,
+   "snapshot_edges_of_relevant_authors": 157263,
+   "supplement_rows_read": 80722,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   "works_glob": "/work/edge_table/openalex_pipeline/derived/u1_edges_full_2026-07-05/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 328,
+   "dept_only": 3466,
+   "network": 1472
+  },
+  "events_with_a_onehop_incumbent": 56,
+  "n_events": 97,
+  "n_incumbent_event_pairs": 5266,
+  "n_incumbents": 747,
+  "onehop_pairs": 131,
+  "onehop_pairs_dept_only_channel": 35,
+  "onehop_pairs_network_channel": 96,
+  "onehop_pairs_network_only": 66,
+  "own_field_code": "16",
+  "own_field_subfield_ids_in_support": [
+   "1602",
+   "1603",
+   "1604",
+   "1605",
+   "1606",
+   "1607"
+  ],
+  "own_field_subfields_in_extraction_table": 6,
+  "prearrival_works": 85531,
+  "prearrival_works_own_field": 21673,
+  "share_onehop_all": 0.0249,
+  "share_onehop_network_channel": 0.0533,
+  "share_onehop_network_only": 0.0448,
+  "share_prearrival_works_own_field": 0.2534,
+  "share_twohop_network_channel": 0.9467,
+  "subfields_in_dose_support": 234,
+  "subfields_in_dose_support_own_field": 6,
+  "unmapped_frame_persons": 0
+ },
+ "econ": {
+  "_inputs": {
+   "edges_glob": "/work/edge_table/openalex_pipeline/derived/u1_full_11school_2026-07-16/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_econ_cal2026-10.csv",
+   "events_sha256": "e392d6204f8cb4bbd1469eb2f0812c538c70b9a086cba96ff4b6ea9f8c3de750",
+   "p1_frame": "/work/prod/frames/p1_frame_econ.csv",
+   "p1_sha256": "b81671c0bbd058127bf672b561258f0c4d97efee5abbbb997e1627b8b1683132",
+   "person_map": "/work/edge_table/openalex_pipeline/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+   "snapshot_edges_of_relevant_authors": 198810,
+   "supplement_rows_read": 95732,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c",
+    "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d",
+    "data/raw_verified/edges_supplement_econ_fnfix.jsonl": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+   },
+   "works_glob": "/work/edge_table/openalex_pipeline/derived/u1_full_11school_2026-07-16/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 123,
+   "dept_only": 12271,
+   "network": 333
+  },
+  "events_with_a_onehop_incumbent": 39,
+  "n_events": 173,
+  "n_incumbent_event_pairs": 12727,
+  "n_incumbents": 1418,
+  "onehop_pairs": 53,
+  "onehop_pairs_dept_only_channel": 9,
+  "onehop_pairs_network_channel": 44,
+  "onehop_pairs_network_only": 28,
+  "own_field_code": "20",
+  "own_field_subfield_ids_in_support": [
+   "2000",
+   "2002",
+   "2003"
+  ],
+  "own_field_subfields_in_extraction_table": 3,
+  "prearrival_works": 97115,
+  "prearrival_works_own_field": 26850,
+  "share_onehop_all": 0.0042,
+  "share_onehop_network_channel": 0.0965,
+  "share_onehop_network_only": 0.0841,
+  "share_prearrival_works_own_field": 0.2765,
+  "share_twohop_network_channel": 0.9035,
+  "subfields_in_dose_support": 249,
+  "subfields_in_dose_support_own_field": 3,
+  "unmapped_frame_persons": 302
+ },
+ "math_stats": {
+  "_inputs": {
+   "edges_glob": "/work/edge_table/openalex_pipeline/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_math_stats_cal2026-10.csv",
+   "events_sha256": "63f42ee01e66ed6ddde04199b4b590adb0d091a8ab9c9759b8dbbd7b0decbc01",
+   "p1_frame": "/work/prod/frames/p1_frame_math_stats.csv",
+   "p1_sha256": "b2d34cb83c2fc0085756f6c0bc054dbc3d633e648c440e24875daf55bd5e8d14",
+   "person_map": null,
+   "snapshot_edges_of_relevant_authors": 111536,
+   "supplement_rows_read": 80722,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   "works_glob": "/work/edge_table/openalex_pipeline/derived/u1_edges_full_2026-07-05/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 146,
+   "dept_only": 8100,
+   "network": 330
+  },
+  "events_with_a_onehop_incumbent": 30,
+  "n_events": 107,
+  "n_incumbent_event_pairs": 8576,
+  "n_incumbents": 1389,
+  "onehop_pairs": 58,
+  "onehop_pairs_dept_only_channel": 13,
+  "onehop_pairs_network_channel": 45,
+  "onehop_pairs_network_only": 21,
+  "own_field_code": "26",
+  "own_field_subfield_ids_in_support": [
+   "2602",
+   "2604",
+   "2605",
+   "2607",
+   "2608",
+   "2610",
+   "2611",
+   "2612",
+   "2613",
+   "2614"
+  ],
+  "own_field_subfields_in_extraction_table": 10,
+  "prearrival_works": 62885,
+  "prearrival_works_own_field": 17916,
+  "share_onehop_all": 0.0068,
+  "share_onehop_network_channel": 0.0945,
+  "share_onehop_network_only": 0.0636,
+  "share_prearrival_works_own_field": 0.2849,
+  "share_twohop_network_channel": 0.9055,
+  "subfields_in_dose_support": 242,
+  "subfields_in_dose_support_own_field": 10,
+  "unmapped_frame_persons": 0
+ }
+}

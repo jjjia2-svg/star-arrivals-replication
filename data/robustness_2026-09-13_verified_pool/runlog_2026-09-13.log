@@ -1,0 +1,56 @@
+== P1_econ_fnfix (run_p1.R on data/frames/p1_frame_econ.csv)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1 P1_econ_fnfix  original=118393 rows after decontamination=116204 rows =====
+P1_econ_fnfix/union                      obs=92903   rel=10564  joint-effect p=0.0000 placebo p=0.0102 ATE=-0.37822 (SE 0.06163, CI -0.49901~-0.25743)
+P1_econ_fnfix/network                    obs=56427   rel=6647   joint-effect p=0.0000 placebo p=0.0051 ATE=-0.51692 (SE 0.09320, CI -0.69958~-0.33426)
+P1_econ_fnfix/dept                       obs=43025   rel=4576   joint-effect p=0.0000 placebo p=0.0159 ATE=-0.36802 (SE 0.08095, CI -0.52668~-0.20935)
+[P1_econ_fnfix] done
+EQUAL
+CONTROL EQUAL: data/robustness_2026-09-13_verified_pool/control/P1_econ_fnfix.json
+== P2_econ_fnfix (run_p2.R on data/frames/p2_becoming_econ.csv)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 2 P2_econ_fnfix rows=180148 relations=10741 first ties=427 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P2_econ_fnfix                      joint-effect p=0.0000 placebo p=NA ATE=+0.002719 (SE 0.000460, CI 0.001818~0.003621)
+[P2_econ_fnfix] done
+EQUAL
+CONTROL EQUAL: data/robustness_2026-09-13_verified_pool/control/P2_econ_fnfix.json
+== P1ver_econ (run_p1.R on data/robustness_2026-09-13_verified_pool/frames/p1_frame_econ_verified.csv)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1 P1ver_econ  original=103356 rows after decontamination=101321 rows =====
+P1ver_econ/union                         obs=81592   rel=9211   joint-effect p=0.0000 placebo p=0.0121 ATE=-0.36832 (SE 0.06170, CI -0.48926~-0.24739)
+P1ver_econ/network                       obs=45116   rel=5294   joint-effect p=0.0000 placebo p=0.0075 ATE=-0.51632 (SE 0.10052, CI -0.71334~-0.31930)
+P1ver_econ/dept                          obs=43025   rel=4576   joint-effect p=0.0000 placebo p=0.0159 ATE=-0.36802 (SE 0.08095, CI -0.52668~-0.20935)
+[P1ver_econ] done
+== P2ver_econ (run_p2.R on data/robustness_2026-09-13_verified_pool/frames/p2_becoming_econ_verified.csv)
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 2 P2ver_econ rows=157388 relations=9376 first ties=349 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P2ver_econ                         joint-effect p=0.0000 placebo p=NA ATE=+0.003052 (SE 0.000375, CI 0.002317~0.003786)
+[P2ver_econ] done
+data/robustness_2026-09-13_verified_pool: 9 files pinned
+VERIFIED_POOL_DONE

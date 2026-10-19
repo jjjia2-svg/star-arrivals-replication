@@ -1,0 +1,66 @@
+{
+  "generated": "2026-09-22T21:51:59",
+  "authority": "the author's design record of 2026-09-22 (private archive) (D5)",
+  "inputs_sha256": {
+    "star_id_corrections_2026-10.csv": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe",
+    "calls_2026-10.csv": "9ba84e5a0a12857a1548c973bb63a0503d0ae5736223af67564d49856ed42da5"
+  },
+  "select_note": "wire protocol = 70_prep's via supplement_fetch; supplement rows carry exactly 70_prep's five keys",
+  "api_key_present": true,
+  "stars": {
+    "A5091326353": {
+      "old_id": "A5090515599",
+      "field": "econ",
+      "school": "uwa",
+      "arrival": "2009",
+      "works_fetched": 129,
+      "exclusions_applied": [
+        {
+          "work_id": "W2013334278",
+          "dropped": true
+        },
+        {
+          "work_id": "W2066867974",
+          "dropped": true
+        },
+        {
+          "work_id": "W2356391881",
+          "dropped": true
+        }
+      ],
+      "supplement_rows": 126,
+      "tripwire": {
+        "cache": "data/star_recheck_2026-09-22/works/A5091326353.json",
+        "cached_works": 12,
+        "cached_fetched_on": "2026-09-22",
+        "missing_from_live": []
+      },
+      "years": {
+        "min": 2004,
+        "max": 2025
+      },
+      "snapshot_overlap": {
+        "measured": true,
+        "snapshot_works_for_id": 132,
+        "fetched_in_snapshot": 126,
+        "fetched_not_in_snapshot": [],
+        "snapshot_not_on_live_profile": [
+          "W2013334278",
+          "W2066867974",
+          "W2356391881",
+          "W4210349938",
+          "W4239229221",
+          "W4246730323"
+        ]
+      },
+      "_works_json": "works_A5091326353_2026-10.json"
+    }
+  },
+  "request_total": 1,
+  "fetch_seconds": 5.0,
+  "outputs_sha256": {
+    "edges_supplement_star_id_corrections_2026-10.jsonl": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d",
+    "api_request_log_star_id_corrections_2026-10.jsonl": "2ffed904d8e62e6065d2ca3afccc413d63aa80f07c24be03ad775d01701564d7",
+    "works_A5091326353_2026-10.json": "c7e107ba164772c9669f38d59b7e19549243ca86d4ef014b994b3a3314b93e7b"
+  }
+}

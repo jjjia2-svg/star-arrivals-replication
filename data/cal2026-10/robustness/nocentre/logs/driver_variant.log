@@ -1,0 +1,50 @@
+$ setup/.venv/bin/python pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --execute --roster-variant incfel --products-dir $TMPDIR/sar_rob_nocentre/products
+[env] {"SAR_OUT_ROOT": "$TMPDIR/sar_rob_nocentre/driver_variant", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+[run_cal_frames_chemmath] phase P: preconditions
+[run_cal_frames_chemmath] phase S: the two shadows (control / october)
+[run_cal_frames_chemmath] roster variant [incfel] chemistry: multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet <- data/raw_verified/incfel/roster_gold_chemistry.parquet (778608dd3850 -> e48ce86d6c6c)
+[run_cal_frames_chemmath] roster variant [incfel] math_stats: multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet <- data/raw_verified/incfel/roster_gold_math_stats.parquet (5089ee89efaa -> 46295d2f66ea)
+[run_cal_frames_chemmath] phase C [chemistry]: control chain (no in-post filter)
+[run_cal_frames_chemmath] prodlib chemistry [control]: BYTE_EQUAL (359f270ab6e1 vs 359f270ab6e1)
+[run_cal_frames_chemmath] stage union-gold --field chemistry finished in 4.1 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field chemistry finished in 3.2 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field chemistry --panel3 full finished in 1.4 s (3 outputs)
+[run_cal_frames_chemmath] make_slim chemistry finished in 0.2 s: {'rows': 4805989, 'pairs': 286998, 'ties': 7907, 'events': 38, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_variant/control_slim_chemistry/p3_slim_ev_chemistry.parquet': '2cf922d0e56a0929f6b98dd41a830b348943282c89ce1529490e337d48f771f7', '$TMPDIR/sar_rob_nocentre/driver_variant/control_slim_chemistry/p3_slim_chemistry.parquet': '03cea6a6cbc35c79e7c0821eafed5c7e80ea6f3e8ef77ac5dea3e2482a9d2c81'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] R cells P1_fnfix_chemistry / P2_fnfix_chemistry started in the background
+[run_cal_frames_chemmath] phase O [chemistry]: October chain (D2 in-post filter)
+[run_cal_frames_chemmath] prodlib chemistry [october]: NOT_EQUAL (10d457f68a02 vs 359f270ab6e1)
+[run_cal_frames_chemmath] in-post filter chemistry: relations {'kept': 1662, 'dropped_no_spell': 0, 'dropped_not_in_post': 1260}, rows {'kept': 18282, 'dropped_no_spell': 0, 'dropped_not_in_post': 13860}, events left with zero network rows []
+[run_cal_frames_chemmath] stage union-gold --field chemistry finished in 3.7 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field chemistry finished in 2.9 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field chemistry --panel3 full finished in 1.1 s (3 outputs)
+[run_cal_frames_chemmath] make_slim chemistry finished in 0.1 s: {'rows': 1276077, 'pairs': 77167, 'ties': 3630, 'events': 38, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_variant/october_slim_chemistry/p3_slim_ev_chemistry.parquet': '232db560bc080e3e661e355c56cacd818601950a2db6b7dd82916e80cdac70b8', '$TMPDIR/sar_rob_nocentre/driver_variant/october_slim_chemistry/p3_slim_chemistry.parquet': '879f9debfa06aa6b3122e69314c5ef97eb43ea8106e00d62ff68fd5385b67065'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] phase X [chemistry]: variant accounting against the frozen October canon
+[run_cal_frames_chemmath] variant accounting chemistry: relations 2785 -> 2361 (removed 424 by cause {'no_variant_spell_at_arrival': 75, 'person_not_in_variant_roster': 349}, added 0), p1 rows 30635 -> 25971, p2 rows 46168 -> 39010, pairs 109984 -> 77167; closed=True
+[run_cal_frames_chemmath] R cell P1_fnfix_chemistry: EQUAL vs data/cal2026-08-28/estimates/P1_fnfix_chemistry.json (12.4 s)
+[run_cal_frames_chemmath] R cell P2_fnfix_chemistry: EQUAL vs data/cal2026-08-28/estimates/P2_fnfix_chemistry.json (12.4 s)
+[run_cal_frames_chemmath] frozen 11 files into $TMPDIR/sar_rob_nocentre/products/frames_chemistry (+ MANIFEST.sha256)
+[run_cal_frames_chemmath] phase C [math_stats]: control chain (no in-post filter)
+[run_cal_frames_chemmath] prodlib math_stats [control]: BYTE_EQUAL (ca6d75f1de97 vs ca6d75f1de97)
+[run_cal_frames_chemmath] stage union-gold --field math_stats finished in 3.8 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field math_stats finished in 2.5 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field math_stats --panel3 full finished in 1.0 s (3 outputs)
+[run_cal_frames_chemmath] make_slim math_stats finished in 0.1 s: {'rows': 1353396, 'pairs': 80320, 'ties': 1395, 'events': 33, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_variant/control_slim_math_stats/p3_slim_ev_math_stats.parquet': '259778fd890afc0de883073c43f9f89f2c8cd7c0e9ba963305e5ec64098ecfb6', '$TMPDIR/sar_rob_nocentre/driver_variant/control_slim_math_stats/p3_slim_math_stats.parquet': '3e22e7014c0a689c5fd329618f2452e741c6d4508bf232b6b523a62e64bb711c'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] R cells P1_fnfix_math_stats / P2_fnfix_math_stats started in the background
+[run_cal_frames_chemmath] phase O [math_stats]: October chain (D2 in-post filter)
+[run_cal_frames_chemmath] prodlib math_stats [october]: NOT_EQUAL (75a4b54b934f vs ca6d75f1de97)
+[run_cal_frames_chemmath] in-post filter math_stats: relations {'kept': 376, 'dropped_no_spell': 0, 'dropped_not_in_post': 341}, rows {'kept': 4136, 'dropped_no_spell': 0, 'dropped_not_in_post': 3751}, events left with zero network rows []
+[run_cal_frames_chemmath] stage union-gold --field math_stats finished in 3.9 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field math_stats finished in 2.5 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field math_stats --panel3 full finished in 1.0 s (3 outputs)
+[run_cal_frames_chemmath] make_slim math_stats finished in 0.1 s: {'rows': 881044, 'pairs': 52369, 'ties': 976, 'events': 33, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_variant/october_slim_math_stats/p3_slim_ev_math_stats.parquet': '396d9c3055498a0164c7bea7a6b35f4486f5bdb1fecaaa9195c8f0dba407e8d0', '$TMPDIR/sar_rob_nocentre/driver_variant/october_slim_math_stats/p3_slim_math_stats.parquet': 'a9ad04e9af128054df3b339a18dc437fceb599d3adbc5c4d1c8d9f87318f86ab'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] phase X [math_stats]: variant accounting against the frozen October canon
+[run_cal_frames_chemmath] variant accounting math_stats: relations 1810 -> 1769 (removed 41 by cause {'person_not_in_variant_roster': 38, 'no_variant_spell_at_arrival': 3}, added 0), p1 rows 19910 -> 19459, p2 rows 30314 -> 29645, pairs 55237 -> 52369; closed=True
+[run_cal_frames_chemmath] R cell P1_fnfix_math_stats: EQUAL vs data/cal2026-08-28/estimates/P1_fnfix_math_stats.json (11.0 s)
+[run_cal_frames_chemmath] R cell P2_fnfix_math_stats: EQUAL vs data/cal2026-08-28/estimates/P2_fnfix_math_stats.json (11.0 s)
+[run_cal_frames_chemmath] frozen 11 files into $TMPDIR/sar_rob_nocentre/products/frames_math_stats (+ MANIFEST.sha256)
+[run_cal_frames_chemmath] done in 49.4 s; report at $TMPDIR/sar_rob_nocentre/driver_variant/frames_run_report_chemmath.json
+
+--- stderr ---
+
+--- rc=0 secs=49.5 ---

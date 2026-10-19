@@ -1,0 +1,14 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of New South Wales
+  word_boundary: false
+- case_sensitive: true
+  text: UNSW
+  word_boundary: true
+dept_key: unsw_econ
+exclude_tokens: []
+openalex_inst_id: I31746571
+phrases:
+- School of Economics
+- Department of Economics
+window_chars: 80

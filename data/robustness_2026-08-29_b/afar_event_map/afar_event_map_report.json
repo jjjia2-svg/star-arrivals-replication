@@ -1,0 +1,25 @@
+{
+ "generated": "2026-08-29",
+ "fields": {
+  "chemistry": {
+   "cut": 0.3388,
+   "rows": 39242,
+   "events": 33,
+   "content_equal_to_frozen": true
+  },
+  "math_stats": {
+   "cut": 0.0897,
+   "rows": 46010,
+   "events": 31,
+   "content_equal_to_frozen": true
+  },
+  "econ": {
+   "cut": 0.334,
+   "rows": 393007,
+   "events": 86,
+   "content_equal_to_frozen": true
+  }
+ },
+ "econ_becoming_sha_check": "BYTE_EQUAL",
+ "econ_pairs_sha256": "41d9f7e3fd5ae60165589ed9848a4bfb0d2dea80df35a1c87dcc310dc596b7de"
+}

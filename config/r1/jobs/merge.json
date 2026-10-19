@@ -1,0 +1,16 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "merge",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [["r1/evidence/", "/work/evidence/"]],
+  "required_dests": ["/work/recovered/", "/work/derived/"],
+  "data_sync": [],
+  "copy_from_tip": [],
+  "steps": ["PREV=''; if [ -f /work/prev/candidates_merged.csv ]; then PREV='--prev /work/prev/candidates_merged.csv'; fi; \"$PY\" \"$REPO_DIR/tools/r1_merge_candidates.py\" --evidence /work/evidence --recovered /work/recovered --derived /work/derived --repo \"$REPO_DIR\" --out /work/out $PREV"]
+}

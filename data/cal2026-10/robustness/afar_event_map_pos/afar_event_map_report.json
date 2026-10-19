@@ -1,0 +1,32 @@
+{
+ "generated": "2026-09-10",
+ "fields": {
+  "chemistry": {
+   "cut": 0.0,
+   "rows": 184960,
+   "events": 38,
+   "content_equal_to_frozen": true,
+   "predicate": "dmin > 0",
+   "frozen_frame": "data/frames/p3_afar_pos_chemistry.parquet"
+  },
+  "math_stats": {
+   "cut": 0.0,
+   "rows": 256506,
+   "events": 32,
+   "content_equal_to_frozen": true,
+   "predicate": "dmin > 0",
+   "frozen_frame": "data/frames/p3_afar_pos_math_stats.parquet"
+  },
+  "econ": {
+   "cut": 0.0,
+   "rows": 1500425,
+   "events": 111,
+   "content_equal_to_frozen": true,
+   "predicate": "dmin > 0",
+   "frozen_frame": "data/frames/p3_afar_pos_econ.parquet"
+  }
+ },
+ "spec": "pos",
+ "econ_becoming_sha_check": "SKIPPED (becoming_unified.csv not beside pairs)",
+ "econ_pairs_sha256": "e5c98b848882523a9b48f7cd39edb9c67bf79214f8bd600e95044b6c42abd10a"
+}

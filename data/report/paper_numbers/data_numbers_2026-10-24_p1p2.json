@@ -1,0 +1,753 @@
+{
+ "year_cap": 2024,
+ "p1_post_window_ell": [
+  0,
+  5
+ ],
+ "p2_post_window_tau": [
+  0,
+  5
+ ],
+ "p1_econ": {
+  "ate_log": -0.334,
+  "ate_pct": -28.4,
+  "se_person": 0.047,
+  "se_event": 0.049,
+  "ci95_person": [
+   -0.425,
+   -0.242
+  ],
+  "p_joint_effects_person": 5.22915045e-14,
+  "p_joint_effects_event": 2.65343303e-14,
+  "p_joint_placebo_person": 0.0732114,
+  "p_joint_placebo_event": 0.0084705,
+  "horizons": [
+   {
+    "ell": 0,
+    "est": -0.025,
+    "se_person": 0.013,
+    "se_event": 0.015,
+    "n": 48493,
+    "switchers": 8542
+   },
+   {
+    "ell": 1,
+    "est": -0.059,
+    "se_person": 0.016,
+    "se_event": 0.014,
+    "n": 38933,
+    "switchers": 7966
+   },
+   {
+    "ell": 2,
+    "est": -0.075,
+    "se_person": 0.019,
+    "se_event": 0.018,
+    "n": 29402,
+    "switchers": 7682
+   },
+   {
+    "ell": 3,
+    "est": -0.134,
+    "se_person": 0.023,
+    "se_event": 0.021,
+    "n": 20563,
+    "switchers": 7408
+   },
+   {
+    "ell": 4,
+    "est": -0.213,
+    "se_person": 0.028,
+    "se_event": 0.03,
+    "n": 11835,
+    "switchers": 6971
+   },
+   {
+    "ell": 5,
+    "est": -0.253,
+    "se_person": 0.031,
+    "se_event": 0.03,
+    "n": 10286,
+    "switchers": 6652
+   }
+  ],
+  "placebos": [
+   {
+    "ell": -2,
+    "est": 0.004,
+    "se_person": 0.015,
+    "se_event": 0.015,
+    "n": 36827,
+    "switchers": 7807
+   },
+   {
+    "ell": -3,
+    "est": 0.047,
+    "se_person": 0.019,
+    "se_event": 0.017,
+    "n": 19777,
+    "switchers": 7092
+   },
+   {
+    "ell": -4,
+    "est": 0.054,
+    "se_person": 0.026,
+    "se_event": 0.02,
+    "n": 10144,
+    "switchers": 6564
+   },
+   {
+    "ell": -5,
+    "est": 0.027,
+    "se_person": 0.034,
+    "se_event": 0.023,
+    "n": 7843,
+    "switchers": 6081
+   }
+  ],
+  "obs": 109627,
+  "relations": 12210,
+  "relations_with_dose": 10224,
+  "persons": 1379,
+  "events": 173,
+  "switchers_ell0": 8542,
+  "switchers_total": 45221,
+  "weighted_avg_effect": -0.12,
+  "avg_dose_switchers": 0.359,
+  "avg_effect_pct_at_observed_dose": -11.3,
+  "by_route": {
+   "network": {
+    "ate_log": -0.178,
+    "se_person": 0.174,
+    "relations": 450
+   },
+   "roster": {
+    "ate_log": -0.335,
+    "se_person": 0.047,
+    "relations": 11882
+   }
+  },
+  "rows_raw": 139997,
+  "rows_kept": 134310
+ },
+ "p2_econ": {
+  "ate_pp": 0.225,
+  "se_person_pp": 0.035,
+  "se_event_pp": 0.046,
+  "ci95_person_pp": [
+   0.155,
+   0.294
+  ],
+  "p_joint_effects_person": 1.38166145e-11,
+  "p_joint_effects_event": 1.426e-05,
+  "horizons_pp": [
+   {
+    "ell": 0,
+    "est": 0.055,
+    "se_person": 0.03,
+    "se_event": 0.039,
+    "n": 72405,
+    "switchers": 12598
+   },
+   {
+    "ell": 1,
+    "est": 0.202,
+    "se_person": 0.054,
+    "se_event": 0.056,
+    "n": 59561,
+    "switchers": 11946
+   },
+   {
+    "ell": 2,
+    "est": 0.49,
+    "se_person": 0.082,
+    "se_event": 0.119,
+    "n": 46926,
+    "switchers": 11756
+   },
+   {
+    "ell": 3,
+    "est": 0.313,
+    "se_person": 0.064,
+    "se_event": 0.096,
+    "n": 34337,
+    "switchers": 11064
+   },
+   {
+    "ell": 4,
+    "est": 0.068,
+    "se_person": 0.085,
+    "se_event": 0.092,
+    "n": 22241,
+    "switchers": 10808
+   }
+  ],
+  "rows": 213910,
+  "relations": 12711,
+  "persons": 1416,
+  "events": 173,
+  "first_ties": 306,
+  "switchers_ell0": 12598,
+  "switchers_total": 58172,
+  "rate_pre_pp": 0.05,
+  "pre_rows": 76174,
+  "pre_ties": 38,
+  "rate_post_obs_pp": 0.289,
+  "post_obs_rows": 70673,
+  "post_obs_ties": 204,
+  "post_rows_after_cap": 28288,
+  "panel_years": [
+   1993,
+   2034
+  ],
+  "raw_rate_by_event_time_pp": {
+   "-6": 0.047,
+   "-5": 0.055,
+   "-4": 0.055,
+   "-3": 0.032,
+   "-2": 0.039,
+   "-1": 0.071,
+   "0": 0.103,
+   "1": 0.238,
+   "2": 0.529,
+   "3": 0.359,
+   "4": 0.218,
+   "5": 0.297
+  },
+  "rows_by_event_time": {
+   "-6": 12711,
+   "-5": 12705,
+   "-4": 12698,
+   "-3": 12691,
+   "-2": 12687,
+   "-1": 12682,
+   "0": 12673,
+   "1": 12585,
+   "2": 11916,
+   "3": 11693,
+   "4": 11022,
+   "5": 10784
+  }
+ },
+ "p1_chemistry": {
+  "ate_log": -0.233,
+  "ate_pct": -20.8,
+  "se_person": 0.037,
+  "se_event": 0.034,
+  "ci95_person": [
+   -0.306,
+   -0.16
+  ],
+  "p_joint_effects_person": 1.68365322e-12,
+  "p_joint_effects_event": 0,
+  "p_joint_placebo_person": 0.07105685,
+  "p_joint_placebo_event": 0.05894531,
+  "horizons": [
+   {
+    "ell": 0,
+    "est": -0.011,
+    "se_person": 0.012,
+    "se_event": 0.013,
+    "n": 23609,
+    "switchers": 4350
+   },
+   {
+    "ell": 1,
+    "est": -0.017,
+    "se_person": 0.014,
+    "se_event": 0.016,
+    "n": 18895,
+    "switchers": 4218
+   },
+   {
+    "ell": 2,
+    "est": -0.065,
+    "se_person": 0.016,
+    "se_event": 0.018,
+    "n": 14357,
+    "switchers": 4132
+   },
+   {
+    "ell": 3,
+    "est": -0.125,
+    "se_person": 0.02,
+    "se_event": 0.019,
+    "n": 9902,
+    "switchers": 4017
+   },
+   {
+    "ell": 4,
+    "est": -0.172,
+    "se_person": 0.029,
+    "se_event": 0.021,
+    "n": 5429,
+    "switchers": 3789
+   },
+   {
+    "ell": 5,
+    "est": -0.207,
+    "se_person": 0.032,
+    "se_event": 0.025,
+    "n": 4826,
+    "switchers": 3581
+   }
+  ],
+  "placebos": [
+   {
+    "ell": -2,
+    "est": -0.007,
+    "se_person": 0.013,
+    "se_event": 0.013,
+    "n": 18975,
+    "switchers": 4262
+   },
+   {
+    "ell": -3,
+    "est": 0.04,
+    "se_person": 0.018,
+    "se_event": 0.019,
+    "n": 10161,
+    "switchers": 4123
+   },
+   {
+    "ell": -4,
+    "est": 0.024,
+    "se_person": 0.022,
+    "se_event": 0.02,
+    "n": 5359,
+    "switchers": 4031
+   },
+   {
+    "ell": -5,
+    "est": 0.025,
+    "se_person": 0.027,
+    "se_event": 0.02,
+    "n": 4548,
+    "switchers": 3866
+   }
+  ],
+  "obs": 50652,
+  "relations": 5014,
+  "relations_with_dose": 4491,
+  "persons": 703,
+  "events": 97,
+  "switchers_ell0": 4350,
+  "switchers_total": 24087,
+  "weighted_avg_effect": -0.095,
+  "avg_dose_switchers": 0.408,
+  "avg_effect_pct_at_observed_dose": -9.1,
+  "by_route": {
+   "network": {
+    "ate_log": -0.305,
+    "se_person": 0.15,
+    "relations": 1674
+   },
+   "roster": {
+    "ate_log": -0.224,
+    "se_person": 0.046,
+    "relations": 3650
+   }
+  },
+  "rows_raw": 57926,
+  "rows_kept": 55154
+ },
+ "p2_chemistry": {
+  "ate_pp": 0.61,
+  "se_person_pp": 0.094,
+  "se_event_pp": 0.106,
+  "ci95_person_pp": [
+   0.425,
+   0.795
+  ],
+  "p_joint_effects_person": 3.03311043e-10,
+  "p_joint_effects_event": 7.10567072e-09,
+  "horizons_pp": [
+   {
+    "ell": 0,
+    "est": 0.069,
+    "se_person": 0.086,
+    "se_event": 0.117,
+    "n": 28627,
+    "switchers": 5086
+   },
+   {
+    "ell": 1,
+    "est": 0.471,
+    "se_person": 0.138,
+    "se_event": 0.209,
+    "n": 23468,
+    "switchers": 4895
+   },
+   {
+    "ell": 2,
+    "est": 1.106,
+    "se_person": 0.2,
+    "se_event": 0.193,
+    "n": 18382,
+    "switchers": 4696
+   },
+   {
+    "ell": 3,
+    "est": 0.707,
+    "se_person": 0.175,
+    "se_event": 0.195,
+    "n": 13580,
+    "switchers": 4565
+   },
+   {
+    "ell": 4,
+    "est": 0.758,
+    "se_person": 0.191,
+    "se_event": 0.219,
+    "n": 8787,
+    "switchers": 4359
+   }
+  ],
+  "rows": 85358,
+  "relations": 5210,
+  "persons": 744,
+  "events": 97,
+  "first_ties": 430,
+  "switchers_ell0": 5086,
+  "switchers_total": 23601,
+  "rate_pre_pp": 0.271,
+  "pre_rows": 31048,
+  "pre_ties": 84,
+  "rate_post_obs_pp": 0.866,
+  "post_obs_rows": 28526,
+  "post_obs_ties": 247,
+  "post_rows_after_cap": 9763,
+  "panel_years": [
+   1993,
+   2034
+  ],
+  "raw_rate_by_event_time_pp": {
+   "-6": 0.192,
+   "-5": 0.288,
+   "-4": 0.405,
+   "-3": 0.252,
+   "-2": 0.252,
+   "-1": 0.234,
+   "0": 0.293,
+   "1": 0.789,
+   "2": 1.277,
+   "3": 1.014,
+   "4": 1.017,
+   "5": 0.857
+  },
+  "rows_by_event_time": {
+   "-6": 5210,
+   "-5": 5200,
+   "-4": 5185,
+   "-3": 5164,
+   "-2": 5151,
+   "-1": 5138,
+   "0": 5126,
+   "1": 5071,
+   "2": 4857,
+   "3": 4634,
+   "4": 4522,
+   "5": 4316
+  }
+ },
+ "p1_math_stats": {
+  "ate_log": -0.319,
+  "ate_pct": -27.3,
+  "se_person": 0.076,
+  "se_event": 0.069,
+  "ci95_person": [
+   -0.467,
+   -0.171
+  ],
+  "p_joint_effects_person": 1.02285458e-06,
+  "p_joint_effects_event": 6.19110684e-07,
+  "p_joint_placebo_person": 6.202e-05,
+  "p_joint_placebo_event": 1.512e-05,
+  "horizons": [
+   {
+    "ell": 0,
+    "est": -0.009,
+    "se_person": 0.013,
+    "se_event": 0.015,
+    "n": 38766,
+    "switchers": 4473
+   },
+   {
+    "ell": 1,
+    "est": -0.029,
+    "se_person": 0.018,
+    "se_event": 0.014,
+    "n": 32159,
+    "switchers": 4055
+   },
+   {
+    "ell": 2,
+    "est": -0.035,
+    "se_person": 0.019,
+    "se_event": 0.016,
+    "n": 25858,
+    "switchers": 3925
+   },
+   {
+    "ell": 3,
+    "est": -0.083,
+    "se_person": 0.02,
+    "se_event": 0.019,
+    "n": 19468,
+    "switchers": 3723
+   },
+   {
+    "ell": 4,
+    "est": -0.123,
+    "se_person": 0.022,
+    "se_event": 0.024,
+    "n": 13143,
+    "switchers": 3465
+   },
+   {
+    "ell": 5,
+    "est": -0.136,
+    "se_person": 0.027,
+    "se_event": 0.024,
+    "n": 10799,
+    "switchers": 3263
+   }
+  ],
+  "placebos": [
+   {
+    "ell": -2,
+    "est": 0.055,
+    "se_person": 0.015,
+    "se_event": 0.016,
+    "n": 30192,
+    "switchers": 4105
+   },
+   {
+    "ell": -3,
+    "est": 0.046,
+    "se_person": 0.018,
+    "se_event": 0.016,
+    "n": 18327,
+    "switchers": 3669
+   },
+   {
+    "ell": -4,
+    "est": 0.103,
+    "se_person": 0.024,
+    "se_event": 0.022,
+    "n": 10647,
+    "switchers": 3515
+   },
+   {
+    "ell": -5,
+    "est": 0.088,
+    "se_person": 0.025,
+    "se_event": 0.021,
+    "n": 7118,
+    "switchers": 3265
+   }
+  ],
+  "obs": 72225,
+  "relations": 8080,
+  "relations_with_dose": 5335,
+  "persons": 1264,
+  "events": 107,
+  "switchers_ell0": 4473,
+  "switchers_total": 22904,
+  "weighted_avg_effect": -0.064,
+  "avg_dose_switchers": 0.202,
+  "avg_effect_pct_at_observed_dose": -6.2,
+  "by_route": {
+   "network": {
+    "ate_log": -0.802,
+    "se_person": 0.15,
+    "relations": 454
+   },
+   "roster": {
+    "ate_log": -0.305,
+    "se_person": 0.08,
+    "relations": 7769
+   }
+  },
+  "rows_raw": 94336,
+  "rows_kept": 88880
+ },
+ "p2_math_stats": {
+  "ate_pp": 0.071,
+  "se_person_pp": 0.038,
+  "se_event_pp": 0.034,
+  "ci95_person_pp": [
+   -0.004,
+   0.145
+  ],
+  "p_joint_effects_person": 0.02738775,
+  "p_joint_effects_event": 0.03588996,
+  "horizons_pp": [
+   {
+    "ell": 0,
+    "est": -0.023,
+    "se_person": 0.04,
+    "se_event": 0.037,
+    "n": 49751,
+    "switchers": 8334
+   },
+   {
+    "ell": 1,
+    "est": 0.083,
+    "se_person": 0.052,
+    "se_event": 0.052,
+    "n": 40956,
+    "switchers": 7976
+   },
+   {
+    "ell": 2,
+    "est": 0.145,
+    "se_person": 0.06,
+    "se_event": 0.067,
+    "n": 32316,
+    "switchers": 7710
+   },
+   {
+    "ell": 3,
+    "est": 0.13,
+    "se_person": 0.067,
+    "se_event": 0.069,
+    "n": 23914,
+    "switchers": 7606
+   },
+   {
+    "ell": 4,
+    "est": 0.023,
+    "se_person": 0.085,
+    "se_event": 0.078,
+    "n": 15224,
+    "switchers": 7155
+   }
+  ],
+  "rows": 144264,
+  "relations": 8552,
+  "persons": 1388,
+  "events": 107,
+  "first_ties": 142,
+  "switchers_ell0": 8334,
+  "switchers_total": 38781,
+  "rate_pre_pp": 0.066,
+  "pre_rows": 51238,
+  "pre_ties": 34,
+  "rate_post_obs_pp": 0.176,
+  "post_obs_rows": 47234,
+  "post_obs_ties": 83,
+  "post_rows_after_cap": 21415,
+  "panel_years": [
+   1994,
+   2034
+  ],
+  "raw_rate_by_event_time_pp": {
+   "-6": 0.035,
+   "-5": 0.07,
+   "-4": 0.07,
+   "-3": 0.047,
+   "-2": 0.105,
+   "-1": 0.07,
+   "0": 0.07,
+   "1": 0.192,
+   "2": 0.226,
+   "3": 0.234,
+   "4": 0.145,
+   "5": 0.196
+  },
+  "rows_by_event_time": {
+   "-6": 8552,
+   "-5": 8549,
+   "-4": 8543,
+   "-3": 8537,
+   "-2": 8533,
+   "-1": 8524,
+   "0": 8518,
+   "1": 8328,
+   "2": 7963,
+   "3": 7692,
+   "4": 7588,
+   "5": 7145
+  }
+ },
+ "p1_loeo_econ": {
+  "n_removals": 173,
+  "ate_min": -0.362,
+  "ate_max": -0.318,
+  "p_joint_placebo_max": 0.12770489,
+  "n_placebo_p_above_05": 168,
+  "p_joint_effects_max": 1.56652469e-13
+ },
+ "p1_doublestar_econ": {
+  "events_kept": 16,
+  "events_dropped": 157,
+  "same_year_pair_events_kept": 99,
+  "same_year_co_arrivals_among_kept": 6,
+  "ate_log": 0.034,
+  "ate_pct": 3.4,
+  "se_person": 0.17,
+  "ci95_person": [
+   -0.3,
+   0.367
+  ],
+  "p_joint_effects": 0.33523981,
+  "p_joint_placebo": 0.09966423,
+  "obs": 5778,
+  "relations": 641,
+  "persons": 488
+ },
+ "p1_doublestar_complement_econ": {
+  "events": 157,
+  "ate_log": -0.352,
+  "ate_pct": -29.7,
+  "se_person": 0.048,
+  "ci95_person": [
+   -0.446,
+   -0.257
+  ],
+  "p_joint_effects": 2.20934382e-14,
+  "p_joint_placebo": 0.03825654,
+  "obs": 103849,
+  "relations": 11569
+ },
+ "perm_pvalues": {
+  "B": 500,
+  "p1_econ": {
+   "p_perm_abs_ate": 0.005988,
+   "p_perm_abs_t": 0.001996,
+   "B_ok": 500,
+   "n_events": 173
+  },
+  "p2_econ": {
+   "p_perm_abs_ate": 0.011976,
+   "p_perm_abs_t": 0.001996,
+   "B_ok": 500,
+   "n_events": 173
+  },
+  "p1_chemistry": {
+   "p_perm_abs_ate": 0.021956,
+   "p_perm_abs_t": 0.003992,
+   "B_ok": 500,
+   "n_events": 97
+  },
+  "p2_chemistry": {
+   "p_perm_abs_ate": 0.003992,
+   "p_perm_abs_t": 0.001996,
+   "B_ok": 500,
+   "n_events": 97
+  },
+  "p1_math_stats": {
+   "p_perm_abs_ate": 0.516966,
+   "p_perm_abs_t": 0.285429,
+   "B_ok": 500,
+   "n_events": 107
+  },
+  "p2_math_stats": {
+   "p_perm_abs_ate": 0.147705,
+   "p_perm_abs_t": 0.143713,
+   "B_ok": 500,
+   "n_events": 107
+  }
+ }
+}

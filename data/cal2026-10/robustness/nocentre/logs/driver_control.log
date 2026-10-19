@@ -1,0 +1,49 @@
+$ setup/.venv/bin/python pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --execute --no-freeze
+[env] {"SAR_OUT_ROOT": "$TMPDIR/sar_rob_nocentre/driver_control", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+[run_cal_frames_chemmath] phase P: preconditions
+[run_cal_frames_chemmath] phase S: the two shadows (control / october)
+[run_cal_frames_chemmath] phase C [chemistry]: control chain (no in-post filter)
+[run_cal_frames_chemmath] prodlib chemistry [control]: BYTE_EQUAL (359f270ab6e1 vs 359f270ab6e1)
+[run_cal_frames_chemmath] stage union-gold --field chemistry finished in 3.9 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field chemistry finished in 3.0 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field chemistry --panel3 full finished in 1.4 s (3 outputs)
+[run_cal_frames_chemmath] make_slim chemistry finished in 0.2 s: {'rows': 4805989, 'pairs': 286998, 'ties': 7907, 'events': 38, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_control/control_slim_chemistry/p3_slim_ev_chemistry.parquet': '2b76c3e407f0c62f078ed1ed5c2e622f6098149a1ba9cdce6ffd55185a85d77e', '$TMPDIR/sar_rob_nocentre/driver_control/control_slim_chemistry/p3_slim_chemistry.parquet': 'd075050f6388f93d72eb9e9aae59d33f12dc7a888ecb1b247fddb25891755625'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] R cells P1_fnfix_chemistry / P2_fnfix_chemistry started in the background
+[run_cal_frames_chemmath] phase O [chemistry]: October chain (D2 in-post filter)
+[run_cal_frames_chemmath] prodlib chemistry [october]: BYTE_EQUAL (359f270ab6e1 vs 359f270ab6e1)
+[run_cal_frames_chemmath] in-post filter chemistry: relations {'kept': 1833, 'dropped_no_spell': 0, 'dropped_not_in_post': 1778}, rows {'kept': 20163, 'dropped_no_spell': 0, 'dropped_not_in_post': 19558}, events left with zero network rows []
+[run_cal_frames_chemmath] stage union-gold --field chemistry finished in 3.9 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field chemistry finished in 3.1 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field chemistry --panel3 full finished in 1.1 s (3 outputs)
+[run_cal_frames_chemmath] make_slim chemistry finished in 0.1 s: {'rows': 1823689, 'pairs': 109984, 'ties': 4687, 'events': 38, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_control/october_slim_chemistry/p3_slim_ev_chemistry.parquet': '058ed272da629724fabecb4cdc62dba238f28b17f86b654fa32f7cbd398b0243', '$TMPDIR/sar_rob_nocentre/driver_control/october_slim_chemistry/p3_slim_chemistry.parquet': 'ced9ec426fe15c1a528ede81921ba93b6819be7587d640f286728050a9aec2e2'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] phase X [chemistry]: row-level accounting against the 08-28 frozen frames
+[run_cal_frames_chemmath] October products vs frozen data/cal2026-10/frames_chemistry/: ALL EQUAL (p1 H1 worst_ulp=3)
+[run_cal_frames_chemmath] R cell P1_fnfix_chemistry: EQUAL vs data/cal2026-08-28/estimates/P1_fnfix_chemistry.json (15.1 s)
+[run_cal_frames_chemmath] R cell P2_fnfix_chemistry: EQUAL vs data/cal2026-08-28/estimates/P2_fnfix_chemistry.json (15.1 s)
+[run_cal_frames_chemmath] phase F [chemistry]: skipped (--no-freeze)
+[run_cal_frames_chemmath] phase C [math_stats]: control chain (no in-post filter)
+[run_cal_frames_chemmath] prodlib math_stats [control]: BYTE_EQUAL (ca6d75f1de97 vs ca6d75f1de97)
+[run_cal_frames_chemmath] stage union-gold --field math_stats finished in 3.6 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field math_stats finished in 2.4 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field math_stats --panel3 full finished in 1.0 s (3 outputs)
+[run_cal_frames_chemmath] make_slim math_stats finished in 0.1 s: {'rows': 1353396, 'pairs': 80320, 'ties': 1395, 'events': 33, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_control/control_slim_math_stats/p3_slim_ev_math_stats.parquet': '9f76b5c0dd2a0a967e0bd875a22ad4e7e9df8396ae3b7575695b97d7dda448d4', '$TMPDIR/sar_rob_nocentre/driver_control/control_slim_math_stats/p3_slim_math_stats.parquet': 'e61e55ef9f5242bb90f879f34b59a8e0dd71039a04dbbd169d9508cccea5ac93'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] math_stats control: union build_report equal modulo paths and H1 in G_VAL_advisory examples ({'n': 2, 'worst_ulp': 1, 'ulp_bound': 8})
+[run_cal_frames_chemmath] R cells P1_fnfix_math_stats / P2_fnfix_math_stats started in the background
+[run_cal_frames_chemmath] phase O [math_stats]: October chain (D2 in-post filter)
+[run_cal_frames_chemmath] prodlib math_stats [october]: BYTE_EQUAL (ca6d75f1de97 vs ca6d75f1de97)
+[run_cal_frames_chemmath] in-post filter math_stats: relations {'kept': 380, 'dropped_no_spell': 0, 'dropped_not_in_post': 391}, rows {'kept': 4180, 'dropped_no_spell': 0, 'dropped_not_in_post': 4301}, events left with zero network rows ['A5074032970:monash']
+[run_cal_frames_chemmath] stage union-gold --field math_stats finished in 3.8 s (4 outputs)
+[run_cal_frames_chemmath] stage p1-gold --field math_stats finished in 2.4 s (3 outputs)
+[run_cal_frames_chemmath] stage p2-gold --field math_stats --panel3 full finished in 1.0 s (3 outputs)
+[run_cal_frames_chemmath] make_slim math_stats finished in 0.1 s: {'rows': 929324, 'pairs': 55237, 'ties': 1031, 'events': 33, 'produced': {'$TMPDIR/sar_rob_nocentre/driver_control/october_slim_math_stats/p3_slim_ev_math_stats.parquet': 'a98e237d7c1f8fdafc1f74b1cafda47271f7a569103a2a7ee988aa5de81a212a', '$TMPDIR/sar_rob_nocentre/driver_control/october_slim_math_stats/p3_slim_math_stats.parquet': '58c04c319e7790045aea91c852b252fd52a52b12befb4a41aad769db73697447'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+[run_cal_frames_chemmath] phase X [math_stats]: row-level accounting against the 08-28 frozen frames
+[run_cal_frames_chemmath] October products vs frozen data/cal2026-10/frames_math_stats/: ALL EQUAL (p1 H1 worst_ulp=3)
+[run_cal_frames_chemmath] R cell P1_fnfix_math_stats: EQUAL vs data/cal2026-08-28/estimates/P1_fnfix_math_stats.json (11.3 s)
+[run_cal_frames_chemmath] R cell P2_fnfix_math_stats: EQUAL vs data/cal2026-08-28/estimates/P2_fnfix_math_stats.json (11.2 s)
+[run_cal_frames_chemmath] phase F [math_stats]: skipped (--no-freeze)
+[run_cal_frames_chemmath] done in 51.2 s; report at $TMPDIR/sar_rob_nocentre/driver_control/frames_run_report_chemmath.json
+
+--- stderr ---
+
+--- rc=0 secs=51.3 ---

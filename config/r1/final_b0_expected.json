@@ -1,0 +1,207 @@
+{
+ "schema": "sar.r1.final_b0_expected.v1",
+ "note": "The only October-data differences finalb0's B0 gate allows (pipeline/aws/r1/final_stage.py gate2 --mode B0), each {<key>, what, owner, reason}, checked in both directions (an undeclared difference and a declared one that did not appear both give B0_FAIL). Only differences a planned item causes are declared: N10's base_2026_10_11 table variants (and the legacy thesis_report sentinel's section-B FAILs on them), N9's Figures 3-4 (new files in output/paper; in the scratch tree they replace the vault-printed PDFs), F22's 3est seal. N12 (p_full_precision) and N11 (side keys) are off in October and declare nothing. Anything no item explains is a defect to fix in its owner unit, never a declaration (tests/test_r1_final_b0_expected.py lists the known ones: wall-clock PDF CreationDate, absolute provenance paths, October one-off outputs no run_all stage writes); their owner, the FINALJOB comparison, now handles them (review R7 #13-#15: final_stage.same_file masks the PDF render date, rooted_equal maps the October repo root in B0_ROOTED, and the one-off files are listed in output_paper_reference_only). W3-B0EXP derived this set from the code at r1-code 1a0c88a before any finalb0 run; finalb0-01 measures it, and any undeclared or declared-but-absent entry it reports goes back to W3-B0EXP. Sections: output_paper (paths under output/paper vs /data/ref/october/output_paper), vault_sentinel_fail (pin names the vault sentinel fails before the repin; 0 after), thesis_report_sentinel_fail (check names the legacy thesis_report sentinel fails), scratch_edits (files of the scratch tree that may differ from the tree it was copied from, beyond the rearchived ledgers), red_runs (red runs of the October -> scratch red diff). output_paper_reference_only (not a declaration section; outside final_stage.B0_SECTIONS): October snapshot files no staged run_all stage writes, each {path, sha256, what, owner, reason}; final_stage.output_paper_diff excuses one only while the reference holds exactly the pinned bytes and the run did not write it (one direction); anything else about it stays B0_OUTPUT_DIFF.",
+ "output_paper": [
+  {
+   "path": "3est.seal.json",
+   "what": "new file: the seal run_all.sh stage 3est writes into <output>/paper",
+   "owner": "F22 (W2-RUNALL)",
+   "reason": "Staged mode (--stages 1,3est,3light) seals the four estimating generators' outputs and their inputs so 3light can refuse a stale or other-canon run; the October snapshot was made by the no-flag run_all, which writes no seal."
+  },
+  {
+   "path": "draft_2026_09_13/NOTE_CHECKS.json",
+   "what": "changed file: the draft generator's note-claim checks for the base tree",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "Staged 3light runs draft_2026_09_13_tables.py --tree base_2026_10_11 in place of the default tree; for the base tree's own Table 3 note robustness_table registers two t-statistic claims instead of the thesis_report note's one, so the list differs (all claims hold on October ledgers)."
+  },
+  {
+   "path": "draft_2026_09_13/tab_main_results.tex",
+   "what": "changed file: Table 2 in the base-tree variant",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "Staged 3light writes the base_2026_10_11 variant (the author's 2026-10-03/04 hand edits: row labels, note, TeX comment blocks), byte-equal to the base tree's tables/ (fixture SOURCE.md) and different from the thesis_report bytes the October snapshot holds."
+  },
+  {
+   "path": "draft_2026_09_13/tab_panels_overview.tex",
+   "what": "changed file: Table 1 in the base-tree variant",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "Staged 3light writes the base_2026_10_11 variant (the author's 2026-10 note edit 'In this table a relation'), byte-equal to the base tree's tables/ and different from the thesis_report bytes the October snapshot holds."
+  },
+  {
+   "path": "draft_2026_09_13/tab_robustness.tex",
+   "what": "changed file: Table 3 in the base-tree variant",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "Staged 3light writes the base_2026_10_11 variant (the author's 2026-10-04 note and comment blocks), byte-equal to the base tree's tables/ and different from the thesis_report bytes the October snapshot holds."
+  },
+  {
+   "path": "fig_compare_years.json",
+   "what": "new file: Figure 3's figure-data JSON",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "fig_compare_years.py (Figure 3, the vault's figA.py made data-driven) runs in staged 3light only and writes its drawn data next to the PDF; no October generator wrote it."
+  },
+  {
+   "path": "fig_compare_years.pdf",
+   "what": "new file: Figure 3",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "fig_compare_years.py runs in staged 3light only (Figure 3 was printed by a vault script outside the repo in October), so the October snapshot has no such file."
+  },
+  {
+   "path": "fig_comparison_pools.json",
+   "what": "new file: Figure 4's figure-data JSON",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "fig_comparison_pools.py (Figure 4, the vault's figB.py made data-driven) runs in staged 3light only and writes its drawn data next to the PDF; no October generator wrote it."
+  },
+  {
+   "path": "fig_comparison_pools.pdf",
+   "what": "new file: Figure 4",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "fig_comparison_pools.py runs in staged 3light only (Figure 4 was printed by a vault script outside the repo in October), so the October snapshot has no such file."
+  },
+  {
+   "path": "fig_p1.pdf",
+   "what": "changed file: Figure 5 in the base-tree form",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Staged 3light runs fig_p1.py --tree base_2026_10_11 in place of the default tree: Figure 5 as the base tree prints it (the author-approved 2026-10-03 redraw: labels, size, layout), in TeX Gyre Pagella and with no CreationDate. The October snapshot holds the default tree's PDF (thesis_report wording), so the bytes differ by construction; the drawn text and page size are pinned in tests/fixtures/r1_paper/fig567_october.json."
+  },
+  {
+   "path": "fig_p2.pdf",
+   "what": "changed file: Figure 6 in the base-tree form",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Staged 3light runs fig_p2.py --tree base_2026_10_11 in place of the default tree: Figure 6 as the base tree prints it (the author-approved 2026-10-03 redraw: labels, size, layout), in TeX Gyre Pagella and with no CreationDate. The October snapshot holds the default tree's PDF (thesis_report wording), so the bytes differ by construction; the drawn text and page size are pinned in tests/fixtures/r1_paper/fig567_october.json."
+  },
+  {
+   "path": "fig_p3_afar.pdf",
+   "what": "changed file: Figure 7 in the base-tree form",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Staged 3light runs ledger_p3afar.py --tree base_2026_10_11 in place of the default tree: Figure 7 as the base tree prints it (the author-approved 2026-10-03 redraw: labels, size, layout), in TeX Gyre Pagella and with no CreationDate. The October snapshot holds the default tree's PDF (thesis_report wording), so the bytes differ by construction; the drawn text and page size are pinned in tests/fixtures/r1_paper/fig567_october.json."
+  },
+  {
+   "path": "tab_rob_p1.tex",
+   "what": "changed file: the Panel 1 robustness appendix table in the base-tree variant",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "Staged 3light runs tables_robustness.py --tree base_2026_10_11, which replaces the 'Dose in three bins' row by the author's 2026-10-04 comment line (byte-equal to the base tree); the other three tables it writes keep the default bytes."
+  }
+ ],
+ "vault_sentinel_fail": [],
+ "thesis_report_sentinel_fail": [
+  {
+   "name": "draft_2026_09_13/tab_main_results.tex",
+   "what": "section B: generated table differs from thesis_report/tables",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "The legacy thesis_report sentinel (informational) compares output/paper/draft_2026_09_13 with thesis_report/tables byte for byte; output/paper now holds the base-tree variant, thesis_report the default one."
+  },
+  {
+   "name": "draft_2026_09_13/tab_panels_overview.tex",
+   "what": "section B: generated table differs from thesis_report/tables",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "The legacy thesis_report sentinel (informational) compares output/paper/draft_2026_09_13 with thesis_report/tables byte for byte; output/paper now holds the base-tree variant, thesis_report the default one."
+  },
+  {
+   "name": "draft_2026_09_13/tab_robustness.tex",
+   "what": "section B: generated table differs from thesis_report/tables",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "The legacy thesis_report sentinel (informational) compares output/paper/draft_2026_09_13 with thesis_report/tables byte for byte; output/paper now holds the base-tree variant, thesis_report the default one."
+  },
+  {
+   "name": "tab_rob_p1.tex",
+   "what": "section B: generated table differs from thesis_report/tables",
+   "owner": "N10 (W1-PTABLES)",
+   "reason": "The legacy thesis_report sentinel (informational) compares output/paper/tab_rob_p1.tex with thesis_report/tables byte for byte; output/paper now holds the base-tree variant without the 'Dose in three bins' row."
+  }
+ ],
+ "scratch_edits": [
+  {
+   "file": "figures/fig_compare_years.pdf",
+   "what": "install.py exhibits replaces the base tree's Figure 3 PDF with the generated one",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "Figure 3 is one of the nine figures final_paper.json has install copy; the generated PDF is saved with no CreationDate (_fig34_style.SAVE_KW) while the base tree's vault-printed PDF carries 2026-10-03 22:39:18, so the bytes differ even though the drawn structure is pinned to October (tests/fixtures/r1_paper/fig34_october.json)."
+  },
+  {
+   "file": "figures/fig_comparison_pools.pdf",
+   "what": "install.py exhibits replaces the base tree's Figure 4 PDF with the generated one",
+   "owner": "N9 (W1-FIG34)",
+   "reason": "Figure 4 is one of the nine figures final_paper.json has install copy; the generated PDF is saved with no CreationDate (_fig34_style.SAVE_KW) while the base tree's vault-printed PDF carries 2026-10-03 22:39:18, so the bytes differ even though the drawn structure is pinned to October (tests/fixtures/r1_paper/fig34_october.json)."
+  },
+  {
+   "file": "figures/fig_p1.pdf",
+   "what": "install.py exhibits replaces the base tree's Figure 5 PDF with the generated one",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Figure 5 is one of the figures final_paper.json has install copy; the base tree's PDF was printed by the vault script with Matplotlib 3.10.8 in macOS Palatino and a CreationDate, the generated one with Matplotlib 3.11.1 in TeX Gyre Pagella and none, so the bytes differ although the words, their order and the page size are the same (tests/test_r1_fig567.py)."
+  },
+  {
+   "file": "figures/fig_p2.pdf",
+   "what": "install.py exhibits replaces the base tree's Figure 6 PDF with the generated one",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Figure 6 is one of the figures final_paper.json has install copy; the base tree's PDF was printed by the vault script with Matplotlib 3.10.8 in macOS Palatino and a CreationDate, the generated one with Matplotlib 3.11.1 in TeX Gyre Pagella and none, so the bytes differ although the words, their order and the page size are the same (tests/test_r1_fig567.py)."
+  },
+  {
+   "file": "figures/fig_p3_afar.pdf",
+   "what": "install.py exhibits replaces the base tree's Figure 7 PDF with the generated one",
+   "owner": "FIG567 (Figures 5-7, base tree)",
+   "reason": "Figure 7 is one of the figures final_paper.json has install copy; the base tree's PDF was printed by the vault script with Matplotlib 3.10.8 in macOS Palatino and a CreationDate, the generated one with Matplotlib 3.11.1 in TeX Gyre Pagella and none, so the bytes differ although the words, their order and the page size are the same (tests/test_r1_fig567.py)."
+  }
+ ],
+ "red_runs": [
+  {
+   "text": "Anthropic; Codex, OpenAI).",
+   "what": "red run of the October -> current red diff",
+   "owner": "current tree: declarations edits (2026-10-16)",
+   "reason": "the AI-use statement names Codex (OpenAI), which collected roster data and reviewed code, as well as Claude; the current tree (config/r1/final_tree.json role current_b0) differs from the October tree only in the declarations; red_diff's text step on the two packed trees gives exactly these three runs."
+  },
+  {
+   "text": "available at \\url{https://github.com/jjjia2-svg/star-arrivals-replication}.",
+   "what": "red run of the October -> current red diff",
+   "owner": "current tree: declarations edits (2026-10-16)",
+   "reason": "the Replication paragraph gives the public repository's URL (goal step 6); the current tree (config/r1/final_tree.json role current_b0) differs from the October tree only in the declarations; red_diff's text step on the two packed trees gives exactly these three runs."
+  },
+  {
+   "text": "is",
+   "what": "red run of the October -> current red diff",
+   "owner": "current tree: declarations edits (2026-10-16)",
+   "reason": "the Replication paragraph now says the code is publicly available (October: a future-tense sentence); the current tree (config/r1/final_tree.json role current_b0) differs from the October tree only in the declarations; red_diff's text step on the two packed trees gives exactly these three runs."
+  }
+ ],
+ "output_paper_reference_only": [
+  {
+   "path": "LEDGER_DIFF_main_funnel.md",
+   "sha256": "c73d8de32054450f814d72c3356343cc8634f92fd9c36b7988001add3ab3c3d8",
+   "what": "the 2026-09-23 ledger diff report (main, funnel)",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "A one-off output of the 2026-09-23 sync workflow, which no program in the repo writes (git grep finds no producer) and no run_all stage runs; it sits in the October snapshot only because that snapshot copied the Mac's output/paper. Archived byte-equal as data/cal2026-10/paper_layer/LEDGER_DIFF_main_funnel.md."
+  },
+  {
+   "path": "LEDGER_DIFF_p1p2_p3_rob.md",
+   "sha256": "9e26941553d7a18e65158fd3b59d59df8d6b962f5de99cd54c4c019b747d3731",
+   "what": "the 2026-09-23 ledger diff report (p1p2, p3afar, robustness)",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "A one-off output of the 2026-09-23 sync workflow, which no program in the repo writes (git grep finds no producer) and no run_all stage runs; it sits in the October snapshot only because that snapshot copied the Mac's output/paper. Archived byte-equal as data/cal2026-10/paper_layer/LEDGER_DIFF_p1p2_p3_rob.md."
+  },
+  {
+   "path": "SYNC_PLAN_2026-10.md",
+   "sha256": "52e0bc21677019d547e6de908e58275ff70d9ba1e94e955f04ee16434b1762b3",
+   "what": "the 2026-09-23 sync plan",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "A one-off output of the 2026-09-23 sync workflow, which no program in the repo writes (git grep finds no producer) and no run_all stage runs; it sits in the October snapshot only because that snapshot copied the Mac's output/paper. Archived byte-equal as data/cal2026-10/paper_layer/SYNC_PLAN_2026-10.md."
+  },
+  {
+   "path": "SYNC_PLAN_2026-10_reanchor.json",
+   "sha256": "e2115de7105fb626ee10c6c9e11f8aadcbe670f68015332a601240405cca73fd",
+   "what": "the 2026-09-23 sync plan's re-anchor table",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "A one-off output of the 2026-09-23 sync workflow, which no program in the repo writes (git grep finds no producer) and no run_all stage runs; it sits in the October snapshot only because that snapshot copied the Mac's output/paper. It exists only in the snapshot, so its bytes are pinned here."
+  },
+  {
+   "path": "fig_hops.png",
+   "sha256": "daa9d0c5894f1a7993474e5ce938fc78f7e2bcc9c0a291472b68b16f2d8ba4ba",
+   "what": "a PNG preview of Figure 2 (fig_hops)",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "fig_hops.py writes the PNG only with --png, and run_all.sh calls it without the flag; the October file is a preview run by hand (older than the PDF), and the paper prints the PDF only."
+  },
+  {
+   "path": "star_origins_crosscheck_2026-10.json",
+   "sha256": "85f90a96d173a916bb67af1e230c17ed5cb56ced4bb069ea7a98fb6a860522f0",
+   "what": "the star-origins cross-check report",
+   "owner": "F1 (October output/paper snapshot)",
+   "reason": "Written by tools/star_origins_crosscheck_2026-10.py, a check tool that no run_all stage calls; extra checks are out of scope of the R1 rerun (spec 2026-10-12), so finalb0 does not regenerate it."
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+bind_tokens:
+- case_sensitive: false
+  text: Monash
+  word_boundary: false
+dept_key: monash_econ
+exclude_tokens:
+- Malaysia
+openalex_inst_id: I56590836
+phrases:
+- Department of Economics
+- Department of Econometrics and Business Statistics
+- Department of Econometrics & Business Statistics
+window_chars: 80

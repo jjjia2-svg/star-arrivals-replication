@@ -1,0 +1,189 @@
+{
+ "entries": [
+  {
+   "rel": "econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+   "origin": "frozen:/data/legacy/thesis/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+   "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+  },
+  {
+   "rel": "r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "origin": "frozen:/data/legacy/thesis/v2_output/r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "sha256": "6c7e51457aad48e4381b48a1f4b88e890aac0134eafbd7b183816b60e305076f"
+  },
+  {
+   "rel": "event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+   "origin": "frozen:/data/legacy/thesis/v2_output/event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+   "sha256": "f7b37b41a0a4bbb91f8c8678f8a9cb14795bb9cc6be16eb8a2f20ab68bdb55e1"
+  },
+  {
+   "rel": "econ_final_2026-08-13/patch/works_by_author.jsonl",
+   "origin": "frozen:/data/legacy/thesis/v2_output/econ_final_2026-08-13/patch/works_by_author.jsonl",
+   "sha256": "9ab038093f6be2874e7ea82307b91be520d254da70d804a8878627272fef17d6"
+  },
+  {
+   "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+   "sha256": "3950cec3ed2c2b82a2a66b4dc3102c50dd58ada01da897890c8980f4b9b7572e"
+  },
+  {
+   "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+   "sha256": "1fc323a37dc78f227885bb3d245769c2ee593fe39bf46e1e5de8a0ff19603dfe"
+  },
+  {
+   "rel": "netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+   "origin": "frozen:/data/legacy/thesis/v2_output/netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+   "sha256": "8d80487f08797cd4b26f491c3d6be03a185edd657bea913880ad46980a372e19"
+  },
+  {
+   "rel": "netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+   "origin": "frozen:/data/legacy/thesis/v2_output/netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+   "sha256": "254342df47f3f83b0044b0002a85545781a8ba3271e0cf598b5dfafe677b0a3d"
+  },
+  {
+   "rel": "multidisc_2026-07-24/code/roster_lib.py",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_2026-07-24/code/roster_lib.py",
+   "sha256": "774f1bcc4c87c4da6adf18d690a37f0008923a29ae43a9a096d17c0b413b1230"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+   "sha256": "7b6bf13ade985c1a38d6aaf84f44511d480e130f45ff55fa4968529f74c83589"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+   "sha256": "8e91a93479b4c1f1b9c58dc51e28719f707f1ca552977226dc56114992ae0eba"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+   "sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+   "sha256": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542"
+  },
+  {
+   "rel": "multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+   "sha256": "a5990726d66f139ff701ffcd6e2483d11c70a98b443766284df19693472eb07a"
+  },
+  {
+   "rel": "fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+   "origin": "frozen:/data/legacy/thesis/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+   "sha256": "03ce4144a1ba423737717fc97ce183ef01c337297765ea3f5dc679aaa538dd31"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/p1_frame_chemistry.csv",
+   "sha256": "1a7dbbba836946a7a9eedaeecc9b8c24fea04198abcf1f98ab32611a0e3283e1"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_math_stats_new_gold_2026-08-10.csv",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/p1_frame_math_stats.csv",
+   "sha256": "8d5a7087245ff26c9155f8eb3de417d1fa9edc82f7497478693846c630aff1a0"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/becoming_none.csv",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/p2_becoming_chemistry.csv",
+   "sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/becoming_none.csv",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/p2_becoming_math_stats.csv",
+   "sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_none.parquet",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/pairs_none_chemistry.parquet",
+   "sha256": "530bf6779af5ef10a166b3a6db87579614b93a7dcc9f44bf96e1eedcbc9ef00c"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_none.parquet",
+   "origin": "frozen-cal2026-08-28 (data/frames or data/cal2026-08-28/frames): data/cal2026-08-28/frames/pairs_none_math_stats.parquet",
+   "sha256": "631f499bc78ed55f16384f13a159022ac99ab7c8302101eb7194b6ab2dea19cb"
+  },
+  {
+   "rel": "econ_final_2026-08-13/patch/works_by_author.jsonl",
+   "origin": "frozen 2026-08-13 API patch ⧺ output/cal_intermediates/r1/patch_extra_econ_m.jsonl (17191 + 39609 lines)",
+   "sha256": "d98e4b698963c63b192c160bb3f1149c64ca21255eb2e508f15ef8ce3b33c67c"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/new_events_econ.csv",
+   "origin": "frozen new_events_econ.csv minus ['A5044432173'] (event-age table)",
+   "sha256": "6feb804c4efe190e8200e7be79f441903f3a6abee65fba1191a58ddac6c5d7f5"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/runs/econ_fnfix/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "origin": "frozen prodlib frame minus events ['A5044432173:2006']",
+   "sha256": "11cab8f702272d827b5bd6c150ee0254e2d86ae883c4f15e51464adeca9e7f95"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/runs/econ_fnfix/build_report.json",
+   "origin": "frozen prodlib build_report, export counts {'dropped_event_ids': ['A5017960988:2019', 'A5018518935:2003', 'A5053503664:2023'], 'frame_csv': '<legacy>/v2_output/econ_fnfix_2026-08-15/runs/econ_fnfix/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv', 'n_events_in_frame': 35, 'n_rows': 26114} -> {'dropped_event_ids': ['A5017960988:2019', 'A5018518935:2003', 'A5053503664:2023'], 'frame_csv': '<legacy>/v2_output/econ_fnfix_2026-08-15/runs/econ_fnfix/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv', 'n_events_in_frame': 34, 'n_rows': 25410}",
+   "sha256": "595743cba87d40073687a1ccf9e740e4f48bffe719a09b67041f555101b1d455"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+   "origin": "frozen fnfix supplement ⧺ data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl (4151 + 126 lines)",
+   "sha256": "c5811066b7d0372db50dc6078cdb804ca6d97e401c3d47e1b02933abd41c18a3"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+   "origin": "derived: ledger stage minus removed_old, id-corrected, re-dated in place, new event lines appended (R1 F11)",
+   "sha256": "91773c44d5cc7fc4c0af93653d464189612accd627a545b1c05d3757a095ad73"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+   "origin": "cal-stage:union clone (R1 inputs) post-filtered by (a)+(b) and the incumbent-star rule",
+   "sha256": "e50822b85a4df50464b8437e98d87cbdd2468083693184452bf146a20f53c8b5"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/relationships.csv",
+   "origin": "cal-stage:union clone (R1 inputs) post-filtered by (a)+(b) and the incumbent-star rule",
+   "sha256": "e5ce06d0183fc6b0b80285fe6f5c2cff0d9efabdf36f02be2ddf83c92c771a8a"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/build_report.json",
+   "origin": "cal-stage:union clone (R1 inputs) post-filtered by (a)+(b) and the incumbent-star rule",
+   "sha256": "8161a5f10d92445330c119de1c1a0d0834e17b40e8c3d8c391f118be6ab1e3a0"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+   "origin": "r1:S6 dose_exclusion (delta)",
+   "sha256": "fd639908ec1e114b990f99dbe6e416fca84b7f553d88de1ae800206f3856e5cb"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/new_events_econ.csv",
+   "origin": "provenance table (age table + every regenerated event) — for the p1-econ / p2-econ stages (October's arrangement)",
+   "sha256": "84c219119e8a77766ad1cedbb60bd37bfd1fb86f0ecb926d7821b82436c3885f"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/becoming_unified.csv",
+   "origin": "cal-stage:p2-econ (m)",
+   "sha256": "afcba9db63ad43742ac1552b02f1e920a9a2c666689df2eb4367852f52028f14"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/pairs_unified.csv",
+   "origin": "cal-stage:p2-econ (m)",
+   "sha256": "a96a07fdb1a87bde8bcff8e850619412fbcd306dfe5ca2f83d687a52706c5e29"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/panels23_report.json",
+   "origin": "cal-stage:p2-econ (m)",
+   "sha256": "1f19df27d9e8ba1c19fc59524c17a7d07f81b3da8218fe5812034d1589cf585a"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/new_events_econ.csv",
+   "origin": "restored: the event-age table (no split stage in M, C10)",
+   "sha256": "6feb804c4efe190e8200e7be79f441903f3a6abee65fba1191a58ddac6c5d7f5"
+  },
+  {
+   "rel": "econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+   "origin": "cal-stage:p1-econ (m) written frame: 04 exited 2 only on the AGG_MISSING_AFTER_FETCH old-event rows, kept NA (R1 decision)",
+   "sha256": "b81671c0bbd058127bf672b561258f0c4d97efee5abbbb997e1627b8b1683132"
+  }
+ ]
+}

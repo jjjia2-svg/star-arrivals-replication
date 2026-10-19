@@ -1,0 +1,46 @@
+{
+ "field": "math_stats",
+ "inputs": {
+  "pairs": "data/cal2026-10/frames_math_stats/pairs_none_math_stats.parquet",
+  "pairs_sha256": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+  "frame": "data/cal2026-10/frames_math_stats/p1_frame_math_stats.csv",
+  "frame_sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+  "events": "events_math_stats_cal2026-10_p05.csv"
+ },
+ "suffix": "_p05",
+ "events_kept": 22,
+ "p05_filter": {
+  "rows_in": 929324,
+  "events_in": 33,
+  "rows_out": 499898,
+  "events_out": 22
+ },
+ "p05_slim": {
+  "rows": 499898,
+  "pairs": 29750,
+  "ties": 629,
+  "events": 22,
+  "file": "p3_slim_math_stats_p05.parquet",
+  "sha256": "ff9bebbaa3ff708b59cc5375affe74f60412cf5e45146fe7dc6a8ae8e69214d1"
+ },
+ "dosebin": {
+  "bins": 3,
+  "cuts": [
+   0.015727081208982963,
+   0.06624825857492188
+  ],
+  "pairs_by_bin": {
+   "0": 25324,
+   "1": 10021,
+   "2": 9944,
+   "3": 9948
+  },
+  "rows": 929324,
+  "pairs": 55237,
+  "ties": 1031,
+  "events": 33,
+  "max_D": 3,
+  "sha256": "7f1a38df1d40fa22bf59f1e04d919d5f69b61c7144c128845f2d80c49f90c41d",
+  "file": "p3_slim_math_stats_dosebin3.parquet"
+ }
+}

@@ -1,0 +1,4 @@
+label,mode,n_events,B_requested,B_ok,B_failed,ate_obs,se_obs,t_obs,p_conv_normal,p_perm_abs_ate,p_perm_abs_t,mean_treated_events
+P3cutpos_chemistry,p3tp,38,500,500,0,-0.004662351668,0.002930272936,-1.5911,0.111588,0.101796,0.237525,33.2
+P3cutpos_econ,p3tp,111,500,500,0,-0.0006150950117,0.0009331627727,-0.6592,0.509799,0.235529,0.55489,100.3
+P3cutpos_math_stats,p3tp,32,500,500,0,0.0004134493549,0.0002887078244,1.4321,0.152124,0.582834,0.357285,29.8

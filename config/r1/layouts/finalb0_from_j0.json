@@ -1,0 +1,15 @@
+{
+ "schema": "sar.r1.layout.v1",
+ "note": "finalb0 pairs_b0 (V3-FINAL, review R7 #1): J0's rebuilt October pairs_unified.csv -> $REPO_DIR/output/cal_intermediates/cal2026-10/ (paths_aws.yaml cal_intermediates), which gaps_zenou.py reads in run_all stage 3est. The file is git-ignored and never uploaded (ruling R2: rebuilt inside J0). The launch pulls the stage set of a J0 run whose RESULT is OK (--pull r1/runs/<j0>/stages/=/work/j0/); restore_upstream.py checks the file against J0's frames_econ920 done marker before copying it, then check_pin.py checks it against the October pin (october.pairs_unified in the committed, MANIFEST-pinned build_report_econ920_2026-10.json). The B0 counterpart of the M canon's cal_intermediates (canon_layout.json, from J1a).",
+ "rows": [
+  {
+   "dest": "pairs_unified.csv",
+   "from": {
+    "job": "j0",
+    "stage": "frames_econ920",
+    "token": "repo:output/cal_intermediates/cal2026-10/pairs_unified.csv",
+    "rel": ""
+   }
+  }
+ ]
+}

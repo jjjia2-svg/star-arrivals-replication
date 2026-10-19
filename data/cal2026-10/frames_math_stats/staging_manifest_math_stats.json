@@ -1,0 +1,462 @@
+{
+ "control": {
+  "root": "<scratch>/chemmath_run2/shadow_control/v2_output",
+  "entries": [
+   {
+    "rel": "econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "origin": "frozen:<legacy>/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+   },
+   {
+    "rel": "r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "frozen:<legacy>/v2_output/r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "sha256": "6c7e51457aad48e4381b48a1f4b88e890aac0134eafbd7b183816b60e305076f"
+   },
+   {
+    "rel": "event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "origin": "frozen:<legacy>/v2_output/event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "sha256": "f7b37b41a0a4bbb91f8c8678f8a9cb14795bb9cc6be16eb8a2f20ab68bdb55e1"
+   },
+   {
+    "rel": "econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "origin": "frozen:<legacy>/v2_output/econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "sha256": "9ab038093f6be2874e7ea82307b91be520d254da70d804a8878627272fef17d6"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "sha256": "3950cec3ed2c2b82a2a66b4dc3102c50dd58ada01da897890c8980f4b9b7572e"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "sha256": "1fc323a37dc78f227885bb3d245769c2ee593fe39bf46e1e5de8a0ff19603dfe"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "origin": "frozen:<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "sha256": "8d80487f08797cd4b26f491c3d6be03a185edd657bea913880ad46980a372e19"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "origin": "frozen:<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "sha256": "254342df47f3f83b0044b0002a85545781a8ba3271e0cf598b5dfafe677b0a3d"
+   },
+   {
+    "rel": "multidisc_2026-07-24/code/roster_lib.py",
+    "origin": "frozen:<legacy>/v2_output/multidisc_2026-07-24/code/roster_lib.py",
+    "sha256": "774f1bcc4c87c4da6adf18d690a37f0008923a29ae43a9a096d17c0b413b1230"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "sha256": "7b6bf13ade985c1a38d6aaf84f44511d480e130f45ff55fa4968529f74c83589"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "sha256": "8e91a93479b4c1f1b9c58dc51e28719f707f1ca552977226dc56114992ae0eba"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "sha256": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542"
+   },
+   {
+    "rel": "multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "sha256": "a5990726d66f139ff701ffcd6e2483d11c70a98b443766284df19693472eb07a"
+   },
+   {
+    "rel": "fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "sha256": "03ce4144a1ba423737717fc97ce183ef01c337297765ea3f5dc679aaa538dd31"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfix_2026-08-10.csv",
+    "origin": "cal:data/cal2026-10/events_chemistry_cal2026-10.csv (cal2026-10)",
+    "sha256": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "f202d88ed38087bdfdd89b2d4c241dccb7cbcb3c8f1ab5ed56ca19f1f08ebe80"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfix_2026-08-10.csv",
+    "origin": "cal:data/cal2026-10/events_math_stats_cal2026-10.csv (cal2026-10)",
+    "sha256": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "278f00558d3327ba0f6332ecb87058273a924b93971d1b59d41e9a68035728f5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/shortlist_fnfix.csv",
+    "origin": "derived:frozen shortlist_fnfix + cal admissions",
+    "sha256": "0ffc89bf41d9cebe41d0eff930e943ab4525b51da0765164d4bf8fe6ccfae7e5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet",
+    "origin": "cal:stars_excluded_cal2026-08-28.parquet (unchanged for chemistry/math_stats)",
+    "sha256": "15940fab42656f69e43f5c59ba91a316bfee665429a639c0cc3a412dfaa9806b"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl",
+    "origin": "cal:edges_supplement_cal2026-08-28.jsonl (unchanged for chemistry/math_stats)",
+    "sha256": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   {
+    "rel": "cal2026-10/econ/stars_excluded_cal2026-10.parquet",
+    "origin": "derived:cal2026-08-28 list ∪ every event star of the three tables ∪ every U2 fragment of each econ event star's person",
+    "sha256": "d8e0f69b7c22080354d481037cd0b96eb99d08776c381832309851013fa67625"
+   },
+   {
+    "rel": "cal2026-10/econ/roster_pool_econ_cal2026-10.parquet",
+    "origin": "derived:roster_econ_verified_2026-10 in DEPT_ROSTER_PANEL shape minus excluded stars",
+    "sha256": "f53c3e52048a621907276cffc91ef141f8e5a8f14aac5d02aa329895245056eb"
+   },
+   {
+    "rel": "cal2026-10/econ/u4_aug/events/data.parquet",
+    "origin": "derived:from data/cal2026-10/events_econ_cal2026-10.csv",
+    "sha256": "1e6a3f85874f62b4bc57231933abfd635ab706cbf8cd91e84caa525d56243aef"
+   },
+   {
+    "rel": "cal2026-10/econ/u4_aug/star_set/star_set.parquet",
+    "origin": "derived:from data/cal2026-10/events_econ_cal2026-10.csv",
+    "sha256": "f5ca0803b513d6892ee89d9233496baea53ae7a2073aafac18c3a01a5ba50d12"
+   },
+   {
+    "rel": "cal2026-10/econ/edges_supplement_econ_cal2026-10.jsonl",
+    "origin": "derived:econ_fnfix ⧺ cal2026-08-28 ⧺ star_id_corrections supplements",
+    "sha256": "4138104ec1ab72711f90a094e1432b584d51e450c3441015da0bc8e3eed29fa9"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "control-stage:prodlib chemistry (unfiltered)",
+    "sha256": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/analysis_frame_chemistry_2026-08-10.csv",
+    "origin": "control-stage:union-gold chemistry",
+    "sha256": "b39e1a62bd0f9ead18832a0204a6e92cd030ae6585aced0ad28567bf5110e2d5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/relationships.csv",
+    "origin": "control-stage:union-gold chemistry",
+    "sha256": "c9be7b51667df140bae84b5cd565e46f9920f1d829e3be9376c951e572ab51bc"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/build_report.json",
+    "origin": "control-stage:union-gold chemistry",
+    "sha256": "7a5e99cc2c12854d6416da782928894b4be15773cd4983e5a3468639c7484b3f"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/funnel.json",
+    "origin": "control-stage:union-gold chemistry",
+    "sha256": "08f474ea0fe080bb3d8ae49040d41949ce47d8c4db6e68a0a8587d433becb77b"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv",
+    "origin": "control-stage:p1-gold chemistry",
+    "sha256": "e5b0a6b998d08032f4fa1645c1bdb44e416b16b6bbcb5ca17dd0c2f634da87af"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/becoming_none.csv",
+    "origin": "control-stage:p2-gold chemistry",
+    "sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_none.parquet",
+    "origin": "control-stage:p2-gold chemistry",
+    "sha256": "f054f64c7f120433eab127a3c5d329b658cbacb73c45172848c0c8697ea67b44"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_slim_none.parquet",
+    "origin": "control-stage:p2-gold chemistry",
+    "sha256": "a5e3644305b803f550da441dffa76249f8fbc842f7acbf2780517ac9ae308082"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "control-stage:prodlib math_stats (unfiltered)",
+    "sha256": "ca6d75f1de97ca99f51506b5a792ab83e247db260936f0b7d43f771e393a5ae8"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/analysis_frame_math_stats_2026-08-10.csv",
+    "origin": "control-stage:union-gold math_stats",
+    "sha256": "8ecbbff566a5b14252c78d22ae29e7202f2d1a232da74e951d55576726568e51"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/relationships.csv",
+    "origin": "control-stage:union-gold math_stats",
+    "sha256": "6bcc0f798aafd573a7691dda5ffcb5e07412eb7d34a8caa922bf6dccaa225172"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/build_report.json",
+    "origin": "control-stage:union-gold math_stats",
+    "sha256": "98090ec7c3268d106f1d59363b209bc726a245500bbb6657e8c3c0e1d98d8697"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/funnel.json",
+    "origin": "control-stage:union-gold math_stats",
+    "sha256": "b31b1070d0dcae3ac4778ba9713120c116eb53f959f22e56d0789a20ebe68a2b"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_math_stats_new_gold_2026-08-10.csv",
+    "origin": "control-stage:p1-gold math_stats",
+    "sha256": "aebfdf4c446e79d0c379464e3e55d248a9469cbcf31141e8a338ccf0175769f1"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/becoming_none.csv",
+    "origin": "control-stage:p2-gold math_stats",
+    "sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_none.parquet",
+    "origin": "control-stage:p2-gold math_stats",
+    "sha256": "a9bb36fc1ba9ac4283bdeda703ab8f23bcd3aaa6e14bfb31afec14a4338165c3"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_slim_none.parquet",
+    "origin": "control-stage:p2-gold math_stats",
+    "sha256": "1b05d47e8c54540d432f8f1fcdab1e5be0a00084550b201c5dc9103ab7e2ec5c"
+   }
+  ]
+ },
+ "october": {
+  "root": "<scratch>/chemmath_run2/shadow_october/v2_output",
+  "entries": [
+   {
+    "rel": "econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "origin": "frozen:<legacy>/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+    "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+   },
+   {
+    "rel": "r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "frozen:<legacy>/v2_output/r_p10_80ev_2026-07-22/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "sha256": "6c7e51457aad48e4381b48a1f4b88e890aac0134eafbd7b183816b60e305076f"
+   },
+   {
+    "rel": "event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "origin": "frozen:<legacy>/v2_output/event_ledger_2026-07-27/event_ledger_79_2026-07-27.csv",
+    "sha256": "f7b37b41a0a4bbb91f8c8678f8a9cb14795bb9cc6be16eb8a2f20ab68bdb55e1"
+   },
+   {
+    "rel": "econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "origin": "frozen:<legacy>/v2_output/econ_final_2026-08-13/patch/works_by_author.jsonl",
+    "sha256": "9ab038093f6be2874e7ea82307b91be520d254da70d804a8878627272fef17d6"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/econ_units_2026-08-09.parquet",
+    "sha256": "3950cec3ed2c2b82a2a66b4dc3102c50dd58ada01da897890c8980f4b9b7572e"
+   },
+   {
+    "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+    "sha256": "1fc323a37dc78f227885bb3d245769c2ee593fe39bf46e1e5de8a0ff19603dfe"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "origin": "frozen:<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_133.jsonl",
+    "sha256": "8d80487f08797cd4b26f491c3d6be03a185edd657bea913880ad46980a372e19"
+   },
+   {
+    "rel": "netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "origin": "frozen:<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+    "sha256": "254342df47f3f83b0044b0002a85545781a8ba3271e0cf598b5dfafe677b0a3d"
+   },
+   {
+    "rel": "multidisc_2026-07-24/code/roster_lib.py",
+    "origin": "frozen:<legacy>/v2_output/multidisc_2026-07-24/code/roster_lib.py",
+    "sha256": "774f1bcc4c87c4da6adf18d690a37f0008923a29ae43a9a096d17c0b413b1230"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/events_chemistry_gold_2026-08-10.csv",
+    "sha256": "7b6bf13ade985c1a38d6aaf84f44511d480e130f45ff55fa4968529f74c83589"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/events_math_stats_gold_2026-08-10.csv",
+    "sha256": "8e91a93479b4c1f1b9c58dc51e28719f707f1ca552977226dc56114992ae0eba"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_chemistry.parquet",
+    "sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "sha256": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542"
+   },
+   {
+    "rel": "multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "origin": "frozen:<legacy>/v2_output/multidisc_v2_2026-08-04/data/person_map_multidisc_seeds.parquet",
+    "sha256": "a5990726d66f139ff701ffcd6e2483d11c70a98b443766284df19693472eb07a"
+   },
+   {
+    "rel": "fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "origin": "frozen:<legacy>/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+    "sha256": "03ce4144a1ba423737717fc97ce183ef01c337297765ea3f5dc679aaa538dd31"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfix_2026-08-10.csv",
+    "origin": "cal:data/cal2026-10/events_chemistry_cal2026-10.csv (cal2026-10)",
+    "sha256": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_chemistry_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "f202d88ed38087bdfdd89b2d4c241dccb7cbcb3c8f1ab5ed56ca19f1f08ebe80"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfix_2026-08-10.csv",
+    "origin": "cal:data/cal2026-10/events_math_stats_cal2026-10.csv (cal2026-10)",
+    "sha256": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/events_math_stats_fnfixbase_2026-08-10.csv",
+    "origin": "derived:frozen fnfixbase filtered to the cal events + cal admissions (70_prep rule)",
+    "sha256": "278f00558d3327ba0f6332ecb87058273a924b93971d1b59d41e9a68035728f5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/shortlist_fnfix.csv",
+    "origin": "derived:frozen shortlist_fnfix + cal admissions",
+    "sha256": "0ffc89bf41d9cebe41d0eff930e943ab4525b51da0765164d4bf8fe6ccfae7e5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet",
+    "origin": "cal:stars_excluded_cal2026-08-28.parquet (unchanged for chemistry/math_stats)",
+    "sha256": "15940fab42656f69e43f5c59ba91a316bfee665429a639c0cc3a412dfaa9806b"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl",
+    "origin": "cal:edges_supplement_cal2026-08-28.jsonl (unchanged for chemistry/math_stats)",
+    "sha256": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   {
+    "rel": "cal2026-10/econ/stars_excluded_cal2026-10.parquet",
+    "origin": "derived:cal2026-08-28 list ∪ every event star of the three tables ∪ every U2 fragment of each econ event star's person",
+    "sha256": "d8e0f69b7c22080354d481037cd0b96eb99d08776c381832309851013fa67625"
+   },
+   {
+    "rel": "cal2026-10/econ/roster_pool_econ_cal2026-10.parquet",
+    "origin": "derived:roster_econ_verified_2026-10 in DEPT_ROSTER_PANEL shape minus excluded stars",
+    "sha256": "f53c3e52048a621907276cffc91ef141f8e5a8f14aac5d02aa329895245056eb"
+   },
+   {
+    "rel": "cal2026-10/econ/u4_aug/events/data.parquet",
+    "origin": "derived:from data/cal2026-10/events_econ_cal2026-10.csv",
+    "sha256": "1e6a3f85874f62b4bc57231933abfd635ab706cbf8cd91e84caa525d56243aef"
+   },
+   {
+    "rel": "cal2026-10/econ/u4_aug/star_set/star_set.parquet",
+    "origin": "derived:from data/cal2026-10/events_econ_cal2026-10.csv",
+    "sha256": "f5ca0803b513d6892ee89d9233496baea53ae7a2073aafac18c3a01a5ba50d12"
+   },
+   {
+    "rel": "cal2026-10/econ/edges_supplement_econ_cal2026-10.jsonl",
+    "origin": "derived:econ_fnfix ⧺ cal2026-08-28 ⧺ star_id_corrections supplements",
+    "sha256": "4138104ec1ab72711f90a094e1432b584d51e450c3441015da0bc8e3eed29fa9"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "october-stage:inpost_filter chemistry (D2, on the prodlib frame 359f270ab6e1)",
+    "sha256": "8852fb1d7ff34009cf3b30e48b20b0c3aa97587178d25cfed3ca5207793ad787"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/analysis_frame_chemistry_2026-08-10.csv",
+    "origin": "october-stage:union-gold chemistry",
+    "sha256": "f28677f4764ff5ccfa6b979f401a425cfb9a46c437709dc15e8312f38fe33912"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/relationships.csv",
+    "origin": "october-stage:union-gold chemistry",
+    "sha256": "cb2e71f66b12b31f9dc60627e303decbd9b997509fbc8887ffef5c86a52a8fb7"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/build_report.json",
+    "origin": "october-stage:union-gold chemistry",
+    "sha256": "96c37c749e6981a0fcb40ccee4f367f28e7a85b8026d51b7cb469b810538c074"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_chemistry/funnel.json",
+    "origin": "october-stage:union-gold chemistry",
+    "sha256": "cdb42d53f745fa5504749bb73a2127fd8b9dd4934b1d83f7542695675b5023c4"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv",
+    "origin": "october-stage:p1-gold chemistry",
+    "sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/becoming_none.csv",
+    "origin": "october-stage:p2-gold chemistry",
+    "sha256": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_none.parquet",
+    "origin": "october-stage:p2-gold chemistry",
+    "sha256": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_slim_none.parquet",
+    "origin": "october-stage:p2-gold chemistry",
+    "sha256": "7783b70adf2c7b9e2c216055b61841d8d4ddfd150e7f3cada9e66442b9b714ab"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/runs/fnfix/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "origin": "october-stage:inpost_filter math_stats (D2, on the prodlib frame ca6d75f1de97)",
+    "sha256": "8a81a5c7bc5c0487eb4896992deb8247b0e54f892b366eb1f5e566e95c723a4d"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/analysis_frame_math_stats_2026-08-10.csv",
+    "origin": "october-stage:union-gold math_stats",
+    "sha256": "c7ccf4ad073038f0c72aba0d5f603b21c57ee47bbaffac2b1618e73059abaa11"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/relationships.csv",
+    "origin": "october-stage:union-gold math_stats",
+    "sha256": "74a52cf8b0f206212cbf83c881bf1e17b5184c9c07aecf34dff6ebd26b5a26fd"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/build_report.json",
+    "origin": "october-stage:union-gold math_stats",
+    "sha256": "900cf902b03a316909ad428d68f25a619ed77fbb1711c48df32a53bbf6b192ca"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_math_stats/funnel.json",
+    "origin": "october-stage:union-gold math_stats",
+    "sha256": "a44658db7aa92fed4c5b968a184b1e16730b1c381c38a30a38aa0c002e89b2c3"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_math_stats_new_gold_2026-08-10.csv",
+    "origin": "october-stage:p1-gold math_stats",
+    "sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/becoming_none.csv",
+    "origin": "october-stage:p2-gold math_stats",
+    "sha256": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_none.parquet",
+    "origin": "october-stage:p2-gold math_stats",
+    "sha256": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4"
+   },
+   {
+    "rel": "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_slim_none.parquet",
+    "origin": "october-stage:p2-gold math_stats",
+    "sha256": "2f4ce3960289e0351427f4f35553cd1a22f02c9d1b52096fffb125089ff70ace"
+   }
+  ]
+ }
+}

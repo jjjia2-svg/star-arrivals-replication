@@ -1,0 +1,18 @@
+{
+ "rule": "complement of the double-star drop (output/r1/robustness/doublestar): keep only the 157 economics events that arrived within five years of an earlier same-department arrival",
+ "events_in_complement": 157,
+ "events_excluded_clean": 16,
+ "p1": {
+  "rows_in": 139997,
+  "dropped": 7315,
+  "edited": 0,
+  "kept_byte_identical": 132682
+ },
+ "control_lines_subset_of_canon": true,
+ "control_rows_complement_plus_clean_equals_canon": true,
+ "source_frame": "data/frames/p1_frame_econ.csv",
+ "source_frame_sha256": "b81671c0bbd058127bf672b561258f0c4d97efee5abbbb997e1627b8b1683132",
+ "staged_sha256": {
+  "p1_dsC_econ.csv": "722519366fd97188637a2c9941958373388038f7e77aed89d2ea2f45374045f1"
+ }
+}

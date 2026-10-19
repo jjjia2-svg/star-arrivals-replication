@@ -1,0 +1,7 @@
+{
+  "schema": "sar.r1.recovered_pins.v1",
+  "rec_job": "rec-01",
+  "rk1/payload/rk1.py": "b696560fa2b79d85550bbd6e3577a3f6062042bd62c83d73e82933caacc1b5c4",
+  "manifest.tsv": "705586ce31d4ed14792688a14a2ee29e6120513a227b1c4f2344a9e6f4eaa781",
+  "launch_side/prep_rk1.py": "a32bbe885b4305c04b46ac3358095ea1a7e2319194008fb30854c4037357e6d8"
+}

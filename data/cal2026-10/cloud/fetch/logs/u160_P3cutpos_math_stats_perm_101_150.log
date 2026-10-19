@@ -1,0 +1,5 @@
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=101..150 seed=20260830 =====
+  [P3cutpos_math_stats] perm 125 done (9.5s)
+  [P3cutpos_math_stats] perm 150 done (8.7s)
+[P3cutpos_math_stats] 101..150 完成 -> out_perm/P3cutpos_math_stats_perm_101_150.csv

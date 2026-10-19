@@ -1,0 +1,657 @@
+{
+ "rows_frozen": 103356,
+ "rows_new": 102795,
+ "identical": 32117,
+ "modified": 70678,
+ "removed_rows": 561,
+ "added_rows": 0,
+ "row_order_identical_on_common_keys": true,
+ "modified_by_bucket": {
+  "y+y_ex_star": 20703,
+  "y+y_ex_star+dose+age_gap+pub_count": 12426,
+  "y+y_ex_star+dose": 9810,
+  "dose": 8680,
+  "dose+age_gap": 7170,
+  "y_ex_star": 2517,
+  "age_gap": 2186,
+  "y+y_ex_star+age_gap+pub_count": 1318,
+  "y_ex_star+dose": 933,
+  "y+y_ex_star+dose+pub_count": 871,
+  "y_ex_star+dose+age_gap+pub_count": 839,
+  "y+y_ex_star+dose+age_gap": 530,
+  "y": 434,
+  "y+y_ex_star+pub_count": 382,
+  "y_ex_star+age_gap": 328,
+  "y_ex_star+dose+age_gap": 289,
+  "y+y_ex_star+age_gap": 251,
+  "y+dose+pub_count": 198,
+  "y+dose+age_gap+pub_count": 181,
+  "y+dose": 130,
+  "y+pub_count": 117,
+  "y_ex_star+dose+pub_count": 102,
+  "y_ex_star+age_gap+pub_count": 82,
+  "y_ex_star+pub_count": 47,
+  "y+dose+age_gap": 47,
+  "y+age_gap": 34,
+  "y+age_gap+pub_count": 32,
+  "pub_count": 14,
+  "dose+age_gap+pub_count": 12,
+  "dose+pub_count": 11,
+  "age_gap+pub_count": 4
+ },
+ "modified_by_channel_and_bucket": {
+  "dept_only": {
+   "dose+age_gap": 7170,
+   "y+y_ex_star+dose+age_gap+pub_count": 12426,
+   "y+pub_count": 117,
+   "y+y_ex_star+dose+pub_count": 871,
+   "y+y_ex_star+dose": 320,
+   "y+dose+age_gap+pub_count": 181,
+   "y+y_ex_star": 1658,
+   "y_ex_star": 1683,
+   "y+y_ex_star+age_gap+pub_count": 1318,
+   "dose": 1461,
+   "y+y_ex_star+dose+age_gap": 530,
+   "y_ex_star+dose+age_gap+pub_count": 839,
+   "age_gap": 2186,
+   "y+y_ex_star+pub_count": 382,
+   "y+y_ex_star+age_gap": 251,
+   "y_ex_star+dose+pub_count": 102,
+   "y_ex_star+dose+age_gap": 289,
+   "y+dose+pub_count": 198,
+   "dose+age_gap+pub_count": 12,
+   "y+dose": 38,
+   "y_ex_star+age_gap": 328,
+   "y_ex_star+age_gap+pub_count": 82,
+   "y": 174,
+   "y+age_gap": 34,
+   "y_ex_star+dose": 156,
+   "y_ex_star+pub_count": 47,
+   "y+dose+age_gap": 47,
+   "y+age_gap+pub_count": 32,
+   "pub_count": 14,
+   "dose+pub_count": 11,
+   "age_gap+pub_count": 4
+  },
+  "both": {
+   "y+y_ex_star": 1868,
+   "y+y_ex_star+dose": 1904,
+   "dose": 1481,
+   "y_ex_star": 111,
+   "y": 31,
+   "y+dose": 16,
+   "y_ex_star+dose": 196
+  },
+  "network": {
+   "y+y_ex_star+dose": 7586,
+   "y+y_ex_star": 17177,
+   "dose": 5738,
+   "y_ex_star+dose": 581,
+   "y_ex_star": 723,
+   "y": 229,
+   "y+dose": 76
+  }
+ },
+ "value_diffs": {
+  "dose_topic": {
+   "rows_touched": 42229,
+   "na_to_value": 0,
+   "value_to_na": 2750,
+   "numeric_diffs": 39479,
+   "max_abs_diff": 0.9957147608707401,
+   "max_rel_diff": 13.90467172042553,
+   "numeric_within_rel_1e-6": 14223
+  },
+  "age_gap": {
+   "rows_touched": 25729,
+   "na_to_value": 0,
+   "value_to_na": 2750,
+   "numeric_diffs": 22979,
+   "max_abs_diff": 128.0,
+   "max_rel_diff": 43000000000000.0,
+   "numeric_within_rel_1e-6": 0
+  },
+  "fwci_frac": {
+   "rows_touched": 42046,
+   "na_to_value": 861,
+   "value_to_na": 13345,
+   "numeric_diffs": 27840,
+   "max_abs_diff": 156.98782537784422,
+   "max_rel_diff": 7842811497121.082,
+   "numeric_within_rel_1e-6": 6473
+  },
+  "fwci_frac_ex_star": {
+   "rows_touched": 45208,
+   "na_to_value": 1053,
+   "value_to_na": 13252,
+   "numeric_diffs": 30903,
+   "max_abs_diff": 165.07669169840406,
+   "max_rel_diff": 165076691698404.06,
+   "numeric_within_rel_1e-6": 5447
+  },
+  "fwci_mean": {
+   "rows_touched": 42681,
+   "na_to_value": 213,
+   "value_to_na": 19457,
+   "numeric_diffs": 23011,
+   "max_abs_diff": 80.49914380976566,
+   "max_rel_diff": 11608772499368.756,
+   "numeric_within_rel_1e-6": 5785
+  },
+  "fwci_mean_ex_star": {
+   "rows_touched": 45775,
+   "na_to_value": 894,
+   "value_to_na": 23033,
+   "numeric_diffs": 21848,
+   "max_abs_diff": 80.49914380976566,
+   "max_rel_diff": 11608772499368.756,
+   "numeric_within_rel_1e-6": 4655
+  },
+  "pub_count": {
+   "rows_touched": 16636,
+   "na_to_value": 22,
+   "value_to_na": 2382,
+   "numeric_diffs": 14232,
+   "max_abs_diff": 111.0,
+   "max_rel_diff": 21000000000000.0,
+   "numeric_within_rel_1e-6": 0
+  },
+  "pub_count_ex_star": {
+   "rows_touched": 18596,
+   "na_to_value": 22,
+   "value_to_na": 2382,
+   "numeric_diffs": 16192,
+   "max_abs_diff": 70.0,
+   "max_rel_diff": 44000000000000.0,
+   "numeric_within_rel_1e-6": 0
+  }
+ },
+ "relationships_removed": {
+  "n": 51,
+  "by_channel": {
+   "dept_only": 51
+  },
+  "sample": [
+   [
+    "P_A5001558165",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5005581086",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5011417552",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5013576595",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5017716521",
+    "A5001177483:2023"
+   ],
+   [
+    "P_A5017716521",
+    "A5016931502:2018"
+   ],
+   [
+    "P_A5017716521",
+    "A5038001711:2017"
+   ],
+   [
+    "P_A5017716521",
+    "A5059428122:2021"
+   ],
+   [
+    "P_A5017716521",
+    "A5082658369:2018"
+   ],
+   [
+    "P_A5020311289",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5020576066",
+    "A5008855963:2011"
+   ],
+   [
+    "P_A5020576066",
+    "A5027424571:2010"
+   ],
+   [
+    "P_A5020576066",
+    "A5056114255:2011"
+   ],
+   [
+    "P_A5020576066",
+    "A5063040920:2009"
+   ],
+   [
+    "P_A5020576066",
+    "A5103218091:2010"
+   ],
+   [
+    "P_A5023602090",
+    "A5026828190:2017"
+   ],
+   [
+    "P_A5024807196",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5028731684",
+    "A5086206624:2012"
+   ],
+   [
+    "P_A5034321015",
+    "A5102739182:2010"
+   ],
+   [
+    "P_A5034685255",
+    "A5026828190:2017"
+   ]
+  ]
+ },
+ "relationships_added": {
+  "n": 0,
+  "by_channel": {},
+  "sample": []
+ },
+ "persons_removed": {
+  "n": 1,
+  "sample": [
+   "P_A5038727132"
+  ]
+ },
+ "persons_added": {
+  "n": 0,
+  "sample": []
+ },
+ "relationship_channel_changed": {
+  "n": 0,
+  "sample": []
+ },
+ "channels_frozen": {
+  "network": 4744,
+  "dept_only": 3983,
+  "both": 669
+ },
+ "channels_new": {
+  "network": 4744,
+  "dept_only": 3932,
+  "both": 669
+ },
+ "modified_examples": [
+  {
+   "key": [
+    "P_A5065307935",
+    "A5007734019:2016",
+    "2011"
+   ],
+   "cols": [
+    "dose_topic",
+    "age_gap"
+   ],
+   "frozen": {
+    "dose_topic": "0.03589790793088691",
+    "age_gap": "-11.0"
+   },
+   "new": {
+    "dose_topic": "",
+    "age_gap": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5052820942",
+    "A5054037290:2008",
+    "2003"
+   ],
+   "cols": [
+    "dose_topic",
+    "age_gap",
+    "fwci_frac",
+    "pub_count",
+    "fwci_frac_ex_star",
+    "pub_count_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "ulps": {
+    "dose_topic": 4601906973876324909,
+    "age_gap": 8725724278030336
+   },
+   "frozen": {
+    "dose_topic": "0.4571539790287343",
+    "age_gap": "-7.0",
+    "fwci_frac": "0.0",
+    "pub_count": "3.0",
+    "fwci_frac_ex_star": "0.0",
+    "pub_count_ex_star": "3.0",
+    "fwci_mean": "0.0",
+    "fwci_mean_ex_star": "0.0"
+   },
+   "new": {
+    "dose_topic": "0.0",
+    "age_gap": "-27.0",
+    "fwci_frac": "",
+    "pub_count": "",
+    "fwci_frac_ex_star": "",
+    "pub_count_ex_star": "",
+    "fwci_mean": "",
+    "fwci_mean_ex_star": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5102739182",
+    "A5070304330:2013",
+    "2013"
+   ],
+   "cols": [
+    "fwci_frac",
+    "pub_count",
+    "fwci_mean"
+   ],
+   "ulps": {
+    "fwci_frac": 4607391226466135913,
+    "pub_count": 4616189618054758400
+   },
+   "frozen": {
+    "fwci_frac": "1.0463646157286013",
+    "pub_count": "4.0",
+    "fwci_mean": "1.0463646157286013"
+   },
+   "new": {
+    "fwci_frac": "0.0",
+    "pub_count": "0.0",
+    "fwci_mean": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5034349136",
+    "A5034628923:2005",
+    "2005"
+   ],
+   "cols": [
+    "dose_topic",
+    "age_gap",
+    "fwci_frac",
+    "pub_count",
+    "fwci_frac_ex_star",
+    "pub_count_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "ulps": {
+    "dose_topic": 4594996667345454514,
+    "age_gap": 9209016813042532352,
+    "fwci_frac": 4610131126553427654,
+    "pub_count": 4621256167635550208,
+    "fwci_frac_ex_star": 4610131126553427654,
+    "pub_count_ex_star": 4621256167635550208
+   },
+   "frozen": {
+    "dose_topic": "0.16177745406961958",
+    "age_gap": "3.0",
+    "fwci_frac": "1.6547446481453547",
+    "pub_count": "9.0",
+    "fwci_frac_ex_star": "1.6547446481453547",
+    "pub_count_ex_star": "9.0",
+    "fwci_mean": "0.46913193191011576",
+    "fwci_mean_ex_star": "0.46913193191011576"
+   },
+   "new": {
+    "dose_topic": "0.0",
+    "age_gap": "-27.0",
+    "fwci_frac": "0.0",
+    "pub_count": "0.0",
+    "fwci_frac_ex_star": "0.0",
+    "pub_count_ex_star": "0.0",
+    "fwci_mean": "",
+    "fwci_mean_ex_star": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5111710874",
+    "A5046163960:2007",
+    "2008"
+   ],
+   "cols": [
+    "dose_topic",
+    "age_gap",
+    "fwci_frac",
+    "pub_count",
+    "fwci_frac_ex_star",
+    "pub_count_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "ulps": {
+    "dose_topic": 120752579338142,
+    "age_gap": 10414574138294272,
+    "fwci_frac": 3676865755050714,
+    "pub_count": 1125899906842624,
+    "fwci_frac_ex_star": 3676865755050714,
+    "pub_count_ex_star": 1125899906842624,
+    "fwci_mean": 1604488552814503,
+    "fwci_mean_ex_star": 1604488552814503
+   },
+   "frozen": {
+    "dose_topic": "0.3460346960581252",
+    "age_gap": "34.0",
+    "fwci_frac": "0.5782769388645079",
+    "pub_count": "10.0",
+    "fwci_frac_ex_star": "0.5782769388645079",
+    "pub_count_ex_star": "10.0",
+    "fwci_mean": "0.2539495783072984",
+    "fwci_mean_ex_star": "0.2539495783072984"
+   },
+   "new": {
+    "dose_topic": "0.35273781075132926",
+    "age_gap": "7.0",
+    "fwci_frac": "0.3350314184466008",
+    "pub_count": "8.0",
+    "fwci_frac_ex_star": "0.3350314184466008",
+    "pub_count_ex_star": "8.0",
+    "fwci_mean": "0.20744128580159527",
+    "fwci_mean_ex_star": "0.20744128580159527"
+   }
+  },
+  {
+   "key": [
+    "P_A5049136327",
+    "A5050962159:2017",
+    "2013"
+   ],
+   "cols": [
+    "dose_topic",
+    "age_gap"
+   ],
+   "ulps": {
+    "dose_topic": 4596533336144352100,
+    "age_gap": 9213238937693192192
+   },
+   "frozen": {
+    "dose_topic": "0.20442858111359918",
+    "age_gap": "1.0"
+   },
+   "new": {
+    "dose_topic": "0.0",
+    "age_gap": "-5.0"
+   }
+  },
+  {
+   "key": [
+    "P_A5100641794",
+    "A5001820944:2016",
+    "2012"
+   ],
+   "cols": [
+    "fwci_frac",
+    "fwci_frac_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "frozen": {
+    "fwci_frac": "207.31914896638412",
+    "fwci_frac_ex_star": "207.31914896638412",
+    "fwci_mean": "43.551044892439556",
+    "fwci_mean_ex_star": "43.551044892439556"
+   },
+   "new": {
+    "fwci_frac": "",
+    "fwci_frac_ex_star": "",
+    "fwci_mean": "",
+    "fwci_mean_ex_star": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5086483206",
+    "A5007734019:2016",
+    "2014"
+   ],
+   "cols": [
+    "dose_topic",
+    "fwci_frac",
+    "fwci_frac_ex_star"
+   ],
+   "ulps": {
+    "dose_topic": 15353692915745,
+    "fwci_frac": 1,
+    "fwci_frac_ex_star": 1
+   },
+   "frozen": {
+    "dose_topic": "0.47458307499789315",
+    "fwci_frac": "2.5770895026727736",
+    "fwci_frac_ex_star": "2.5770895026727736"
+   },
+   "new": {
+    "dose_topic": "0.47543537616729736",
+    "fwci_frac": "2.577089502672774",
+    "fwci_frac_ex_star": "2.577089502672774"
+   }
+  },
+  {
+   "key": [
+    "P_A5042648415",
+    "A5102189800:2013",
+    "2012"
+   ],
+   "cols": [
+    "dose_topic",
+    "fwci_frac",
+    "fwci_frac_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "ulps": {
+    "dose_topic": 8008570,
+    "fwci_frac": 1895590455408076,
+    "fwci_frac_ex_star": 1895590455408076,
+    "fwci_mean": 1668660043493463,
+    "fwci_mean_ex_star": 1668660043493463
+   },
+   "frozen": {
+    "dose_topic": "0.3011976484929658",
+    "fwci_frac": "3.2445478182723275",
+    "fwci_frac_ex_star": "3.2445478182723275",
+    "fwci_mean": "0.8800912965867036",
+    "fwci_mean_ex_star": "0.8800912965867036"
+   },
+   "new": {
+    "dose_topic": "0.3011976480484009",
+    "fwci_frac": "2.4027365507308347",
+    "fwci_frac_ex_star": "2.4027365507308347",
+    "fwci_mean": "1.1306995532850987",
+    "fwci_mean_ex_star": "1.1306995532850987"
+   }
+  },
+  {
+   "key": [
+    "P_A5046572321",
+    "A5029151069:2019",
+    "2021"
+   ],
+   "cols": [
+    "fwci_frac",
+    "fwci_frac_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "ulps": {
+    "fwci_frac": 3707013991264897,
+    "fwci_frac_ex_star": 3707013991264897,
+    "fwci_mean": 3672125361777035,
+    "fwci_mean_ex_star": 3672125361777035
+   },
+   "frozen": {
+    "fwci_frac": "0.7650445348950606",
+    "fwci_frac_ex_star": "0.7650445348950606",
+    "fwci_mean": "0.948602074154808",
+    "fwci_mean_ex_star": "0.948602074154808"
+   },
+   "new": {
+    "fwci_frac": "0.42674165316203594",
+    "fwci_frac_ex_star": "0.42674165316203594",
+    "fwci_mean": "1.7125797735005854",
+    "fwci_mean_ex_star": "1.7125797735005854"
+   }
+  },
+  {
+   "key": [
+    "P_A5061674887",
+    "A5027077000:2017",
+    "2018"
+   ],
+   "cols": [
+    "fwci_frac",
+    "fwci_frac_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "frozen": {
+    "fwci_frac": "22.19647808375805",
+    "fwci_frac_ex_star": "22.19647808375805",
+    "fwci_mean": "14.797652055838698",
+    "fwci_mean_ex_star": "14.797652055838698"
+   },
+   "new": {
+    "fwci_frac": "",
+    "fwci_frac_ex_star": "",
+    "fwci_mean": "",
+    "fwci_mean_ex_star": ""
+   }
+  },
+  {
+   "key": [
+    "P_A5088334444",
+    "A5100765181:2017",
+    "2015"
+   ],
+   "cols": [
+    "fwci_frac",
+    "fwci_frac_ex_star",
+    "fwci_mean",
+    "fwci_mean_ex_star"
+   ],
+   "frozen": {
+    "fwci_frac": "14.101918085712477",
+    "fwci_frac_ex_star": "14.101918085712477",
+    "fwci_mean": "14.101918085712477",
+    "fwci_mean_ex_star": "14.101918085712477"
+   },
+   "new": {
+    "fwci_frac": "",
+    "fwci_frac_ex_star": "",
+    "fwci_mean": "",
+    "fwci_mean_ex_star": ""
+   }
+  }
+ ]
+}

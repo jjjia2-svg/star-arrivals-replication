@@ -1,0 +1,46 @@
+{
+ "field": "econ",
+ "inputs": {
+  "pairs": "output/cal_intermediates/cal2026-10/pairs_unified.csv",
+  "pairs_sha256": "e5c98b848882523a9b48f7cd39edb9c67bf79214f8bd600e95044b6c42abd10a",
+  "frame": "data/cal2026-10/frames_econ/p1_frame_econ.csv",
+  "frame_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+  "events": "events_econ_cal2026-10_p05.csv"
+ },
+ "suffix": "_p05",
+ "events_kept": 79,
+ "p05_filter": {
+  "rows_in": 4349964,
+  "events_in": 113,
+  "rows_out": 3304472,
+  "events_out": 79
+ },
+ "p05_slim": {
+  "rows": 3304472,
+  "pairs": 197779,
+  "ties": 6070,
+  "events": 79,
+  "file": "p3_slim_econ_p05.parquet",
+  "sha256": "5b1b386b750595e217035632c15c85514fad80b6bd264599f5729c959de39028"
+ },
+ "dosebin": {
+  "bins": 3,
+  "cuts": [
+   0.14712064809512176,
+   0.3168831610536226
+  ],
+  "pairs_by_bin": {
+   "0": 36287,
+   "1": 74731,
+   "2": 74690,
+   "3": 74624
+  },
+  "rows": 4349964,
+  "pairs": 260332,
+  "ties": 7964,
+  "events": 113,
+  "max_D": 3,
+  "sha256": "69c8bf1c2b19f05a3bf3e51baa17d22fb3678bc5688ab6f3f900035b08eff069",
+  "file": "p3_slim_econ_dosebin3.parquet"
+ }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rankrepro",
+  "instance_type": "r6i.8xlarge",
+  "price_hr": 2.016,
+  "est_min": 60,
+  "hard_min": 180,
+  "root_gb": 150,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_SSD_ROOT": "/data/openalex_pipeline",
+    "WORK": "/work"
+  },
+  "pulls": [],
+  "required_dests": [],
+  "data_sync": [
+    [
+      "r1/recovered/rec-01/",
+      "/data/ref/r1/rec/"
+    ],
+    [
+      "r1/runs/merge-04/out/files/",
+      "/data/ref/r1/merge/"
+    ],
+    [
+      "r1/runs/rk6a-04/out/files/",
+      "/data/ref/r1/rk6a/"
+    ],
+    [
+      "r1/runs/rk6b-06/out/files/",
+      "/data/ref/r1/rk6b/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/verify_inputs.py",
+      "/work/verify_inputs.py"
+    ],
+    [
+      "pipeline/aws/r1/rk6_requests.py",
+      "/work/rk6_requests.py"
+    ],
+    [
+      "pipeline/aws/r1/rk6b_rank.py",
+      "/work/rk6b_rank.py"
+    ],
+    [
+      "pipeline/aws/r1/rank_r1.py",
+      "/work/rank_r1.py"
+    ],
+    [
+      "pipeline/aws/r1/restake_r1.py",
+      "/work/restake_r1.py"
+    ]
+  ],
+  "env_layers": [
+    "py"
+  ],
+  "steps": [
+    "export STAGE_OUT=/work/prod/verify_inputs && mkdir -p \"$STAGE_OUT\" && { \"$PY\" \"$WORK/verify_inputs.py\" data --job-spec \"$REPO_DIR/config/r1/jobs/rankrepro.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out \"$STAGE_OUT\"; }; rc=$?; mkdir -p /work/out/prod && cp -r \"$STAGE_OUT\" /work/out/prod/; exit $rc",
+    "export STAGE_OUT=/work/prod/rank_requests && mkdir -p \"$STAGE_OUT\" && { \"$PY\" \"$WORK/rk6_requests.py\" build --merged /data/ref/r1/merge/candidates_merged.csv --recovered /data/ref/r1/rec --pins \"$REPO_DIR/config/r1/recovered_pins.json\" --paper-checks \"$REPO_DIR/data/cal2026-10r1/inputs/paper_checks\" --rk6a-out /data/ref/r1/rk6a --rulings \"$REPO_DIR/data/cal2026-10r1/inputs/rulings_p1.json\" --out \"$STAGE_OUT/in6\"; }; rc=$?; mkdir -p /work/out/prod && cp -r \"$STAGE_OUT\" /work/out/prod/; exit $rc",
+    "export STAGE_OUT=/work/prod/rank_m && mkdir -p \"$STAGE_OUT\" && { mkdir -p \"$WORK/tmp/rank_m\" && cd \"$REPO_DIR\" && RK_REPO=\"$REPO_DIR\" RK_IN=\"$WORK/prod/rank_requests/in6\" RK_OUT=\"$WORK/tmp/rank_m\" SAR_SSD_ROOT=/data/openalex_pipeline \"$PY\" \"$WORK/rk6b_rank.py\"; for f in ranks_A.csv ranks_own.csv ranks_C.csv flips.csv rk6b_report.json summary.json RESULT.txt; do [ -f \"$WORK/tmp/rank_m/$f\" ] && cp \"$WORK/tmp/rank_m/$f\" \"$STAGE_OUT/\"; done; rm -rf \"$WORK/tmp/rank_m\"; test -s \"$STAGE_OUT/RESULT.txt\"; }; rc=$?; mkdir -p /work/out/prod && cp -r \"$STAGE_OUT\" /work/out/prod/; exit $rc",
+    "export STAGE_OUT=/work/prod/rank_gate && mkdir -p \"$STAGE_OUT\" && { \"$PY\" \"$WORK/rank_r1.py\" gate --new \"$WORK/prod/rank_m\" --ref /data/ref/r1/rk6b --asserts \"$REPO_DIR/config/r1/rank_named_asserts.json\" --out \"$STAGE_OUT\"; }; rc=$?; mkdir -p /work/out/prod && cp -r \"$STAGE_OUT\" /work/out/prod/; exit $rc",
+    "export STAGE_OUT=/work/prod/rank_tables && mkdir -p \"$STAGE_OUT\" && { \"$PY\" \"$WORK/restake_r1.py\" m --rk \"$WORK/prod/rank_m\" --repo \"$REPO_DIR\" --out \"$STAGE_OUT\"; }; rc=$?; mkdir -p /work/out/prod && cp -r \"$STAGE_OUT\" /work/out/prod/; exit $rc",
+    "\"$PY\" \"$WORK/rank_r1.py\" collect --stage /work/prod/rank_m --stage /work/prod/rank_gate --stage /work/prod/rank_tables --out /work/out"
+  ]
+}

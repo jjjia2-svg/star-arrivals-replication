@@ -1,0 +1,54 @@
+{
+ "rule": "drop e iff an earlier same-department arrival is within 5 years (the \u00a73 Model-1 coverage window); same-year pairs kept (no 'earlier' member), counts disclosed",
+ "spec": "pos",
+ "afar_frame": "data/frames/p3_afar_pos_{field}.parquet",
+ "fields_built": [
+  "econ"
+ ],
+ "fields_NOT_built": [
+  "chemistry",
+  "math_stats"
+ ],
+ "econ": {
+  "events": 173,
+  "dropped": 157,
+  "kept": 16,
+  "same_year_pair_events_kept": 99,
+  "p1": {
+   "rows_in": 139997,
+   "dropped": 132682,
+   "edited": 0,
+   "kept_byte_identical": 7315
+  },
+  "p2": {
+   "rows_in": 213910,
+   "dropped": 202801,
+   "edited": 0,
+   "kept_byte_identical": 11109
+  },
+  "afar": {
+   "events_in_afar": 173,
+   "dropped_in_afar": 157,
+   "rows_kept": 131753
+  }
+ },
+ "chemistry": {
+  "events": 97,
+  "dropped": 82,
+  "kept": 15,
+  "same_year_pair_events_kept": 48,
+  "frames": "NOT BUILT (field excluded by --fields; no proven map)"
+ },
+ "math_stats": {
+  "events": 107,
+  "dropped": 94,
+  "kept": 13,
+  "same_year_pair_events_kept": 59,
+  "frames": "NOT BUILT (field excluded by --fields; no proven map)"
+ },
+ "staged_sha256": {
+  "p1_ds_econ.csv": "b1d2d98dc49888675673c725eeda6358048cc113cdc0ece2b8902a3e2796fff6",
+  "p2_ds_econ.csv": "34b900c5863194a0302c6429e2fb6798e34ec72a5f3faf8d6dc04b92550dea10",
+  "p3_afar_ds_econ.parquet": "1e62d9152ffb0101fe842bd93780eff794c75b86f119b39735171fd409a00c87"
+ }
+}

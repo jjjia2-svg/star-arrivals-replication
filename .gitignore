@@ -1,0 +1,26 @@
+output/
+setup/.venv/
+renv/library/
+renv/staging/
+__pycache__/
+*.pyc
+.pytest_cache/
+.Rhistory
+.DS_Store
+data/intermediates/*.parquet
+data/intermediates/*.csv
+
+# R1 (2026-10-11): the bucket name stays out of git; the plan's progress ledger is local
+config/r1/local.env
+.superpowers/
+
+# R1 F18 (C7): raw OpenAlex patch pages stay out of git; the committed upload record
+# data/cal2026-10r1/aws/uploads/patch_raw_<tag>.json pins every page by sha256 (R1 data: not shipped)
+data/cal2026-10r1/patch_raw/
+
+# The report canon ships this table xz-packed (data/report/PACKED.tsv lists it). Stage 1 of
+# analysis/run_all.sh restores it in place; it is too large to commit. *.unpacking is the temporary
+# file of an interrupted stage-1 restore; *.part is the packing helper's temporary file.
+data/report/cal_intermediates/pairs_unified.csv
+data/report/**/*.unpacking
+data/report/**/*.part

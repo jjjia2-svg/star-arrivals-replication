@@ -1,0 +1,46 @@
+{
+ "field": "chemistry",
+ "inputs": {
+  "pairs": "data/cal2026-10/frames_chemistry/pairs_none_chemistry.parquet",
+  "pairs_sha256": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247",
+  "frame": "data/cal2026-10/frames_chemistry/p1_frame_chemistry.csv",
+  "frame_sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+  "events": "events_chemistry_cal2026-10_p05.csv"
+ },
+ "suffix": "_p05",
+ "events_kept": 31,
+ "p05_filter": {
+  "rows_in": 1823689,
+  "events_in": 38,
+  "rows_out": 1500836,
+  "events_out": 31
+ },
+ "p05_slim": {
+  "rows": 1500836,
+  "pairs": 90584,
+  "ties": 3966,
+  "events": 31,
+  "file": "p3_slim_chemistry_p05.parquet",
+  "sha256": "5f58838576a77220c43623d9e0a4a34bca449ae4e782cd1863b41568ae948282"
+ },
+ "dosebin": {
+  "bins": 3,
+  "cuts": [
+   0.10487905144691467,
+   0.31167691946029663
+  ],
+  "pairs_by_bin": {
+   "0": 14051,
+   "1": 32006,
+   "2": 31981,
+   "3": 31946
+  },
+  "rows": 1823689,
+  "pairs": 109984,
+  "ties": 4687,
+  "events": 38,
+  "max_D": 3,
+  "sha256": "54363b6b1bc18a749d78f882c86b752766cd3d53c5a67a934f363d6f2c40d5e6",
+  "file": "p3_slim_chemistry_dosebin3.parquet"
+ }
+}

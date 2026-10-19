@@ -1,0 +1,25 @@
+{
+ "estimate_failed": {},
+ "files": 704,
+ "groups": {
+  "cells": {
+   "EQUAL": 10,
+   "OK": 57
+  },
+  "frames": {
+   "EQUAL": 2,
+   "OK": 8
+  },
+  "loeo": {
+   "OK": 173
+  },
+  "null": {
+   "OK": 48
+  },
+  "perm": {
+   "OK": 189
+  }
+ },
+ "problems": [],
+ "schema": "sar.r1.rob_report.v1"
+}

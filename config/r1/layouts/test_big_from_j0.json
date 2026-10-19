@@ -1,0 +1,24 @@
+{
+ "schema": "sar.r1.layout.v1",
+ "note": "Batch B4 (t-big-04): the git-ignored J0 products the big-host suite reads, laid out from a passed J0 stage set (launch --pull r1/runs/<j0>/stages/=/work/j0/) into /work/overlay, digest-checked against each J0 .done.json (pipeline/aws/r1/restore_upstream.py), then sha-checked against October's pin (check_pin.py, build_report_econ920_2026-10.json october.pairs_unified). run_tests_r1.py --overlay /work/overlay copies them into the checkout after every git clean. Readers: output/cal_intermediates/cal2026-10/pairs_unified.csv = analysis/paper/gaps_zenou.py (P['cal_intermediates']; tests/test_r1_tables_base_tree.py) and the canon copy (tools/r1_canon.py copy-october; tests/test_r1_canon_generators.py); output/cal_intermediates/pairs_unified.csv = the staged copy (assembly_2026-10.json pairs_unified_econ.staged_to; tests/test_make_slim.py, tests/test_afar_build.py econ).",
+ "rows": [
+  {
+   "dest": "output/cal_intermediates/cal2026-10/pairs_unified.csv",
+   "from": {
+    "job": "j0",
+    "stage": "frames_econ920",
+    "token": "repo:output/cal_intermediates/cal2026-10/pairs_unified.csv",
+    "rel": ""
+   }
+  },
+  {
+   "dest": "output/cal_intermediates/pairs_unified.csv",
+   "from": {
+    "job": "j0",
+    "stage": "frames",
+    "token": "repo:output/cal_intermediates/pairs_unified.csv",
+    "rel": ""
+   }
+  }
+ ]
+}

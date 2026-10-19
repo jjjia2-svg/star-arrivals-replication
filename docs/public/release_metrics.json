@@ -1,0 +1,235 @@
+{
+ "release_date": "2026-10-19",
+ "source_ref": "8fb5bb1fb785dff6532da602265536553bae2494",
+ "cost_source": "data/cal2026-10r1/aws/spend_ledger.jsonl (not shipped)",
+ "cost_source_sha256": "4d4958ec3cdd5c3508689c7e233f62783be939eaa0cf2f9e097070579c108d27",
+ "cost_scope": "Settled instance charges through final-14, including retries; storage and transfers are excluded.",
+ "aws_by_kind": {
+  "addlist": {
+   "jobs": 4,
+   "hours": 0.3045,
+   "usd": 0.0303,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "dossier": {
+   "jobs": 3,
+   "hours": 0.2905,
+   "usd": 0.5888,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  },
+  "envbuild": {
+   "jobs": 4,
+   "hours": 0.8126,
+   "usd": 0.5615,
+   "instance_types": [
+    "c6i.4xlarge"
+   ]
+  },
+  "envbuild_py": {
+   "jobs": 1,
+   "hours": 0.0914,
+   "usd": 0.0632,
+   "instance_types": [
+    "c6i.4xlarge"
+   ]
+  },
+  "fielddiag": {
+   "jobs": 2,
+   "hours": 0.1675,
+   "usd": 0.3395,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  },
+  "final": {
+   "jobs": 14,
+   "hours": 4.5082,
+   "usd": 1.8793,
+   "instance_types": [
+    "m6i.2xlarge"
+   ]
+  },
+  "finalb0": {
+   "jobs": 5,
+   "hours": 1.3973,
+   "usd": 0.5517,
+   "instance_types": [
+    "m6i.2xlarge"
+   ]
+  },
+  "j0": {
+   "jobs": 6,
+   "hours": 3.5275,
+   "usd": 14.3774,
+   "instance_types": [
+    "r6i.16xlarge"
+   ]
+  },
+  "j1a": {
+   "jobs": 21,
+   "hours": 12.2081,
+   "usd": 49.7583,
+   "instance_types": [
+    "r6i.16xlarge"
+   ]
+  },
+  "j1b": {
+   "jobs": 7,
+   "hours": 25.9916,
+   "usd": 105.9375,
+   "instance_types": [
+    "r6i.16xlarge"
+   ]
+  },
+  "jp": {
+   "jobs": 1,
+   "hours": 0.2589,
+   "usd": 1.0496,
+   "instance_types": [
+    "r6i.16xlarge"
+   ]
+  },
+  "merge": {
+   "jobs": 4,
+   "hours": 0.3022,
+   "usd": 0.0301,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "pin": {
+   "jobs": 2,
+   "hours": 1.1042,
+   "usd": 0.8843,
+   "instance_types": [
+    "m6i.4xlarge"
+   ]
+  },
+  "rankdiff": {
+   "jobs": 1,
+   "hours": 0.0714,
+   "usd": 0.0071,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "rec": {
+   "jobs": 1,
+   "hours": 0.0833,
+   "usd": 0.0083,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "recder": {
+   "jobs": 1,
+   "hours": 0.1919,
+   "usd": 0.0195,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "report": {
+   "jobs": 5,
+   "hours": 0.3755,
+   "usd": 0.0373,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "rk6a": {
+   "jobs": 4,
+   "hours": 1.4898,
+   "usd": 3.0198,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  },
+  "rk6b": {
+   "jobs": 6,
+   "hours": 1.9756,
+   "usd": 4.0044,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  },
+  "rosteraudit": {
+   "jobs": 2,
+   "hours": 0.1517,
+   "usd": 0.0151,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "rosterbase": {
+   "jobs": 1,
+   "hours": 0.075,
+   "usd": 0.0074,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "rostermatch": {
+   "jobs": 2,
+   "hours": 1.407,
+   "usd": 2.8674,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  },
+  "rostermerge": {
+   "jobs": 3,
+   "hours": 0.2297,
+   "usd": 0.0229,
+   "instance_types": [
+    "m6i.large"
+   ]
+  },
+  "test": {
+   "jobs": 66,
+   "hours": 12.5569,
+   "usd": 2.4658,
+   "instance_types": [
+    "m6i.xlarge"
+   ]
+  },
+  "test_big": {
+   "jobs": 6,
+   "hours": 4.0886,
+   "usd": 8.3771,
+   "instance_types": [
+    "r6i.8xlarge"
+   ]
+  }
+ },
+ "manual_adjustments_usd": 2.53,
+ "roster": {
+  "human_verified": 879,
+  "rows": 2640,
+  "source": "data/report/cal/roster_econ_verified_2026-10.parquet"
+ },
+ "canon_storage": {
+  "packed_file_bytes": 303181052,
+  "tar_bytes": 303841280,
+  "largest_file_bytes": 21145600,
+  "unpacked_pairs_bytes": 481997636,
+  "packed_pairs_bytes": 4804448,
+  "tar_sha256": "db20194c63d334ba32ee6af0c7dcdbb69b9bf5cee47d02718ce0b47e576f796f",
+  "manifest_sha256": "1e0ac25d78577c4c67fbfd99cdac867281691ba2242ad63aaa3095f22361e504"
+ },
+ "test_inventory": {
+  "method": "AST count of test_* function definitions, including methods; parametrization is not expanded. This is a source inventory, not a test run.",
+  "tests/": {
+   "files": 135,
+   "test_definitions": 1832
+  },
+  "pipeline/units/": {
+   "files": 183,
+   "test_definitions": 1930
+  }
+ }
+}

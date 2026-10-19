@@ -1,0 +1,20 @@
+# R1 P3 (W1-CANON, 2026-10-15): config/r1/paths_aws.yaml with the six canon keys moved to the M canon
+# that the final job assembles from the J1a/J1b stage sets (/work/canon_m, outside the clone, with its
+# own CANON.json and one MANIFEST.sha256 per key). Selected with SAR_PATHS_CONFIG=<clone>/config/r1/
+# paths_aws_m.yaml and nothing else; analysis/lib/paths.{py,R} honour the variable, so the Python and R
+# generators read the same tree. analysis/lib/canon.py refuses a config that moves only some keys.
+repo_root: "."
+legacy_v2_output: "/data/legacy/thesis/v2_output"
+legacy_thesis: "/data/legacy/thesis"
+ssd_root: "/data/openalex_pipeline"
+frames: "/work/canon_m/frames"
+raw_verified: "/work/canon_m/raw_verified"
+fwci: data/fwci
+estimates: data/estimates
+expected: "/work/canon_m/expected"
+output: output
+cal: "/work/canon_m/cal"
+paper_inputs: "/work/canon_m/paper_inputs"
+cal_intermediates: "/work/canon_m/cal_intermediates"
+legacy_multiplex: "/data/legacy/thesis/multiplex_pipeline"
+pipeline_root: pipeline

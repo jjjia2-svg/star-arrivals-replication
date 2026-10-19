@@ -1,0 +1,15 @@
+$ bash analysis/robustness/sensitivity/run_doublestar_complement.sh
+[env] {"SAR_ROBUST_STAGE": "$TMPDIR/sar_rob_sensitivity/dscomp", "SAR_ROBUST_OUTDIR": "data/cal2026-10/robustness/doublestar/complement"}
+--- stdout ---
+
+--- stderr ---
+Traceback (most recent call last):
+  File "analysis/robustness/sensitivity/build_doublestar_complement.py", line 60, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "analysis/robustness/sensitivity/build_doublestar_complement.py", line 45, in main
+    assert acc["kept_byte_identical"] + kept_rows_0829 == rep["econ"]["p1"]["rows_in"] == acc["rows_in"], (acc, kept_rows_0829)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ({'rows_in': 73073, 'dropped': 6776, 'edited': 0, 'kept_byte_identical': 66297}, 16016)
+
+--- rc=1 secs=0.7 ---

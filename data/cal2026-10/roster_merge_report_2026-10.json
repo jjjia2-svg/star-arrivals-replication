@@ -1,0 +1,100 @@
+{
+ "base_rows": 920,
+ "added": 88,
+ "skipped": [
+  {
+   "person_id": "P_A5044343044",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5057459075",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: D_visiting_adjunct_honorary_emeritus"
+  },
+  {
+   "person_id": "P_A5035801976",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: D_visiting_adjunct_honorary_emeritus"
+  },
+  {
+   "person_id": "P_A5003503790",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5053798323",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5060589792",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5034647910",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5012746449",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5018043519",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5030040920",
+   "dept_key": "adelaide_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  },
+  {
+   "person_id": "P_A5000129921",
+   "dept_key": "unsw_econ",
+   "why": "D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists"
+  },
+  {
+   "person_id": "P_A5013214751",
+   "dept_key": "unsw_econ",
+   "why": "D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists"
+  },
+  {
+   "person_id": "P_A5061335885",
+   "dept_key": "unsw_econ",
+   "why": "D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists"
+  },
+  {
+   "person_id": "P_A5101596594",
+   "dept_key": "uts_econ",
+   "why": "round-2 rejected: C_not_found_or_no_year_overlap"
+  }
+ ],
+ "total": 1008,
+ "added_by_dept": {
+  "unsw_econ": 25,
+  "uwa_econ": 18,
+  "uts_econ": 17,
+  "adelaide_econ": 10,
+  "sydney_econ": 9,
+  "melbourne_econ": 3,
+  "monash_econ": 3,
+  "deakin_econ": 2,
+  "anu_econ": 1
+ },
+ "added_by_confidence": {
+  "high": 58,
+  "medium": 25,
+  "low": 5
+ },
+ "inputs_sha256": {
+  "roster_econ_verified.parquet": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "results_102.csv": "6adc34e736ad05d26f3d32f4368bdfe00995ac79576d8ff9247e2b0d37b79da5",
+  "round2_check.json": "ecb638752e77ffab89b308ae075c1cda7c9b7f73b6a8e60a5ec046de976b3d66",
+  "roster_overrides_2026-10.csv": "8bc9b6b5845432c01a39a1f57e9467bab55e276aa21dc196042f9f7d156f4c39"
+ },
+ "output_sha256": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5"
+}

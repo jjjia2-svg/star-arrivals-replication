@@ -1,0 +1,553 @@
+{
+ "caliber": "dept-exposure multidisc math_stats (ported from econ v9) GOLD 2026-08-10",
+ "roster_clean_variant": "none",
+ "fp_gap": 10,
+ "age_gap_guard_max": 60,
+ "caliber_notes": [
+  "Old-frame rows (07-24 network frame) are preserved byte for byte in the network/both channels; new rows are dept_only.",
+  "y uses the existing SSD works.fwci column; the old frame recomputed it from cited_by_count and a baseline. G-VAL checks a sample.",
+  "The |gap|>60 guard removes only new dept_only relations; old-frame relations above the threshold are recorded and retained.",
+  "A star is excluded only from its own event, as in econ v9; other stars may be colleagues. Counts are in the funnel.",
+  "Empty arrival_corrected retains the 07-24 ledger year, matching prodlib COALESCE.",
+  "Roster cleaning applies only to the dept channel; the old-frame network channel is unaffected."
+ ],
+ "events": {
+  "n_events": 33,
+  "n_arrival_fallback_to_0724_ledger": 0,
+  "fallback_events": []
+ },
+ "anchor_check": {
+  "old_events_all_in_ledger": true,
+  "arrival_all_match": true
+ },
+ "alias": {
+  "persons": 494,
+  "author_rows": 573,
+  "mapped_persons": 244,
+  "selfrows_unmapped": 250,
+  "multi_alias_persons": 39
+ },
+ "sup_merge": {
+  "star_extra_works_from_supplement": 964
+ },
+ "dose_src": {
+  "persons": 458,
+  "rows": 47628
+ },
+ "relationships_pre_guard": {
+  "dept": 1579,
+  "network_old": 380,
+  "both": 124,
+  "dept_only_new": 1455,
+  "union": 1835,
+  "v9_drop_self_alias": 0,
+  "v9_drop_star_prearrival": 0,
+  "v9_drop_alias_dup": 0,
+  "v9_dropped_examples": {
+   "self": [],
+   "prearrival": [],
+   "alias_dup": []
+  }
+ },
+ "G_DOSE_advisory": {
+  "n": 200,
+  "missing_side": 0,
+  "max_abs_diff": 0.18559794475404945,
+  "share_exact_1e-9": 0.315,
+  "share_le_0.01": 0.965,
+  "worst": [
+   [
+    "A5072168381",
+    "A5042200719:unsw",
+    "0.7006048560142517",
+    "0.8862028007683012"
+   ],
+   [
+    "A5055096066",
+    "A5042200719:unsw",
+    "0.699999988079071",
+    "0.8854377448471461"
+   ],
+   [
+    "A5060683861",
+    "A5042200719:unsw",
+    "0.5078333616256714",
+    "0.642364054837573"
+   ],
+   [
+    "A5042553363",
+    "A5042200719:unsw",
+    "0.4443912506103515",
+    "0.5621154167911698"
+   ],
+   [
+    "A5081296452",
+    "A5042200719:unsw",
+    "0.4375949800014496",
+    "0.553518724817331"
+   ],
+   [
+    "A5101795910",
+    "A5014535747:monash",
+    "0.0718285366892814",
+    "0.1114837332157398"
+   ],
+   [
+    "A5074348636",
+    "A5113900323:monash",
+    "0.7860216498374939",
+    "0.7744019753455601"
+   ],
+   [
+    "A5078885185",
+    "A5100397166:sydney",
+    "0.1802826821804046",
+    "0.1721940891178083"
+   ]
+  ]
+ },
+ "first_pub": {
+  "persons_with_fp": 458,
+  "new_rel_persons_no_fp": 36
+ },
+ "age_gap_guard": {
+  "new_rel_dropped": 25,
+  "new_rel_na_gap_kept": 80,
+  "old_frame_rel_gt60_NOT_dropped": 16,
+  "dropped_examples": [
+   [
+    "A5001788962",
+    "A5000405788:melbourne",
+    "118.0"
+   ],
+   [
+    "A5001788962",
+    "A5012602442:melbourne",
+    "102.0"
+   ],
+   [
+    "A5008902850",
+    "A5015471697:unsw",
+    "118.0"
+   ],
+   [
+    "A5008902850",
+    "A5022427262:unsw",
+    "134.0"
+   ],
+   [
+    "A5008902850",
+    "A5044731110:unsw",
+    "122.0"
+   ],
+   [
+    "A5008902850",
+    "A5061150027:unsw",
+    "124.0"
+   ],
+   [
+    "A5008902850",
+    "A5069315147:unsw",
+    "136.0"
+   ],
+   [
+    "A5008902850",
+    "A5090916445:unsw",
+    "127.0"
+   ],
+   [
+    "A5023048979",
+    "A5035138469:monash",
+    "118.0"
+   ],
+   [
+    "A5023048979",
+    "A5075602113:monash",
+    "121.0"
+   ]
+  ]
+ },
+ "ship_alias": {
+  "n_star_authors_excl_list": 1837,
+  "n_after_alias_closure": 3197
+ },
+ "outcome_src": {
+  "persons_needed": 453,
+  "unit_rows": 41585,
+  "person_years": 8685
+ },
+ "diag_new_rel_persons_in_star_excl_list": 77,
+ "G_VAL_advisory": {
+  "sampled_both": 40,
+  "mismatches": 1295,
+  "dose_tolerated_le_0.01": 44,
+  "fill_divergence": 30,
+  "fill_examples": [
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2016",
+    "fwci_frac",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2016",
+    "fwci_frac_ex_star",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2016",
+    "fwci_mean",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2016",
+    "fwci_mean_ex_star",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2018",
+    "fwci_frac",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2018",
+    "fwci_frac_ex_star",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2018",
+    "fwci_mean",
+    "old_NA",
+    "nan",
+    "0.0"
+   ],
+   [
+    "A5028146693",
+    "A5113900323:monash",
+    "2018",
+    "fwci_mean_ex_star",
+    "old_NA",
+    "nan",
+    "0.0"
+   ]
+  ],
+  "examples": [
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2007",
+    "fwci_frac",
+    "0.2269739806652069",
+    "0.6808816666666667"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2007",
+    "fwci_frac_ex_star",
+    "0.2269739806652069",
+    "0.6808816666666667"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2007",
+    "fwci_mean",
+    "0.1552896350622177",
+    "0.456125"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2007",
+    "fwci_mean_ex_star",
+    "0.1552896350622177",
+    "0.456125"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2008",
+    "fwci_frac",
+    "1.8465572595596311",
+    "2.3599916666666667"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2008",
+    "fwci_frac_ex_star",
+    "1.8465572595596311",
+    "2.3599916666666667"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2008",
+    "fwci_mean",
+    "0.7654123306274414",
+    "0.7646375000000001"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2008",
+    "fwci_mean_ex_star",
+    "0.7654123306274414",
+    "0.7646375000000001"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2009",
+    "fwci_frac",
+    "0.4736669957637787",
+    "1.07375"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2009",
+    "fwci_frac_ex_star",
+    "0.4736669957637787",
+    "1.07375"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2009",
+    "fwci_mean",
+    "0.9473339915275574",
+    "2.1475"
+   ],
+   [
+    "A5061453428",
+    "A5035138469:monash",
+    "2009",
+    "fwci_mean_ex_star",
+    "0.9473339915275574",
+    "2.1475"
+   ]
+  ]
+ },
+ "G_ROW": {
+  "old_rel": 380,
+  "found": 380,
+  "share": 1.0,
+  "missing": []
+ },
+ "G_SUM": {
+  "total": 19910,
+  "old_rows": 4180,
+  "new_rows": 15730,
+  "new_rel_x11": 15730,
+  "ok": true
+ },
+ "frame": {
+  "rows": 19910,
+  "relationships": 1810,
+  "persons": 481,
+  "events": 33,
+  "by_channel": {
+   "network": 256,
+   "both": 124,
+   "dept_only": 1430
+  },
+  "events_zero_dept_members": [],
+  "dose_null_new_rows": 880,
+  "age_gap_null_new_rows": 880
+ },
+ "per_event": {
+  "A5000405788:melbourne": {
+   "network": 0,
+   "dept_only": 82,
+   "both": 0
+  },
+  "A5012602442:melbourne": {
+   "network": 12,
+   "dept_only": 87,
+   "both": 3
+  },
+  "A5014535747:monash": {
+   "network": 8,
+   "dept_only": 57,
+   "both": 2
+  },
+  "A5015471697:unsw": {
+   "network": 9,
+   "dept_only": 34,
+   "both": 3
+  },
+  "A5017222669:uq": {
+   "network": 6,
+   "dept_only": 16,
+   "both": 5
+  },
+  "A5022427262:unsw": {
+   "network": 1,
+   "dept_only": 66,
+   "both": 1
+  },
+  "A5023907914:monash": {
+   "network": 16,
+   "dept_only": 54,
+   "both": 6
+  },
+  "A5027646711:sydney": {
+   "network": 0,
+   "dept_only": 46,
+   "both": 0
+  },
+  "A5031984571:uwa": {
+   "network": 28,
+   "dept_only": 1,
+   "both": 5
+  },
+  "A5035138469:monash": {
+   "network": 22,
+   "dept_only": 32,
+   "both": 12
+  },
+  "A5036133145:monash": {
+   "network": 8,
+   "dept_only": 25,
+   "both": 3
+  },
+  "A5042200719:unsw": {
+   "network": 18,
+   "dept_only": 33,
+   "both": 9
+  },
+  "A5042789303:melbourne": {
+   "network": 33,
+   "dept_only": 78,
+   "both": 14
+  },
+  "A5044731110:unsw": {
+   "network": 14,
+   "dept_only": 59,
+   "both": 10
+  },
+  "A5046503140:uq": {
+   "network": 34,
+   "dept_only": 28,
+   "both": 6
+  },
+  "A5051266677:uq": {
+   "network": 4,
+   "dept_only": 37,
+   "both": 3
+  },
+  "A5051533068:monash": {
+   "network": 0,
+   "dept_only": 29,
+   "both": 0
+  },
+  "A5052182828:sydney": {
+   "network": 1,
+   "dept_only": 65,
+   "both": 0
+  },
+  "A5061150027:unsw": {
+   "network": 1,
+   "dept_only": 66,
+   "both": 1
+  },
+  "A5068065835:monash": {
+   "network": 13,
+   "dept_only": 25,
+   "both": 8
+  },
+  "A5069315147:unsw": {
+   "network": 7,
+   "dept_only": 66,
+   "both": 1
+  },
+  "A5074011742:monash": {
+   "network": 2,
+   "dept_only": 58,
+   "both": 0
+  },
+  "A5074032970:monash": {
+   "network": 0,
+   "dept_only": 40,
+   "both": 0
+  },
+  "A5074884339:sydney": {
+   "network": 6,
+   "dept_only": 15,
+   "both": 1
+  },
+  "A5075602113:monash": {
+   "network": 6,
+   "dept_only": 42,
+   "both": 2
+  },
+  "A5077319118:monash": {
+   "network": 7,
+   "dept_only": 37,
+   "both": 3
+  },
+  "A5077954390:melbourne": {
+   "network": 26,
+   "dept_only": 32,
+   "both": 4
+  },
+  "A5079308734:monash": {
+   "network": 15,
+   "dept_only": 56,
+   "both": 3
+  },
+  "A5083478373:melbourne": {
+   "network": 19,
+   "dept_only": 28,
+   "both": 4
+  },
+  "A5083769806:uwa": {
+   "network": 22,
+   "dept_only": 24,
+   "both": 10
+  },
+  "A5090916445:unsw": {
+   "network": 3,
+   "dept_only": 44,
+   "both": 2
+  },
+  "A5100397166:sydney": {
+   "network": 2,
+   "dept_only": 31,
+   "both": 0
+  },
+  "A5113900323:monash": {
+   "network": 37,
+   "dept_only": 37,
+   "both": 3
+  }
+ },
+ "GATE": "PASS"
+}

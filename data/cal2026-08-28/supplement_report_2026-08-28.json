@@ -1,0 +1,165 @@
+{
+  "generated": "2026-08-28T11:23:47",
+  "authority": "The 2026-08-28 input specification (restricted archive).",
+  "select_note": "wire protocol = 70_prep's; select adds doi,cited_by_count for the frozen works records only — supplement rows carry exactly 70_prep's five keys",
+  "frozen_inputs_sha256": {
+    "edges_supplement_fnfix.jsonl": "611363727c35036ea49c27ec8904c5172d301078ee14cdb950a84e7ea9f6540e",
+    "stars_excluded_fnfix.parquet": "83493a51cd1a680c3b7c3b86b7bfeb466aff411b38abacc4000921404d64eb6d",
+    "A5062352558.json": "4364d0d0838b0431293945efd9273b5e90ac0c5aeef32ab130682420f943f1c8"
+  },
+  "api_key_present": true,
+  "A5017222669_merge": {
+    "source_profile": "A5083852619",
+    "works": {
+      "W1592870802": 5118,
+      "W2131510173": 1309,
+      "W1214546200": 681,
+      "W2167745157": 15
+    },
+    "citations_recovered": 7123,
+    "author_id_observed_on_each": {
+      "W1592870802": [
+        "A5083852619"
+      ],
+      "W2131510173": [
+        "A5083852619"
+      ],
+      "W1214546200": [
+        "A5083852619"
+      ],
+      "W2167745157": [
+        "A5083852619"
+      ]
+    },
+    "already_on_profile": []
+  },
+  "exclusions_applied": [
+    {
+      "author_id": "A5091826237",
+      "work_id": "W2010247246",
+      "dropped": true
+    },
+    {
+      "author_id": "A5091826237",
+      "work_id": "W2043627473",
+      "dropped": true
+    },
+    {
+      "author_id": "A5091826237",
+      "work_id": "W2132883327",
+      "dropped": true
+    },
+    {
+      "author_id": "A5091826237",
+      "work_id": "W4210338294",
+      "dropped": true
+    },
+    {
+      "author_id": "A5017222669",
+      "work_id": "W2051022741",
+      "dropped": true
+    },
+    {
+      "author_id": "A5062352558",
+      "work_id": "W2002298104",
+      "dropped": true
+    }
+  ],
+  "population_caliber": {
+    "authority": "The 2026-08-28 input specification and the 2026-07-31 department-exposure all-roster population definition (restricted archive).",
+    "A5044432173": {
+      "decision": "returns to the colleague population; NOT added to any exclusion list; her event was removed by Task 1 (D-A, aage=0)",
+      "roster_row": {
+        "dept_key": "melbourne_econ",
+        "year_start": 2007,
+        "year_end": 2011,
+        "human_verified": true,
+        "confidence": "high"
+      },
+      "econ_mechanism": "the econ chain has NO stars_excluded artifact; its colleague population is the relationships table, where her rows already sit (88 p1 / 136 p2 frame rows persist); her star side leaves with the event",
+      "econ_supplement": "data/raw_verified/edges_supplement_econ_fnfix.jsonl is left UNTOUCHED (her 257 seed rows stay in the works domain): the econ works domain already includes full-API works for non-stars (the 133-rescue and 108+4-patch cohorts), so removing hers would impoverish her record below the chain's own footing — and it is a frozen input this task may not edit"
+    },
+    "new_stars_roster_check": {
+      "A5027778630": {
+        "arrival": 2002,
+        "school": "anu",
+        "year_start": 2002,
+        "year_end": 2026
+      },
+      "A5091826237": {
+        "arrival": 2001,
+        "school": "anu",
+        "year_start": 2001,
+        "year_end": 2025
+      },
+      "A5017222669": {
+        "arrival": 2002,
+        "school": "uq",
+        "year_start": 2002,
+        "year_end": 2016
+      },
+      "A5090916445": {
+        "arrival": 2002,
+        "school": "unsw",
+        "year_start": 2002,
+        "year_end": 2011
+      },
+      "A5062352558": {
+        "arrival": 2003,
+        "school": "melbourne",
+        "year_start": 2003,
+        "year_end": 2025
+      }
+    }
+  },
+  "stars": {
+    "A5027778630": {
+      "works_fetched_or_cached": 633,
+      "supplement_rows": 633
+    },
+    "A5091826237": {
+      "works_fetched_or_cached": 878,
+      "supplement_rows": 874
+    },
+    "A5017222669": {
+      "works_fetched_or_cached": 144,
+      "supplement_rows": 147
+    },
+    "A5090916445": {
+      "works_fetched_or_cached": 125,
+      "supplement_rows": 125
+    },
+    "A5062352558": {
+      "works_fetched_or_cached": 227,
+      "supplement_rows": 226,
+      "reconciliation": {
+        "cache_works": 227,
+        "live_works": 227,
+        "missing_from_live": [],
+        "live_only_added": [],
+        "field_diffs_cache_kept": []
+      }
+    }
+  },
+  "request_total": 14,
+  "fetch_seconds": 24.1,
+  "supplement": {
+    "fnfix_lines": 13564,
+    "appended_rows": 2005
+  },
+  "stars_excluded": {
+    "fnfix": 1832,
+    "cal": 1837,
+    "added": [
+      "A5027778630",
+      "A5091826237",
+      "A5017222669",
+      "A5090916445",
+      "A5062352558"
+    ],
+    "not_added": [
+      "A5044432173"
+    ],
+    "order_note": "ORDER BY author_id for determinism; consumers read it as a set (20_rebuild_y_gold excl_authors)"
+  }
+}

@@ -1,0 +1,1855 @@
+{
+ "group": "predate_cuts",
+ "caliber": "cal2026-10",
+ "generated": "2026-09-23T03:14:11",
+ "authority": "The 2026-09-22 input specification, D7: controls first (restricted archive).",
+ "r_env": "4.5.1 2.3.3 1.10.0.9000 1.17.8",
+ "python": "3.12.13",
+ "runners": {
+  "analysis/robustness/predate/run_predate.R": "07a8b7288e2c061a9f48eef397f42aa6b7b521dae3a705b386cbbc8a0d292fde",
+  "analysis/robustness/predate/run_all_predate.sh": "4fd376fb98d75ea74d2d71eab7623aaa03459413943bc41079afee2103583604",
+  "analysis/robustness/predate/run_p1_predate.sh": "721b53af5f03a8b314f098fb056cab9a883659d4876dd006d3010374cbf2c99d",
+  "analysis/robustness/p3_afar_cuts/run_cuts.sh": "5399b8e7a143e676dc4d5def22524efeace846eb99c2eb3e98923f2524cab42a",
+  "analysis/robustness/p3_afar_cuts/build_afar_cut.py": "7736905e407c9bc2db77f6875b89ba45b4b31543ae612c83b6fbcbbd6e76aca9",
+  "analysis/robustness/p3_afar/build_afar.py": "8cbce7a81dc9b020bb8e82cd6aa6056e04b5170d104cb41497d2f313e38d5a23",
+  "analysis/estimation/run_p3_tp.R": "45c89f70aba44bedb2558a51972840a466a4c0c115b508335c352a3b7448ccf1",
+  "analysis/estimation/run_p1.R": "d5423982ecbe96135066e99b32c6f543a6c74669deacbc57a7e575c28a1b6ea6",
+  "analysis/estimation/run_p2.R": "fc3c20970ffb52b2cfa72dfa9efbfa4f8320a21a30a74a30e6d27651e60ce44b",
+  "analysis/estimation/run_p3.R": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+  "analysis/robustness/predate/report_predate_cuts.py": "34d729d510f662f91b74012281b5d63f6902ec073831ae4257cc3fff1844d889"
+ },
+ "inputs": {
+  "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+  "data/frames/p1_frame_chemistry.csv": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+  "data/frames/p1_frame_math_stats.csv": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+  "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+  "data/frames/p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+  "data/frames/p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+  "data/frames/p3_afar_econ.parquet": "418c110bfe3bfeff1d41a299354b89c0ef915e4080a195dd82fffc37c2bdcf9d",
+  "data/frames/p3_afar_chemistry.parquet": "19dbd0e5a2d7947d8abe0b8f51666a63d9aaef4d0df223dd890aca41d185eb42",
+  "data/frames/p3_afar_math_stats.parquet": "35a169aa495bb27955777247f45c0820785ca634a73c04ed2350a48c7a2febbf",
+  "data/frames/p3_afar_pos_econ.parquet": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e",
+  "data/frames/p3_afar_pos_chemistry.parquet": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+  "data/frames/p3_afar_pos_math_stats.parquet": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+  "data/frames/p3_afar_med_econ.parquet": "67a51ebda2e4ea5d065f5484f95f445864eeb56d565cf8c8145889982d448da3",
+  "data/frames/p3_afar_med_chemistry.parquet": "37eb5ea7b8e352af8cb3c6d171e5397a7951551ed0bf39e5e48ecec277f9db70",
+  "data/frames/p3_afar_med_math_stats.parquet": "5cb40d2cc22d3c9d0be580bb2079529e056f1527b17800ad8dda17092b30654d",
+  "data/frames/p3_slim_math_stats.parquet": "18e68a55b48ead3902e05e384d925968f0a943526df40a1586a221d2b6e5bf19",
+  "data/frames/p3_slim_ev_math_stats.parquet": "3616bfd0cf73a26ef743a78d914cd89685f20e921ea08bfd305bbd0bf7b0c4b1",
+  "data/frames/pairs_none_chemistry.parquet": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247",
+  "data/frames/pairs_none_math_stats.parquet": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+  "output/cal_intermediates/cal2026-10/pairs_unified.csv": "e5c98b848882523a9b48f7cd39edb9c67bf79214f8bd600e95044b6c42abd10a",
+  "analysis/expected/P3lb_econ_A_far.json": "f3909249de50e19b7f7f5a220c0d4daf934c3988fe90d37ba7fd523f0ce86eb6",
+  "analysis/expected/P2_econ_fnfix.json": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+  "analysis/expected/P3_fnfix_math_stats.json": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+  "analysis/expected/P1_econ_fnfix.json": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+  "analysis/expected/P1_fnfix_chemistry.json": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+  "analysis/expected/P1_fnfix_math_stats.json": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+  "analysis/expected/P3pos_econ_A_far.json": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+  "analysis/expected/P3med_econ_A_far.json": "c77d0d0a7044a82740df2d84e975f94bf5ae0c084a3fcc55b2ed88d31c4d8c23",
+  "analysis/expected/P3pos_chemistry_A_far.json": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+  "analysis/expected/P3med_chemistry_A_far.json": "0ae93781d3645f13629100aa048b6f67b763d193de0fe5e095e240480c8a2c33",
+  "analysis/expected/P3pos_math_stats_A_far.json": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+  "analysis/expected/P3med_math_stats_A_far.json": "a8b4b12c696d96042e1c5e24cb2f98e43ae084095d57a10d44cdfa0780701f39"
+ },
+ "controls": [
+  {
+   "battery": "predate (run_all_predate.sh)",
+   "control": "P3lb_econ_A_far shift-0",
+   "new": "data/cal2026-10/robustness/predate/control/P3lb_econ_A_far.json",
+   "expected": "analysis/expected/P3lb_econ_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "predate (run_all_predate.sh)",
+   "control": "P2_econ_fnfix shift-0",
+   "new": "data/cal2026-10/robustness/predate/control/P2_econ_fnfix.json",
+   "expected": "analysis/expected/P2_econ_fnfix.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "predate (run_all_predate.sh)",
+   "control": "P3_fnfix_math_stats shift-0",
+   "new": "data/cal2026-10/robustness/predate/control/P3_fnfix_math_stats.json",
+   "expected": "analysis/expected/P3_fnfix_math_stats.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "predate_p1 (run_p1_predate.sh)",
+   "control": "P1_econ_fnfix shift-0 (p1 mode)",
+   "new": "data/cal2026-10/robustness/predate_p1/control/P1_econ_fnfix.json",
+   "expected": "analysis/expected/P1_econ_fnfix.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "predate_p1 (run_p1_predate.sh)",
+   "control": "P1_fnfix_chemistry shift-0 (p1 mode)",
+   "new": "data/cal2026-10/robustness/predate_p1/control/P1_fnfix_chemistry.json",
+   "expected": "analysis/expected/P1_fnfix_chemistry.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "predate_p1 (run_p1_predate.sh)",
+   "control": "P1_fnfix_math_stats shift-0 (p1 mode)",
+   "new": "data/cal2026-10/robustness/predate_p1/control/P1_fnfix_math_stats.json",
+   "expected": "analysis/expected/P1_fnfix_math_stats.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_pos_econ.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_econ.parquet",
+   "expected": "data/frames/p3_afar_pos_econ.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_pos_econ re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_econ.json",
+   "expected": "analysis/expected/P3pos_econ_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_med_econ.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_econ.parquet",
+   "expected": "data/frames/p3_afar_med_econ.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_med_econ re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_econ.json",
+   "expected": "analysis/expected/P3med_econ_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts predate (run_cuts.sh)",
+   "control": "P3cut_pos_econ shift-0 (p3tp mode, canonical data/frames pos frame)",
+   "new": "data/cal2026-10/robustness/afar_cuts/predate/control/P3cut_pos_econ.json",
+   "expected": "analysis/expected/P3pos_econ_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_pos_chemistry.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_chemistry.parquet",
+   "expected": "data/frames/p3_afar_pos_chemistry.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_pos_chemistry re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_chemistry.json",
+   "expected": "analysis/expected/P3pos_chemistry_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_med_chemistry.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_chemistry.parquet",
+   "expected": "data/frames/p3_afar_med_chemistry.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_med_chemistry re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_chemistry.json",
+   "expected": "analysis/expected/P3med_chemistry_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts predate (run_cuts.sh)",
+   "control": "P3cut_pos_chemistry shift-0 (p3tp mode, canonical data/frames pos frame)",
+   "new": "data/cal2026-10/robustness/afar_cuts/predate/control/P3cut_pos_chemistry.json",
+   "expected": "analysis/expected/P3pos_chemistry_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_pos_math_stats.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_math_stats.parquet",
+   "expected": "data/frames/p3_afar_pos_math_stats.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_pos_math_stats re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_math_stats.json",
+   "expected": "analysis/expected/P3pos_math_stats_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "p3_afar_med_math_stats.parquet rebuilt (October sources) vs data/frames",
+   "new": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_math_stats.parquet",
+   "expected": "data/frames/p3_afar_med_math_stats.parquet",
+   "verdict": "EQUAL",
+   "mode": "content",
+   "detail": ""
+  },
+  {
+   "battery": "afar_cuts (run_cuts.sh)",
+   "control": "P3cut_med_math_stats re-run on the rebuilt frame",
+   "new": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_math_stats.json",
+   "expected": "analysis/expected/P3med_math_stats_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  },
+  {
+   "battery": "afar_cuts predate (run_cuts.sh)",
+   "control": "P3cut_pos_math_stats shift-0 (p3tp mode, canonical data/frames pos frame)",
+   "new": "data/cal2026-10/robustness/afar_cuts/predate/control/P3cut_pos_math_stats.json",
+   "expected": "analysis/expected/P3pos_math_stats_A_far.json",
+   "verdict": "EQUAL",
+   "diffs": []
+  }
+ ],
+ "cells": {
+  "P2pd2_econ": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P2pd2_econ.json",
+   "sha256": "bfc53111f861ddc487e88ba30b00077e844dfdbeee06639194f2a526fb8e697e",
+   "status": "OK",
+   "ate": 0.00045001,
+   "se": 0.00034296,
+   "p_joint_effects": null,
+   "p_joint_placebo": null,
+   "rows": 111448,
+   "rels_or_grps": 6632,
+   "events": 113,
+   "first_ties": 197,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.6971734,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": -0.00012128,
+      "se": 0.00051135,
+      "n": 25922
+     },
+     {
+      "k": 2,
+      "est": 0.00036637,
+      "se": 0.00056082,
+      "n": 19059
+     }
+    ]
+   }
+  },
+  "P3pd2_econ_A_far": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P3pd2_econ_A_far.json",
+   "sha256": "769a08911fc846e46f206c6daa2d54305ab13d5efe2d01bb2ddbb6b34ebfaab8",
+   "status": "OK",
+   "rows": 399163,
+   "pairs": 24110,
+   "events": 95,
+   "first_ties": 1052,
+   "ate": 0.00086913,
+   "se_pair": 0.00063119,
+   "se_event": 0.00058404,
+   "lb_pair": -0.00036798,
+   "ub_pair": 0.00210624,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.0332838,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": -0.00019527,
+      "se": 0.00122718,
+      "n": 94007
+     },
+     {
+      "k": 2,
+      "est": 0.00177715,
+      "se": 0.00068696,
+      "n": 67557
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  },
+  "P2pd2_chemistry": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P2pd2_chemistry.json",
+   "sha256": "960ab5149d8fc5e47c83ad09a9ef153db61953297b596f4c6785293cc5f7f4bf",
+   "status": "OK",
+   "ate": -0.00064043,
+   "se": 0.0015822,
+   "p_joint_effects": null,
+   "p_joint_placebo": null,
+   "rows": 46168,
+   "rels_or_grps": 2778,
+   "events": 38,
+   "first_ties": 155,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.15586323,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 0.00072261,
+      "se": 0.00083237,
+      "n": 9089
+     },
+     {
+      "k": 2,
+      "est": -0.00227334,
+      "se": 0.00189583,
+      "n": 6371
+     }
+    ]
+   }
+  },
+  "P3pd2_chemistry_A_far": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P3pd2_chemistry_A_far.json",
+   "sha256": "89f00d2cbc36474a0075e1dfbd284fb4567a3e4629c919878b853e13f05bfb53",
+   "status": "OK",
+   "rows": 36409,
+   "pairs": 2286,
+   "events": 32,
+   "first_ties": 243,
+   "ate": 0.00055203,
+   "se_pair": 0.00266586,
+   "se_event": 0.00300798,
+   "lb_pair": -0.00467296,
+   "ub_pair": 0.00577702,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.52612938,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 0.00321594,
+      "se": 0.00347428,
+      "n": 6987
+     },
+     {
+      "k": 2,
+      "est": -0.00222311,
+      "se": 0.00478492,
+      "n": 4848
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  },
+  "P2pd2_math_stats": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P2pd2_math_stats.json",
+   "sha256": "98226f8cc743b48e8a3fbb8917f3b7650222e976d4c09086f1fe4594477f2112",
+   "status": "OK",
+   "ate": 0.00014931,
+   "se": 0.00022562,
+   "p_joint_effects": null,
+   "p_joint_placebo": null,
+   "rows": 30314,
+   "rels_or_grps": 1795,
+   "events": 33,
+   "first_ties": 35,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": null,
+    "shifted_effects": []
+   }
+  },
+  "P3pd2_math_stats_A_far": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P3pd2_math_stats_A_far.json",
+   "sha256": "490254cb56ec993fce5cff2b362167ea0ac74fbf4b22ccf0f619915cd55699d4",
+   "status": "OK",
+   "rows": 51296,
+   "pairs": 3087,
+   "events": 31,
+   "first_ties": 116,
+   "ate": 0.00115689,
+   "se_pair": 0.00116621,
+   "se_event": 0.00123822,
+   "lb_pair": -0.00112884,
+   "ub_pair": 0.00344263,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.04682365,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 5.642e-05,
+      "se": 0.0011151,
+      "n": 9698
+     },
+     {
+      "k": 2,
+      "est": 0.00269564,
+      "se": 0.00109296,
+      "n": 6954
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  },
+  "P3pd2_math_stats_full": {
+   "battery": "predate",
+   "file": "data/cal2026-10/robustness/predate/P3pd2_math_stats_full.json",
+   "sha256": "ac4e27dc8acd12dae2903b8075c47e99e6b0908d452cbacb21e8cc66ca626a87",
+   "status": "OK",
+   "ate": 0.00078732,
+   "se": 0.00014077,
+   "p_joint_effects": null,
+   "p_joint_placebo": null,
+   "rows": 929324,
+   "rels_or_grps": 55237,
+   "events": null,
+   "first_ties": 1031,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 4.50620127e-06,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 0.00077335,
+      "se": 0.00020747,
+      "n": 168377
+     },
+     {
+      "k": 2,
+      "est": 0.00071893,
+      "se": 0.00019066,
+      "n": 125414
+     }
+    ]
+   }
+  },
+  "P1pd2_econ": {
+   "battery": "predate_p1",
+   "file": "data/cal2026-10/robustness/predate_p1/P1pd2_econ.json",
+   "sha256": "2b33d81cf92e3c4ec88130cf0e59b70cab885fba0560a13fd60c79abdee00b66",
+   "status": "OK",
+   "rows_raw": 73073,
+   "rows_kept": 71797,
+   "channels": {
+    "union": {
+     "ate": -0.43502466,
+     "se": 0.06795009,
+     "p_joint_effects": 2.98260638e-10,
+     "p_joint_placebo": null,
+     "obs": 62188,
+     "rels": 6527,
+     "events": 113
+    },
+    "network": {
+     "ate": -0.5070099,
+     "se": 0.11349782,
+     "p_joint_effects": 0.00010484,
+     "p_joint_placebo": null,
+     "obs": 24385,
+     "rels": 2464,
+     "events": 104
+    },
+    "dept": {
+     "ate": -0.42606107,
+     "se": 0.08061513,
+     "p_joint_effects": 1.58609465e-06,
+     "p_joint_placebo": null,
+     "obs": 44587,
+     "rels": 4753,
+     "events": 112
+    }
+   },
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": {
+     "union": 0.19921745,
+     "network": 0.09755539,
+     "dept": 0.49616376
+    },
+    "shifted_effects": {
+     "union": [
+      {
+       "k": 1,
+       "est": -0.03485183,
+       "se": 0.01990736,
+       "n": 17106
+      },
+      {
+       "k": 2,
+       "est": -0.03667954,
+       "se": 0.02587872,
+       "n": 11909
+      }
+     ],
+     "network": [
+      {
+       "k": 1,
+       "est": -0.04264958,
+       "se": 0.03369438,
+       "n": 6299
+      },
+      {
+       "k": 2,
+       "est": -0.09791346,
+       "se": 0.0459091,
+       "n": 4336
+      }
+     ],
+     "dept": [
+      {
+       "k": 1,
+       "est": -0.02630288,
+       "se": 0.02222019,
+       "n": 12587
+      },
+      {
+       "k": 2,
+       "est": -0.0194351,
+       "se": 0.02813696,
+       "n": 8805
+      }
+     ]
+    }
+   }
+  },
+  "P1pd2_chemistry": {
+   "battery": "predate_p1",
+   "file": "data/cal2026-10/robustness/predate_p1/P1pd2_chemistry.json",
+   "sha256": "d88292c9af0c4a6ab555bb582e7cf519cac561ca65d0666043dbdecf6e17e52c",
+   "status": "OK",
+   "rows_raw": 30635,
+   "rows_kept": 29414,
+   "channels": {
+    "union": {
+     "ate": -0.1565471,
+     "se": 0.06989489,
+     "p_joint_effects": 0.10683095,
+     "p_joint_placebo": null,
+     "obs": 26967,
+     "rels": 2674,
+     "events": 38
+    },
+    "network": {
+     "ate": -0.1887066,
+     "se": 0.10449479,
+     "p_joint_effects": 0.30773244,
+     "p_joint_placebo": null,
+     "obs": 17842,
+     "rels": 1727,
+     "events": 38
+    },
+    "dept": {
+     "ate": -0.08108797,
+     "se": 0.09547713,
+     "p_joint_effects": 0.48078283,
+     "p_joint_placebo": null,
+     "obs": 13569,
+     "rels": 1387,
+     "events": 38
+    }
+   },
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": {
+     "union": 0.59031772,
+     "network": 0.29730396,
+     "dept": 0.95538445
+    },
+    "shifted_effects": {
+     "union": [
+      {
+       "k": 1,
+       "est": -0.00101131,
+       "se": 0.02250488,
+       "n": 6804
+      },
+      {
+       "k": 2,
+       "est": -0.03432248,
+       "se": 0.03522971,
+       "n": 4732
+      }
+     ],
+     "network": [
+      {
+       "k": 1,
+       "est": -0.00335344,
+       "se": 0.02057127,
+       "n": 4374
+      },
+      {
+       "k": 2,
+       "est": -0.041099,
+       "se": 0.02976232,
+       "n": 3000
+      }
+     ],
+     "dept": [
+      {
+       "k": 1,
+       "est": -0.00065861,
+       "se": 0.03072083,
+       "n": 3541
+      },
+      {
+       "k": 2,
+       "est": -0.0130598,
+       "se": 0.0468853,
+       "n": 2510
+      }
+     ]
+    }
+   }
+  },
+  "P1pd2_math_stats": {
+   "battery": "predate_p1",
+   "file": "data/cal2026-10/robustness/predate_p1/P1pd2_math_stats.json",
+   "sha256": "f84bb0d7cdf380c9660620a941fb9baba704197a3bbaab2650bf70bdfe815d64",
+   "status": "OK",
+   "rows_raw": 19910,
+   "rows_kept": 18854,
+   "channels": {
+    "union": {
+     "ate": -0.02348435,
+     "se": 0.14912504,
+     "p_joint_effects": 0.10844186,
+     "p_joint_placebo": null,
+     "obs": 16117,
+     "rels": 1714,
+     "events": 33
+    },
+    "network": {
+     "ate": 0.30339966,
+     "se": 0.21139918,
+     "p_joint_effects": 0.14127746,
+     "p_joint_placebo": null,
+     "obs": 3628,
+     "rels": 364,
+     "events": 29
+    },
+    "dept": {
+     "ate": -0.11034603,
+     "se": 0.18127509,
+     "p_joint_effects": 0.07117055,
+     "p_joint_placebo": null,
+     "obs": 13635,
+     "rels": 1471,
+     "events": 33
+    }
+   },
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": {
+     "union": 0.12612015,
+     "network": 0.13914977,
+     "dept": 0.19519277
+    },
+    "shifted_effects": {
+     "union": [
+      {
+       "k": 1,
+       "est": 0.0133666,
+       "se": 0.03439139,
+       "n": 4644
+      },
+      {
+       "k": 2,
+       "est": -0.0393983,
+       "se": 0.03047426,
+       "n": 3815
+      }
+     ],
+     "network": [
+      {
+       "k": 1,
+       "est": 0.12817601,
+       "se": 0.07509011,
+       "n": 848
+      },
+      {
+       "k": 2,
+       "est": 0.01978694,
+       "se": 0.06779031,
+       "n": 668
+      }
+     ],
+     "dept": [
+      {
+       "k": 1,
+       "est": -0.00609283,
+       "se": 0.03734489,
+       "n": 4027
+      },
+      {
+       "k": 2,
+       "est": -0.05392226,
+       "se": 0.03440287,
+       "n": 3336
+      }
+     ]
+    }
+   }
+  },
+  "P3cut_pos_econ": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_econ.json",
+   "sha256": "fa9e599fc491dbc0817ab78034313a244ffea51233413c862c8c783ec3c62472",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_econ.parquet",
+   "frame_sha256": "ddb6941b71a14cfdd417c33bdd441a8b860776170c695d89c082f8e333110718",
+   "status": "OK",
+   "rows": 1500425,
+   "pairs": 90325,
+   "events": 111,
+   "first_ties": 3615,
+   "ate": -0.0006151,
+   "se_pair": 0.00052893,
+   "se_event": 0.00093316,
+   "lb_pair": -0.00165179,
+   "ub_pair": 0.0004216,
+   "p_joint_effects_pair": 4.423e-05,
+   "p_joint_effects_event": 0.00262355
+  },
+  "P3cut_med_econ": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_econ.json",
+   "sha256": "999d7cb9839c5e6c29900ac826c00ec490e658f89b14f047c2ff8a850afea246",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_econ.parquet",
+   "frame_sha256": "22caf2c3de91b5b2369806dd348b195e922ebd2869a9015e9fcc6cc33bdc3fa8",
+   "status": "OK",
+   "rows": 399163,
+   "pairs": 24110,
+   "events": 95,
+   "first_ties": 1052,
+   "ate": -0.00079278,
+   "se_pair": 0.00037834,
+   "se_event": 0.00043128,
+   "lb_pair": -0.00153431,
+   "ub_pair": -5.125e-05,
+   "p_joint_effects_pair": 0.00144308,
+   "p_joint_effects_event": 0.00011753
+  },
+  "P3cut_abs04_econ": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_abs04_econ.json",
+   "sha256": "b47445996ebf5607a4f676284d3021538d711941235f33ee65251d24746a8aa0",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_econ.parquet",
+   "frame_sha256": "355cd373354045b393969dd646d582e2c479fc33ab24e39f875ca60ce7e14425",
+   "status": "OK",
+   "rows": 298520,
+   "pairs": 18035,
+   "events": 90,
+   "first_ties": 798,
+   "ate": -0.00095282,
+   "se_pair": 0.00044013,
+   "se_event": 0.00043762,
+   "lb_pair": -0.00181546,
+   "ub_pair": -9.017e-05,
+   "p_joint_effects_pair": 0.02781282,
+   "p_joint_effects_event": 0.00369387
+  },
+  "P3cut_p75_econ": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_p75_econ.json",
+   "sha256": "447343022bd13a019ab59205581c0d1cccf9f15af99c7298ae14bf0171470065",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_econ.parquet",
+   "frame_sha256": "97e031814e95f107fd81b5985372bf1b12fad0bf90c572ca02b0ef70ee766cf1",
+   "status": "OK",
+   "rows": 130042,
+   "pairs": 7859,
+   "events": 68,
+   "first_ties": 351,
+   "ate": -0.00049146,
+   "se_pair": 0.00063018,
+   "se_event": 0.00053307,
+   "lb_pair": -0.00172659,
+   "ub_pair": 0.00074368,
+   "p_joint_effects_pair": 0.9561455,
+   "p_joint_effects_event": 0.96086034
+  },
+  "P3pos_s2_econ": {
+   "battery": "afar_cuts predate",
+   "file": "data/cal2026-10/robustness/afar_cuts/predate/P3pos_s2_econ.json",
+   "sha256": "7aa83e8097ae4038acb9cd7f2fa4db15e42ad20bfd4bb50b368eda3c7b94bee1",
+   "frame": "data/frames/p3_afar_pos_econ.parquet",
+   "status": "OK",
+   "rows": 1500425,
+   "pairs": 90325,
+   "events": 111,
+   "first_ties": 3615,
+   "ate": 0.00049635,
+   "se_pair": 0.00046404,
+   "se_event": 0.00054834,
+   "lb_pair": -0.00041315,
+   "ub_pair": 0.00140585,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.01784526,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": -0.00037495,
+      "se": 0.0007664,
+      "n": 355639
+     },
+     {
+      "k": 2,
+      "est": 0.00076981,
+      "se": 0.00027971,
+      "n": 254473
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  },
+  "P3cut_pos_chemistry": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_chemistry.json",
+   "sha256": "f8fb1ba7fae9c3f6648aef37382713fe3be7e57f98d9385c3caab2b1e805784f",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_chemistry.parquet",
+   "frame_sha256": "49ec0044fe4a4a51d31fbf1086cd15471c2b8a625e9d1d946554233892e53034",
+   "status": "OK",
+   "rows": 184960,
+   "pairs": 11466,
+   "events": 38,
+   "first_ties": 1004,
+   "ate": -0.00466235,
+   "se_pair": 0.00296265,
+   "se_event": 0.00293027,
+   "lb_pair": -0.01046904,
+   "ub_pair": 0.00114434,
+   "p_joint_effects_pair": 0.04285725,
+   "p_joint_effects_event": 8.159e-05
+  },
+  "P3cut_med_chemistry": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_chemistry.json",
+   "sha256": "9b224bc030d38249480470cc793849e204a984cf106f4a95d4800b8a7dd325d7",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_chemistry.parquet",
+   "frame_sha256": "46085eec5cf808019454267687a021f66749e953469d73bf72ff2aae311f4e59",
+   "status": "OK",
+   "rows": 36409,
+   "pairs": 2286,
+   "events": 32,
+   "first_ties": 243,
+   "ate": -0.00642045,
+   "se_pair": 0.00293491,
+   "se_event": 0.00193118,
+   "lb_pair": -0.01217277,
+   "ub_pair": -0.00066812,
+   "p_joint_effects_pair": 0.20702945,
+   "p_joint_effects_event": 1.33211178e-08
+  },
+  "P3cut_abs04_chemistry": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_abs04_chemistry.json",
+   "sha256": "50dd3296e149836551d950a160518fad3f8a44f3dcf060ae22134194ee4626ac",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_chemistry.parquet",
+   "frame_sha256": "3ee12e21fe87e2b5d041198d1188b47596ed9089232312ac4c3e16e8935c7ade",
+   "status": "OK",
+   "rows": 28933,
+   "pairs": 1822,
+   "events": 31,
+   "first_ties": 205,
+   "ate": -0.0084432,
+   "se_pair": 0.00349295,
+   "se_event": 0.00232143,
+   "lb_pair": -0.01528926,
+   "ub_pair": -0.00159713,
+   "p_joint_effects_pair": 0.17347147,
+   "p_joint_effects_event": 9.075e-05
+  },
+  "P3cut_p75_chemistry": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_p75_chemistry.json",
+   "sha256": "8790f192f20e96ddb7c9282ecb891bc708d28175986b34cdb58da41bdd660574",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_chemistry.parquet",
+   "frame_sha256": "a35350d2b88c7fabcf01dce67abd78fd201064fddcaf94908415d01d67d55f74",
+   "status": "OK",
+   "rows": 8929,
+   "pairs": 561,
+   "events": 25,
+   "first_ties": 60,
+   "ate": -0.00122306,
+   "se_pair": 0.00346203,
+   "se_event": 0.00314433,
+   "lb_pair": -0.00800852,
+   "ub_pair": 0.0055624,
+   "p_joint_effects_pair": 0.66062104,
+   "p_joint_effects_event": 0.36111573
+  },
+  "P3pos_s2_chemistry": {
+   "battery": "afar_cuts predate",
+   "file": "data/cal2026-10/robustness/afar_cuts/predate/P3pos_s2_chemistry.json",
+   "sha256": "ca19fa927ece6b012ca160c4f4499a8de686c1cadccfb9b24551f4f6f6632508",
+   "frame": "data/frames/p3_afar_pos_chemistry.parquet",
+   "status": "OK",
+   "rows": 184960,
+   "pairs": 11466,
+   "events": 38,
+   "first_ties": 1004,
+   "ate": 0.0006708,
+   "se_pair": 0.00111057,
+   "se_event": 0.00115754,
+   "lb_pair": -0.00150588,
+   "ub_pair": 0.00284748,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.84395417,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 0.00066179,
+      "se": 0.00113643,
+      "n": 39786
+     },
+     {
+      "k": 2,
+      "est": 0.0001936,
+      "se": 0.00181797,
+      "n": 27375
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  },
+  "P3cut_pos_math_stats": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_pos_math_stats.json",
+   "sha256": "d4fa714bfe110c9f759d8418b61e687fc73392c8959c429d8d0dfbe748557880",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_math_stats.parquet",
+   "frame_sha256": "fc98dc275e80d5fb799ac8ee32b1156771674ce5a348c906589fc9d302b46ebb",
+   "status": "OK",
+   "rows": 256506,
+   "pairs": 15318,
+   "events": 32,
+   "first_ties": 401,
+   "ate": 0.00041345,
+   "se_pair": 0.00041079,
+   "se_event": 0.00028871,
+   "lb_pair": -0.00039168,
+   "ub_pair": 0.00121858,
+   "p_joint_effects_pair": 0.08032729,
+   "p_joint_effects_event": 0.10274708
+  },
+  "P3cut_med_math_stats": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_med_math_stats.json",
+   "sha256": "ab2a96ff8563b866412570559ae7ed8a16c16f320bc04a93f65c0973993fe8e0",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_math_stats.parquet",
+   "frame_sha256": "f5853bd502d1d7eb14c3f9300820cd3fe7d9be6cbe46be128ca4a920e36e2543",
+   "status": "OK",
+   "rows": 51296,
+   "pairs": 3087,
+   "events": 31,
+   "first_ties": 116,
+   "ate": -0.00015543,
+   "se_pair": 0.00113993,
+   "se_event": 0.00106638,
+   "lb_pair": -0.00238966,
+   "ub_pair": 0.0020788,
+   "p_joint_effects_pair": 0.21967703,
+   "p_joint_effects_event": 0.16621225
+  },
+  "P3cut_abs04_math_stats": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_abs04_math_stats.json",
+   "sha256": "cc7165368a5ee2666182013fcdb8c70021d46b1eb46bb87a190366ca5616da7e",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_math_stats.parquet",
+   "frame_sha256": "86faf6204ad35881ed4a9e6aa62c0e01a29124fce5e3e4c8468e4b21af91a19e",
+   "status": "OK",
+   "rows": 3873,
+   "pairs": 241,
+   "events": 20,
+   "first_ties": 23,
+   "ate": 0.01016461,
+   "se_pair": 0.00444837,
+   "se_event": 0.00454103,
+   "lb_pair": 0.00144597,
+   "ub_pair": 0.01888325,
+   "p_joint_effects_pair": 0.00509471,
+   "p_joint_effects_event": 0.01054146
+  },
+  "P3cut_p75_math_stats": {
+   "battery": "afar_cuts",
+   "file": "data/cal2026-10/robustness/afar_cuts/estimates/P3cut_p75_math_stats.json",
+   "sha256": "802c614b4888089742506977014aa5b72d1de53121d0c69efab448df8ef1b2c5",
+   "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_math_stats.parquet",
+   "frame_sha256": "c45395e0faefeb2041e35b996c3405261f7acf0883fe59b9cabdb772c66ebeed",
+   "status": "OK",
+   "rows": 10000,
+   "pairs": 612,
+   "events": 26,
+   "first_ties": 41,
+   "ate": 0.00343986,
+   "se_pair": 0.0032698,
+   "se_event": 0.00236953,
+   "lb_pair": -0.00296882,
+   "ub_pair": 0.00984854,
+   "p_joint_effects_pair": 0.14164914,
+   "p_joint_effects_event": 2.58416448e-06
+  },
+  "P3pos_s2_math_stats": {
+   "battery": "afar_cuts predate",
+   "file": "data/cal2026-10/robustness/afar_cuts/predate/P3pos_s2_math_stats.json",
+   "sha256": "2b02e11dbf5b93f2d0383c7c54fa11f45fd74b60ed9fe447425f6c14ae917c97",
+   "frame": "data/frames/p3_afar_pos_math_stats.parquet",
+   "status": "OK",
+   "rows": 256506,
+   "pairs": 15318,
+   "events": 32,
+   "first_ties": 401,
+   "ate": 0.00085724,
+   "se_pair": 0.00049285,
+   "se_event": 0.00052679,
+   "lb_pair": -0.00010874,
+   "ub_pair": 0.00182322,
+   "p_joint_effects_pair": null,
+   "p_joint_effects_event": null,
+   "predate": {
+    "shift": 2,
+    "p_joint_shifted": 0.56008033,
+    "aux_status": null,
+    "shifted_effects": [
+     {
+      "k": 1,
+      "est": 0.00059544,
+      "se": 0.00062365,
+      "n": 49672
+     },
+     {
+      "k": 2,
+      "est": 0.00062958,
+      "se": 0.00071765,
+      "n": 35404
+     }
+    ],
+    "p_joint_placebo_pair": null
+   }
+  }
+ },
+ "old_vs_new": {
+  "P2pd2_econ": {
+   "old_file": "data/predate_2026-08-28/P2pd2_econ.json",
+   "old": {
+    "ate": -1.425e-05,
+    "se": 0.00027245,
+    "p_joint_shifted": 0.41650928,
+    "rels_or_grps": 10741,
+    "events": 116
+   },
+   "new": {
+    "ate": 0.00045001,
+    "se": 0.00034296,
+    "p_joint_shifted": 0.6971734,
+    "rels_or_grps": 6632,
+    "events": 113
+   }
+  },
+  "P3pd2_econ_A_far": {
+   "old_file": "data/predate_2026-08-28/P3pd2_econ_A_far.json",
+   "old": {
+    "ate": 0.0013947,
+    "se_pair": 0.00051527,
+    "p_joint_shifted": 0.03751649,
+    "pairs": 23758,
+    "events": 86
+   },
+   "new": {
+    "ate": 0.00086913,
+    "se_pair": 0.00063119,
+    "p_joint_shifted": 0.0332838,
+    "pairs": 24110,
+    "events": 95
+   }
+  },
+  "P1pd2_econ": {
+   "old_file": "data/predate_p1_2026-08-30/P1pd2_econ.json",
+   "old": {
+    "p_joint_shifted": {
+     "union": 0.00545117,
+     "network": 9.127e-05,
+     "dept": 0.48082142
+    },
+    "rows_kept": 116204
+   },
+   "new": {
+    "p_joint_shifted": {
+     "union": 0.19921745,
+     "network": 0.09755539,
+     "dept": 0.49616376
+    },
+    "rows_kept": 71797
+   }
+  },
+  "P3pos_s2_econ": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/predate/P3pos_s2_econ.json",
+   "old": {
+    "ate": 0.00137695,
+    "se_pair": 0.00018133,
+    "p_joint_shifted": 8.93736644e-06,
+    "pairs": 88176,
+    "events": 108
+   },
+   "new": {
+    "ate": 0.00049635,
+    "se_pair": 0.00046404,
+    "p_joint_shifted": 0.01784526,
+    "pairs": 90325,
+    "events": 111
+   }
+  },
+  "P3cut_pos_econ": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_pos_econ.json",
+   "old": {
+    "ate": 0.00044074,
+    "se_pair": 0.00015986,
+    "p_joint_effects_pair": 2.34332587e-09,
+    "pairs": 88176,
+    "events": 108
+   },
+   "new": {
+    "ate": -0.0006151,
+    "se_pair": 0.00052893,
+    "p_joint_effects_pair": 4.423e-05,
+    "pairs": 90325,
+    "events": 111
+   }
+  },
+  "P3cut_med_econ": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_med_econ.json",
+   "old": {
+    "ate": -0.00133257,
+    "se_pair": 0.00048869,
+    "p_joint_effects_pair": 0.00018724,
+    "pairs": 23758,
+    "events": 86
+   },
+   "new": {
+    "ate": -0.00079278,
+    "se_pair": 0.00037834,
+    "p_joint_effects_pair": 0.00144308,
+    "pairs": 24110,
+    "events": 95
+   }
+  },
+  "P3cut_abs04_econ": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_abs04_econ.json",
+   "old": {
+    "ate": -0.00151027,
+    "se_pair": 0.0005569,
+    "p_joint_effects_pair": 0.00418239,
+    "pairs": 17310,
+    "events": 81
+   },
+   "new": {
+    "ate": -0.00095282,
+    "se_pair": 0.00044013,
+    "p_joint_effects_pair": 0.02781282,
+    "pairs": 18035,
+    "events": 90
+   }
+  },
+  "P3cut_p75_econ": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_p75_econ.json",
+   "old": {
+    "ate": -0.0006751,
+    "se_pair": 0.00069535,
+    "p_joint_effects_pair": 0.72183806,
+    "pairs": 7555,
+    "events": 62
+   },
+   "new": {
+    "ate": -0.00049146,
+    "se_pair": 0.00063018,
+    "p_joint_effects_pair": 0.9561455,
+    "pairs": 7859,
+    "events": 68
+   }
+  },
+  "P2pd2_chemistry": {
+   "old_file": "data/predate_2026-08-28/P2pd2_chemistry.json",
+   "old": {
+    "ate": -0.00090032,
+    "se": 0.00101634,
+    "p_joint_shifted": 0.28791081,
+    "rels_or_grps": 4552,
+    "events": 38
+   },
+   "new": {
+    "ate": -0.00064043,
+    "se": 0.0015822,
+    "p_joint_shifted": 0.15586323,
+    "rels_or_grps": 2778,
+    "events": 38
+   }
+  },
+  "P3pd2_chemistry_A_far": {
+   "old_file": "data/predate_2026-08-28/P3pd2_chemistry_A_far.json",
+   "old": {
+    "ate": 0.00053565,
+    "se_pair": 0.00258739,
+    "p_joint_shifted": 0.80843659,
+    "pairs": 2466,
+    "events": 33
+   },
+   "new": {
+    "ate": 0.00055203,
+    "se_pair": 0.00266586,
+    "p_joint_shifted": 0.52612938,
+    "pairs": 2286,
+    "events": 32
+   }
+  },
+  "P1pd2_chemistry": {
+   "old_file": "data/predate_p1_2026-08-30/P1pd2_chemistry.json",
+   "old": {
+    "p_joint_shifted": {
+     "union": 0.17045406,
+     "network": 0.03592523,
+     "dept": 0.95538445
+    },
+    "rows_kept": 48477
+   },
+   "new": {
+    "p_joint_shifted": {
+     "union": 0.59031772,
+     "network": 0.29730396,
+     "dept": 0.95538445
+    },
+    "rows_kept": 29414
+   }
+  },
+  "P3pos_s2_chemistry": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/predate/P3pos_s2_chemistry.json",
+   "old": {
+    "ate": 0.0006708,
+    "se_pair": 0.00111057,
+    "p_joint_shifted": 0.84395417,
+    "pairs": 11466,
+    "events": 38
+   },
+   "new": {
+    "ate": 0.0006708,
+    "se_pair": 0.00111057,
+    "p_joint_shifted": 0.84395417,
+    "pairs": 11466,
+    "events": 38
+   }
+  },
+  "P3cut_pos_chemistry": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_pos_chemistry.json",
+   "old": {
+    "ate": -0.00466235,
+    "se_pair": 0.00296265,
+    "p_joint_effects_pair": 0.04285725,
+    "pairs": 11466,
+    "events": 38
+   },
+   "new": {
+    "ate": -0.00466235,
+    "se_pair": 0.00296265,
+    "p_joint_effects_pair": 0.04285725,
+    "pairs": 11466,
+    "events": 38
+   }
+  },
+  "P3cut_med_chemistry": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_med_chemistry.json",
+   "old": {
+    "ate": -0.0060448,
+    "se_pair": 0.0026377,
+    "p_joint_effects_pair": 0.24005184,
+    "pairs": 2466,
+    "events": 33
+   },
+   "new": {
+    "ate": -0.00642045,
+    "se_pair": 0.00293491,
+    "p_joint_effects_pair": 0.20702945,
+    "pairs": 2286,
+    "events": 32
+   }
+  },
+  "P3cut_abs04_chemistry": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_abs04_chemistry.json",
+   "old": {
+    "ate": -0.0084432,
+    "se_pair": 0.00349295,
+    "p_joint_effects_pair": 0.17347147,
+    "pairs": 1822,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.0084432,
+    "se_pair": 0.00349295,
+    "p_joint_effects_pair": 0.17347147,
+    "pairs": 1822,
+    "events": 31
+   }
+  },
+  "P3cut_p75_chemistry": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_p75_chemistry.json",
+   "old": {
+    "ate": -0.00077084,
+    "se_pair": 0.00340793,
+    "p_joint_effects_pair": 0.59012158,
+    "pairs": 575,
+    "events": 25
+   },
+   "new": {
+    "ate": -0.00122306,
+    "se_pair": 0.00346203,
+    "p_joint_effects_pair": 0.66062104,
+    "pairs": 561,
+    "events": 25
+   }
+  },
+  "P2pd2_math_stats": {
+   "old_file": "data/predate_2026-08-28/P2pd2_math_stats.json",
+   "old": {
+    "ate": 0.0001446,
+    "se": 0.00029419,
+    "p_joint_shifted": 0.22181703,
+    "rels_or_grps": 2183,
+    "events": 33
+   },
+   "new": {
+    "ate": 0.00014931,
+    "se": 0.00022562,
+    "p_joint_shifted": null,
+    "rels_or_grps": 1795,
+    "events": 33
+   }
+  },
+  "P3pd2_math_stats_A_far": {
+   "old_file": "data/predate_2026-08-28/P3pd2_math_stats_A_far.json",
+   "old": {
+    "ate": 0.00075874,
+    "se_pair": 0.00125374,
+    "p_joint_shifted": 0.03209403,
+    "pairs": 2770,
+    "events": 31
+   },
+   "new": {
+    "ate": 0.00115689,
+    "se_pair": 0.00116621,
+    "p_joint_shifted": 0.04682365,
+    "pairs": 3087,
+    "events": 31
+   }
+  },
+  "P1pd2_math_stats": {
+   "old_file": "data/predate_p1_2026-08-30/P1pd2_math_stats.json",
+   "old": {
+    "p_joint_shifted": {
+     "union": 0.22302705,
+     "network": 0.65364339,
+     "dept": 0.19519277
+    },
+    "rows_kept": 23045
+   },
+   "new": {
+    "p_joint_shifted": {
+     "union": 0.12612015,
+     "network": 0.13914977,
+     "dept": 0.19519277
+    },
+    "rows_kept": 18854
+   }
+  },
+  "P3pos_s2_math_stats": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/predate/P3pos_s2_math_stats.json",
+   "old": {
+    "ate": 0.00085724,
+    "se_pair": 0.00049285,
+    "p_joint_shifted": 0.56008033,
+    "pairs": 15318,
+    "events": 32
+   },
+   "new": {
+    "ate": 0.00085724,
+    "se_pair": 0.00049285,
+    "p_joint_shifted": 0.56008033,
+    "pairs": 15318,
+    "events": 32
+   }
+  },
+  "P3cut_pos_math_stats": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_pos_math_stats.json",
+   "old": {
+    "ate": 0.00041345,
+    "se_pair": 0.00041079,
+    "p_joint_effects_pair": 0.08032729,
+    "pairs": 15318,
+    "events": 32
+   },
+   "new": {
+    "ate": 0.00041345,
+    "se_pair": 0.00041079,
+    "p_joint_effects_pair": 0.08032729,
+    "pairs": 15318,
+    "events": 32
+   }
+  },
+  "P3cut_med_math_stats": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_med_math_stats.json",
+   "old": {
+    "ate": -0.00042461,
+    "se_pair": 0.00127813,
+    "p_joint_effects_pair": 0.34308189,
+    "pairs": 2770,
+    "events": 31
+   },
+   "new": {
+    "ate": -0.00015543,
+    "se_pair": 0.00113993,
+    "p_joint_effects_pair": 0.21967703,
+    "pairs": 3087,
+    "events": 31
+   }
+  },
+  "P3cut_abs04_math_stats": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_abs04_math_stats.json",
+   "old": {
+    "ate": 0.01016461,
+    "se_pair": 0.00444837,
+    "p_joint_effects_pair": 0.00509471,
+    "pairs": 241,
+    "events": 20
+   },
+   "new": {
+    "ate": 0.01016461,
+    "se_pair": 0.00444837,
+    "p_joint_effects_pair": 0.00509471,
+    "pairs": 241,
+    "events": 20
+   }
+  },
+  "P3cut_p75_math_stats": {
+   "old_file": "data/robustness_afar_cuts_2026-08-30/estimates/P3cut_p75_math_stats.json",
+   "old": {
+    "ate": 0.003391,
+    "se_pair": 0.00373543,
+    "p_joint_effects_pair": 0.0184535,
+    "pairs": 492,
+    "events": 25
+   },
+   "new": {
+    "ate": 0.00343986,
+    "se_pair": 0.0032698,
+    "p_joint_effects_pair": 0.14164914,
+    "pairs": 612,
+    "events": 26
+   }
+  },
+  "P3pd2_math_stats_full": {
+   "old_file": "data/predate_2026-08-28/P3pd2_math_stats_full.json",
+   "old": {
+    "ate": 0.00039242,
+    "se": 0.00015667,
+    "p_joint_shifted": 0.045695,
+    "rels_or_grps": 80320
+   },
+   "new": {
+    "ate": 0.00078732,
+    "se": 0.00014077,
+    "p_joint_shifted": 4.50620127e-06,
+    "rels_or_grps": 55237
+   }
+  }
+ },
+ "manifests": {
+  "data/cal2026-10/robustness/predate/MANIFEST.sha256": {
+   "files": 11,
+   "sha256": "2931bd61d12448404b2679fe164e94f1c16b1091fa285ecfb9ab1074d0c9262b"
+  },
+  "data/cal2026-10/robustness/predate_p1/MANIFEST.sha256": {
+   "files": 7,
+   "sha256": "ac1ab1cb21c4792a2ede0be99805cc0674aff835830085efb7605e65bb10c91b"
+  },
+  "data/cal2026-10/robustness/afar_cuts/MANIFEST.sha256": {
+   "files": 33,
+   "sha256": "d2ddcaa3f0467324795afb63d3278cc6a3776e82d3c811563796b6b259ce8043"
+  }
+ },
+ "notes": [
+  "P2pd2_math_stats (October): main shifted run OK (ATE +0.000149, SE 0.000226) but its k=2 horizon is exactly 0 (n=4,025) and the auxiliary effects=2 run fails inside DIDmultiplegtDYN ('infinite or missing values in x'), so predate.p_joint_shifted is not computable for that cell; the October math becoming panel is the smallest (1,795 relations, 35 first ties vs 2,183/58 on 2026-08-28). Recorded, not patched.",
+  "Frozen data/predate_p1_2026-08-30/control/P1_fnfix_math_stats.json was produced from the ECON frame (file=p1_frame_econ.csv, rows_raw=118,393): the producing heredoc used `declare -A`, which /bin/bash 3.2 does not support, so every field resolved to the last label. The October control uses the math frame (19,910 raw rows) and is EQUAL to its gold.",
+  "The frozen P3pos_s0_<field>.json controls carry label P3pos_s0_<field>; compare_json compares `label`, so the October shift-0 control runs under the gold's own label P3cut_pos_<field> (as analysis/run_all.sh does) and is strictly EQUAL. The shifted cells keep the paper-facing name P3pos_s2_<field>.json.",
+  "afar_cut_grid.csv: same columns as the frozen 2026-08-30 grid; `cut` is the full-precision cut for every row (the frozen grid left p75 empty and pinned med via PIN_CANON), and se_event_pp is the event-clustered SE (the frozen grid printed 0 there because its dig('se_ev') never matched a key). The ledger reads cut_spec/cut/pairs/ate_pp/se_pair_pp only.",
+  "analysis/robustness/predate/run_all_predate.sh: one permitted edit (SAR_PREDATE_OUTDIR override, default unchanged; the MANIFEST root follows it) -> its REPO_AUTHORED pin in tests/test_verbatim_pipeline.py is stale until `tools/repin.sh` is run (tests not edited here).",
+  "Not run here (cloud cells, pipeline/aws/cal2026-10): P3pd2_econ_full / P3pd2_chemistry_full and their shift-0 controls. Not regenerated here: data/cal2026-10/MANIFEST.sha256 (integration step).",
+  "Chemistry and mathematics pos frames are unchanged by the October caliber (D2 removes network-only persons, never Panel 3 pairs), so P3cut_pos_* and P3pos_s2_* for those two fields reproduce the frozen 2026-08-30 numbers exactly; econ pos moved (88,176 -> 90,325 pairs, 108 -> 111 events)."
+ ],
+ "inputs_note": "output/cal_intermediates/cal2026-10/pairs_unified.csv is the October econ pair table (not shipped); byte-identical to output/cal_intermediates/pairs_unified.csv (same sha) and to the sha recorded in data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_report.json",
+ "controls_summary": {
+  "n": 21,
+  "equal": 21,
+  "not_equal": []
+ },
+ "cuts_build": {
+  "sources": {
+   "econ": {
+    "pairs": "output/cal_intermediates/cal2026-10/pairs_unified.csv",
+    "frame": "data/frames/p1_frame_econ.csv",
+    "p2": "data/frames/p2_becoming_econ.csv"
+   },
+   "chemistry": {
+    "pairs": "data/frames/pairs_none_chemistry.parquet",
+    "frame": "data/frames/p1_frame_chemistry.csv",
+    "p2": "data/frames/p2_becoming_chemistry.csv"
+   },
+   "math_stats": {
+    "pairs": "data/frames/pairs_none_math_stats.parquet",
+    "frame": "data/frames/p1_frame_math_stats.csv",
+    "p2": "data/frames/p2_becoming_math_stats.csv"
+   }
+  },
+  "cuts": {
+   "pos_econ": {
+    "field": "econ",
+    "cut_spec": "pos",
+    "cut": 0.0,
+    "cut_full": 0.0,
+    "rows": 1500425,
+    "pairs": 90325,
+    "ties": 3615,
+    "events": 111,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_econ.parquet"
+   },
+   "med_econ": {
+    "field": "econ",
+    "cut_spec": "med",
+    "cut": 0.3402,
+    "cut_full": 0.34018290146315816,
+    "rows": 399163,
+    "pairs": 24110,
+    "ties": 1052,
+    "events": 95,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_econ.parquet"
+   },
+   "pos_chemistry": {
+    "field": "chemistry",
+    "cut_spec": "pos",
+    "cut": 0.0,
+    "cut_full": 0.0,
+    "rows": 184960,
+    "pairs": 11466,
+    "ties": 1004,
+    "events": 38,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_chemistry.parquet"
+   },
+   "med_chemistry": {
+    "field": "chemistry",
+    "cut_spec": "med",
+    "cut": 0.3558,
+    "cut_full": 0.3558482936330024,
+    "rows": 36409,
+    "pairs": 2286,
+    "ties": 243,
+    "events": 32,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_chemistry.parquet"
+   },
+   "pos_math_stats": {
+    "field": "math_stats",
+    "cut_spec": "pos",
+    "cut": 0.0,
+    "cut_full": 0.0,
+    "rows": 256506,
+    "pairs": 15318,
+    "ties": 401,
+    "events": 32,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_pos_math_stats.parquet"
+   },
+   "med_math_stats": {
+    "field": "math_stats",
+    "cut_spec": "med",
+    "cut": 0.0807,
+    "cut_full": 0.08066404978281591,
+    "rows": 51296,
+    "pairs": 3087,
+    "ties": 116,
+    "events": 31,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_med_math_stats.parquet"
+   },
+   "abs04_econ": {
+    "field": "econ",
+    "cut_spec": "abs04",
+    "cut": 0.4,
+    "cut_full": 0.4,
+    "rows": 298520,
+    "pairs": 18035,
+    "ties": 798,
+    "events": 90,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_econ.parquet"
+   },
+   "p75_econ": {
+    "field": "econ",
+    "cut_spec": "p75",
+    "cut": 0.5536,
+    "cut_full": 0.5536327163172166,
+    "rows": 130042,
+    "pairs": 7859,
+    "ties": 351,
+    "events": 68,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_econ.parquet"
+   },
+   "abs04_chemistry": {
+    "field": "chemistry",
+    "cut_spec": "abs04",
+    "cut": 0.4,
+    "cut_full": 0.4,
+    "rows": 28933,
+    "pairs": 1822,
+    "ties": 205,
+    "events": 31,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_chemistry.parquet"
+   },
+   "p75_chemistry": {
+    "field": "chemistry",
+    "cut_spec": "p75",
+    "cut": 0.658,
+    "cut_full": 0.6579571664333344,
+    "rows": 8929,
+    "pairs": 561,
+    "ties": 60,
+    "events": 25,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_chemistry.parquet"
+   },
+   "abs04_math_stats": {
+    "field": "math_stats",
+    "cut_spec": "abs04",
+    "cut": 0.4,
+    "cut_full": 0.4,
+    "rows": 3873,
+    "pairs": 241,
+    "ties": 23,
+    "events": 20,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_abs04_math_stats.parquet"
+   },
+   "p75_math_stats": {
+    "field": "math_stats",
+    "cut_spec": "p75",
+    "cut": 0.2614,
+    "cut_full": 0.26142419564124747,
+    "rows": 10000,
+    "pairs": 612,
+    "ties": 41,
+    "events": 26,
+    "frame": "data/cal2026-10/robustness/afar_cuts/frames/p3_afar_p75_math_stats.parquet"
+   }
+  },
+  "control_content_equal": {
+   "p3_afar_pos_econ.parquet": true,
+   "p3_afar_med_econ.parquet": true,
+   "p3_afar_pos_chemistry.parquet": true,
+   "p3_afar_med_chemistry.parquet": true,
+   "p3_afar_pos_math_stats.parquet": true,
+   "p3_afar_med_math_stats.parquet": true
+  }
+ },
+ "grid": [
+  {
+   "field": "econ",
+   "cut_spec": "pos",
+   "cut": "0.0",
+   "obs": "1500425",
+   "pairs": "90325",
+   "ate_pp": "-0.0615",
+   "se_pair_pp": "0.0529",
+   "se_event_pp": "0.0933",
+   "ci_lo_pp": "-0.1652",
+   "ci_hi_pp": "0.0422",
+   "p_joint_effects": "4.423e-05"
+  },
+  {
+   "field": "econ",
+   "cut_spec": "med",
+   "cut": "0.34018290146315816",
+   "obs": "399163",
+   "pairs": "24110",
+   "ate_pp": "-0.0793",
+   "se_pair_pp": "0.0378",
+   "se_event_pp": "0.0431",
+   "ci_lo_pp": "-0.1534",
+   "ci_hi_pp": "-0.0051",
+   "p_joint_effects": "0.00144308"
+  },
+  {
+   "field": "econ",
+   "cut_spec": "abs04",
+   "cut": "0.4",
+   "obs": "298520",
+   "pairs": "18035",
+   "ate_pp": "-0.0953",
+   "se_pair_pp": "0.044",
+   "se_event_pp": "0.0438",
+   "ci_lo_pp": "-0.1815",
+   "ci_hi_pp": "-0.009",
+   "p_joint_effects": "0.02781282"
+  },
+  {
+   "field": "econ",
+   "cut_spec": "p75",
+   "cut": "0.5536327163172166",
+   "obs": "130042",
+   "pairs": "7859",
+   "ate_pp": "-0.0491",
+   "se_pair_pp": "0.063",
+   "se_event_pp": "0.0533",
+   "ci_lo_pp": "-0.1727",
+   "ci_hi_pp": "0.0744",
+   "p_joint_effects": "0.9561455"
+  },
+  {
+   "field": "chemistry",
+   "cut_spec": "pos",
+   "cut": "0.0",
+   "obs": "184960",
+   "pairs": "11466",
+   "ate_pp": "-0.4662",
+   "se_pair_pp": "0.2963",
+   "se_event_pp": "0.293",
+   "ci_lo_pp": "-1.0469",
+   "ci_hi_pp": "0.1144",
+   "p_joint_effects": "0.04285725"
+  },
+  {
+   "field": "chemistry",
+   "cut_spec": "med",
+   "cut": "0.3558482936330024",
+   "obs": "36409",
+   "pairs": "2286",
+   "ate_pp": "-0.642",
+   "se_pair_pp": "0.2935",
+   "se_event_pp": "0.1931",
+   "ci_lo_pp": "-1.2173",
+   "ci_hi_pp": "-0.0668",
+   "p_joint_effects": "0.20702945"
+  },
+  {
+   "field": "chemistry",
+   "cut_spec": "abs04",
+   "cut": "0.4",
+   "obs": "28933",
+   "pairs": "1822",
+   "ate_pp": "-0.8443",
+   "se_pair_pp": "0.3493",
+   "se_event_pp": "0.2321",
+   "ci_lo_pp": "-1.5289",
+   "ci_hi_pp": "-0.1597",
+   "p_joint_effects": "0.17347147"
+  },
+  {
+   "field": "chemistry",
+   "cut_spec": "p75",
+   "cut": "0.6579571664333344",
+   "obs": "8929",
+   "pairs": "561",
+   "ate_pp": "-0.1223",
+   "se_pair_pp": "0.3462",
+   "se_event_pp": "0.3144",
+   "ci_lo_pp": "-0.8009",
+   "ci_hi_pp": "0.5562",
+   "p_joint_effects": "0.66062104"
+  },
+  {
+   "field": "math_stats",
+   "cut_spec": "pos",
+   "cut": "0.0",
+   "obs": "256506",
+   "pairs": "15318",
+   "ate_pp": "0.0413",
+   "se_pair_pp": "0.0411",
+   "se_event_pp": "0.0289",
+   "ci_lo_pp": "-0.0392",
+   "ci_hi_pp": "0.1219",
+   "p_joint_effects": "0.08032729"
+  },
+  {
+   "field": "math_stats",
+   "cut_spec": "med",
+   "cut": "0.08066404978281591",
+   "obs": "51296",
+   "pairs": "3087",
+   "ate_pp": "-0.0155",
+   "se_pair_pp": "0.114",
+   "se_event_pp": "0.1066",
+   "ci_lo_pp": "-0.239",
+   "ci_hi_pp": "0.2079",
+   "p_joint_effects": "0.21967703"
+  },
+  {
+   "field": "math_stats",
+   "cut_spec": "abs04",
+   "cut": "0.4",
+   "obs": "3873",
+   "pairs": "241",
+   "ate_pp": "1.0165",
+   "se_pair_pp": "0.4448",
+   "se_event_pp": "0.4541",
+   "ci_lo_pp": "0.1446",
+   "ci_hi_pp": "1.8883",
+   "p_joint_effects": "0.00509471"
+  },
+  {
+   "field": "math_stats",
+   "cut_spec": "p75",
+   "cut": "0.26142419564124747",
+   "obs": "10000",
+   "pairs": "612",
+   "ate_pp": "0.344",
+   "se_pair_pp": "0.327",
+   "se_event_pp": "0.237",
+   "ci_lo_pp": "-0.2969",
+   "ci_hi_pp": "0.9849",
+   "p_joint_effects": "0.14164914"
+  }
+ ],
+ "cells_summary": {
+  "n": 25,
+  "ok": 25,
+  "not_ok": [],
+  "aux_failed_no_p_joint_shifted": [
+   "P2pd2_math_stats"
+  ]
+ }
+}

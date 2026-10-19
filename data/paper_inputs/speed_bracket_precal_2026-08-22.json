@@ -1,0 +1,32 @@
+{
+ "_provenance": "Extracted verbatim (json copy, no hand-typed digits) from the thesis's frozen 2026-08-22 Panel-3 ledger data_numbers_2026-08-22_p3afar.json (generated 2026-08-22 by <manuscript>/scripts/p3_afar_numbers_and_figure.py; M2 verified it equal to the repo-generated output/paper/data_numbers_p3afar.json at tag m2). Frozen 2026-08-28 (freeze-wave Task 8) because the speed bracket has NO caliber builder (pipeline/NOT_REPRODUCIBLE.md row 9): its cap-cell inputs and the matching pre-caliber post-arrival rate cannot be recomputed under the approved 2026-08-28 caliber, so the paper keeps the PRE-CALIBER bracket, disclosed as such, pending a rebuild decision. Fields with no speed_bracket in the source (math_stats) are absent here too.",
+ "_caliber": "PRE-CALIBER (2026-08-22 event set: econ 117 / chem 35 / math 31), pending rebuild",
+ "econ": {
+  "pre_slope_pct_per_year_fitted": 10.3,
+  "cf_flat_pp": 0.496,
+  "cf_trend_pp": 0.708,
+  "post_obs_pp": 0.312,
+  "ratio_if_flat": 0.629,
+  "ratio_if_trend_continued": 0.441,
+  "report_ratios_uncapped": {
+   "flat": 0.589,
+   "trend": 0.413,
+   "h_post_per1000": 2.926
+  },
+  "note": "post-arrival observable rate (tau 0..5, year <= cap) divided by (i) the fitted pre-arrival level at tau -1 and (ii) the mean level a continuation of the fitted pre-arrival trend implies for tau 0..5"
+ },
+ "chemistry": {
+  "pre_slope_pct_per_year_fitted": 10.7,
+  "cf_flat_pp": 1.175,
+  "cf_trend_pp": 1.701,
+  "post_obs_pp": 0.756,
+  "ratio_if_flat": 0.643,
+  "ratio_if_trend_continued": 0.445,
+  "report_ratios_uncapped": {
+   "flat": 0.636,
+   "trend": 0.44,
+   "h_post_per1000": 7.475
+  },
+  "note": "post-arrival observable rate (tau 0..5, year <= cap) divided by (i) the fitted pre-arrival level at tau -1 and (ii) the mean level a continuation of the fitted pre-arrival trend implies for tau 0..5"
+ }
+}

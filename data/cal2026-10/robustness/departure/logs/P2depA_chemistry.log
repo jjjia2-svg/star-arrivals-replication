@@ -1,0 +1,19 @@
+$ Rscript analysis/estimation/run_p2.R P2depA_chemistry $TMPDIR/sar_rob_sensitivity/dep_chemistry/p2_dep_A_chemistry.csv
+[env] {"SAR_OUT": "data/cal2026-10/robustness/departure/estimates", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 2 P2depA_chemistry rows=36577 relations=2203 first ties=128 =====
+P2depA_chemistry                   joint-effect p=0.0000 placebo p=NA ATE=+0.006555 (SE 0.000991, CI 0.004612~0.008498)
+[P2depA_chemistry] done
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+
+--- rc=0 secs=7.7 ---

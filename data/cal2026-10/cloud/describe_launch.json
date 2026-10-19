@@ -1,0 +1,17 @@
+{
+    "InstanceId": "i-006982d9ee67f63ea",
+    "InstanceType": "r6i.16xlarge",
+    "ImageId": "ami-052355af2a014bd2c",
+    "Placement": {
+        "AvailabilityZoneId": "use1-az6",
+        "GroupName": "",
+        "Tenancy": "default",
+        "AvailabilityZone": "us-east-1d"
+    },
+    "LaunchTime": "2026-09-22T16:50:08.000Z",
+    "PublicIpAddress": "<ip>",
+    "State": {
+        "Code": 16,
+        "Name": "running"
+    }
+}

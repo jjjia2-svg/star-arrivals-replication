@@ -1,0 +1,10 @@
+{
+  "schema": "sar.r1.kit.v1",
+  "region": "us-east-1",
+  "ami": "ami-052355af2a014bd2c",
+  "iam_instance_profile": "sar-r1-instance",
+  "project_tag": "sar-r1",
+  "repo_base_commit": "8b4ac189796b900c3cad2ee6c79aee48083323b4",
+  "ebs_usd_per_gb_month": 0.08,
+  "max_live_instances": 4
+}

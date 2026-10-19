@@ -1,0 +1,10 @@
+label	driver	frame	ref	out_name	stack
+P1evcl_econ	analysis/estimation/run_p1_evcl.R	p1_frame_econ.csv	P1_econ_fnfix.json	P1evcl_econ.json	rmac
+P1evcl_chemistry	analysis/estimation/run_p1_evcl.R	p1_frame_chemistry.csv	P1_fnfix_chemistry.json	P1evcl_chemistry.json	rmac
+P1evcl_math_stats	analysis/estimation/run_p1_evcl.R	p1_frame_math_stats.csv	P1_fnfix_math_stats.json	P1evcl_math_stats.json	rmac
+P2evcl_econ	analysis/estimation/run_p2_evcl.R	p2_becoming_econ.csv	P2_econ_fnfix.json	P2evcl_econ.json	rmac
+P2evcl_chemistry	analysis/estimation/run_p2_evcl.R	p2_becoming_chemistry.csv	P2_fnfix_chemistry.json	P2evcl_chemistry.json	rmac
+P2evcl_math_stats	analysis/estimation/run_p2_evcl.R	p2_becoming_math_stats.csv	P2_fnfix_math_stats.json	P2evcl_math_stats.json	rmac
+P3evcl_math_stats	analysis/estimation/run_p3_evcl.R	p3_slim_ev_math_stats.parquet	P3_fnfix_math_stats.json	P3evcl_math_stats.json	rmac
+P3evcl_chemistry	analysis/estimation/run_p3_evcl.R	p3_slim_ev_chemistry.parquet	P3_fnfix_chemistry.json	P3evcl_chemistry.json	rcloud
+P3evcl_econ	analysis/estimation/run_p3_evcl.R	p3_slim_ev_econ.parquet	P3_econ_fnfix.json	P3evcl_econ.json	rcloud

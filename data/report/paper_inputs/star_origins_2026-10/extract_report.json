@@ -1,0 +1,65 @@
+{
+ "_about": "tools/star_origins_extract_2026-10.py \u2014 offline snapshot extraction for the star-origins map",
+ "affiliation_year_rows": 9383,
+ "authors_duplicate_records": [],
+ "authors_files_scanned": 1961,
+ "authors_found": 493,
+ "authors_missing": [],
+ "events_dir": "/work/prod/events",
+ "inputs_sha256": {
+  "/work/prod/events/events_chemistry_cal2026-10.csv": "360687612eea77ac4ef0652ecb545c50c792300595c5653dd9ad7764599b2cf0",
+  "/work/prod/events/events_econ_cal2026-10.csv": "e392d6204f8cb4bbd1469eb2f0812c538c70b9a086cba96ff4b6ea9f8c3de750",
+  "/work/prod/events/events_math_stats_cal2026-10.csv": "63f42ee01e66ed6ddde04199b4b590adb0d091a8ab9c9759b8dbbd7b0decbc01",
+  "data/cal2026-10/star_id_corrections_2026-10.csv": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe"
+ },
+ "institutions_duplicate_records": [],
+ "institutions_files_scanned": 137,
+ "institutions_missing": [
+  "I200744771",
+  "I4210095130"
+ ],
+ "institutions_wanted": 1842,
+ "n_author_ids": 493,
+ "n_stars": 377,
+ "n_u2_fragments": 116,
+ "n_wrong_ids_skipped": 1,
+ "network_requests": 0,
+ "person_map": "u2_person_map_11school_2026-07-16/person_map/data.parquet",
+ "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+ "snapshot_manifest_date": null,
+ "snapshot_manifest_sha256": {
+  "authors": "93754731705fcd02f933b558c267fe6540fbe25d533f56debcdbfc4b06a05619",
+  "institutions": "a58b855f5c29925e8afdee3d6353e77ae9a9e0195241934f5c593094907b0725"
+ },
+ "u1_dirs": [
+  "u1_full_11school_2026-07-16",
+  "u1_edges_full_2026-07-05"
+ ],
+ "u1_inputs": {
+  "u1_edges_full_2026-07-05/authorship_edges": {
+   "bucket_dirs": 256,
+   "bytes": 664505527,
+   "files": 256,
+   "source": "glob"
+  },
+  "u1_edges_full_2026-07-05/works_affil": {
+   "bucket_dirs": 256,
+   "bytes": 5419322768,
+   "files": 256,
+   "source": "glob"
+  },
+  "u1_full_11school_2026-07-16/authorship_edges": {
+   "bucket_dirs": 256,
+   "bytes": 1427594640,
+   "files": 256,
+   "source": "glob"
+  },
+  "u1_full_11school_2026-07-16/works_affil": {
+   "bucket_dirs": 256,
+   "bytes": 11516720635,
+   "files": 256,
+   "source": "glob"
+  }
+ },
+ "work_count_cells": 20994
+}

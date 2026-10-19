@@ -1,0 +1,4 @@
+Package: starArrivalsReplication
+Title: Replication package, star arrivals and incumbent colleagues
+Version: 0.1.0
+Imports: DIDmultiplegtDYN, polars, data.table, jsonlite, fixest, yaml

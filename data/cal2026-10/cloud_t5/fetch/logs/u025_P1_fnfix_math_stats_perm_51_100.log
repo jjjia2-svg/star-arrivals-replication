@@ -1,0 +1,5 @@
+
+===== permutation p1 P1_fnfix_math_stats events=33 perms=51..100 seed=20260829 =====
+  [P1_fnfix_math_stats] perm 75 done (5.6s)
+  [P1_fnfix_math_stats] perm 100 done (5.6s)
+[P1_fnfix_math_stats] 51..100 完成 -> out_perm/P1_fnfix_math_stats_perm_51_100.csv

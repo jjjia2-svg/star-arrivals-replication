@@ -1,0 +1,21 @@
+# R1 V3-ENV expected versions: layer<TAB>name<TAB>version. rmac = setup/R_VERSIONS.txt (made the 25 local golds);
+# rcloud = data/cal2026-10/cloud/fetch/versions.txt (made the 4 cloud golds) except polars (ruling R6).
+py	python	3.12.3
+py	requirements	setup/requirements.txt
+py	requirements	config/r1/requirements_final.txt
+rmac	R	4.5.1
+rmac	DIDmultiplegtDYN	2.3.3
+rmac	polars	1.10.0.9000
+rmac	data.table	1.17.8
+rmac	jsonlite	2.0.0
+rmac	fixest	0.14.0
+rmac	yaml	2.3.10
+rcloud	R	4.6.1
+rcloud	DIDmultiplegtDYN	2.4.0
+rcloud	polars	1.10.0.9000
+rcloud	data.table	1.18.6.1
+rcloud	jsonlite	2.0.0
+rcloud	fixest	0.14.2
+tex	texlive	2025
+tex	pdftex	1.40.28
+tex	sty	geometry natbib ulem inputenc fontenc amsmath amssymb booktabs enumitem flafter float graphicx mathpazo multirow tabularx array needspace parskip setspace titlesec xcolor hyperref

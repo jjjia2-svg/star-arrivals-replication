@@ -1,0 +1,2 @@
+b6c4e7170f3a9db9bf5aa845e6f3dcb922fb69a7
+# the r1-code commit just before W1-CANON's red commit: the pre-F7 code the default-config paper outputs must equal byte for byte (tests/test_r1_canon_generators.py)

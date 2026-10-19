@@ -1,0 +1,166 @@
+{
+ "_frames": "data/cal2026-10/frames_{field} (pre-assembly; identical files are assembled into data/cal2026-10/frames)",
+ "_generator": "analysis/paper/ledger_new_2026_10.py",
+ "chemistry": {
+  "_inputs": {
+   "edges_glob": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_chemistry_cal2026-10.csv",
+   "events_sha256": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+   "p1_frame": "data/cal2026-10/frames_chemistry/p1_frame_chemistry.csv",
+   "p1_sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+   "person_map": null,
+   "snapshot_edges_of_relevant_authors": 118808,
+   "supplement_rows_read": 80722,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   "works_glob": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 458,
+   "dept_only": 952,
+   "network": 1375
+  },
+  "control_prodlib_hop1": {
+   "compare": "EQUAL",
+   "db": "<scratch>/chemmath_run2/october_prodlib_chemistry/runs/chemistry/_work/prod.db",
+   "only_here": [],
+   "only_prodlib": []
+  },
+  "events_with_a_onehop_incumbent": 17,
+  "n_events": 38,
+  "n_incumbent_event_pairs": 2785,
+  "n_incumbents": 470,
+  "onehop_pairs": 22,
+  "onehop_pairs_dept_only_channel": 6,
+  "onehop_pairs_network_channel": 16,
+  "onehop_pairs_network_only": 12,
+  "own_field_code": "16",
+  "own_field_subfield_ids_in_support": [
+   "1602",
+   "1603",
+   "1604",
+   "1605",
+   "1606",
+   "1607"
+  ],
+  "own_field_subfields_in_extraction_table": 6,
+  "prearrival_works": 64976,
+  "prearrival_works_own_field": 15991,
+  "share_onehop_all": 0.0079,
+  "share_onehop_network_channel": 0.0087,
+  "share_onehop_network_only": 0.0087,
+  "share_prearrival_works_own_field": 0.2461,
+  "share_twohop_network_channel": 0.9913,
+  "subfields_in_dose_support": 231,
+  "subfields_in_dose_support_own_field": 6,
+  "unmapped_frame_persons": 0
+ },
+ "econ": {
+  "_inputs": {
+   "edges_glob": "<openalex_extraction>/derived/u1_full_11school_2026-07-16/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_econ_cal2026-10.csv",
+   "events_sha256": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+   "p1_frame": "data/cal2026-10/frames_econ/p1_frame_econ.csv",
+   "p1_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+   "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+   "snapshot_edges_of_relevant_authors": 111363,
+   "supplement_rows_read": 95732,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c",
+    "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d",
+    "data/raw_verified/edges_supplement_econ_fnfix.jsonl": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+   },
+   "works_glob": "<openalex_extraction>/derived/u1_full_11school_2026-07-16/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 700,
+   "dept_only": 4126,
+   "network": 1817
+  },
+  "events_with_a_onehop_incumbent": 20,
+  "n_events": 113,
+  "n_incumbent_event_pairs": 6643,
+  "n_incumbents": 822,
+  "onehop_pairs": 35,
+  "onehop_pairs_dept_only_channel": 3,
+  "onehop_pairs_network_channel": 32,
+  "onehop_pairs_network_only": 15,
+  "own_field_code": "20",
+  "own_field_subfield_ids_in_support": [
+   "2000",
+   "2002",
+   "2003"
+  ],
+  "own_field_subfields_in_extraction_table": 3,
+  "prearrival_works": 62456,
+  "prearrival_works_own_field": 20052,
+  "share_onehop_all": 0.0053,
+  "share_onehop_network_channel": 0.0127,
+  "share_onehop_network_only": 0.0083,
+  "share_prearrival_works_own_field": 0.3211,
+  "share_twohop_network_channel": 0.9873,
+  "subfields_in_dose_support": 245,
+  "subfields_in_dose_support_own_field": 3,
+  "unmapped_frame_persons": 54
+ },
+ "math_stats": {
+  "_inputs": {
+   "edges_glob": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+   "events": "data/cal2026-10/events_math_stats_cal2026-10.csv",
+   "events_sha256": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+   "p1_frame": "data/cal2026-10/frames_math_stats/p1_frame_math_stats.csv",
+   "p1_sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+   "person_map": null,
+   "snapshot_edges_of_relevant_authors": 45154,
+   "supplement_rows_read": 80722,
+   "supplements": {
+    "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+   },
+   "works_glob": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/works/**/*.parquet"
+  },
+  "channel_counts": {
+   "both": 124,
+   "dept_only": 1430,
+   "network": 256
+  },
+  "control_prodlib_hop1": {
+   "compare": "EQUAL",
+   "db": "<scratch>/chemmath_run2/october_prodlib_math_stats/runs/math_stats/_work/prod.db",
+   "only_here": [],
+   "only_prodlib": []
+  },
+  "events_with_a_onehop_incumbent": 9,
+  "n_events": 33,
+  "n_incumbent_event_pairs": 1810,
+  "n_incumbents": 481,
+  "onehop_pairs": 17,
+  "onehop_pairs_dept_only_channel": 2,
+  "onehop_pairs_network_channel": 15,
+  "onehop_pairs_network_only": 8,
+  "own_field_code": "26",
+  "own_field_subfield_ids_in_support": [
+   "2602",
+   "2604",
+   "2605",
+   "2607",
+   "2608",
+   "2610",
+   "2611",
+   "2612",
+   "2613",
+   "2614"
+  ],
+  "own_field_subfields_in_extraction_table": 10,
+  "prearrival_works": 24035,
+  "prearrival_works_own_field": 6824,
+  "share_onehop_all": 0.0094,
+  "share_onehop_network_channel": 0.0395,
+  "share_onehop_network_only": 0.0312,
+  "share_prearrival_works_own_field": 0.2839,
+  "share_twohop_network_channel": 0.9605,
+  "subfields_in_dose_support": 223,
+  "subfields_in_dose_support_own_field": 10,
+  "unmapped_frame_persons": 0
+ }
+}

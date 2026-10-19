@@ -1,0 +1,16 @@
+2026-09-22T18:23:11Z LAUNCH r6i.16xlarge us-east-1 ami=ami-052355af2a014bd2c sg=sg-047b8db2bb9452695 key=openalex-run root=100G
+2026-09-22T18:23:32Z LAUNCHED i-00947591ab405fefe r6i.16xlarge on-demand 2026-09-22T18:23:13Z ip=<ip>
+2026-09-22T18:23:36Z SSH_UP
+2026-09-22T18:30:04Z BOOTSTRAP started
+2026-09-22T18:30:09Z BOOTSTRAP_DONE R 4.6.1 DIDmultiplegtDYN 2.4.0 polars 1.9000.9000.9000 data.table 1.18.6.1 jsonlite 2.0.0 fixest 0.14.2 
+2026-09-22T18:30:45Z PAYLOAD_SHIPPED_MD5_OK 18/18
+2026-09-22T18:58:08Z DRIVER_STARTED
+2026-09-22T18:58:13Z [poll 1] result='ALL_DONE_MARKER_2026_10C' PAR u065_P2_fnfix_math_stats_perm_401_450 rc=0 2026-09-22T18:58:08Z [driver] end 2026-09-22T18:58:08Z units=66/66 failed=0 result=ALL_DONE_MARKER_2026_10C 2026-09-22T18:58:05Z Mem:             495           6         490           0           3         489 
+2026-09-22T18:58:13Z FETCH start
+2026-09-22T18:58:16Z FETCH end: 141 files
+2026-09-22T18:58:16Z TERMINATE i-00947591ab405fefe
+2026-09-22T18:58:51Z TERMINATED i-00947591ab405fefe state="Name": "terminated"
+COST_LINE instance=i-00947591ab405fefe launched=2026-09-22T18:23:13Z terminated=2026-09-22T18:58:51Z billed=35.6min x $4.032/h = $2.39 (state=terminated)
+[cloudkit] custody -> data/cal2026-10/cloud_t5/custody_cal2026-10.json: OK
+[cloudkit] instance i-00947591ab405fefe billed 35.6 min ≈ $2.39
+2026-09-22T18:58:51Z CUSTODY_OK result='ALL_DONE_MARKER_2026_10C'

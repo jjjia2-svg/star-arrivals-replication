@@ -1,0 +1,2991 @@
+{
+ "generated": "2026-09-22T22:23:19",
+ "task": "cal2026-10 piece B: economics through the gold chain — CONTROL",
+ "inputs": {
+  "events": "data/raw_verified/events_econ_cal2026-08-28.csv",
+  "roster": "data/raw_verified/roster_econ_verified.parquet",
+  "network_frame": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+  "supplements": [
+   "<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_stars11.jsonl",
+   "<legacy>/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+   "<legacy>/v2_output/netbase_supplement_2026-07-23/edges_supplement_133.jsonl"
+  ],
+  "patch": "<legacy>/v2_output/econ_final_2026-08-13/patch/works_by_author.jsonl",
+  "pmap": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+  "ref_p1_frame": "data/robustness_2026-09-13_verified_pool/frames/p1_frame_econ_verified.csv",
+  "ref_p2_frame": "data/robustness_2026-09-13_verified_pool/frames/p2_becoming_econ_verified.csv",
+  "ref_p1_json": "data/robustness_2026-09-13_verified_pool/estimates/P1ver_econ.json",
+  "ref_p2_json": "data/robustness_2026-09-13_verified_pool/estimates/P2ver_econ.json",
+  "ref_excluded": "data/robustness_2026-09-13_verified_pool/excluded_persons.csv"
+ },
+ "inputs_sha256": {
+  "events": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+  "roster": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "network_frame": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+  "patch": "9ab038093f6be2874e7ea82307b91be520d254da70d804a8878627272fef17d6",
+  "pmap": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+  "ref_p1_frame": "eece914f549c4b2b8e3a8d06cc6b6e00a4b0e0e9f79cb00d37cb9c95ab28bcae",
+  "ref_p2_frame": "d464f1fa860605c971c0081fce045f805ea30b12027b42f26351874a62d6e7ea",
+  "ref_p1_json": "270681f4e5b9a04313b938e8dee5565261ba8a394bfad89145de04a84d6e9501",
+  "ref_p2_json": "ae3a81212db7ac9e4cbe2833666acaf689dd36942d8791744bc0a218c4e33a64",
+  "ref_excluded": "6066b969b4243f5e8890768ba5212c37958c795dbb08405ab3e4485ff3afa43f"
+ },
+ "supplement_parts_sha256": {
+  "edges_supplement_stars11.jsonl": "254342df47f3f83b0044b0002a85545781a8ba3271e0cf598b5dfafe677b0a3d",
+  "edges_supplement_fnfix.jsonl": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a",
+  "edges_supplement_133.jsonl": "8d80487f08797cd4b26f491c3d6be03a185edd657bea913880ad46980a372e19"
+ },
+ "R0_estimator_positive_control": {
+  "P1ver_econ": "EQUAL",
+  "P2ver_econ": "EQUAL",
+  "diffs": {
+   "P1": [],
+   "P2": []
+  }
+ },
+ "pool": {
+  "roster_authors": 920,
+  "roster_authors_in_person_map": 896,
+  "pool_frame_ids": 970
+ },
+ "staging": {
+  "events": {
+   "n": 116,
+   "table": "data/raw_verified/events_econ_cal2026-08-28.csv"
+  },
+  "network_frame": {
+   "rows_in": 75284,
+   "rows_kept": 59543,
+   "rows_dropped_event_not_in_table": 704,
+   "events_dropped": {
+    "A5044432173:2006": 704
+   },
+   "rows_dropped_not_in_pool": 15037,
+   "persons_dropped_not_in_pool": [
+    "P_A5000129921",
+    "P_A5000195995",
+    "P_A5000248582",
+    "P_A5000261020",
+    "P_A5001034699",
+    "P_A5001689232",
+    "P_A5001701778",
+    "P_A5002921489",
+    "P_A5003065581",
+    "P_A5003503790",
+    "P_A5004088802",
+    "P_A5004337400",
+    "P_A5005195196",
+    "P_A5005221518",
+    "P_A5005424373",
+    "P_A5005506402",
+    "P_A5005591120",
+    "P_A5006064697",
+    "P_A5007086439",
+    "P_A5007696926",
+    "P_A5007934498",
+    "P_A5008667656",
+    "P_A5008921610",
+    "P_A5009126134",
+    "P_A5009676824",
+    "P_A5009685890",
+    "P_A5009986539",
+    "P_A5010518543",
+    "P_A5010717360",
+    "P_A5012746449",
+    "P_A5012774695",
+    "P_A5013214751",
+    "P_A5013583966",
+    "P_A5015052701",
+    "P_A5015809924",
+    "P_A5016230213",
+    "P_A5016659048",
+    "P_A5017214359",
+    "P_A5018043519",
+    "P_A5018588825",
+    "P_A5018982917",
+    "P_A5019358946",
+    "P_A5020852699",
+    "P_A5024266358",
+    "P_A5024398863",
+    "P_A5024990189",
+    "P_A5025340820",
+    "P_A5025359159",
+    "P_A5026228820",
+    "P_A5027138247",
+    "P_A5027155920",
+    "P_A5027685493",
+    "P_A5029088543",
+    "P_A5030040920",
+    "P_A5030346628",
+    "P_A5030823472",
+    "P_A5030919957",
+    "P_A5031621086",
+    "P_A5033118098",
+    "P_A5034076398",
+    "P_A5034647910",
+    "P_A5035801976",
+    "P_A5035818265",
+    "P_A5035998304",
+    "P_A5036193836",
+    "P_A5037426155",
+    "P_A5037530222",
+    "P_A5037962814",
+    "P_A5040191030",
+    "P_A5040485438",
+    "P_A5041227235",
+    "P_A5042115782",
+    "P_A5042616276",
+    "P_A5042802170",
+    "P_A5042828330",
+    "P_A5043275264",
+    "P_A5043335933",
+    "P_A5043678493",
+    "P_A5043876283",
+    "P_A5044343044",
+    "P_A5044706532",
+    "P_A5045605764",
+    "P_A5046551478",
+    "P_A5047138320",
+    "P_A5048519597",
+    "P_A5049010126",
+    "P_A5049060006",
+    "P_A5049848088",
+    "P_A5050357458",
+    "P_A5051284301",
+    "P_A5051613817",
+    "P_A5051703009",
+    "P_A5052068405",
+    "P_A5053325516",
+    "P_A5053497885",
+    "P_A5053509775",
+    "P_A5053765396",
+    "P_A5053798323",
+    "P_A5054485095",
+    "P_A5056551664",
+    "P_A5057072512",
+    "P_A5057137444",
+    "P_A5057148289",
+    "P_A5057459075",
+    "P_A5057608497",
+    "P_A5058872286",
+    "P_A5059507519",
+    "P_A5059989242",
+    "P_A5060589792",
+    "P_A5061335885",
+    "P_A5061523893",
+    "P_A5062089038",
+    "P_A5062522216",
+    "P_A5062895126",
+    "P_A5064512830",
+    "P_A5065344299",
+    "P_A5065572953",
+    "P_A5065659844",
+    "P_A5066605209",
+    "P_A5066605332",
+    "P_A5067812060",
+    "P_A5068470091",
+    "P_A5072051358",
+    "P_A5073251863",
+    "P_A5074137702",
+    "P_A5077362668",
+    "P_A5080866914",
+    "P_A5082598611",
+    "P_A5083522462",
+    "P_A5083945877",
+    "P_A5085271178",
+    "P_A5086095616",
+    "P_A5086151825",
+    "P_A5086296952",
+    "P_A5086505981",
+    "P_A5086655719",
+    "P_A5087413363",
+    "P_A5088881688",
+    "P_A5089364263",
+    "P_A5089745005",
+    "P_A5100386783",
+    "P_A5100413693",
+    "P_A5100681845",
+    "P_A5101496702",
+    "P_A5101596594",
+    "P_A5101684938",
+    "P_A5102447716",
+    "P_A5102819936",
+    "P_A5102902369",
+    "P_A5103122192",
+    "P_A5103196866",
+    "P_A5107479283",
+    "P_A5108225675",
+    "P_A5108867956",
+    "P_A5110074185",
+    "P_A5110468588",
+    "P_A5110954730",
+    "P_A5113440291",
+    "P_A5113577786",
+    "P_A5113845776",
+    "P_A5113969362",
+    "P_A5120638581"
+   ],
+   "persons_kept": 698
+  },
+  "supplement": {
+   "edges_supplement_stars11.jsonl": 590,
+   "edges_supplement_fnfix.jsonl": 4151,
+   "edges_supplement_133.jsonl": 4023,
+   "works_by_author.jsonl (reshaped)": 17191
+  }
+ },
+ "pool_check": {
+  "persons_dropped_by_pool_filter": 162,
+  "verified_pool_excluded_persons": 162,
+  "equal_sets": true,
+  "only_here": [],
+  "only_there": []
+ },
+ "stages": {
+  "union": {
+   "run_dir": "<scratch>/econ_gold_ctl_run3/frames/union/multidisc_gold_2026-08-10",
+   "produced": {
+    "data/fnfix/union_frame_econ/analysis_frame_econ_2026-08-10.csv": "425564463b1846ce58aee3de594e5c98d56bf3797cc4e302a3ea62cc11e67ed7",
+    "data/fnfix/union_frame_econ/relationships.csv": "30a1d88302a365553038885db75f8d8273e8852443ce10482763fa10fe202c72",
+    "data/fnfix/union_frame_econ/build_report.json": "4f1594e4459ab195383cb604b536b34bd4517d7a99da68cb59967bd40ae098ff",
+    "data/fnfix/union_frame_econ/funnel.json": "d74c77b5f3ac7a85169a6b0ac5dc8a2c28a5d1f89c988184f5a5d4b9f3ad1566"
+   },
+   "secs": 17.8,
+   "log": "<scratch>/econ_gold_ctl_run3/logs/stage_union.log"
+  },
+  "y": {
+   "run_dir": "<scratch>/econ_gold_ctl_run3/frames/y/multidisc_gold_2026-08-10",
+   "produced": {
+    "data/fnfix/analysis_frame_econ_new_gold_2026-08-10.csv": "76858a91bb29a72368f50592f6c43f4d4973c1d6d942159e996386bb20a658fc",
+    "data/fnfix/analysis_frame_econ_machineold_gold_2026-08-10.csv": "34ef1356a6c799682464d26e8fed9d31a122b6fd0e15f4d20da4d3b49029529e",
+    "data/fnfix/g_yrebuild_econ.json": "5c4aa152aea9673e6566898be867024d200bf58cbbe59b624e99b5f068af39ca"
+   },
+   "secs": 6.2,
+   "log": "<scratch>/econ_gold_ctl_run3/logs/stage_y.log"
+  },
+  "panels": {
+   "run_dir": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10",
+   "produced": {
+    "data/fnfix/panels23_econ_gold/becoming_none.csv": "70e5a40bb924330830e5c3e6c103810f78d45c3c7af0f79d36fd028329fd8da0",
+    "data/fnfix/panels23_econ_gold/pairs_slim_none.parquet": "4e5db26d40c7c5a525a108ab0de775a3481481382bfe5b94e36c3be27d8e21db",
+    "data/fnfix/panels23_econ_gold/panels23_report.json": "f8b2a2edd4b67864d801bc38e2a5246ea3ead060c1f4c08acaebe717e62ed590"
+   },
+   "secs": 5.9,
+   "log": "<scratch>/econ_gold_ctl_run3/logs/stage_panels.log"
+  }
+ },
+ "union_build_report.json": {
+  "caliber": "dept-exposure multidisc econ (ported from econ v9) GOLD 2026-08-10",
+  "roster_clean_variant": "none",
+  "fp_gap": 10,
+  "age_gap_guard_max": 60,
+  "caliber_notes": [
+   "Old-frame rows (07-24 network frame) are preserved byte for byte in the network/both channels; new rows are dept_only.",
+   "y uses the existing SSD works.fwci column; the old frame recomputed it from cited_by_count and a baseline. G-VAL checks a sample.",
+   "The |gap|>60 guard removes only new dept_only relations; old-frame relations above the threshold are recorded and retained.",
+   "A star is excluded only from its own event, as in econ v9; other stars may be colleagues. Counts are in the funnel.",
+   "Empty arrival_corrected retains the 07-24 ledger year, matching prodlib COALESCE.",
+   "Roster cleaning applies only to the dept channel; the old-frame network channel is unaffected."
+  ],
+  "events": {
+   "n_events": 116,
+   "n_arrival_fallback_to_0724_ledger": 0,
+   "fallback_events": []
+  },
+  "anchor_check": {
+   "old_events_all_in_ledger": true,
+   "arrival_all_match": true
+  },
+  "alias": {
+   "persons": 942,
+   "author_rows": 1489,
+   "mapped_persons": 927,
+   "selfrows_unmapped": 15,
+   "multi_alias_persons": 220
+  },
+  "sup_merge": {
+   "star_extra_works_from_supplement": 2624
+  },
+  "dose_src": {
+   "persons": 852,
+   "rows": 70590
+  },
+  "relationships_pre_guard": {
+   "dept": 4652,
+   "network_old": 5413,
+   "both": 669,
+   "dept_only_new": 3983,
+   "union": 9396,
+   "v9_drop_self_alias": 1,
+   "v9_drop_star_prearrival": 31,
+   "v9_drop_alias_dup": 58,
+   "v9_dropped_examples": {
+    "self": [
+     [
+      "A5038387911",
+      "A5001177483:monash"
+     ]
+    ],
+    "prearrival": [
+     [
+      "A5017376589",
+      "A5027424571:monash"
+     ],
+     [
+      "A5044501609",
+      "A5008855963:monash"
+     ],
+     [
+      "A5017376589",
+      "A5018518935:monash"
+     ],
+     [
+      "A5044501609",
+      "A5026828190:monash"
+     ],
+     [
+      "A5044501609",
+      "A5087653408:monash"
+     ],
+     [
+      "A5044501609",
+      "A5075360079:monash"
+     ]
+    ],
+    "alias_dup": [
+     [
+      "A5046020567",
+      "A5007734019:uq"
+     ],
+     [
+      "A5046020567",
+      "A5076526695:uq"
+     ],
+     [
+      "A5059521360",
+      "A5022446221:melbourne"
+     ],
+     [
+      "A5059521360",
+      "A5029151069:melbourne"
+     ],
+     [
+      "A5059521360",
+      "A5069424866:melbourne"
+     ],
+     [
+      "A5059521360",
+      "A5087235620:melbourne"
+     ]
+    ]
+   }
+  },
+  "G_DOSE_advisory": {
+   "n": 194,
+   "missing_side": 6,
+   "max_abs_diff": 0.9823607802391052,
+   "share_exact_1e-9": 0.27835051546391754,
+   "share_le_0.01": 0.38144329896907214,
+   "worst": [
+    [
+     "A5042648415",
+     "A5034628923:adelaide",
+     "0.9823607802391052",
+     "0.0"
+    ],
+    [
+     "A5102750848",
+     "A5002969626:sydney",
+     "0.9124055348400708",
+     "0.0"
+    ],
+    [
+     "A5049984829",
+     "A5071656006:monash",
+     "0.9083405243909496",
+     "0.0"
+    ],
+    [
+     "A5048899507",
+     "A5071656006:monash",
+     "0.8660254037844386",
+     "0.0"
+    ],
+    [
+     "A5003530571",
+     "A5100765181:uts",
+     "0.8387080736302412",
+     "0.0"
+    ],
+    [
+     "A5085232158",
+     "A5012590199:melbourne",
+     "0.7994712513093922",
+     "0.040585033556170554"
+    ],
+    [
+     "A5008435016",
+     "A5046379417:uq",
+     "0.7501961147841619",
+     "0.0"
+    ],
+    [
+     "A5013311390",
+     "A5047755944:melbourne",
+     "0.7091966867446899",
+     "0.0"
+    ]
+   ]
+  },
+  "first_pub": {
+   "persons_with_fp": 852,
+   "new_rel_persons_no_fp": 77
+  },
+  "age_gap_guard": {
+   "new_rel_dropped": 51,
+   "new_rel_na_gap_kept": 250,
+   "old_frame_rel_gt60_NOT_dropped": 119,
+   "dropped_examples": [
+    [
+     "A5001558165",
+     "A5102739182:melbourne",
+     "-63.0"
+    ],
+    [
+     "A5005581086",
+     "A5102739182:melbourne",
+     "-67.0"
+    ],
+    [
+     "A5011417552",
+     "A5102739182:melbourne",
+     "-71.0"
+    ],
+    [
+     "A5013576595",
+     "A5102739182:melbourne",
+     "-64.0"
+    ],
+    [
+     "A5017716521",
+     "A5001177483:monash",
+     "70.0"
+    ],
+    [
+     "A5017716521",
+     "A5016931502:monash",
+     "63.0"
+    ],
+    [
+     "A5017716521",
+     "A5038001711:monash",
+     "63.0"
+    ],
+    [
+     "A5017716521",
+     "A5059428122:monash",
+     "63.0"
+    ],
+    [
+     "A5017716521",
+     "A5082658369:monash",
+     "63.0"
+    ],
+    [
+     "A5020311289",
+     "A5102739182:melbourne",
+     "-64.0"
+    ]
+   ]
+  },
+  "ship_alias": {
+   "n_star_authors_excl_list": 116,
+   "n_after_alias_closure": 208
+  },
+  "outcome_src": {
+   "persons_needed": 679,
+   "unit_rows": 47538,
+   "person_years": 9243
+  },
+  "diag_new_rel_persons_in_star_excl_list": 50,
+  "G_VAL_advisory": {
+   "sampled_both": 40,
+   "mismatches": 2067,
+   "dose_tolerated_le_0.01": 33,
+   "fill_divergence": 276,
+   "fill_examples": [
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2013",
+     "fwci_mean",
+     "old_val",
+     "4.041820049285889",
+     "None"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2013",
+     "fwci_mean_ex_star",
+     "old_val",
+     "4.041820049285889",
+     "None"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2014",
+     "fwci_frac",
+     "old_NA",
+     "nan",
+     "0.17073333333333332"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2014",
+     "fwci_frac_ex_star",
+     "old_NA",
+     "nan",
+     "0.17073333333333332"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2014",
+     "fwci_mean",
+     "old_NA",
+     "nan",
+     "0.5122"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2014",
+     "fwci_mean_ex_star",
+     "old_NA",
+     "nan",
+     "0.5122"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2015",
+     "fwci_mean",
+     "old_val",
+     "0.9377159476280212",
+     "None"
+    ],
+    [
+     "A5035103041",
+     "A5089150146:uq",
+     "2015",
+     "fwci_mean_ex_star",
+     "old_val",
+     "0.9377159476280212",
+     "None"
+    ]
+   ],
+   "examples": [
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "fwci_frac",
+     "0.679731011390686",
+     "9.1074"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "pub_count",
+     "12.0",
+     "11.0"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "fwci_frac_ex_star",
+     "0.679731011390686",
+     "9.1074"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "pub_count_ex_star",
+     "12.0",
+     "11.0"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "fwci_mean",
+     "0.1132884994149208",
+     "1.0223090909090908"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2005",
+     "fwci_mean_ex_star",
+     "0.1132884994149208",
+     "1.0223090909090908"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2006",
+     "fwci_frac",
+     "2.1277213096618652",
+     "11.186516666666666"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2006",
+     "fwci_frac_ex_star",
+     "2.1277213096618652",
+     "11.186516666666666"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2006",
+     "fwci_mean",
+     "1.4283674955368042",
+     "1.9346545454545454"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2006",
+     "fwci_mean_ex_star",
+     "1.4283674955368042",
+     "1.9346545454545454"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2007",
+     "fwci_frac",
+     "0.3137090504169464",
+     "12.2427"
+    ],
+    [
+     "A5108156366",
+     "A5050761986:melbourne",
+     "2007",
+     "fwci_frac_ex_star",
+     "0.3137090504169464",
+     "12.2427"
+    ]
+   ]
+  },
+  "G_ROW": {
+   "old_rel": 5413,
+   "found": 5413,
+   "share": 1.0,
+   "missing": []
+  },
+  "G_SUM": {
+   "total": 102795,
+   "old_rows": 59543,
+   "new_rows": 43252,
+   "new_rel_x11": 43252,
+   "ok": true
+  },
+  "frame": {
+   "rows": 102795,
+   "relationships": 9345,
+   "persons": 880,
+   "events": 116,
+   "by_channel": {
+    "network": 4744,
+    "both": 669,
+    "dept_only": 3932
+   },
+   "events_zero_dept_members": [
+    "A5018453582:uwa",
+    "A5073639630:uwa",
+    "A5083549223:uwa",
+    "A5086933077:anu",
+    "A5090515599:uwa"
+   ],
+   "dose_null_new_rows": 2750,
+   "age_gap_null_new_rows": 2750
+  },
+  "per_event": {
+   "A5000292946:deakin": {
+    "network": 25,
+    "dept_only": 11,
+    "both": 8
+   },
+   "A5000674091:monash": {
+    "network": 31,
+    "dept_only": 41,
+    "both": 1
+   },
+   "A5001034699:unsw": {
+    "network": 3,
+    "dept_only": 6,
+    "both": 0
+   },
+   "A5001177483:monash": {
+    "network": 1,
+    "dept_only": 79,
+    "both": 0
+   },
+   "A5001820944:anu": {
+    "network": 69,
+    "dept_only": 31,
+    "both": 3
+   },
+   "A5002969626:sydney": {
+    "network": 40,
+    "dept_only": 20,
+    "both": 4
+   },
+   "A5004109149:melbourne": {
+    "network": 14,
+    "dept_only": 84,
+    "both": 2
+   },
+   "A5005868773:melbourne": {
+    "network": 128,
+    "dept_only": 49,
+    "both": 41
+   },
+   "A5006190609:unsw": {
+    "network": 30,
+    "dept_only": 3,
+    "both": 0
+   },
+   "A5006435210:unsw": {
+    "network": 56,
+    "dept_only": 3,
+    "both": 0
+   },
+   "A5007734019:uq": {
+    "network": 129,
+    "dept_only": 57,
+    "both": 11
+   },
+   "A5008208999:unsw": {
+    "network": 25,
+    "dept_only": 2,
+    "both": 1
+   },
+   "A5008296992:anu": {
+    "network": 52,
+    "dept_only": 43,
+    "both": 3
+   },
+   "A5008470795:unsw": {
+    "network": 216,
+    "dept_only": 3,
+    "both": 1
+   },
+   "A5008855963:monash": {
+    "network": 58,
+    "dept_only": 58,
+    "both": 11
+   },
+   "A5011262618:adelaide": {
+    "network": 11,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5011776630:macquarie": {
+    "network": 2,
+    "dept_only": 1,
+    "both": 0
+   },
+   "A5012590199:melbourne": {
+    "network": 46,
+    "dept_only": 83,
+    "both": 6
+   },
+   "A5013630114:adelaide": {
+    "network": 145,
+    "dept_only": 1,
+    "both": 1
+   },
+   "A5015268530:monash": {
+    "network": 19,
+    "dept_only": 76,
+    "both": 0
+   },
+   "A5016931502:monash": {
+    "network": 14,
+    "dept_only": 66,
+    "both": 5
+   },
+   "A5017376589:monash": {
+    "network": 95,
+    "dept_only": 35,
+    "both": 24
+   },
+   "A5017694921:sydney": {
+    "network": 3,
+    "dept_only": 17,
+    "both": 0
+   },
+   "A5017960988:unsw": {
+    "network": 0,
+    "dept_only": 6,
+    "both": 0
+   },
+   "A5018453582:uwa": {
+    "network": 4,
+    "dept_only": 0,
+    "both": 0
+   },
+   "A5018518935:monash": {
+    "network": 0,
+    "dept_only": 36,
+    "both": 0
+   },
+   "A5020729611:monash": {
+    "network": 31,
+    "dept_only": 60,
+    "both": 3
+   },
+   "A5020774613:melbourne": {
+    "network": 90,
+    "dept_only": 57,
+    "both": 32
+   },
+   "A5022446221:melbourne": {
+    "network": 79,
+    "dept_only": 82,
+    "both": 10
+   },
+   "A5024737956:melbourne": {
+    "network": 92,
+    "dept_only": 64,
+    "both": 26
+   },
+   "A5024745682:melbourne": {
+    "network": 1,
+    "dept_only": 86,
+    "both": 1
+   },
+   "A5024973435:sydney": {
+    "network": 99,
+    "dept_only": 28,
+    "both": 7
+   },
+   "A5026828190:monash": {
+    "network": 14,
+    "dept_only": 50,
+    "both": 1
+   },
+   "A5027077000:uts": {
+    "network": 56,
+    "dept_only": 26,
+    "both": 4
+   },
+   "A5027090359:unsw": {
+    "network": 8,
+    "dept_only": 5,
+    "both": 0
+   },
+   "A5027424571:monash": {
+    "network": 133,
+    "dept_only": 46,
+    "both": 15
+   },
+   "A5028731684:anu": {
+    "network": 11,
+    "dept_only": 9,
+    "both": 0
+   },
+   "A5029151069:melbourne": {
+    "network": 126,
+    "dept_only": 68,
+    "both": 21
+   },
+   "A5032550291:uts": {
+    "network": 18,
+    "dept_only": 26,
+    "both": 4
+   },
+   "A5034503874:uts": {
+    "network": 82,
+    "dept_only": 25,
+    "both": 5
+   },
+   "A5034628923:adelaide": {
+    "network": 118,
+    "dept_only": 12,
+    "both": 5
+   },
+   "A5034784553:deakin": {
+    "network": 42,
+    "dept_only": 7,
+    "both": 12
+   },
+   "A5035157505:deakin": {
+    "network": 23,
+    "dept_only": 27,
+    "both": 7
+   },
+   "A5038001711:monash": {
+    "network": 2,
+    "dept_only": 62,
+    "both": 0
+   },
+   "A5039737173:deakin": {
+    "network": 121,
+    "dept_only": 33,
+    "both": 0
+   },
+   "A5041837451:sydney": {
+    "network": 68,
+    "dept_only": 13,
+    "both": 4
+   },
+   "A5041849660:uts": {
+    "network": 50,
+    "dept_only": 10,
+    "both": 7
+   },
+   "A5042121724:anu": {
+    "network": 44,
+    "dept_only": 30,
+    "both": 4
+   },
+   "A5042125848:monash": {
+    "network": 18,
+    "dept_only": 53,
+    "both": 10
+   },
+   "A5044076496:sydney": {
+    "network": 78,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5044501609:monash": {
+    "network": 14,
+    "dept_only": 73,
+    "both": 7
+   },
+   "A5046163960:melbourne": {
+    "network": 45,
+    "dept_only": 37,
+    "both": 0
+   },
+   "A5046379417:uq": {
+    "network": 37,
+    "dept_only": 32,
+    "both": 9
+   },
+   "A5047686030:deakin": {
+    "network": 5,
+    "dept_only": 18,
+    "both": 2
+   },
+   "A5047755944:melbourne": {
+    "network": 115,
+    "dept_only": 46,
+    "both": 34
+   },
+   "A5049007275:anu": {
+    "network": 24,
+    "dept_only": 8,
+    "both": 1
+   },
+   "A5050761986:melbourne": {
+    "network": 128,
+    "dept_only": 40,
+    "both": 33
+   },
+   "A5050962159:melbourne": {
+    "network": 3,
+    "dept_only": 75,
+    "both": 2
+   },
+   "A5053503664:monash": {
+    "network": 0,
+    "dept_only": 80,
+    "both": 0
+   },
+   "A5054037290:melbourne": {
+    "network": 15,
+    "dept_only": 39,
+    "both": 1
+   },
+   "A5056114255:monash": {
+    "network": 64,
+    "dept_only": 55,
+    "both": 14
+   },
+   "A5059344939:sydney": {
+    "network": 0,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5059426203:adelaide": {
+    "network": 7,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5059428122:monash": {
+    "network": 1,
+    "dept_only": 75,
+    "both": 0
+   },
+   "A5059554264:monash": {
+    "network": 0,
+    "dept_only": 76,
+    "both": 0
+   },
+   "A5063040920:monash": {
+    "network": 115,
+    "dept_only": 34,
+    "both": 20
+   },
+   "A5063920479:sydney": {
+    "network": 40,
+    "dept_only": 12,
+    "both": 2
+   },
+   "A5063951119:sydney": {
+    "network": 7,
+    "dept_only": 20,
+    "both": 0
+   },
+   "A5067564085:monash": {
+    "network": 18,
+    "dept_only": 54,
+    "both": 9
+   },
+   "A5068400819:unsw": {
+    "network": 2,
+    "dept_only": 6,
+    "both": 0
+   },
+   "A5069424866:melbourne": {
+    "network": 9,
+    "dept_only": 77,
+    "both": 4
+   },
+   "A5070067353:uts": {
+    "network": 80,
+    "dept_only": 7,
+    "both": 8
+   },
+   "A5070264657:uts": {
+    "network": 62,
+    "dept_only": 10,
+    "both": 11
+   },
+   "A5070304330:melbourne": {
+    "network": 8,
+    "dept_only": 88,
+    "both": 2
+   },
+   "A5070527085:uts": {
+    "network": 48,
+    "dept_only": 25,
+    "both": 4
+   },
+   "A5071656006:monash": {
+    "network": 157,
+    "dept_only": 16,
+    "both": 9
+   },
+   "A5071785739:sydney": {
+    "network": 12,
+    "dept_only": 4,
+    "both": 0
+   },
+   "A5072079903:unsw": {
+    "network": 0,
+    "dept_only": 3,
+    "both": 0
+   },
+   "A5073639630:uwa": {
+    "network": 23,
+    "dept_only": 0,
+    "both": 0
+   },
+   "A5075194454:adelaide": {
+    "network": 16,
+    "dept_only": 1,
+    "both": 1
+   },
+   "A5075360079:monash": {
+    "network": 30,
+    "dept_only": 68,
+    "both": 4
+   },
+   "A5076526695:uq": {
+    "network": 120,
+    "dept_only": 66,
+    "both": 10
+   },
+   "A5078564370:anu": {
+    "network": 9,
+    "dept_only": 34,
+    "both": 0
+   },
+   "A5079006965:uts": {
+    "network": 95,
+    "dept_only": 9,
+    "both": 13
+   },
+   "A5080033018:sydney": {
+    "network": 19,
+    "dept_only": 21,
+    "both": 2
+   },
+   "A5080057811:adelaide": {
+    "network": 74,
+    "dept_only": 12,
+    "both": 7
+   },
+   "A5080689800:unsw": {
+    "network": 0,
+    "dept_only": 5,
+    "both": 0
+   },
+   "A5082658369:monash": {
+    "network": 57,
+    "dept_only": 65,
+    "both": 5
+   },
+   "A5082663721:uts": {
+    "network": 81,
+    "dept_only": 5,
+    "both": 16
+   },
+   "A5082727271:macquarie": {
+    "network": 56,
+    "dept_only": 24,
+    "both": 3
+   },
+   "A5083549223:uwa": {
+    "network": 10,
+    "dept_only": 0,
+    "both": 0
+   },
+   "A5083649140:uq": {
+    "network": 25,
+    "dept_only": 58,
+    "both": 6
+   },
+   "A5085246004:adelaide": {
+    "network": 48,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5086206624:anu": {
+    "network": 29,
+    "dept_only": 41,
+    "both": 5
+   },
+   "A5086383420:monash": {
+    "network": 90,
+    "dept_only": 67,
+    "both": 5
+   },
+   "A5086581525:sydney": {
+    "network": 28,
+    "dept_only": 39,
+    "both": 7
+   },
+   "A5086835452:uq": {
+    "network": 24,
+    "dept_only": 62,
+    "both": 11
+   },
+   "A5086933077:anu": {
+    "network": 69,
+    "dept_only": 0,
+    "both": 0
+   },
+   "A5087235620:melbourne": {
+    "network": 91,
+    "dept_only": 77,
+    "both": 7
+   },
+   "A5087261858:uts": {
+    "network": 8,
+    "dept_only": 2,
+    "both": 0
+   },
+   "A5087653408:monash": {
+    "network": 55,
+    "dept_only": 67,
+    "both": 6
+   },
+   "A5087933968:deakin": {
+    "network": 0,
+    "dept_only": 35,
+    "both": 0
+   },
+   "A5088950236:uq": {
+    "network": 82,
+    "dept_only": 29,
+    "both": 11
+   },
+   "A5089150146:uq": {
+    "network": 125,
+    "dept_only": 38,
+    "both": 26
+   },
+   "A5090013218:uts": {
+    "network": 102,
+    "dept_only": 24,
+    "both": 6
+   },
+   "A5090515599:uwa": {
+    "network": 57,
+    "dept_only": 0,
+    "both": 0
+   },
+   "A5100451834:melbourne": {
+    "network": 168,
+    "dept_only": 61,
+    "both": 29
+   },
+   "A5100765181:uts": {
+    "network": 22,
+    "dept_only": 28,
+    "both": 2
+   },
+   "A5102189800:uts": {
+    "network": 21,
+    "dept_only": 23,
+    "both": 3
+   },
+   "A5102491748:uts": {
+    "network": 1,
+    "dept_only": 29,
+    "both": 0
+   },
+   "A5102739182:melbourne": {
+    "network": 0,
+    "dept_only": 52,
+    "both": 0
+   },
+   "A5103218091:monash": {
+    "network": 5,
+    "dept_only": 58,
+    "both": 2
+   },
+   "A5103238589:deakin": {
+    "network": 25,
+    "dept_only": 20,
+    "both": 1
+   },
+   "A5105828272:monash": {
+    "network": 11,
+    "dept_only": 70,
+    "both": 1
+   },
+   "A5110738002:deakin": {
+    "network": 15,
+    "dept_only": 19,
+    "both": 0
+   },
+   "A5111971785:uts": {
+    "network": 86,
+    "dept_only": 13,
+    "both": 8
+   }
+  },
+  "GATE": "PASS"
+ },
+ "union_funnel.json": {
+  "field": "econ",
+  "roster_clean_variant": "none",
+  "stages": [
+   {
+    "stage": "signed_events",
+    "n": 116,
+    "note": "Arrival year falls back to the 07-24 ledger: 0 cases"
+   },
+   {
+    "stage": "network_old_rel (07-24 frame relations)",
+    "n": 5413,
+    "note": "698 persons/107 events"
+   },
+   {
+    "stage": "dept_candidates_raw (incumbent x event)",
+    "n": 4718,
+    "note": ""
+   },
+   {
+    "stage": "drop_self_star_authorid",
+    "n": 34,
+    "note": "author_id equals this event's star"
+   },
+   {
+    "stage": "dept_rel_after_selfstar",
+    "n": 4684,
+    "note": ""
+   },
+   {
+    "stage": "drop_self_alias_canon",
+    "n": 1,
+    "note": "canonical self-pair through an alias"
+   },
+   {
+    "stage": "drop_star_prearrival (gate 4)",
+    "n": 31,
+    "note": "Remove relations from the star's own employment spell before arrival"
+   },
+   {
+    "stage": "drop_alias_dup",
+    "n": 58,
+    "note": "canonical already entered the same old-frame event under an alias"
+   },
+   {
+    "stage": "dept_only_new_rel (before guard)",
+    "n": 3983,
+    "note": ""
+   },
+   {
+    "stage": "drop_age_gap_gt60 (new relations)",
+    "n": 51,
+    "note": "Examples: [('A5001558165', 'A5102739182:melbourne', -63.0), ('A5005581086', 'A5102739182:melbourne', -67.0), ('A5011417552', 'A5102739182:melbourne', -71.0), ('A5013576595', 'A5102739182:melbourne', -64.0)]"
+   },
+   {
+    "stage": "dept_only_new_rel_final",
+    "n": 3932,
+    "note": "250 relations have age_gap NA (retained)"
+   },
+   {
+    "stage": "union_rel_final",
+    "n": 9345,
+    "note": "880 persons/116 events"
+   },
+   {
+    "stage": "frame_rows",
+    "n": 102795,
+    "note": ""
+   }
+  ],
+  "final": {
+   "relationships": 9345,
+   "persons": 880,
+   "events": 116,
+   "rows": 102795,
+   "events_zero_dept_members": [
+    "A5018453582:uwa",
+    "A5073639630:uwa",
+    "A5083549223:uwa",
+    "A5086933077:anu",
+    "A5090515599:uwa"
+   ]
+  }
+ },
+ "y_report": {
+  "field": "econ",
+  "date": "2026-08-09",
+  "expected_cells": {
+   "new": 130061,
+   "old": 43175
+  },
+  "frame_persons": 880,
+  "ship_alias_n": 208,
+  "oc_unit_rows": 62698,
+  "fwci_new_na": {
+   "units_na": 18977,
+   "units_total": 62698,
+   "na_share": 0.3027,
+   "reasons_by_distinct_work": {
+    "excluded_type": 14702,
+    "missing_subfield_no_fallback": 126,
+    "zero_expected_cell": 1
+   }
+  },
+  "swap": {
+   "gold_new": {
+    "out": "<scratch>/econ_gold_ctl_run3/frames/y/multidisc_gold_2026-08-10/data/fnfix/analysis_frame_econ_new_gold_2026-08-10.csv",
+    "transition": {
+     "val2val": 55413,
+     "val2na": 2072,
+     "na2val": 1241,
+     "na2na": 2602,
+     "zero_fill": 13859,
+     "row_na": 17115,
+     "agg_missing": 10493,
+     "pc_mismatch": 15088
+    }
+   },
+   "gold_machineold": {
+    "out": "<scratch>/econ_gold_ctl_run3/frames/y/multidisc_gold_2026-08-10/data/fnfix/analysis_frame_econ_machineold_gold_2026-08-10.csv",
+    "transition": {
+     "val2val": 0,
+     "val2na": 0,
+     "na2val": 0,
+     "na2na": 0,
+     "zero_fill": 13859,
+     "row_na": 17115,
+     "agg_missing": 10493,
+     "pc_mismatch": 15088
+    }
+   }
+  },
+  "C_PC_dept_only": {
+   "bad_rows": 0,
+   "pass": true,
+   "examples": []
+  },
+  "C_PC_network_both_diagnostic": {
+   "mismatch_rows": 25581,
+   "examples": [
+    [
+     "gold",
+     "A5000019604",
+     "2000",
+     "network",
+     "agg_missing",
+     "2.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2001",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2002",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2003",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2004",
+     "network",
+     "agg_missing",
+     "4.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2008",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2010",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2015",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000019604",
+     "2016",
+     "network",
+     "agg_missing",
+     "1.0"
+    ],
+    [
+     "gold",
+     "A5000495397",
+     "1994",
+     "network",
+     "agg_missing",
+     "18.0"
+    ]
+   ],
+   "note": "Diagnostic only, without a gate: y in network/both rows was calculated by 07-24 prodlib. Alias closure, the 07-24 exclude_list, and supplemented sup_pairs edges differ from this machine. Small pub_count discrepancies are known source differences; the machineold frame isolates them."
+  },
+  "G_D": {
+   "all": {
+    "n_both_nonNA_frame_vs_new": 0,
+    "corr_raw": null,
+    "corr_log1p": null,
+    "spearman": null,
+    "quantiles_frame_old": {},
+    "quantiles_new": {},
+    "n_machineold_vs_new": 0,
+    "corr_machineold_vs_new_log1p": null,
+    "quantiles_machineold": {}
+   },
+   "dept_only": {
+    "n_both_nonNA_frame_vs_new": 0,
+    "corr_raw": null,
+    "corr_log1p": null,
+    "spearman": null,
+    "quantiles_frame_old": {},
+    "quantiles_new": {},
+    "n_machineold_vs_new": 0,
+    "corr_machineold_vs_new_log1p": null,
+    "quantiles_machineold": {}
+   },
+   "network_both": {
+    "n_both_nonNA_frame_vs_new": 0,
+    "corr_raw": null,
+    "corr_log1p": null,
+    "spearman": null,
+    "quantiles_frame_old": {},
+    "quantiles_new": {},
+    "n_machineold_vs_new": 0,
+    "corr_machineold_vs_new_log1p": null,
+    "quantiles_machineold": {}
+   }
+  },
+  "PASS": true
+ },
+ "panels_report": {
+  "field": "econ",
+  "roster_clean_variant": "none",
+  "panel3_mode": "slim",
+  "window": {
+   "PRE": 6,
+   "POST": 10
+  },
+  "caliber": "Ported statement by statement from econ v9 10_build_panels23.py (risk-set drop = ft < arrival-PRE)",
+  "inputs": {
+   "relationships": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/relationships.csv",
+   "ledger_signed": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/events_econ_fnfix_2026-08-10.csv",
+   "ledger_base_fallback": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/events_econ_fnfixbase_2026-08-10.csv",
+   "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+   "edges": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+   "star_supplement": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl"
+  },
+  "population": {
+   "rel_rows": 9345,
+   "persons": 880,
+   "events": 116,
+   "arrival_fallback_events": 0
+  },
+  "alias": {
+   "bares": 941,
+   "alias_rows": 1485,
+   "bares_mapped_to_person_map": 926,
+   "canonical_collapse_pairs": 32
+  },
+  "works": {
+   "rows_ssd": 67536,
+   "rows_supplement_bare_match": 24208,
+   "supplement_alias_only_NOT_added": 554,
+   "rows_union": 76158,
+   "persons_with_works": 940,
+   "stars_without_any_work": []
+  },
+  "panel2": {
+   "rows": 156614,
+   "relationships": 9326,
+   "persons": 880,
+   "events": 116,
+   "first_ties": 339,
+   "first_ties_pre_arrival": 26,
+   "first_ties_post_arrival": 313,
+   "risk_set_drops": {
+    "being_pre_window_cowrite(ft<arrival-6)": 19,
+    "self_canonical": 0
+   },
+   "self_check": {
+    "rows_after_first_tie": 0,
+    "rels_with_multiple_ties": 0
+   },
+   "file": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/becoming_none.csv",
+   "file_bytes": 9857463
+  },
+  "panel3": {
+   "mode": "slim",
+   "rows": 8878938,
+   "pairs": 528192,
+   "events": 116,
+   "members_total_event_person": 9345,
+   "pairs_before_risk_set_drop": 532455,
+   "risk_set_drops": {
+    "being_pre_window_cowrite(ft<arrival-6)": 4263
+   },
+   "first_ties_ex_star": 11554,
+   "first_ties_ex_star_pre_arrival": 4344,
+   "first_ties_ex_star_post_arrival": 7210,
+   "files": {
+    "pairs_slim_parquet": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/pairs_slim_none.parquet",
+    "pairs_slim_csv": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/pairs_slim_none.csv"
+   },
+   "file_bytes": {
+    "pairs_slim_parquet": 8941932,
+    "pairs_slim_csv": 140193277
+   }
+  },
+  "baseline_rate_audit": {
+   "panel2_pre_arrival_first_ties": 26,
+   "panel3_pre_arrival_first_ties_ex_star": 4344,
+   "verdict": "PASS",
+   "failures": []
+  }
+ },
+ "products": {
+  "p1_frame": {
+   "path": "<scratch>/econ_gold_ctl_run3/products/p1_frame_econ_ctl.csv",
+   "sha256": "5130e71d67bdad6f40efeef1667e7a42b9167f73f6a9d77761ada4e05834e823"
+  },
+  "p2_frame": {
+   "path": "<scratch>/econ_gold_ctl_run3/products/p2_becoming_econ_ctl.csv",
+   "sha256": "e50ea3fa22acad65eb9b085894927de64ff39b604a5ddc9707e06a50fa1692bf"
+  },
+  "frame_bytes_equal_to_verified": {
+   "p1": false,
+   "p2": false
+  }
+ },
+ "E_estimates": {
+  "P1ver_econ": "DIFF",
+  "P2ver_econ": "DIFF",
+  "diffs": {
+   "P1": [
+    "rows_raw: 102795 != 103356",
+    "rows_kept: 98736 != 101321",
+    "channels.union.obs: 67827 != 81592",
+    "channels.union.rels: 8976 != 9211",
+    "channels.union.rels_with_dose: 6855 != 7866",
+    "channels.union.persons: 833 != 870",
+    "channels.union.ate: -0.24469433 != -0.36832286",
+    "channels.union.se: 0.05757451 != 0.06170227",
+    "channels.union.lb: -0.3575383 != -0.48925709",
+    "channels.union.ub: -0.13185036 != -0.24738863",
+    "channels.union.p_joint_effects: 0.00013386 != 2.17844234e-07",
+    "channels.union.p_joint_placebo: 0.42844178 != 0.01207448",
+    "channels.union.effects[0].est: -0.01687384 != -0.03413464",
+    "channels.union.effects[0].se: 0.01589107 != 0.01569881",
+    "channels.union.effects[0].lb: -0.04801977 != -0.06490373",
+    "channels.union.effects[0].ub: 0.01427209 != -0.00336554",
+    "channels.union.effects[0].n: 30847 != 35103",
+    "channels.union.effects[1].est: -0.03296129 != -0.04873409",
+    "channels.union.effects[1].se: 0.02052181 != 0.01854943",
+    "channels.union.effects[1].lb: -0.0731833 != -0.0850903",
+    "channels.union.effects[1].ub: 0.00726072 != -0.01237788",
+    "channels.union.effects[1].n: 24772 != 27732",
+    "channels.union.effects[2].est: -0.06646699 != -0.08019598",
+    "channels.union.effects[2].se: 0.02447872 != 0.0218804",
+    "channels.union.effects[2].lb: -0.1144444 != -0.12308078",
+    "channels.union.effects[2].ub: -0.01848958 != -0.03731118",
+    "channels.union.effects[2].n: 19144 != 20991",
+    "channels.union.effects[3].est: -0.1093032 != -0.10718907",
+    "channels.union.effects[3].se: 0.02775057 != 0.0267314",
+    "channels.union.effects[3].lb: -0.16369332 != -0.15958165",
+    "channels.union.effects[3].ub: -0.05491307 != -0.05479649",
+    "channels.union.effects[3].n: 13487 != 14143",
+    "channels.union.effects[4].est: -0.16111766 != -0.27639148",
+    "channels.union.effects[4].se: 0.03671411 != 0.04517075",
+    "channels.union.effects[4].lb: -0.23307599 != -0.36492451",
+    "channels.union.effects[4].ub: -0.08915934 != -0.18785844",
+    "channels.union.effects[4].n: 8288 != 7837",
+    "channels.union.effects[5].est: -0.20738931 != -0.34912416",
+    "channels.union.effects[5].se: 0.0417061 != 0.06469419",
+    "channels.union.effects[5].lb: -0.28913176 != -0.47592244",
+    "channels.union.effects[5].ub: -0.12564686 != -0.22232588",
+    "channels.union.effects[5].n: 7034 != 7087",
+    "channels.union.placebos[0].est: -0.01151948 != 0.00493643",
+    "channels.union.placebos[0].se: 0.01739095 != 0.01748102",
+    "channels.union.placebos[0].lb: -0.04560511 != -0.02932573",
+    "channels.union.placebos[0].ub: 0.02256616 != 0.0391986",
+    "channels.union.placebos[0].n: 23205 != 26330",
+    "channels.union.placebos[1].est: 0.03369366 != 0.04286535",
+    "channels.union.placebos[1].se: 0.02575095 != 0.02565033",
+    "channels.union.placebos[1].lb: -0.01677728 != -0.00740837",
+    "channels.union.placebos[1].ub: 0.0841646 != 0.09313907",
+    "channels.union.placebos[1].n: 12660 != 13237",
+    "channels.union.placebos[2].est: 0.03608828 != 0.15054794",
+    "channels.union.placebos[2].se: 0.02950373 != 0.04591759",
+    "channels.union.placebos[2].lb: -0.02173797 != 0.06055111",
+    "channels.union.placebos[2].ub: 0.09391454 != 0.24054477",
+    "channels.union.placebos[2].n: 6833 != 6774",
+    "channels.union.placebos[3].est: 0.01351088 != 0.07685297",
+    "channels.union.placebos[3].se: 0.03490482 != 0.05615214",
+    "channels.union.placebos[3].lb: -0.05490131 != -0.03320319"
+   ],
+   "P2": [
+    "rows: 156614 != 157388",
+    "rels: 9326 != 9376",
+    "persons: 880 != 881",
+    "first_ties: 339 != 349",
+    "ate: 0.00290213 != 0.0030515",
+    "se: 0.00037001 != 0.00037496",
+    "lb: 0.00217693 != 0.0023166",
+    "ub: 0.00362733 != 0.0037864",
+    "p_joint_effects: 1.83231208e-12 != 1.32338585e-13",
+    "effects[0].est: 0.00078711 != 0.00111361",
+    "effects[0].se: 0.0003584 != 0.00042717",
+    "effects[0].lb: 8.465e-05 != 0.00027637",
+    "effects[0].ub: 0.00148957 != 0.00195084",
+    "effects[0].n: 52269 != 52567",
+    "effects[1].est: 0.00207912 != 0.00205708",
+    "effects[1].se: 0.00060607 != 0.0005987",
+    "effects[1].lb: 0.00089125 != 0.00088365",
+    "effects[1].ub: 0.003267 != 0.0032305",
+    "effects[1].n: 42965 != 43209",
+    "effects[2].est: 0.00458274 != 0.0050088",
+    "effects[2].se: 0.00080837 != 0.00083029",
+    "effects[2].lb: 0.00299836 != 0.00338146",
+    "effects[2].ub: 0.00616711 != 0.00663614",
+    "effects[2].n: 34287 != 34481",
+    "effects[3].est: 0.00346615 != 0.00370931",
+    "effects[3].se: 0.00070619 != 0.0007393",
+    "effects[3].lb: 0.00208205 != 0.00226032",
+    "effects[3].ub: 0.00485026 != 0.00515831",
+    "effects[3].n: 25019 != 25158",
+    "effects[4].est: 0.00379494 != 0.0035367",
+    "effects[4].se: 0.00085984 != 0.00082222",
+    "effects[4].lb: 0.00210968 != 0.00192518",
+    "effects[4].ub: 0.0054802 != 0.00514821",
+    "effects[4].n: 16289 != 16378",
+    "placebos[0].n: 44187 != 44436",
+    "placebos[1].n: 26464 != 26609"
+   ]
+  },
+  "side_by_side": {
+   "P1": {
+    "top": {
+     "new": {
+      "rows_raw": 102795,
+      "rows_kept": 98736
+     },
+     "frozen": {
+      "rows_raw": 103356,
+      "rows_kept": 101321
+     }
+    },
+    "union": {
+     "new": {
+      "obs": 67827,
+      "rels": 8976,
+      "persons": 833,
+      "events": 116,
+      "ate": -0.24469433,
+      "se": 0.05757451,
+      "p_joint_effects": 0.00013386,
+      "p_joint_placebo": 0.42844178
+     },
+     "frozen": {
+      "obs": 81592,
+      "rels": 9211,
+      "persons": 870,
+      "events": 116,
+      "ate": -0.36832286,
+      "se": 0.06170227,
+      "p_joint_effects": 2.17844234e-07,
+      "p_joint_placebo": 0.01207448
+     }
+    },
+    "network": {
+     "new": {
+      "obs": 34695,
+      "rels": 5294,
+      "persons": 691,
+      "events": 107,
+      "ate": -0.45494947,
+      "se": 0.11807389,
+      "p_joint_effects": 0.00011886,
+      "p_joint_placebo": 0.06757777
+     },
+     "frozen": {
+      "obs": 45116,
+      "rels": 5294,
+      "persons": 691,
+      "events": 107,
+      "ate": -0.5163198,
+      "se": 0.10052294,
+      "p_joint_effects": 2.28958334e-06,
+      "p_joint_placebo": 0.00748252
+     }
+    },
+    "dept": {
+     "new": {
+      "obs": 38328,
+      "rels": 4341,
+      "persons": 644,
+      "events": 111,
+      "ate": -0.29976187,
+      "se": 0.07936842,
+      "p_joint_effects": 0.00148119,
+      "p_joint_placebo": 0.13053853
+     },
+     "frozen": {
+      "obs": 43025,
+      "rels": 4576,
+      "persons": 706,
+      "events": 111,
+      "ate": -0.36801606,
+      "se": 0.08095493,
+      "p_joint_effects": 3.21e-05,
+      "p_joint_placebo": 0.01587097
+     }
+    }
+   },
+   "P2": {
+    "new": {
+     "rels": 9326,
+     "persons": 880,
+     "events": 116,
+     "ate": 0.00290213,
+     "se": 0.00037001,
+     "p_joint_effects": 1.83231208e-12,
+     "p_joint_placebo": null,
+     "rows": 156614,
+     "first_ties": 339
+    },
+    "frozen": {
+     "rels": 9376,
+     "persons": 881,
+     "events": 116,
+     "ate": 0.0030515,
+     "se": 0.00037496,
+     "p_joint_effects": 1.32338585e-13,
+     "p_joint_placebo": null,
+     "rows": 157388,
+     "first_ties": 349
+    }
+   }
+  }
+ },
+ "accounting": {
+  "P1": {
+   "rows_frozen": 103356,
+   "rows_new": 102795,
+   "identical": 32117,
+   "modified": 70678,
+   "removed_rows": 561,
+   "added_rows": 0,
+   "row_order_identical_on_common_keys": true,
+   "modified_by_bucket": {
+    "y+y_ex_star": 20703,
+    "y+y_ex_star+dose+age_gap+pub_count": 12426,
+    "y+y_ex_star+dose": 9810,
+    "dose": 8680,
+    "dose+age_gap": 7170,
+    "y_ex_star": 2517,
+    "age_gap": 2186,
+    "y+y_ex_star+age_gap+pub_count": 1318,
+    "y_ex_star+dose": 933,
+    "y+y_ex_star+dose+pub_count": 871,
+    "y_ex_star+dose+age_gap+pub_count": 839,
+    "y+y_ex_star+dose+age_gap": 530,
+    "y": 434,
+    "y+y_ex_star+pub_count": 382,
+    "y_ex_star+age_gap": 328,
+    "y_ex_star+dose+age_gap": 289,
+    "y+y_ex_star+age_gap": 251,
+    "y+dose+pub_count": 198,
+    "y+dose+age_gap+pub_count": 181,
+    "y+dose": 130,
+    "y+pub_count": 117,
+    "y_ex_star+dose+pub_count": 102,
+    "y_ex_star+age_gap+pub_count": 82,
+    "y_ex_star+pub_count": 47,
+    "y+dose+age_gap": 47,
+    "y+age_gap": 34,
+    "y+age_gap+pub_count": 32,
+    "pub_count": 14,
+    "dose+age_gap+pub_count": 12,
+    "dose+pub_count": 11,
+    "age_gap+pub_count": 4
+   },
+   "modified_by_channel_and_bucket": {
+    "dept_only": {
+     "dose+age_gap": 7170,
+     "y+y_ex_star+dose+age_gap+pub_count": 12426,
+     "y+pub_count": 117,
+     "y+y_ex_star+dose+pub_count": 871,
+     "y+y_ex_star+dose": 320,
+     "y+dose+age_gap+pub_count": 181,
+     "y+y_ex_star": 1658,
+     "y_ex_star": 1683,
+     "y+y_ex_star+age_gap+pub_count": 1318,
+     "dose": 1461,
+     "y+y_ex_star+dose+age_gap": 530,
+     "y_ex_star+dose+age_gap+pub_count": 839,
+     "age_gap": 2186,
+     "y+y_ex_star+pub_count": 382,
+     "y+y_ex_star+age_gap": 251,
+     "y_ex_star+dose+pub_count": 102,
+     "y_ex_star+dose+age_gap": 289,
+     "y+dose+pub_count": 198,
+     "dose+age_gap+pub_count": 12,
+     "y+dose": 38,
+     "y_ex_star+age_gap": 328,
+     "y_ex_star+age_gap+pub_count": 82,
+     "y": 174,
+     "y+age_gap": 34,
+     "y_ex_star+dose": 156,
+     "y_ex_star+pub_count": 47,
+     "y+dose+age_gap": 47,
+     "y+age_gap+pub_count": 32,
+     "pub_count": 14,
+     "dose+pub_count": 11,
+     "age_gap+pub_count": 4
+    },
+    "both": {
+     "y+y_ex_star": 1868,
+     "y+y_ex_star+dose": 1904,
+     "dose": 1481,
+     "y_ex_star": 111,
+     "y": 31,
+     "y+dose": 16,
+     "y_ex_star+dose": 196
+    },
+    "network": {
+     "y+y_ex_star+dose": 7586,
+     "y+y_ex_star": 17177,
+     "dose": 5738,
+     "y_ex_star+dose": 581,
+     "y_ex_star": 723,
+     "y": 229,
+     "y+dose": 76
+    }
+   },
+   "value_diffs": {
+    "dose_topic": {
+     "rows_touched": 42229,
+     "na_to_value": 0,
+     "value_to_na": 2750,
+     "numeric_diffs": 39479,
+     "max_abs_diff": 0.9957147608707401,
+     "max_rel_diff": 13.90467172042553,
+     "numeric_within_rel_1e-6": 14223
+    },
+    "age_gap": {
+     "rows_touched": 25729,
+     "na_to_value": 0,
+     "value_to_na": 2750,
+     "numeric_diffs": 22979,
+     "max_abs_diff": 128.0,
+     "max_rel_diff": 43000000000000.0,
+     "numeric_within_rel_1e-6": 0
+    },
+    "fwci_frac": {
+     "rows_touched": 42046,
+     "na_to_value": 861,
+     "value_to_na": 13345,
+     "numeric_diffs": 27840,
+     "max_abs_diff": 156.98782537784422,
+     "max_rel_diff": 7842811497121.082,
+     "numeric_within_rel_1e-6": 6473
+    },
+    "fwci_frac_ex_star": {
+     "rows_touched": 45208,
+     "na_to_value": 1053,
+     "value_to_na": 13252,
+     "numeric_diffs": 30903,
+     "max_abs_diff": 165.07669169840406,
+     "max_rel_diff": 165076691698404.06,
+     "numeric_within_rel_1e-6": 5447
+    },
+    "fwci_mean": {
+     "rows_touched": 42681,
+     "na_to_value": 213,
+     "value_to_na": 19457,
+     "numeric_diffs": 23011,
+     "max_abs_diff": 80.49914380976566,
+     "max_rel_diff": 11608772499368.756,
+     "numeric_within_rel_1e-6": 5785
+    },
+    "fwci_mean_ex_star": {
+     "rows_touched": 45775,
+     "na_to_value": 894,
+     "value_to_na": 23033,
+     "numeric_diffs": 21848,
+     "max_abs_diff": 80.49914380976566,
+     "max_rel_diff": 11608772499368.756,
+     "numeric_within_rel_1e-6": 4655
+    },
+    "pub_count": {
+     "rows_touched": 16636,
+     "na_to_value": 22,
+     "value_to_na": 2382,
+     "numeric_diffs": 14232,
+     "max_abs_diff": 111.0,
+     "max_rel_diff": 21000000000000.0,
+     "numeric_within_rel_1e-6": 0
+    },
+    "pub_count_ex_star": {
+     "rows_touched": 18596,
+     "na_to_value": 22,
+     "value_to_na": 2382,
+     "numeric_diffs": 16192,
+     "max_abs_diff": 70.0,
+     "max_rel_diff": 44000000000000.0,
+     "numeric_within_rel_1e-6": 0
+    }
+   },
+   "relationships_removed": {
+    "n": 51,
+    "by_channel": {
+     "dept_only": 51
+    },
+    "sample": [
+     [
+      "P_A5001558165",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5005581086",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5011417552",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5013576595",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5017716521",
+      "A5001177483:2023"
+     ],
+     [
+      "P_A5017716521",
+      "A5016931502:2018"
+     ],
+     [
+      "P_A5017716521",
+      "A5038001711:2017"
+     ],
+     [
+      "P_A5017716521",
+      "A5059428122:2021"
+     ],
+     [
+      "P_A5017716521",
+      "A5082658369:2018"
+     ],
+     [
+      "P_A5020311289",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5020576066",
+      "A5008855963:2011"
+     ],
+     [
+      "P_A5020576066",
+      "A5027424571:2010"
+     ],
+     [
+      "P_A5020576066",
+      "A5056114255:2011"
+     ],
+     [
+      "P_A5020576066",
+      "A5063040920:2009"
+     ],
+     [
+      "P_A5020576066",
+      "A5103218091:2010"
+     ],
+     [
+      "P_A5023602090",
+      "A5026828190:2017"
+     ],
+     [
+      "P_A5024807196",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5028731684",
+      "A5086206624:2012"
+     ],
+     [
+      "P_A5034321015",
+      "A5102739182:2010"
+     ],
+     [
+      "P_A5034685255",
+      "A5026828190:2017"
+     ]
+    ]
+   },
+   "relationships_added": {
+    "n": 0,
+    "by_channel": {},
+    "sample": []
+   },
+   "persons_removed": {
+    "n": 1,
+    "sample": [
+     "P_A5038727132"
+    ]
+   },
+   "persons_added": {
+    "n": 0,
+    "sample": []
+   },
+   "relationship_channel_changed": {
+    "n": 0,
+    "sample": []
+   },
+   "channels_frozen": {
+    "network": 4744,
+    "dept_only": 3983,
+    "both": 669
+   },
+   "channels_new": {
+    "network": 4744,
+    "dept_only": 3932,
+    "both": 669
+   },
+   "modified_examples": [
+    {
+     "key": [
+      "P_A5065307935",
+      "A5007734019:2016",
+      "2011"
+     ],
+     "cols": [
+      "dose_topic",
+      "age_gap"
+     ],
+     "frozen": {
+      "dose_topic": "0.03589790793088691",
+      "age_gap": "-11.0"
+     },
+     "new": {
+      "dose_topic": "",
+      "age_gap": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5052820942",
+      "A5054037290:2008",
+      "2003"
+     ],
+     "cols": [
+      "dose_topic",
+      "age_gap",
+      "fwci_frac",
+      "pub_count",
+      "fwci_frac_ex_star",
+      "pub_count_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "ulps": {
+      "dose_topic": 4601906973876324909,
+      "age_gap": 8725724278030336
+     },
+     "frozen": {
+      "dose_topic": "0.4571539790287343",
+      "age_gap": "-7.0",
+      "fwci_frac": "0.0",
+      "pub_count": "3.0",
+      "fwci_frac_ex_star": "0.0",
+      "pub_count_ex_star": "3.0",
+      "fwci_mean": "0.0",
+      "fwci_mean_ex_star": "0.0"
+     },
+     "new": {
+      "dose_topic": "0.0",
+      "age_gap": "-27.0",
+      "fwci_frac": "",
+      "pub_count": "",
+      "fwci_frac_ex_star": "",
+      "pub_count_ex_star": "",
+      "fwci_mean": "",
+      "fwci_mean_ex_star": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5102739182",
+      "A5070304330:2013",
+      "2013"
+     ],
+     "cols": [
+      "fwci_frac",
+      "pub_count",
+      "fwci_mean"
+     ],
+     "ulps": {
+      "fwci_frac": 4607391226466135913,
+      "pub_count": 4616189618054758400
+     },
+     "frozen": {
+      "fwci_frac": "1.0463646157286013",
+      "pub_count": "4.0",
+      "fwci_mean": "1.0463646157286013"
+     },
+     "new": {
+      "fwci_frac": "0.0",
+      "pub_count": "0.0",
+      "fwci_mean": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5034349136",
+      "A5034628923:2005",
+      "2005"
+     ],
+     "cols": [
+      "dose_topic",
+      "age_gap",
+      "fwci_frac",
+      "pub_count",
+      "fwci_frac_ex_star",
+      "pub_count_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "ulps": {
+      "dose_topic": 4594996667345454514,
+      "age_gap": 9209016813042532352,
+      "fwci_frac": 4610131126553427654,
+      "pub_count": 4621256167635550208,
+      "fwci_frac_ex_star": 4610131126553427654,
+      "pub_count_ex_star": 4621256167635550208
+     },
+     "frozen": {
+      "dose_topic": "0.16177745406961958",
+      "age_gap": "3.0",
+      "fwci_frac": "1.6547446481453547",
+      "pub_count": "9.0",
+      "fwci_frac_ex_star": "1.6547446481453547",
+      "pub_count_ex_star": "9.0",
+      "fwci_mean": "0.46913193191011576",
+      "fwci_mean_ex_star": "0.46913193191011576"
+     },
+     "new": {
+      "dose_topic": "0.0",
+      "age_gap": "-27.0",
+      "fwci_frac": "0.0",
+      "pub_count": "0.0",
+      "fwci_frac_ex_star": "0.0",
+      "pub_count_ex_star": "0.0",
+      "fwci_mean": "",
+      "fwci_mean_ex_star": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5111710874",
+      "A5046163960:2007",
+      "2008"
+     ],
+     "cols": [
+      "dose_topic",
+      "age_gap",
+      "fwci_frac",
+      "pub_count",
+      "fwci_frac_ex_star",
+      "pub_count_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "ulps": {
+      "dose_topic": 120752579338142,
+      "age_gap": 10414574138294272,
+      "fwci_frac": 3676865755050714,
+      "pub_count": 1125899906842624,
+      "fwci_frac_ex_star": 3676865755050714,
+      "pub_count_ex_star": 1125899906842624,
+      "fwci_mean": 1604488552814503,
+      "fwci_mean_ex_star": 1604488552814503
+     },
+     "frozen": {
+      "dose_topic": "0.3460346960581252",
+      "age_gap": "34.0",
+      "fwci_frac": "0.5782769388645079",
+      "pub_count": "10.0",
+      "fwci_frac_ex_star": "0.5782769388645079",
+      "pub_count_ex_star": "10.0",
+      "fwci_mean": "0.2539495783072984",
+      "fwci_mean_ex_star": "0.2539495783072984"
+     },
+     "new": {
+      "dose_topic": "0.35273781075132926",
+      "age_gap": "7.0",
+      "fwci_frac": "0.3350314184466008",
+      "pub_count": "8.0",
+      "fwci_frac_ex_star": "0.3350314184466008",
+      "pub_count_ex_star": "8.0",
+      "fwci_mean": "0.20744128580159527",
+      "fwci_mean_ex_star": "0.20744128580159527"
+     }
+    },
+    {
+     "key": [
+      "P_A5049136327",
+      "A5050962159:2017",
+      "2013"
+     ],
+     "cols": [
+      "dose_topic",
+      "age_gap"
+     ],
+     "ulps": {
+      "dose_topic": 4596533336144352100,
+      "age_gap": 9213238937693192192
+     },
+     "frozen": {
+      "dose_topic": "0.20442858111359918",
+      "age_gap": "1.0"
+     },
+     "new": {
+      "dose_topic": "0.0",
+      "age_gap": "-5.0"
+     }
+    },
+    {
+     "key": [
+      "P_A5100641794",
+      "A5001820944:2016",
+      "2012"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "frozen": {
+      "fwci_frac": "207.31914896638412",
+      "fwci_frac_ex_star": "207.31914896638412",
+      "fwci_mean": "43.551044892439556",
+      "fwci_mean_ex_star": "43.551044892439556"
+     },
+     "new": {
+      "fwci_frac": "",
+      "fwci_frac_ex_star": "",
+      "fwci_mean": "",
+      "fwci_mean_ex_star": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5086483206",
+      "A5007734019:2016",
+      "2014"
+     ],
+     "cols": [
+      "dose_topic",
+      "fwci_frac",
+      "fwci_frac_ex_star"
+     ],
+     "ulps": {
+      "dose_topic": 15353692915745,
+      "fwci_frac": 1,
+      "fwci_frac_ex_star": 1
+     },
+     "frozen": {
+      "dose_topic": "0.47458307499789315",
+      "fwci_frac": "2.5770895026727736",
+      "fwci_frac_ex_star": "2.5770895026727736"
+     },
+     "new": {
+      "dose_topic": "0.47543537616729736",
+      "fwci_frac": "2.577089502672774",
+      "fwci_frac_ex_star": "2.577089502672774"
+     }
+    },
+    {
+     "key": [
+      "P_A5042648415",
+      "A5102189800:2013",
+      "2012"
+     ],
+     "cols": [
+      "dose_topic",
+      "fwci_frac",
+      "fwci_frac_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "ulps": {
+      "dose_topic": 8008570,
+      "fwci_frac": 1895590455408076,
+      "fwci_frac_ex_star": 1895590455408076,
+      "fwci_mean": 1668660043493463,
+      "fwci_mean_ex_star": 1668660043493463
+     },
+     "frozen": {
+      "dose_topic": "0.3011976484929658",
+      "fwci_frac": "3.2445478182723275",
+      "fwci_frac_ex_star": "3.2445478182723275",
+      "fwci_mean": "0.8800912965867036",
+      "fwci_mean_ex_star": "0.8800912965867036"
+     },
+     "new": {
+      "dose_topic": "0.3011976480484009",
+      "fwci_frac": "2.4027365507308347",
+      "fwci_frac_ex_star": "2.4027365507308347",
+      "fwci_mean": "1.1306995532850987",
+      "fwci_mean_ex_star": "1.1306995532850987"
+     }
+    },
+    {
+     "key": [
+      "P_A5046572321",
+      "A5029151069:2019",
+      "2021"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "ulps": {
+      "fwci_frac": 3707013991264897,
+      "fwci_frac_ex_star": 3707013991264897,
+      "fwci_mean": 3672125361777035,
+      "fwci_mean_ex_star": 3672125361777035
+     },
+     "frozen": {
+      "fwci_frac": "0.7650445348950606",
+      "fwci_frac_ex_star": "0.7650445348950606",
+      "fwci_mean": "0.948602074154808",
+      "fwci_mean_ex_star": "0.948602074154808"
+     },
+     "new": {
+      "fwci_frac": "0.42674165316203594",
+      "fwci_frac_ex_star": "0.42674165316203594",
+      "fwci_mean": "1.7125797735005854",
+      "fwci_mean_ex_star": "1.7125797735005854"
+     }
+    },
+    {
+     "key": [
+      "P_A5061674887",
+      "A5027077000:2017",
+      "2018"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "frozen": {
+      "fwci_frac": "22.19647808375805",
+      "fwci_frac_ex_star": "22.19647808375805",
+      "fwci_mean": "14.797652055838698",
+      "fwci_mean_ex_star": "14.797652055838698"
+     },
+     "new": {
+      "fwci_frac": "",
+      "fwci_frac_ex_star": "",
+      "fwci_mean": "",
+      "fwci_mean_ex_star": ""
+     }
+    },
+    {
+     "key": [
+      "P_A5088334444",
+      "A5100765181:2017",
+      "2015"
+     ],
+     "cols": [
+      "fwci_frac",
+      "fwci_frac_ex_star",
+      "fwci_mean",
+      "fwci_mean_ex_star"
+     ],
+     "frozen": {
+      "fwci_frac": "14.101918085712477",
+      "fwci_frac_ex_star": "14.101918085712477",
+      "fwci_mean": "14.101918085712477",
+      "fwci_mean_ex_star": "14.101918085712477"
+     },
+     "new": {
+      "fwci_frac": "",
+      "fwci_frac_ex_star": "",
+      "fwci_mean": "",
+      "fwci_mean_ex_star": ""
+     }
+    }
+   ]
+  },
+  "P2": {
+   "rows_frozen": 157388,
+   "rows_new": 156614,
+   "identical": 156513,
+   "modified": 15,
+   "removed_rows": 860,
+   "added_rows": 86,
+   "row_order_identical_on_common_keys": true,
+   "modified_by_columns": {
+    "y": 15
+   },
+   "first_ties_frozen": 349,
+   "first_ties_new": 339,
+   "relationships_frozen": 9376,
+   "relationships_new": 9326,
+   "relationships_removed": {
+    "n": 51,
+    "by_channel": {
+     "dept_only": 51
+    },
+    "sample": [
+     [
+      "A5001558165",
+      "A5102739182:2010"
+     ],
+     [
+      "A5005581086",
+      "A5102739182:2010"
+     ],
+     [
+      "A5011417552",
+      "A5102739182:2010"
+     ],
+     [
+      "A5013576595",
+      "A5102739182:2010"
+     ],
+     [
+      "A5017716521",
+      "A5001177483:2023"
+     ],
+     [
+      "A5017716521",
+      "A5016931502:2018"
+     ],
+     [
+      "A5017716521",
+      "A5038001711:2017"
+     ],
+     [
+      "A5017716521",
+      "A5059428122:2021"
+     ],
+     [
+      "A5017716521",
+      "A5082658369:2018"
+     ],
+     [
+      "A5020311289",
+      "A5102739182:2010"
+     ],
+     [
+      "A5020576066",
+      "A5008855963:2011"
+     ],
+     [
+      "A5020576066",
+      "A5027424571:2010"
+     ],
+     [
+      "A5020576066",
+      "A5056114255:2011"
+     ],
+     [
+      "A5020576066",
+      "A5063040920:2009"
+     ],
+     [
+      "A5020576066",
+      "A5103218091:2010"
+     ],
+     [
+      "A5023602090",
+      "A5026828190:2017"
+     ],
+     [
+      "A5024807196",
+      "A5102739182:2010"
+     ],
+     [
+      "A5028731684",
+      "A5086206624:2012"
+     ],
+     [
+      "A5034321015",
+      "A5102739182:2010"
+     ],
+     [
+      "A5034685255",
+      "A5026828190:2017"
+     ]
+    ]
+   },
+   "relationships_added": {
+    "n": 1,
+    "by_channel": {
+     "network": 1
+    },
+    "sample": [
+     [
+      "A5105457120",
+      "A5007734019:2016"
+     ]
+    ]
+   },
+   "relationships_window_shortened": {
+    "n": 0,
+    "sample": []
+   },
+   "relationships_window_lengthened": {
+    "n": 14,
+    "sample": [
+     [
+      "A5021256011",
+      "A5024737956:2014"
+     ],
+     [
+      "A5030708165",
+      "A5071785739:2020"
+     ],
+     [
+      "A5032804266",
+      "A5075194454:2008"
+     ],
+     [
+      "A5039922973",
+      "A5027077000:2017"
+     ],
+     [
+      "A5040012800",
+      "A5087235620:2016"
+     ],
+     [
+      "A5044759541",
+      "A5070067353:2005"
+     ],
+     [
+      "A5051796256",
+      "A5080057811:2006"
+     ],
+     [
+      "A5059569248",
+      "A5024737956:2014"
+     ],
+     [
+      "A5063481505",
+      "A5008296992:2018"
+     ],
+     [
+      "A5064790327",
+      "A5008296992:2018"
+     ],
+     [
+      "A5073198390",
+      "A5047755944:2011"
+     ],
+     [
+      "A5085015622",
+      "A5034503874:2016"
+     ],
+     [
+      "A5085232158",
+      "A5022446221:2020"
+     ],
+     [
+      "A5085232158",
+      "A5082663721:2010"
+     ]
+    ]
+   },
+   "channels_frozen": {
+    "network": 4728,
+    "dept_only": 3982,
+    "both": 666
+   },
+   "channels_new": {
+    "network": 4729,
+    "dept_only": 3931,
+    "both": 666
+   },
+   "modified_examples": [
+    {
+     "key": [
+      "A5030708165",
+      "A5071785739:2020",
+      "2020"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5073198390",
+      "A5047755944:2011",
+      "2017"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5044759541",
+      "A5070067353:2005",
+      "2005"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5063481505",
+      "A5008296992:2018",
+      "2024"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5059569248",
+      "A5024737956:2014",
+      "2016"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5085232158",
+      "A5082663721:2010",
+      "2007"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5085015622",
+      "A5034503874:2016",
+      "2018"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5006008417",
+      "A5080057811:2006",
+      "2016"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5085232158",
+      "A5022446221:2020",
+      "2020"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5051796256",
+      "A5080057811:2006",
+      "2014"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5039922973",
+      "A5027077000:2017",
+      "2019"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    },
+    {
+     "key": [
+      "A5021256011",
+      "A5024737956:2014",
+      "2016"
+     ],
+     "cols": [
+      "y"
+     ],
+     "frozen": {
+      "y": "1"
+     },
+     "new": {
+      "y": "0"
+     }
+    }
+   ]
+  }
+ },
+ "staging_manifest": [
+  {
+   "rel": "multidisc_2026-07-24/code/roster_lib.py",
+   "origin": "frozen:<legacy>/v2_output/multidisc_2026-07-24/code/roster_lib.py",
+   "sha256": "774f1bcc4c87c4da6adf18d690a37f0008923a29ae43a9a096d17c0b413b1230"
+  },
+  {
+   "rel": "fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+   "origin": "frozen:<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet",
+   "sha256": "1fc323a37dc78f227885bb3d245769c2ee593fe39bf46e1e5de8a0ff19603dfe"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/runs/fnfix/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "origin": "adapted:<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv (P_ stripped, star:year->star:school, pool filter)",
+   "sha256": "87b8f90662fe3369c408ab9200f7f78626c93654ad345bbb3add28852fc7261d"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/roster_gold_econ.parquet",
+   "origin": "copy:data/raw_verified/roster_econ_verified.parquet",
+   "sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/events_econ_fnfix_2026-08-10.csv",
+   "origin": "derived:gold signed-table shape of the event table",
+   "sha256": "a2bc56d6bb75f2ab960f5f3518a4367d9be2ce68088a2a352d363425e39d59d1"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/events_econ_gold_2026-08-10.csv",
+   "origin": "derived:same table at the name the signed-star loop reads",
+   "sha256": "a2bc56d6bb75f2ab960f5f3518a4367d9be2ce68088a2a352d363425e39d59d1"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/events_econ_fnfixbase_2026-08-10.csv",
+   "origin": "derived:event_id(star:school),arrival_year",
+   "sha256": "ce17ec38629d6b7c2beea003ffbe3385f0e23ddbb2fb71a0617f528d7cbf83a6"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet",
+   "origin": "derived:the 116 event stars of the table (ex-star set; not estimate-bearing)",
+   "sha256": "5760f5536284a72414b7ee0343ea4414cfc68fd254bb80542a1c777d8fd4adb9"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl",
+   "origin": "derived:concatenated supplements {\"edges_supplement_stars11.jsonl\": 590, \"edges_supplement_fnfix.jsonl\": 4151, \"edges_supplement_133.jsonl\": 4023, \"works_by_author.jsonl (reshaped)\": 17191}",
+   "sha256": "ed1e5cafea211e54fc5443f065ea8943dd7cae4a0d56457014300499098de4aa"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/analysis_frame_econ_2026-08-10.csv",
+   "origin": "stage:union",
+   "sha256": "425564463b1846ce58aee3de594e5c98d56bf3797cc4e302a3ea62cc11e67ed7"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/relationships.csv",
+   "origin": "stage:union",
+   "sha256": "30a1d88302a365553038885db75f8d8273e8852443ce10482763fa10fe202c72"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/build_report.json",
+   "origin": "stage:union",
+   "sha256": "4f1594e4459ab195383cb604b536b34bd4517d7a99da68cb59967bd40ae098ff"
+  },
+  {
+   "rel": "multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/funnel.json",
+   "origin": "stage:union",
+   "sha256": "d74c77b5f3ac7a85169a6b0ac5dc8a2c28a5d1f89c988184f5a5d4b9f3ad1566"
+  }
+ ],
+ "total_secs": 117.8,
+ "stops": [
+  "the chain's estimates are not EQUAL to the frozen verified-pool cells — STOP, not tuned; the accounting is the product"
+ ],
+ "verdict": "NOT_EQUAL"
+}

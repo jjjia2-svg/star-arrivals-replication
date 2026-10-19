@@ -1,0 +1,72 @@
+{
+  "generated": "2026-08-28T10:33:33",
+  "authority": "the author's decision record of 2026-08-28 (private archive)",
+  "frozen_inputs_sha256": {
+    "fnfix_candidates_restake.csv": "a1c6b34c7528108ed9648291a97879216a8fe5f510268fbea7e8e714f9f7a8c1",
+    "fnfix_restake_2026-08-15.csv": "f11031eac506cb9db72b4a3563979587979a6df5efae7d5dd94b8bd638efdbe9",
+    "fnfix_work_level_calls.csv": "fb69d20453075572eeceda22fff426455831f8fee4971b97e2351451892172d2"
+  },
+  "drops": {
+    "frozen": 374,
+    "cal2026-08-28": 380
+  },
+  "ported72_rows": [
+    "A5027778630,chemistry,anu,2002,14414,1312|14-17,0.9981,True,14414,1312|14-17,9921,0.9981,True,,16\r",
+    "A5091826237,chemistry,anu,2001,321,1605|10-13,0.9201,True,321,1605|10-13,4317,0.9201,True,,12\r",
+    "A5017222669,math_stats,uq,2002,1454,1312|6-9,0.9643,True,1454,1312|6-9,21178,0.9643,True,,8\r",
+    "A5090916445,math_stats,unsw,2002,157,2610|2-5,0.9057,True,157,2610|2-5,244,0.9057,True,,4\r",
+    "A5062352558,chemistry,melbourne,2003,1514,1605|10-13,0.9851,True,927,1605|10-13,5026,0.9717,True,,11\r"
+  ],
+  "aw_raw_rows": 79036066,
+  "equiv_proof": {
+    "A5018518935": "byte-identical",
+    "A5006190609": "byte-identical",
+    "A5035138469": "byte-identical",
+    "A5074090421": "byte-identical",
+    "A5062352558": "byte-identical"
+  },
+  "A5091826237": {
+    "ported_native_row": "A5091826237,chemistry,anu,2001,321,1605|10-13,0.9201,True,321,1605|10-13,4317,0.9201,True,,12\r",
+    "equiv_anchored_row": "A5091826237,chemistry,anu,2001,321,1605|10-13,0.9201,True,321,1605|14-17,3521,0.9122,True,\"first_pub_override=1983;rebinned 10-13->14-17 (+1 convention, 72 econ path)\",17\r",
+    "passes": true
+  },
+  "new_candidate_verdicts": {
+    "A5027778630": "A5027778630,chemistry,anu,2002,14414,1312|14-17,0.9981,True,14414,1312|14-17,9921,0.9981,True,,16\r",
+    "A5091826237": "A5091826237,chemistry,anu,2001,321,1605|10-13,0.9201,True,321,1605|14-17,3521,0.9122,True,\"first_pub_override=1983;rebinned 10-13->14-17 (+1 convention, 72 econ path)\",17\r",
+    "A5017222669": "A5017222669,math_stats,uq,2002,1454,1312|6-9,0.9643,True,1454,1312|6-9,21178,0.9643,True,,8\r",
+    "A5090916445": "A5090916445,math_stats,unsw,2002,157,2610|2-5,0.9057,True,157,2610|2-5,244,0.9057,True,,4\r"
+  },
+  "event_counts": {
+    "econ": 116,
+    "chemistry": 38,
+    "math_stats": 33
+  },
+  "old_counts": {
+    "econ": 117,
+    "chemistry": 35,
+    "math_stats": 31
+  },
+  "diff": {
+    "econ": {
+      "out": [
+        "A5044432173 — D-A gate_age fail, aage=0"
+      ],
+      "in": []
+    },
+    "chemistry": {
+      "out": [],
+      "in": [
+        "A5027778630 (2002)",
+        "A5091826237 (2001) — machine pass",
+        "A5062352558 (2003) — D-B window"
+      ]
+    },
+    "math_stats": {
+      "out": [],
+      "in": [
+        "A5017222669 (2002)",
+        "A5090916445 (2002)"
+      ]
+    }
+  }
+}

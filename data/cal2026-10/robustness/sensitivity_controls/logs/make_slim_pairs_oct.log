@@ -1,0 +1,10 @@
+$ setup/.venv/bin/python pipeline/frames/make_slim.py math_stats data/frames/pairs_none_math_stats.parquet $TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_ev_math_stats.parquet --noev $TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_math_stats.parquet
+[env] {}
+--- stdout ---
+    OK   $TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_ev_math_stats.parquet  (886,780 B, sha256 0c6920623aa5f30cf790b1ea25893631af8c05538c1702a9848c7a0abe6b1ff1)
+    OK   $TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_math_stats.parquet  (940,807 B, sha256 0b1cfb228ad34164af4d466fe9da4da61978122be1fa3042ad9ae08d52e1b4c5)
+{'rows': 929324, 'pairs': 55237, 'ties': 1031, 'events': 33, 'produced': {'$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_ev_math_stats.parquet': '0c6920623aa5f30cf790b1ea25893631af8c05538c1702a9848c7a0abe6b1ff1', '$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_math_stats.parquet': '0b1cfb228ad34164af4d466fe9da4da61978122be1fa3042ad9ae08d52e1b4c5'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+
+--- stderr ---
+
+--- rc=0 secs=0.1 ---

@@ -1,0 +1,12 @@
+[driver] start 2026-08-28T04:37:09Z
+p3_slim_chemistry.parquet: OK
+p3_slim_econ.parquet: OK
+p3_slim_ev_chemistry.parquet: OK
+p3_slim_ev_econ.parquet: OK
+run_p3.R: OK
+run_p3_evcl.R: OK
+JOB1_EXIT=0
+JOB2_EXIT=0
+JOB3_EXIT=0
+JOB4_EXIT=0
+[driver] end 2026-08-28T04:54:10Z

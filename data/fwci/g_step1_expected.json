@@ -1,0 +1,38 @@
+{
+ "date": "2026-08-09",
+ "included_types": [
+  "article",
+  "review"
+ ],
+ "expected_method": "mean",
+ "paratext_symmetric_drop": true,
+ "source_new_pop": "<legacy>/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+ "source_old_pop": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/fwci_baseline_pop/**/*.parquet",
+ "paratext_symmetric_drop_effect": {
+  "article_review_cells_with_paratext": 0,
+  "paratext_works_removed_from_denominator": 0,
+  "paratext_citations_removed_from_denominator": 0,
+  "cells_emptied_by_drop": 0,
+  "note": "In this snapshot, every work with is_paratext=True also has type paratext, already excluded by included_types. Symmetric exclusion changes article/review cells by 0 (measured). The subtraction is retained to implement the definition explicitly."
+ },
+ "oracle_vs_production_build_fwci_baseline": {
+  "oracle_cells": 130061,
+  "mine_cells": 130061,
+  "only_oracle": 0,
+  "only_mine": 0,
+  "value_mismatch": 0,
+  "mismatch_examples": [],
+  "pass": true
+ },
+ "expected_new": {
+  "cells": 130061,
+  "zero_expected_cells": 60504,
+  "out": "<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_fullsnapshot_2026-08-09.parquet"
+ },
+ "expected_old": {
+  "cells": 43175,
+  "zero_expected_cells": 8793,
+  "out": "<legacy>/v2_output/fwci_fullsnapshot_rebuild_2026-08-09/data/fwci_expected_oldpop_2026-08-09.parquet"
+ },
+ "PASS": true
+}

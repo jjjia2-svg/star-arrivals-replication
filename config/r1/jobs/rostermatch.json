@@ -1,0 +1,23 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rostermatch",
+  "instance_type": "r6i.8xlarge",
+  "price_hr": 2.016,
+  "est_min": 60,
+  "hard_min": 240,
+  "root_gb": 200,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "required_dests": [],
+  "data_sync": [
+    [
+      "r1/snapshot/authors/",
+      "/data/snapshot/authors/"
+    ]
+  ],
+  "copy_from_tip": [],
+  "steps": [
+    "\"$PY\" \"$REPO_DIR/tools/r1_roster_match.py\" --spells-dir \"$REPO_DIR/data/cal2026-10r1/inputs/p3_roster/spells\" --authors-glob \"/data/snapshot/authors/**/*.gz\" --out /work/out"
+  ]
+}

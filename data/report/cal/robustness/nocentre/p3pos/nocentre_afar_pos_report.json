@@ -1,0 +1,27 @@
+{
+  "cuts": {
+    "pos_chemistry": {
+      "field": "chemistry",
+      "cut_spec": "pos",
+      "cut": 0.0,
+      "cut_full": 0.0,
+      "rows": 675687,
+      "pairs": 42370,
+      "ties": 4828,
+      "events": 96,
+      "frame": "/work/prod/rob_frames/nocentre_pos/p3_afar_pos_chemistry.parquet"
+    },
+    "pos_math_stats": {
+      "field": "math_stats",
+      "cut_spec": "pos",
+      "cut": 0.0,
+      "cut_full": 0.0,
+      "rows": 2173301,
+      "pairs": 129445,
+      "ties": 2800,
+      "events": 107,
+      "frame": "/work/prod/rob_frames/nocentre_pos/p3_afar_pos_math_stats.parquet"
+    }
+  },
+  "control_content_equal": {}
+}

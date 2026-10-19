@@ -1,0 +1,1052 @@
+{
+ "date": "2026-08-09",
+ "edges_sub": "u1_full_11school_2026-07-16",
+ "main_population": {
+  "contrib_units": 160118,
+  "distinct_works": 150067,
+  "new_fwci_na_reasons_by_work": {
+   "missing_subfield_no_fallback": 517,
+   "excluded_type": 39627,
+   "zero_expected_cell": 2
+  }
+ },
+ "ship_alias_n": 168,
+ "patch": {
+  "rows": 56800,
+  "authors": 592,
+  "distinct_works": 54097,
+  "works_with_snapshot_meta": 52337,
+  "new_fwci_na_reasons": {
+   "excluded_type": 16594,
+   "missing_snapshot_meta": 1675,
+   "missing_subfield_no_fallback": 240,
+   "missing_cell": 1
+  }
+ },
+ "variants": {
+  "unified": {
+   "out": "/work/tmp/frames_econ920/m/m_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+   "transition": {
+    "val2val": 83619,
+    "val2na": 1311,
+    "na2val": 1792,
+    "na2na": 5864,
+    "zero_fill": 29101,
+    "row_na": 14212,
+    "py_missing": 4098
+   }
+  },
+  "denomonly": {
+   "out": "/work/tmp/frames_econ920/m/m_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+   "transition": {
+    "val2val": 84915,
+    "val2na": 15,
+    "na2val": 10,
+    "na2na": 7646,
+    "zero_fill": 29101,
+    "row_na": 14212,
+    "py_missing": 4098
+   }
+  }
+ },
+ "C_PC_fnfix_newevent_rows": {
+  "rows_written_from_agg": 116750,
+  "rows_agg_missing_NA": 5166,
+  "examples_missing": [
+   [
+    "unified",
+    "P_A5067564085",
+    "2026",
+    "A5044501609:2023",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "1999",
+    "A5008337457:2004",
+    "13.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2001",
+    "A5008337457:2004",
+    "24.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2002",
+    "A5008337457:2004",
+    "12.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2003",
+    "A5008337457:2004",
+    "15.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2004",
+    "A5008337457:2004",
+    "11.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2005",
+    "A5008337457:2004",
+    "26.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2006",
+    "A5008337457:2004",
+    "19.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2007",
+    "A5008337457:2004",
+    "26.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2008",
+    "A5008337457:2004",
+    "14.0"
+   ],
+   [
+    "unified",
+    "P_A5026047414",
+    "2009",
+    "A5008337457:2004",
+    "16.0"
+   ],
+   [
+    "unified",
+    "P_A5053691822",
+    "1999",
+    "A5008337457:2004",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5103595049",
+    "2011",
+    "A5010870813:2011",
+    "7.0"
+   ],
+   [
+    "unified",
+    "P_A5007076097",
+    "2011",
+    "A5015900048:2015",
+    "201.0"
+   ],
+   [
+    "unified",
+    "P_A5052879825",
+    "2005",
+    "A5025159255:2001",
+    "23.0"
+   ],
+   [
+    "unified",
+    "P_A5007076097",
+    "2011",
+    "A5042279722:2016",
+    "201.0"
+   ],
+   [
+    "unified",
+    "P_A5078757714",
+    "2010",
+    "A5043842721:2010",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "1997",
+    "A5072933152:2001",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "1998",
+    "A5072933152:2001",
+    "4.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "1999",
+    "A5072933152:2001",
+    "2.0"
+   ]
+  ],
+  "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+ },
+ "C_PC_fnfix_exstar_only_tolerated_old_rows": {
+  "n": 2098,
+  "examples": [
+   [
+    "unified",
+    "P_A5000059602",
+    "2024",
+    "A5001177483:2023",
+    "7.0",
+    "8"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2025",
+    "A5001177483:2023",
+    "10.0",
+    "12"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2024",
+    "A5059428122:2021",
+    "7.0",
+    "8"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2025",
+    "A5059428122:2021",
+    "10.0",
+    "12"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2024",
+    "A5059554264:2021",
+    "7.0",
+    "8"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2025",
+    "A5059554264:2021",
+    "10.0",
+    "12"
+   ],
+   [
+    "unified",
+    "P_A5000059602",
+    "2024",
+    "A5087653408:2019",
+    "7.0",
+    "8"
+   ],
+   [
+    "unified",
+    "P_A5005093974",
+    "2011",
+    "A5086206624:2012",
+    "13.0",
+    "14"
+   ],
+   [
+    "unified",
+    "P_A5005093974",
+    "2017",
+    "A5086206624:2012",
+    "4.0",
+    "5"
+   ],
+   [
+    "unified",
+    "P_A5005489008",
+    "2017",
+    "A5035157505:2018",
+    "11.0",
+    "13"
+   ]
+  ],
+  "note": "Old-event rows whose incumbent is a newly recovered star: frame ex_star uses the augmented star_set, while agg uses the original star_set. When pub_count agrees, write agg; ex_star throughout the frame uses the original 79 stars."
+ },
+ "C_PC_structural_anchor": {
+  "bad_rows": 3030,
+  "examples": [
+   [
+    "unified",
+    "P_A5012685282",
+    "2003",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2006",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2007",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2006",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2007",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2006",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5012685282",
+    "2007",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2001",
+    "agg_missing",
+    "3.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2002",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2003",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2005",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "1999",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2001",
+    "agg_missing",
+    "3.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2002",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5019750037",
+    "2003",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5033420643",
+    "2002",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5033420643",
+    "2004",
+    "agg_missing",
+    "4.0"
+   ],
+   [
+    "unified",
+    "P_A5033420643",
+    "2005",
+    "agg_missing",
+    "1.0"
+   ],
+   [
+    "unified",
+    "P_A5033420643",
+    "2006",
+    "agg_missing",
+    "2.0"
+   ],
+   [
+    "unified",
+    "P_A5033420643",
+    "2010",
+    "agg_missing",
+    "3.0"
+   ]
+  ],
+  "pass": false
+ },
+ "old_value_reproduction_anchor": {
+  "hard_fail_cells": 0,
+  "float32_roundtrip_cells": 6416,
+  "max_relative_deviation": 5.7964767883301725e-08,
+  "tolerance": 1e-06,
+  "examples": [],
+  "pass": true,
+  "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+ },
+ "G_D": {
+  "person_years_compared": 12006,
+  "both_nonNA_ff": 10729,
+  "corr_ff_raw": 0.6053,
+  "corr_ff_log1p": 0.8323,
+  "spearman_ff": 0.8823,
+  "quantiles_ff_old": {
+   "p05": 0.0,
+   "p25": 0.1615,
+   "p50": 0.7329,
+   "p75": 2.579,
+   "p90": 7.4343,
+   "p95": 13.5572,
+   "p99": 39.7179
+  },
+  "quantiles_ff_new": {
+   "p05": 0.0,
+   "p25": 0.3677,
+   "p50": 1.5799,
+   "p75": 4.833,
+   "p90": 12.5563,
+   "p95": 22.0358,
+   "p99": 56.6359
+  },
+  "median_ratio_old_over_new": 0.368,
+  "mean_old": 3.2493,
+  "mean_new": 5.3887,
+  "corr_mean_raw": 0.5216,
+  "quantiles_mean_old": {
+   "p05": 0.0,
+   "p25": 0.1879,
+   "p50": 0.6634,
+   "p75": 1.8343,
+   "p90": 4.3604,
+   "p95": 7.4749,
+   "p99": 20.5061
+  },
+  "quantiles_mean_new": {
+   "p05": 0.0,
+   "p25": 0.4526,
+   "p50": 1.4155,
+   "p75": 3.4087,
+   "p90": 7.0509,
+   "p95": 11.3173,
+   "p99": 28.4268
+  }
+ },
+ "G_D_hand_check_10py": {
+  "cells": [
+   {
+    "pid": "P_A5060829592",
+    "year": 2008,
+    "n_works": 4,
+    "manual_fwci_frac": 0.15212867884166748,
+    "script_fwci_frac": 0.15212867884166748,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W2080785277",
+      "cited": 0,
+      "type": "article",
+      "sf": "3312",
+      "expected_new": 6.5734,
+      "frac": 0.5,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W2908388337",
+      "cited": 2,
+      "type": "article",
+      "sf": "3312",
+      "expected_new": 6.5734,
+      "frac": 0.5,
+      "fwci_new": 0.304257
+     },
+     {
+      "work_id": "W2936799724",
+      "cited": 0,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 5.0916,
+      "frac": 1.0,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W3022260440",
+      "cited": 0,
+      "type": "article",
+      "sf": "nan",
+      "expected_new": null,
+      "frac": 1.0,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5009552418",
+    "year": 2006,
+    "n_works": 2,
+    "manual_fwci_frac": 0.19832111432122845,
+    "script_fwci_frac": 0.19832111432122845,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W1965372762",
+      "cited": 30,
+      "type": "article",
+      "sf": "2746",
+      "expected_new": 15.127,
+      "frac": 0.1,
+      "fwci_new": 1.983211
+     },
+     {
+      "work_id": "W3123635913",
+      "cited": 22,
+      "type": "preprint",
+      "sf": "2000",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5002129110",
+    "year": 1995,
+    "n_works": 10,
+    "manual_fwci_frac": 0.7601747092801906,
+    "script_fwci_frac": 0.7601747092801906,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W1516830803",
+      "cited": 5,
+      "type": "article",
+      "sf": "2003",
+      "expected_new": 28.6897,
+      "frac": 0.5,
+      "fwci_new": 0.174279
+     },
+     {
+      "work_id": "W1529621165",
+      "cited": 2,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 11.0215,
+      "frac": 0.5,
+      "fwci_new": 0.181463
+     },
+     {
+      "work_id": "W1574118088",
+      "cited": 0,
+      "type": "article",
+      "sf": "2000",
+      "expected_new": 20.4987,
+      "frac": 0.5,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W1926611010",
+      "cited": 0,
+      "type": "article",
+      "sf": "2003",
+      "expected_new": 28.6897,
+      "frac": 0.5,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W2017290115",
+      "cited": 23,
+      "type": "article",
+      "sf": "2003",
+      "expected_new": 28.6897,
+      "frac": 0.5,
+      "fwci_new": 0.801682
+     },
+     {
+      "work_id": "W2620627718",
+      "cited": 0,
+      "type": "article",
+      "sf": "2003",
+      "expected_new": 28.6897,
+      "frac": 0.5,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W3121756315",
+      "cited": 0,
+      "type": "preprint",
+      "sf": "2000",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W3122647674",
+      "cited": 4,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 11.0215,
+      "frac": 0.5,
+      "fwci_new": 0.362926
+     },
+     {
+      "work_id": "W3123838239",
+      "cited": 0,
+      "type": "preprint",
+      "sf": "2003",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W3125351245",
+      "cited": 0,
+      "type": "preprint",
+      "sf": "2002",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5073792852",
+    "year": 2006,
+    "n_works": 4,
+    "manual_fwci_frac": 1.793589062938755,
+    "script_fwci_frac": 1.793589062938755,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W2015653571",
+      "cited": 30,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 6.2259,
+      "frac": 0.2,
+      "fwci_new": 4.818597
+     },
+     {
+      "work_id": "W2064150195",
+      "cited": 9,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 6.2259,
+      "frac": 0.5,
+      "fwci_new": 1.445579
+     },
+     {
+      "work_id": "W2796956525",
+      "cited": 0,
+      "type": "article",
+      "sf": "3611",
+      "expected_new": 7.2422,
+      "frac": 0.2,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W3167114345",
+      "cited": 2,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 6.2259,
+      "frac": 0.333333,
+      "fwci_new": 0.32124
+     }
+    ]
+   },
+   {
+    "pid": "P_A5024266358",
+    "year": 2021,
+    "n_works": 7,
+    "manual_fwci_frac": 1.9278839893105073,
+    "script_fwci_frac": 1.9278839893105073,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W3163279138",
+      "cited": 0,
+      "type": "preprint",
+      "sf": "3311",
+      "expected_new": null,
+      "frac": 0.333333,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W3171801434",
+      "cited": 2,
+      "type": "article",
+      "sf": "1402",
+      "expected_new": 4.594,
+      "frac": 0.142857,
+      "fwci_new": 0.435349
+     },
+     {
+      "work_id": "W3177139704",
+      "cited": 8,
+      "type": "article",
+      "sf": "3320",
+      "expected_new": 1.7108,
+      "frac": 0.142857,
+      "fwci_new": 4.676249
+     },
+     {
+      "work_id": "W3182291901",
+      "cited": 11,
+      "type": "article",
+      "sf": "3312",
+      "expected_new": 3.6322,
+      "frac": 0.333333,
+      "fwci_new": 3.0285
+     },
+     {
+      "work_id": "W3186542952",
+      "cited": 0,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 4.9206,
+      "frac": 0.333333,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W4298288507",
+      "cited": 0,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 4.9206,
+      "frac": 0.5,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W4381126439",
+      "cited": 3,
+      "type": "article",
+      "sf": "3304",
+      "expected_new": 2.6574,
+      "frac": 0.166667,
+      "fwci_new": 1.128935
+     }
+    ]
+   },
+   {
+    "pid": "P_A5020577930",
+    "year": 1988,
+    "n_works": 13,
+    "manual_fwci_frac": 2.0092959981861465,
+    "script_fwci_frac": 2.0092959981861465,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W1492986919",
+      "cited": 0,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 9.9537,
+      "frac": 1.0,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W2074649301",
+      "cited": 0,
+      "type": "article",
+      "sf": "1906",
+      "expected_new": 15.233,
+      "frac": 0.333333,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W2082882913",
+      "cited": 40,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 9.9537,
+      "frac": 0.5,
+      "fwci_new": 4.018592
+     },
+     {
+      "work_id": "W256003589",
+      "cited": 0,
+      "type": "other",
+      "sf": "2304",
+      "expected_new": null,
+      "frac": 1.0,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4205417890",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4235018892",
+      "cited": 1,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4237125360",
+      "cited": 18,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 1.0,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4239356329",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4240583083",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4240804237",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4245239662",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4245875748",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4253610272",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "3320",
+      "expected_new": null,
+      "frac": 0.5,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5018982917",
+    "year": 2024,
+    "n_works": 2,
+    "manual_fwci_frac": null,
+    "script_fwci_frac": null,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W4391489042",
+      "cited": 0,
+      "type": "preprint",
+      "sf": "2000",
+      "expected_new": null,
+      "frac": 0.333333,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4401315188",
+      "cited": 0,
+      "type": "book-chapter",
+      "sf": "2002",
+      "expected_new": null,
+      "frac": 0.333333,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5011018310",
+    "year": 2023,
+    "n_works": 3,
+    "manual_fwci_frac": 0.39190918984757833,
+    "script_fwci_frac": 0.39190918984757833,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W3205467157",
+      "cited": 3,
+      "type": "preprint",
+      "sf": "2202",
+      "expected_new": null,
+      "frac": 0.333333,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W4386916300",
+      "cited": 8,
+      "type": "article",
+      "sf": "2212",
+      "expected_new": 5.1032,
+      "frac": 0.25,
+      "fwci_new": 1.567637
+     },
+     {
+      "work_id": "W4387963999",
+      "cited": 3,
+      "type": "preprint",
+      "sf": "2202",
+      "expected_new": null,
+      "frac": 0.125,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5073251863",
+    "year": 1995,
+    "n_works": 2,
+    "manual_fwci_frac": 6.215105496144533,
+    "script_fwci_frac": 6.215105496144533,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W1963633085",
+      "cited": 137,
+      "type": "article",
+      "sf": "2002",
+      "expected_new": 11.0215,
+      "frac": 0.5,
+      "fwci_new": 12.430211
+     },
+     {
+      "work_id": "W3122230008",
+      "cited": 22,
+      "type": "preprint",
+      "sf": "2002",
+      "expected_new": null,
+      "frac": 0.25,
+      "fwci_new": null
+     }
+    ]
+   },
+   {
+    "pid": "P_A5008488827",
+    "year": 2008,
+    "n_works": 4,
+    "manual_fwci_frac": 0.25204722867879503,
+    "script_fwci_frac": 0.25204722867879503,
+    "match": true,
+    "works": [
+     {
+      "work_id": "W143796805",
+      "cited": 0,
+      "type": "article",
+      "sf": "2212",
+      "expected_new": 8.0294,
+      "frac": 0.333333,
+      "fwci_new": 0.0
+     },
+     {
+      "work_id": "W1524680910",
+      "cited": 2,
+      "type": "preprint",
+      "sf": "2212",
+      "expected_new": null,
+      "frac": 0.333333,
+      "fwci_new": null
+     },
+     {
+      "work_id": "W1608645772",
+      "cited": 14,
+      "type": "article",
+      "sf": "1111",
+      "expected_new": 18.4138,
+      "frac": 0.25,
+      "fwci_new": 0.760301
+     },
+     {
+      "work_id": "W179371129",
+      "cited": 2,
+      "type": "article",
+      "sf": "1105",
+      "expected_new": 8.0681,
+      "frac": 0.25,
+      "fwci_new": 0.247888
+     }
+    ]
+   }
+  ],
+  "pass": true
+ },
+ "PASS": false
+}

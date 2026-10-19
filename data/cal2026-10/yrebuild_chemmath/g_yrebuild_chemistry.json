@@ -1,0 +1,179 @@
+{
+ "field": "chemistry",
+ "date": "2026-08-09",
+ "expected_cells": {
+  "new": 130061,
+  "old": 43175
+ },
+ "frame_persons": 470,
+ "ship_alias_n": 3197,
+ "oc_unit_rows": 117999,
+ "fwci_new_na": {
+  "units_na": 35211,
+  "units_total": 117999,
+  "na_share": 0.2984,
+  "reasons_by_distinct_work": {
+   "excluded_type": 26857,
+   "missing_subfield_no_fallback": 79
+  }
+ },
+ "swap": {
+  "gold_new": {
+   "out": "<scratch>/chemmath_run2/october_p1_chemistry/frames/p1-gold/multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv",
+   "transition": {
+    "val2val": 26041,
+    "val2na": 74,
+    "na2val": 11,
+    "na2na": 338,
+    "zero_fill": 2062,
+    "row_na": 2098,
+    "agg_missing": 11,
+    "pc_mismatch": 2332
+   }
+  },
+  "gold_machineold": {
+   "out": "<scratch>/chemmath_run2/october_p1_chemistry/frames/p1-gold/multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_machineold_gold_2026-08-10.csv",
+   "transition": {
+    "val2val": 0,
+    "val2na": 0,
+    "na2val": 0,
+    "na2na": 0,
+    "zero_fill": 2062,
+    "row_na": 2098,
+    "agg_missing": 11,
+    "pc_mismatch": 2332
+   }
+  }
+ },
+ "C_PC_dept_only": {
+  "bad_rows": 0,
+  "pass": true,
+  "examples": []
+ },
+ "C_PC_network_both_diagnostic": {
+  "mismatch_rows": 2343,
+  "examples": [
+   [
+    "gold",
+    "A5000162694",
+    "1996",
+    "both",
+    "pc_mismatch",
+    "(9.0, 9, 6.0, 3)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1997",
+    "both",
+    "pc_mismatch",
+    "(5.0, 5, 5.0, 4)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1997",
+    "both",
+    "pc_mismatch",
+    "(5.0, 5, 5.0, 4)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1999",
+    "both",
+    "pc_mismatch",
+    "(4.0, 5, 2.0, 1)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1999",
+    "both",
+    "pc_mismatch",
+    "(4.0, 5, 2.0, 1)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1999",
+    "network",
+    "pc_mismatch",
+    "(4.0, 5, 2.0, 1)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "1999",
+    "both",
+    "pc_mismatch",
+    "(4.0, 5, 2.0, 1)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "2000",
+    "both",
+    "pc_mismatch",
+    "(5.0, 6, 3.0, 4)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "2000",
+    "both",
+    "pc_mismatch",
+    "(5.0, 6, 3.0, 4)"
+   ],
+   [
+    "gold",
+    "A5000162694",
+    "2000",
+    "network",
+    "pc_mismatch",
+    "(5.0, 6, 3.0, 4)"
+   ]
+  ],
+  "note": "Diagnostic only, without a gate: y in network/both rows was calculated by 07-24 prodlib. Alias closure, the 07-24 exclude_list, and supplemented sup_pairs edges differ from this machine. Small pub_count discrepancies are known source differences; the machineold frame isolates them."
+ },
+ "G_D": {
+  "all": {
+   "n_both_nonNA_frame_vs_new": 0,
+   "corr_raw": null,
+   "corr_log1p": null,
+   "spearman": null,
+   "quantiles_frame_old": {},
+   "quantiles_new": {},
+   "n_machineold_vs_new": 0,
+   "corr_machineold_vs_new_log1p": null,
+   "quantiles_machineold": {}
+  },
+  "dept_only": {
+   "n_both_nonNA_frame_vs_new": 0,
+   "corr_raw": null,
+   "corr_log1p": null,
+   "spearman": null,
+   "quantiles_frame_old": {},
+   "quantiles_new": {},
+   "n_machineold_vs_new": 0,
+   "corr_machineold_vs_new_log1p": null,
+   "quantiles_machineold": {}
+  },
+  "network_both": {
+   "n_both_nonNA_frame_vs_new": 0,
+   "corr_raw": null,
+   "corr_log1p": null,
+   "spearman": null,
+   "quantiles_frame_old": {},
+   "quantiles_new": {},
+   "n_machineold_vs_new": 0,
+   "corr_machineold_vs_new_log1p": null,
+   "quantiles_machineold": {}
+  }
+ },
+ "G_D_hand_check": {
+  "cells": [],
+  "pass": true
+ },
+ "PASS": true
+}

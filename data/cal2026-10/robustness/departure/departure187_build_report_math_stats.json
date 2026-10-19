@@ -1,0 +1,118 @@
+{
+ "ledger": "data/departure_verification_2026-09-10/departure_verified_2026-09-10.csv",
+ "rows": 33,
+ "verdicts": {
+  "stayed_through_window": 19,
+  "left_within_window": 9,
+  "left_after_window": 4,
+  "unknown": 1
+ },
+ "confidence": {
+  "high": 26,
+  "medium": 6,
+  "low": 1
+ },
+ "A_dropped_events": [
+  "A5000405788:melbourne",
+  "A5023907914:monash",
+  "A5035138469:monash",
+  "A5044731110:unsw",
+  "A5051533068:monash",
+  "A5052182828:sydney",
+  "A5069315147:unsw",
+  "A5074032970:monash",
+  "A5083769806:uwa",
+  "A5090916445:unsw"
+ ],
+ "B_recode_events": {
+  "A5000405788:melbourne": 2025,
+  "A5023907914:monash": 2018,
+  "A5031984571:uwa": 2015,
+  "A5035138469:monash": 2015,
+  "A5036133145:monash": 2013,
+  "A5044731110:unsw": 2016,
+  "A5051533068:monash": 2010,
+  "A5052182828:sydney": 2021,
+  "A5069315147:unsw": 2016,
+  "A5074032970:monash": 2015,
+  "A5075602113:monash": 2023,
+  "A5083478373:melbourne": 2021,
+  "A5083769806:uwa": 2013,
+  "A5090916445:unsw": 2008
+ },
+ "unparseable_departure_years": [],
+ "note": "LLM-assisted verdicts from public records; 45 listed rows flagged for a manual check",
+ "events_in_frame": 33,
+ "A_dropped_in_frame": [
+  "A5000405788:melbourne",
+  "A5023907914:monash",
+  "A5035138469:monash",
+  "A5044731110:unsw",
+  "A5051533068:monash",
+  "A5052182828:sydney",
+  "A5069315147:unsw",
+  "A5074032970:monash",
+  "A5083769806:uwa",
+  "A5090916445:unsw"
+ ],
+ "B_recoded_in_frame": {
+  "A5083478373:melbourne": 2021,
+  "A5000405788:melbourne": 2025,
+  "A5036133145:monash": 2013,
+  "A5051533068:monash": 2010,
+  "A5035138469:monash": 2015,
+  "A5075602113:monash": 2023,
+  "A5074032970:monash": 2015,
+  "A5023907914:monash": 2018,
+  "A5052182828:sydney": 2021,
+  "A5090916445:unsw": 2008,
+  "A5044731110:unsw": 2016,
+  "A5069315147:unsw": 2016,
+  "A5031984571:uwa": 2015,
+  "A5083769806:uwa": 2013
+ },
+ "ledger_events_not_in_frame": [],
+ "frames": {
+  "p1_A": {
+   "rows_in": 19910,
+   "dropped": 6380,
+   "edited": 0,
+   "kept_byte_identical": 13530
+  },
+  "p1_B": {
+   "rows_in": 19910,
+   "dropped": 0,
+   "edited": 1731,
+   "kept_byte_identical": 18179
+  },
+  "p2_A": {
+   "rows_in": 30314,
+   "dropped": 9710,
+   "edited": 0,
+   "kept_byte_identical": 20604
+  },
+  "p2_B": {
+   "rows_in": 30314,
+   "dropped": 0,
+   "edited": 4791,
+   "kept_byte_identical": 25523
+  }
+ },
+ "noop_control": "BYTE_EQUAL",
+ "afar": {
+  "frame": "data/frames/p3_afar_pos_math_stats.parquet",
+  "events_in_afar": 32,
+  "A_dropped_in_afar": 10,
+  "B_recoded_in_afar": 13,
+  "A_rows": 142629,
+  "B_rows_flipped": 57957
+ },
+ "staged_sha256": {
+  "p1_dep_A_math_stats.csv": "3679f2fbc470b4371aab9466b81a2bb60b4319fc5d6f4e74c8dd465a38898149",
+  "p1_dep_B_math_stats.csv": "f6eea8eba523cbdc989c49189372404a0161e5dfc787ef7e37409ba3c7267db7",
+  "p2_dep_A_math_stats.csv": "0be42a8fa9bd207d5b1fb0cdac7566f3b7e52c2d783236df14f6775e260abfaf",
+  "p2_dep_B_math_stats.csv": "502c02a60e6af4c57ba181031e09b7861506725db737edc26be1b56ad0be08d4",
+  "p3_afar_dep_A_math_stats.parquet": "bab8474081f92a249c1ffde899e7e345383b830ccd33a6ab3458185a067f3fc3",
+  "p3_afar_dep_B_math_stats.parquet": "efa29ac0ef291636042557f0ea9672286995ffa223c0228c434c0270a3e3c8db"
+ }
+}

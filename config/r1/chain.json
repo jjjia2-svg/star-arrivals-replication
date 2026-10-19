@@ -1,0 +1,176 @@
+{
+ "schema": "sar.r1.chain.v1",
+ "note": "The October (B0) layer chain, one step per J0 stage row (run_config.py --step NAME), cwd = the repo. Every argv is October's recorded invocation: pipeline/frames/cal2026-10/README.md run lines, the restake reports, frames_econ/build_report_econ920_2026-10.json, frames_run_report_chemmath_2026-09-23.json, frames_afar/afar_run_report.json, frames_variants/p3_full_variants_report_*.json, frames/assembly_2026-10.json and the build log of 2026-09-22/23 (not shipped); new required flags (F3/F5) carry October's values. Not steps (ruling 'What runs in J0'): run_caliber.py (its run-2 outputs are base inputs in _invalid_run2), fetch_star_id_supplement.py and fetch_patch_supplement.py (live API; their outputs are base inputs), run_cal_estimates.py (cells run through run_cells.py), afar_event_map.py (robustness), ledger_new_2026_10.py, the july / aug_fold restake variants. b0_chain_paths: every repo path the steps read, code and base data (a directory entry covers everything under it); a change to one after J0 forces a J0 rerun (gates.py link). M inputs (data/cal2026-10r1/) are not on the list. F20 (the new-star departure ledger) is out of scope: author ruling 2026-10-15, the paper prints no star-departure robustness.",
+ "b0_chain_paths": [
+  "analysis/estimation",
+  "analysis/lib",
+  "analysis/robustness/p3_afar/build_afar.py",
+  "analysis/robustness/p3_afar_cuts/build_afar_cut.py",
+  "analysis/robustness/threshold_p05/build_p3_full_variants.py",
+  "analysis/robustness/threshold_p05/filter_frames.py",
+  "config/r1/B0.json",
+  "config/r1/chain.json",
+  "config/r1/paths_aws.yaml",
+  "data/cal2026-08-28",
+  "data/cal2026-10/_invalid_run2",
+  "data/cal2026-10/calls_2026-10.csv",
+  "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl",
+  "data/cal2026-10/patch_supplement_2026-10",
+  "data/cal2026-10/roster_added_2026-10.csv",
+  "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+  "data/cal2026-10/star_id_corrections_2026-10.csv",
+  "data/departure_verification_2026-09-10",
+  "data/frames",
+  "data/raw_verified",
+  "data/robustness_2026-09-13_verified_pool",
+  "data/star_recheck_2026-09-22",
+  "pipeline/aws/r1/run_config.py",
+  "pipeline/frames/cal2026-10/assemble_frames.py",
+  "pipeline/frames/cal2026-10/configs",
+  "pipeline/frames/cal2026-10/econ920",
+  "pipeline/frames/cal2026-10/inpost_filter.py",
+  "pipeline/frames/cal2026-10/run_cal_afar.py",
+  "pipeline/frames/cal2026-10/run_cal_frames_chemmath.py",
+  "pipeline/frames/cal2026-10/stage.py",
+  "pipeline/frames/econ_fnfix_2026-08-15",
+  "pipeline/frames/make_slim.py",
+  "pipeline/frames/multidisc_gold_2026-08-10",
+  "pipeline/frames/p3_topicpair_2026-08-17",
+  "pipeline/frames/run_frames.py",
+  "pipeline/lib",
+  "pipeline/stars/caliber_2026-08-28",
+  "pipeline/stars/caliber_2026-10/restake_econ11.py",
+  "pipeline/stars/caliber_2026-10/run_caliber.py",
+  "pipeline/stars/caliber_2026-10/write_events.py",
+  "pipeline/stars/multidisc_2026-07-24/code/star_screening",
+  "pipeline/units",
+  "tools/content_equal.py"
+ ],
+ "steps": [
+  {
+   "name": "restake_econ11_aug",
+   "configs": ["B0"],
+   "source": "restake_econ11_report_aug_2026-10.json: convention aug, no person-map fold, 17 rechecked stars (generated 2026-09-22T21:49:57); restake_econ11.py reads its convention from the environment and takes no flags",
+   "env": {"SAR_ECON_CONVENTION": "aug", "SAR_ECON_FOLD": "0", "SAR_ECON_ALL": "0"},
+   "argv": [["{py}", "pipeline/stars/caliber_2026-10/restake_econ11.py"]],
+   "writes": [
+    "data/cal2026-10/restake_econ11_aug_2026-10.csv",
+    "data/cal2026-10/restake_econ11_control_aug_2026-10.csv",
+    "data/cal2026-10/restake_econ11_report_aug_2026-10.json"
+   ]
+  },
+  {
+   "name": "restake_econ11_aug_all",
+   "configs": ["B0"],
+   "source": "restake_econ11_report_aug_all_2026-10.json: convention aug, fold false, every economics event star (generated 2026-09-22T22:13:16, after the aug run; its control table overwrote the aug run's, same tag)",
+   "env": {"SAR_ECON_CONVENTION": "aug", "SAR_ECON_FOLD": "0", "SAR_ECON_ALL": "1"},
+   "argv": [["{py}", "pipeline/stars/caliber_2026-10/restake_econ11.py"]],
+   "writes": [
+    "data/cal2026-10/restake_econ11_aug_all_2026-10.csv",
+    "data/cal2026-10/restake_econ11_control_aug_2026-10.csv",
+    "data/cal2026-10/restake_econ11_report_aug_all_2026-10.json"
+   ]
+  },
+  {
+   "name": "write_events",
+   "configs": ["B0"],
+   "source": "pipeline/stars/caliber_2026-10/write_events.py, unedited, no flags (its docstring: the economics table from restake_econ11_aug/_aug_all, chemistry/mathematics from _invalid_run2/verdicts_2026-10.csv)",
+   "argv": [["{py}", "pipeline/stars/caliber_2026-10/write_events.py"]],
+   "writes": [
+    "data/cal2026-10/MANIFEST.sha256",
+    "data/cal2026-10/events_chemistry_cal2026-10.csv",
+    "data/cal2026-10/events_chemistry_cal2026-10_p05.csv",
+    "data/cal2026-10/events_decision_2026-10.json",
+    "data/cal2026-10/events_econ_cal2026-10.csv",
+    "data/cal2026-10/events_econ_cal2026-10_p05.csv",
+    "data/cal2026-10/events_math_stats_cal2026-10.csv",
+    "data/cal2026-10/events_math_stats_cal2026-10_p05.csv"
+   ]
+  },
+  {
+   "name": "frames_econ920",
+   "configs": ["B0"],
+   "source": "pipeline/frames/cal2026-10/README.md run line (--execute --override-gdose-gate); --patch-supplement = build_report_econ920_2026-10.json october.shadow.patch_supplement.extra (build log 2026-09-23 02:41, not shipped); --controls-report (F5) to this stage's own dir. All phases in one fresh root: the controls, then the October run",
+   "argv": [["{py}", "pipeline/frames/cal2026-10/econ920/run_econ920.py", "--execute", "--override-gdose-gate",
+             "--patch-supplement", "data/cal2026-10/patch_supplement_2026-10/works_by_author_supplement_2026-10.jsonl",
+             "--controls-report", "{out}/controls_report_econ920.json"]],
+   "writes": [
+    "data/cal2026-10/frames_econ",
+    "output/cal_intermediates/cal2026-10/pairs_unified.csv"
+   ]
+  },
+  {
+   "name": "frames_chemmath",
+   "configs": ["B0"],
+   "source": "pipeline/frames/cal2026-10/run_cal_frames_chemmath.py docstring run line (--execute, both fields; build log 2026-09-23 02:01, not shipped); --october-ref (F3): its preconditions read October's anchors from the reference copy",
+   "argv": [["{py}", "pipeline/frames/cal2026-10/run_cal_frames_chemmath.py", "--execute", "--october-ref", "/work/ref/october"]],
+   "writes": [
+    "data/cal2026-10/frames_chemistry",
+    "data/cal2026-10/frames_math_stats"
+   ]
+  },
+  {
+   "name": "afar",
+   "configs": ["B0"],
+   "source": "frames_afar/afar_run_report.json: mode october; the four economics inputs were hand-staged into a scratch dir under the names its inputs record (pairs_unified.csv, p1_frame_econ.csv, p2_becoming_econ.csv, relationships.csv); chemistry/mathematics from frames_chemistry/, frames_math_stats/ (build log 2026-09-23 02:43, not shipped)",
+   "argv": [
+    ["mkdir", "-p", "{tmp}/afar_econ"],
+    ["cp", "output/cal_intermediates/cal2026-10/pairs_unified.csv", "{tmp}/afar_econ/pairs_unified.csv"],
+    ["cp", "data/cal2026-10/frames_econ/p1_frame_econ.csv", "{tmp}/afar_econ/p1_frame_econ.csv"],
+    ["cp", "data/cal2026-10/frames_econ/p2_becoming_econ.csv", "{tmp}/afar_econ/p2_becoming_econ.csv"],
+    ["cp", "data/cal2026-10/frames_econ/relationships_econ.csv", "{tmp}/afar_econ/relationships.csv"],
+    ["{py}", "pipeline/frames/cal2026-10/run_cal_afar.py", "--execute", "--econ-dir", "{tmp}/afar_econ",
+     "--chem-dir", "data/cal2026-10/frames_chemistry", "--math-dir", "data/cal2026-10/frames_math_stats",
+     "--out", "data/cal2026-10/frames_afar"]
+   ],
+   "writes": [
+    "data/cal2026-10/frames_afar"
+   ]
+  },
+  {
+   "name": "p3_variants",
+   "configs": ["B0"],
+   "source": "frames_variants/p3_full_variants_report_<field>.json inputs (pairs, frame, events = <events-dir>/events_<field>_cal2026-10_p05.csv, suffix _p05, 3 bins), out data/cal2026-10/frames_variants (build log 2026-09-23 02:30 / 02:43, not shipped); the --control runs that wrote p3_full_variants_control_0828_* are not October products",
+   "argv": [
+    ["{py}", "analysis/robustness/threshold_p05/build_p3_full_variants.py", "--field", "econ",
+     "--pairs", "output/cal_intermediates/cal2026-10/pairs_unified.csv", "--frame", "data/cal2026-10/frames_econ/p1_frame_econ.csv",
+     "--events-dir", "data/cal2026-10", "--out", "data/cal2026-10/frames_variants", "--stage", "{tmp}/stage_econ"],
+    ["{py}", "analysis/robustness/threshold_p05/build_p3_full_variants.py", "--field", "chemistry",
+     "--pairs", "data/cal2026-10/frames_chemistry/pairs_none_chemistry.parquet", "--frame", "data/cal2026-10/frames_chemistry/p1_frame_chemistry.csv",
+     "--events-dir", "data/cal2026-10", "--out", "data/cal2026-10/frames_variants", "--stage", "{tmp}/stage_chemistry"],
+    ["{py}", "analysis/robustness/threshold_p05/build_p3_full_variants.py", "--field", "math_stats",
+     "--pairs", "data/cal2026-10/frames_math_stats/pairs_none_math_stats.parquet", "--frame", "data/cal2026-10/frames_math_stats/p1_frame_math_stats.csv",
+     "--events-dir", "data/cal2026-10", "--out", "data/cal2026-10/frames_variants", "--stage", "{tmp}/stage_math_stats"]
+   ],
+   "writes": [
+    "data/cal2026-10/frames_variants/p3_full_variants_report_chemistry.json",
+    "data/cal2026-10/frames_variants/p3_full_variants_report_econ.json",
+    "data/cal2026-10/frames_variants/p3_full_variants_report_math_stats.json",
+    "data/cal2026-10/frames_variants/p3_slim_chemistry_dosebin3.parquet",
+    "data/cal2026-10/frames_variants/p3_slim_chemistry_p05.parquet",
+    "data/cal2026-10/frames_variants/p3_slim_econ_dosebin3.parquet",
+    "data/cal2026-10/frames_variants/p3_slim_econ_p05.parquet",
+    "data/cal2026-10/frames_variants/p3_slim_math_stats_dosebin3.parquet",
+    "data/cal2026-10/frames_variants/p3_slim_math_stats_p05.parquet"
+   ]
+  },
+  {
+   "name": "frames",
+   "configs": ["B0"],
+   "source": "frames/assembly_2026-10.json: every source dir as recorded, pairs_unified_econ.source as passed (relative, cwd = repo); --pairs-pin (F3) = the run's own rebuilt econ920 report; post copy_frames puts the assembled dir under /work/prod/frames (ruling R10)",
+   "argv": [["{py}", "pipeline/frames/cal2026-10/assemble_frames.py",
+             "--econ-dir", "data/cal2026-10/frames_econ", "--econ-p1-dir", "data/cal2026-10/frames_econ",
+             "--chem-dir", "data/cal2026-10/frames_chemistry", "--math-dir", "data/cal2026-10/frames_math_stats",
+             "--afar-dir", "data/cal2026-10/frames_afar", "--variants-dir", "data/cal2026-10/frames_variants",
+             "--pairs-econ", "output/cal_intermediates/cal2026-10/pairs_unified.csv",
+             "--pairs-pin", "data/cal2026-10/frames_econ/build_report_econ920_2026-10.json#october.pairs_unified",
+             "--out", "data/cal2026-10/frames", "--execute"]],
+   "writes": [
+    "data/cal2026-10/frames",
+    "output/cal_intermediates/pairs_unified.csv"
+   ],
+   "post": "copy_frames",
+   "frames_dir": "data/cal2026-10/frames"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+$ Rscript analysis/estimation/run_p3_tp.R P3depB_pos_econ_A_far $TMPDIR/sar_rob_sensitivity/dep_econ/p3_afar_dep_B_econ.parquet
+[env] {"SAR_OUT": "data/cal2026-10/robustness/departure/estimates", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 3[topic-similar pairs] P3depB_pos_econ_A_far rows=1500425 groups=90325 first ties=3615 events=111 =====
+P3depB_pos_econ_A_far        ATE=-0.000651 (pair-clustered SE 0.000568, CI -0.001765~0.000462) joint-effect p=0.0000 | event-clustered SE 0.001003
+[P3depB_pos_econ_A_far] done elapsed=1.9 minutes
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+--- rc=0 secs=114.6 ---

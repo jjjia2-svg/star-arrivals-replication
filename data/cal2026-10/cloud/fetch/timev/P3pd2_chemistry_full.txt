@@ -1,0 +1,33 @@
+Effect_4 cannot be estimated. There is no switcher or no control for this effect.
+Effect_5 cannot be estimated. There is no switcher or no control for this effect.
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some effects could not be estimated. Therefore, the test of joint nullity of the effects could not be computed.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+Placebo_2 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+	Command being timed: "Rscript run_predate.R p3 P3pd2_chemistry_full p3_slim_chemistry.parquet 2 p3_slim_ev_chemistry.parquet"
+	User time (seconds): 221.18
+	System time (seconds): 90.21
+	Percent of CPU this job got: 477%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:05.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 44523476
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21340520
+	Voluntary context switches: 161735
+	Involuntary context switches: 7721
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

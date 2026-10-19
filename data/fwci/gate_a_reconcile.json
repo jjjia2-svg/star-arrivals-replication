@@ -1,0 +1,212 @@
+{
+ "gate": "G-A reconcile vs snapshot manifest",
+ "snapshot_manifest_date": "2026-06-26",
+ "manifest_record_count": 510372821,
+ "shards": 2446,
+ "lines_read": 510372821,
+ "bad_lines": 0,
+ "n_cells": 543037,
+ "sum_work_count": 375548859,
+ "sum_citation_sum": 2876959267,
+ "coverage_cellable_pct": 73.5832,
+ "not_cellable": {
+  "total_dropped_null": 134823962,
+  "pct_of_snapshot": 26.4168,
+  "missing_subfield_only": 106476062,
+  "missing_year_only": 19540616,
+  "missing_both": 8807284,
+  "bad_json_lines": 0
+ },
+ "work_type_breakdown_of_cellable": [
+  {
+   "work_type": "article",
+   "cells": 108557,
+   "works": 254202810,
+   "citations": 2371823903,
+   "pct_of_cellable": 67.6883
+  },
+  {
+   "work_type": "other",
+   "cells": 98781,
+   "works": 30738133,
+   "citations": 4892688,
+   "pct_of_cellable": 8.1849
+  },
+  {
+   "work_type": "dataset",
+   "cells": 20109,
+   "works": 23769204,
+   "citations": 1984412,
+   "pct_of_cellable": 6.3292
+  },
+  {
+   "work_type": "book-chapter",
+   "cells": 44060,
+   "works": 23663424,
+   "citations": 63521619,
+   "pct_of_cellable": 6.301
+  },
+  {
+   "work_type": "dissertation",
+   "cells": 31363,
+   "works": 13670795,
+   "citations": 3954095,
+   "pct_of_cellable": 3.6402
+  },
+  {
+   "work_type": "preprint",
+   "cells": 19483,
+   "works": 8606257,
+   "citations": 17014740,
+   "pct_of_cellable": 2.2916
+  },
+  {
+   "work_type": "book",
+   "cells": 74858,
+   "works": 7516846,
+   "citations": 117031825,
+   "pct_of_cellable": 2.0016
+  },
+  {
+   "work_type": "review",
+   "cells": 21504,
+   "works": 4197419,
+   "citations": 266322407,
+   "pct_of_cellable": 1.1177
+  },
+  {
+   "work_type": "letter",
+   "cells": 19438,
+   "works": 1701805,
+   "citations": 15721125,
+   "pct_of_cellable": 0.4532
+  },
+  {
+   "work_type": "libguides",
+   "cells": 3382,
+   "works": 1595331,
+   "citations": 1960,
+   "pct_of_cellable": 0.4248
+  },
+  {
+   "work_type": "paratext",
+   "cells": 18848,
+   "works": 1582044,
+   "citations": 3774600,
+   "pct_of_cellable": 0.4213
+  },
+  {
+   "work_type": "report",
+   "cells": 21547,
+   "works": 1279333,
+   "citations": 4334067,
+   "pct_of_cellable": 0.3407
+  },
+  {
+   "work_type": "peer-review",
+   "cells": 3999,
+   "works": 789022,
+   "citations": 25350,
+   "pct_of_cellable": 0.2101
+  },
+  {
+   "work_type": "reference-entry",
+   "cells": 6132,
+   "works": 750039,
+   "citations": 1102306,
+   "pct_of_cellable": 0.1997
+  },
+  {
+   "work_type": "editorial",
+   "cells": 18365,
+   "works": 644270,
+   "citations": 4084916,
+   "pct_of_cellable": 0.1716
+  },
+  {
+   "work_type": "standard",
+   "cells": 10778,
+   "works": 401750,
+   "citations": 293899,
+   "pct_of_cellable": 0.107
+  },
+  {
+   "work_type": "erratum",
+   "cells": 17129,
+   "works": 349285,
+   "citations": 1031636,
+   "pct_of_cellable": 0.093
+  },
+  {
+   "work_type": "supplementary-materials",
+   "cells": 1043,
+   "works": 66107,
+   "citations": 381,
+   "pct_of_cellable": 0.0176
+  },
+  {
+   "work_type": "retraction",
+   "cells": 2480,
+   "works": 22693,
+   "citations": 41956,
+   "pct_of_cellable": 0.006
+  },
+  {
+   "work_type": "software",
+   "cells": 803,
+   "works": 1585,
+   "citations": 57,
+   "pct_of_cellable": 0.0004
+  },
+  {
+   "work_type": "book-section",
+   "cells": 111,
+   "works": 248,
+   "citations": 20,
+   "pct_of_cellable": 0.0001
+  },
+  {
+   "work_type": "grant",
+   "cells": 132,
+   "works": 162,
+   "citations": 69,
+   "pct_of_cellable": 0.0
+  },
+  {
+   "work_type": "report-component",
+   "cells": 68,
+   "works": 152,
+   "citations": 1235,
+   "pct_of_cellable": 0.0
+  },
+  {
+   "work_type": "database",
+   "cells": 67,
+   "works": 145,
+   "citations": 1,
+   "pct_of_cellable": 0.0
+  }
+ ],
+ "signed_whitelist_article_review": {
+  "note": "The included_types filter is applied downstream in 01_build_selffwci_baseline.py; this table retains all types.",
+  "works": 258400229,
+  "citations": 2638146310,
+  "cells": 130061,
+  "pct_of_cellable": 68.806,
+  "pct_of_snapshot": 50.6297
+ },
+ "paratext": {
+  "count": 1582044,
+  "citation_sum": 3774600,
+  "pct_of_cellable": 0.4213
+ },
+ "checks": {
+  "A1_every_shard_read_equals_manifest": true,
+  "A2_zero_bad_json_lines": true,
+  "A3_work_count_plus_dropped_equals_read": true,
+  "A4_drop_decomposition_sums": true,
+  "A5_read_plus_bad_equals_manifest": true,
+  "A6_table_totals_match_scan_manifest": true
+ },
+ "PASS": true
+}

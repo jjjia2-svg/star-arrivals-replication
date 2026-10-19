@@ -1,0 +1,52 @@
+{
+  "discipline": "math_stats",
+  "label": "math_stats fnfix 2026-08-15：final + 海外挖角门假阴性补漏事件；cal2026-10 staged (Piece A, pipeline/frames/cal2026-10/stage.py)",
+  "p_level": "p01",
+  "_p_level_note": "p01 = 主档命名(沿用 R 脚本写死文件名), 无分位含义; 事件=台账该学科全部",
+  "_changes_vs_2026-07-24": [
+    "roster: 银标 → 人核金标（archival 名册逐人核，Wayback 旧域 + ORCID + OpenAlex 三路）",
+    "events: 加入 2026-08-09 重审放回的 2 起化学事件（no rank gate）",
+    "fwci_baseline_pop: SSD 种子子集(129,743 cell/11.0M work) → 全快照(543,037 cell/375.5M work)",
+    "supplement: 6,913 → 7,174 行（补 2 位新星的 API 全量边）"
+  ],
+  "snapshot": {
+    "edges_glob": "${DERIVED}/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+    "works_glob": "${DERIVED}/u1_edges_full_2026-07-05/works/**/*.parquet",
+    "work_first_pub_glob": "${DERIVED}/u1_edges_full_2026-07-05/work_first_pub/**/*.parquet",
+    "fwci_baseline_pop_glob": "${LEGACY_V2}/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet"
+  },
+  "supplement_jsonl": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl",
+  "person_map": {
+    "mode": "identity"
+  },
+  "events": {
+    "mode": "signed_csv",
+    "signed_csv": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/events_math_stats_fnfix_2026-08-10.csv",
+    "shortlist_csv": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/shortlist_fnfix.csv",
+    "field": "math_stats"
+  },
+  "roster": {
+    "mode": "silver_parquet",
+    "path": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/fnfix/roster_gold_math_stats.parquet",
+    "exclude_authors_parquet": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet"
+  },
+  "outcome_exclusion_stars": {
+    "mode": "exclude_list",
+    "path": "${SHADOW}/v2_output/multidisc_gold_2026-08-10/data/stars_excluded_fnfix.parquet"
+  },
+  "indept": {
+    "mode": "roster_intervals"
+  },
+  "star_first_pub": {
+    "mode": "works_robust"
+  },
+  "ego_first_pub": {
+    "mode": "works_robust"
+  },
+  "dose_coupling_join": {
+    "mode": "na"
+  },
+  "run_dir": "${RUN_DIR}",
+  "roster_variant": "fnfix",
+  "_cal2026_10_note": "identical to the 2026-08-28 cal config (frames_stage.prodlib_config cal=True) except that every path is a placeholder rendered by stage.render_config: ${DERIVED} = <ssd_root>/derived (the data mirror), ${LEGACY_V2} = the read-only legacy v2_output, ${SHADOW} = the staged input tree, ${RUN_DIR} = the run dir"
+}

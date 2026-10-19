@@ -1,0 +1,17 @@
+{
+ "works_snapshot": 510372821,
+ "works_benchmarkable": 375548859,
+ "benchmark_cells": 543037,
+ "works_articles_reviews": 258400229,
+ "openalex_subfields": 252,
+ "u1_universe": {
+  "works": 46504474,
+  "authors": 10497390,
+  "share_of_snapshot_pct": 9.1
+ },
+ "roster_spell_max_start": {
+  "econ": 2025,
+  "chem": 2025,
+  "math": 2025
+ }
+}

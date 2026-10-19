@@ -1,0 +1,57 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "finalb0",
+  "instance_type": "m6i.2xlarge",
+  "price_hr": 0.384,
+  "est_min": 120,
+  "hard_min": 240,
+  "root_gb": 100,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_PATHS_CONFIG": "$REPO_DIR/config/r1/paths_aws.yaml",
+    "SAR_R1_CONFIG": "$REPO_DIR/config/r1/B0.json",
+    "PYTHONHASHSEED": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "pulls": [],
+  "required_dests": [
+    "/work/j0/"
+  ],
+  "data_sync": [
+    [
+      "r1/legacy/legacy_multiplex/",
+      "/data/legacy/thesis/multiplex_pipeline/"
+    ],
+    [
+      "r1/legacy/legacy_thesis/",
+      "/data/legacy/thesis/"
+    ],
+    [
+      "r1/legacy/legacy_v2_output/",
+      "/data/legacy/thesis/v2_output/"
+    ],
+    [
+      "r1/ref/october/",
+      "/data/ref/october/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/run_stages.py",
+      "/work/run_stages.py"
+    ]
+  ],
+  "env_layers": [
+    "py",
+    "rmac",
+    "tex"
+  ],
+  "stages": "config/r1/stages/finalb0.json",
+  "steps": [
+    "\"$PY\" /work/run_stages.py --table \"$REPO_DIR/config/r1/stages/finalb0.json\" --repo \"$REPO_DIR\" --commit \"$COMMIT\" --prefix \"$P\" --work /work --out /work/out ${SAR_RESUME_DIR:+--resume-dir \"$SAR_RESUME_DIR\"}"
+  ]
+}

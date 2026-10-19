@@ -1,0 +1,15 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Western Australia
+  word_boundary: false
+- case_sensitive: true
+  text: UWA
+  word_boundary: true
+dept_key: uwa_econ
+exclude_tokens: []
+openalex_inst_id: I177877127
+phrases:
+- Department of Economics
+- Economics Department
+- School of Economics and Commerce
+window_chars: 80

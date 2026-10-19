@@ -1,0 +1,7 @@
+{
+ "schema": "sar.r1.counts.v1",
+ "config": "B0",
+ "events": {"econ": 113, "chemistry": 38, "math_stats": 33},
+ "events_total": 184,
+ "candidates": 187
+}

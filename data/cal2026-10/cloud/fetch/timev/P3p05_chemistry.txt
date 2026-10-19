@@ -1,0 +1,26 @@
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+	Command being timed: "Rscript run_p3.R P3p05_chemistry p3_slim_chemistry_p05.parquet"
+	User time (seconds): 131.52
+	System time (seconds): 55.88
+	Percent of CPU this job got: 443%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:42.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33047556
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13618519
+	Voluntary context switches: 103255
+	Involuntary context switches: 5427
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

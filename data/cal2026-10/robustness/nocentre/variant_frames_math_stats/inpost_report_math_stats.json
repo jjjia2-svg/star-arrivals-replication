@@ -1,0 +1,217 @@
+{
+ "stage": "inpost_filter (D2, 2026-09-22)",
+ "rule": "keep (person, event) iff some spell of the person in the field's roster has year_start <= arrival <= year_end; join on the person only",
+ "input": {
+  "frame": "$TMPDIR/sar_rob_nocentre/driver_variant/october_prodlib_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+  "sha256": "75a4b54b934fe4d9e8d554669b5ee0011813670241bae28beb4fc3c777cc32fc",
+  "rows": 7887,
+  "relations": 717,
+  "events": 29
+ },
+ "spells": {
+  "roster": "data/raw_verified/incfel/roster_gold_math_stats.parquet",
+  "roster_sha256": "46295d2f66ea19e77b9b4d8afcc52c1bce73808dbac61549226d83bc275eabcf",
+  "roster_rows": 552,
+  "roster_persons": 545,
+  "id_forms": "bare author_id",
+  "persons_with_spells": 545
+ },
+ "relations_by_class": {
+  "kept": 376,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 341
+ },
+ "rows_by_class": {
+  "kept": 4136,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 3751
+ },
+ "persons_by_class": {
+  "kept": 171,
+  "dropped_no_spell": 0,
+  "dropped_not_in_post": 177
+ },
+ "events_left_with_zero_rows": [],
+ "per_event": {
+  "A5012602442:melbourne": {
+   "arrival": 2017,
+   "kept": 12,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 3
+  },
+  "A5014535747:monash": {
+   "arrival": 2015,
+   "kept": 8,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 3
+  },
+  "A5015471697:unsw": {
+   "arrival": 2010,
+   "kept": 9,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 11
+  },
+  "A5017222669:uq": {
+   "arrival": 2002,
+   "kept": 6,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 17
+  },
+  "A5022427262:unsw": {
+   "arrival": 2019,
+   "kept": 1,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 1
+  },
+  "A5023907914:monash": {
+   "arrival": 2015,
+   "kept": 16,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 6
+  },
+  "A5031984571:uwa": {
+   "arrival": 2005,
+   "kept": 28,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 43
+  },
+  "A5035138469:monash": {
+   "arrival": 2012,
+   "kept": 22,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 16
+  },
+  "A5036133145:monash": {
+   "arrival": 2005,
+   "kept": 8,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 10
+  },
+  "A5042200719:unsw": {
+   "arrival": 2003,
+   "kept": 18,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 37
+  },
+  "A5042789303:melbourne": {
+   "arrival": 2018,
+   "kept": 33,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 8
+  },
+  "A5044731110:unsw": {
+   "arrival": 2014,
+   "kept": 14,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 8
+  },
+  "A5046503140:uq": {
+   "arrival": 2005,
+   "kept": 34,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 24
+  },
+  "A5051266677:uq": {
+   "arrival": 2012,
+   "kept": 4,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 2
+  },
+  "A5052182828:sydney": {
+   "arrival": 2019,
+   "kept": 1,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 0
+  },
+  "A5061150027:unsw": {
+   "arrival": 2015,
+   "kept": 1,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 1
+  },
+  "A5068065835:monash": {
+   "arrival": 2010,
+   "kept": 13,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 20
+  },
+  "A5069315147:unsw": {
+   "arrival": 2015,
+   "kept": 6,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 6
+  },
+  "A5074011742:monash": {
+   "arrival": 2015,
+   "kept": 2,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 0
+  },
+  "A5074884339:sydney": {
+   "arrival": 2008,
+   "kept": 6,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 12
+  },
+  "A5075602113:monash": {
+   "arrival": 2012,
+   "kept": 6,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 3
+  },
+  "A5077319118:monash": {
+   "arrival": 2014,
+   "kept": 7,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 7
+  },
+  "A5077954390:melbourne": {
+   "arrival": 2014,
+   "kept": 26,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 26
+  },
+  "A5079308734:monash": {
+   "arrival": 2015,
+   "kept": 15,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 8
+  },
+  "A5083478373:melbourne": {
+   "arrival": 2013,
+   "kept": 19,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 12
+  },
+  "A5083769806:uwa": {
+   "arrival": 2010,
+   "kept": 19,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 16
+  },
+  "A5090916445:unsw": {
+   "arrival": 2002,
+   "kept": 3,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 4
+  },
+  "A5100397166:sydney": {
+   "arrival": 2010,
+   "kept": 2,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 2
+  },
+  "A5113900323:monash": {
+   "arrival": 2013,
+   "kept": 37,
+   "dropped_no_spell": 0,
+   "dropped_not_in_post": 35
+  }
+ },
+ "output": {
+  "frame": "$TMPDIR/sar_rob_nocentre/driver_variant/october_inpost_math_stats/frame_inpost.csv",
+  "sha256": "85b7ea9640b72a376b7c84a1ad90a9121e1e57e4b8e68e896bd76804f33f1bf3",
+  "rows": 4136,
+  "byte_preserving": true
+ }
+}

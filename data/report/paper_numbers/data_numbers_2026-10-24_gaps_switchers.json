@@ -1,0 +1,70 @@
+{
+ "spec": {
+  "effects": 6,
+  "placebo": 4
+ },
+ "rows_raw": 139997,
+ "rows_kept": 134310,
+ "horizons": [
+  {
+   "k": 1,
+   "switchers": 8542,
+   "n": 48493,
+   "appendix_switchers": 5264,
+   "matches_appendix": false
+  },
+  {
+   "k": 2,
+   "switchers": 7966,
+   "n": 38933,
+   "appendix_switchers": 4944,
+   "matches_appendix": false
+  },
+  {
+   "k": 3,
+   "switchers": 7682,
+   "n": 29402,
+   "appendix_switchers": 4840,
+   "matches_appendix": false
+  },
+  {
+   "k": 4,
+   "switchers": 7408,
+   "n": 20563,
+   "appendix_switchers": 4668,
+   "matches_appendix": false
+  },
+  {
+   "k": 5,
+   "switchers": 6971,
+   "n": 11835,
+   "appendix_switchers": 4475,
+   "matches_appendix": false
+  },
+  {
+   "k": 6,
+   "switchers": 6652,
+   "n": 10286,
+   "appendix_switchers": 4282,
+   "matches_appendix": false
+  }
+ ],
+ "switchers_total": 45221,
+ "appendix_switchers_total": 28473,
+ "switchers_total_matches_appendix": false,
+ "ate_row_switchers": 45221,
+ "weighted_avg_effect": -0.11982424934,
+ "appendix_weighted_avg": -0.141,
+ "weighted_avg_matches_appendix": false,
+ "avg_dose_switchers": 0.35895082441,
+ "delta_D_avg_total": 3.5543801028,
+ "appendix_avg_dose": 0.383,
+ "avg_dose_matches_appendix": false,
+ "coef_check": {
+  "pass": true,
+  "ate": -0.33381800845,
+  "expected_ate": -0.33381801,
+  "max_abs_diff_effects": 4.795095071e-09,
+  "n_match": true
+ }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rk6a",
+  "instance_type": "r6i.8xlarge",
+  "price_hr": 2.016,
+  "est_min": 45,
+  "hard_min": 180,
+  "root_gb": 100,
+  "sar_host": "ec2-r1",
+  "env": {
+    "SAR_SSD_ROOT": "/data/openalex_pipeline"
+  },
+  "pulls": [],
+  "required_dests": [
+    "/work/recovered/",
+    "/work/merged/"
+  ],
+  "data_sync": [
+    [
+      "u1_edges_full_2026-07-05/authorship_edges/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/authorship_edges/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/work_text/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/work_text/"
+    ],
+    [
+      "u1_edges_full_2026-07-05/works/",
+      "/data/openalex_pipeline/derived/u1_edges_full_2026-07-05/works/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/authorship_edges/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/authorship_edges/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/work_text/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/work_text/"
+    ],
+    [
+      "u1_full_11school_2026-07-16/works/",
+      "/data/openalex_pipeline/derived/u1_full_11school_2026-07-16/works/"
+    ]
+  ],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/rk6_requests.py",
+      "/work/rk6_requests.py"
+    ],
+    [
+      "pipeline/aws/r1/verify_inputs.py",
+      "/work/verify_inputs.py"
+    ]
+  ],
+  "steps": [
+    "\"$PY\" /work/verify_inputs.py recovered --dir /work/recovered --pins \"$REPO_DIR/config/r1/recovered_pins.json\"",
+    "\"$PY\" /work/rk6_requests.py build --merged /work/merged/candidates_merged.csv --recovered /work/recovered --out /work/in6 --pins \"$REPO_DIR/config/r1/recovered_pins.json\" --fail-summary /work/out/summary.json",
+    "cd \"$REPO_DIR\" && RK_REPO=\"$REPO_DIR\" RK_IN=/work/in6 RK_OUT=/work/out \"$PY\" /work/recovered/rk1/payload/rk1.py > /work/out/run.log 2>&1",
+    "\"$PY\" /work/rk6_requests.py summarize --rk-out /work/out --in /work/in6 --merged /work/merged/candidates_merged.csv"
+  ]
+}

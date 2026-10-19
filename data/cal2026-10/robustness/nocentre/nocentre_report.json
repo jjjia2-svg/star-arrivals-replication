@@ -1,0 +1,1739 @@
+{
+ "group": "nocentre",
+ "caliber": "cal2026-10",
+ "generated": "2026-09-23 03:48",
+ "runner": "analysis/robustness/sensitivity/run_nocentre_cal2026_10.py",
+ "scratch": "$TMPDIR/sar_rob_nocentre",
+ "products_dir": "$TMPDIR/sar_rob_nocentre/products",
+ "r_cap": 3,
+ "battery_jobs": 2,
+ "design": "analysis/robustness/sensitivity/run_nocentre.py (T6-1: the ONE substitution is the roster; canon roster_gold_<f> with research-centre staff merged in vs the frozen INCFEL roster) applied inside the October chain: pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --roster-variant incfel",
+ "controls": {
+  "driver_control_run": {
+   "chemistry": {
+    "prodlib_control_vs_08_28": "BYTE_EQUAL",
+    "relationships_vs_08_28": "BYTE_EQUAL",
+    "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+    "union_build_report_h1_ulp_in_advisory": {
+     "n": 0,
+     "worst_ulp": 0,
+     "ulp_bound": 8
+    },
+    "p1_frame_vs_08_28_H1": {
+     "ok": true,
+     "differing_lines": 6472,
+     "of": 50193,
+     "worst_ulp": 4
+    },
+    "p2_becoming_vs_08_28": "BYTE_EQUAL",
+    "parquets_vs_08_28": {
+     "pairs_none_chemistry.parquet": "EQUAL",
+     "p3_slim_chemistry.parquet": "EQUAL",
+     "p3_slim_ev_chemistry.parquet": "EQUAL"
+    },
+    "r_cells_vs_08_28_golds": {
+     "P1_fnfix_chemistry": "EQUAL",
+     "P2_fnfix_chemistry": "EQUAL"
+    },
+    "prodlib_october": "BYTE_EQUAL",
+    "prodlib_october_sha256": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7",
+    "inpost": {
+     "kept": 1833,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 1778
+    },
+    "accounting_closed": true,
+    "products_sha256": {
+     "union_frame": "cea79e7276cf021e08ece6bf4f9f77fecfd8bfe75e773a798f1e7ff1a60a571b",
+     "relationships_chemistry.csv": "cb2e71f66b12b31f9dc60627e303decbd9b997509fbc8887ffef5c86a52a8fb7",
+     "union_build_report_chemistry.json": "96c37c749e6981a0fcb40ccee4f367f28e7a85b8026d51b7cb469b810538c074",
+     "p1_frame_chemistry.csv": "010319dbba00799bb855a7f3cafdfda0f1db3a7447c221d6eaadfdf4b8567237",
+     "p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+     "pairs_none_chemistry.parquet": "0e97fb7f7b27499e885c543d2c93bda8beeb528e7cc866c3eab178af9cd74005",
+     "p3_slim_ev_chemistry.parquet": "058ed272da629724fabecb4cdc62dba238f28b17f86b654fa32f7cbd398b0243",
+     "p3_slim_chemistry.parquet": "ced9ec426fe15c1a528ede81921ba93b6819be7587d640f286728050a9aec2e2"
+    },
+    "secs": 29.0,
+    "october_vs_frozen_cal2026_10": {
+     "all_equal": true,
+     "relationships": "BYTE_EQUAL",
+     "p2_becoming": "BYTE_EQUAL",
+     "p1_frame_H1": {
+      "ok": true,
+      "differing_lines": 4402,
+      "worst_ulp": 3
+     },
+     "union_build_report": {
+      "byte_equal": true,
+      "equal_modulo_paths": true,
+      "equal_modulo_paths_and_h1_advisory": true
+     },
+     "parquets": {
+      "pairs_none_chemistry.parquet": "EQUAL",
+      "p3_slim_chemistry.parquet": "EQUAL",
+      "p3_slim_ev_chemistry.parquet": "EQUAL"
+     }
+    },
+    "control_ok": true
+   },
+   "math_stats": {
+    "prodlib_control_vs_08_28": "BYTE_EQUAL",
+    "relationships_vs_08_28": "BYTE_EQUAL",
+    "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS_AND_H1_ADVISORY",
+    "union_build_report_h1_ulp_in_advisory": {
+     "n": 2,
+     "worst_ulp": 1,
+     "ulp_bound": 8
+    },
+    "p1_frame_vs_08_28_H1": {
+     "ok": true,
+     "differing_lines": 1376,
+     "of": 24211,
+     "worst_ulp": 3
+    },
+    "p2_becoming_vs_08_28": "BYTE_EQUAL",
+    "parquets_vs_08_28": {
+     "pairs_none_math_stats.parquet": "EQUAL",
+     "p3_slim_math_stats.parquet": "EQUAL",
+     "p3_slim_ev_math_stats.parquet": "EQUAL"
+    },
+    "r_cells_vs_08_28_golds": {
+     "P1_fnfix_math_stats": "EQUAL",
+     "P2_fnfix_math_stats": "EQUAL"
+    },
+    "prodlib_october": "BYTE_EQUAL",
+    "prodlib_october_sha256": "ca6d75f1de97ca99f51506b5a792ab83e247db260936f0b7d43f771e393a5ae8",
+    "inpost": {
+     "kept": 380,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 391
+    },
+    "accounting_closed": true,
+    "products_sha256": {
+     "union_frame": "92069cb55c37141091555929fe7ac47332fc84240f7b46946eee30432eaedd1b",
+     "relationships_math_stats.csv": "74a52cf8b0f206212cbf83c881bf1e17b5184c9c07aecf34dff6ebd26b5a26fd",
+     "union_build_report_math_stats.json": "900cf902b03a316909ad428d68f25a619ed77fbb1711c48df32a53bbf6b192ca",
+     "p1_frame_math_stats.csv": "20dee13d2bdd377c289405cbca4c581acca352cc9a986857e4f74be615af7541",
+     "p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+     "pairs_none_math_stats.parquet": "88476ff91867d023cc082bec611466dbafdb811c068e7f28065b19dbac216dbf",
+     "p3_slim_ev_math_stats.parquet": "a98e237d7c1f8fdafc1f74b1cafda47271f7a569103a2a7ee988aa5de81a212a",
+     "p3_slim_math_stats.parquet": "58c04c319e7790045aea91c852b252fd52a52b12befb4a41aad769db73697447"
+    },
+    "secs": 21.4,
+    "october_vs_frozen_cal2026_10": {
+     "all_equal": true,
+     "relationships": "BYTE_EQUAL",
+     "p2_becoming": "BYTE_EQUAL",
+     "p1_frame_H1": {
+      "ok": true,
+      "differing_lines": 1087,
+      "worst_ulp": 3
+     },
+     "union_build_report": {
+      "byte_equal": true,
+      "equal_modulo_paths": true,
+      "equal_modulo_paths_and_h1_advisory": true
+     },
+     "parquets": {
+      "pairs_none_math_stats.parquet": "EQUAL",
+      "p3_slim_math_stats.parquet": "EQUAL",
+      "p3_slim_ev_math_stats.parquet": "EQUAL"
+     }
+    },
+    "control_ok": true
+   }
+  },
+  "driver_variant_run_phase_C": {
+   "chemistry": {
+    "prodlib_control_vs_08_28": "BYTE_EQUAL",
+    "relationships_vs_08_28": "BYTE_EQUAL",
+    "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+    "union_build_report_h1_ulp_in_advisory": {
+     "n": 0,
+     "worst_ulp": 0,
+     "ulp_bound": 8
+    },
+    "p1_frame_vs_08_28_H1": {
+     "ok": true,
+     "differing_lines": 6625,
+     "of": 50193,
+     "worst_ulp": 3
+    },
+    "p2_becoming_vs_08_28": "BYTE_EQUAL",
+    "parquets_vs_08_28": {
+     "pairs_none_chemistry.parquet": "EQUAL",
+     "p3_slim_chemistry.parquet": "EQUAL",
+     "p3_slim_ev_chemistry.parquet": "EQUAL"
+    },
+    "r_cells_vs_08_28_golds": {
+     "P1_fnfix_chemistry": "EQUAL",
+     "P2_fnfix_chemistry": "EQUAL"
+    },
+    "prodlib_october": "NOT_EQUAL (VARIANT roster: equality not expected, recorded only)",
+    "prodlib_october_sha256": "10d457f68a0255abf4ff6225b152c91484d04aa579bbd282ca380b0d56f9af84",
+    "inpost": {
+     "kept": 1662,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 1260
+    },
+    "accounting_closed": true,
+    "secs": 27.0,
+    "control_ok": true
+   },
+   "math_stats": {
+    "prodlib_control_vs_08_28": "BYTE_EQUAL",
+    "relationships_vs_08_28": "BYTE_EQUAL",
+    "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+    "union_build_report_h1_ulp_in_advisory": {
+     "n": 0,
+     "worst_ulp": 0,
+     "ulp_bound": 8
+    },
+    "p1_frame_vs_08_28_H1": {
+     "ok": true,
+     "differing_lines": 1395,
+     "of": 24211,
+     "worst_ulp": 3
+    },
+    "p2_becoming_vs_08_28": "BYTE_EQUAL",
+    "parquets_vs_08_28": {
+     "pairs_none_math_stats.parquet": "EQUAL",
+     "p3_slim_math_stats.parquet": "EQUAL",
+     "p3_slim_ev_math_stats.parquet": "EQUAL"
+    },
+    "r_cells_vs_08_28_golds": {
+     "P1_fnfix_math_stats": "EQUAL",
+     "P2_fnfix_math_stats": "EQUAL"
+    },
+    "prodlib_october": "NOT_EQUAL (VARIANT roster: equality not expected, recorded only)",
+    "prodlib_october_sha256": "75a4b54b934fe4d9e8d554669b5ee0011813670241bae28beb4fc3c777cc32fc",
+    "inpost": {
+     "kept": 376,
+     "dropped_no_spell": 0,
+     "dropped_not_in_post": 341
+    },
+    "accounting_closed": true,
+    "secs": 21.7,
+    "control_ok": true
+   }
+  },
+  "estimation": {
+   "cells": {
+    "P1_fnfix_chemistry": {
+     "label": "P1_fnfix_chemistry",
+     "driver": "analysis/estimation/run_p1.R",
+     "frame": "data/frames/p1_frame_chemistry.csv",
+     "frame_sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+     "rc": 0,
+     "secs": 7.4,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P1_fnfix_chemistry.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P1_fnfix_chemistry.json",
+     "json_sha256": "949b167af234e96b365794a2484a4cb6ba7f1bf98dd4a432e752dbbcdf2115e7",
+     "status": "OK",
+     "headline": {
+      "rows_raw": 30635,
+      "rows_kept": 29414,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 26967,
+        "rels": 2674,
+        "events": 38,
+        "ate": -0.21897052,
+        "se": 0.07068566,
+        "lb": -0.35751186,
+        "ub": -0.08042917,
+        "p_joint_effects": 0.00776049,
+        "p_joint_placebo": 0.85627104
+       },
+       "network": {
+        "status": "OK",
+        "obs": 17842,
+        "rels": 1727,
+        "events": 38,
+        "ate": -0.1052363,
+        "se": 0.11320805,
+        "lb": -0.32712,
+        "ub": 0.1166474,
+        "p_joint_effects": 0.33171769,
+        "p_joint_placebo": 0.90958319
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 13569,
+        "rels": 1387,
+        "events": 38,
+        "ate": -0.22885905,
+        "se": 0.09466572,
+        "lb": -0.41440046,
+        "ub": -0.04331764,
+        "p_joint_effects": 0.00069117,
+        "p_joint_placebo": 0.80673914
+       }
+      }
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P1_fnfix_chemistry.json",
+      "gold_sha256": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+      "diff_head": []
+     }
+    },
+    "P2_fnfix_chemistry": {
+     "label": "P2_fnfix_chemistry",
+     "driver": "analysis/estimation/run_p2.R",
+     "frame": "data/frames/p2_becoming_chemistry.csv",
+     "frame_sha256": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+     "rc": 0,
+     "secs": 3.7,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P2_fnfix_chemistry.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P2_fnfix_chemistry.json",
+     "json_sha256": "5ddeb94bd0e6e82c29e544f3c7a4494673d810d508e9922978f654e127d61714",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 46168,
+      "rels": 2778,
+      "grps": null,
+      "persons": 470,
+      "events": 38,
+      "first_ties": 155,
+      "ate": 0.00609768,
+      "se": 0.00085062,
+      "lb": 0.0044305,
+      "ub": 0.00776486,
+      "p_joint_effects": 2.05878647e-11,
+      "p_joint_placebo": null
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P2_fnfix_chemistry.json",
+      "gold_sha256": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+      "diff_head": []
+     }
+    },
+    "P3cut_pos_chemistry": {
+     "label": "P3cut_pos_chemistry",
+     "driver": "analysis/estimation/run_p3_tp.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_control/p3_afar_pos_chemistry.parquet",
+     "frame_sha256": "485974a5cbdb305a0832f525a1c290c5b7b31817e20ffe78786911155814bb5a",
+     "rc": 0,
+     "secs": 8.7,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3cut_pos_chemistry.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P3cut_pos_chemistry.json",
+     "json_sha256": "965a4036f0676abb305a633beb17ccddf396ba5738d257bbebf6736162cd9fc9",
+     "status": "OK",
+     "headline": {
+      "rows": 184960,
+      "grps": 11466,
+      "events": 38,
+      "first_ties": 1004,
+      "pair_cluster": {
+       "status": null,
+       "ate": -0.00466235,
+       "se": 0.00296265,
+       "lb": -0.01046904,
+       "ub": 0.00114434,
+       "p_joint_effects": 0.04285725
+      },
+      "event_cluster": {
+       "status": null,
+       "ate": -0.00466235,
+       "se": 0.00293027,
+       "lb": -0.01040558,
+       "ub": 0.00108088,
+       "p_joint_effects": 8.159e-05
+      }
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P3pos_chemistry_A_far.json",
+      "gold_sha256": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+      "diff_head": []
+     }
+    },
+    "P1_fnfix_math_stats": {
+     "label": "P1_fnfix_math_stats",
+     "driver": "analysis/estimation/run_p1.R",
+     "frame": "data/frames/p1_frame_math_stats.csv",
+     "frame_sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+     "rc": 0,
+     "secs": 6.9,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P1_fnfix_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P1_fnfix_math_stats.json",
+     "json_sha256": "e30c7a069d70fd82712bdce1330dc6d7dbe41dca9a5e072fee2c749c0f7050cd",
+     "status": "OK",
+     "headline": {
+      "rows_raw": 19910,
+      "rows_kept": 18854,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 16117,
+        "rels": 1714,
+        "events": 33,
+        "ate": -0.06028415,
+        "se": 0.15882016,
+        "lb": -0.37156595,
+        "ub": 0.25099766,
+        "p_joint_effects": 0.0085479,
+        "p_joint_placebo": 0.17488937
+       },
+       "network": {
+        "status": "OK",
+        "obs": 3628,
+        "rels": 364,
+        "events": 29,
+        "ate": -0.13332646,
+        "se": 0.20022774,
+        "lb": -0.52576563,
+        "ub": 0.25911271,
+        "p_joint_effects": 0.51847387,
+        "p_joint_placebo": 0.63395676
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 13635,
+        "rels": 1471,
+        "events": 33,
+        "ate": -0.03100046,
+        "se": 0.18531792,
+        "lb": -0.3942169,
+        "ub": 0.33221598,
+        "p_joint_effects": 0.01028101,
+        "p_joint_placebo": 0.23664006
+       }
+      }
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P1_fnfix_math_stats.json",
+      "gold_sha256": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+      "diff_head": []
+     }
+    },
+    "P2_fnfix_math_stats": {
+     "label": "P2_fnfix_math_stats",
+     "driver": "analysis/estimation/run_p2.R",
+     "frame": "data/frames/p2_becoming_math_stats.csv",
+     "frame_sha256": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+     "rc": 0,
+     "secs": 3.1,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P2_fnfix_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P2_fnfix_math_stats.json",
+     "json_sha256": "4c6f5671211a61799cda26beff9851bbcd5a6d2869e3b78e49c3f6b89239195f",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 30314,
+      "rels": 1795,
+      "grps": null,
+      "persons": 479,
+      "events": 33,
+      "first_ties": 35,
+      "ate": 0.00150531,
+      "se": 0.00048165,
+      "lb": 0.0005613,
+      "ub": 0.00244933,
+      "p_joint_effects": 0.06642823,
+      "p_joint_placebo": null
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P2_fnfix_math_stats.json",
+      "gold_sha256": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+      "diff_head": []
+     }
+    },
+    "P3cut_pos_math_stats": {
+     "label": "P3cut_pos_math_stats",
+     "driver": "analysis/estimation/run_p3_tp.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_control/p3_afar_pos_math_stats.parquet",
+     "frame_sha256": "832ec1ed94bb6abace5c336592b6f1971a0b7b4dc2939468990ab035963b698f",
+     "rc": 0,
+     "secs": 10.0,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3cut_pos_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P3cut_pos_math_stats.json",
+     "json_sha256": "db0a4c0e0a4cbbc62658e2d538e0da5ec177966fe619d29f915a5e0b64ce835e",
+     "status": "OK",
+     "headline": {
+      "rows": 256506,
+      "grps": 15318,
+      "events": 32,
+      "first_ties": 401,
+      "pair_cluster": {
+       "status": null,
+       "ate": 0.00041345,
+       "se": 0.00041079,
+       "lb": -0.00039168,
+       "ub": 0.00121858,
+       "p_joint_effects": 0.08032729
+      },
+      "event_cluster": {
+       "status": null,
+       "ate": 0.00041345,
+       "se": 0.00028871,
+       "lb": -0.00015241,
+       "ub": 0.00097931,
+       "p_joint_effects": 0.10274708
+      }
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P3pos_math_stats_A_far.json",
+      "gold_sha256": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+      "diff_head": []
+     }
+    },
+    "P3_fnfix_math_stats": {
+     "label": "P3_fnfix_math_stats",
+     "driver": "analysis/estimation/run_p3.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/slim_control/p3_slim_math_stats.parquet",
+     "frame_sha256": "597d63c7cbf1c583b19eab45e6fe1c252dabdeb4068c91e25f2b5cc91fcb1bc7",
+     "rc": 0,
+     "secs": 14.4,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3_fnfix_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates_control/P3_fnfix_math_stats.json",
+     "json_sha256": "530554e27ba1ceae489386c666ba77cf36c014849fe01036e846fb6a7d64dda1",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 929324,
+      "rels": null,
+      "grps": 55237,
+      "persons": null,
+      "events": null,
+      "first_ties": 1031,
+      "ate": 1.145e-05,
+      "se": 0.00017512,
+      "lb": -0.00033177,
+      "ub": 0.00035467,
+      "p_joint_effects": 0.22362596,
+      "p_joint_placebo": null
+     },
+     "compare": {
+      "verdict": "EQUAL",
+      "gold": "analysis/expected/P3_fnfix_math_stats.json",
+      "gold_sha256": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+      "diff_head": []
+     }
+    }
+   },
+   "frames": {
+    "pos_cut_chemistry": {
+     "field": "chemistry",
+     "cut_spec": "pos",
+     "cut": 0.0,
+     "cut_full": 0.0,
+     "rows": 184960,
+     "pairs": 11466,
+     "ties": 1004,
+     "events": 38,
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_control/p3_afar_pos_chemistry.parquet",
+     "frame_sha256": "485974a5cbdb305a0832f525a1c290c5b7b31817e20ffe78786911155814bb5a",
+     "inputs_sha256": {
+      "pairs": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247",
+      "frame": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+      "p2": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d"
+     },
+     "vs_frozen_pos_frame": {
+      "content": "EQUAL",
+      "rows": [
+       184960,
+       184960
+      ],
+      "frozen": "data/frames/p3_afar_pos_chemistry.parquet"
+     }
+    },
+    "pos_cut_math_stats": {
+     "field": "math_stats",
+     "cut_spec": "pos",
+     "cut": 0.0,
+     "cut_full": 0.0,
+     "rows": 256506,
+     "pairs": 15318,
+     "ties": 401,
+     "events": 32,
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_control/p3_afar_pos_math_stats.parquet",
+     "frame_sha256": "832ec1ed94bb6abace5c336592b6f1971a0b7b4dc2939468990ab035963b698f",
+     "inputs_sha256": {
+      "pairs": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+      "frame": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+      "p2": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0"
+     },
+     "vs_frozen_pos_frame": {
+      "content": "EQUAL",
+      "rows": [
+       256506,
+       256506
+      ],
+      "frozen": "data/frames/p3_afar_pos_math_stats.parquet"
+     }
+    },
+    "make_slim_math_stats": {
+     "rc": 0,
+     "stdout_tail": "re/slim_control/p3_slim_ev_math_stats.parquet': '460b17f01fa4048dbebea5378ff0a2b4de33e3e770a00e1560445f2087e20bc1', '$TMPDIR/sar_rob_nocentre/slim_control/p3_slim_math_stats.parquet': '597d63c7cbf1c583b19eab45e6fe1c252dabdeb4068c91e25f2b5cc91fcb1bc7'}, 'noev_columns': ['grp', 'year', 'y', 'D']}",
+     "slim_vs_data_frames": {
+      "content": "EQUAL",
+      "rows": [
+       929324,
+       929324
+      ]
+     }
+    }
+   },
+   "all_equal": true
+  }
+ },
+ "inputs": {
+  "git_head": "0ab6d7a1012f53b82580546125cd9bf942be5c73",
+  "sha256": {
+   "pipeline/frames/cal2026-10/run_cal_frames_chemmath.py": "307809a53c9529535531eba966ee4bbe5fb2eb0c3f8b1f4dff9c9a2bd948ad37",
+   "pipeline/frames/cal2026-10/stage.py": "5c356f85e6dcb26959c1c67788348617112ca73422b0f616d296d11ada4041f2",
+   "pipeline/frames/cal2026-10/inpost_filter.py": "e4ac5bad3d5c3b40b613435f7f4191163408eba4f544d17100b06dd0c9e353f9",
+   "pipeline/frames/make_slim.py": "c812610ede59bd2933f41d09c99ddf1a917570c71b510eec61441ffa40ebab12",
+   "analysis/robustness/p3_afar_cuts/build_afar_cut.py": "7736905e407c9bc2db77f6875b89ba45b4b31543ae612c83b6fbcbbd6e76aca9",
+   "analysis/estimation/run_p1.R": "d5423982ecbe96135066e99b32c6f543a6c74669deacbc57a7e575c28a1b6ea6",
+   "analysis/estimation/run_p2.R": "fc3c20970ffb52b2cfa72dfa9efbfa4f8320a21a30a74a30e6d27651e60ce44b",
+   "analysis/estimation/run_p3.R": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+   "analysis/estimation/run_p3_tp.R": "45c89f70aba44bedb2558a51972840a466a4c0c115b508335c352a3b7448ccf1",
+   "data/raw_verified/roster_gold_chemistry.parquet": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb",
+   "data/raw_verified/incfel/roster_gold_chemistry.parquet": "e48ce86d6c6c868016cb6e724b3862c3d506412257250399fb9d775acd75fb46",
+   "data/frames/p1_frame_chemistry.csv": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+   "data/frames/p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+   "data/frames/pairs_none_chemistry.parquet": "ca103f517d15ef50cbdc7c965e03aba22af6fa1e0ae77aa087c27d45c110e247",
+   "data/frames/p3_afar_pos_chemistry.parquet": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+   "analysis/expected/P1_fnfix_chemistry.json": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+   "analysis/expected/P2_fnfix_chemistry.json": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+   "analysis/expected/P3pos_chemistry_A_far.json": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+   "data/raw_verified/roster_gold_math_stats.parquet": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542",
+   "data/raw_verified/incfel/roster_gold_math_stats.parquet": "46295d2f66ea19e77b9b4d8afcc52c1bce73808dbac61549226d83bc275eabcf",
+   "data/frames/p1_frame_math_stats.csv": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+   "data/frames/p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+   "data/frames/pairs_none_math_stats.parquet": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+   "data/frames/p3_afar_pos_math_stats.parquet": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+   "analysis/expected/P1_fnfix_math_stats.json": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+   "analysis/expected/P2_fnfix_math_stats.json": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+   "analysis/expected/P3pos_math_stats_A_far.json": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+   "data/frames/p3_slim_math_stats.parquet": "18e68a55b48ead3902e05e384d925968f0a943526df40a1586a221d2b6e5bf19",
+   "analysis/expected/P3_fnfix_math_stats.json": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1"
+  },
+  "frozen_october_frames_match_their_MANIFEST": {
+   "chemistry": true,
+   "math_stats": true
+  },
+  "data_frames_equal_frozen_october": {
+   "chemistry": true,
+   "math_stats": true
+  },
+  "incfel_roster_equals_legacy_2026-08-10_copy": {
+   "chemistry": true,
+   "math_stats": true
+  },
+  "roster_persons": {
+   "chemistry": {
+    "canon": 518,
+    "incfel": 384,
+    "only_canon (research-centre staff)": 134,
+    "only_incfel": 0,
+    "rows_canon": 533,
+    "rows_incfel": 396
+   },
+   "math_stats": {
+    "canon": 573,
+    "incfel": 545,
+    "only_canon (research-centre staff)": 28,
+    "only_incfel": 0,
+    "rows_canon": 580,
+    "rows_incfel": 552
+   }
+  }
+ },
+ "driver_runs": {
+  "control": {
+   "cmd": "setup/.venv/bin/python pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --execute --no-freeze",
+   "env": {
+    "SAR_OUT_ROOT": "$TMPDIR/sar_rob_nocentre/driver_control"
+   },
+   "rc": 0,
+   "secs": 51.3,
+   "log": "data/cal2026-10/robustness/nocentre/logs/driver_control.log",
+   "scratch_report": "$TMPDIR/sar_rob_nocentre/driver_control/frames_run_report_chemmath.json",
+   "report": "data/cal2026-10/robustness/nocentre/driver_reports/frames_run_report_chemmath_control.json",
+   "report_sha256": "1def76215b80a85b72fa3c5cf3570c1f27c76bf880a7a59c48e5fd8212355af1",
+   "driver_stops": [],
+   "roster_variant": "fnfix",
+   "products_dir": null,
+   "fields": {
+    "chemistry": {
+     "prodlib_control_vs_08_28": "BYTE_EQUAL",
+     "relationships_vs_08_28": "BYTE_EQUAL",
+     "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+     "union_build_report_h1_ulp_in_advisory": {
+      "n": 0,
+      "worst_ulp": 0,
+      "ulp_bound": 8
+     },
+     "p1_frame_vs_08_28_H1": {
+      "ok": true,
+      "differing_lines": 6472,
+      "of": 50193,
+      "worst_ulp": 4
+     },
+     "p2_becoming_vs_08_28": "BYTE_EQUAL",
+     "parquets_vs_08_28": {
+      "pairs_none_chemistry.parquet": "EQUAL",
+      "p3_slim_chemistry.parquet": "EQUAL",
+      "p3_slim_ev_chemistry.parquet": "EQUAL"
+     },
+     "r_cells_vs_08_28_golds": {
+      "P1_fnfix_chemistry": "EQUAL",
+      "P2_fnfix_chemistry": "EQUAL"
+     },
+     "prodlib_october": "BYTE_EQUAL",
+     "prodlib_october_sha256": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7",
+     "inpost": {
+      "kept": 1833,
+      "dropped_no_spell": 0,
+      "dropped_not_in_post": 1778
+     },
+     "accounting_closed": true,
+     "products_sha256": {
+      "union_frame": "cea79e7276cf021e08ece6bf4f9f77fecfd8bfe75e773a798f1e7ff1a60a571b",
+      "relationships_chemistry.csv": "cb2e71f66b12b31f9dc60627e303decbd9b997509fbc8887ffef5c86a52a8fb7",
+      "union_build_report_chemistry.json": "96c37c749e6981a0fcb40ccee4f367f28e7a85b8026d51b7cb469b810538c074",
+      "p1_frame_chemistry.csv": "010319dbba00799bb855a7f3cafdfda0f1db3a7447c221d6eaadfdf4b8567237",
+      "p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+      "pairs_none_chemistry.parquet": "0e97fb7f7b27499e885c543d2c93bda8beeb528e7cc866c3eab178af9cd74005",
+      "p3_slim_ev_chemistry.parquet": "058ed272da629724fabecb4cdc62dba238f28b17f86b654fa32f7cbd398b0243",
+      "p3_slim_chemistry.parquet": "ced9ec426fe15c1a528ede81921ba93b6819be7587d640f286728050a9aec2e2"
+     },
+     "secs": 29.0,
+     "october_vs_frozen_cal2026_10": {
+      "all_equal": true,
+      "relationships": "BYTE_EQUAL",
+      "p2_becoming": "BYTE_EQUAL",
+      "p1_frame_H1": {
+       "ok": true,
+       "differing_lines": 4402,
+       "worst_ulp": 3
+      },
+      "union_build_report": {
+       "byte_equal": true,
+       "equal_modulo_paths": true,
+       "equal_modulo_paths_and_h1_advisory": true
+      },
+      "parquets": {
+       "pairs_none_chemistry.parquet": "EQUAL",
+       "p3_slim_chemistry.parquet": "EQUAL",
+       "p3_slim_ev_chemistry.parquet": "EQUAL"
+      }
+     },
+     "control_ok": true
+    },
+    "math_stats": {
+     "prodlib_control_vs_08_28": "BYTE_EQUAL",
+     "relationships_vs_08_28": "BYTE_EQUAL",
+     "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS_AND_H1_ADVISORY",
+     "union_build_report_h1_ulp_in_advisory": {
+      "n": 2,
+      "worst_ulp": 1,
+      "ulp_bound": 8
+     },
+     "p1_frame_vs_08_28_H1": {
+      "ok": true,
+      "differing_lines": 1376,
+      "of": 24211,
+      "worst_ulp": 3
+     },
+     "p2_becoming_vs_08_28": "BYTE_EQUAL",
+     "parquets_vs_08_28": {
+      "pairs_none_math_stats.parquet": "EQUAL",
+      "p3_slim_math_stats.parquet": "EQUAL",
+      "p3_slim_ev_math_stats.parquet": "EQUAL"
+     },
+     "r_cells_vs_08_28_golds": {
+      "P1_fnfix_math_stats": "EQUAL",
+      "P2_fnfix_math_stats": "EQUAL"
+     },
+     "prodlib_october": "BYTE_EQUAL",
+     "prodlib_october_sha256": "ca6d75f1de97ca99f51506b5a792ab83e247db260936f0b7d43f771e393a5ae8",
+     "inpost": {
+      "kept": 380,
+      "dropped_no_spell": 0,
+      "dropped_not_in_post": 391
+     },
+     "accounting_closed": true,
+     "products_sha256": {
+      "union_frame": "92069cb55c37141091555929fe7ac47332fc84240f7b46946eee30432eaedd1b",
+      "relationships_math_stats.csv": "74a52cf8b0f206212cbf83c881bf1e17b5184c9c07aecf34dff6ebd26b5a26fd",
+      "union_build_report_math_stats.json": "900cf902b03a316909ad428d68f25a619ed77fbb1711c48df32a53bbf6b192ca",
+      "p1_frame_math_stats.csv": "20dee13d2bdd377c289405cbca4c581acca352cc9a986857e4f74be615af7541",
+      "p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+      "pairs_none_math_stats.parquet": "88476ff91867d023cc082bec611466dbafdb811c068e7f28065b19dbac216dbf",
+      "p3_slim_ev_math_stats.parquet": "a98e237d7c1f8fdafc1f74b1cafda47271f7a569103a2a7ee988aa5de81a212a",
+      "p3_slim_math_stats.parquet": "58c04c319e7790045aea91c852b252fd52a52b12befb4a41aad769db73697447"
+     },
+     "secs": 21.4,
+     "october_vs_frozen_cal2026_10": {
+      "all_equal": true,
+      "relationships": "BYTE_EQUAL",
+      "p2_becoming": "BYTE_EQUAL",
+      "p1_frame_H1": {
+       "ok": true,
+       "differing_lines": 1087,
+       "worst_ulp": 3
+      },
+      "union_build_report": {
+       "byte_equal": true,
+       "equal_modulo_paths": true,
+       "equal_modulo_paths_and_h1_advisory": true
+      },
+      "parquets": {
+       "pairs_none_math_stats.parquet": "EQUAL",
+       "p3_slim_math_stats.parquet": "EQUAL",
+       "p3_slim_ev_math_stats.parquet": "EQUAL"
+      }
+     },
+     "control_ok": true
+    }
+   }
+  },
+  "variant": {
+   "cmd": "setup/.venv/bin/python pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --execute --roster-variant incfel --products-dir $TMPDIR/sar_rob_nocentre/products",
+   "env": {
+    "SAR_OUT_ROOT": "$TMPDIR/sar_rob_nocentre/driver_variant"
+   },
+   "rc": 0,
+   "secs": 49.5,
+   "log": "data/cal2026-10/robustness/nocentre/logs/driver_variant.log",
+   "scratch_report": "$TMPDIR/sar_rob_nocentre/driver_variant/frames_run_report_chemmath.json",
+   "report": "data/cal2026-10/robustness/nocentre/driver_reports/frames_run_report_chemmath_variant.json",
+   "report_sha256": "b9715b75178e4ce67a7ce29d28a8962f0e8f587420fb23bba626c1416058fe16",
+   "driver_stops": [],
+   "roster_variant": "incfel",
+   "products_dir": "$TMPDIR/sar_rob_nocentre/products",
+   "fields": {
+    "chemistry": {
+     "prodlib_control_vs_08_28": "BYTE_EQUAL",
+     "relationships_vs_08_28": "BYTE_EQUAL",
+     "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+     "union_build_report_h1_ulp_in_advisory": {
+      "n": 0,
+      "worst_ulp": 0,
+      "ulp_bound": 8
+     },
+     "p1_frame_vs_08_28_H1": {
+      "ok": true,
+      "differing_lines": 6625,
+      "of": 50193,
+      "worst_ulp": 3
+     },
+     "p2_becoming_vs_08_28": "BYTE_EQUAL",
+     "parquets_vs_08_28": {
+      "pairs_none_chemistry.parquet": "EQUAL",
+      "p3_slim_chemistry.parquet": "EQUAL",
+      "p3_slim_ev_chemistry.parquet": "EQUAL"
+     },
+     "r_cells_vs_08_28_golds": {
+      "P1_fnfix_chemistry": "EQUAL",
+      "P2_fnfix_chemistry": "EQUAL"
+     },
+     "prodlib_october": "NOT_EQUAL (VARIANT roster: equality not expected, recorded only)",
+     "prodlib_october_sha256": "10d457f68a0255abf4ff6225b152c91484d04aa579bbd282ca380b0d56f9af84",
+     "inpost": {
+      "kept": 1662,
+      "dropped_no_spell": 0,
+      "dropped_not_in_post": 1260
+     },
+     "accounting_closed": true,
+     "products_sha256": {
+      "union_frame": "37c3c1508b51cb0b9dd5afbc2721a52f3ef247581418e37dd588c3120d43f966",
+      "relationships_chemistry.csv": "23a276b2205e82a1dc2959bcff0706d06bbc1ca8e450c3805abf67bab8829712",
+      "union_build_report_chemistry.json": "c5465dfca477e0fe17df04251eaa91a605a3d3282d76e9f1afab730cf3b67832",
+      "p1_frame_chemistry.csv": "ab14e4c877d342d92591bcb1bc94db740886b1a93561741b1fb2ddc08e42b2cf",
+      "p2_becoming_chemistry.csv": "26d2214ee2f5a193a4cb50b2f647e3236cbefbcb1caa1190ac721c5ee0303735",
+      "pairs_none_chemistry.parquet": "4bc968d577ceb9eea283f62e563466f48e4cc39c3b2fa510f552ef81580f4eec",
+      "p3_slim_ev_chemistry.parquet": "232db560bc080e3e661e355c56cacd818601950a2db6b7dd82916e80cdac70b8",
+      "p3_slim_chemistry.parquet": "879f9debfa06aa6b3122e69314c5ef97eb43ea8106e00d62ff68fd5385b67065"
+     },
+     "secs": 27.0,
+     "control_ok": true
+    },
+    "math_stats": {
+     "prodlib_control_vs_08_28": "BYTE_EQUAL",
+     "relationships_vs_08_28": "BYTE_EQUAL",
+     "union_build_report_vs_08_28": "EQUAL_MODULO_PATHS",
+     "union_build_report_h1_ulp_in_advisory": {
+      "n": 0,
+      "worst_ulp": 0,
+      "ulp_bound": 8
+     },
+     "p1_frame_vs_08_28_H1": {
+      "ok": true,
+      "differing_lines": 1395,
+      "of": 24211,
+      "worst_ulp": 3
+     },
+     "p2_becoming_vs_08_28": "BYTE_EQUAL",
+     "parquets_vs_08_28": {
+      "pairs_none_math_stats.parquet": "EQUAL",
+      "p3_slim_math_stats.parquet": "EQUAL",
+      "p3_slim_ev_math_stats.parquet": "EQUAL"
+     },
+     "r_cells_vs_08_28_golds": {
+      "P1_fnfix_math_stats": "EQUAL",
+      "P2_fnfix_math_stats": "EQUAL"
+     },
+     "prodlib_october": "NOT_EQUAL (VARIANT roster: equality not expected, recorded only)",
+     "prodlib_october_sha256": "75a4b54b934fe4d9e8d554669b5ee0011813670241bae28beb4fc3c777cc32fc",
+     "inpost": {
+      "kept": 376,
+      "dropped_no_spell": 0,
+      "dropped_not_in_post": 341
+     },
+     "accounting_closed": true,
+     "products_sha256": {
+      "union_frame": "1c4dc036d28645e70a690b718608334574045e30bf7911eec2d0a0593ef811fd",
+      "relationships_math_stats.csv": "3cbbd95876c454b4ba90e1c389fd4a6d643652be7693d583fb47d78221691b20",
+      "union_build_report_math_stats.json": "5549518db4dcd33db67ad8941b2bdfda6998026437ba6172bc46897d610b097f",
+      "p1_frame_math_stats.csv": "9dcf9b504b6a4a622c73c4164c18aa54840abc26322a8fff7b22e61fc031538f",
+      "p2_becoming_math_stats.csv": "1d1093a8dec12c28d4a81118cd54df66a17eb69dc854747875578a626dc321a0",
+      "pairs_none_math_stats.parquet": "b7d6a6dc6abe8905d18d7241abc04581f3b29e645ecd7ca890fabb4d47ed8f93",
+      "p3_slim_ev_math_stats.parquet": "396d9c3055498a0164c7bea7a6b35f4486f5bdb1fecaaa9195c8f0dba407e8d0",
+      "p3_slim_math_stats.parquet": "a9ad04e9af128054df3b339a18dc437fceb599d3adbc5c4d1c8d9f87318f86ab"
+     },
+     "secs": 21.7,
+     "control_ok": true
+    }
+   }
+  }
+ },
+ "population": {
+  "chemistry": {
+   "frozen_october_canon": "data/cal2026-10/frames_chemistry",
+   "roster": {
+    "canon": {
+     "path": "data/raw_verified/roster_gold_chemistry.parquet",
+     "sha256": "778608dd3850169fdd2c83991c1a569c4c7a9b886c6dd5283c7777265f5cdcfb",
+     "rows": 533,
+     "persons": 518
+    },
+    "variant": {
+     "path": "data/raw_verified/incfel/roster_gold_chemistry.parquet",
+     "sha256": "e48ce86d6c6c868016cb6e724b3862c3d506412257250399fb9d775acd75fb46",
+     "rows": 396,
+     "persons": 384
+    },
+    "persons_only_in_canon": 134,
+    "persons_only_in_variant": 0,
+    "shared_persons_with_different_spells": 22
+   },
+   "relationships": {
+    "relations_canon": 2785,
+    "relations_variant": 2361,
+    "by_channel_canon": {
+     "network": 1375,
+     "both": 458,
+     "dept_only": 952
+    },
+    "by_channel_variant": {
+     "network": 1285,
+     "both": 377,
+     "dept_only": 699
+    },
+    "persons_canon": 470,
+    "persons_variant": 330,
+    "persons_removed": 140,
+    "persons_added": 0,
+    "events_canon": 38,
+    "events_variant": 38,
+    "removed": 424,
+    "removed_by_cause": {
+     "no_variant_spell_at_arrival": 75,
+     "person_not_in_variant_roster": 349
+    },
+    "removed_by_channel": {
+     "both": 76,
+     "dept_only": 253,
+     "network": 95
+    },
+    "channel_changed_as_predicted": {
+     "both->network": 5
+    },
+    "added": 0,
+    "added_predicted_dept": 0,
+    "closed": true
+   },
+   "p1_frame": {
+    "rows_frozen": 30635,
+    "rows_new": 25971,
+    "identical": 21048,
+    "removed": {
+     "no_variant_spell_at_arrival": 825,
+     "person_not_in_variant_roster": 3839,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "added": {
+     "predicted_added_dept_relation": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "modified": {
+     "h1_fwci_ulp": 4876,
+     "channel_changed": 55,
+     "in_post_fill_changed": 15,
+     "worst_ulp": 3,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "rows_by_channel_new": {
+     "both": 4147,
+     "network": 14135,
+     "dept_only": 7689
+    },
+    "relations_new": 2361,
+    "persons_new": 330,
+    "events_new": 38,
+    "closed": true
+   },
+   "p2_becoming": {
+    "rows_frozen": 46168,
+    "rows_new": 39010,
+    "identical": 38925,
+    "removed": {
+     "no_variant_spell_at_arrival": 1274,
+     "person_not_in_variant_roster": 5884,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "added": {
+     "predicted_added_dept_relation": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "modified": {
+     "channel_changed": 85,
+     "worst_ulp": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "events_new": 38,
+    "persons_new": 330,
+    "first_ties_new": 146,
+    "closed": true
+   },
+   "pairs": {
+    "rows_frozen": 1823689,
+    "rows_new": 1276077,
+    "pairs_frozen": 109984,
+    "pairs_new": 77167,
+    "pairs_removed": 32817,
+    "pairs_removed_endpoint_dropped": 32817,
+    "pairs_removed_unaccounted": 0,
+    "pairs_added": 0,
+    "surviving_pairs_with_dropped_endpoint": 0,
+    "surviving_pair_rows_changed": 0,
+    "closed": true
+   },
+   "slim": {
+    "pairs_table": {
+     "rows": 1276077,
+     "pairs": 77167,
+     "events": 38,
+     "ties": 3630
+    },
+    "slim": {
+     "rows": 1276077,
+     "pairs": 77167,
+     "ties": 3630,
+     "events": 38
+    },
+    "note": "no frozen counterpart (grp/ev re-rank under the caliber); acceptance = faithful projection of the CAL pair table",
+    "consistent": true
+   },
+   "union_build_report": {
+    "frame_october": {
+     "rows": 30635,
+     "relationships": 2785,
+     "persons": 470,
+     "events": 38,
+     "by_channel": {
+      "network": 1375,
+      "both": 458,
+      "dept_only": 952
+     },
+     "events_zero_dept_members": [],
+     "dose_null_new_rows": 55,
+     "age_gap_null_new_rows": 55
+    },
+    "frame_variant": {
+     "rows": 25971,
+     "relationships": 2361,
+     "persons": 330,
+     "events": 38,
+     "by_channel": {
+      "network": 1285,
+      "both": 377,
+      "dept_only": 699
+     },
+     "events_zero_dept_members": [],
+     "dose_null_new_rows": 33,
+     "age_gap_null_new_rows": 33
+    }
+   },
+   "closed": true
+  },
+  "math_stats": {
+   "frozen_october_canon": "data/cal2026-10/frames_math_stats",
+   "roster": {
+    "canon": {
+     "path": "data/raw_verified/roster_gold_math_stats.parquet",
+     "sha256": "5089ee89efaae1efa00461f621c67644e20215b3985a807d8f010e5d26a50542",
+     "rows": 580,
+     "persons": 573
+    },
+    "variant": {
+     "path": "data/raw_verified/incfel/roster_gold_math_stats.parquet",
+     "sha256": "46295d2f66ea19e77b9b4d8afcc52c1bce73808dbac61549226d83bc275eabcf",
+     "rows": 552,
+     "persons": 545
+    },
+    "persons_only_in_canon": 28,
+    "persons_only_in_variant": 0,
+    "shared_persons_with_different_spells": 7
+   },
+   "relationships": {
+    "relations_canon": 1810,
+    "relations_variant": 1769,
+    "by_channel_canon": {
+     "dept_only": 1430,
+     "network": 256,
+     "both": 124
+    },
+    "by_channel_variant": {
+     "dept_only": 1393,
+     "network": 256,
+     "both": 120
+    },
+    "persons_canon": 481,
+    "persons_variant": 454,
+    "persons_removed": 27,
+    "persons_added": 0,
+    "events_canon": 33,
+    "events_variant": 33,
+    "removed": 41,
+    "removed_by_cause": {
+     "person_not_in_variant_roster": 38,
+     "no_variant_spell_at_arrival": 3
+    },
+    "removed_by_channel": {
+     "dept_only": 37,
+     "both": 4
+    },
+    "channel_changed_as_predicted": {},
+    "added": 0,
+    "added_predicted_dept": 0,
+    "closed": true
+   },
+   "p1_frame": {
+    "rows_frozen": 19910,
+    "rows_new": 19459,
+    "identical": 18143,
+    "removed": {
+     "person_not_in_variant_roster": 418,
+     "no_variant_spell_at_arrival": 33,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "added": {
+     "predicted_added_dept_relation": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "modified": {
+     "h1_fwci_ulp": 1316,
+     "worst_ulp": 3,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "rows_by_channel_new": {
+     "network": 2816,
+     "both": 1320,
+     "dept_only": 15323
+    },
+    "relations_new": 1769,
+    "persons_new": 454,
+    "events_new": 33,
+    "closed": true
+   },
+   "p2_becoming": {
+    "rows_frozen": 30314,
+    "rows_new": 29645,
+    "identical": 29645,
+    "removed": {
+     "person_not_in_variant_roster": 618,
+     "no_variant_spell_at_arrival": 51,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "added": {
+     "predicted_added_dept_relation": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "modified": {
+     "worst_ulp": 0,
+     "n_unaccounted": 0,
+     "unaccounted_sample": []
+    },
+    "events_new": 33,
+    "persons_new": 452,
+    "first_ties_new": 32,
+    "closed": true
+   },
+   "pairs": {
+    "rows_frozen": 929324,
+    "rows_new": 881044,
+    "pairs_frozen": 55237,
+    "pairs_new": 52369,
+    "pairs_removed": 2868,
+    "pairs_removed_endpoint_dropped": 2868,
+    "pairs_removed_unaccounted": 0,
+    "pairs_added": 0,
+    "surviving_pairs_with_dropped_endpoint": 0,
+    "surviving_pair_rows_changed": 0,
+    "closed": true
+   },
+   "slim": {
+    "pairs_table": {
+     "rows": 881044,
+     "pairs": 52369,
+     "events": 33,
+     "ties": 976
+    },
+    "slim": {
+     "rows": 881044,
+     "pairs": 52369,
+     "ties": 976,
+     "events": 33
+    },
+    "note": "no frozen counterpart (grp/ev re-rank under the caliber); acceptance = faithful projection of the CAL pair table",
+    "consistent": true
+   },
+   "union_build_report": {
+    "frame_october": {
+     "rows": 19910,
+     "relationships": 1810,
+     "persons": 481,
+     "events": 33,
+     "by_channel": {
+      "network": 256,
+      "both": 124,
+      "dept_only": 1430
+     },
+     "events_zero_dept_members": [],
+     "dose_null_new_rows": 880,
+     "age_gap_null_new_rows": 880
+    },
+    "frame_variant": {
+     "rows": 19459,
+     "relationships": 1769,
+     "persons": 454,
+     "events": 33,
+     "by_channel": {
+      "network": 256,
+      "both": 120,
+      "dept_only": 1393
+     },
+     "events_zero_dept_members": [],
+     "dose_null_new_rows": 880,
+     "age_gap_null_new_rows": 880
+    }
+   },
+   "closed": true
+  }
+ },
+ "cells": {
+  "P1nc_chemistry": {
+   "label": "P1nc_chemistry",
+   "driver": "analysis/estimation/run_p1.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/products/frames_chemistry/p1_frame_chemistry.csv",
+   "frame_sha256": "ab14e4c877d342d92591bcb1bc94db740886b1a93561741b1fb2ddc08e42b2cf",
+   "rc": 0,
+   "secs": 7.0,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P1nc_chemistry.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P1nc_chemistry.json",
+   "json_sha256": "d226f08dc0dfbcfce2616a188d058101b77a955c3104c6571ea43ee7e86660af",
+   "status": "OK",
+   "headline": {
+    "rows_raw": 25971,
+    "rows_kept": 24783,
+    "channels": {
+     "union": {
+      "status": "OK",
+      "obs": 23225,
+      "rels": 2253,
+      "events": 38,
+      "ate": -0.22429715,
+      "se": 0.08093093,
+      "lb": -0.38291885,
+      "ub": -0.06567544,
+      "p_joint_effects": 0.08834473,
+      "p_joint_placebo": 0.79678512
+     },
+     "network": {
+      "status": "OK",
+      "obs": 16229,
+      "rels": 1557,
+      "events": 38,
+      "ate": -0.12711021,
+      "se": 0.12089838,
+      "lb": -0.36406668,
+      "ub": 0.10984626,
+      "p_joint_effects": 0.39565295,
+      "p_joint_placebo": 0.9314442
+     },
+     "dept": {
+      "status": "OK",
+      "obs": 10683,
+      "rels": 1055,
+      "events": 38,
+      "ate": -0.23119809,
+      "se": 0.10182562,
+      "lb": -0.43077264,
+      "ub": -0.03162355,
+      "p_joint_effects": 0.02521935,
+      "p_joint_placebo": 0.7122666
+     }
+    }
+   },
+   "previous_2026-08-29_headline": {
+    "rows_raw": 39831,
+    "rows_kept": 38269,
+    "channels": {
+     "union": {
+      "status": "OK",
+      "obs": 32250,
+      "rels": 3479,
+      "events": 38,
+      "ate": -0.23060604,
+      "se": 0.06726831,
+      "lb": -0.36244949,
+      "ub": -0.09876258,
+      "p_joint_effects": 0.02987006,
+      "p_joint_placebo": 0.33983636
+     },
+     "network": {
+      "status": "OK",
+      "obs": 25254,
+      "rels": 2783,
+      "events": 38,
+      "ate": -0.20795889,
+      "se": 0.09508353,
+      "lb": -0.39431918,
+      "ub": -0.02159859,
+      "p_joint_effects": 0.05280119,
+      "p_joint_placebo": 0.22869989
+     },
+     "dept": {
+      "status": "OK",
+      "obs": 10683,
+      "rels": 1055,
+      "events": 38,
+      "ate": -0.23119809,
+      "se": 0.10182562,
+      "lb": -0.43077264,
+      "ub": -0.03162355,
+      "p_joint_effects": 0.02521935,
+      "p_joint_placebo": 0.7122666
+     }
+    }
+   },
+   "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+  },
+  "P2nc_chemistry": {
+   "label": "P2nc_chemistry",
+   "driver": "analysis/estimation/run_p2.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/products/frames_chemistry/p2_becoming_chemistry.csv",
+   "frame_sha256": "26d2214ee2f5a193a4cb50b2f647e3236cbefbcb1caa1190ac721c5ee0303735",
+   "rc": 0,
+   "secs": 3.5,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P2nc_chemistry.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P2nc_chemistry.json",
+   "json_sha256": "76b04e17f8d995222f5818a0d6b7b84092acf3e9286b9630cb4ae800e737deff",
+   "status": "OK",
+   "headline": {
+    "status": "OK",
+    "rows": 39010,
+    "rels": 2354,
+    "grps": null,
+    "persons": 330,
+    "events": 38,
+    "first_ties": 146,
+    "ate": 0.0068545,
+    "se": 0.00099263,
+    "lb": 0.00490897,
+    "ub": 0.00880003,
+    "p_joint_effects": 2.02446393e-10,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_headline": {
+    "status": "OK",
+    "rows": 60200,
+    "rels": 3611,
+    "grps": null,
+    "persons": 347,
+    "events": 38,
+    "first_ties": 180,
+    "ate": 0.00469265,
+    "se": 0.00076517,
+    "lb": 0.00319295,
+    "ub": 0.00619236,
+    "p_joint_effects": 5.66083302e-09,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+  },
+  "P3nc_pos_chemistry_A_far": {
+   "label": "P3nc_pos_chemistry_A_far",
+   "driver": "analysis/estimation/run_p3_tp.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_chemistry.parquet",
+   "frame_sha256": "2686f5e151eb537a5fea0dfb35648a21ba7dc0eb29fcff8ba120f5052bf701b9",
+   "rc": 0,
+   "secs": 6.7,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_pos_chemistry_A_far.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_pos_chemistry_A_far.json",
+   "json_sha256": "5d025a9a4000188a2344b601d7f89eab0bed2fbc3d2c38e10c2fef4db2df0250",
+   "status": "OK",
+   "headline": {
+    "rows": 105694,
+    "grps": 6655,
+    "events": 36,
+    "first_ties": 769,
+    "pair_cluster": {
+     "status": null,
+     "ate": -0.00287241,
+     "se": 0.00216802,
+     "lb": -0.00712164,
+     "ub": 0.00137682,
+     "p_joint_effects": 0.29520978
+    },
+    "event_cluster": {
+     "status": null,
+     "ate": -0.00287241,
+     "se": 0.00184767,
+     "lb": -0.00649377,
+     "ub": 0.00074895,
+     "p_joint_effects": 0.33242613
+    }
+   },
+   "previous_2026-08-29_headline": null,
+   "previous_2026-08-29_note": "no earlier cell (the 2026-09-10 pos launcher STOPped)"
+  },
+  "P1nc_math_stats": {
+   "label": "P1nc_math_stats",
+   "driver": "analysis/estimation/run_p1.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p1_frame_math_stats.csv",
+   "frame_sha256": "9dcf9b504b6a4a622c73c4164c18aa54840abc26322a8fff7b22e61fc031538f",
+   "rc": 0,
+   "secs": 7.1,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P1nc_math_stats.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P1nc_math_stats.json",
+   "json_sha256": "c490affc22af3a32f6ea7ffaed8870408ce948af36ec543d771db7b0aeed3141",
+   "status": "OK",
+   "headline": {
+    "rows_raw": 19459,
+    "rows_kept": 18403,
+    "channels": {
+     "union": {
+      "status": "OK",
+      "obs": 15778,
+      "rels": 1673,
+      "events": 33,
+      "ate": -0.12537995,
+      "se": 0.15561868,
+      "lb": -0.43038696,
+      "ub": 0.17962706,
+      "p_joint_effects": 0.0294523,
+      "p_joint_placebo": 0.17375986
+     },
+     "network": {
+      "status": "OK",
+      "obs": 3594,
+      "rels": 360,
+      "events": 29,
+      "ate": -0.13591228,
+      "se": 0.20214828,
+      "lb": -0.53211564,
+      "ub": 0.26029107,
+      "p_joint_effects": 0.52470556,
+      "p_joint_placebo": 0.54308032
+     },
+     "dept": {
+      "status": "OK",
+      "obs": 13296,
+      "rels": 1430,
+      "events": 33,
+      "ate": -0.11763027,
+      "se": 0.18014376,
+      "lb": -0.47070556,
+      "ub": 0.23544503,
+      "p_joint_effects": 0.02940353,
+      "p_joint_placebo": 0.23632326
+     }
+    }
+   },
+   "previous_2026-08-29_headline": {
+    "rows_raw": 23210,
+    "rows_kept": 22044,
+    "channels": {
+     "union": {
+      "status": "OK",
+      "obs": 17706,
+      "rels": 2004,
+      "events": 33,
+      "ate": -0.1909682,
+      "se": 0.14506566,
+      "lb": -0.47529168,
+      "ub": 0.09335528,
+      "p_joint_effects": 0.07144694,
+      "p_joint_placebo": 0.4125481
+     },
+     "network": {
+      "status": "OK",
+      "obs": 5522,
+      "rels": 691,
+      "events": 29,
+      "ate": -0.23201429,
+      "se": 0.19504402,
+      "lb": -0.61429354,
+      "ub": 0.15026496,
+      "p_joint_effects": 0.61921115,
+      "p_joint_placebo": 0.96910126
+     },
+     "dept": {
+      "status": "OK",
+      "obs": 13296,
+      "rels": 1430,
+      "events": 33,
+      "ate": -0.11763027,
+      "se": 0.18014376,
+      "lb": -0.47070556,
+      "ub": 0.23544503,
+      "p_joint_effects": 0.02940353,
+      "p_joint_placebo": 0.23632326
+     }
+    }
+   },
+   "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+  },
+  "P2nc_math_stats": {
+   "label": "P2nc_math_stats",
+   "driver": "analysis/estimation/run_p2.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p2_becoming_math_stats.csv",
+   "frame_sha256": "1d1093a8dec12c28d4a81118cd54df66a17eb69dc854747875578a626dc321a0",
+   "rc": 0,
+   "secs": 3.2,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P2nc_math_stats.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P2nc_math_stats.json",
+   "json_sha256": "c89c093b12a76c62e0083deb2539d70508c4473a4602ea975a69fa39688b43ed",
+   "status": "OK",
+   "headline": {
+    "status": "OK",
+    "rows": 29645,
+    "rels": 1754,
+    "grps": null,
+    "persons": 452,
+    "events": 33,
+    "first_ties": 32,
+    "ate": 0.00137548,
+    "se": 0.00043385,
+    "lb": 0.00052514,
+    "ub": 0.00222582,
+    "p_joint_effects": 0.0725344,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_headline": {
+    "status": "OK",
+    "rows": 35315,
+    "rels": 2092,
+    "grps": null,
+    "persons": 471,
+    "events": 33,
+    "first_ties": 54,
+    "ate": 0.00131332,
+    "se": 0.00038799,
+    "lb": 0.00055286,
+    "ub": 0.00207378,
+    "p_joint_effects": 0.0400082,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+  },
+  "P3nc_pos_math_stats_A_far": {
+   "label": "P3nc_pos_math_stats_A_far",
+   "driver": "analysis/estimation/run_p3_tp.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_math_stats.parquet",
+   "frame_sha256": "e5989788b73add83ff1bc0ce0af389bd61a60b60b1693fd4d68df39183dff066",
+   "rc": 0,
+   "secs": 9.8,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_pos_math_stats_A_far.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_pos_math_stats_A_far.json",
+   "json_sha256": "ae8f5e26188efa3c806bfae11f95f6c8a736e9cd6b55f4dfbabc0fb689104933",
+   "status": "OK",
+   "headline": {
+    "rows": 242872,
+    "grps": 14509,
+    "events": 32,
+    "first_ties": 387,
+    "pair_cluster": {
+     "status": null,
+     "ate": 0.000437,
+     "se": 0.00040971,
+     "lb": -0.00036601,
+     "ub": 0.00124001,
+     "p_joint_effects": 0.06610727
+    },
+    "event_cluster": {
+     "status": null,
+     "ate": 0.000437,
+     "se": 0.00029681,
+     "lb": -0.00014473,
+     "ub": 0.00101873,
+     "p_joint_effects": 0.12494205
+    }
+   },
+   "previous_2026-08-29_headline": null,
+   "previous_2026-08-29_note": "no earlier cell (the 2026-09-10 pos launcher STOPped)"
+  },
+  "P3nc_math_stats_full": {
+   "label": "P3nc_math_stats_full",
+   "driver": "analysis/estimation/run_p3.R",
+   "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p3_slim_math_stats.parquet",
+   "frame_sha256": "a9ad04e9af128054df3b339a18dc437fceb599d3adbc5c4d1c8d9f87318f86ab",
+   "rc": 0,
+   "secs": 13.3,
+   "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_math_stats_full.log",
+   "waited_for_slot_secs": 0.0,
+   "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_math_stats_full.json",
+   "json_sha256": "ecf633cb0d733481af316a669f7c5cbbd77dd1caa771354eaff1470c9596d1c7",
+   "status": "OK",
+   "headline": {
+    "status": "OK",
+    "rows": 881044,
+    "rels": null,
+    "grps": 52369,
+    "persons": null,
+    "events": null,
+    "first_ties": 976,
+    "ate": -1.90936308e-06,
+    "se": 0.00017377,
+    "lb": -0.0003425,
+    "ub": 0.00033868,
+    "p_joint_effects": 0.30658637,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_headline": {
+    "status": "OK",
+    "rows": 1231888,
+    "rels": null,
+    "grps": 73119,
+    "persons": null,
+    "events": null,
+    "first_ties": 1283,
+    "ate": -8.718e-05,
+    "se": 0.00014391,
+    "lb": -0.00036924,
+    "ub": 0.00019488,
+    "p_joint_effects": 0.32736602,
+    "p_joint_placebo": null
+   },
+   "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+  }
+ },
+ "variant_afar_pos_frames": {
+  "pos_cut_chemistry": {
+   "field": "chemistry",
+   "cut_spec": "pos",
+   "cut": 0.0,
+   "cut_full": 0.0,
+   "rows": 105694,
+   "pairs": 6655,
+   "ties": 769,
+   "events": 36,
+   "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_chemistry.parquet",
+   "frame_sha256": "2686f5e151eb537a5fea0dfb35648a21ba7dc0eb29fcff8ba120f5052bf701b9",
+   "inputs_sha256": {
+    "pairs": "4bc968d577ceb9eea283f62e563466f48e4cc39c3b2fa510f552ef81580f4eec",
+    "frame": "ab14e4c877d342d92591bcb1bc94db740886b1a93561741b1fb2ddc08e42b2cf",
+    "p2": "26d2214ee2f5a193a4cb50b2f647e3236cbefbcb1caa1190ac721c5ee0303735"
+   }
+  },
+  "pos_cut_math_stats": {
+   "field": "math_stats",
+   "cut_spec": "pos",
+   "cut": 0.0,
+   "cut_full": 0.0,
+   "rows": 242872,
+   "pairs": 14509,
+   "ties": 387,
+   "events": 32,
+   "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_math_stats.parquet",
+   "frame_sha256": "e5989788b73add83ff1bc0ce0af389bd61a60b60b1693fd4d68df39183dff066",
+   "inputs_sha256": {
+    "pairs": "b7d6a6dc6abe8905d18d7241abc04581f3b29e645ecd7ca890fabb4d47ed8f93",
+    "frame": "9dcf9b504b6a4a622c73c4164c18aa54840abc26322a8fff7b22e61fc031538f",
+    "p2": "1d1093a8dec12c28d4a81118cd54df66a17eb69dc854747875578a626dc321a0"
+   }
+  }
+ },
+ "variant_frames_sha256": {
+  "chemistry": {
+   "MANIFEST.sha256": "f0a5f5fd436313b801227c772a5fde81cbce7d0bcb642382a9a275dce2cb658e",
+   "build_report_chemistry.json": "599bb40e6f782b53065d5e314cd18a66f9197db7236c311974311ea17fec396a",
+   "inpost_relations_chemistry.csv": "40080724536420f7a4d53e5097cb28f8ee2b620ff8120ed380a954108ddc01a1",
+   "inpost_report_chemistry.json": "e8148d8cb80f80333bf8ff8ccf8489beab9182a94b226af0ca89c7aea261cecd",
+   "p1_frame_chemistry.csv": "ab14e4c877d342d92591bcb1bc94db740886b1a93561741b1fb2ddc08e42b2cf",
+   "p2_becoming_chemistry.csv": "26d2214ee2f5a193a4cb50b2f647e3236cbefbcb1caa1190ac721c5ee0303735",
+   "p3_slim_chemistry.parquet": "879f9debfa06aa6b3122e69314c5ef97eb43ea8106e00d62ff68fd5385b67065",
+   "p3_slim_ev_chemistry.parquet": "232db560bc080e3e661e355c56cacd818601950a2db6b7dd82916e80cdac70b8",
+   "pairs_none_chemistry.parquet": "4bc968d577ceb9eea283f62e563466f48e4cc39c3b2fa510f552ef81580f4eec",
+   "relationships_chemistry.csv": "23a276b2205e82a1dc2959bcff0706d06bbc1ca8e450c3805abf67bab8829712",
+   "staging_manifest_chemistry.json": "9c74042253b3636e42f46ce8ee62380f0c119a9dfd291b99b94303487447f85b",
+   "union_build_report_chemistry.json": "c5465dfca477e0fe17df04251eaa91a605a3d3282d76e9f1afab730cf3b67832"
+  },
+  "math_stats": {
+   "MANIFEST.sha256": "10dec083b6c8d2bd8434554c51426b00e9356073a378a3687399a236521877b9",
+   "build_report_math_stats.json": "bd2d8e6f0487d1a73b00b189efe633c2c8a6f11199dcaf9b2ce1ba857f360564",
+   "inpost_relations_math_stats.csv": "9e133ee30bf47b07df17f965ea32a0d39037da67968a814aaf2eee2afe1ab042",
+   "inpost_report_math_stats.json": "7be0f9e41e9cedcfee1cbb029b1a9c8fc86019190395aa92188af01b75ec8c47",
+   "p1_frame_math_stats.csv": "9dcf9b504b6a4a622c73c4164c18aa54840abc26322a8fff7b22e61fc031538f",
+   "p2_becoming_math_stats.csv": "1d1093a8dec12c28d4a81118cd54df66a17eb69dc854747875578a626dc321a0",
+   "p3_slim_ev_math_stats.parquet": "396d9c3055498a0164c7bea7a6b35f4486f5bdb1fecaaa9195c8f0dba407e8d0",
+   "p3_slim_math_stats.parquet": "a9ad04e9af128054df3b339a18dc437fceb599d3adbc5c4d1c8d9f87318f86ab",
+   "pairs_none_math_stats.parquet": "b7d6a6dc6abe8905d18d7241abc04581f3b29e645ecd7ca890fabb4d47ed8f93",
+   "relationships_math_stats.csv": "3cbbd95876c454b4ba90e1c389fd4a6d643652be7693d583fb47d78221691b20",
+   "staging_manifest_math_stats.json": "72691f3fe062df0d3d1a609c9272411fe3b2b1067f7597a25444e130c166bcbe",
+   "union_build_report_math_stats.json": "5549518db4dcd33db67ad8941b2bdfda6998026437ba6172bc46897d610b097f"
+  }
+ },
+ "replaced": "NOT_RUN.md (2026-09-23, 'controls NOT EQUAL' under the 08-28 launchers) deleted; this report replaces it",
+ "status": "DONE",
+ "stops": [],
+ "secs": 171.1
+}

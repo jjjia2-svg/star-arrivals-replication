@@ -1,0 +1,22 @@
+bind_tokens:
+- case_sensitive: false
+  text: Australian National University
+  word_boundary: false
+- case_sensitive: true
+  text: ANU
+  word_boundary: true
+dept_key: anu_econ
+exclude_tokens:
+- Arndt-Corden
+- Crawford School
+openalex_inst_id: I118347636
+phrase_requires:
+  Economics Program:
+  - case_sensitive: false
+    text: Research School of Social Sciences
+    word_boundary: false
+phrases:
+- Research School of Economics
+- School of Economics
+- Economics Program
+window_chars: 80

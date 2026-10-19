@@ -1,0 +1,10 @@
+$ setup/.venv/bin/python pipeline/frames/make_slim.py math_stats data/frames/pairs_none_math_stats.parquet $TMPDIR/sar_rob_nocentre/slim_control/p3_slim_ev_math_stats.parquet --noev $TMPDIR/sar_rob_nocentre/slim_control/p3_slim_math_stats.parquet
+[env] {}
+--- stdout ---
+    OK   $TMPDIR/sar_rob_nocentre/slim_control/p3_slim_ev_math_stats.parquet  (888,117 B, sha256 460b17f01fa4048dbebea5378ff0a2b4de33e3e770a00e1560445f2087e20bc1)
+    OK   $TMPDIR/sar_rob_nocentre/slim_control/p3_slim_math_stats.parquet  (912,688 B, sha256 597d63c7cbf1c583b19eab45e6fe1c252dabdeb4068c91e25f2b5cc91fcb1bc7)
+{'rows': 929324, 'pairs': 55237, 'ties': 1031, 'events': 33, 'produced': {'$TMPDIR/sar_rob_nocentre/slim_control/p3_slim_ev_math_stats.parquet': '460b17f01fa4048dbebea5378ff0a2b4de33e3e770a00e1560445f2087e20bc1', '$TMPDIR/sar_rob_nocentre/slim_control/p3_slim_math_stats.parquet': '597d63c7cbf1c583b19eab45e6fe1c252dabdeb4068c91e25f2b5cc91fcb1bc7'}, 'noev_columns': ['grp', 'year', 'y', 'D']}
+
+--- stderr ---
+
+--- rc=0 secs=0.1 ---

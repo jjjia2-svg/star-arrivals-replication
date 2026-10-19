@@ -1,0 +1,38 @@
+{
+ "schema": "sar.r1.final_paper.v1",
+ "note": "Read by pipeline/aws/r1/final_stage.py (repin, gate2) in the final job (M) and finalb0 (B0). ledger_date: the date the M ledgers are installed under in the scratch tree (data_numbers_<ledger_date>*.json); a date label later than config/r1/final_tree.json current.ledger_date (2026-10-23), so the M ledgers never take an October name (repin refuses LEDGER_DATE_UNSET / LEDGER_DATE_NOT_LATER). finalb0 ignores it and keeps the tree's own date (config/r1/final_tree.json current_b0.ledger_date), so the dated names do not move. words_limit: the author's limit, counted by tools/count_words.py (rule of 2026-09-13). figures: the nine figures install.py exhibits copies (--figures). rearchive: where install.py ledgers moves the tree's dated October ledgers (_archive/<rearchive>/). deliver: copied from $WORK/prod/<from> to /work/out/final/<name> by gate2 (with gate2.json, change_facts.json and tree_r1.tar).",
+ "ledger_date": "2026-10-24",
+ "words_limit": 12000,
+ "figures": [
+  "fig_dose_distribution",
+  "fig_exposure_population",
+  "fig_hops",
+  "fig_p1",
+  "fig_p2",
+  "fig_p3_afar",
+  "fig_star_origins",
+  "fig_compare_years",
+  "fig_comparison_pools"
+ ],
+ "rearchive": "2026-10-23_pre_r1_ledgers",
+ "deliver": [
+  {"name": "thesis_r1_clean.pdf", "from": "compile/scratch/main_clean.pdf"},
+  {"name": "thesis_r1_main.pdf", "from": "compile/scratch/main.pdf"},
+  {"name": "thesis_october_clean.pdf", "from": "compile/october/main_clean.pdf"},
+  {"name": "thesis_r1_red.pdf", "from": "red/red/thesis_r1_red.pdf"},
+  {"name": "thesis_r1_bw.pdf", "from": "red/red/thesis_r1_bw.pdf"},
+  {"name": "red_verify.json", "from": "red/red_verify.json"},
+  {"name": "number_table.md", "from": "numbers/number_table.md"},
+  {"name": "ledger_diff.csv", "from": "numbers/ledger_diff.csv"},
+  {"name": "sentinel_vault_pre.md", "from": "sentinel_pre/vault.md"},
+  {"name": "sentinel_vault_pre.json", "from": "sentinel_pre/vault.json"},
+  {"name": "sentinel_vault_post.md", "from": "sentinel_post/vault.md"},
+  {"name": "sentinel_thesis_report.md", "from": "sentinel_pre/thesis_default.md"},
+  {"name": "check_paper_repin.patch", "from": "repin/check_paper_repin.patch"},
+  {"name": "replace_report.json", "from": "repin/replace_report.json"},
+  {"name": "repin_report.json", "from": "repin/repin_report.json"},
+  {"name": "words_october.json", "from": "texts/words_october.json"},
+  {"name": "words_r1.json", "from": "texts/words_new.json"},
+  {"name": "texts.json", "from": "texts/texts.json"}
+ ]
+}

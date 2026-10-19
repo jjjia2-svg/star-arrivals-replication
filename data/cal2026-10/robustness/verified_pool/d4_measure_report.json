@@ -1,0 +1,81 @@
+{
+ "generated": "2026-09-23",
+ "purpose": "D4 check on the October caliber: would build_verified_pool.py's rule drop anyone from the October frames?",
+ "identity_rule": "frame person id == 'P_'||author_id, or == person_id of that author_id in the 2026-07-16 11-school person map (build_verified_pool.py's rule, unchanged)",
+ "rosters": {
+  "roster_2026-08-09": {
+   "file": "data/raw_verified/roster_econ_verified.parquet",
+   "author_ids": 920,
+   "person_ids_both_forms": 970
+  },
+  "roster_2026-10": {
+   "file": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+   "author_ids": 1008,
+   "person_ids_both_forms": 1060
+  },
+  "additions_2026-10": {
+   "file": "data/cal2026-10/roster_added_2026-10.csv",
+   "author_ids": 88,
+   "person_ids_both_forms": 90
+  }
+ },
+ "panel1": {
+  "persons": 822,
+  "persons_by_channel": {
+   "both": 303,
+   "dept_only": 735,
+   "network": 463
+  },
+  "events": 113,
+  "rows": 73073,
+  "vs_roster_2026-08-09": {
+   "persons_not_on_roster": 74,
+   "roster_route_persons_not_on_roster": 66,
+   "network_only_persons_not_on_roster": 8,
+   "rows_of_persons_not_on_roster": 5467,
+   "not_on_roster_but_in_2026-10_additions": 74
+  },
+  "vs_roster_2026-10": {
+   "persons_not_on_roster": 0,
+   "roster_route_persons_not_on_roster": 0,
+   "network_only_persons_not_on_roster": 0,
+   "rows_of_persons_not_on_roster": 0,
+   "not_on_roster_but_in_2026-10_additions": 0
+  },
+  "additions_2026-10_present": 74
+ },
+ "panel2": {
+  "persons": 822,
+  "persons_by_channel": {
+   "both": 301,
+   "dept_only": 735,
+   "network": 463
+  },
+  "events": 113,
+  "rows": 111448,
+  "vs_roster_2026-08-09": {
+   "persons_not_on_roster": 74,
+   "roster_route_persons_not_on_roster": 65,
+   "network_only_persons_not_on_roster": 9,
+   "rows_of_persons_not_on_roster": 8278,
+   "not_on_roster_but_in_2026-10_additions": 74
+  },
+  "vs_roster_2026-10": {
+   "persons_not_on_roster": 0,
+   "roster_route_persons_not_on_roster": 0,
+   "network_only_persons_not_on_roster": 0,
+   "rows_of_persons_not_on_roster": 0,
+   "not_on_roster_but_in_2026-10_additions": 0
+  },
+  "additions_2026-10_present": 74
+ },
+ "inputs_sha256": {
+  "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+  "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+  "data/raw_verified/roster_econ_verified.parquet": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "data/cal2026-10/roster_econ_verified_2026-10.parquet": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+  "data/cal2026-10/roster_added_2026-10.csv": "0a3f9f75e376eba5df2a7f5ee658823517e441b1c98396b6f5ce3ca636c03c58",
+  "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8"
+ },
+ "d4_verdict": "PASS: 0 persons off the October roster in both frames — the builder would drop 0 persons; the filtered frames are the unfiltered frames"
+}

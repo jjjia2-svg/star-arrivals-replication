@@ -1,0 +1,11 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p1 P1_econ_fnfix events=113 perms=0..0 seed=20260829 =====
+  CONTROL EQUAL: ate=-0.3683823992 se=0.0659036485 == ref (to the gold's 8-decimal rounding)
+  [P1_econ_fnfix] perm 0 done (7.2s)
+[P1_econ_fnfix] 0..0 done -> data/cal2026-10/cloud_t5/preflight_local_identity/P1_econ_fnfix_perm_0_0.csv
+SAR_OUT=$T Rscript $R $MODE $LAB $FR $REF $SEED 0 0  7.02s user 1.34s system 97% cpu 8.554 total

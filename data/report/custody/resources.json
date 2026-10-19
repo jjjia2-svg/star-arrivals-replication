@@ -1,0 +1,255 @@
+{
+ "source_job": "j1a-21",
+ "source_reports_sha256": {
+  "cells_rmac/cells_report_rmac.json": "a98eedc79c146013525dfc2a1aa9e9aab31496f12e1c5d9e97892539c4571823",
+  "cells_rcloud/cells_report_rcloud.json": "46e8a60a9732d16fa81ca75e7532af00dd716bb7752efe522fa1f21a85a6a0f6",
+  "cells_rmac_evcl/cells_report_rmac.json": "051c74658c84bbb7c4fb2a14c01dc56526c74e9ee69d93e9370c9ae16595925d",
+  "cells_rcloud_evcl/cells_report_rcloud.json": "daa3ff7c9e8eb2d59ee99eb65d55c258e6f357d1e3563dae1d4bdaf44b298bb1"
+ },
+ "large_cell_peak_gib": 210.43,
+ "cells": [
+  {
+   "out_name": "P1_econ_fnfix.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 42.6,
+   "peak_gib": 6.31,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P1_fnfix_chemistry.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 29.3,
+   "peak_gib": 3.28,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P1_fnfix_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 34.6,
+   "peak_gib": 4.45,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2_econ_fnfix.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 19.2,
+   "peak_gib": 5.8,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2_fnfix_chemistry.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 13.8,
+   "peak_gib": 2.69,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2_fnfix_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 15.9,
+   "peak_gib": 3.91,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3_fnfix_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 240.1,
+   "peak_gib": 151.57,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3lb_math_stats_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 54.9,
+   "peak_gib": 16.52,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3lb_chemistry_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 26.8,
+   "peak_gib": 5.83,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3lb_econ_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 124.3,
+   "peak_gib": 39.66,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3pos_math_stats_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 167.8,
+   "peak_gib": 56.62,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3med_math_stats_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 55.9,
+   "peak_gib": 16.52,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3pos_chemistry_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 70.9,
+   "peak_gib": 17.95,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3med_chemistry_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 27.4,
+   "peak_gib": 5.84,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3pos_econ_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 431.5,
+   "peak_gib": 134.43,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3med_econ_A_far.json",
+   "stack": "rmac",
+   "source": "cells_rmac/cells_report_rmac.json",
+   "secs": 120.2,
+   "peak_gib": 39.65,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3_fnfix_chemistry.json",
+   "stack": "rcloud",
+   "source": "cells_rcloud/cells_report_rcloud.json",
+   "secs": 86.4,
+   "peak_gib": 59.31,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3_econ_fnfix.json",
+   "stack": "rcloud",
+   "source": "cells_rcloud/cells_report_rcloud.json",
+   "secs": 289.3,
+   "peak_gib": 210.43,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P1evcl_econ.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 37.6,
+   "peak_gib": 6.06,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P1evcl_chemistry.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 27.7,
+   "peak_gib": 3.17,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P1evcl_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 32.4,
+   "peak_gib": 4.37,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2evcl_econ.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 18.7,
+   "peak_gib": 5.8,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2evcl_chemistry.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 13.2,
+   "peak_gib": 2.66,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P2evcl_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 15.5,
+   "peak_gib": 3.66,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3evcl_math_stats.json",
+   "stack": "rmac",
+   "source": "cells_rmac_evcl/cells_report_rmac.json",
+   "secs": 266.2,
+   "peak_gib": 148.11,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3evcl_chemistry.json",
+   "stack": "rcloud",
+   "source": "cells_rcloud_evcl/cells_report_rcloud.json",
+   "secs": 102.8,
+   "peak_gib": 58.25,
+   "status": "RAN",
+   "rc": 0
+  },
+  {
+   "out_name": "P3evcl_econ.json",
+   "stack": "rcloud",
+   "source": "cells_rcloud_evcl/cells_report_rcloud.json",
+   "secs": 349.8,
+   "peak_gib": 210.39,
+   "status": "RAN",
+   "rc": 0
+  }
+ ]
+}

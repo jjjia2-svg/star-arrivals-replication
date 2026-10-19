@@ -1,0 +1,16 @@
+person_id,dept_key,action,own_author_id,confidence,rule
+P_A5053509775,uts_econ,confirm,,medium,D3-2 UTS CHERE after the 2021 move counts as UTS economics (author ruling 2026-07-10)
+P_A5062522216,uts_econ,confirm,,medium,D3-2 UTS CHERE after the 2021 move counts as UTS economics (author ruling 2026-07-10)
+P_A5035818265,uts_econ,confirm,,medium,D3-2 UTS CHERE after the 2021 move counts as UTS economics (author ruling 2026-07-10)
+P_A5027155920,uts_econ,confirm,,low,D3-2 UTS CHERE after the 2021 move counts as UTS economics (author ruling 2026-07-10)
+P_A5068470091,uts_econ,confirm,,low,D3-2 UTS CHERE after the 2021 move counts as UTS economics (author ruling 2026-07-10)
+P_A5018982917,adelaide_econ,confirm,,low,D3-3 unverifiable persons stay on the roster at low confidence (2026-08-09 convention)
+P_A5042828330,unsw_econ,confirm,,low,D3-3 unverifiable persons stay on the roster at low confidence (2026-08-09 convention)
+P_A5088881688,monash_econ,confirm,,low,D3-3 unverifiable persons stay on the roster at low confidence (2026-08-09 convention)
+P_A5062089038,uwa_econ,confirm_own_id,A5065862323,high,D3-4 person confirmed but the main id is another person: keep only the person's own id
+P_A5037530222,uwa_econ,confirm_own_id,A5046503193,high,D3-4 person confirmed but the main id is another person: keep only the person's own id
+P_A5086151825,uwa_econ,confirm_own_id,A5086151825,high,D3-4 person confirmed but the main id is another person: keep only the person's own id
+P_A5042802170,uwa_econ,confirm_own_id,A5042802170,high,D3-4 person confirmed but the main id is another person: keep only the person's own id
+P_A5000129921,unsw_econ,reject,,,D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists
+P_A5013214751,unsw_econ,reject,,,D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists
+P_A5061335885,unsw_econ,reject,,,D3-4 every id is a mixture of other people: rejected (2026-08-09 convention); to be re-added once a hand-built id exists

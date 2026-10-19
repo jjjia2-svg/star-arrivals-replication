@@ -1,0 +1,25 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "recder",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 40,
+  "hard_min": 90,
+  "root_gb": 50,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [["r1/evidence/", "/work/evidence/"]],
+  "required_dests": ["/work/recovered/"],
+  "data_sync": [["r1/legacy/legacy_v2_output/", "/data/legacy/thesis/v2_output/"]],
+  "copy_from_tip": [
+    ["pipeline/aws/r1/recover_rk.py", "/work/recover_rk.py"],
+    ["pipeline/aws/r1/replay_derivations.py", "/work/replay_derivations.py"],
+    ["pipeline/aws/r1/verify_inputs.py", "/work/verify_inputs.py"]
+  ],
+  "steps": [
+    "\"$PY\" /work/verify_inputs.py recovered --dir /work/recovered --pins \"$REPO_DIR/config/r1/recovered_pins.json\"",
+    "\"$PY\" /work/verify_inputs.py data --job-spec \"$REPO_DIR/config/r1/jobs/recder.json\" --pins \"$REPO_DIR/config/r1/input_pins.json\" --out /work/out/verify",
+    "\"$PY\" /work/replay_derivations.py --spec \"$REPO_DIR/config/r1/derivations.json\" --evidence /work/evidence --recovered /work/recovered --repo \"$REPO_DIR\" --legacy /data/legacy/thesis/v2_output --work /work/replay --out /work/out --python \"$PY\""
+  ],
+  "env_layers": ["py"]
+}

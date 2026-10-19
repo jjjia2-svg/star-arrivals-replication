@@ -1,0 +1,337 @@
+[scan] shards=2446 manifest_records=510,372,821 gz_bytes=665,688,383,258
+[scan] tasks=299 workers=13 json_lib=orjson
+[scan] todo=299/299 (resume skipped 0)
+[scan] 1/299 task=12 lines=2,298,938 cells=63,657 86.9s | cum=2,298,938 26,438 rec/s | ETA 431.9 min
+[scan] 2/299 task=8 lines=2,300,971 cells=63,553 86.9s | cum=4,599,909 52,899 rec/s | ETA 215.2 min
+[scan] 3/299 task=6 lines=2,300,172 cells=63,697 87.2s | cum=6,900,081 79,123 rec/s | ETA 143.4 min
+[scan] 4/299 task=1 lines=2,300,614 cells=63,778 87.4s | cum=9,200,695 105,206 rec/s | ETA 107.5 min
+[scan] 5/299 task=9 lines=2,301,322 cells=63,474 87.8s | cum=11,502,017 130,898 rec/s | ETA 86.1 min
+[scan] 6/299 task=2 lines=2,300,735 cells=63,555 87.8s | cum=13,802,752 157,071 rec/s | ETA 71.5 min
+[scan] 7/299 task=11 lines=2,299,299 cells=63,469 88.2s | cum=16,102,051 182,561 rec/s | ETA 61.3 min
+[scan] 8/299 task=10 lines=2,301,472 cells=63,506 88.5s | cum=18,403,523 207,758 rec/s | ETA 53.7 min
+[scan] 9/299 task=4 lines=2,301,339 cells=63,687 89.0s | cum=20,704,862 232,647 rec/s | ETA 47.8 min
+[scan] 10/299 task=3 lines=2,302,930 cells=63,551 89.4s | cum=23,007,792 257,150 rec/s | ETA 43.1 min
+[scan] 11/299 task=5 lines=2,300,851 cells=63,194 89.5s | cum=25,308,643 282,625 rec/s | ETA 39.1 min
+[scan] 12/299 task=7 lines=2,299,450 cells=63,583 90.6s | cum=27,608,093 304,712 rec/s | ETA 36.1 min
+[scan] 13/299 task=0 lines=2,148,397 cells=63,043 95.5s | cum=29,756,490 311,543 rec/s | ETA 35.0 min
+[scan] 14/299 task=20 lines=2,086,405 cells=102,849 87.9s | cum=31,842,895 180,446 rec/s | ETA 59.9 min
+[scan] 15/299 task=14 lines=2,301,496 cells=63,678 91.1s | cum=34,144,391 191,776 rec/s | ETA 56.2 min
+[scan] 16/299 task=13 lines=2,295,999 cells=63,647 91.4s | cum=36,440,390 204,305 rec/s | ETA 52.6 min
+[scan] 17/299 task=15 lines=2,299,864 cells=63,493 91.6s | cum=38,740,254 216,637 rec/s | ETA 49.4 min
+[scan] 18/299 task=17 lines=2,301,025 cells=63,740 91.6s | cum=41,041,279 228,643 rec/s | ETA 46.7 min
+[scan] 19/299 task=16 lines=2,300,553 cells=63,817 92.4s | cum=43,341,832 240,987 rec/s | ETA 44.2 min
+[scan] 20/299 task=18 lines=2,301,815 cells=63,575 92.9s | cum=45,643,647 252,528 rec/s | ETA 42.0 min
+[scan] 21/299 task=19 lines=2,300,456 cells=63,699 92.7s | cum=47,944,103 265,013 rec/s | ETA 39.9 min
+[scan] 22/299 task=22 lines=2,186,299 cells=115,045 97.3s | cum=50,130,402 268,409 rec/s | ETA 39.2 min
+[scan] 23/299 task=21 lines=2,184,676 cells=114,842 98.7s | cum=52,315,078 278,752 rec/s | ETA 37.5 min
+[scan] 24/299 task=23 lines=2,185,974 cells=115,316 98.6s | cum=54,501,052 289,597 rec/s | ETA 35.9 min
+[scan] 25/299 task=24 lines=2,186,040 cells=115,026 99.5s | cum=56,687,092 298,136 rec/s | ETA 34.7 min
+[scan] 26/299 task=25 lines=2,184,445 cells=114,867 98.8s | cum=58,871,537 302,908 rec/s | ETA 34.0 min
+[scan] 27/299 task=29 lines=2,039,333 cells=112,053 92.5s | cum=60,910,870 224,508 rec/s | ETA 45.6 min
+[scan] 28/299 task=31 lines=2,040,493 cells=111,818 92.1s | cum=62,951,363 231,452 rec/s | ETA 43.9 min
+[scan] 29/299 task=26 lines=2,185,109 cells=115,018 98.5s | cum=65,136,472 236,859 rec/s | ETA 42.7 min
+[scan] 30/299 task=27 lines=2,183,972 cells=114,962 97.9s | cum=67,320,444 243,979 rec/s | ETA 41.2 min
+[scan] 31/299 task=28 lines=2,186,447 cells=115,025 98.2s | cum=69,506,891 251,291 rec/s | ETA 39.9 min
+[scan] 32/299 task=30 lines=2,183,935 cells=115,334 98.6s | cum=71,690,826 257,790 rec/s | ETA 38.7 min
+[scan] 33/299 task=33 lines=2,148,433 cells=114,658 97.3s | cum=73,839,259 265,412 rec/s | ETA 37.4 min
+[scan] 34/299 task=32 lines=2,183,441 cells=115,156 98.6s | cum=76,022,700 272,149 rec/s | ETA 36.3 min
+[scan] 35/299 task=35 lines=2,040,155 cells=112,039 91.7s | cum=78,062,855 279,378 rec/s | ETA 35.1 min
+[scan] 36/299 task=34 lines=2,221,746 cells=115,869 99.4s | cum=80,284,601 280,563 rec/s | ETA 34.8 min
+[scan] 37/299 task=36 lines=2,185,861 cells=115,176 98.4s | cum=82,470,462 287,762 rec/s | ETA 33.8 min
+[scan] 38/299 task=37 lines=2,184,239 cells=114,952 97.3s | cum=84,654,701 294,438 rec/s | ETA 32.9 min
+[scan] 39/299 task=38 lines=2,183,880 cells=115,157 97.4s | cum=86,838,581 297,578 rec/s | ETA 32.4 min
+[scan] 40/299 task=39 lines=2,187,501 cells=115,278 96.3s | cum=89,026,082 242,163 rec/s | ETA 39.7 min
+[scan] 41/299 task=40 lines=2,186,663 cells=115,063 96.0s | cum=91,212,745 247,844 rec/s | ETA 38.6 min
+[scan] 42/299 task=44 lines=2,040,030 cells=111,898 90.5s | cum=93,252,775 252,968 rec/s | ETA 37.6 min
+[scan] 43/299 task=47 lines=2,038,001 cells=112,276 89.5s | cum=95,290,776 258,307 rec/s | ETA 36.6 min
+[scan] 44/299 task=46 lines=2,040,186 cells=112,217 89.6s | cum=97,330,962 263,805 rec/s | ETA 35.6 min
+[scan] 45/299 task=41 lines=2,185,164 cells=114,982 94.8s | cum=99,516,126 269,062 rec/s | ETA 34.8 min
+[scan] 46/299 task=42 lines=2,188,077 cells=115,215 96.1s | cum=101,704,203 273,369 rec/s | ETA 34.1 min
+[scan] 47/299 task=43 lines=2,186,484 cells=114,913 96.0s | cum=103,890,687 278,802 rec/s | ETA 33.3 min
+[scan] 48/299 task=45 lines=2,185,479 cells=115,352 96.6s | cum=106,076,166 283,027 rec/s | ETA 32.7 min
+[scan] 49/299 task=48 lines=2,187,673 cells=114,976 96.3s | cum=108,263,839 283,037 rec/s | ETA 32.5 min
+[scan] 50/299 task=49 lines=2,185,860 cells=115,012 96.0s | cum=110,449,699 288,696 rec/s | ETA 31.8 min
+[scan] 51/299 task=50 lines=2,184,828 cells=115,084 96.4s | cum=112,634,527 293,401 rec/s | ETA 31.1 min
+[scan] 52/299 task=51 lines=2,186,162 cells=115,080 96.1s | cum=114,820,689 295,961 rec/s | ETA 30.7 min
+[scan] 53/299 task=54 lines=1,894,428 cells=108,530 81.9s | cum=116,715,117 259,024 rec/s | ETA 34.9 min
+[scan] 54/299 task=56 lines=2,041,863 cells=112,055 87.8s | cum=118,756,980 260,010 rec/s | ETA 34.5 min
+[scan] 55/299 task=58 lines=2,038,350 cells=111,990 87.5s | cum=120,795,330 262,857 rec/s | ETA 34.0 min
+[scan] 56/299 task=53 lines=2,184,356 cells=114,867 94.1s | cum=122,979,686 266,101 rec/s | ETA 33.4 min
+[scan] 57/299 task=52 lines=2,186,698 cells=114,934 94.5s | cum=125,166,384 270,815 rec/s | ETA 32.7 min
+[scan] 58/299 task=55 lines=2,185,654 cells=115,022 94.1s | cum=127,352,038 275,030 rec/s | ETA 32.1 min
+[scan] 59/299 task=57 lines=2,183,123 cells=114,810 94.1s | cum=129,535,161 279,174 rec/s | ETA 31.5 min
+[scan] 60/299 task=61 lines=1,894,119 cells=108,640 81.9s | cum=131,429,280 282,974 rec/s | ETA 30.8 min
+[scan] 61/299 task=59 lines=2,146,664 cells=114,375 92.6s | cum=133,575,944 287,075 rec/s | ETA 30.3 min
+[scan] 62/299 task=60 lines=2,223,694 cells=115,879 95.7s | cum=135,799,638 288,619 rec/s | ETA 30.0 min
+[scan] 63/299 task=62 lines=2,037,606 cells=112,094 88.0s | cum=137,837,244 292,926 rec/s | ETA 29.4 min
+[scan] 64/299 task=63 lines=2,183,721 cells=115,125 94.3s | cum=140,020,965 292,818 rec/s | ETA 29.3 min
+[scan] 65/299 task=64 lines=2,184,601 cells=115,194 93.8s | cum=142,205,566 295,196 rec/s | ETA 28.9 min
+[scan] 66/299 task=65 lines=2,185,252 cells=115,301 94.2s | cum=144,390,818 265,049 rec/s | ETA 32.1 min
+[scan] 67/299 task=66 lines=2,149,885 cells=114,255 92.4s | cum=146,540,703 266,860 rec/s | ETA 31.7 min
+[scan] 68/299 task=69 lines=2,038,969 cells=111,709 87.6s | cum=148,579,672 270,260 rec/s | ETA 31.1 min
+[scan] 69/299 task=74 lines=1,894,509 cells=108,842 81.9s | cum=150,474,181 272,389 rec/s | ETA 30.7 min
+[scan] 70/299 task=72 lines=2,074,807 cells=112,853 90.1s | cum=152,548,988 275,086 rec/s | ETA 30.2 min
+[scan] 71/299 task=67 lines=2,221,262 cells=115,691 96.4s | cum=154,770,250 278,386 rec/s | ETA 29.8 min
+[scan] 72/299 task=68 lines=2,184,825 cells=115,055 93.8s | cum=156,955,075 282,302 rec/s | ETA 29.2 min
+[scan] 73/299 task=71 lines=2,148,577 cells=114,429 92.8s | cum=159,103,652 285,761 rec/s | ETA 28.7 min
+[scan] 74/299 task=70 lines=2,189,249 cells=114,929 93.8s | cum=161,292,901 289,636 rec/s | ETA 28.2 min
+[scan] 75/299 task=73 lines=2,185,094 cells=114,960 94.0s | cum=163,477,995 292,303 rec/s | ETA 27.8 min
+[scan] 76/299 task=75 lines=2,183,939 cells=115,086 94.0s | cum=165,661,934 293,429 rec/s | ETA 27.6 min
+[scan] 77/299 task=76 lines=2,185,211 cells=114,893 94.0s | cum=167,847,145 293,316 rec/s | ETA 27.5 min
+[scan] 78/299 task=77 lines=2,188,175 cells=115,012 93.8s | cum=170,035,320 295,415 rec/s | ETA 27.2 min
+[scan] 79/299 task=78 lines=2,040,525 cells=112,166 87.5s | cum=172,075,845 272,127 rec/s | ETA 29.3 min
+[scan] 80/299 task=80 lines=2,040,504 cells=112,025 87.1s | cum=174,116,349 273,395 rec/s | ETA 29.1 min
+[scan] 81/299 task=81 lines=2,038,088 cells=111,960 87.4s | cum=176,154,437 275,314 rec/s | ETA 28.7 min
+[scan] 82/299 task=82 lines=2,038,735 cells=112,009 87.1s | cum=178,193,172 277,716 rec/s | ETA 28.3 min
+[scan] 83/299 task=79 lines=2,189,327 cells=114,969 94.0s | cum=180,382,499 280,473 rec/s | ETA 27.9 min
+[scan] 84/299 task=83 lines=2,184,639 cells=114,863 94.0s | cum=182,567,138 280,895 rec/s | ETA 27.7 min
+[scan] 85/299 task=84 lines=2,186,545 cells=115,083 94.0s | cum=184,753,683 284,214 rec/s | ETA 27.3 min
+[scan] 86/299 task=85 lines=2,185,576 cells=115,003 94.1s | cum=186,939,259 287,193 rec/s | ETA 26.9 min
+[scan] 87/299 task=86 lines=2,185,641 cells=115,142 95.0s | cum=189,124,900 290,097 rec/s | ETA 26.5 min
+[scan] 88/299 task=87 lines=2,185,191 cells=115,445 93.9s | cum=191,310,091 292,887 rec/s | ETA 26.1 min
+[scan] 89/299 task=88 lines=2,185,630 cells=115,083 95.2s | cum=193,495,721 293,276 rec/s | ETA 25.9 min
+[scan] 90/299 task=89 lines=2,185,478 cells=115,180 94.5s | cum=195,681,199 293,459 rec/s | ETA 25.8 min
+[scan] 91/299 task=90 lines=2,186,241 cells=115,222 94.5s | cum=197,867,440 295,282 rec/s | ETA 25.5 min
+[scan] 92/299 task=91 lines=2,184,396 cells=115,176 95.8s | cum=200,051,836 274,719 rec/s | ETA 27.3 min
+[scan] 93/299 task=94 lines=2,038,896 cells=112,346 91.3s | cum=202,090,732 275,716 rec/s | ETA 27.1 min
+[scan] 94/299 task=92 lines=2,185,548 cells=115,114 97.5s | cum=204,276,280 278,166 rec/s | ETA 26.7 min
+[scan] 95/299 task=93 lines=2,186,849 cells=115,133 96.9s | cum=206,463,129 280,237 rec/s | ETA 26.4 min
+[scan] 96/299 task=95 lines=2,186,074 cells=115,211 96.7s | cum=208,649,203 282,028 rec/s | ETA 26.1 min
+[scan] 97/299 task=99 lines=2,037,208 cells=112,018 89.1s | cum=210,686,411 284,318 rec/s | ETA 25.7 min
+[scan] 98/299 task=100 lines=2,038,203 cells=111,721 88.2s | cum=212,724,614 286,917 rec/s | ETA 25.3 min
+[scan] 99/299 task=96 lines=2,185,948 cells=115,184 96.0s | cum=214,910,562 288,095 rec/s | ETA 25.1 min
+[scan] 100/299 task=97 lines=2,185,337 cells=114,936 96.2s | cum=217,095,899 290,916 rec/s | ETA 24.8 min
+[scan] 101/299 task=98 lines=2,185,063 cells=115,097 95.5s | cum=219,280,962 293,755 rec/s | ETA 24.4 min
+[scan] 102/299 task=102 lines=2,039,035 cells=111,642 89.6s | cum=221,319,997 292,597 rec/s | ETA 24.3 min
+[scan] 103/299 task=101 lines=2,185,055 cells=115,066 97.0s | cum=223,505,052 295,318 rec/s | ETA 24.0 min
+[scan] 104/299 task=103 lines=2,183,866 cells=115,033 94.7s | cum=225,688,918 295,098 rec/s | ETA 23.9 min
+[scan] 105/299 task=104 lines=2,037,461 cells=111,991 86.4s | cum=227,726,379 279,534 rec/s | ETA 25.1 min
+[scan] 106/299 task=105 lines=2,185,971 cells=114,581 93.5s | cum=229,912,350 278,188 rec/s | ETA 25.1 min
+[scan] 107/299 task=106 lines=2,185,174 cells=115,022 92.8s | cum=232,097,524 280,592 rec/s | ETA 24.7 min
+[scan] 108/299 task=110 lines=2,039,554 cells=112,037 86.2s | cum=234,137,078 282,883 rec/s | ETA 24.4 min
+[scan] 109/299 task=107 lines=2,185,978 cells=115,012 93.4s | cum=236,323,056 284,679 rec/s | ETA 24.1 min
+[scan] 110/299 task=108 lines=2,187,667 cells=115,423 92.9s | cum=238,510,723 286,423 rec/s | ETA 23.8 min
+[scan] 111/299 task=113 lines=2,042,662 cells=112,345 86.5s | cum=240,553,385 288,777 rec/s | ETA 23.5 min
+[scan] 112/299 task=109 lines=2,185,386 cells=114,878 92.6s | cum=242,738,771 291,190 rec/s | ETA 23.2 min
+[scan] 113/299 task=112 lines=2,185,372 cells=115,109 92.9s | cum=244,924,143 291,862 rec/s | ETA 23.0 min
+[scan] 114/299 task=111 lines=2,187,494 cells=114,842 93.2s | cum=247,111,637 294,467 rec/s | ETA 22.7 min
+[scan] 115/299 task=114 lines=2,185,597 cells=115,153 94.3s | cum=249,297,234 293,044 rec/s | ETA 22.7 min
+[scan] 116/299 task=115 lines=2,672,639 cells=105,444 102.8s | cum=251,969,873 293,111 rec/s | ETA 22.6 min
+[scan] 117/299 task=116 lines=4,983,967 cells=63,240 128.6s | cum=256,953,840 287,610 rec/s | ETA 23.2 min
+[scan] 118/299 task=123 lines=757,681 cells=29,028 78.7s | cum=257,711,521 282,680 rec/s | ETA 23.3 min
+[scan] 119/299 task=122 lines=757,693 cells=29,040 81.2s | cum=258,469,214 282,799 rec/s | ETA 23.0 min
+[scan] 120/299 task=124 lines=757,625 cells=29,114 82.7s | cum=259,226,839 282,904 rec/s | ETA 22.8 min
+[scan] 121/299 task=126 lines=756,905 cells=28,918 80.4s | cum=259,983,744 282,726 rec/s | ETA 22.5 min
+[scan] 122/299 task=118 lines=2,179,306 cells=59,552 93.2s | cum=262,163,050 285,066 rec/s | ETA 22.2 min
+[scan] 123/299 task=119 lines=2,109,982 cells=59,204 93.9s | cum=264,273,032 286,907 rec/s | ETA 22.0 min
+[scan] 124/299 task=125 lines=757,088 cells=29,025 83.2s | cum=265,030,120 287,340 rec/s | ETA 21.7 min
+[scan] 125/299 task=117 lines=3,290,608 cells=85,782 116.2s | cum=268,320,728 288,258 rec/s | ETA 21.6 min
+[scan] 126/299 task=127 lines=757,306 cells=29,078 83.5s | cum=269,078,034 288,027 rec/s | ETA 21.4 min
+[scan] 127/299 task=120 lines=1,690,148 cells=56,322 119.1s | cum=270,768,182 285,982 rec/s | ETA 21.4 min
+[scan] 128/299 task=128 lines=758,349 cells=28,957 87.3s | cum=271,526,531 286,738 rec/s | ETA 21.1 min
+[scan] 129/299 task=121 lines=2,137,415 cells=48,945 124.3s | cum=273,663,946 286,723 rec/s | ETA 21.0 min
+[scan] 130/299 task=129 lines=758,293 cells=29,025 90.9s | cum=274,422,239 278,796 rec/s | ETA 21.3 min
+[scan] 131/299 task=130 lines=756,612 cells=29,116 88.6s | cum=275,178,851 275,089 rec/s | ETA 21.4 min
+[scan] 132/299 task=132 lines=758,850 cells=29,010 86.1s | cum=275,937,701 275,284 rec/s | ETA 21.1 min
+[scan] 133/299 task=131 lines=759,055 cells=29,030 92.2s | cum=276,696,756 275,005 rec/s | ETA 20.9 min
+[scan] 134/299 task=133 lines=930,040 cells=32,698 95.1s | cum=277,626,796 273,606 rec/s | ETA 20.8 min
+[scan] 135/299 task=135 lines=1,707,528 cells=56,333 103.9s | cum=279,334,324 272,516 rec/s | ETA 20.8 min
+[scan] 136/299 task=134 lines=1,694,174 cells=56,286 106.8s | cum=281,028,498 273,769 rec/s | ETA 20.5 min
+[scan] 137/299 task=136 lines=2,886,229 cells=101,941 119.3s | cum=283,914,727 272,549 rec/s | ETA 20.5 min
+[scan] 138/299 task=137 lines=2,520,228 cells=105,208 114.8s | cum=286,434,955 273,934 rec/s | ETA 20.3 min
+[scan] 139/299 task=138 lines=2,520,317 cells=104,853 112.4s | cum=288,955,272 276,087 rec/s | ETA 20.1 min
+[scan] 140/299 task=139 lines=2,517,346 cells=104,993 111.1s | cum=291,472,618 275,523 rec/s | ETA 20.0 min
+[scan] 141/299 task=140 lines=2,519,935 cells=105,245 111.0s | cum=293,992,553 277,874 rec/s | ETA 19.8 min
+[scan] 142/299 task=141 lines=2,515,987 cells=104,874 113.1s | cum=296,508,540 277,743 rec/s | ETA 19.7 min
+[scan] 143/299 task=142 lines=2,517,344 cells=105,522 106.0s | cum=299,025,884 274,239 rec/s | ETA 19.8 min
+[scan] 144/299 task=143 lines=2,517,445 cells=105,008 104.6s | cum=301,543,329 272,893 rec/s | ETA 19.8 min
+[scan] 145/299 task=146 lines=2,238,997 cells=100,161 91.6s | cum=303,782,326 274,597 rec/s | ETA 19.6 min
+[scan] 146/299 task=144 lines=2,513,919 cells=104,826 105.4s | cum=306,296,245 276,500 rec/s | ETA 19.3 min
+[scan] 147/299 task=145 lines=2,518,744 cells=105,194 106.1s | cum=308,814,989 277,634 rec/s | ETA 19.2 min
+[scan] 148/299 task=147 lines=2,516,323 cells=105,385 103.7s | cum=311,331,312 275,821 rec/s | ETA 19.2 min
+[scan] 149/299 task=148 lines=2,516,510 cells=105,102 104.5s | cum=313,847,822 277,477 rec/s | ETA 19.0 min
+[scan] 150/299 task=149 lines=2,520,017 cells=104,820 103.8s | cum=316,367,839 276,171 rec/s | ETA 19.0 min
+[scan] 151/299 task=150 lines=2,518,054 cells=105,002 101.0s | cum=318,885,893 278,092 rec/s | ETA 18.7 min
+[scan] 152/299 task=151 lines=2,520,290 cells=105,430 101.4s | cum=321,406,183 279,968 rec/s | ETA 18.5 min
+[scan] 153/299 task=153 lines=2,515,942 cells=105,147 101.1s | cum=323,922,125 279,456 rec/s | ETA 18.4 min
+[scan] 154/299 task=152 lines=2,518,501 cells=104,987 101.3s | cum=326,440,626 281,599 rec/s | ETA 18.2 min
+[scan] 155/299 task=154 lines=2,536,034 cells=119,747 102.3s | cum=328,976,660 281,196 rec/s | ETA 18.1 min
+[scan] 156/299 task=155 lines=2,558,434 cells=119,970 98.7s | cum=331,535,094 278,822 rec/s | ETA 18.2 min
+[scan] 157/299 task=156 lines=2,561,321 cells=120,154 99.4s | cum=334,096,415 277,396 rec/s | ETA 18.2 min
+[scan] 158/299 task=157 lines=2,559,974 cells=120,107 101.8s | cum=336,656,389 278,665 rec/s | ETA 18.0 min
+[scan] 159/299 task=158 lines=2,560,665 cells=119,823 102.4s | cum=339,217,054 280,292 rec/s | ETA 17.8 min
+[scan] 160/299 task=159 lines=2,561,187 cells=119,795 99.4s | cum=341,778,241 282,062 rec/s | ETA 17.5 min
+[scan] 161/299 task=160 lines=1,557,503 cells=55,690 88.5s | cum=343,335,744 282,064 rec/s | ETA 17.4 min
+[scan] 162/299 task=161 lines=1,595,544 cells=25,971 99.1s | cum=344,931,288 280,393 rec/s | ETA 17.3 min
+[scan] 163/299 task=162 lines=1,595,343 cells=25,914 94.7s | cum=346,526,631 279,388 rec/s | ETA 17.2 min
+[scan] 164/299 task=164 lines=1,597,003 cells=26,076 93.9s | cum=348,123,634 280,322 rec/s | ETA 17.0 min
+[scan] 165/299 task=163 lines=1,596,107 cells=25,967 95.4s | cum=349,719,741 281,552 rec/s | ETA 16.8 min
+[scan] 166/299 task=166 lines=1,708,271 cells=29,662 85.6s | cum=351,428,012 282,297 rec/s | ETA 16.6 min
+[scan] 167/299 task=165 lines=2,245,784 cells=48,468 99.5s | cum=353,673,796 280,993 rec/s | ETA 16.6 min
+[scan] 168/299 task=167 lines=2,407,764 cells=65,385 101.6s | cum=356,081,560 280,045 rec/s | ETA 16.5 min
+[scan] 169/299 task=168 lines=1,816,721 cells=71,318 96.6s | cum=357,898,281 278,371 rec/s | ETA 16.5 min
+[scan] 170/299 task=171 lines=1,586,029 cells=100,165 80.3s | cum=359,484,310 278,557 rec/s | ETA 16.3 min
+[scan] 171/299 task=172 lines=1,267,685 cells=58,947 80.3s | cum=360,751,995 279,220 rec/s | ETA 16.1 min
+[scan] 172/299 task=169 lines=1,719,233 cells=49,977 100.7s | cum=362,471,228 277,723 rec/s | ETA 16.1 min
+[scan] 173/299 task=170 lines=1,861,440 cells=103,436 99.0s | cum=364,332,668 278,720 rec/s | ETA 15.9 min
+[scan] 174/299 task=173 lines=1,550,149 cells=58,269 100.6s | cum=365,882,817 277,641 rec/s | ETA 15.8 min
+[scan] 175/299 task=178 lines=1,334,914 cells=77,222 77.4s | cum=367,217,731 277,717 rec/s | ETA 15.6 min
+[scan] 176/299 task=174 lines=2,006,519 cells=58,765 96.9s | cum=369,224,250 278,226 rec/s | ETA 15.5 min
+[scan] 177/299 task=175 lines=2,139,388 cells=83,820 99.1s | cum=371,363,638 277,251 rec/s | ETA 15.4 min
+[scan] 178/299 task=176 lines=2,136,812 cells=83,501 97.8s | cum=373,500,450 278,807 rec/s | ETA 15.2 min
+[scan] 179/299 task=177 lines=2,137,816 cells=83,523 98.5s | cum=375,638,266 280,186 rec/s | ETA 15.0 min
+[scan] 180/299 task=179 lines=1,283,269 cells=59,210 89.4s | cum=376,921,535 279,607 rec/s | ETA 14.9 min
+[scan] 181/299 task=180 lines=1,194,137 cells=26,669 83.7s | cum=378,115,672 279,004 rec/s | ETA 14.7 min
+[scan] 182/299 task=181 lines=1,191,113 cells=26,502 86.2s | cum=379,306,785 276,481 rec/s | ETA 14.7 min
+[scan] 183/299 task=186 lines=1,619,102 cells=41,355 78.3s | cum=380,925,887 272,836 rec/s | ETA 14.8 min
+[scan] 184/299 task=191 lines=634,458 cells=37,601 63.8s | cum=381,560,345 271,666 rec/s | ETA 14.6 min
+[scan] 185/299 task=192 lines=634,624 cells=38,011 62.3s | cum=382,194,969 270,985 rec/s | ETA 14.5 min
+[scan] 186/299 task=182 lines=3,867,827 cells=49,670 126.2s | cum=386,062,796 272,500 rec/s | ETA 14.3 min
+[scan] 187/299 task=185 lines=2,149,593 cells=38,981 109.9s | cum=388,212,389 273,962 rec/s | ETA 14.1 min
+[scan] 188/299 task=187 lines=1,651,278 cells=45,819 96.3s | cum=389,863,667 274,828 rec/s | ETA 14.0 min
+[scan] 189/299 task=193 lines=635,056 cells=37,548 64.4s | cum=390,498,723 275,061 rec/s | ETA 13.8 min
+[scan] 190/299 task=190 lines=850,897 cells=47,387 80.5s | cum=391,349,620 275,574 rec/s | ETA 13.6 min
+[scan] 191/299 task=183 lines=4,314,914 cells=44,918 129.5s | cum=395,664,534 278,351 rec/s | ETA 13.4 min
+[scan] 192/299 task=184 lines=2,876,213 cells=60,380 116.5s | cum=398,540,747 280,337 rec/s | ETA 13.2 min
+[scan] 193/299 task=189 lines=1,032,299 cells=62,225 86.5s | cum=399,573,046 280,208 rec/s | ETA 13.1 min
+[scan] 194/299 task=188 lines=1,758,515 cells=69,730 104.0s | cum=401,331,561 280,436 rec/s | ETA 12.9 min
+[scan] 195/299 task=194 lines=634,169 cells=37,674 67.3s | cum=401,965,730 279,297 rec/s | ETA 12.8 min
+[scan] 196/299 task=195 lines=633,666 cells=37,651 72.4s | cum=402,599,396 274,143 rec/s | ETA 12.9 min
+[scan] 197/299 task=196 lines=635,252 cells=37,663 75.1s | cum=403,234,648 272,516 rec/s | ETA 12.8 min
+[scan] 198/299 task=197 lines=634,132 cells=37,634 71.5s | cum=403,868,780 272,538 rec/s | ETA 12.6 min
+[scan] 199/299 task=198 lines=633,677 cells=37,515 70.6s | cum=404,502,457 271,965 rec/s | ETA 12.5 min
+[scan] 200/299 task=199 lines=635,892 cells=37,827 74.4s | cum=405,138,349 271,639 rec/s | ETA 12.3 min
+[scan] 201/299 task=203 lines=634,296 cells=37,796 70.1s | cum=405,772,645 272,051 rec/s | ETA 12.1 min
+[scan] 202/299 task=200 lines=634,759 cells=37,671 73.2s | cum=406,407,404 272,423 rec/s | ETA 11.9 min
+[scan] 203/299 task=201 lines=633,019 cells=37,432 73.7s | cum=407,040,423 272,571 rec/s | ETA 11.8 min
+[scan] 204/299 task=204 lines=634,829 cells=37,783 71.7s | cum=407,675,252 272,983 rec/s | ETA 11.6 min
+[scan] 205/299 task=205 lines=634,158 cells=37,492 70.8s | cum=408,309,410 272,781 rec/s | ETA 11.4 min
+[scan] 206/299 task=202 lines=635,072 cells=37,584 79.1s | cum=408,944,482 272,764 rec/s | ETA 11.3 min
+[scan] 207/299 task=206 lines=635,158 cells=37,779 75.3s | cum=409,579,640 271,898 rec/s | ETA 11.2 min
+[scan] 208/299 task=207 lines=635,722 cells=37,531 77.5s | cum=410,215,362 270,469 rec/s | ETA 11.1 min
+[scan] 209/299 task=208 lines=634,276 cells=37,497 81.1s | cum=410,849,638 265,122 rec/s | ETA 11.1 min
+[scan] 210/299 task=209 lines=633,325 cells=37,485 79.8s | cum=411,482,963 263,852 rec/s | ETA 11.0 min
+[scan] 211/299 task=210 lines=634,053 cells=37,628 82.6s | cum=412,117,016 263,417 rec/s | ETA 10.9 min
+[scan] 212/299 task=211 lines=635,198 cells=37,665 80.3s | cum=412,752,214 263,296 rec/s | ETA 10.7 min
+[scan] 213/299 task=212 lines=633,801 cells=37,325 78.0s | cum=413,386,015 263,386 rec/s | ETA 10.6 min
+[scan] 214/299 task=214 lines=634,088 cells=37,571 78.2s | cum=414,020,103 263,696 rec/s | ETA 10.4 min
+[scan] 215/299 task=215 lines=634,740 cells=37,620 77.9s | cum=414,654,843 263,899 rec/s | ETA 10.2 min
+[scan] 216/299 task=213 lines=633,363 cells=37,535 80.8s | cum=415,288,206 264,122 rec/s | ETA 10.1 min
+[scan] 217/299 task=216 lines=637,209 cells=37,842 79.1s | cum=415,925,415 264,497 rec/s | ETA 9.9 min
+[scan] 218/299 task=217 lines=635,171 cells=37,602 80.6s | cum=416,560,586 264,075 rec/s | ETA 9.8 min
+[scan] 219/299 task=218 lines=634,294 cells=37,681 90.8s | cum=417,194,880 262,377 rec/s | ETA 9.7 min
+[scan] 220/299 task=219 lines=634,032 cells=37,577 84.4s | cum=417,828,912 262,659 rec/s | ETA 9.5 min
+[scan] 221/299 task=220 lines=634,206 cells=37,536 87.8s | cum=418,463,118 260,811 rec/s | ETA 9.4 min
+[scan] 222/299 task=222 lines=633,754 cells=37,775 82.0s | cum=419,096,872 255,305 rec/s | ETA 9.5 min
+[scan] 223/299 task=221 lines=634,792 cells=37,789 92.7s | cum=419,731,664 255,560 rec/s | ETA 9.3 min
+[scan] 224/299 task=223 lines=635,024 cells=37,562 79.4s | cum=420,366,688 255,707 rec/s | ETA 9.2 min
+[scan] 225/299 task=227 lines=635,228 cells=37,688 81.5s | cum=421,001,916 254,718 rec/s | ETA 9.1 min
+[scan] 226/299 task=224 lines=634,728 cells=37,586 86.8s | cum=421,636,644 254,844 rec/s | ETA 8.9 min
+[scan] 227/299 task=225 lines=635,391 cells=37,578 85.6s | cum=422,272,035 255,126 rec/s | ETA 8.7 min
+[scan] 228/299 task=226 lines=635,731 cells=37,633 87.5s | cum=422,907,766 255,129 rec/s | ETA 8.6 min
+[scan] 229/299 task=228 lines=634,732 cells=37,379 87.5s | cum=423,542,498 255,165 rec/s | ETA 8.5 min
+[scan] 230/299 task=229 lines=633,731 cells=37,642 90.1s | cum=424,176,229 255,130 rec/s | ETA 8.3 min
+[scan] 231/299 task=230 lines=634,828 cells=37,651 87.7s | cum=424,811,057 255,116 rec/s | ETA 8.2 min
+[scan] 232/299 task=232 lines=634,989 cells=37,605 84.7s | cum=425,446,046 253,920 rec/s | ETA 8.1 min
+[scan] 233/299 task=231 lines=634,663 cells=37,676 90.7s | cum=426,080,709 253,504 rec/s | ETA 7.9 min
+[scan] 234/299 task=233 lines=635,420 cells=37,673 79.7s | cum=426,716,129 253,369 rec/s | ETA 7.8 min
+[scan] 235/299 task=234 lines=634,771 cells=37,808 82.6s | cum=427,350,900 247,859 rec/s | ETA 7.8 min
+[scan] 236/299 task=236 lines=634,425 cells=37,617 80.3s | cum=427,985,325 248,210 rec/s | ETA 7.7 min
+[scan] 237/299 task=235 lines=633,847 cells=37,660 82.3s | cum=428,619,172 248,522 rec/s | ETA 7.5 min
+[scan] 238/299 task=237 lines=634,486 cells=37,506 77.8s | cum=429,253,658 248,036 rec/s | ETA 7.4 min
+[scan] 239/299 task=238 lines=634,636 cells=37,453 77.9s | cum=429,888,294 248,143 rec/s | ETA 7.2 min
+[scan] 240/299 task=239 lines=634,244 cells=37,539 79.8s | cum=430,522,538 248,145 rec/s | ETA 7.1 min
+[scan] 241/299 task=245 lines=853,432 cells=36,163 80.2s | cum=431,375,970 244,963 rec/s | ETA 7.1 min
+[scan] 242/299 task=240 lines=988,216 cells=70,239 103.5s | cum=432,364,186 245,507 rec/s | ETA 6.9 min
+[scan] 243/299 task=241 lines=987,875 cells=70,207 105.3s | cum=433,352,061 245,499 rec/s | ETA 6.8 min
+[scan] 244/299 task=242 lines=990,073 cells=70,512 104.5s | cum=434,342,134 245,796 rec/s | ETA 6.6 min
+[scan] 245/299 task=246 lines=923,395 cells=27,093 89.7s | cum=435,265,529 245,374 rec/s | ETA 6.5 min
+[scan] 246/299 task=244 lines=1,497,680 cells=44,689 107.2s | cum=436,763,209 245,001 rec/s | ETA 6.4 min
+[scan] 247/299 task=243 lines=1,523,713 cells=58,787 120.3s | cum=438,286,922 245,475 rec/s | ETA 6.3 min
+[scan] 248/299 task=247 lines=923,920 cells=27,382 88.7s | cum=439,210,842 242,268 rec/s | ETA 6.2 min
+[scan] 249/299 task=249 lines=784,335 cells=23,093 89.8s | cum=439,995,177 242,492 rec/s | ETA 6.1 min
+[scan] 250/299 task=248 lines=968,861 cells=27,344 100.4s | cum=440,964,038 241,670 rec/s | ETA 6.0 min
+[scan] 251/299 task=254 lines=583,865 cells=22,674 70.9s | cum=441,547,903 241,015 rec/s | ETA 5.8 min
+[scan] 252/299 task=253 lines=587,245 cells=21,717 71.8s | cum=442,135,148 241,241 rec/s | ETA 5.7 min
+[scan] 253/299 task=250 lines=831,007 cells=21,967 104.1s | cum=442,966,155 241,431 rec/s | ETA 5.6 min
+[scan] 254/299 task=251 lines=832,705 cells=22,121 102.6s | cum=443,798,860 241,845 rec/s | ETA 5.4 min
+[scan] 255/299 task=252 lines=893,188 cells=24,076 109.3s | cum=444,692,048 241,124 rec/s | ETA 5.3 min
+[scan] 256/299 task=256 lines=807,091 cells=27,422 87.2s | cum=445,499,139 240,253 rec/s | ETA 5.2 min
+[scan] 257/299 task=257 lines=806,353 cells=27,451 88.0s | cum=446,305,492 239,711 rec/s | ETA 5.1 min
+[scan] 258/299 task=258 lines=806,610 cells=27,436 88.1s | cum=447,112,102 238,997 rec/s | ETA 5.0 min
+[scan] 259/299 task=255 lines=890,164 cells=26,497 106.8s | cum=448,002,266 239,313 rec/s | ETA 4.8 min
+[scan] 260/299 task=259 lines=807,135 cells=27,487 97.3s | cum=448,809,401 238,377 rec/s | ETA 4.7 min
+[scan] 261/299 task=260 lines=958,010 cells=28,611 97.6s | cum=449,767,411 235,422 rec/s | ETA 4.6 min
+[scan] 262/299 task=261 lines=899,264 cells=20,461 113.6s | cum=450,666,675 233,744 rec/s | ETA 4.5 min
+[scan] 263/299 task=263 lines=896,187 cells=50,109 101.7s | cum=451,562,862 233,513 rec/s | ETA 4.4 min
+[scan] 264/299 task=262 lines=887,208 cells=24,896 112.3s | cum=452,450,070 233,587 rec/s | ETA 4.3 min
+[scan] 265/299 task=266 lines=1,434,610 cells=49,945 106.1s | cum=453,884,680 233,825 rec/s | ETA 4.2 min
+[scan] 266/299 task=264 lines=1,258,010 cells=69,262 109.4s | cum=455,142,690 234,343 rec/s | ETA 4.0 min
+[scan] 267/299 task=265 lines=1,432,945 cells=49,696 110.0s | cum=456,575,635 234,770 rec/s | ETA 3.9 min
+[scan] 268/299 task=268 lines=1,432,804 cells=49,821 110.5s | cum=458,008,439 233,109 rec/s | ETA 3.8 min
+[scan] 269/299 task=269 lines=1,435,014 cells=50,046 109.3s | cum=459,443,453 233,083 rec/s | ETA 3.7 min
+[scan] 270/299 task=267 lines=1,793,966 cells=54,980 137.7s | cum=461,237,419 232,719 rec/s | ETA 3.5 min
+[scan] 271/299 task=272 lines=1,434,887 cells=49,998 112.3s | cum=462,672,306 231,904 rec/s | ETA 3.4 min
+[scan] 272/299 task=270 lines=1,792,505 cells=55,007 128.4s | cum=464,464,811 232,323 rec/s | ETA 3.3 min
+[scan] 273/299 task=271 lines=1,793,916 cells=54,837 131.7s | cum=466,258,727 232,697 rec/s | ETA 3.2 min
+[scan] 274/299 task=274 lines=1,435,851 cells=50,044 108.5s | cum=467,694,578 229,648 rec/s | ETA 3.1 min
+[scan] 275/299 task=273 lines=1,793,841 cells=55,156 132.2s | cum=469,488,419 229,844 rec/s | ETA 3.0 min
+[scan] 276/299 task=275 lines=1,792,613 cells=54,808 131.6s | cum=471,281,032 228,181 rec/s | ETA 2.9 min
+[scan] 277/299 task=278 lines=1,791,920 cells=54,649 124.6s | cum=473,072,952 228,886 rec/s | ETA 2.7 min
+[scan] 278/299 task=277 lines=1,793,308 cells=54,837 126.0s | cum=474,866,260 229,717 rec/s | ETA 2.6 min
+[scan] 279/299 task=276 lines=1,794,214 cells=54,923 130.3s | cum=476,660,474 230,577 rec/s | ETA 2.5 min
+[scan] 280/299 task=279 lines=1,794,642 cells=54,979 132.0s | cum=478,455,116 230,381 rec/s | ETA 2.3 min
+[scan] 281/299 task=280 lines=1,793,881 cells=54,779 133.5s | cum=480,248,997 228,881 rec/s | ETA 2.2 min
+[scan] 282/299 task=281 lines=1,794,260 cells=55,072 134.9s | cum=482,043,257 228,887 rec/s | ETA 2.1 min
+[scan] 283/299 task=282 lines=1,791,860 cells=54,860 131.7s | cum=483,835,117 228,908 rec/s | ETA 2.0 min
+[scan] 284/299 task=284 lines=1,790,936 cells=54,840 127.1s | cum=485,626,053 228,385 rec/s | ETA 1.9 min
+[scan] 285/299 task=283 lines=1,791,934 cells=54,772 138.4s | cum=487,417,987 228,463 rec/s | ETA 1.7 min
+[scan] 286/299 task=285 lines=1,793,653 cells=55,089 135.5s | cum=489,211,640 228,683 rec/s | ETA 1.6 min
+[scan] 287/299 task=286 lines=1,434,947 cells=49,775 107.6s | cum=490,646,587 228,830 rec/s | ETA 1.5 min
+[scan] 288/299 task=287 lines=1,792,570 cells=55,133 125.5s | cum=492,439,157 227,119 rec/s | ETA 1.4 min
+[scan] 289/299 task=288 lines=1,433,407 cells=50,203 103.8s | cum=493,872,564 227,681 rec/s | ETA 1.3 min
+[scan] 290/299 task=289 lines=1,792,909 cells=54,651 118.6s | cum=495,665,473 226,798 rec/s | ETA 1.1 min
+[scan] 291/299 task=291 lines=1,794,093 cells=54,936 119.0s | cum=497,459,566 227,538 rec/s | ETA 1.0 min
+[scan] 292/299 task=290 lines=1,794,642 cells=55,014 121.9s | cum=499,254,208 228,063 rec/s | ETA 0.9 min
+[scan] 293/299 task=292 lines=1,792,873 cells=55,017 121.2s | cum=501,047,081 227,957 rec/s | ETA 0.8 min
+[scan] 294/299 task=298 lines=1,076,572 cells=44,100 63.8s | cum=502,123,653 227,922 rec/s | ETA 0.6 min
+[scan] 295/299 task=295 lines=1,476,897 cells=49,853 90.2s | cum=503,600,550 228,508 rec/s | ETA 0.5 min
+[scan] 296/299 task=293 lines=1,792,288 cells=54,866 111.5s | cum=505,392,838 228,708 rec/s | ETA 0.4 min
+[scan] 297/299 task=297 lines=1,435,571 cells=49,836 79.3s | cum=506,828,409 229,042 rec/s | ETA 0.2 min
+[scan] 298/299 task=294 lines=1,793,606 cells=54,738 107.2s | cum=508,622,015 229,814 rec/s | ETA 0.1 min
+[scan] 299/299 task=296 lines=1,750,806 cells=55,296 94.7s | cum=510,372,821 229,785 rec/s | ETA 0.0 min
+[scan] scan done in 37.0 min
+[merge] merging partials …
+[merge/keys] 50/299 cells=353,129
+[merge/keys] 100/299 cells=431,993
+[merge/keys] 150/299 cells=493,773
+[merge/keys] 200/299 cells=535,680
+[merge/keys] 250/299 cells=538,714
+[merge/sum] 50/299
+[merge/sum] 100/299
+[merge/sum] 150/299
+[merge/sum] 200/299
+[merge/sum] 250/299
+{
+ "n_cells": 543037,
+ "n_partials": 299,
+ "total_lines_read": 510372821,
+ "bad_lines": 0,
+ "dropped_null": 134823962,
+ "paratext_count": 3959559,
+ "drop_no_subfield": 106476062,
+ "drop_no_year": 19540616,
+ "drop_no_both": 8807284,
+ "sum_work_count": 375548859,
+ "sum_citation_sum": 2876959267,
+ "sum_paratext_count": 1582044,
+ "sum_paratext_citation_sum": 3774600,
+ "manifest_record_count": 510372821,
+ "shards": 2446,
+ "shard_read_mismatches": 0,
+ "lines_read_equals_manifest": true,
+ "merge_elapsed_min": 0.76,
+ "out_parquet": "<legacy>/v2_output/fwci_baseline_fullsnapshot_2026-08-09/data/fwci_baseline_pop_full.parquet",
+ "snapshot_manifest_date": "2026-06-26",
+ "json_lib": "orjson"
+}

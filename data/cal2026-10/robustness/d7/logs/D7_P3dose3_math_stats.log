@@ -1,0 +1,10 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3 P3dose3_math_stats frac=1.0 rows=929324/929324 groups=55237/55237 first ties=1031 =====
+P3dose3_math_stats                 joint-effect p=0.4825 placebo p=NA ATE=+0.000059 (SE 0.000060, CI -0.000059~0.000177)
+[P3dose3_math_stats] done elapsed=0.7 minutes
+SAR_OUT=data/cal2026-10/robustness/d7/dosebin3 Rscript $E/run_p3.R    23.35s user 12.23s system 79% cpu 44.925 total

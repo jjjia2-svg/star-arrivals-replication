@@ -1,0 +1,13 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3 P3ds_math_stats_full frac=1.0 rows=104999/104999 groups=6237/6237 first ties=114 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3ds_math_stats_full               joint-effect p=0.0518 placebo p=NA ATE=+0.000420 (SE 0.000331, CI -0.000228~0.001069)
+[P3ds_math_stats_full] done elapsed=0.0 minutes
+EXIT 0

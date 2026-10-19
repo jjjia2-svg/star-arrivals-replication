@@ -1,0 +1,16 @@
+# R1 (2026-10-13): config/paths.yaml for an R1 instance, read through $SAR_PATHS_CONFIG. Same keys.
+repo_root: "."
+legacy_v2_output: "/data/legacy/thesis/v2_output"
+legacy_thesis: "/data/legacy/thesis"
+ssd_root: "/data/openalex_pipeline"
+frames: data/frames
+raw_verified: data/raw_verified
+fwci: data/fwci
+estimates: data/estimates
+expected: analysis/expected
+output: output
+cal: data/cal2026-10
+paper_inputs: data/paper_inputs
+cal_intermediates: output/cal_intermediates/cal2026-10
+legacy_multiplex: "/data/legacy/thesis/multiplex_pipeline"
+pipeline_root: pipeline

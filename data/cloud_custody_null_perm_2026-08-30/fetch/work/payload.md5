@@ -1,0 +1,11 @@
+1c9b336086cd9eb278d2398aadd100c7  P3cut_pos_chemistry.json
+7df7dfa366c87be0c04b3cb4c845a1f6  P3cut_pos_econ.json
+e1989da05f8d85a96c95565ffda1fa8a  P3cut_pos_math_stats.json
+9a037b328b3a4b89aa6d3e6b090a9346  bootstrap.sh
+abe7f52a03b6bf4874eb11557d17a341  driver.sh
+acc0923557dd79bc63a0ba6b0d5aaa7b  jobs.txt
+4f1c5340a3aa2457ca9f37efcde59e96  p3_afar_pos_chemistry.parquet
+75c78db76ce1866e517d007dd1944fbb  p3_afar_pos_econ.parquet
+08802bd65efd558f8d043a845a2ba3ab  p3_afar_pos_math_stats.parquet
+27b33377a9998ab55baf490661e286bc  run_null.R
+1c8dba4f398c09f130a3e80611a29b30  run_perm.R

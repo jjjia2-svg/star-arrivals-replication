@@ -1,0 +1,43 @@
+{
+ "schema": "sar.r1.run_config.v1",
+ "config": "M",
+ "describes": "TEST FIXTURE ONLY (tests/test_r1_config.py): a minimal M run config. Every registry switch is at its ON value, the signed lists are named, and nothing else. The real config/r1/M.json is W2-CONFIGM's. The test fills 'rulings' from config/r1/B0.json and computes every 'pins' value from the files it loads against, so this file never carries a hash that can go stale.",
+ "rulings": [],
+ "switches": [
+  {"switch": "verdict_source", "value": "signed", "decided": "fixture: M on value", "owner": "F16/F17/F10"},
+  {"switch": "own_field_rank", "value": "field_topic", "decided": "fixture: M on value", "owner": "V3-RANK"},
+  {"switch": "label_fix", "value": "pass_C", "decided": "fixture: M on value", "owner": "V3-RANK/F17"},
+  {"switch": "p05_label_fix", "value": "pctC_0.95_celln_30", "decided": "fixture: M on value", "owner": "F17"},
+  {"switch": "network_freeze", "value": "both_hops_le_T-1", "decided": "fixture: M on value", "owner": "V3-NET"},
+  {"switch": "chemmath_edges", "value": "u1_full_11school_2026-07-16", "decided": "fixture: M on value", "owner": "N2"},
+  {"switch": "new_stars", "value": "add_list_r1", "decided": "fixture: M on value", "owner": "F10"},
+  {"switch": "redates", "value": "signed", "decided": "fixture: M on value", "owner": "F10/F11"},
+  {"switch": "calls", "value": "r1", "decided": "fixture: M on value", "owner": "F8"},
+  {"switch": "dose_excludes", "value": "not_this_person", "decided": "fixture: M on value", "owner": "F8/F13/F14"},
+  {"switch": "dose_mode", "value": "delta", "decided": "fixture: M on value", "owner": "F13/F14"},
+  {"switch": "add_backs", "value": "on", "decided": "fixture: M on value", "owner": "F13/F14"},
+  {"switch": "rosters", "value": "r1", "decided": "fixture: M on value", "owner": "P3a/F11/F14"},
+  {"switch": "departure_ledger", "value": "r1", "decided": "fixture: M on value", "owner": "F20"},
+  {"switch": "agg_missing", "value": "stop", "decided": "fixture: M on value", "owner": "N3"},
+  {"switch": "patch_raw", "value": "r1", "decided": "fixture: M on value", "owner": "F18"},
+  {"switch": "p_full_precision", "value": "on", "decided": "fixture: M on value", "owner": "N12"}
+ ],
+ "signed": {
+  "p2_decisions": "repo:data/cal2026-10r1/inputs/p2_decisions.json",
+  "rulings_p1": "repo:data/cal2026-10r1/inputs/rulings_p1.json",
+  "flips": "repo:data/cal2026-10r1/inputs/flips_r1.json",
+  "add_list": "repo:data/cal2026-10r1/inputs/add_list_r1.json",
+  "add_list_summary": "repo:data/cal2026-10r1/inputs/add_list_r1_summary.json"
+ },
+ "pins": {
+  "data/cal2026-10r1/inputs/p2_decisions.json": "",
+  "data/cal2026-10r1/inputs/rulings_p1.json": "",
+  "data/cal2026-10r1/inputs/flips_r1.json": "",
+  "data/cal2026-10r1/inputs/add_list_r1.json": "",
+  "data/cal2026-10r1/inputs/add_list_r1_summary.json": ""
+ },
+ "sections": {},
+ "inputs": [],
+ "data_refs": {},
+ "expect": {"counts": null}
+}

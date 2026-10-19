@@ -1,0 +1,21 @@
+$ Rscript analysis/estimation/run_p3_tp.R P3ds_pos_math_stats_A_far $TMPDIR/sar_rob_sensitivity/ds/p3_afar_ds_math_stats.parquet
+[env] {"SAR_OUT": "data/cal2026-10/robustness/doublestar/estimates", "POLARS_MAX_THREADS": "4"}
+--- stdout ---
+
+===== Panel 3[topic-similar pairs] P3ds_pos_math_stats_A_far rows=15128 groups=904 first ties=27 events=8 =====
+FAIL pair-cluster: infinite or missing values in 'x' 
+FAIL event-cluster: infinite or missing values in 'x' 
+[P3ds_pos_math_stats_A_far] done elapsed=0.1 minutes
+
+--- stderr ---
+Warning messages:
+1: package ‘DIDmultiplegtDYN’ was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+
+--- rc=0 secs=7.3 ---

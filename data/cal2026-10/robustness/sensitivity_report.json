@@ -1,0 +1,2800 @@
+{
+ "group": "sensitivity",
+ "caliber": "cal2026-10",
+ "generated": "2026-09-23 03:08",
+ "runner": "analysis/robustness/sensitivity/run_sensitivity_cal2026_10.py",
+ "scratch": "$TMPDIR/sar_rob_sensitivity",
+ "battery_jobs": 2,
+ "r_cap": 6,
+ "design": "the author's design record of 2026-09-22 (private archive) (D6 departure ledger of 187 events; the ± centre and double-star checks re-run unchanged)",
+ "script_edits": [
+  "build_departure.py: $SAR_AFAR_MAP_DIR (proven-map dir; default the spec's freeze root)",
+  "build_doublestar.py: $SAR_ROBUST_OUTDIR (default <freeze root>/doublestar)",
+  "build_doublestar_complement.py + run_doublestar_complement.sh: $SAR_ROBUST_OUTDIR, $SAR_ROBUST_STAGE (defaults unchanged)",
+  "run_nocentre.py: $SAR_ROBUST_OUTDIR (default data/robustness_2026-08-29_b/nocentre)",
+  "run_nocentre_afar_pos.py: $SAR_ROBUST_OUTDIR_P3POS; run_nocentre_afar_pos.sh: $SAR_ROBUST_MANIFEST_DIR (defaults unchanged)",
+  "no estimation line, control or frame path changed"
+ ],
+ "inputs": {
+  "git_head": "7bf38f9055e59087b21404209adf9b5ed2a56255",
+  "sha256": {
+   "data/frames/p1_frame_econ.csv": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+   "data/frames/p2_becoming_econ.csv": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+   "data/frames/p3_afar_pos_econ.parquet": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e",
+   "data/cal2026-10/events_econ_cal2026-10.csv": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+   "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_econ.csv": "a2edb6f857306972faf28cadfff683e904768046023e0ec60db855cd9dc77aa9",
+   "data/frames/p1_frame_chemistry.csv": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+   "data/frames/p2_becoming_chemistry.csv": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+   "data/frames/p3_afar_pos_chemistry.parquet": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+   "data/cal2026-10/events_chemistry_cal2026-10.csv": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+   "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_chemistry.csv": "8a9ff10178346b33b83fe878c9ed3619daa43a179ce52ab36b441572523aa769",
+   "data/frames/p1_frame_math_stats.csv": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+   "data/frames/p2_becoming_math_stats.csv": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+   "data/frames/p3_afar_pos_math_stats.parquet": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+   "data/cal2026-10/events_math_stats_cal2026-10.csv": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+   "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_math_stats.csv": "a064617628eecde800a0889dd834ed3f0bed842295b52f430a48b082883a4950",
+   "data/frames/p1_events_ledger_econ.csv": "2b0b21b53be6f8a68cd19326a5df4ef3314d1e1a232315918dff2e5ccb385767",
+   "data/frames/p3_slim_math_stats.parquet": "18e68a55b48ead3902e05e384d925968f0a943526df40a1586a221d2b6e5bf19",
+   "data/cal2026-08-28/frames/pairs_none_math_stats.parquet": "631f499bc78ed55f16384f13a159022ac99ab7c8302101eb7194b6ab2dea19cb",
+   "data/frames/pairs_none_math_stats.parquet": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+   "data/cal2026-10/robustness/afar_event_map_pos/afar_event_map_report.json": "ca4e97079c0f5839f321462502dd8acfd751d3f10a305e5a2577259ff35eec98",
+   "data/departure_verification_2026-09-10/departure_verified_2026-09-10.csv": "77d40126ca5705e7323b6cd78147a34d33a022809ad195598fe42efa7d185552",
+   "data/cal2026-08-28/events_chemistry_cal.csv": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+   "data/cal2026-08-28/events_math_stats_cal.csv": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+   "data/cal2026-08-28/frames/p1_events_ledger_econ.csv": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+   "data/robustness_2026-08-29_b/doublestar/doublestar_drops.csv": "9e1d2d70ed1e3d9000b20c81d3ca6ffa9be4419c02e054f188ac039f9a547ca8",
+   "data/robustness_2026-08-29_b/doublestar/doublestar_build_report.json": "49817068a5d4e5b17d9e595df3f2c505e8cc4d26580bff1f166aa7e37eb75014",
+   "data/robustness_2026-08-29_b/nocentre/nocentre_run_report.json": "80c531a849e51899df7753fdd0205747d73c709a39293ae682517236541a9b1e",
+   "analysis/estimation/run_p1.R": "d5423982ecbe96135066e99b32c6f543a6c74669deacbc57a7e575c28a1b6ea6",
+   "analysis/estimation/run_p2.R": "fc3c20970ffb52b2cfa72dfa9efbfa4f8320a21a30a74a30e6d27651e60ce44b",
+   "analysis/estimation/run_p3_tp.R": "45c89f70aba44bedb2558a51972840a466a4c0c115b508335c352a3b7448ccf1",
+   "analysis/estimation/run_p3.R": "bf7bb40d2f2801c24daec8aa0b56b362723f46de0fda8531ecc39f55c7241bae",
+   "pipeline/frames/make_slim.py": "c812610ede59bd2933f41d09c99ddf1a917570c71b510eec61441ffa40ebab12",
+   "analysis/robustness/sensitivity/build_departure_187.py": "8e5a30dd122c1a743d68413fc82201df739588a92a18d36887bca1116d40d18e",
+   "analysis/robustness/sensitivity/build_departure.py": "29a53d614adab7bac02e425a5cc50b86ac07bccc607f60194d74430364e4ba96",
+   "analysis/robustness/sensitivity/build_doublestar.py": "57968aa3756800688e746d5cf895fd528c6dd8719f91419cc5f3f62de14fa941",
+   "analysis/robustness/sensitivity/build_doublestar_complement.py": "c6e5dd2d50532d75c096bc7301d52b3ecb119c4cd3cd99696d8d255ab3dfa7d3",
+   "analysis/robustness/sensitivity/run_doublestar_complement.sh": "64ae216eb458e1f6dd039d603c4c2c95a1a92d189fa9a10ead321681961e48c5",
+   "analysis/robustness/sensitivity/run_nocentre.py": "a92deeb3781a85889bc42598553004023f28b5edd2a77e2b616f179dbaf15e7d",
+   "analysis/robustness/sensitivity/run_nocentre_afar_pos.py": "6c9cfa6b5f9a53c8c48a52dd8b241d82f2b8531a4d9c768c865dd5c6f18607c2",
+   "analysis/robustness/sensitivity/run_nocentre_afar_pos.sh": "0049e800844e7ff558b6f46fbe239e030ab1d56f7c6d61aba50e4d4278fb69fd",
+   "pipeline/stars/caliber_2026-08-28/frames_stage.py": "bc3ee0d93d5aadf325f839c7ebdf2e5d8890abdc864142240147c70107285495",
+   "pipeline/stars/caliber_2026-08-28/run_cal_frames.py": "b4f01f27df54548464b49beb6e2e9f812deecbe058bc323494ddff0cc3893a64",
+   "analysis/robustness/p3_afar_cuts/build_afar_cut.py": "7736905e407c9bc2db77f6875b89ba45b4b31543ae612c83b6fbcbbd6e76aca9",
+   "analysis/lib/compare_json.py": "435e0733e91f98ecf6f9521e860abb18d3acbf126d21400d09d8ed86f0aeaf4f",
+   "analysis/robustness/sensitivity/run_sensitivity_cal2026_10.py": "53eca02fd4ba7d8f64272882b7147a136a1823d93bc6d3a8a1e444e1f50c8066",
+   "analysis/expected/P1_econ_fnfix.json": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+   "analysis/expected/P1_fnfix_chemistry.json": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+   "analysis/expected/P1_fnfix_math_stats.json": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+   "analysis/expected/P2_econ_fnfix.json": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+   "analysis/expected/P2_fnfix_chemistry.json": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+   "analysis/expected/P2_fnfix_math_stats.json": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+   "analysis/expected/P3pos_econ_A_far.json": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+   "analysis/expected/P3pos_chemistry_A_far.json": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+   "analysis/expected/P3pos_math_stats_A_far.json": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+   "analysis/expected/P3_fnfix_math_stats.json": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1"
+  },
+  "frames_match_data_MANIFEST": {
+   "data/frames/p1_frame_econ.csv": true,
+   "data/frames/p2_becoming_econ.csv": true,
+   "data/frames/p3_afar_pos_econ.parquet": true,
+   "data/frames/p1_frame_chemistry.csv": true,
+   "data/frames/p2_becoming_chemistry.csv": true,
+   "data/frames/p3_afar_pos_chemistry.parquet": true,
+   "data/frames/p1_frame_math_stats.csv": true,
+   "data/frames/p2_becoming_math_stats.csv": true,
+   "data/frames/p3_afar_pos_math_stats.parquet": true,
+   "data/frames/p1_events_ledger_econ.csv": true,
+   "data/frames/p3_slim_math_stats.parquet": true,
+   "data/frames/pairs_none_math_stats.parquet": true
+  },
+  "r_version": "4.5.1"
+ },
+ "controls": {
+  "frame_controls": {
+   "P1_econ_fnfix": {
+    "label": "P1_econ_fnfix",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "data/frames/p1_frame_econ.csv",
+    "frame_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+    "rc": 0,
+    "secs": 21.6,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P1_econ_fnfix.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P1_econ_fnfix.json",
+    "json_sha256": "84efbde0b0c21489844a3b7b0aecb41eb2fa4ad9061012529be4f955306e331f",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 73073,
+     "rows_kept": 71797,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 62188,
+       "rels": 6527,
+       "events": 113,
+       "ate": -0.3683824,
+       "se": 0.06590365,
+       "lb": -0.49755118,
+       "ub": -0.23921362,
+       "p_joint_effects": 6.58347394e-08,
+       "p_joint_placebo": 0.00277072
+      },
+      "network": {
+       "status": "OK",
+       "obs": 24385,
+       "rels": 2464,
+       "events": 104,
+       "ate": -0.43063011,
+       "se": 0.10129897,
+       "lb": -0.62917244,
+       "ub": -0.23208778,
+       "p_joint_effects": 9.53504204e-07,
+       "p_joint_placebo": 0.03445503
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 44587,
+       "rels": 4753,
+       "events": 112,
+       "ate": -0.35492618,
+       "se": 0.07802759,
+       "lb": -0.50785744,
+       "ub": -0.20199491,
+       "p_joint_effects": 9.7660983e-07,
+       "p_joint_placebo": 0.02398694
+      }
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P1_econ_fnfix.json",
+     "gold_sha256": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+     "diff_head": []
+    }
+   },
+   "P2_econ_fnfix": {
+    "label": "P2_econ_fnfix",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "data/frames/p2_becoming_econ.csv",
+    "frame_sha256": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+    "rc": 0,
+    "secs": 8.7,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P2_econ_fnfix.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P2_econ_fnfix.json",
+    "json_sha256": "136ae2280ef7edb82f45c0d828b3fb1c78f0b1cf60e638814689f64030334c2f",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 111448,
+     "rels": 6632,
+     "grps": null,
+     "persons": 822,
+     "events": 113,
+     "first_ties": 197,
+     "ate": 0.00194924,
+     "se": 0.00076654,
+     "lb": 0.00044685,
+     "ub": 0.00345163,
+     "p_joint_effects": 1.324e-05,
+     "p_joint_placebo": null
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P2_econ_fnfix.json",
+     "gold_sha256": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+     "diff_head": []
+    }
+   },
+   "P3cut_pos_econ": {
+    "label": "P3cut_pos_econ",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "data/frames/p3_afar_pos_econ.parquet",
+    "frame_sha256": "1deef9e31326324255325e163e7982c3c1b574547429db48fb5b74f7d195475e",
+    "rc": 0,
+    "secs": 89.3,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P3cut_pos_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P3cut_pos_econ.json",
+    "json_sha256": "0696cfdcaa014fe5fe8dd60c8f151cc5ff643cc42b78ddfcc10a8b1e82d9d08f",
+    "status": "OK",
+    "headline": {
+     "rows": 1500425,
+     "grps": 90325,
+     "events": 111,
+     "first_ties": 3615,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.0006151,
+      "se": 0.00052893,
+      "lb": -0.00165179,
+      "ub": 0.0004216,
+      "p_joint_effects": 4.423e-05
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.0006151,
+      "se": 0.00093316,
+      "lb": -0.00244406,
+      "ub": 0.00121387,
+      "p_joint_effects": 0.00262355
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P3pos_econ_A_far.json",
+     "gold_sha256": "61a9ec013114de7ea81577085b3af1b25f84fbcaffbaed5c45bd3b3c2c8330e1",
+     "diff_head": []
+    }
+   },
+   "P1_fnfix_chemistry": {
+    "label": "P1_fnfix_chemistry",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "data/frames/p1_frame_chemistry.csv",
+    "frame_sha256": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+    "rc": 0,
+    "secs": 12.0,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P1_fnfix_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P1_fnfix_chemistry.json",
+    "json_sha256": "64d71a2358925794154e91e285cc82502b1e26ad526715451e3a016fb711068f",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 30635,
+     "rows_kept": 29414,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 26967,
+       "rels": 2674,
+       "events": 38,
+       "ate": -0.21897052,
+       "se": 0.07068566,
+       "lb": -0.35751186,
+       "ub": -0.08042917,
+       "p_joint_effects": 0.00776049,
+       "p_joint_placebo": 0.85627104
+      },
+      "network": {
+       "status": "OK",
+       "obs": 17842,
+       "rels": 1727,
+       "events": 38,
+       "ate": -0.1052363,
+       "se": 0.11320805,
+       "lb": -0.32712,
+       "ub": 0.1166474,
+       "p_joint_effects": 0.33171769,
+       "p_joint_placebo": 0.90958319
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 13569,
+       "rels": 1387,
+       "events": 38,
+       "ate": -0.22885905,
+       "se": 0.09466572,
+       "lb": -0.41440046,
+       "ub": -0.04331764,
+       "p_joint_effects": 0.00069117,
+       "p_joint_placebo": 0.80673914
+      }
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P1_fnfix_chemistry.json",
+     "gold_sha256": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+     "diff_head": []
+    }
+   },
+   "P2_fnfix_chemistry": {
+    "label": "P2_fnfix_chemistry",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "data/frames/p2_becoming_chemistry.csv",
+    "frame_sha256": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+    "rc": 0,
+    "secs": 5.2,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P2_fnfix_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P2_fnfix_chemistry.json",
+    "json_sha256": "5fd9e8b04e1a111478f289a92c2d923f7c5474e0bc577b162bf861309f0903c2",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 46168,
+     "rels": 2778,
+     "grps": null,
+     "persons": 470,
+     "events": 38,
+     "first_ties": 155,
+     "ate": 0.00609768,
+     "se": 0.00085062,
+     "lb": 0.0044305,
+     "ub": 0.00776486,
+     "p_joint_effects": 2.05878647e-11,
+     "p_joint_placebo": null
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P2_fnfix_chemistry.json",
+     "gold_sha256": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+     "diff_head": []
+    }
+   },
+   "P3cut_pos_chemistry": {
+    "label": "P3cut_pos_chemistry",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "data/frames/p3_afar_pos_chemistry.parquet",
+    "frame_sha256": "31a3e491df3ff8cdd3c9a799f6fbf56d332ac6b889aa54c166eee2d1c7702dcc",
+    "rc": 0,
+    "secs": 22.0,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P3cut_pos_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P3cut_pos_chemistry.json",
+    "json_sha256": "774072809fbeb0ffd6c84b1033717651cba563ef80605c637da8893fd3450157",
+    "status": "OK",
+    "headline": {
+     "rows": 184960,
+     "grps": 11466,
+     "events": 38,
+     "first_ties": 1004,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00466235,
+      "se": 0.00296265,
+      "lb": -0.01046904,
+      "ub": 0.00114434,
+      "p_joint_effects": 0.04285725
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00466235,
+      "se": 0.00293027,
+      "lb": -0.01040558,
+      "ub": 0.00108088,
+      "p_joint_effects": 8.159e-05
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P3pos_chemistry_A_far.json",
+     "gold_sha256": "f6857403335430733bc428fa5199fd1b6880af2dc0e081d6045d7e39c7f09a5d",
+     "diff_head": []
+    }
+   },
+   "P1_fnfix_math_stats": {
+    "label": "P1_fnfix_math_stats",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "data/frames/p1_frame_math_stats.csv",
+    "frame_sha256": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+    "rc": 0,
+    "secs": 9.7,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P1_fnfix_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P1_fnfix_math_stats.json",
+    "json_sha256": "27f4dbc4269115763eabf583782d0c1be20421df701958c92e44ea20b8f596fb",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 19910,
+     "rows_kept": 18854,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 16117,
+       "rels": 1714,
+       "events": 33,
+       "ate": -0.06028415,
+       "se": 0.15882016,
+       "lb": -0.37156595,
+       "ub": 0.25099766,
+       "p_joint_effects": 0.0085479,
+       "p_joint_placebo": 0.17488937
+      },
+      "network": {
+       "status": "OK",
+       "obs": 3628,
+       "rels": 364,
+       "events": 29,
+       "ate": -0.13332646,
+       "se": 0.20022774,
+       "lb": -0.52576563,
+       "ub": 0.25911271,
+       "p_joint_effects": 0.51847387,
+       "p_joint_placebo": 0.63395676
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 13635,
+       "rels": 1471,
+       "events": 33,
+       "ate": -0.03100046,
+       "se": 0.18531792,
+       "lb": -0.3942169,
+       "ub": 0.33221598,
+       "p_joint_effects": 0.01028101,
+       "p_joint_placebo": 0.23664006
+      }
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P1_fnfix_math_stats.json",
+     "gold_sha256": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+     "diff_head": []
+    }
+   },
+   "P2_fnfix_math_stats": {
+    "label": "P2_fnfix_math_stats",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "data/frames/p2_becoming_math_stats.csv",
+    "frame_sha256": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+    "rc": 0,
+    "secs": 4.0,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P2_fnfix_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P2_fnfix_math_stats.json",
+    "json_sha256": "d08338025a667d9a650c88c96c7145c150a1e3509aa21e1562a57696a4bd663c",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 30314,
+     "rels": 1795,
+     "grps": null,
+     "persons": 479,
+     "events": 33,
+     "first_ties": 35,
+     "ate": 0.00150531,
+     "se": 0.00048165,
+     "lb": 0.0005613,
+     "ub": 0.00244933,
+     "p_joint_effects": 0.06642823,
+     "p_joint_placebo": null
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P2_fnfix_math_stats.json",
+     "gold_sha256": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+     "diff_head": []
+    }
+   },
+   "P3cut_pos_math_stats": {
+    "label": "P3cut_pos_math_stats",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "data/frames/p3_afar_pos_math_stats.parquet",
+    "frame_sha256": "843de75d318e7fd5278077ba4794f91749455aef782f18873a5a8e15239b6b1c",
+    "rc": 0,
+    "secs": 16.4,
+    "log": "data/cal2026-10/robustness/sensitivity_controls/logs/P3cut_pos_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/P3cut_pos_math_stats.json",
+    "json_sha256": "7a7e3e63904aec111c8276f29d6f77697413b378c2223e064075b5b141370ee5",
+    "status": "OK",
+    "headline": {
+     "rows": 256506,
+     "grps": 15318,
+     "events": 32,
+     "first_ties": 401,
+     "pair_cluster": {
+      "status": null,
+      "ate": 0.00041345,
+      "se": 0.00041079,
+      "lb": -0.00039168,
+      "ub": 0.00121858,
+      "p_joint_effects": 0.08032729
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": 0.00041345,
+      "se": 0.00028871,
+      "lb": -0.00015241,
+      "ub": 0.00097931,
+      "p_joint_effects": 0.10274708
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P3pos_math_stats_A_far.json",
+     "gold_sha256": "8956049c6f0fb01f0a7ac637084411f76835ebf0825a44d136b91261d0c6b234",
+     "diff_head": []
+    }
+   }
+  },
+  "p3_full_math_controls": {
+   "pairs_0828": {
+    "pairs": "data/cal2026-08-28/frames/pairs_none_math_stats.parquet",
+    "pairs_sha256": "631f499bc78ed55f16384f13a159022ac99ab7c8302101eb7194b6ab2dea19cb",
+    "make_slim_stdout_tail": "80320, 'ties': 1395, 'events': 33, 'produced': {'$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_0828/p3_slim_ev_math_stats.parquet': 'f294ff374f79437f549e45b75a28efde7d904bbf36cf40003ecbd89c7feb10f8', '$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_0828/p3_slim_math_stats.parquet': 'bf3864e728cc500b4b2f5b68033c7e89933daea42aa2cbeab71a9db98f20698d'}, 'noev_columns': ['grp', 'year', 'y', 'D']}",
+    "slim_sha256": "bf3864e728cc500b4b2f5b68033c7e89933daea42aa2cbeab71a9db98f20698d",
+    "cell": {
+     "label": "P3_fnfix_math_stats",
+     "driver": "analysis/estimation/run_p3.R",
+     "frame": "$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_0828/p3_slim_math_stats.parquet",
+     "frame_sha256": "bf3864e728cc500b4b2f5b68033c7e89933daea42aa2cbeab71a9db98f20698d",
+     "rc": 0,
+     "secs": 25.0,
+     "log": "data/cal2026-10/robustness/sensitivity_controls/logs/p3full_pairs_0828/P3_fnfix_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/p3full_pairs_0828/P3_fnfix_math_stats.json",
+     "json_sha256": "b5334cdd96bd881e628c5ccf40407452e6b71999f956caaf460ff02d2f5108b9",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 1353396,
+      "rels": null,
+      "grps": 80320,
+      "persons": null,
+      "events": null,
+      "first_ties": 1395,
+      "ate": -7.783e-05,
+      "se": 0.00014173,
+      "lb": -0.00035562,
+      "ub": 0.00019996,
+      "p_joint_effects": 0.34209833,
+      "p_joint_placebo": null
+     }
+    },
+    "compare": {
+     "verdict": "NOT_EQUAL",
+     "gold": "analysis/expected/P3_fnfix_math_stats.json",
+     "gold_sha256": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+     "diff_head": [
+      "DIFF",
+      "rows: 1353396 != 929324",
+      "rows_full: 1353396 != 929324",
+      "grps: 80320 != 55237",
+      "grps_full: 80320 != 55237",
+      "first_ties: 1395 != 1031",
+      "ate: -7.783e-05 != 1.145e-05",
+      "se: 0.00014173 != 0.00017512",
+      "lb: -0.00035562 != -0.00033177",
+      "ub: 0.00019996 != 0.00035467",
+      "p_joint_effects: 0.34209833 != 0.22362596",
+      "effects[0].est: 0.00022269 != 0.00044102"
+     ]
+    }
+   },
+   "pairs_oct": {
+    "pairs": "data/frames/pairs_none_math_stats.parquet",
+    "pairs_sha256": "ec42439b8a8d48a1f2e786e21c66eb47e42f437ea7c9b64265415f6c007cd6e4",
+    "make_slim_stdout_tail": ": 55237, 'ties': 1031, 'events': 33, 'produced': {'$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_ev_math_stats.parquet': '0c6920623aa5f30cf790b1ea25893631af8c05538c1702a9848c7a0abe6b1ff1', '$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_math_stats.parquet': '0b1cfb228ad34164af4d466fe9da4da61978122be1fa3042ad9ae08d52e1b4c5'}, 'noev_columns': ['grp', 'year', 'y', 'D']}",
+    "slim_sha256": "0b1cfb228ad34164af4d466fe9da4da61978122be1fa3042ad9ae08d52e1b4c5",
+    "cell": {
+     "label": "P3_fnfix_math_stats",
+     "driver": "analysis/estimation/run_p3.R",
+     "frame": "$TMPDIR/sar_rob_sensitivity/p3full_ctl/pairs_oct/p3_slim_math_stats.parquet",
+     "frame_sha256": "0b1cfb228ad34164af4d466fe9da4da61978122be1fa3042ad9ae08d52e1b4c5",
+     "rc": 0,
+     "secs": 17.4,
+     "log": "data/cal2026-10/robustness/sensitivity_controls/logs/p3full_pairs_oct/P3_fnfix_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/sensitivity_controls/estimates_control/p3full_pairs_oct/P3_fnfix_math_stats.json",
+     "json_sha256": "d826abf92a1a9c5ca20d62a4f3849e7ea0ceea313a7e2c1328753374fa4d2074",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 929324,
+      "rels": null,
+      "grps": 55237,
+      "persons": null,
+      "events": null,
+      "first_ties": 1031,
+      "ate": 1.145e-05,
+      "se": 0.00017512,
+      "lb": -0.00033177,
+      "ub": 0.00035467,
+      "p_joint_effects": 0.22362596,
+      "p_joint_placebo": null
+     }
+    },
+    "compare": {
+     "verdict": "EQUAL",
+     "gold": "analysis/expected/P3_fnfix_math_stats.json",
+     "gold_sha256": "6e8f133720bd4b78c50e0fa4dcf88e98f425eaee32be325eb40866d5062f6de1",
+     "diff_head": []
+    }
+   }
+  },
+  "p3_full_math_reading": "build_doublestar.py re-slims data/cal2026-08-28/frames/pairs_none_math_stats.parquet (a frame path this run may not change); pairs_0828 is that table unfiltered, pairs_oct the October table data/frames/pairs_none_math_stats.parquet — the P3ds_math_stats_full cell runs only if pairs_0828 is EQUAL",
+  "frame_controls_all_equal": true
+ },
+ "status": "DONE_WITH_STOPS",
+ "secs": 470.2,
+ "departure": {
+  "ledger": "data/departure_verification_2026-09-10/departure_verified_2026-09-10.csv",
+  "ledger_sha256": "77d40126ca5705e7323b6cd78147a34d33a022809ad195598fe42efa7d185552",
+  "ledger_rows": 187,
+  "builder": "analysis/robustness/sensitivity/build_departure_187.py",
+  "fields": {
+   "econ": {
+    "build_report": "data/cal2026-10/robustness/departure/departure187_build_report_econ.json",
+    "events_in_frame": 113,
+    "ledger_rows": 116,
+    "verdicts": {
+     "stayed_through_window": 64,
+     "left_after_window": 25,
+     "left_within_window": 24,
+     "unknown": 3
+    },
+    "rule_A_drops_events": 30,
+    "rule_B_recodes_events": 43,
+    "rule_A_dropped_event_ids": [
+     "A5005868773:2014",
+     "A5011262618:2018",
+     "A5012590199:2019",
+     "A5015268530:2021",
+     "A5016931502:2018",
+     "A5017694921:2007",
+     "A5020729611:2017",
+     "A5022446221:2020",
+     "A5024737956:2014",
+     "A5035157505:2018",
+     "A5039737173:2016",
+     "A5046163960:2007",
+     "A5046379417:2006",
+     "A5049007275:2006",
+     "A5054037290:2008",
+     "A5059426203:2018",
+     "A5059554264:2021",
+     "A5063951119:2010",
+     "A5070067353:2005",
+     "A5070264657:2009",
+     "A5070304330:2013",
+     "A5070527085:2015",
+     "A5079006965:2011",
+     "A5085246004:2017",
+     "A5086581525:2017",
+     "A5087653408:2019",
+     "A5089150146:2013",
+     "A5102189800:2013",
+     "A5102491748:2015",
+     "A5111971785:2009"
+    ],
+    "rule_B_recode_years": {
+     "A5034628923:2005": 2018,
+     "A5013630114:2008": 2019,
+     "A5085246004:2017": 2020,
+     "A5059426203:2018": 2023,
+     "A5011262618:2018": 2020,
+     "A5049007275:2006": 2007,
+     "A5078564370:2014": 2022,
+     "A5008296992:2018": 2025,
+     "A5034784553:2008": 2018,
+     "A5000292946:2009": 2021,
+     "A5047686030:2010": 2022,
+     "A5039737173:2016": 2022,
+     "A5035157505:2018": 2022,
+     "A5046163960:2007": 2010,
+     "A5054037290:2008": 2011,
+     "A5050761986:2010": 2024,
+     "A5070304330:2013": 2019,
+     "A5005868773:2014": 2020,
+     "A5024737956:2014": 2020,
+     "A5024745682:2015": 2023,
+     "A5012590199:2019": 2022,
+     "A5022446221:2020": 2023,
+     "A5071656006:2000": 2011,
+     "A5000674091:2006": 2019,
+     "A5020729611:2017": 2022,
+     "A5016931502:2018": 2020,
+     "A5087653408:2019": 2022,
+     "A5059554264:2021": 2024,
+     "A5015268530:2021": 2024,
+     "A5017694921:2007": 2007,
+     "A5041837451:2008": 2021,
+     "A5063951119:2010": 2015,
+     "A5086581525:2017": 2022,
+     "A5008208999:2005": 2013,
+     "A5046379417:2006": 2010,
+     "A5089150146:2013": 2015,
+     "A5070067353:2005": 2007,
+     "A5111971785:2009": 2015,
+     "A5070264657:2009": 2014,
+     "A5079006965:2011": 2014,
+     "A5070527085:2015": 2017,
+     "A5102491748:2015": 2017,
+     "A5073639630:2010": 2020
+    },
+    "unparseable_departure_years": [
+     "A5027077000:2017",
+     "A5027424571:2010"
+    ],
+    "ledger_rows_not_in_october_frame": [
+     {
+      "event_id": "A5110738002:2009",
+      "verdict": "left_after_window",
+      "departure_year": "2023"
+     },
+     {
+      "event_id": "A5102739182:2010",
+      "verdict": "left_after_window",
+      "departure_year": "2016"
+     },
+     {
+      "event_id": "A5041849660:2003",
+      "verdict": "left_after_window",
+      "departure_year": ""
+     },
+     {
+      "event_id": "A5090515599:2009",
+      "verdict": "stayed_through_window",
+      "departure_year": ""
+     }
+    ],
+    "october_events_without_ledger_row": [
+     "A5091326353:2009"
+    ],
+    "noop_control": "BYTE_EQUAL",
+    "frames_accounting": {
+     "p1_A": {
+      "rows_in": 73073,
+      "dropped": 19899,
+      "edited": 0,
+      "kept_byte_identical": 53174
+     },
+     "p1_B": {
+      "rows_in": 73073,
+      "dropped": 0,
+      "edited": 2538,
+      "kept_byte_identical": 70535
+     },
+     "p2_A": {
+      "rows_in": 111448,
+      "dropped": 30390,
+      "edited": 0,
+      "kept_byte_identical": 81058
+     },
+     "p2_B": {
+      "rows_in": 111448,
+      "dropped": 0,
+      "edited": 13146,
+      "kept_byte_identical": 98302
+     }
+    },
+    "afar": {
+     "frame": "data/frames/p3_afar_pos_econ.parquet",
+     "events_in_afar": 111,
+     "A_dropped_in_afar": 30,
+     "B_recoded_in_afar": 43,
+     "A_rows": 1092715,
+     "B_rows_flipped": 188770
+    },
+    "staged_sha256": {
+     "p1_dep_A_econ.csv": "fcbb28d96f811182fc64fbc08097a47e1d41e5e9cd5c615f973a5732f870714f",
+     "p1_dep_B_econ.csv": "cc88b824dc1506acd3ea2b9b997c313823796406fc20c589054aa3483be93e33",
+     "p2_dep_A_econ.csv": "e357616ac8621ae0bb98f61802b86e8479a144ac7590b8d1e6ab218b7218b98a",
+     "p2_dep_B_econ.csv": "f6da3f4449796f5e8da46911b8fe1fe118d6dca231f354d295e743cb24dc1b98",
+     "p3_afar_dep_A_econ.parquet": "9e218637b907fb7d84df2a578c0079059e4854a1fd6d196145696ffb962bd4e6",
+     "p3_afar_dep_B_econ.parquet": "31dce3c95b7a815b7655a6a9495a0bc02848d9ee9f5d75c57327c12bbfe96349"
+    }
+   },
+   "chemistry": {
+    "build_report": "data/cal2026-10/robustness/departure/departure187_build_report_chemistry.json",
+    "events_in_frame": 38,
+    "ledger_rows": 38,
+    "verdicts": {
+     "stayed_through_window": 27,
+     "left_after_window": 5,
+     "left_within_window": 5,
+     "unknown": 1
+    },
+    "rule_A_drops_events": 7,
+    "rule_B_recodes_events": 10,
+    "rule_A_dropped_event_ids": [
+     "A5006183789:monash",
+     "A5011013044:sydney",
+     "A5014057252:sydney",
+     "A5041868632:unsw",
+     "A5044696583:monash",
+     "A5055198364:unsw",
+     "A5100398634:sydney"
+    ],
+    "rule_B_recode_years": {
+     "A5048687133:anu": 2019,
+     "A5070148430:melbourne": 2022,
+     "A5006430396:monash": 2016,
+     "A5044696583:monash": 2012,
+     "A5006183789:monash": 2016,
+     "A5014057252:sydney": 2013,
+     "A5011013044:sydney": 2023,
+     "A5100398634:sydney": 2021,
+     "A5041868632:unsw": 2016,
+     "A5055198364:unsw": 2017
+    },
+    "unparseable_departure_years": [],
+    "ledger_rows_not_in_october_frame": [],
+    "october_events_without_ledger_row": [],
+    "noop_control": "BYTE_EQUAL",
+    "frames_accounting": {
+     "p1_A": {
+      "rows_in": 30635,
+      "dropped": 6325,
+      "edited": 0,
+      "kept_byte_identical": 24310
+     },
+     "p1_B": {
+      "rows_in": 30635,
+      "dropped": 0,
+      "edited": 555,
+      "kept_byte_identical": 30080
+     },
+     "p2_A": {
+      "rows_in": 46168,
+      "dropped": 9591,
+      "edited": 0,
+      "kept_byte_identical": 36577
+     },
+     "p2_B": {
+      "rows_in": 46168,
+      "dropped": 0,
+      "edited": 3538,
+      "kept_byte_identical": 42630
+     }
+    },
+    "afar": {
+     "frame": "data/frames/p3_afar_pos_chemistry.parquet",
+     "events_in_afar": 38,
+     "A_dropped_in_afar": 7,
+     "B_recoded_in_afar": 10,
+     "A_rows": 143710,
+     "B_rows_flipped": 15243
+    },
+    "staged_sha256": {
+     "p1_dep_A_chemistry.csv": "036d839f51808713cdd1bd7bf12bcd6a94dd784e69e422dc8a7e94fe9837099a",
+     "p1_dep_B_chemistry.csv": "73656716cde7e820665b73965f438797c0209e2b18cc71353e6c2220de3ce726",
+     "p2_dep_A_chemistry.csv": "373cfb998df37351fec81d2b0bbaa3255bd70fb6e37e74cd930ab8ee042792bd",
+     "p2_dep_B_chemistry.csv": "aadba2c38711487dafdee5542a6e82e2f64e8667a7835b45e4050ee5e3c94814",
+     "p3_afar_dep_A_chemistry.parquet": "8c4ab06c77decf90d2fc0e7eac32c7bf13d77ff8852a8cc54e1f8799b2b01c36",
+     "p3_afar_dep_B_chemistry.parquet": "c4f4114fc55e2b099cf256fbfbbe120b4fa6c4db0f92f20d26b92d051f4df96c"
+    }
+   },
+   "math_stats": {
+    "build_report": "data/cal2026-10/robustness/departure/departure187_build_report_math_stats.json",
+    "events_in_frame": 33,
+    "ledger_rows": 33,
+    "verdicts": {
+     "stayed_through_window": 19,
+     "left_within_window": 9,
+     "left_after_window": 4,
+     "unknown": 1
+    },
+    "rule_A_drops_events": 10,
+    "rule_B_recodes_events": 14,
+    "rule_A_dropped_event_ids": [
+     "A5000405788:melbourne",
+     "A5023907914:monash",
+     "A5035138469:monash",
+     "A5044731110:unsw",
+     "A5051533068:monash",
+     "A5052182828:sydney",
+     "A5069315147:unsw",
+     "A5074032970:monash",
+     "A5083769806:uwa",
+     "A5090916445:unsw"
+    ],
+    "rule_B_recode_years": {
+     "A5083478373:melbourne": 2021,
+     "A5000405788:melbourne": 2025,
+     "A5036133145:monash": 2013,
+     "A5051533068:monash": 2010,
+     "A5035138469:monash": 2015,
+     "A5075602113:monash": 2023,
+     "A5074032970:monash": 2015,
+     "A5023907914:monash": 2018,
+     "A5052182828:sydney": 2021,
+     "A5090916445:unsw": 2008,
+     "A5044731110:unsw": 2016,
+     "A5069315147:unsw": 2016,
+     "A5031984571:uwa": 2015,
+     "A5083769806:uwa": 2013
+    },
+    "unparseable_departure_years": [],
+    "ledger_rows_not_in_october_frame": [],
+    "october_events_without_ledger_row": [],
+    "noop_control": "BYTE_EQUAL",
+    "frames_accounting": {
+     "p1_A": {
+      "rows_in": 19910,
+      "dropped": 6380,
+      "edited": 0,
+      "kept_byte_identical": 13530
+     },
+     "p1_B": {
+      "rows_in": 19910,
+      "dropped": 0,
+      "edited": 1731,
+      "kept_byte_identical": 18179
+     },
+     "p2_A": {
+      "rows_in": 30314,
+      "dropped": 9710,
+      "edited": 0,
+      "kept_byte_identical": 20604
+     },
+     "p2_B": {
+      "rows_in": 30314,
+      "dropped": 0,
+      "edited": 4791,
+      "kept_byte_identical": 25523
+     }
+    },
+    "afar": {
+     "frame": "data/frames/p3_afar_pos_math_stats.parquet",
+     "events_in_afar": 32,
+     "A_dropped_in_afar": 10,
+     "B_recoded_in_afar": 13,
+     "A_rows": 142629,
+     "B_rows_flipped": 57957
+    },
+    "staged_sha256": {
+     "p1_dep_A_math_stats.csv": "3679f2fbc470b4371aab9466b81a2bb60b4319fc5d6f4e74c8dd465a38898149",
+     "p1_dep_B_math_stats.csv": "f6eea8eba523cbdc989c49189372404a0161e5dfc787ef7e37409ba3c7267db7",
+     "p2_dep_A_math_stats.csv": "0be42a8fa9bd207d5b1fb0cdac7566f3b7e52c2d783236df14f6775e260abfaf",
+     "p2_dep_B_math_stats.csv": "502c02a60e6af4c57ba181031e09b7861506725db737edc26be1b56ad0be08d4",
+     "p3_afar_dep_A_math_stats.parquet": "bab8474081f92a249c1ffde899e7e345383b830ccd33a6ab3458185a067f3fc3",
+     "p3_afar_dep_B_math_stats.parquet": "efa29ac0ef291636042557f0ea9672286995ffa223c0228c434c0270a3e3c8db"
+    }
+   }
+  },
+  "cells": {
+   "P1depA_econ": {
+    "label": "P1depA_econ",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p1_dep_A_econ.csv",
+    "frame_sha256": "fcbb28d96f811182fc64fbc08097a47e1d41e5e9cd5c615f973a5732f870714f",
+    "rc": 0,
+    "secs": 16.2,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depA_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depA_econ.json",
+    "json_sha256": "194c36c2b6a907902d2224f859eff105a6c36e2c8efebe19dc42194df02ffbe0",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 53174,
+     "rows_kept": 52195,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 44904,
+       "rels": 4745,
+       "events": 83,
+       "ate": -0.38694877,
+       "se": 0.07902007,
+       "lb": -0.54182526,
+       "ub": -0.23207228,
+       "p_joint_effects": 4.10629057e-07,
+       "p_joint_placebo": 0.02314384
+      },
+      "network": {
+       "status": "OK",
+       "obs": 17865,
+       "rels": 1812,
+       "events": 76,
+       "ate": -0.29170208,
+       "se": 0.11171087,
+       "lb": -0.51065135,
+       "ub": -0.0727528,
+       "p_joint_effects": 0.0026226,
+       "p_joint_placebo": 0.21464074
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 31838,
+       "rels": 3427,
+       "events": 82,
+       "ate": -0.40058836,
+       "se": 0.09901736,
+       "lb": -0.59465881,
+       "ub": -0.20651791,
+       "p_joint_effects": 7.16481147e-06,
+       "p_joint_placebo": 0.04934538
+      }
+     }
+    }
+   },
+   "P2depA_econ": {
+    "label": "P2depA_econ",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p2_dep_A_econ.csv",
+    "frame_sha256": "e357616ac8621ae0bb98f61802b86e8479a144ac7590b8d1e6ab218b7218b98a",
+    "rc": 0,
+    "secs": 6.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depA_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depA_econ.json",
+    "json_sha256": "c8b451d5222485c1566034f6dbaeacac0daa39b4b4a3daaa472d6c538f46d9a6",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 81058,
+     "rels": 4826,
+     "grps": null,
+     "persons": 792,
+     "events": 83,
+     "first_ties": 151,
+     "ate": 0.00215835,
+     "se": 0.00092556,
+     "lb": 0.00034429,
+     "ub": 0.0039724,
+     "p_joint_effects": 1.272e-05,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depA_pos_econ_A_far": {
+    "label": "P3depA_pos_econ_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p3_afar_dep_A_econ.parquet",
+    "frame_sha256": "9e218637b907fb7d84df2a578c0079059e4854a1fd6d196145696ffb962bd4e6",
+    "rc": 0,
+    "secs": 81.3,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depA_pos_econ_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depA_pos_econ_A_far.json",
+    "json_sha256": "a04bbd11cc4b3c2695f6f902fe7726d04e1eb45acabb60b6591bb81c4b3816a5",
+    "status": "OK",
+    "headline": {
+     "rows": 1092715,
+     "grps": 65740,
+     "events": 81,
+     "first_ties": 2569,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00064279,
+      "se": 0.00049449,
+      "lb": -0.00161197,
+      "ub": 0.00032639,
+      "p_joint_effects": 0.04806599
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00064279,
+      "se": 0.0008186,
+      "lb": -0.00224721,
+      "ub": 0.00096163,
+      "p_joint_effects": 0.01265059
+     }
+    }
+   },
+   "P1depB_econ": {
+    "label": "P1depB_econ",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p1_dep_B_econ.csv",
+    "frame_sha256": "cc88b824dc1506acd3ea2b9b997c313823796406fc20c589054aa3483be93e33",
+    "rc": 0,
+    "secs": 19.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depB_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depB_econ.json",
+    "json_sha256": "d5cd7ba64e2a0b066aaced8f7b4c0a5ed655914098e085e12dfa920b8acae597",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 73073,
+     "rows_kept": 71599,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 62008,
+       "rels": 6509,
+       "events": 112,
+       "ate": -0.38699405,
+       "se": 0.06969821,
+       "lb": -0.52360003,
+       "ub": -0.25038807,
+       "p_joint_effects": 5.95512454e-08,
+       "p_joint_placebo": 0.00274432
+      },
+      "network": {
+       "status": "OK",
+       "obs": 24385,
+       "rels": 2464,
+       "events": 104,
+       "ate": -0.43063011,
+       "se": 0.10129897,
+       "lb": -0.62917244,
+       "ub": -0.23208778,
+       "p_joint_effects": 9.53504204e-07,
+       "p_joint_placebo": 0.03445503
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 44407,
+       "rels": 4735,
+       "events": 111,
+       "ate": -0.381307,
+       "se": 0.08481583,
+       "lb": -0.54754298,
+       "ub": -0.21507103,
+       "p_joint_effects": 1.06707859e-06,
+       "p_joint_placebo": 0.02233049
+      }
+     }
+    }
+   },
+   "P2depB_econ": {
+    "label": "P2depB_econ",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p2_dep_B_econ.csv",
+    "frame_sha256": "f6da3f4449796f5e8da46911b8fe1fe118d6dca231f354d295e743cb24dc1b98",
+    "rc": 0,
+    "secs": 10.8,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depB_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depB_econ.json",
+    "json_sha256": "334a5fa404b1288d471fe37a76ddc85330de0a33a9a822ecc0b89766723a7f49",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 111448,
+     "rels": 6632,
+     "grps": null,
+     "persons": 822,
+     "events": 113,
+     "first_ties": 197,
+     "ate": 0.00210259,
+     "se": 0.00082134,
+     "lb": 0.0004928,
+     "ub": 0.00371239,
+     "p_joint_effects": 1.214e-05,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depB_pos_econ_A_far": {
+    "label": "P3depB_pos_econ_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_econ/p3_afar_dep_B_econ.parquet",
+    "frame_sha256": "31dce3c95b7a815b7655a6a9495a0bc02848d9ee9f5d75c57327c12bbfe96349",
+    "rc": 0,
+    "secs": 114.6,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depB_pos_econ_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depB_pos_econ_A_far.json",
+    "json_sha256": "39a8859e54bfbf80ef93060abfc65e94830f7352681e8e0b9f9d1820b33395cc",
+    "status": "OK",
+    "headline": {
+     "rows": 1500425,
+     "grps": 90325,
+     "events": 111,
+     "first_ties": 3615,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00065144,
+      "se": 0.00056819,
+      "lb": -0.00176506,
+      "ub": 0.00046218,
+      "p_joint_effects": 4.48e-05
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00065144,
+      "se": 0.00100254,
+      "lb": -0.00261638,
+      "ub": 0.0013135,
+      "p_joint_effects": 0.00262345
+     }
+    }
+   },
+   "P1depA_chemistry": {
+    "label": "P1depA_chemistry",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p1_dep_A_chemistry.csv",
+    "frame_sha256": "036d839f51808713cdd1bd7bf12bcd6a94dd784e69e422dc8a7e94fe9837099a",
+    "rc": 0,
+    "secs": 16.9,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depA_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depA_chemistry.json",
+    "json_sha256": "e1a2f7d83930b5a8c5fb4e6c57f7d0a3b62f598934fa0989a441483ad22d0517",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 24310,
+     "rows_kept": 23353,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 21381,
+       "rels": 2123,
+       "events": 31,
+       "ate": -0.2438215,
+       "se": 0.07632002,
+       "lb": -0.393406,
+       "ub": -0.094237,
+       "p_joint_effects": 0.00807704,
+       "p_joint_placebo": 0.90559092
+      },
+      "network": {
+       "status": "OK",
+       "obs": 14192,
+       "rels": 1377,
+       "events": 31,
+       "ate": -0.11671175,
+       "se": 0.13124258,
+       "lb": -0.37394248,
+       "ub": 0.14051898,
+       "p_joint_effects": 0.51472109,
+       "p_joint_placebo": 0.79021047
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 10675,
+       "rels": 1093,
+       "events": 31,
+       "ate": -0.29408391,
+       "se": 0.10782986,
+       "lb": -0.50542655,
+       "ub": -0.08274128,
+       "p_joint_effects": 0.00026055,
+       "p_joint_placebo": 0.49343494
+      }
+     }
+    }
+   },
+   "P2depA_chemistry": {
+    "label": "P2depA_chemistry",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p2_dep_A_chemistry.csv",
+    "frame_sha256": "373cfb998df37351fec81d2b0bbaa3255bd70fb6e37e74cd930ab8ee042792bd",
+    "rc": 0,
+    "secs": 7.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depA_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depA_chemistry.json",
+    "json_sha256": "55f7027ec596555426df9fe5211e9dd3ec4486bd7d0a58f0b8dc6bc9abde1728",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 36577,
+     "rels": 2203,
+     "grps": null,
+     "persons": 467,
+     "events": 31,
+     "first_ties": 128,
+     "ate": 0.00655532,
+     "se": 0.00099129,
+     "lb": 0.00461243,
+     "ub": 0.00849822,
+     "p_joint_effects": 3.37565309e-09,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depA_pos_chemistry_A_far": {
+    "label": "P3depA_pos_chemistry_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p3_afar_dep_A_chemistry.parquet",
+    "frame_sha256": "8c4ab06c77decf90d2fc0e7eac32c7bf13d77ff8852a8cc54e1f8799b2b01c36",
+    "rc": 0,
+    "secs": 15.0,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depA_pos_chemistry_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depA_pos_chemistry_A_far.json",
+    "json_sha256": "35826da413a23b99115569914cbc72a78ff7335e70febcf34679e4828b956185",
+    "status": "OK",
+    "headline": {
+     "rows": 143710,
+     "grps": 8936,
+     "events": 31,
+     "first_ties": 802,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00320547,
+      "se": 0.00139335,
+      "lb": -0.0059364,
+      "ub": -0.00047455,
+      "p_joint_effects": 0.0220082
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00320547,
+      "se": 0.00144021,
+      "lb": -0.00602824,
+      "ub": -0.0003827,
+      "p_joint_effects": 0.0272212
+     }
+    }
+   },
+   "P1depB_chemistry": {
+    "label": "P1depB_chemistry",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p1_dep_B_chemistry.csv",
+    "frame_sha256": "73656716cde7e820665b73965f438797c0209e2b18cc71353e6c2220de3ce726",
+    "rc": 0,
+    "secs": 12.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depB_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depB_chemistry.json",
+    "json_sha256": "1ef561cb840ea6491fec4bcc96c171d985fd912b94aee9a7f24539587548a469",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 30635,
+     "rows_kept": 29414,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 26967,
+       "rels": 2674,
+       "events": 38,
+       "ate": -0.22559478,
+       "se": 0.07282403,
+       "lb": -0.36832725,
+       "ub": -0.0828623,
+       "p_joint_effects": 0.00776049,
+       "p_joint_placebo": 0.85627104
+      },
+      "network": {
+       "status": "OK",
+       "obs": 17842,
+       "rels": 1727,
+       "events": 38,
+       "ate": -0.10800875,
+       "se": 0.11619052,
+       "lb": -0.33573798,
+       "ub": 0.11972048,
+       "p_joint_effects": 0.33171769,
+       "p_joint_placebo": 0.90958319
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 13569,
+       "rels": 1387,
+       "events": 38,
+       "ate": -0.23745137,
+       "se": 0.09821987,
+       "lb": -0.42995877,
+       "ub": -0.04494397,
+       "p_joint_effects": 0.00069117,
+       "p_joint_placebo": 0.80673914
+      }
+     }
+    }
+   },
+   "P2depB_chemistry": {
+    "label": "P2depB_chemistry",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p2_dep_B_chemistry.csv",
+    "frame_sha256": "aadba2c38711487dafdee5542a6e82e2f64e8667a7835b45e4050ee5e3c94814",
+    "rc": 0,
+    "secs": 6.4,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depB_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depB_chemistry.json",
+    "json_sha256": "4cc3537e0c091dfee35187aacf39da0b87ed28a2b1af1571747dce97a3cdccb9",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 46168,
+     "rels": 2778,
+     "grps": null,
+     "persons": 470,
+     "events": 38,
+     "first_ties": 155,
+     "ate": 0.00616384,
+     "se": 0.00085985,
+     "lb": 0.00447857,
+     "ub": 0.00784911,
+     "p_joint_effects": 2.05878647e-11,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depB_pos_chemistry_A_far": {
+    "label": "P3depB_pos_chemistry_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_chemistry/p3_afar_dep_B_chemistry.parquet",
+    "frame_sha256": "c4f4114fc55e2b099cf256fbfbbe120b4fa6c4db0f92f20d26b92d051f4df96c",
+    "rc": 0,
+    "secs": 16.3,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depB_pos_chemistry_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depB_pos_chemistry_A_far.json",
+    "json_sha256": "527245d84197eaa953c62fc1afd9d23b479021bfc6dbcfa13b879fb0c59e6fdb",
+    "status": "OK",
+    "headline": {
+     "rows": 184960,
+     "grps": 11466,
+     "events": 38,
+     "first_ties": 1004,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00472286,
+      "se": 0.0030011,
+      "lb": -0.01060491,
+      "ub": 0.00115919,
+      "p_joint_effects": 0.04285725
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00472286,
+      "se": 0.0029683,
+      "lb": -0.01054062,
+      "ub": 0.00109491,
+      "p_joint_effects": 8.159e-05
+     }
+    }
+   },
+   "P1depA_math_stats": {
+    "label": "P1depA_math_stats",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p1_dep_A_math_stats.csv",
+    "frame_sha256": "3679f2fbc470b4371aab9466b81a2bb60b4319fc5d6f4e74c8dd465a38898149",
+    "rc": 0,
+    "secs": 11.0,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depA_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depA_math_stats.json",
+    "json_sha256": "b582f7dce7bf2731894ead925b409d9d15b67bc831ece7d1ed7500e80c87600c",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 13530,
+     "rows_kept": 12793,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 11033,
+       "rels": 1163,
+       "events": 23,
+       "ate": 0.03789586,
+       "se": 0.1834579,
+       "lb": -0.32167502,
+       "ub": 0.39746675,
+       "p_joint_effects": 0.0523333,
+       "p_joint_placebo": 0.17110384
+      },
+      "network": {
+       "status": "OK",
+       "obs": 2812,
+       "rels": 281,
+       "events": 22,
+       "ate": -0.07291863,
+       "se": 0.23166299,
+       "lb": -0.52696975,
+       "ub": 0.38113248,
+       "p_joint_effects": 0.65917443,
+       "p_joint_placebo": 0.62892771
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 8987,
+       "rels": 962,
+       "events": 23,
+       "ate": 0.12405189,
+       "se": 0.23574481,
+       "lb": -0.33799945,
+       "ub": 0.58610323,
+       "p_joint_effects": 0.02228907,
+       "p_joint_placebo": 0.15686849
+      }
+     }
+    }
+   },
+   "P2depA_math_stats": {
+    "label": "P2depA_math_stats",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p2_dep_A_math_stats.csv",
+    "frame_sha256": "0be42a8fa9bd207d5b1fb0cdac7566f3b7e52c2d783236df14f6775e260abfaf",
+    "rc": 0,
+    "secs": 4.6,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depA_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depA_math_stats.json",
+    "json_sha256": "96312fb16161794f5e6d3bfface341fa1af770d900a032916bb2103c26d85d5c",
+    "status": "FAILED",
+    "headline": {
+     "status": "FAILED",
+     "rows": 20604,
+     "rels": 1220,
+     "grps": null,
+     "persons": 416,
+     "events": 23,
+     "first_ties": 27,
+     "ate": null,
+     "se": null,
+     "lb": null,
+     "ub": null,
+     "p_joint_effects": null,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depA_pos_math_stats_A_far": {
+    "label": "P3depA_pos_math_stats_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p3_afar_dep_A_math_stats.parquet",
+    "frame_sha256": "bab8474081f92a249c1ffde899e7e345383b830ccd33a6ab3458185a067f3fc3",
+    "rc": 0,
+    "secs": 12.0,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depA_pos_math_stats_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depA_pos_math_stats_A_far.json",
+    "json_sha256": "2023f5ad2b14611ada87e8835e9067fb9cba927c6bb591bca4b0d1d6f670a2fc",
+    "status": "OK",
+    "headline": {
+     "rows": 142629,
+     "grps": 8528,
+     "events": 22,
+     "first_ties": 236,
+     "pair_cluster": {
+      "status": null,
+      "ate": 0.00053327,
+      "se": 0.00045558,
+      "lb": -0.00035966,
+      "ub": 0.00142619,
+      "p_joint_effects": 0.13544589
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": 0.00053327,
+      "se": 0.00056522,
+      "lb": -0.00057455,
+      "ub": 0.00164108,
+      "p_joint_effects": 0.6516339
+     }
+    }
+   },
+   "P1depB_math_stats": {
+    "label": "P1depB_math_stats",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p1_dep_B_math_stats.csv",
+    "frame_sha256": "f6eea8eba523cbdc989c49189372404a0161e5dfc787ef7e37409ba3c7267db7",
+    "rc": 0,
+    "secs": 12.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P1depB_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P1depB_math_stats.json",
+    "json_sha256": "96da773b1d165db9d9cdd58334a015338d763b9250787b6513a9e6e38fae95c3",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 19910,
+     "rows_kept": 18854,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 16117,
+       "rels": 1714,
+       "events": 33,
+       "ate": -0.06781099,
+       "se": 0.20146835,
+       "lb": -0.46268171,
+       "ub": 0.32705972,
+       "p_joint_effects": 0.00846284,
+       "p_joint_placebo": 0.14651388
+      },
+      "network": {
+       "status": "OK",
+       "obs": 3628,
+       "rels": 364,
+       "events": 29,
+       "ate": -0.16441081,
+       "se": 0.24690978,
+       "lb": -0.64834509,
+       "ub": 0.31952346,
+       "p_joint_effects": 0.51847387,
+       "p_joint_placebo": 0.63395676
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 13635,
+       "rels": 1471,
+       "events": 33,
+       "ate": -0.02935912,
+       "se": 0.24356121,
+       "lb": -0.50673032,
+       "ub": 0.44801207,
+       "p_joint_effects": 0.00989323,
+       "p_joint_placebo": 0.19985683
+      }
+     }
+    }
+   },
+   "P2depB_math_stats": {
+    "label": "P2depB_math_stats",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p2_dep_B_math_stats.csv",
+    "frame_sha256": "502c02a60e6af4c57ba181031e09b7861506725db737edc26be1b56ad0be08d4",
+    "rc": 0,
+    "secs": 6.7,
+    "log": "data/cal2026-10/robustness/departure/logs/P2depB_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P2depB_math_stats.json",
+    "json_sha256": "08648783474c806ae0259f0b015a079871806377aee1a1fa81f34da5055319f7",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 30314,
+     "rels": 1795,
+     "grps": null,
+     "persons": 479,
+     "events": 33,
+     "first_ties": 35,
+     "ate": 0.00173016,
+     "se": 0.00055359,
+     "lb": 0.00064514,
+     "ub": 0.00281519,
+     "p_joint_effects": 0.06642823,
+     "p_joint_placebo": null
+    }
+   },
+   "P3depB_pos_math_stats_A_far": {
+    "label": "P3depB_pos_math_stats_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/dep_math_stats/p3_afar_dep_B_math_stats.parquet",
+    "frame_sha256": "efa29ac0ef291636042557f0ea9672286995ffa223c0228c434c0270a3e3c8db",
+    "rc": 0,
+    "secs": 16.4,
+    "log": "data/cal2026-10/robustness/departure/logs/P3depB_pos_math_stats_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/departure/estimates/P3depB_pos_math_stats_A_far.json",
+    "json_sha256": "1fc3e5248c5fea84001b879519acd073756c64b32e06d600cdfaeb356097c539",
+    "status": "OK",
+    "headline": {
+     "rows": 256506,
+     "grps": 15318,
+     "events": 32,
+     "first_ties": 401,
+     "pair_cluster": {
+      "status": null,
+      "ate": 0.00056607,
+      "se": 0.00056243,
+      "lb": -0.00053627,
+      "ub": 0.00166842,
+      "p_joint_effects": 0.08032729
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": 0.00056607,
+      "se": 0.00039528,
+      "lb": -0.00020867,
+      "ub": 0.00134082,
+      "p_joint_effects": 0.10274708
+     }
+    }
+   }
+  }
+ },
+ "doublestar": {
+  "builder": "analysis/robustness/sensitivity/build_doublestar.py",
+  "env_overrides": {
+   "SAR_ROBUST_OUTDIR": "data/cal2026-10/robustness/doublestar",
+   "SAR_AFAR_MAP_DIR": "data/cal2026-10/robustness/afar_event_map_pos"
+  },
+  "rule": "drop e iff an earlier same-department arrival is within 5 years (the §3 Model-1 coverage window); same-year pairs kept (no 'earlier' member), counts disclosed",
+  "counts": {
+   "econ": {
+    "events": 113,
+    "dropped": 95,
+    "kept": 18,
+    "same_year_pair_events_kept": 48
+   },
+   "chemistry": {
+    "events": 38,
+    "dropped": 23,
+    "kept": 15,
+    "same_year_pair_events_kept": 6
+   },
+   "math_stats": {
+    "events": 33,
+    "dropped": 24,
+    "kept": 9,
+    "same_year_pair_events_kept": 10
+   }
+  },
+  "afar": {
+   "econ": {
+    "events_in_afar": 111,
+    "dropped_in_afar": 94,
+    "rows_kept": 64407
+   },
+   "chemistry": {
+    "events_in_afar": 38,
+    "dropped_in_afar": 23,
+    "rows_kept": 50209
+   },
+   "math_stats": {
+    "events_in_afar": 32,
+    "dropped_in_afar": 24,
+    "rows_kept": 15128
+   }
+  },
+  "p3_full_math_build": {
+   "note": "October build (all three fields rebuilt 2026-09-23 with SAR_PAIRS_MATH_STATS=data/frames/pairs_none_math_stats.parquet; doublestar_drops.csv byte-unchanged)",
+   "build_report": {
+    "pairs_rows_kept": 104999,
+    "make_slim": "{'rows': 104999, 'pairs': 6237, 'ties': 114, 'events': 9, 'produced': {'$TMPDIR/sar_rob_ds3/p3_slim_ev_ds_math_stats.parquet': '21a22ce8b5e36bd2970692bbf89befb02b862207ad3dc64682112f4ccaa4424c', '$TMPDIR/sar_rob_ds3/p3_slim_ds_math_stats.parquet': '0afb673b14eafb37241a0e10b92e41fe3f4719664ddd896cf2dcbcd77f28fcf2'}, 'noev_columns': ['grp', 'year', 'y', 'D']}"
+   },
+   "log": "logs/build_doublestar_allfields_rerun_2026-09-23.log"
+  },
+  "drop_table_vs_2026-08-29": {
+   "econ": {
+    "events_oct": 113,
+    "events_0829": 116,
+    "dropped_oct": 95,
+    "dropped_0829": 98,
+    "drop_table_identical_to_2026-08-29": false,
+    "dropped_only_0829": [
+     "A5070067353:2005",
+     "A5090515599:2009",
+     "A5102739182:2010",
+     "A5110738002:2009"
+    ],
+    "dropped_only_oct": [
+     "A5091326353:2009"
+    ]
+   },
+   "chemistry": {
+    "events_oct": 38,
+    "events_0829": 38,
+    "dropped_oct": 23,
+    "dropped_0829": 23,
+    "drop_table_identical_to_2026-08-29": true,
+    "dropped_only_0829": [],
+    "dropped_only_oct": []
+   },
+   "math_stats": {
+    "events_oct": 33,
+    "events_0829": 33,
+    "dropped_oct": 24,
+    "dropped_0829": 24,
+    "drop_table_identical_to_2026-08-29": true,
+    "dropped_only_0829": [],
+    "dropped_only_oct": []
+   }
+  },
+  "staged_sha256": {
+   "p1_ds_chemistry.csv": "0848637ec2d9144fe5d22e17d12b4a6f95ffc2fda5bda1c7ba663a76a490e283",
+   "p1_ds_econ.csv": "e40d7319bbe963011a6632e8d2b27a3cb1a22dd9afd9afc4b7dc770b77b41fbf",
+   "p1_ds_math_stats.csv": "ab4a6ab3c95cd3ac89653d26016e3e703b145ee4af412f94ac906606271ca25f",
+   "p2_ds_chemistry.csv": "f4053bf81e02d59002901bfea9f34106df43a53b089719d2a73fb0ea1e758a17",
+   "p2_ds_econ.csv": "ad5b9e70f9667cdbbc2150411a4d2ac8ef2a47cfee6cb377f9bac86dd0738e51",
+   "p2_ds_math_stats.csv": "2b0c26ae80dfe03b0397bc0b01c607e5bc962cac85a9bb21c896b2c476b53ba8",
+   "p3_afar_ds_chemistry.parquet": "a194d18397f7d05ce5451d1ca8591afe084211ba9e33ed03b279f5f2cde78d09",
+   "p3_afar_ds_econ.parquet": "59c8c4e4f19b0a22acd7558ac59caeeed3d3646dc0ba7e020a002b2a1699cda7",
+   "p3_afar_ds_math_stats.parquet": "d92d038b8937297fade2939d08e5ecd3a9a754942d9214aaca5c5200f531cb5c",
+   "p3_slim_ds_math_stats.parquet": "c697613589155ae43247cdb5247ad03ea2a3588347074e124e96394f5bc0f2de",
+   "p3_slim_ev_ds_math_stats.parquet": "564e1674ed5faa5849de98356b18ee2cca0b078c59b66726f96e3b8e88b5a69c",
+   "pairs_none_ds_math_stats.parquet": "15352fb7b3436b7a059addb892fa0e5aa25af70eff23ca09f3ff49fe253fc754"
+  },
+  "event_tables": {
+   "econ": "data/frames/p1_events_ledger_econ.csv (October, 113)",
+   "chemistry": "data/cal2026-08-28/events_chemistry_cal.csv (builder path; byte-equal to data/cal2026-10/events_chemistry_cal2026-10.csv)",
+   "math_stats": "data/cal2026-08-28/events_math_stats_cal.csv (builder path; byte-equal to data/cal2026-10/events_math_stats_cal2026-10.csv)",
+   "chemistry_byte_equal_check": true,
+   "math_stats_byte_equal_check": true
+  },
+  "cells": {
+   "P1ds_econ": {
+    "label": "P1ds_econ",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p1_ds_econ.csv",
+    "frame_sha256": "e40d7319bbe963011a6632e8d2b27a3cb1a22dd9afd9afc4b7dc770b77b41fbf",
+    "rc": 0,
+    "secs": 11.2,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P1ds_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P1ds_econ.json",
+    "json_sha256": "302d3d258f8c82fc9c2212ccb3a729edf77c1399b5fb2efd76fadaf06b994dbe",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 7128,
+     "rows_kept": 6985,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 6061,
+       "rels": 635,
+       "events": 18,
+       "ate": -0.71137439,
+       "se": 0.20010856,
+       "lb": -1.10357996,
+       "ub": -0.31916882,
+       "p_joint_effects": 7.606e-05,
+       "p_joint_placebo": 0.63460376
+      },
+      "network": {
+       "status": "OK",
+       "obs": 3044,
+       "rels": 313,
+       "events": 18,
+       "ate": -0.81112788,
+       "se": 0.2440359,
+       "lb": -1.28942946,
+       "ub": -0.33282631,
+       "p_joint_effects": 0.04638491,
+       "p_joint_placebo": 0.75120395
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 3979,
+       "rels": 422,
+       "events": 17,
+       "ate": -0.8592447,
+       "se": 0.37337651,
+       "lb": -1.59104921,
+       "ub": -0.12744018,
+       "p_joint_effects": 0.00087802,
+       "p_joint_placebo": 0.47729831
+      }
+     }
+    }
+   },
+   "P2ds_econ": {
+    "label": "P2ds_econ",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p2_ds_econ.csv",
+    "frame_sha256": "ad5b9e70f9667cdbbc2150411a4d2ac8ef2a47cfee6cb377f9bac86dd0738e51",
+    "rc": 0,
+    "secs": 4.8,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P2ds_econ.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P2ds_econ.json",
+    "json_sha256": "14e8feb0c63c1c1f6ad155511c296dbe1879c73fec237eb540fc204daa739fb2",
+    "status": "FAILED",
+    "headline": {
+     "status": "FAILED",
+     "rows": 10832,
+     "rels": 647,
+     "grps": null,
+     "persons": 359,
+     "events": 18,
+     "first_ties": 25,
+     "ate": null,
+     "se": null,
+     "lb": null,
+     "ub": null,
+     "p_joint_effects": null,
+     "p_joint_placebo": null
+    }
+   },
+   "P3ds_pos_econ_A_far": {
+    "label": "P3ds_pos_econ_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p3_afar_ds_econ.parquet",
+    "frame_sha256": "59c8c4e4f19b0a22acd7558ac59caeeed3d3646dc0ba7e020a002b2a1699cda7",
+    "rc": 0,
+    "secs": 9.9,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P3ds_pos_econ_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P3ds_pos_econ_A_far.json",
+    "json_sha256": "ceea009b63b73d38b5154d16c7067f3255cc129cb66f4c762faa2372b0163c1f",
+    "status": "OK",
+    "headline": {
+     "rows": 64407,
+     "grps": 3891,
+     "events": 17,
+     "first_ties": 178,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00185506,
+      "se": 0.00187768,
+      "lb": -0.00553523,
+      "ub": 0.00182512,
+      "p_joint_effects": 0.12892037
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00185506,
+      "se": 0.00127303,
+      "lb": -0.00435014,
+      "ub": 0.00064003,
+      "p_joint_effects": 7.16660065e-12
+     }
+    }
+   },
+   "P1ds_chemistry": {
+    "label": "P1ds_chemistry",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p1_ds_chemistry.csv",
+    "frame_sha256": "0848637ec2d9144fe5d22e17d12b4a6f95ffc2fda5bda1c7ba663a76a490e283",
+    "rc": 0,
+    "secs": 10.5,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P1ds_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P1ds_chemistry.json",
+    "json_sha256": "2c0ff467d5338bdef31b11ca3687b2e9821ea68b1a9930d6fb1eb001d80466b4",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 12551,
+     "rows_kept": 12067,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 11118,
+       "rels": 1097,
+       "events": 15,
+       "ate": -0.37208889,
+       "se": 0.12773014,
+       "lb": -0.62243537,
+       "ub": -0.12174242,
+       "p_joint_effects": 0.0001744,
+       "p_joint_placebo": 0.98477799
+      },
+      "network": {
+       "status": "OK",
+       "obs": 8191,
+       "rels": 793,
+       "events": 15,
+       "ate": -0.48895213,
+       "se": 0.39527198,
+       "lb": -1.26367098,
+       "ub": 0.28576671,
+       "p_joint_effects": 0.04627311,
+       "p_joint_placebo": 0.17232926
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 4707,
+       "rels": 481,
+       "events": 15,
+       "ate": -0.30613258,
+       "se": 0.19717352,
+       "lb": -0.69258557,
+       "ub": 0.08032041,
+       "p_joint_effects": 0.00177232,
+       "p_joint_placebo": 0.56931108
+      }
+     }
+    }
+   },
+   "P2ds_chemistry": {
+    "label": "P2ds_chemistry",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p2_ds_chemistry.csv",
+    "frame_sha256": "f4053bf81e02d59002901bfea9f34106df43a53b089719d2a73fb0ea1e758a17",
+    "rc": 0,
+    "secs": 4.5,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P2ds_chemistry.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P2ds_chemistry.json",
+    "json_sha256": "b3fa100cb6ef58723ce0a6a575e02b9831d9edcc892386382e1110a9fffdddbb",
+    "status": "OK",
+    "headline": {
+     "status": "OK",
+     "rows": 18800,
+     "rels": 1140,
+     "grps": null,
+     "persons": 338,
+     "events": 15,
+     "first_ties": 85,
+     "ate": 0.00637608,
+     "se": 0.00161952,
+     "lb": 0.00320187,
+     "ub": 0.00955029,
+     "p_joint_effects": 0.00108372,
+     "p_joint_placebo": null
+    }
+   },
+   "P3ds_pos_chemistry_A_far": {
+    "label": "P3ds_pos_chemistry_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p3_afar_ds_chemistry.parquet",
+    "frame_sha256": "a194d18397f7d05ce5451d1ca8591afe084211ba9e33ed03b279f5f2cde78d09",
+    "rc": 0,
+    "secs": 8.8,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P3ds_pos_chemistry_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P3ds_pos_chemistry_A_far.json",
+    "json_sha256": "608c222499350b570a19a192d1484972f1111b68b14a14062d88e6429e04dc7f",
+    "status": "OK",
+    "headline": {
+     "rows": 50209,
+     "grps": 3096,
+     "events": 15,
+     "first_ties": 256,
+     "pair_cluster": {
+      "status": null,
+      "ate": -0.00177636,
+      "se": 0.00164203,
+      "lb": -0.00499467,
+      "ub": 0.00144195,
+      "p_joint_effects": 0.2821504
+     },
+     "event_cluster": {
+      "status": null,
+      "ate": -0.00177636,
+      "se": 0.00144332,
+      "lb": -0.00460521,
+      "ub": 0.00105249,
+      "p_joint_effects": 0
+     }
+    }
+   },
+   "P1ds_math_stats": {
+    "label": "P1ds_math_stats",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p1_ds_math_stats.csv",
+    "frame_sha256": "ab4a6ab3c95cd3ac89653d26016e3e703b145ee4af412f94ac906606271ca25f",
+    "rc": 0,
+    "secs": 8.8,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P1ds_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P1ds_math_stats.json",
+    "json_sha256": "526ece73801a2c034f2df24a1524de5c3c2f71fe9ea2eb9c8b54ad5b1d2b168a",
+    "status": "OK",
+    "headline": {
+     "rows_raw": 3619,
+     "rows_kept": 3443,
+     "channels": {
+      "union": {
+       "status": "OK",
+       "obs": 3007,
+       "rels": 313,
+       "events": 9,
+       "ate": -0.41428724,
+       "se": 0.37199204,
+       "lb": -1.14337825,
+       "ub": 0.31480377,
+       "p_joint_effects": 0.53688516,
+       "p_joint_placebo": 0.6110224
+      },
+      "network": {
+       "status": "OK",
+       "obs": 788,
+       "rels": 79,
+       "events": 8,
+       "ate": -0.22621905,
+       "se": 0.53116441,
+       "lb": -1.26728216,
+       "ub": 0.81484406,
+       "p_joint_effects": 0.02200921,
+       "p_joint_placebo": 0.65185868
+      },
+      "dept": {
+       "status": "OK",
+       "obs": 2462,
+       "rels": 259,
+       "events": 9,
+       "ate": -0.47711872,
+       "se": 0.4350652,
+       "lb": -1.32983083,
+       "ub": 0.3755934,
+       "p_joint_effects": 0.68605484,
+       "p_joint_placebo": 0.3166724
+      }
+     }
+    }
+   },
+   "P2ds_math_stats": {
+    "label": "P2ds_math_stats",
+    "driver": "analysis/estimation/run_p2.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p2_ds_math_stats.csv",
+    "frame_sha256": "2b0c26ae80dfe03b0397bc0b01c607e5bc962cac85a9bb21c896b2c476b53ba8",
+    "rc": 0,
+    "secs": 3.9,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P2ds_math_stats.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P2ds_math_stats.json",
+    "json_sha256": "1c6b4dbfffa870dbe6b964e3b6c496a7d7639806491f4fd03d2723513482abb2",
+    "status": "FAILED",
+    "headline": {
+     "status": "FAILED",
+     "rows": 5504,
+     "rels": 326,
+     "grps": null,
+     "persons": 221,
+     "events": 9,
+     "first_ties": 7,
+     "ate": null,
+     "se": null,
+     "lb": null,
+     "ub": null,
+     "p_joint_effects": null,
+     "p_joint_placebo": null
+    }
+   },
+   "P3ds_pos_math_stats_A_far": {
+    "label": "P3ds_pos_math_stats_A_far",
+    "driver": "analysis/estimation/run_p3_tp.R",
+    "frame": "$TMPDIR/sar_rob_sensitivity/ds/p3_afar_ds_math_stats.parquet",
+    "frame_sha256": "d92d038b8937297fade2939d08e5ecd3a9a754942d9214aaca5c5200f531cb5c",
+    "rc": 0,
+    "secs": 7.3,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P3ds_pos_math_stats_A_far.log",
+    "waited_for_slot_secs": 0.0,
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P3ds_pos_math_stats_A_far.json",
+    "json_sha256": "fe4508b82ede67b357abac8d04679e744ca116ecf90c5dbf48d7509cae63216f",
+    "status": "FAILED:pair_cluster,event_cluster",
+    "headline": {
+     "rows": 15128,
+     "grps": 904,
+     "events": 8,
+     "first_ties": 27,
+     "pair_cluster": {
+      "status": "FAILED_pair",
+      "ate": null,
+      "se": null,
+      "lb": null,
+      "ub": null,
+      "p_joint_effects": null
+     },
+     "event_cluster": {
+      "status": "FAILED_event",
+      "ate": null,
+      "se": null,
+      "lb": null,
+      "ub": null,
+      "p_joint_effects": null
+     }
+    }
+   },
+   "P3ds_math_stats_full": {
+    "label": "P3ds_math_stats_full",
+    "driver": "analysis/estimation/run_p3.R",
+    "frame": "$TMPDIR/sar_rob_ds3/p3_slim_ds_math_stats.parquet",
+    "frame_sha256": "0afb673b14eafb37241a0e10b92e41fe3f4719664ddd896cf2dcbcd77f28fcf2",
+    "rc": 0,
+    "secs": null,
+    "log": "data/cal2026-10/robustness/doublestar/logs/P3ds_math_stats_full_rerun_2026-09-23.log",
+    "json": "data/cal2026-10/robustness/doublestar/estimates/P3ds_math_stats_full.json",
+    "json_sha256": "d730267d6bcccb8a472e12a88fad30d9ea0ca57a6ec878bd65f72ebe494e3633",
+    "status": "OK",
+    "headline": {
+     "ate": 0.00042032,
+     "se": 0.00033081
+    },
+    "note": "re-run 2026-09-23 after the group run (see input_override_note_2026-09-23)"
+   }
+  },
+  "complement": {
+   "status": "OK",
+   "run": "run_doublestar_complement.sh with SAR_DS_DROPS_DIR=data/cal2026-10/robustness/doublestar (expected kept/dropped from the October doublestar_build_report.json: 18 / 95 of 113)",
+   "cell": {
+    "label": "P1dsC_econ",
+    "driver": "analysis/estimation/run_p1.R",
+    "frame": "$TMPDIR/sar_rob_dscomp/p1_dsC_econ.csv",
+    "frame_sha256": "8c40b59debefe01e97d26b8dae2c074cab0a7f4ff0e215be24e999d901e0f4de",
+    "rc": 0,
+    "secs": null,
+    "log": "data/cal2026-10/robustness/doublestar/logs/run_doublestar_complement_rerun_2026-09-23.log",
+    "json": "data/cal2026-10/robustness/doublestar/complement/estimates/P1dsC_econ.json",
+    "json_sha256": "d280c6537b8c5f08b5c48253831cab3dbf418876c5924581643b2f2e4933aac8",
+    "status": "OK",
+    "headline": {
+     "channels": {
+      "union": {
+       "ate": -0.38028203,
+       "se": 0.07270554
+      },
+      "network": {
+       "ate": -0.43453945,
+       "se": 0.12496585
+      },
+      "dept": {
+       "ate": -0.37041731,
+       "se": 0.08422194
+      }
+     }
+    },
+    "note": "re-run 2026-09-23 after the group run (see input_override_note_2026-09-23)"
+   },
+   "build_report": {
+    "rule": "complement of the double-star drop (data/cal2026-10/robustness/doublestar): keep only the 95 economics events that arrived within five years of an earlier same-department arrival",
+    "events_in_complement": 95,
+    "events_excluded_clean": 18,
+    "p1": {
+     "rows_in": 73073,
+     "dropped": 7128,
+     "edited": 0,
+     "kept_byte_identical": 65945
+    },
+    "control_lines_subset_of_canon": true,
+    "control_rows_complement_plus_clean_equals_canon": true,
+    "source_frame": "data/frames/p1_frame_econ.csv",
+    "source_frame_sha256": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+    "staged_sha256": {
+     "p1_dsC_econ.csv": "8c40b59debefe01e97d26b8dae2c074cab0a7f4ff0e215be24e999d901e0f4de"
+    }
+   },
+   "log": "logs/run_doublestar_complement_rerun_2026-09-23.log"
+  }
+ },
+ "nocentre": {
+  "design_note": "both launchers rebuild the chemistry/math_stats frames through the 2026-08-28 caliber staging machinery (pipeline/stars/caliber_2026-08-28) and compare their with-centre control build to data/frames (now the October canon) before any variant cell; a control that fails STOPS them",
+  "run_nocentre": {
+   "entry_point": "analysis/robustness/sensitivity/run_nocentre.py",
+   "env": {
+    "SAR_OUT_ROOT": "$TMPDIR/sar_rob_sensitivity/nc_p1p2",
+    "SAR_ROBUST_OUTDIR": "data/cal2026-10/robustness/nocentre"
+   },
+   "rc": 1,
+   "secs": 46.3,
+   "log": "data/cal2026-10/robustness/nocentre/logs/run_nocentre.log",
+   "status": "STOPPED_CONTROL_NOT_EQUAL",
+   "stop_lines": [
+    "    assert not hard_fail, f\"control did NOT reproduce the canon frames: {hard_fail} — STOP\"",
+    "AssertionError: control did NOT reproduce the canon frames: ['becoming_chemistry', 'p1_frame_chemistry', 'becoming_math_stats', 'p1_frame_math_stats'] — STOP"
+   ],
+   "control_build_forensics": {
+    "chemistry": {
+     "relationships": {
+      "built_lines": 4564,
+      "built_sha256": "c9be7b51667df140bae84b5cd565e46f9920f1d829e3be9376c951e572ab51bc",
+      "lines_2026-08-28": 4564,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     },
+     "p1_frame": {
+      "built_lines": 50194,
+      "built_sha256": "5972044a6352208427b0ec39904a27e80540e3f798206fa6bfb033303c74e0c8",
+      "october_lines": 30636,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 50194,
+      "vs_2026-08-28": "NOT_EQUAL"
+     },
+     "becoming": {
+      "built_lines": 76088,
+      "built_sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424",
+      "october_lines": 46169,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 76088,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     }
+    },
+    "math_stats": {
+     "relationships": {
+      "built_lines": 2202,
+      "built_sha256": "6bcc0f798aafd573a7691dda5ffcb5e07412eb7d34a8caa922bf6dccaa225172",
+      "lines_2026-08-28": 2202,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     },
+     "p1_frame": {
+      "built_lines": 24212,
+      "built_sha256": "92c72e773b7398c4ca644485a0877a5ca93150b9389137a62d328df82f377939",
+      "october_lines": 19911,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 24212,
+      "vs_2026-08-28": "NOT_EQUAL"
+     },
+     "becoming": {
+      "built_lines": 36825,
+      "built_sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a",
+      "october_lines": 30315,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 36825,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     }
+    }
+   }
+  },
+  "run_nocentre_afar_pos": {
+   "entry_point": "analysis/robustness/sensitivity/run_nocentre_afar_pos.sh",
+   "rc": 1,
+   "secs": 37.8,
+   "log": "data/cal2026-10/robustness/nocentre/logs/run_nocentre_afar_pos.log",
+   "env": {
+    "SAR_OUT_ROOT": "$TMPDIR/sar_rob_sensitivity/nc_p3pos",
+    "SAR_ROBUST_OUTDIR_P3POS": "data/cal2026-10/robustness/nocentre/p3pos",
+    "SAR_ROBUST_MANIFEST_DIR": "data/cal2026-10/robustness/nocentre"
+   },
+   "report": "data/cal2026-10/robustness/nocentre/p3pos/nocentre_afar_pos_report.json",
+   "report_status": "STOP: control build did not reproduce the canon frames",
+   "control_checks": {
+    "relationships_chemistry": "BYTE_EQUAL",
+    "becoming_chemistry": "NOT_EQUAL",
+    "p1_frame_chemistry": {
+     "ok": false,
+     "reason": "line counts differ 30636 vs 50194"
+    },
+    "relationships_math_stats": "BYTE_EQUAL",
+    "becoming_math_stats": "NOT_EQUAL",
+    "p1_frame_math_stats": {
+     "ok": false,
+     "reason": "line counts differ 19911 vs 24212"
+    }
+   },
+   "failed": [
+    "becoming_chemistry",
+    "p1_frame_chemistry",
+    "becoming_math_stats",
+    "p1_frame_math_stats"
+   ],
+   "status": "STOPPED_CONTROL_NOT_EQUAL",
+   "control_build_forensics": {
+    "chemistry": {
+     "relationships": {
+      "built_lines": 4564,
+      "built_sha256": "c9be7b51667df140bae84b5cd565e46f9920f1d829e3be9376c951e572ab51bc",
+      "lines_2026-08-28": 4564,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     },
+     "p1_frame": {
+      "built_lines": 50194,
+      "built_sha256": "e5a9ee8ebbbcef114bfaf90e5df22eba69e9052c16d95959250cfdc056c4abbb",
+      "october_lines": 30636,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 50194,
+      "vs_2026-08-28": "NOT_EQUAL"
+     },
+     "becoming": {
+      "built_lines": 76088,
+      "built_sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424",
+      "october_lines": 46169,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 76088,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     }
+    },
+    "math_stats": {
+     "relationships": {
+      "built_lines": 2202,
+      "built_sha256": "6bcc0f798aafd573a7691dda5ffcb5e07412eb7d34a8caa922bf6dccaa225172",
+      "lines_2026-08-28": 2202,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     },
+     "p1_frame": {
+      "built_lines": 24212,
+      "built_sha256": "4b0648147e13b07e2b488d4feb5163c37118d7153f7b11e6a692549b2d7db35f",
+      "october_lines": 19911,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 24212,
+      "vs_2026-08-28": "NOT_EQUAL"
+     },
+     "becoming": {
+      "built_lines": 36825,
+      "built_sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a",
+      "october_lines": 30315,
+      "vs_october": "NOT_EQUAL",
+      "lines_2026-08-28": 36825,
+      "vs_2026-08-28": "BYTE_EQUAL"
+     }
+    }
+   }
+  },
+  "note_p3pos_chem_math_unchanged_by_october": {
+   "P3pos_<field>_A_far on the 2026-08-28 frames vs the October gold": {
+    "chemistry": "EQUAL",
+    "math_stats": "EQUAL"
+   },
+   "reading": "the October D2 filter removes network-only persons, who were never Panel 3 pairs, so the chem/math pos A_far frames and golds are unchanged; the frozen 2026-09-10 P3nc_pos cells (data/robustness_2026-09-10_p3pos/nocentre/) therefore still sit next to the October Panel 3 gold, but they are NOT re-frozen here"
+  },
+  "october_launcher_2026-09-23": {
+   "status": "OK",
+   "entry_point": "analysis/robustness/sensitivity/run_nocentre_cal2026_10.py",
+   "report": "data/cal2026-10/robustness/nocentre/nocentre_report.json",
+   "report_sha256": "e739ec9f68517f15eaa36dbd06815fd6241db7da4f2edde0d10fda9e613778a6",
+   "why": "the two 08-29 launchers above stop at their with-centre control since the promotion (they stage the 2026-08-28 chain); the October chain (pipeline/frames/cal2026-10/run_cal_frames_chemmath.py --roster-variant incfel) carries the ONE roster substitution through prodlib, the D2 in-post spells and the union rung; 7 estimation controls EQUAL to the October golds, 7 cells OK",
+   "cells": {
+    "P1nc_chemistry": {
+     "label": "P1nc_chemistry",
+     "driver": "analysis/estimation/run_p1.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/products/frames_chemistry/p1_frame_chemistry.csv",
+     "frame_sha256": "ab14e4c877d342d92591bcb1bc94db740886b1a93561741b1fb2ddc08e42b2cf",
+     "rc": 0,
+     "secs": 7.0,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P1nc_chemistry.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P1nc_chemistry.json",
+     "json_sha256": "d226f08dc0dfbcfce2616a188d058101b77a955c3104c6571ea43ee7e86660af",
+     "status": "OK",
+     "headline": {
+      "rows_raw": 25971,
+      "rows_kept": 24783,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 23225,
+        "rels": 2253,
+        "events": 38,
+        "ate": -0.22429715,
+        "se": 0.08093093,
+        "lb": -0.38291885,
+        "ub": -0.06567544,
+        "p_joint_effects": 0.08834473,
+        "p_joint_placebo": 0.79678512
+       },
+       "network": {
+        "status": "OK",
+        "obs": 16229,
+        "rels": 1557,
+        "events": 38,
+        "ate": -0.12711021,
+        "se": 0.12089838,
+        "lb": -0.36406668,
+        "ub": 0.10984626,
+        "p_joint_effects": 0.39565295,
+        "p_joint_placebo": 0.9314442
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 10683,
+        "rels": 1055,
+        "events": 38,
+        "ate": -0.23119809,
+        "se": 0.10182562,
+        "lb": -0.43077264,
+        "ub": -0.03162355,
+        "p_joint_effects": 0.02521935,
+        "p_joint_placebo": 0.7122666
+       }
+      }
+     },
+     "previous_2026-08-29_headline": {
+      "rows_raw": 39831,
+      "rows_kept": 38269,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 32250,
+        "rels": 3479,
+        "events": 38,
+        "ate": -0.23060604,
+        "se": 0.06726831,
+        "lb": -0.36244949,
+        "ub": -0.09876258,
+        "p_joint_effects": 0.02987006,
+        "p_joint_placebo": 0.33983636
+       },
+       "network": {
+        "status": "OK",
+        "obs": 25254,
+        "rels": 2783,
+        "events": 38,
+        "ate": -0.20795889,
+        "se": 0.09508353,
+        "lb": -0.39431918,
+        "ub": -0.02159859,
+        "p_joint_effects": 0.05280119,
+        "p_joint_placebo": 0.22869989
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 10683,
+        "rels": 1055,
+        "events": 38,
+        "ate": -0.23119809,
+        "se": 0.10182562,
+        "lb": -0.43077264,
+        "ub": -0.03162355,
+        "p_joint_effects": 0.02521935,
+        "p_joint_placebo": 0.7122666
+       }
+      }
+     },
+     "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+    },
+    "P2nc_chemistry": {
+     "label": "P2nc_chemistry",
+     "driver": "analysis/estimation/run_p2.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/products/frames_chemistry/p2_becoming_chemistry.csv",
+     "frame_sha256": "26d2214ee2f5a193a4cb50b2f647e3236cbefbcb1caa1190ac721c5ee0303735",
+     "rc": 0,
+     "secs": 3.5,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P2nc_chemistry.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P2nc_chemistry.json",
+     "json_sha256": "76b04e17f8d995222f5818a0d6b7b84092acf3e9286b9630cb4ae800e737deff",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 39010,
+      "rels": 2354,
+      "grps": null,
+      "persons": 330,
+      "events": 38,
+      "first_ties": 146,
+      "ate": 0.0068545,
+      "se": 0.00099263,
+      "lb": 0.00490897,
+      "ub": 0.00880003,
+      "p_joint_effects": 2.02446393e-10,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_headline": {
+      "status": "OK",
+      "rows": 60200,
+      "rels": 3611,
+      "grps": null,
+      "persons": 347,
+      "events": 38,
+      "first_ties": 180,
+      "ate": 0.00469265,
+      "se": 0.00076517,
+      "lb": 0.00319295,
+      "ub": 0.00619236,
+      "p_joint_effects": 5.66083302e-09,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+    },
+    "P3nc_pos_chemistry_A_far": {
+     "label": "P3nc_pos_chemistry_A_far",
+     "driver": "analysis/estimation/run_p3_tp.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_chemistry.parquet",
+     "frame_sha256": "2686f5e151eb537a5fea0dfb35648a21ba7dc0eb29fcff8ba120f5052bf701b9",
+     "rc": 0,
+     "secs": 6.7,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_pos_chemistry_A_far.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_pos_chemistry_A_far.json",
+     "json_sha256": "5d025a9a4000188a2344b601d7f89eab0bed2fbc3d2c38e10c2fef4db2df0250",
+     "status": "OK",
+     "headline": {
+      "rows": 105694,
+      "grps": 6655,
+      "events": 36,
+      "first_ties": 769,
+      "pair_cluster": {
+       "status": null,
+       "ate": -0.00287241,
+       "se": 0.00216802,
+       "lb": -0.00712164,
+       "ub": 0.00137682,
+       "p_joint_effects": 0.29520978
+      },
+      "event_cluster": {
+       "status": null,
+       "ate": -0.00287241,
+       "se": 0.00184767,
+       "lb": -0.00649377,
+       "ub": 0.00074895,
+       "p_joint_effects": 0.33242613
+      }
+     },
+     "previous_2026-08-29_headline": null,
+     "previous_2026-08-29_note": "no earlier cell (the 2026-09-10 pos launcher STOPped)"
+    },
+    "P1nc_math_stats": {
+     "label": "P1nc_math_stats",
+     "driver": "analysis/estimation/run_p1.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p1_frame_math_stats.csv",
+     "frame_sha256": "9dcf9b504b6a4a622c73c4164c18aa54840abc26322a8fff7b22e61fc031538f",
+     "rc": 0,
+     "secs": 7.1,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P1nc_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P1nc_math_stats.json",
+     "json_sha256": "c490affc22af3a32f6ea7ffaed8870408ce948af36ec543d771db7b0aeed3141",
+     "status": "OK",
+     "headline": {
+      "rows_raw": 19459,
+      "rows_kept": 18403,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 15778,
+        "rels": 1673,
+        "events": 33,
+        "ate": -0.12537995,
+        "se": 0.15561868,
+        "lb": -0.43038696,
+        "ub": 0.17962706,
+        "p_joint_effects": 0.0294523,
+        "p_joint_placebo": 0.17375986
+       },
+       "network": {
+        "status": "OK",
+        "obs": 3594,
+        "rels": 360,
+        "events": 29,
+        "ate": -0.13591228,
+        "se": 0.20214828,
+        "lb": -0.53211564,
+        "ub": 0.26029107,
+        "p_joint_effects": 0.52470556,
+        "p_joint_placebo": 0.54308032
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 13296,
+        "rels": 1430,
+        "events": 33,
+        "ate": -0.11763027,
+        "se": 0.18014376,
+        "lb": -0.47070556,
+        "ub": 0.23544503,
+        "p_joint_effects": 0.02940353,
+        "p_joint_placebo": 0.23632326
+       }
+      }
+     },
+     "previous_2026-08-29_headline": {
+      "rows_raw": 23210,
+      "rows_kept": 22044,
+      "channels": {
+       "union": {
+        "status": "OK",
+        "obs": 17706,
+        "rels": 2004,
+        "events": 33,
+        "ate": -0.1909682,
+        "se": 0.14506566,
+        "lb": -0.47529168,
+        "ub": 0.09335528,
+        "p_joint_effects": 0.07144694,
+        "p_joint_placebo": 0.4125481
+       },
+       "network": {
+        "status": "OK",
+        "obs": 5522,
+        "rels": 691,
+        "events": 29,
+        "ate": -0.23201429,
+        "se": 0.19504402,
+        "lb": -0.61429354,
+        "ub": 0.15026496,
+        "p_joint_effects": 0.61921115,
+        "p_joint_placebo": 0.96910126
+       },
+       "dept": {
+        "status": "OK",
+        "obs": 13296,
+        "rels": 1430,
+        "events": 33,
+        "ate": -0.11763027,
+        "se": 0.18014376,
+        "lb": -0.47070556,
+        "ub": 0.23544503,
+        "p_joint_effects": 0.02940353,
+        "p_joint_placebo": 0.23632326
+       }
+      }
+     },
+     "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+    },
+    "P2nc_math_stats": {
+     "label": "P2nc_math_stats",
+     "driver": "analysis/estimation/run_p2.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p2_becoming_math_stats.csv",
+     "frame_sha256": "1d1093a8dec12c28d4a81118cd54df66a17eb69dc854747875578a626dc321a0",
+     "rc": 0,
+     "secs": 3.2,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P2nc_math_stats.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P2nc_math_stats.json",
+     "json_sha256": "c89c093b12a76c62e0083deb2539d70508c4473a4602ea975a69fa39688b43ed",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 29645,
+      "rels": 1754,
+      "grps": null,
+      "persons": 452,
+      "events": 33,
+      "first_ties": 32,
+      "ate": 0.00137548,
+      "se": 0.00043385,
+      "lb": 0.00052514,
+      "ub": 0.00222582,
+      "p_joint_effects": 0.0725344,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_headline": {
+      "status": "OK",
+      "rows": 35315,
+      "rels": 2092,
+      "grps": null,
+      "persons": 471,
+      "events": 33,
+      "first_ties": 54,
+      "ate": 0.00131332,
+      "se": 0.00038799,
+      "lb": 0.00055286,
+      "ub": 0.00207378,
+      "p_joint_effects": 0.0400082,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+    },
+    "P3nc_pos_math_stats_A_far": {
+     "label": "P3nc_pos_math_stats_A_far",
+     "driver": "analysis/estimation/run_p3_tp.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/afar_variant/p3_afar_pos_math_stats.parquet",
+     "frame_sha256": "e5989788b73add83ff1bc0ce0af389bd61a60b60b1693fd4d68df39183dff066",
+     "rc": 0,
+     "secs": 9.8,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_pos_math_stats_A_far.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_pos_math_stats_A_far.json",
+     "json_sha256": "ae8f5e26188efa3c806bfae11f95f6c8a736e9cd6b55f4dfbabc0fb689104933",
+     "status": "OK",
+     "headline": {
+      "rows": 242872,
+      "grps": 14509,
+      "events": 32,
+      "first_ties": 387,
+      "pair_cluster": {
+       "status": null,
+       "ate": 0.000437,
+       "se": 0.00040971,
+       "lb": -0.00036601,
+       "ub": 0.00124001,
+       "p_joint_effects": 0.06610727
+      },
+      "event_cluster": {
+       "status": null,
+       "ate": 0.000437,
+       "se": 0.00029681,
+       "lb": -0.00014473,
+       "ub": 0.00101873,
+       "p_joint_effects": 0.12494205
+      }
+     },
+     "previous_2026-08-29_headline": null,
+     "previous_2026-08-29_note": "no earlier cell (the 2026-09-10 pos launcher STOPped)"
+    },
+    "P3nc_math_stats_full": {
+     "label": "P3nc_math_stats_full",
+     "driver": "analysis/estimation/run_p3.R",
+     "frame": "$TMPDIR/sar_rob_nocentre/products/frames_math_stats/p3_slim_math_stats.parquet",
+     "frame_sha256": "a9ad04e9af128054df3b339a18dc437fceb599d3adbc5c4d1c8d9f87318f86ab",
+     "rc": 0,
+     "secs": 13.3,
+     "log": "data/cal2026-10/robustness/nocentre/logs/P3nc_math_stats_full.log",
+     "waited_for_slot_secs": 0.0,
+     "json": "data/cal2026-10/robustness/nocentre/estimates/P3nc_math_stats_full.json",
+     "json_sha256": "ecf633cb0d733481af316a669f7c5cbbd77dd1caa771354eaff1470c9596d1c7",
+     "status": "OK",
+     "headline": {
+      "status": "OK",
+      "rows": 881044,
+      "rels": null,
+      "grps": 52369,
+      "persons": null,
+      "events": null,
+      "first_ties": 976,
+      "ate": -1.90936308e-06,
+      "se": 0.00017377,
+      "lb": -0.0003425,
+      "ub": 0.00033868,
+      "p_joint_effects": 0.30658637,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_headline": {
+      "status": "OK",
+      "rows": 1231888,
+      "rels": null,
+      "grps": 73119,
+      "persons": null,
+      "events": null,
+      "first_ties": 1283,
+      "ate": -8.718e-05,
+      "se": 0.00014391,
+      "lb": -0.00036924,
+      "ub": 0.00019488,
+      "p_joint_effects": 0.32736602,
+      "p_joint_placebo": null
+     },
+     "previous_2026-08-29_note": "2026-08-28 caliber, no D2 in-post filter (data/robustness_2026-08-29_b/nocentre)"
+    }
+   }
+  }
+ },
+ "manifests": {
+  "data/cal2026-10/robustness/sensitivity_controls": {
+   "write": "data/cal2026-10/robustness/sensitivity_controls: 24 files pinned",
+   "verify": "MANIFEST_OK"
+  },
+  "data/cal2026-10/robustness/departure": {
+   "write": "data/cal2026-10/robustness/departure: 42 files pinned",
+   "verify": "MANIFEST_OK"
+  },
+  "data/cal2026-10/robustness/doublestar": {
+   "write": "data/cal2026-10/robustness/doublestar: 23 files pinned",
+   "verify": "MANIFEST_OK"
+  },
+  "data/cal2026-10/robustness/nocentre": {
+   "write": "data/cal2026-10/robustness/nocentre: 4 files pinned",
+   "verify": "MANIFEST_OK"
+  }
+ },
+ "post_run_2026-09-23": {
+  "why": "two cells the group runner STOPPED for input-path reasons were completed after two input-path overrides (defaults unchanged): build_doublestar.py $SAR_PAIRS_MATH_STATS (the October pairs table data/frames/pairs_none_math_stats.parquet instead of the hard-coded 2026-08-28 one; its positive control make_slim + run_p3.R on that table is EQUAL to P3_fnfix_math_stats per this report) and build_doublestar_complement.py $SAR_DS_DROPS_DIR (expected kept/dropped read from the October doublestar_build_report.json: 18 / 95 of 113)",
+  "doublestar_rebuilt_all_fields": {
+   "stage": "$TMPDIR/sar_rob_ds3",
+   "doublestar_drops.csv_sha256_unchanged": "e2d265c75b12d04d9cd593d7fca6408be7bd02bf1c599379160d8b749df35096"
+  },
+  "P3ds_math_stats_full": {
+   "ate": 0.00042032,
+   "se": 0.00033081,
+   "p_joint_effects": 0.05184088,
+   "p_joint_placebo": null
+  },
+  "P1dsC_econ": {
+   "ate": -0.38028203,
+   "se": 0.07270554,
+   "p_joint_placebo": 0.00289423,
+   "p_joint_effects": 2.24017853e-06
+  },
+  "complement_build_report": {
+   "rows_in": 73073,
+   "dropped": 7128,
+   "edited": 0,
+   "kept_byte_identical": 65945
+  }
+ },
+ "input_override_note_2026-09-23": "Two input-path overrides (defaults unchanged) were added to complete the double-star cells the runner stopped: build_doublestar.py $SAR_PAIRS_MATH_STATS (the pairs table it re-slims; the October table data/frames/pairs_none_math_stats.parquet is the canon since the promotion and its positive control make_slim + run_p3.R is EQUAL to P3_fnfix_math_stats in this report) and build_doublestar_complement.py $SAR_DS_DROPS_DIR (the drop table's directory; the expected kept/dropped counts are then read from that directory's doublestar_build_report.json instead of the 2026-08-29 pins). Neither changes an estimation line; both are recorded here and in the author's build log (private)."
+}

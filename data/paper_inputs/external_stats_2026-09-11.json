@@ -1,0 +1,20 @@
+{
+ "_what": "External published statistics quoted in the manuscript's opening paragraph. Not derived from this project's data: each entry records the figure exactly as the source prints it, with the source, its reference period, its release date and the URL, so tools/check_paper.py can pin what the paper prints against the source rather than against a typist's memory.",
+ "_recorded": "2026-09-11",
+ "herd_2024": {
+  "source": "Australian Bureau of Statistics, Research and Experimental Development, Higher Education Organisations, Australia",
+  "reference_period": "2024",
+  "released": "2026-05-08",
+  "url": "https://www.abs.gov.au/statistics/industry/technology-and-innovation/research-and-experimental-development-higher-education-organisations-australia/latest-release",
+  "accessed": "2026-09-11",
+  "quote_total": "Expenditure on R&D performed by Australian higher education organisations during the 2024 calendar year was $16,404 million.",
+  "quote_labour": "Labour costs remained the largest component of Current expenditure at $7,119 million, and recorded the largest dollar increase, up $1,044 million (17%) in 2024.",
+  "total_aud_million": 16404,
+  "total_aud_billion_1dp": 16.4,
+  "current_expenditure_aud_million": 15523,
+  "labour_cost_aud_million": 7119,
+  "labour_share_of_current_pct": 45.9,
+  "gdp_share_pct": 0.59,
+  "bibkey": "abs2026herd"
+ }
+}

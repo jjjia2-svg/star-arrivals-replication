@@ -1,0 +1,80 @@
+== P1 A_inpost
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1 P1diag_A_inpost_econ  original=71654 rows after decontamination=70367 rows =====
+P1diag_A_inpost_econ/union               obs=61018   rel=6397   joint-effect p=0.0000 placebo p=0.0042 ATE=-0.36746 (SE 0.06807, CI -0.50087~-0.23405)
+P1diag_A_inpost_econ/network             obs=24542   rel=2480   joint-effect p=0.0000 placebo p=0.0376 ATE=-0.44399 (SE 0.10339, CI -0.64663~-0.24134)
+P1diag_A_inpost_econ/dept                obs=43025   rel=4576   joint-effect p=0.0000 placebo p=0.0159 ATE=-0.36802 (SE 0.08095, CI -0.52668~-0.20935)
+[P1diag_A_inpost_econ] done
+== date shift A_inpost
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[date-shift 2] P1pd2diag_A_inpost_econ original=71654 rows after decontamination=70367 rows =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_A_inpost_econ/union            obs=61018   rel=6397   joint-effect p=0.0000 placebo p=NA ATE=-0.39484 (SE 0.07284, CI -0.53760~-0.25209)
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_A_inpost_econ/network          obs=24542   rel=2480   joint-effect p=0.0002 placebo p=NA ATE=-0.50006 (SE 0.11478, CI -0.72503~-0.27509)
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_A_inpost_econ/dept             obs=43025   rel=4576   joint-effect p=0.0002 placebo p=NA ATE=-0.38607 (SE 0.08756, CI -0.55768~-0.21445)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_A_inpost_econ/union            obs=61018   rel=6397   joint-effect p=0.3404 placebo p=0.0103 ATE=-0.07703 (SE 0.05553, CI -0.18586~0.03180)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_A_inpost_econ/network          obs=24542   rel=2480   joint-effect p=0.1207 placebo p=0.4636 ATE=-0.16452 (SE 0.08957, CI -0.34008~0.01103)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_A_inpost_econ/dept             obs=43025   rel=4576   joint-effect p=0.4808 placebo p=0.0049 ATE=-0.05540 (SE 0.06187, CI -0.17666~0.06585)
+[P1pd2diag_A_inpost_econ] done
+== P1 B_notinpost
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1 P1diag_B_notinpost_econ  original=88902 rows after decontamination=87252 rows =====
+P1diag_B_notinpost_econ/union            obs=67535   rel=7932   joint-effect p=0.0000 placebo p=0.0298 ATE=-0.37494 (SE 0.06824, CI -0.50870~-0.24119)
+P1diag_B_notinpost_econ/network          obs=31059   rel=4015   joint-effect p=0.0000 placebo p=0.0722 ATE=-0.60746 (SE 0.16555, CI -0.93194~-0.28298)
+P1diag_B_notinpost_econ/dept             obs=43025   rel=4576   joint-effect p=0.0000 placebo p=0.0159 ATE=-0.36802 (SE 0.08095, CI -0.52668~-0.20935)
+[P1diag_B_notinpost_econ] done
+== date shift B_notinpost
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 1[date-shift 2] P1pd2diag_B_notinpost_econ original=88902 rows after decontamination=87252 rows =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_B_notinpost_econ/union         obs=67535   rel=7932   joint-effect p=0.0000 placebo p=NA ATE=-0.48818 (SE 0.07256, CI -0.63040~-0.34596)
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_B_notinpost_econ/network       obs=31059   rel=4015   joint-effect p=0.0000 placebo p=NA ATE=-0.68834 (SE 0.11057, CI -0.90505~-0.47164)
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P1pd2diag_B_notinpost_econ/dept          obs=43025   rel=4576   joint-effect p=0.0002 placebo p=NA ATE=-0.38607 (SE 0.08756, CI -0.55768~-0.21445)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_B_notinpost_econ/union         obs=67535   rel=7932   joint-effect p=0.0312 placebo p=0.0129 ATE=-0.13198 (SE 0.05012, CI -0.23022~-0.03374)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_B_notinpost_econ/network       obs=31059   rel=4015   joint-effect p=0.0015 placebo p=0.1909 ATE=-0.23439 (SE 0.07197, CI -0.37546~-0.09333)
+The number of placebo requested cannot be larger than the number of effects requested. The command cannot compute more than 2 placebo(s).
+P1pd2diag_B_notinpost_econ/dept          obs=43025   rel=4576   joint-effect p=0.4808 placebo p=0.0049 ATE=-0.05540 (SE 0.06187, CI -0.17666~0.06585)
+[P1pd2diag_B_notinpost_econ] done
+data/robustness_2026-09-13_inpost_diag: 8 files pinned
+INPOST_DIAG_DONE

@@ -1,0 +1,8 @@
+
+===== permutation p2 P2_fnfix_chemistry events=38 perms=0..0 seed=20260829 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  CONTROL EQUAL: ate=0.0060976772 se=0.0008506183 == ref (to the gold's 8-decimal rounding)
+  [P2_fnfix_chemistry] perm 0 done (8.3s)
+[P2_fnfix_chemistry] 0..0 完成 -> out_perm/P2_fnfix_chemistry_perm_0_0.csv

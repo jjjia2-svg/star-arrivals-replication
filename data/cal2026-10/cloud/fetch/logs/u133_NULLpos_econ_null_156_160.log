@@ -1,0 +1,32 @@
+NOTE: 0/11 fixed-effects (41 observations) removed because of only 0 outcomes or singletons.
+NOTE: 11 fixed-effects (185,054 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 15/11 fixed-effects (187,250 observations) removed because of only 0 or only 1 outcomes or singletons.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  [sim 156] ratio(yearFE) 1.055 | (ev+yearFE) 1.422 | dCDH -0.0150 pp | ties 3551
+NOTE: 11 fixed-effects (185,095 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 14/11 fixed-effects (187,010 observations) removed because of only 0 or only 1 outcomes or singletons.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  [sim 157] ratio(yearFE) 1.106 | (ev+yearFE) 1.443 | dCDH -0.0697 pp | ties 3625
+NOTE: 12 fixed-effects (185,572 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 17/12 fixed-effects (188,204 observations) removed because of only 0 or only 1 outcomes or singletons.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  [sim 158] ratio(yearFE) 1.056 | (ev+yearFE) 1.473 | dCDH +0.0366 pp | ties 3519
+NOTE: 11 fixed-effects (184,849 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 12/11 fixed-effects (186,662 observations) removed because of only 0 or only 1 outcomes or singletons.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  [sim 159] ratio(yearFE) 1.043 | (ev+yearFE) 1.348 | dCDH -0.0245 pp | ties 3664
+NOTE: 12 fixed-effects (185,076 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 18/12 fixed-effects (188,718 observations) removed because of only 0 or only 1 outcomes or singletons.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+  [sim 160] ratio(yearFE) 1.106 | (ev+yearFE) 1.628 | dCDH +0.0307 pp | ties 3601
+[NULLpos_econ] slice 156-160 done -> out_null/NULLpos_econ_null_156_160.csv

@@ -1,0 +1,16 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "report",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [["r1/evidence/workflows/", "/work/evidence/workflows/"]],
+  "required_dests": ["/work/merged/", "/work/rk6b/"],
+  "data_sync": [],
+  "copy_from_tip": [],
+  "steps": ["\"$PY\" \"$REPO_DIR/tools/r1_candidate_report.py\" --merged /work/merged/candidates_merged.csv --flips /work/rk6b/flips.csv --evidence /work/evidence --out /work/out --job \"$JOB\""]
+}

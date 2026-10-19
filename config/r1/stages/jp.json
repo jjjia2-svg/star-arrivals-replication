@@ -1,0 +1,96 @@
+{
+ "schema": "sar.r1.stages.v1",
+ "job": "jp",
+ "complete": true,
+ "note": "JP parity: the 29 October cells from the frozen frames on EC2, each under the stack that made its gold (ruling R6). JP is a measurement: the compare row records compare_all's exit code in $STAGE_OUT/compare_rc.txt (0 EQUAL, else DIFF) and exits 0, so a DIFF JP still ends OK and J0 can pull it (gate 1 then takes the ec2 mode, ruling h1); a missing cell output still fails the row. Resume (FIX-JP 2, JP review): the cell and compare rows fingerprint the comparison code (analysis/lib/compare_json.py and what it and compare_all/verify_cloud_custody import), the gold tree, the custody dir, the paths config and the py layer, so a changed comparator re-runs them.",
+ "stages": [
+  {
+   "name": "repo_manifest",
+   "owner": "F25",
+   "cmd": "cd \"$REPO_DIR\" && mkdir -p \"$STAGE_OUT\" && \"$PY\" tools/verify_manifest.py > \"$STAGE_OUT/data.log\" && \"$PY\" tools/verify_manifest.py analysis/expected/MANIFEST.sha256 > \"$STAGE_OUT/expected.log\"",
+   "inputs": [
+    "repo:data/MANIFEST.sha256",
+    "repo:analysis/expected/MANIFEST.sha256"
+   ],
+   "outputs": [
+    "work:prod/repo_manifest"
+   ],
+   "est_min": 2,
+   "needs": [],
+   "resume": "always"
+  },
+  {
+   "name": "cells_rmac",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/run_cells.py",
+   "cmd": "\"$PY\" \"$WORK/run_cells.py\" --cells \"$REPO_DIR/config/r1/cells/oct29.tsv\" --stack rmac --repo \"$REPO_DIR\" --frames \"$REPO_DIR/data/frames\" --gold-dir \"$REPO_DIR/analysis/expected\" --out \"$STAGE_OUT\" --par 8 --threads 8 --compare",
+   "inputs": [
+    "repo:config/r1/cells/oct29.tsv",
+    "repo:analysis/estimation",
+    "repo:data/frames",
+    "env:rmac",
+    "repo:analysis/lib/__init__.py",
+    "repo:analysis/lib/compare_json.py",
+    "repo:analysis/expected",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/cells_rmac"
+   ],
+   "est_min": 15,
+   "needs": [
+    "repo_manifest"
+   ]
+  },
+  {
+   "name": "cells_rcloud",
+   "owner": "F25",
+   "script": "pipeline/aws/r1/run_cells.py",
+   "cmd": "\"$PY\" \"$WORK/run_cells.py\" --cells \"$REPO_DIR/config/r1/cells/oct29.tsv\" --stack rcloud --repo \"$REPO_DIR\" --frames \"$REPO_DIR/data/frames\" --gold-dir \"$REPO_DIR/analysis/expected\" --out \"$STAGE_OUT\" --par 1 --threads 32 --compare",
+   "inputs": [
+    "repo:config/r1/cells/oct29.tsv",
+    "repo:analysis/estimation",
+    "repo:data/frames",
+    "env:rcloud",
+    "repo:analysis/lib/__init__.py",
+    "repo:analysis/lib/compare_json.py",
+    "repo:analysis/expected",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/cells_rcloud"
+   ],
+   "est_min": 20,
+   "needs": [
+    "repo_manifest"
+   ]
+  },
+  {
+   "name": "compare",
+   "owner": "F25",
+   "cmd": "mkdir -p \"$REPO_DIR/output/estimates\" \"$STAGE_OUT\" && cp \"$WORK\"/prod/cells_rmac/estimates/*.json \"$WORK\"/prod/cells_rcloud/estimates/*.json \"$REPO_DIR/output/estimates/\" && cd \"$REPO_DIR\" && { \"$PY\" tools/compare_all.py > \"$STAGE_OUT/compare.txt\"; echo $? > \"$STAGE_OUT/compare_rc.txt\"; }",
+   "inputs": [
+    "stage:cells_rmac",
+    "stage:cells_rcloud",
+    "repo:tools/compare_all.py",
+    "repo:tools/verify_cloud_custody.py",
+    "repo:analysis/lib/__init__.py",
+    "repo:analysis/lib/compare_json.py",
+    "repo:analysis/lib/paths.py",
+    "repo:config/r1/paths_aws.yaml",
+    "repo:analysis/expected",
+    "repo:data/cal2026-10/cloud",
+    "env:py"
+   ],
+   "outputs": [
+    "work:prod/compare",
+    "repo:output/compare_report.md"
+   ],
+   "est_min": 2,
+   "needs": [
+    "cells_rmac",
+    "cells_rcloud"
+   ]
+  }
+ ]
+}

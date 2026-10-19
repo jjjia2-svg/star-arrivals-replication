@@ -1,0 +1,805 @@
+{
+ "generated": "2026-09-22T22:03:36",
+ "authority": "the author's design record of 2026-09-22 (private archive)",
+ "piece": "A (configs + in-post stage + controls)",
+ "derived_root": "<openalex_extraction>/derived",
+ "c1": {
+  "chemistry": {
+   "unit_modules": [
+    "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+    "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+    "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+    "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+    "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+    "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+    "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+    "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+    "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+    "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+    "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+    "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+    "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+    "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+   ],
+   "prodlib": {
+    "chemistry": {
+     "code_sha256": {
+      "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+      "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+      "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+     },
+     "secs": 10.3,
+     "config": "<scratch>/pieceA_ctl3/c1_fnfix_chemistry/config_chemistry.json",
+     "frame": "<scratch>/pieceA_ctl3/c1_fnfix_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+     "frame_sha256": "9596b8583a11d4cb890a28840035742751ab70461c66e7e83ff9d55ffa4f893f",
+     "frame_lines": 36444,
+     "build_report": {
+      "pool": {
+       "n_authors_with_edges": 336,
+       "n_member_frag_authors": 341,
+       "n_pool_persons": 336,
+       "n_roster_authors": 341
+      },
+      "deg2_hops": {
+       "n_hop1_pairs": 13939,
+       "n_hop2_pairs": 8022
+      },
+      "export": {
+       "dropped_event_ids": [],
+       "frame_csv": "<scratch>/pieceA_ctl3/c1_fnfix_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+       "n_events_in_frame": 35,
+       "n_rows": 36443
+      },
+      "roster_diag": {
+       "exclusion_list_size": 1832,
+       "n_authors_after_exclusion": 341,
+       "n_roster_rows": 533,
+       "n_rows_excluded_star_like": 189
+      },
+      "events_diag": {
+       "crosschecked_vs_netbase": false,
+       "n_arrival_fallback_to_screen_year": 0,
+       "n_events": 35
+      },
+      "topic_dose": {
+       "n_pairs": 3313,
+       "n_topic_pos": 3045
+      },
+      "subgraph": {
+       "n_merged_edges": 3282631,
+       "n_null_year_edges": 5,
+       "n_pedges": 3282631,
+       "n_seed_authors": 371,
+       "n_seed_works": 69895,
+       "n_works_domain": 74825,
+       "n_works_off_snapshot": 5732
+      }
+     }
+    }
+   },
+   "frozen": "<legacy>/v2_output/multidisc_gold_2026-08-10/runs/fnfix/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "frozen_sha256": "9596b8583a11d4cb890a28840035742751ab70461c66e7e83ff9d55ffa4f893f",
+   "result": "BYTE_EQUAL"
+  },
+  "math_stats": {
+   "unit_modules": [
+    "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+    "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+    "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+    "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+    "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+    "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+    "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+    "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+    "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+    "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+    "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+    "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+    "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+    "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+   ],
+   "prodlib": {
+    "math_stats": {
+     "code_sha256": {
+      "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+      "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+      "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+     },
+     "secs": 5.3,
+     "config": "<scratch>/pieceA_ctl3/c1_fnfix_math_stats/config_math_stats.json",
+     "frame": "<scratch>/pieceA_ctl3/c1_fnfix_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+     "frame_sha256": "03751279d9b2ad52569612f26fcb08a96a2df09edbe1002f2da7ff9afc7b542c",
+     "frame_lines": 8163,
+     "build_report": {
+      "pool": {
+       "n_authors_with_edges": 439,
+       "n_member_frag_authors": 487,
+       "n_pool_persons": 439,
+       "n_roster_authors": 487
+      },
+      "deg2_hops": {
+       "n_hop1_pairs": 8954,
+       "n_hop2_pairs": 3079
+      },
+      "export": {
+       "dropped_event_ids": [
+        "A5000405788:melbourne",
+        "A5027646711:sydney",
+        "A5051533068:monash"
+       ],
+       "frame_csv": "<scratch>/pieceA_ctl3/c1_fnfix_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+       "n_events_in_frame": 28,
+       "n_rows": 8162
+      },
+      "roster_diag": {
+       "exclusion_list_size": 1832,
+       "n_authors_after_exclusion": 487,
+       "n_roster_rows": 580,
+       "n_rows_excluded_star_like": 89
+      },
+      "events_diag": {
+       "crosschecked_vs_netbase": false,
+       "n_arrival_fallback_to_screen_year": 0,
+       "n_events": 31
+      },
+      "topic_dose": {
+       "n_pairs": 742,
+       "n_topic_pos": 536
+      },
+      "subgraph": {
+       "n_merged_edges": 259445,
+       "n_null_year_edges": 29,
+       "n_pedges": 259445,
+       "n_seed_authors": 470,
+       "n_seed_works": 36082,
+       "n_works_domain": 44590,
+       "n_works_off_snapshot": 9117
+      }
+     }
+    }
+   },
+   "frozen": "<legacy>/v2_output/multidisc_gold_2026-08-10/runs/fnfix/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+   "frozen_sha256": "03751279d9b2ad52569612f26fcb08a96a2df09edbe1002f2da7ff9afc7b542c",
+   "result": "BYTE_EQUAL"
+  }
+ },
+ "c2": {
+  "shadow_entries": 27,
+  "derivation": {
+   "events": "cal2026-08-28",
+   "tables": {
+    "econ": {
+     "path": "data/cal2026-08-28/events_econ_cal.csv",
+     "sha256": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+     "n_events": 116
+    },
+    "chemistry": {
+     "path": "data/cal2026-08-28/events_chemistry_cal.csv",
+     "sha256": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+     "n_events": 38
+    },
+    "math_stats": {
+     "path": "data/cal2026-08-28/events_math_stats_cal.csv",
+     "sha256": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7",
+     "n_events": 33
+    }
+   },
+   "fnfixbase": {
+    "chemistry": {
+     "frozen_rows": 35,
+     "kept": 35,
+     "dropped": [],
+     "added": [
+      "A5027778630:anu",
+      "A5091826237:anu",
+      "A5062352558:melbourne"
+     ]
+    },
+    "math_stats": {
+     "frozen_rows": 31,
+     "kept": 31,
+     "dropped": [],
+     "added": [
+      "A5017222669:uq",
+      "A5090916445:unsw"
+     ]
+    }
+   },
+   "shortlist": {
+    "frozen_rows": 66,
+    "added": [
+     "A5027778630:chemistry:anu",
+     "A5091826237:chemistry:anu",
+     "A5062352558:chemistry:melbourne",
+     "A5017222669:math_stats:uq",
+     "A5090916445:math_stats:unsw"
+    ]
+   },
+   "stars_excluded": {
+    "base_08_28": 1837,
+    "event_stars": 187,
+    "added": [
+     "A5000292946",
+     "A5000674091",
+     "A5001034699",
+     "A5001177483",
+     "A5001820944",
+     "A5002969626",
+     "A5004109149",
+     "A5005868773",
+     "A5006190609",
+     "A5006435210",
+     "A5007734019",
+     "A5008208999",
+     "A5008296992",
+     "A5008470795",
+     "A5008855963",
+     "A5011262618",
+     "A5011776630",
+     "A5012590199",
+     "A5013630114",
+     "A5015268530",
+     "A5016931502",
+     "A5017376589",
+     "A5017694921",
+     "A5017960988",
+     "A5018453582",
+     "A5018518935",
+     "A5020729611",
+     "A5020774613",
+     "A5022446221",
+     "A5024737956",
+     "A5024745682",
+     "A5024973435",
+     "A5026828190",
+     "A5027077000",
+     "A5027090359",
+     "A5027424571",
+     "A5028731684",
+     "A5029151069",
+     "A5032550291",
+     "A5034503874",
+     "A5034628923",
+     "A5034784553",
+     "A5035157505",
+     "A5038001711",
+     "A5039737173",
+     "A5041837451",
+     "A5041849660",
+     "A5042121724",
+     "A5042125848",
+     "A5044076496",
+     "A5044501609",
+     "A5046163960",
+     "A5046379417",
+     "A5047686030",
+     "A5047755944",
+     "A5049007275",
+     "A5050761986",
+     "A5050962159",
+     "A5053503664",
+     "A5054037290",
+     "A5056114255",
+     "A5059344939",
+     "A5059426203",
+     "A5059428122",
+     "A5059554264",
+     "A5063040920",
+     "A5063920479",
+     "A5063951119",
+     "A5067564085",
+     "A5068400819",
+     "A5069424866",
+     "A5070067353",
+     "A5070264657",
+     "A5070304330",
+     "A5070527085",
+     "A5071656006",
+     "A5071785739",
+     "A5072079903",
+     "A5073639630",
+     "A5075194454",
+     "A5076526695",
+     "A5078564370",
+     "A5079006965",
+     "A5080033018",
+     "A5080057811",
+     "A5080689800",
+     "A5082658369",
+     "A5082663721",
+     "A5082727271",
+     "A5083549223",
+     "A5083649140",
+     "A5085246004",
+     "A5086206624",
+     "A5086383420",
+     "A5086581525",
+     "A5086835452",
+     "A5086933077",
+     "A5087235620",
+     "A5087261858",
+     "A5087653408",
+     "A5087933968",
+     "A5088950236",
+     "A5089150146",
+     "A5090013218",
+     "A5090515599",
+     "A5100451834",
+     "A5100765181",
+     "A5102189800",
+     "A5102739182",
+     "A5103218091",
+     "A5103238589",
+     "A5105828272",
+     "A5110738002",
+     "A5111971785"
+    ],
+    "total": 1951
+   },
+   "roster_pool": {
+    "source": "data/cal2026-10/roster_econ_verified_2026-10.parquet",
+    "source_sha256": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+    "rows_in": 1008,
+    "rows_out": 933,
+    "dropped_star_rows": [
+     "A5001034699",
+     "A5001296475",
+     "A5001820944",
+     "A5002129110",
+     "A5002969626",
+     "A5005868773",
+     "A5006435210",
+     "A5007734019",
+     "A5008855963",
+     "A5011180365",
+     "A5014777899",
+     "A5015268530",
+     "A5017376589",
+     "A5017694921",
+     "A5017976186",
+     "A5018518935",
+     "A5020729611",
+     "A5020774613",
+     "A5023602090",
+     "A5024737956",
+     "A5024745682",
+     "A5024973435",
+     "A5028731684",
+     "A5034628923",
+     "A5034784553",
+     "A5038001711",
+     "A5041837451",
+     "A5041849660",
+     "A5042125848",
+     "A5043842721",
+     "A5044501609",
+     "A5046163960",
+     "A5046379417",
+     "A5047686030",
+     "A5047755944",
+     "A5050761986",
+     "A5050962159",
+     "A5053503664",
+     "A5054037290",
+     "A5054843123",
+     "A5056114255",
+     "A5059428122",
+     "A5059554264",
+     "A5063040920",
+     "A5063920479",
+     "A5063951119",
+     "A5065659844",
+     "A5067564085",
+     "A5069424866",
+     "A5070304330",
+     "A5070527085",
+     "A5071656006",
+     "A5075194454",
+     "A5076036807",
+     "A5080033018",
+     "A5080057811",
+     "A5080841301",
+     "A5082658369",
+     "A5082663721",
+     "A5086383420",
+     "A5086581525",
+     "A5086835452",
+     "A5087653408",
+     "A5087933968",
+     "A5088950236",
+     "A5089150146",
+     "A5100451834",
+     "A5102189800",
+     "A5102491748",
+     "A5102739182",
+     "A5103177543",
+     "A5103218091",
+     "A5103238589",
+     "A5110738002",
+     "A5111971785"
+    ]
+   },
+   "u4_aug": {
+    "n_events": 116,
+    "restake_source": "data/cal2026-08-28/restake_2026-08-28.csv (08-28 candidates only; October table absent)",
+    "n_with_restake_row": 37,
+    "flags_note": "is_star_1pct/5pct/is_foreign_poach/age_eligible True for every event star (seeding), econ subfield code read from the 08-15 star_set"
+   },
+   "supplement": {
+    "parts": [
+     {
+      "part": "data/raw_verified/edges_supplement_econ_fnfix.jsonl",
+      "lines": 4151,
+      "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+     },
+     {
+      "part": "data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl",
+      "lines": 15569,
+      "sha256": "0ce673cd3ac9d588d0b4dcecb7a11e7df286ec36939cbc4a3a1920e1c939bc8c"
+     },
+     {
+      "part": "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl",
+      "lines": 126,
+      "sha256": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d"
+     }
+    ],
+    "lines": 19846
+   },
+   "person_map": {
+    "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+    "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+    "n_stars": 116,
+    "stars_sharing_a_person": {}
+   }
+  },
+  "fields": {
+   "chemistry": {
+    "config_equal_to_08_28": true,
+    "unit_modules": [
+     "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+     "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+     "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+     "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+     "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+     "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+     "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+     "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+     "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+     "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+     "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+     "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+     "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+    ],
+    "prodlib": {
+     "chemistry": {
+      "code_sha256": {
+       "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+       "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+       "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+      },
+      "secs": 7.6,
+      "config": "<scratch>/pieceA_ctl3/c2_cal0828_chemistry/config_chemistry.json",
+      "frame": "<scratch>/pieceA_ctl3/c2_cal0828_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+      "frame_sha256": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7",
+      "frame_lines": 39722,
+      "build_report": {
+       "pool": {
+        "n_authors_with_edges": 333,
+        "n_member_frag_authors": 338,
+        "n_pool_persons": 333,
+        "n_roster_authors": 338
+       },
+       "deg2_hops": {
+        "n_hop1_pairs": 15108,
+        "n_hop2_pairs": 8769
+       },
+       "export": {
+        "dropped_event_ids": [],
+        "frame_csv": "<scratch>/pieceA_ctl3/c2_cal0828_chemistry/runs/chemistry/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+        "n_events_in_frame": 38,
+        "n_rows": 39721
+       },
+       "roster_diag": {
+        "exclusion_list_size": 1837,
+        "n_authors_after_exclusion": 338,
+        "n_roster_rows": 533,
+        "n_rows_excluded_star_like": 192
+       },
+       "events_diag": {
+        "crosschecked_vs_netbase": false,
+        "n_arrival_fallback_to_screen_year": 0,
+        "n_events": 38
+       },
+       "topic_dose": {
+        "n_pairs": 3611,
+        "n_topic_pos": 3254
+       },
+       "subgraph": {
+        "n_merged_edges": 3286345,
+        "n_null_year_edges": 5,
+        "n_pedges": 3286345,
+        "n_seed_authors": 371,
+        "n_seed_works": 70601,
+        "n_works_domain": 75803,
+        "n_works_off_snapshot": 6549
+       }
+      }
+     }
+    },
+    "want_sha256_from_08_28_staging_manifest": "359f270ab6e118a835bccda32aa4ab1686c4ea351dda15457d001466d5a876c7",
+    "result": "BYTE_EQUAL"
+   },
+   "math_stats": {
+    "config_equal_to_08_28": true,
+    "unit_modules": [
+     "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+     "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+     "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+     "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+     "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+     "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+     "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+     "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+     "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+     "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+     "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+     "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+     "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+    ],
+    "prodlib": {
+     "math_stats": {
+      "code_sha256": {
+       "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+       "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+       "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+      },
+      "secs": 4.7,
+      "config": "<scratch>/pieceA_ctl3/c2_cal0828_math_stats/config_math_stats.json",
+      "frame": "<scratch>/pieceA_ctl3/c2_cal0828_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+      "frame_sha256": "ca6d75f1de97ca99f51506b5a792ab83e247db260936f0b7d43f771e393a5ae8",
+      "frame_lines": 8482,
+      "build_report": {
+       "pool": {
+        "n_authors_with_edges": 437,
+        "n_member_frag_authors": 485,
+        "n_pool_persons": 437,
+        "n_roster_authors": 485
+       },
+       "deg2_hops": {
+        "n_hop1_pairs": 9567,
+        "n_hop2_pairs": 3231
+       },
+       "export": {
+        "dropped_event_ids": [
+         "A5000405788:melbourne",
+         "A5027646711:sydney",
+         "A5051533068:monash"
+        ],
+        "frame_csv": "<scratch>/pieceA_ctl3/c2_cal0828_math_stats/runs/math_stats/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+        "n_events_in_frame": 30,
+        "n_rows": 8481
+       },
+       "roster_diag": {
+        "exclusion_list_size": 1837,
+        "n_authors_after_exclusion": 485,
+        "n_roster_rows": 580,
+        "n_rows_excluded_star_like": 91
+       },
+       "events_diag": {
+        "crosschecked_vs_netbase": false,
+        "n_arrival_fallback_to_screen_year": 0,
+        "n_events": 33
+       },
+       "topic_dose": {
+        "n_pairs": 771,
+        "n_topic_pos": 544
+       },
+       "subgraph": {
+        "n_merged_edges": 266082,
+        "n_null_year_edges": 29,
+        "n_pedges": 266082,
+        "n_seed_authors": 470,
+        "n_seed_works": 36082,
+        "n_works_domain": 46327,
+        "n_works_off_snapshot": 10854
+       }
+      }
+     }
+    },
+    "want_sha256_from_08_28_staging_manifest": "ca6d75f1de97ca99f51506b5a792ab83e247db260936f0b7d43f771e393a5ae8",
+    "result": "BYTE_EQUAL"
+   }
+  },
+  "companions_byte_equal_to_08_28": {
+   "shortlist": true,
+   "fnfixbase_chemistry": true,
+   "fnfixbase_math_stats": true
+  }
+ },
+ "c3": {
+  "diag_relations_by_class": {
+   "roster_channel": 4652,
+   "network_notinpost": 3430,
+   "network_no_spell": 819,
+   "network_inpost": 1862
+  },
+  "frame": "data/frames/p1_frame_econ.csv",
+  "frame_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+  "network_only": {
+   "input": {
+    "source": "data/frames/p1_frame_econ.csv",
+    "source_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+    "channels": [
+     "network"
+    ],
+    "rows": 67221,
+    "out": "<scratch>/pieceA_ctl3/c3_inpost/p1_econ_network_only.csv"
+   },
+   "relations_by_class": {
+    "kept": 1862,
+    "dropped_no_spell": 819,
+    "dropped_not_in_post": 3430
+   },
+   "rows_by_class": {
+    "kept": 20482,
+    "dropped_no_spell": 9009,
+    "dropped_not_in_post": 37730
+   },
+   "result": "EQUAL"
+  },
+  "network_and_both": {
+   "input": {
+    "source": "data/frames/p1_frame_econ.csv",
+    "source_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+    "channels": [
+     "both",
+     "network"
+    ],
+    "rows": 74580,
+    "out": "<scratch>/pieceA_ctl3/c3_inpost/p1_econ_network_both.csv"
+   },
+   "both_relations": 669,
+   "relations_by_class": {
+    "kept": 2531,
+    "dropped_no_spell": 819,
+    "dropped_not_in_post": 3430
+   },
+   "result": "EQUAL"
+  }
+ },
+ "econ_smoke": {
+  "unit_modules": [
+   "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+   "identity.cohort <- pipeline/units/u0_foundation/src/identity/cohort.py",
+   "identity.first_pub <- pipeline/units/u0_foundation/src/identity/first_pub.py",
+   "identity.output_rule <- pipeline/units/u0_foundation/src/identity/output_rule.py",
+   "m5_output.fwci_raw <- pipeline/units/u4_output_star/src/m5_output/fwci_raw.py",
+   "m5_output.fwci_baseline_build <- pipeline/units/u4_output_star/src/m5_output/fwci_baseline_build.py",
+   "m5_output.paper_contrib <- pipeline/units/u4_output_star/src/m5_output/paper_contrib.py",
+   "m4_dose.candidate_pairs <- pipeline/units/u5_dose/src/m4_dose/candidate_pairs.py",
+   "m4_dose.degree2_closure <- pipeline/units/u5_dose/src/m4_dose/degree2_closure.py",
+   "m4_dose.topic_vec <- pipeline/units/u5_dose/src/m4_dose/topic_vec.py",
+   "m4_dose.cutoff <- pipeline/units/u5_dose/src/m4_dose/cutoff.py",
+   "m7b_assemble.assemble <- pipeline/units/u6_assemble/src/m7b_assemble/assemble.py",
+   "m7b_assemble.incumbent_roster <- pipeline/units/u6_assemble/src/m7b_assemble/incumbent_roster.py",
+   "common._redlines <- pipeline/units/u0_foundation/src/common/_redlines.py"
+  ],
+  "prodlib": {
+   "econ": {
+    "code_sha256": {
+     "build_frame.py": "d458b6392817f8c4360264abc335987359ad5e2eaa63912a259b11df420df522",
+     "prodlib.py": "f3a3ae2f83412a74e5e40d61e649674da37f39d4194e046ce6174e36b1580155",
+     "mpimports.py": "7830d4be24c03d4ea6afa9b90d01bd37bbb5318fa137746bb60b249dd04ffcb6"
+    },
+    "secs": 17.8,
+    "config": "<scratch>/pieceA_ctl3/e_econ_smoke/config_econ.json",
+    "frame": "<scratch>/pieceA_ctl3/e_econ_smoke/runs/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+    "frame_sha256": "22314baeddba57b51c7cc44ae696e75d4073e85539c8eb42580899ab3bf26d04",
+    "frame_lines": 66496,
+    "build_report": {
+     "pool": {
+      "n_authors_with_edges": 1308,
+      "n_member_frag_authors": 1308,
+      "n_pool_persons": 908,
+      "n_roster_authors": 933
+     },
+     "deg2_hops": {
+      "n_hop1_pairs": 6889,
+      "n_hop2_pairs": 9342
+     },
+     "export": {
+      "dropped_event_ids": [
+       "A5017960988:2019",
+       "A5018518935:2003",
+       "A5053503664:2023",
+       "A5059554264:2021",
+       "A5080689800:2024",
+       "A5087933968:2020",
+       "A5102739182:2010"
+      ],
+      "frame_csv": "<scratch>/pieceA_ctl3/e_econ_smoke/runs/econ/data/analysis_frame_p01_52ev_topicdose_2026-07-21.csv",
+      "n_events_in_frame": 109,
+      "n_rows": 66495
+     },
+     "roster_diag": {
+      "fold": {
+       "n_persons": 908,
+       "n_roster_rows": 933,
+       "n_unmapped_author_rows": 24,
+       "unmapped_author_ids": [
+        "A5006625214",
+        "A5015146653",
+        "A5018239900",
+        "A5020933050",
+        "A5021062818",
+        "A5021746248",
+        "A5027786961",
+        "A5030927392",
+        "A5032747649",
+        "A5033153433",
+        "A5033977762",
+        "A5040055615",
+        "A5041083925",
+        "A5044618645",
+        "A5049629760",
+        "A5054530767",
+        "A5060950282",
+        "A5067717013",
+        "A5075517152",
+        "A5084834868",
+        "A5085804894",
+        "A5101402156",
+        "A5101403206",
+        "A5129415214"
+       ]
+      },
+      "n_roster_rows": 933
+     },
+     "events_diag": {
+      "n_events": 116,
+      "n_events_flag_filtered_out": 0,
+      "n_events_frozen_table": 116
+     },
+     "topic_dose": {
+      "n_pairs": 6045,
+      "n_topic_pos": 4810
+     },
+     "subgraph": {
+      "n_merged_edges": 812261,
+      "n_null_year_edges": 305,
+      "n_pedges": 366745,
+      "n_seed_authors": 1506,
+      "n_seed_works": 109696,
+      "n_works_domain": 125109,
+      "n_works_off_snapshot": 15435
+     }
+    }
+   }
+  },
+  "inpost": {
+   "relations_by_class": {
+    "kept": 2583,
+    "dropped_no_spell": 0,
+    "dropped_not_in_post": 3462
+   },
+   "rows_by_class": {
+    "kept": 28413,
+    "dropped_no_spell": 0,
+    "dropped_not_in_post": 38082
+   },
+   "persons_by_class": {
+    "kept": 519,
+    "dropped_no_spell": 0,
+    "dropped_not_in_post": 660
+   },
+   "events_left_with_zero_rows": [
+    "A5017694921:2007",
+    "A5059428122:2021"
+   ]
+  }
+ },
+ "stops": [],
+ "total_secs": 49.1
+}

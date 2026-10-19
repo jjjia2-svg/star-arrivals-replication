@@ -1,0 +1,181 @@
+{
+ "generated": "2026-09-23T02:26:57",
+ "inputs": {
+  "econ_fnfix_2026-08-15/data/pairs_unified.csv": {
+   "from": "<scratch>/afar_ctl_econ/pairs_unified.csv",
+   "sha256": "41d9f7e3fd5ae60165589ed9848a4bfb0d2dea80df35a1c87dcc310dc596b7de"
+  },
+  "econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv": {
+   "from": "<scratch>/afar_ctl_econ/p1_frame_econ.csv",
+   "sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f"
+  },
+  "econ_fnfix_2026-08-15/data/becoming_unified.csv": {
+   "from": "<scratch>/afar_ctl_econ/p2_becoming_econ.csv",
+   "sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d"
+  },
+  "econ_fnfix_2026-08-15/data/relationships.csv": {
+   "from": "<scratch>/afar_ctl_econ/relationships.csv",
+   "sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/pairs_none.parquet": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/pairs_none_chemistry.parquet",
+   "sha256": "530bf6779af5ef10a166b3a6db87579614b93a7dcc9f44bf96e1eedcbc9ef00c"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_chemistry_new_gold_2026-08-10.csv": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/p1_frame_chemistry.csv",
+   "sha256": "1a7dbbba836946a7a9eedaeecc9b8c24fea04198abcf1f98ab32611a0e3283e1"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/panels23_chemistry_gold/becoming_none.csv": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/p2_becoming_chemistry.csv",
+   "sha256": "66744f68adf521d2b0d0db7a75deebc453ad3dc061386e1eddb297cc8778f424"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/pairs_none.parquet": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/pairs_none_math_stats.parquet",
+   "sha256": "631f499bc78ed55f16384f13a159022ac99ab7c8302101eb7194b6ab2dea19cb"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/analysis_frame_math_stats_new_gold_2026-08-10.csv": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/p1_frame_math_stats.csv",
+   "sha256": "8d5a7087245ff26c9155f8eb3de417d1fa9edc82f7497478693846c630aff1a0"
+  },
+  "multidisc_gold_2026-08-10/data/fnfix/panels23_math_stats_gold/becoming_none.csv": {
+   "from": "$TMPDIR/sar_afar_ctl/control_inputs/p2_becoming_math_stats.csv",
+   "sha256": "02976c1dd864684825e2b68bf420101ceb0f4957fee046fc3d76ad6f1263a79a"
+  }
+ },
+ "stages": {
+  "afar": {
+   "run_dir": "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17",
+   "secs": 4.8,
+   "produced": {
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/lb_counts.csv": "08e1210572a058e78b1ff571f0c0660a71d15df6364454ac942762d64c80dd6e",
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/lb_manifest.json": "34c944a692b7f2bc245003d8d70188d46a254019ce4916a9fa23508fd7845f06",
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/lb_tau_profile.csv": "c3b2533e4fd122bc0e92812237eb1acafa7a2d8052f93bb83756141d0ac8c4ea",
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/pairs_slim_lb_econ_A_far.parquet": "b10219691afc791eac9541e13c4a51937f67b8f08c5a79ef889333b7ef841dc4",
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/pairs_slim_lb_chemistry_A_far.parquet": "3b8fceb199b87d8bb5321b19fdd2febf04d90b5308e76c505bb691d792c58b02",
+    "$TMPDIR/sar_afar_ctl/cal_afar/frames/afar/p3_topicpair_2026-08-17/data/pairs_slim_lb_math_stats_A_far.parquet": "4294bac5d7286d1475f84bc03ca499d7b416475fc24f10daed5ec2d18f28d994"
+   }
+  }
+ },
+ "cuts": {
+  "pos_econ": {
+   "field": "econ",
+   "cut_spec": "pos",
+   "cut": 0.0,
+   "cut_full": 0.0,
+   "rows": 1464008,
+   "pairs": 88176,
+   "ties": 3609,
+   "events": 108,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_pos_econ.parquet"
+  },
+  "pos_chemistry": {
+   "field": "chemistry",
+   "cut_spec": "pos",
+   "cut": 0.0,
+   "cut_full": 0.0,
+   "rows": 184960,
+   "pairs": 11466,
+   "ties": 1004,
+   "events": 38,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_pos_chemistry.parquet"
+  },
+  "pos_math_stats": {
+   "field": "math_stats",
+   "cut_spec": "pos",
+   "cut": 0.0,
+   "cut_full": 0.0,
+   "rows": 256506,
+   "pairs": 15318,
+   "ties": 401,
+   "events": 32,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_pos_math_stats.parquet"
+  },
+  "med_econ": {
+   "field": "econ",
+   "cut_spec": "med",
+   "cut": 0.334,
+   "cut_full": 0.33404650205120173,
+   "rows": 393007,
+   "pairs": 23758,
+   "ties": 1074,
+   "events": 86,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_med_econ.parquet"
+  },
+  "med_chemistry": {
+   "field": "chemistry",
+   "cut_spec": "med",
+   "cut": 0.3388,
+   "cut_full": 0.338776171207428,
+   "rows": 39242,
+   "pairs": 2466,
+   "ties": 266,
+   "events": 33,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_med_chemistry.parquet"
+  },
+  "med_math_stats": {
+   "field": "math_stats",
+   "cut_spec": "med",
+   "cut": 0.0897,
+   "cut_full": 0.08974236053931156,
+   "rows": 46010,
+   "pairs": 2770,
+   "ties": 106,
+   "events": 31,
+   "frame": "$TMPDIR/sar_afar_ctl/cuts/p3_afar_med_math_stats.parquet"
+  },
+  "med_vs_lb_econ": "EQUAL",
+  "med_vs_lb_chemistry": "EQUAL",
+  "med_vs_lb_math_stats": "EQUAL"
+ },
+ "control": {
+  "p3_afar_econ.parquet": "EQUAL",
+  "p3_afar_pos_econ.parquet": "EQUAL",
+  "p3_afar_med_econ.parquet": "EQUAL",
+  "p3_afar_chemistry.parquet": "EQUAL",
+  "p3_afar_pos_chemistry.parquet": "EQUAL",
+  "p3_afar_med_chemistry.parquet": "EQUAL",
+  "p3_afar_math_stats.parquet": "EQUAL",
+  "p3_afar_pos_math_stats.parquet": "EQUAL",
+  "p3_afar_med_math_stats.parquet": "EQUAL",
+  "p3_afar_counts.csv": {
+   "equal": true,
+   "rows_got": 15,
+   "rows_expected": 15,
+   "first_diff": null
+  },
+  "p3_afar_tau_profile.csv": {
+   "equal": true,
+   "rows_got": 156,
+   "rows_expected": 156,
+   "first_diff": null
+  },
+  "p3_afar_counts_by_spec.csv": {
+   "equal": true,
+   "rows_got": 6,
+   "rows_expected": 6,
+   "first_diff": null
+  }
+ },
+ "stops": [],
+ "mode": "control (2026-08-28 inputs)",
+ "input_dirs": {
+  "econ": "<scratch>/afar_ctl_econ",
+  "chemistry": "$TMPDIR/sar_afar_ctl/control_inputs",
+  "math_stats": "$TMPDIR/sar_afar_ctl/control_inputs"
+ },
+ "total_secs": 9.7,
+ "outputs": {
+  "p3_afar_counts.csv": "08e1210572a058e78b1ff571f0c0660a71d15df6364454ac942762d64c80dd6e",
+  "p3_afar_tau_profile.csv": "c3b2533e4fd122bc0e92812237eb1acafa7a2d8052f93bb83756141d0ac8c4ea",
+  "p3_afar_econ.parquet": "b10219691afc791eac9541e13c4a51937f67b8f08c5a79ef889333b7ef841dc4",
+  "p3_afar_chemistry.parquet": "3b8fceb199b87d8bb5321b19fdd2febf04d90b5308e76c505bb691d792c58b02",
+  "p3_afar_math_stats.parquet": "4294bac5d7286d1475f84bc03ca499d7b416475fc24f10daed5ec2d18f28d994",
+  "p3_afar_counts_by_spec.csv": "491832be4f26f4448c9fa04ba42133f3e092ac34d80850f8a84ec1f45442bd53",
+  "p3_afar_pos_econ.parquet": "163a5095be9d005ea8965097208daedfe85e83f4ec4a7a1808990d042ff023ed",
+  "p3_afar_med_econ.parquet": "26587646e938823b1563b6e9e8b8e83c0e7b2f4a7ee195a159b2c99983939c24",
+  "p3_afar_pos_chemistry.parquet": "ab8d7b14a155516bf53306a9154cf896b0fc0e5bc84e51190fdb7757d90646cd",
+  "p3_afar_med_chemistry.parquet": "84b3beabeef10b8cb4d9a7a27b385b37bf7f53fffb88ffb4e4749fcfa613989d",
+  "p3_afar_pos_math_stats.parquet": "dd149a8959594e8bc4fd783e9bdbc5e959e1d853ad87d06582dd8116f4df322d",
+  "p3_afar_med_math_stats.parquet": "b011de3ab28dac9c3dc1980d200ec33bce289c3ac3b129aa0792bb201c61ce56"
+ }
+}

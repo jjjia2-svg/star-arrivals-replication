@@ -1,0 +1,31 @@
+{
+ "canon": "M",
+ "prefix": {
+  "cal": "cal",
+  "cal_intermediates": "cal_intermediates",
+  "expected": "expected",
+  "frames": "frames",
+  "paper_inputs": "paper_inputs",
+  "raw_verified": "raw_verified"
+ },
+ "schema": "sar.r1.canon.v1",
+ "switches": {
+  "add_backs": true,
+  "agg_missing": true,
+  "calls": true,
+  "chemmath_edges": true,
+  "departure_ledger": false,
+  "dose_excludes": true,
+  "dose_mode": true,
+  "label_fix": true,
+  "network_freeze": true,
+  "new_stars": true,
+  "own_field_rank": true,
+  "p05_label_fix": true,
+  "p_full_precision": true,
+  "patch_raw": true,
+  "redates": true,
+  "rosters": true,
+  "verdict_source": true
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "rostermerge",
+  "instance_type": "m6i.large",
+  "price_hr": 0.096,
+  "est_min": 15,
+  "hard_min": 60,
+  "root_gb": 30,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "required_dests": [
+    "/work/match/"
+  ],
+  "data_sync": [],
+  "copy_from_tip": [],
+  "steps": [
+    "I=\"$REPO_DIR/data/cal2026-10r1/inputs\"; \"$PY\" \"$REPO_DIR/tools/r1_roster_merge.py\" --spells-dir \"$I/p3_roster/spells\" --matches /work/match/matches.csv --checks-dir \"$I/p3_roster/id_checks\" --overrides \"$I/roster_overrides_r1.csv\" --collect-dir \"$I/p3_roster/collect\" --gapfill-dir \"$I/p3_roster/gapfill\" --base-chem \"$REPO_DIR/data/raw_verified/roster_gold_chemistry.parquet\" --base-math \"$REPO_DIR/data/raw_verified/roster_gold_math_stats.parquet\" --base-econ \"$REPO_DIR/data/cal2026-10/roster_econ_verified_2026-10.parquet\" --out /work/out",
+    "I=\"$REPO_DIR/data/cal2026-10r1/inputs\"; \"$PY\" \"$REPO_DIR/tools/r1_roster_merge.py\" --base-variant incfel --spells-dir \"$I/p3_roster/spells\" --matches /work/match/matches.csv --checks-dir \"$I/p3_roster/id_checks\" --overrides \"$I/roster_overrides_r1.csv\" --collect-dir \"$I/p3_roster/collect\" --gapfill-dir \"$I/p3_roster/gapfill\" --base-chem \"$REPO_DIR/data/raw_verified/incfel/roster_gold_chemistry.parquet\" --base-math \"$REPO_DIR/data/raw_verified/incfel/roster_gold_math_stats.parquet\" --fnfix-chem \"$REPO_DIR/data/raw_verified/roster_gold_chemistry.parquet\" --fnfix-math \"$REPO_DIR/data/raw_verified/roster_gold_math_stats.parquet\" --out /work/out"
+  ]
+}

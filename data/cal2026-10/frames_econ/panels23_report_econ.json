@@ -1,0 +1,18 @@
+{
+ "works_persons": 884,
+ "panel2": {
+  "rows": 111448,
+  "relationships": 6632,
+  "first_ties": 197,
+  "being_excluded": 11,
+  "self_excluded": 0
+ },
+ "panel3": {
+  "rows": 4349964,
+  "pairs": 260332,
+  "events": 113,
+  "first_ties_ex_star": 7964,
+  "first_ties_raw": 8012,
+  "being_excluded": 2869
+ }
+}

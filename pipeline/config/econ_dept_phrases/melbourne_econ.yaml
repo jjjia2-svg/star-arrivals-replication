@@ -1,0 +1,12 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Melbourne
+  word_boundary: false
+dept_key: melbourne_econ
+exclude_tokens: []
+openalex_inst_id: I165779595
+phrases:
+- Department of Economics
+- Melbourne Institute of Applied Economic and Social Research
+- 'Melbourne Institute: Applied Economic & Social Research'
+window_chars: 80

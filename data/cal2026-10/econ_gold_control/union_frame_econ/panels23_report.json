@@ -1,0 +1,85 @@
+{
+ "field": "econ",
+ "roster_clean_variant": "none",
+ "panel3_mode": "slim",
+ "window": {
+  "PRE": 6,
+  "POST": 10
+ },
+ "caliber": "Ported statement by statement from econ v9 10_build_panels23.py (risk-set drop = ft < arrival-PRE)",
+ "inputs": {
+  "relationships": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/fnfix/union_frame_econ/relationships.csv",
+  "ledger_signed": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/events_econ_fnfix_2026-08-10.csv",
+  "ledger_base_fallback": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/events_econ_fnfixbase_2026-08-10.csv",
+  "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+  "edges": "<openalex_extraction>/derived/u1_edges_full_2026-07-05/authorship_edges/**/*.parquet",
+  "star_supplement": "<scratch>/econ_gold_ctl_run3/shadow/v2_output/multidisc_gold_2026-08-10/data/edges_supplement_fnfix.jsonl"
+ },
+ "population": {
+  "rel_rows": 9345,
+  "persons": 880,
+  "events": 116,
+  "arrival_fallback_events": 0
+ },
+ "alias": {
+  "bares": 941,
+  "alias_rows": 1485,
+  "bares_mapped_to_person_map": 926,
+  "canonical_collapse_pairs": 32
+ },
+ "works": {
+  "rows_ssd": 67536,
+  "rows_supplement_bare_match": 24208,
+  "supplement_alias_only_NOT_added": 554,
+  "rows_union": 76158,
+  "persons_with_works": 940,
+  "stars_without_any_work": []
+ },
+ "panel2": {
+  "rows": 156614,
+  "relationships": 9326,
+  "persons": 880,
+  "events": 116,
+  "first_ties": 339,
+  "first_ties_pre_arrival": 26,
+  "first_ties_post_arrival": 313,
+  "risk_set_drops": {
+   "being_pre_window_cowrite(ft<arrival-6)": 19,
+   "self_canonical": 0
+  },
+  "self_check": {
+   "rows_after_first_tie": 0,
+   "rels_with_multiple_ties": 0
+  },
+  "file": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/becoming_none.csv",
+  "file_bytes": 9857463
+ },
+ "panel3": {
+  "mode": "slim",
+  "rows": 8878938,
+  "pairs": 528192,
+  "events": 116,
+  "members_total_event_person": 9345,
+  "pairs_before_risk_set_drop": 532455,
+  "risk_set_drops": {
+   "being_pre_window_cowrite(ft<arrival-6)": 4263
+  },
+  "first_ties_ex_star": 11554,
+  "first_ties_ex_star_pre_arrival": 4344,
+  "first_ties_ex_star_post_arrival": 7210,
+  "files": {
+   "pairs_slim_parquet": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/pairs_slim_none.parquet",
+   "pairs_slim_csv": "<scratch>/econ_gold_ctl_run3/frames/panels/multidisc_gold_2026-08-10/data/fnfix/panels23_econ_gold/pairs_slim_none.csv"
+  },
+  "file_bytes": {
+   "pairs_slim_parquet": 8941932,
+   "pairs_slim_csv": 140193277
+  }
+ },
+ "baseline_rate_audit": {
+  "panel2_pre_arrival_first_ties": 26,
+  "panel3_pre_arrival_first_ties_ex_star": 4344,
+  "verdict": "PASS",
+  "failures": []
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "instance_id": "i-006982d9ee67f63ea",
+ "instance_type": "r6i.16xlarge",
+ "region": "us-east-1",
+ "az": "us-east-1d",
+ "market": "on-demand",
+ "image_id": "ami-052355af2a014bd2c",
+ "launch_time_utc": "2026-09-22T16:50:08Z",
+ "rate_usd_per_h": 4.032,
+ "rate_source": "A5 in cloudkit.py: data/cal2026-08-28/cloud/launch_record.json (rate_usd_per_h 4.032) and pipeline/aws/launch_p3_dcdh.sh:39 ($4.03/h); plan 2026-09-22 §5 says $4.03/h",
+ "terminate_time_utc": "2026-09-22T18:22:24Z",
+ "termination_state": "terminated",
+ "billed_minutes": 92.3,
+ "cost_usd_actual": 6.2
+}

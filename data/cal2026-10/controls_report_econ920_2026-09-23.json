@@ -1,0 +1,1751 @@
+{
+ "generated": "2026-09-23T02:40:10",
+ "authority": "The 2026-09-22 input specification, D1-D5 (restricted archive).",
+ "task": "cal2026-10 economics through the canonical econ chain (econ920)",
+ "preconditions": {
+  "legacy_pins": {
+   "econ_fnfix_2026-08-15/data/network_frame_fnfix.csv": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+   "econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv": "dc9817f2758bfa1e880160960bde97148db01e419e3217ec67cb2d164b36fb60",
+   "econ_fnfix_2026-08-15/data/relationships.csv": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+   "econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv": "c7f7b870bcdc32264ce31bc80238082ae6cc16459c0ed57bcaa629e0cff34882",
+   "econ_fnfix_2026-08-15/data/new_events_econ.csv": "a17a61bec22ebac9a14dfd94c1f2b72b30b9cf681f75d7d26187d2767725ff25",
+   "econ_fnfix_2026-08-15/u4_aug/star_set/star_set.parquet": "b8a73d89e1416353b6963e2c802a3c47353582c458b21e0895d0f6ea5f3a61fc",
+   "econ_fnfix_2026-08-15/code/00_build_frame_econ920.py": "233485392b8e9ca7c17e3f5b72c7a66c347ef3b60aefdf81c50699f740dda4c3"
+  },
+  "roster_920_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+  "frozen_frames": {
+   "p1_frame_econ.csv": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+   "p1_frame_econ_old79.csv": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+   "p1_frame_econ_new37.csv": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+   "p2_becoming_econ.csv": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+   "p3_slim_econ.parquet": "bbefadf6e42a7957d1699f345d828cd6ad1f36cb2223beab52487dde841d854d",
+   "p3_slim_ev_econ.parquet": "19db54baaeb2fb6b8968eb243bf9e77c871654b36166ca6ce5dd488db4f9ee0a",
+   "p1_events_ledger_econ.csv": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd"
+  },
+  "verified_pool": {
+   "excluded_persons.csv": "6066b969b4243f5e8890768ba5212c37958c795dbb08405ab3e4485ff3afa43f",
+   "frames/p1_frame_econ_verified.csv": "eece914f549c4b2b8e3a8d06cc6b6e00a4b0e0e9f79cb00d37cb9c95ab28bcae",
+   "frames/p2_becoming_econ_verified.csv": "d464f1fa860605c971c0081fce045f805ea30b12027b42f26351874a62d6e7ea",
+   "estimates/P1ver_econ.json": "270681f4e5b9a04313b938e8dee5565261ba8a394bfad89145de04a84d6e9501",
+   "estimates/P2ver_econ.json": "ae3a81212db7ac9e4cbe2833666acaf689dd36942d8791744bc0a218c4e33a64"
+  },
+  "october_inputs": {
+   "data/cal2026-10/events_econ_cal2026-10.csv": "509e4955cdce5ea289829689bdbc193c0ca49a732420a3437301d7191267cc64",
+   "data/cal2026-10/roster_econ_verified_2026-10.parquet": "3cd73f0e64cd227d0b7975cea2c6edc2e191583946561f93a509303fd7b2d0c5",
+   "data/cal2026-10/edges_supplement_star_id_corrections_2026-10.jsonl": "80e217eec2816266dd877314fdf353d8f016f1b5986456e29bb660c70f94462d",
+   "data/cal2026-10/star_id_corrections_2026-10.csv": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe",
+   "data/cal2026-10/restake_econ11_aug_2026-10.csv": "fc4f7424070d12b7ac7d6564715ca456ab59cd14b66600628048d255c4c342bd",
+   "data/cal2026-10/events_chemistry_cal2026-10.csv": "7f8d75e50ad0c2dfd75ae069466d7962f672b53a4562fb76e03f8e4458f8edaa",
+   "data/cal2026-10/events_math_stats_cal2026-10.csv": "c25da2173ed7b03ea3ae8f44aa91e0fdbeb5a1666599d9ccc9325fd37cc397e7"
+  },
+  "id_correction": {
+   "events": {
+    "A5090515599:2009": "A5091326353:2009"
+   },
+   "stars": {
+    "A5090515599": "A5091326353"
+   },
+   "table": "data/cal2026-10/star_id_corrections_2026-10.csv",
+   "sha256": "ef6629df08346f90c13ce1bf6a51f9c961c68665edced7a329b353d6cee45bbe"
+  },
+  "events": {
+   "october": 113,
+   "cal2026-08-28": 116,
+   "removed_old_events": [
+    "A5041849660:2003",
+    "A5102739182:2010",
+    "A5110738002:2009"
+   ],
+   "regenerated": {
+    "A5090515599:2009": "A5091326353:2009"
+   },
+   "new_star_removed_before_the_ledger_stage": [
+    "A5044432173:2006"
+   ]
+  },
+  "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+  "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a"
+ },
+ "controls": {
+  "c1a": {
+   "inputs": {
+    "old_frame": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06"
+    },
+    "roster": {
+     "path": "<legacy>/v2_output/econ_roster_verify_2026-08-09/roster_clean_11school_verified.parquet",
+     "sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6"
+    },
+    "ledger": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+     "sha256": "c7f7b870bcdc32264ce31bc80238082ae6cc16459c0ed57bcaa629e0cff34882"
+    },
+    "star_set": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/u4_aug/star_set/star_set.parquet",
+     "sha256": "b8a73d89e1416353b6963e2c802a3c47353582c458b21e0895d0f6ea5f3a61fc"
+    },
+    "sup_fnfix": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/edges_supplement_fnfix.jsonl",
+     "sha256": "8d03564c714c0eac02222c5f0ecc0fefb3641a4b034b142185c780d8dc57040a"
+    },
+    "new_events": {
+     "path": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/new_events_econ.csv",
+     "sha256": "a17a61bec22ebac9a14dfd94c1f2b72b30b9cf681f75d7d26187d2767725ff25"
+    }
+   },
+   "runs": [
+    {
+     "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+     "config": "<scratch>/econ920_run1/c1a/run1/config_econ920.json",
+     "secs": 18.6,
+     "exit": 0,
+     "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "log": "<scratch>/econ920_run1/c1a/run1/union.log",
+     "report": {
+      "relationships": {
+       "dept": 4690,
+       "network_old": 6844,
+       "both": 679,
+       "dept_only_new": 4011,
+       "union": 10855,
+       "v9_drop_self_alias": 1,
+       "v9_drop_star_prearrival": 31,
+       "v9_drop_alias_dup": 59,
+       "v9_dropped_examples": {
+        "self": [
+         [
+          "A5038387911",
+          "A5001177483:2023"
+         ]
+        ],
+        "prearrival": [
+         [
+          "A5044501609",
+          "A5087653408:2019"
+         ],
+         [
+          "A5044501609",
+          "A5063040920:2009"
+         ],
+         [
+          "A5017376589",
+          "A5056114255:2011"
+         ],
+         [
+          "A5044501609",
+          "A5075360079:2018"
+         ],
+         [
+          "A5017376589",
+          "A5008855963:2011"
+         ],
+         [
+          "A5044501609",
+          "A5105828272:2011"
+         ]
+        ],
+        "alias_dup": [
+         [
+          "A5046020567",
+          "A5007734019:2016"
+         ],
+         [
+          "A5046020567",
+          "A5076526695:2018"
+         ],
+         [
+          "A5059521360",
+          "A5022446221:2020"
+         ],
+         [
+          "A5059521360",
+          "A5029151069:2019"
+         ],
+         [
+          "A5059521360",
+          "A5069424866:2023"
+         ],
+         [
+          "A5059521360",
+          "A5087235620:2016"
+         ]
+        ]
+       }
+      },
+      "alias": {
+       "persons": 1105,
+       "author_rows": 1903,
+       "mapped_persons": 1090,
+       "selfrows_unmapped": 15,
+       "multi_alias_persons": 270
+      },
+      "need_outcomes": 108,
+      "outcome_src": {
+       "api_persons": 105,
+       "edges_fallback_persons": 3
+      },
+      "sup_fallback_stars": [],
+      "api_only_pids": [
+       "A5006625214",
+       "A5027786961",
+       "A5032378120",
+       "A5049629760",
+       "A5050120204",
+       "A5054240727",
+       "A5065343528",
+       "A5090637418",
+       "A5100436731"
+      ],
+      "G_SUM": {
+       "total": 119405,
+       "old": 75284,
+       "new": 44121,
+       "ok": true
+      },
+      "frame": {
+       "rows": 119405,
+       "relationships": 10855,
+       "persons": 1045,
+       "events": 117,
+       "by_channel": {
+        "network": 67815,
+        "dept_only": 44121,
+        "both": 7469
+       },
+       "dose_null_new_rows": 0,
+       "age_gap_null_new_rows": 0
+      },
+      "GATE": "PASS",
+      "dose_override_new_rows": {
+       "rows": 26114,
+       "overridden": 26114,
+       "note": "Production-library dose is recomputed with the supplemented star edges."
+      },
+      "G_DOSE": {
+       "n": 200,
+       "missing_side": 0,
+       "max_abs_diff": 0.0018986229421242284,
+       "share_exact_1e-9": 0.905
+      },
+      "G_ROW": {
+       "sampled_both": 60,
+       "mismatches": 0,
+       "dose_tolerated_le_0.01": 44,
+       "fill_divergence": 46
+      }
+     },
+     "OUT_FRAME": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+      "lines": 119406
+     },
+     "OUT_REPORT": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/build_report.json",
+      "sha256": "791c67f176d7c8f8d4b02840cac635915e1df22e9438e8bee171a001d6ef1564",
+      "lines": 391
+     },
+     "OUT_REL": {
+      "path": "<scratch>/econ920_run1/c1a/run1/data/relationships.csv",
+      "sha256": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+      "lines": 10856
+     },
+     "frame_byte_equal": false,
+     "relationships_byte_equal": true
+    },
+    {
+     "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+     "config": "<scratch>/econ920_run1/c1a/run2/config_econ920.json",
+     "secs": 14.4,
+     "exit": 0,
+     "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+     "log": "<scratch>/econ920_run1/c1a/run2/union.log",
+     "report": {
+      "relationships": {
+       "dept": 4690,
+       "network_old": 6844,
+       "both": 679,
+       "dept_only_new": 4011,
+       "union": 10855,
+       "v9_drop_self_alias": 1,
+       "v9_drop_star_prearrival": 31,
+       "v9_drop_alias_dup": 59,
+       "v9_dropped_examples": {
+        "self": [
+         [
+          "A5038387911",
+          "A5001177483:2023"
+         ]
+        ],
+        "prearrival": [
+         [
+          "A5044501609",
+          "A5087653408:2019"
+         ],
+         [
+          "A5044501609",
+          "A5063040920:2009"
+         ],
+         [
+          "A5017376589",
+          "A5056114255:2011"
+         ],
+         [
+          "A5044501609",
+          "A5075360079:2018"
+         ],
+         [
+          "A5017376589",
+          "A5008855963:2011"
+         ],
+         [
+          "A5044501609",
+          "A5105828272:2011"
+         ]
+        ],
+        "alias_dup": [
+         [
+          "A5046020567",
+          "A5007734019:2016"
+         ],
+         [
+          "A5046020567",
+          "A5076526695:2018"
+         ],
+         [
+          "A5059521360",
+          "A5022446221:2020"
+         ],
+         [
+          "A5059521360",
+          "A5029151069:2019"
+         ],
+         [
+          "A5059521360",
+          "A5069424866:2023"
+         ],
+         [
+          "A5059521360",
+          "A5087235620:2016"
+         ]
+        ]
+       }
+      },
+      "alias": {
+       "persons": 1105,
+       "author_rows": 1903,
+       "mapped_persons": 1090,
+       "selfrows_unmapped": 15,
+       "multi_alias_persons": 270
+      },
+      "need_outcomes": 108,
+      "outcome_src": {
+       "api_persons": 105,
+       "edges_fallback_persons": 3
+      },
+      "sup_fallback_stars": [],
+      "api_only_pids": [
+       "A5006625214",
+       "A5027786961",
+       "A5032378120",
+       "A5049629760",
+       "A5050120204",
+       "A5054240727",
+       "A5065343528",
+       "A5090637418",
+       "A5100436731"
+      ],
+      "G_SUM": {
+       "total": 119405,
+       "old": 75284,
+       "new": 44121,
+       "ok": true
+      },
+      "frame": {
+       "rows": 119405,
+       "relationships": 10855,
+       "persons": 1045,
+       "events": 117,
+       "by_channel": {
+        "network": 67815,
+        "dept_only": 44121,
+        "both": 7469
+       },
+       "dose_null_new_rows": 0,
+       "age_gap_null_new_rows": 0
+      },
+      "GATE": "PASS",
+      "dose_override_new_rows": {
+       "rows": 26114,
+       "overridden": 26114,
+       "note": "Production-library dose is recomputed with the supplemented star edges."
+      },
+      "G_DOSE": {
+       "n": 200,
+       "missing_side": 0,
+       "max_abs_diff": 0.0018986229421242284,
+       "share_exact_1e-9": 0.905
+      },
+      "G_ROW": {
+       "sampled_both": 60,
+       "mismatches": 0,
+       "dose_tolerated_le_0.01": 44,
+       "fill_divergence": 46
+      }
+     },
+     "OUT_FRAME": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "123f41e16a4abb9614fc9be18187afb1d9d5dec14b1ea400e2ca2d8e6cade2bd",
+      "lines": 119406
+     },
+     "OUT_REPORT": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/build_report.json",
+      "sha256": "791c67f176d7c8f8d4b02840cac635915e1df22e9438e8bee171a001d6ef1564",
+      "lines": 391
+     },
+     "OUT_REL": {
+      "path": "<scratch>/econ920_run1/c1a/run2/data/relationships.csv",
+      "sha256": "4f3c7278b8a231397d841a8c63464f4446cdef6878d144fd14f17a7168748373",
+      "lines": 10856
+     },
+     "frame_byte_equal": false,
+     "relationships_byte_equal": true
+    }
+   ],
+   "determinism": {
+    "two_runs_byte_equal": false,
+    "run_vs_run": {
+     "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+     "reference": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "reference_sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+     "new": "<scratch>/econ920_run1/c1a/run2/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "new_sha256": "123f41e16a4abb9614fc9be18187afb1d9d5dec14b1ea400e2ca2d8e6cade2bd",
+     "rows_reference": 119405,
+     "rows_new": 119405,
+     "rows_added": 0,
+     "rows_removed": 0,
+     "rows_identical": 119402,
+     "rows_modified": 3,
+     "modified_by_columns": {
+      "fwci_frac,fwci_frac_ex_star": 2,
+      "fwci_frac": 1
+     },
+     "worst_ulp_by_column": {
+      "fwci_frac": 1,
+      "fwci_frac_ex_star": 1
+     },
+     "non_float_differences_by_column": {},
+     "samples_modified": [
+      {
+       "key": [
+        "P_A5116851906",
+        "A5069424866:2023",
+        "2020"
+       ],
+       "cols": [
+        "fwci_frac",
+        "fwci_frac_ex_star"
+       ],
+       "ulps": {
+        "fwci_frac": 1,
+        "fwci_frac_ex_star": 1
+       },
+       "frozen": {
+        "fwci_frac": "5.6833857142857145",
+        "fwci_frac_ex_star": "5.6833857142857145"
+       },
+       "new": {
+        "fwci_frac": "5.683385714285714",
+        "fwci_frac_ex_star": "5.683385714285714"
+       }
+      },
+      {
+       "key": [
+        "P_A5002969626",
+        "A5086581525:2017",
+        "2017"
+       ],
+       "cols": [
+        "fwci_frac"
+       ],
+       "ulps": {
+        "fwci_frac": 1
+       },
+       "frozen": {
+        "fwci_frac": "29.482949999999995"
+       },
+       "new": {
+        "fwci_frac": "29.48295"
+       }
+      },
+      {
+       "key": [
+        "P_A5116851906",
+        "A5069424866:2023",
+        "2019"
+       ],
+       "cols": [
+        "fwci_frac",
+        "fwci_frac_ex_star"
+       ],
+       "ulps": {
+        "fwci_frac": 1,
+        "fwci_frac_ex_star": 1
+       },
+       "frozen": {
+        "fwci_frac": "23.42309666666667",
+        "fwci_frac_ex_star": "23.42309666666667"
+       },
+       "new": {
+        "fwci_frac": "23.423096666666666",
+        "fwci_frac_ex_star": "23.423096666666666"
+       }
+      }
+     ],
+     "samples_added": [],
+     "samples_removed": []
+    }
+   },
+   "frame": {
+    "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+    "reference": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "reference_sha256": "dc9817f2758bfa1e880160960bde97148db01e419e3217ec67cb2d164b36fb60",
+    "new": "<scratch>/econ920_run1/c1a/run1/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "new_sha256": "981c5e1e49b66d71892fc65fd7b12a3ba7973dd961a6e6879b81de19fe0d7a99",
+    "rows_reference": 119405,
+    "rows_new": 119405,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "rows_identical": 119401,
+    "rows_modified": 4,
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "non_float_differences_by_column": {},
+    "samples_modified": [
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2020"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "5.683385714285714",
+       "fwci_frac_ex_star": "5.683385714285714"
+      },
+      "new": {
+       "fwci_frac": "5.6833857142857145",
+       "fwci_frac_ex_star": "5.6833857142857145"
+      }
+     },
+     {
+      "key": [
+       "P_A5002969626",
+       "A5086581525:2017",
+       "2017"
+      ],
+      "cols": [
+       "fwci_frac"
+      ],
+      "ulps": {
+       "fwci_frac": 2
+      },
+      "frozen": {
+       "fwci_frac": "29.482950000000002"
+      },
+      "new": {
+       "fwci_frac": "29.482949999999995"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2019"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 2,
+       "fwci_frac_ex_star": 2
+      },
+      "frozen": {
+       "fwci_frac": "23.423096666666662",
+       "fwci_frac_ex_star": "23.423096666666662"
+      },
+      "new": {
+       "fwci_frac": "23.42309666666667",
+       "fwci_frac_ex_star": "23.42309666666667"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2021"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "22.726746666666664",
+       "fwci_frac_ex_star": "22.726746666666664"
+      },
+      "new": {
+       "fwci_frac": "22.726746666666667",
+       "fwci_frac_ex_star": "22.726746666666667"
+      }
+     }
+    ],
+    "samples_added": [],
+    "samples_removed": []
+   },
+   "relationships": "BYTE_EQUAL",
+   "verdict": "CLEAR"
+  },
+  "c1b": {
+   "shadow": {
+    "new_events_removed": [
+     "A5044432173"
+    ],
+    "prodlib_frame_rows_removed": {
+     "A5044432173:2006": 704
+    }
+   },
+   "ledger_stage": {
+    "run_dir": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15",
+    "secs": 0.2,
+    "ledger": {
+     "path": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15/data/event_ledger_fnfix.csv",
+     "sha256": "cd49cee27144e0fbe8e4872bfc0b9cbf65d221d4767671dc1782669d4b063cdd",
+     "byte_equal_to_data_frames_p1_events_ledger_econ": true
+    },
+    "network_frame": {
+     "path": "<scratch>/econ920_run1/c1b_ledger/frames/ledger/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "d8267f4cb6821a5f6729ef803ceedd304a388e0543350343b7472ec062a759a7",
+     "vs_frozen_minus_A5044432173": {
+      "closed": true,
+      "rows_removed": 704,
+      "rows_kept": 74580
+     }
+    },
+    "ok": true
+   },
+   "filter_c": {
+    "input": {
+     "frame": "<legacy>/v2_output/econ_fnfix_2026-08-15/data/network_frame_fnfix.csv",
+     "sha256": "58b3cdab5cfecdf754e9a5134cb6f1134392d6986e5f59b049e81869f700fd06",
+     "rows": 75284
+    },
+    "rows_kept_frozen": 74580,
+    "rows_dropped_event_not_in_set": {
+     "A5044432173:2006": {
+      "rows": 704,
+      "persons": 64
+     }
+    },
+    "rows_dropped_regenerated_old_id": {},
+    "rows_spliced": {},
+    "output": {
+     "frame": "<scratch>/econ920_run1/c1b/network_frame_minus_A5044432173.csv",
+     "sha256": "d8267f4cb6821a5f6729ef803ceedd304a388e0543350343b7472ec062a759a7",
+     "rows": 74580
+    }
+   },
+   "union": {
+    "clone_sha256": "cc68f230512f25adf92523966475d3ff319ccd39e1a8df98cb83f00e3fd7032a",
+    "config": "<scratch>/econ920_run1/c1b/config_econ920.json",
+    "secs": 16.2,
+    "exit": 0,
+    "dose_module": "identity.dose <- pipeline/units/u0_foundation/src/identity/dose.py",
+    "log": "<scratch>/econ920_run1/c1b/union.log",
+    "report": {
+     "relationships": {
+      "dept": 4652,
+      "network_old": 6780,
+      "both": 669,
+      "dept_only_new": 3983,
+      "union": 10763,
+      "v9_drop_self_alias": 1,
+      "v9_drop_star_prearrival": 31,
+      "v9_drop_alias_dup": 58,
+      "v9_dropped_examples": {
+       "self": [
+        [
+         "A5038387911",
+         "A5001177483:2023"
+        ]
+       ],
+       "prearrival": [
+        [
+         "A5017376589",
+         "A5018518935:2003"
+        ],
+        [
+         "A5044501609",
+         "A5015268530:2021"
+        ],
+        [
+         "A5017376589",
+         "A5071656006:2000"
+        ],
+        [
+         "A5044501609",
+         "A5105828272:2011"
+        ],
+        [
+         "A5082663721",
+         "A5070264657:2009"
+        ],
+        [
+         "A5044501609",
+         "A5063040920:2009"
+        ]
+       ],
+       "alias_dup": [
+        [
+         "A5046020567",
+         "A5007734019:2016"
+        ],
+        [
+         "A5046020567",
+         "A5076526695:2018"
+        ],
+        [
+         "A5059521360",
+         "A5022446221:2020"
+        ],
+        [
+         "A5059521360",
+         "A5029151069:2019"
+        ],
+        [
+         "A5059521360",
+         "A5069424866:2023"
+        ],
+        [
+         "A5059521360",
+         "A5087235620:2016"
+        ]
+       ]
+      }
+     },
+     "alias": {
+      "persons": 1103,
+      "author_rows": 1901,
+      "mapped_persons": 1088,
+      "selfrows_unmapped": 15,
+      "multi_alias_persons": 270
+     },
+     "need_outcomes": 108,
+     "outcome_src": {
+      "api_persons": 105,
+      "edges_fallback_persons": 3
+     },
+     "sup_fallback_stars": [],
+     "api_only_pids": [
+      "A5006625214",
+      "A5027786961",
+      "A5032378120",
+      "A5049629760",
+      "A5050120204",
+      "A5054240727",
+      "A5065343528",
+      "A5090637418",
+      "A5100436731"
+     ],
+     "G_SUM": {
+      "total": 118393,
+      "old": 74580,
+      "new": 43813,
+      "ok": true
+     },
+     "frame": {
+      "rows": 118393,
+      "relationships": 10763,
+      "persons": 1043,
+      "events": 116,
+      "by_channel": {
+       "network": 67221,
+       "dept_only": 43813,
+       "both": 7359
+      },
+      "dose_null_new_rows": 0,
+      "age_gap_null_new_rows": 0
+     },
+     "GATE": "PASS",
+     "dose_override_new_rows": {
+      "rows": 25410,
+      "overridden": 25410,
+      "note": "Production-library dose is recomputed with the supplemented star edges."
+     },
+     "G_DOSE": {
+      "n": 200,
+      "missing_side": 0,
+      "max_abs_diff": 0.0018986229421242284,
+      "share_exact_1e-9": 0.905
+     },
+     "G_ROW": {
+      "sampled_both": 60,
+      "mismatches": 0,
+      "dose_tolerated_le_0.01": 44,
+      "fill_divergence": 22
+     }
+    },
+    "OUT_FRAME": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+     "lines": 118394
+    },
+    "OUT_REPORT": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/build_report.json",
+     "sha256": "0ed74c29d3876d220778f6286485c1399df0dd2eacd6f9eb57e0101e972d1191",
+     "lines": 391
+    },
+    "OUT_REL": {
+     "path": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/relationships.csv",
+     "sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8",
+     "lines": 10764
+    }
+   },
+   "vs_surgery": {
+    "frame_byte_equal": false,
+    "relationships_byte_equal": true,
+    "surgered_frame_sha256": "8acd4a030961e2888c62e91a6af1b85eece5083bd62026e841c95516718116c1",
+    "surgered_relationships_sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8"
+   },
+   "frame": {
+    "verdict": "EQUAL_MODULO_Y_SWAPPED_BY_04",
+    "reference": "<scratch>/econ920_run1/c1b/surgery_reference/pre_y_surgered.csv",
+    "reference_sha256": "8acd4a030961e2888c62e91a6af1b85eece5083bd62026e841c95516718116c1",
+    "new": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+    "new_sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+    "rows_reference": 118393,
+    "rows_new": 118393,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "rows_identical": 118389,
+    "rows_modified": 4,
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "non_float_differences_by_column": {},
+    "samples_modified": [
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2020"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "5.683385714285714",
+       "fwci_frac_ex_star": "5.683385714285714"
+      },
+      "new": {
+       "fwci_frac": "5.6833857142857145",
+       "fwci_frac_ex_star": "5.6833857142857145"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2021"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 1,
+       "fwci_frac_ex_star": 1
+      },
+      "frozen": {
+       "fwci_frac": "22.726746666666664",
+       "fwci_frac_ex_star": "22.726746666666664"
+      },
+      "new": {
+       "fwci_frac": "22.726746666666667",
+       "fwci_frac_ex_star": "22.726746666666667"
+      }
+     },
+     {
+      "key": [
+       "P_A5002969626",
+       "A5086581525:2017",
+       "2017"
+      ],
+      "cols": [
+       "fwci_frac"
+      ],
+      "ulps": {
+       "fwci_frac": 1
+      },
+      "frozen": {
+       "fwci_frac": "29.482950000000002"
+      },
+      "new": {
+       "fwci_frac": "29.48295"
+      }
+     },
+     {
+      "key": [
+       "P_A5116851906",
+       "A5069424866:2023",
+       "2019"
+      ],
+      "cols": [
+       "fwci_frac",
+       "fwci_frac_ex_star"
+      ],
+      "ulps": {
+       "fwci_frac": 2,
+       "fwci_frac_ex_star": 2
+      },
+      "frozen": {
+       "fwci_frac": "23.423096666666662",
+       "fwci_frac_ex_star": "23.423096666666662"
+      },
+      "new": {
+       "fwci_frac": "23.42309666666667",
+       "fwci_frac_ex_star": "23.42309666666667"
+      }
+     }
+    ],
+    "samples_added": [],
+    "samples_removed": []
+   },
+   "relationships": "BYTE_EQUAL",
+   "verdict": "CLEAR",
+   "shadow_entries": 28
+  },
+  "c2": {
+   "chain": {
+    "p1_econ": {
+     "run_dir": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15",
+     "secs": 4.0,
+     "status": "OK",
+     "g_econ_rebuild": {
+      "PASS": true,
+      "C_PC_structural_anchor": {
+       "bad_rows": 0,
+       "examples": [],
+       "pass": true
+      },
+      "C_PC_fnfix_newevent_rows": {
+       "rows_written_from_agg": 66504,
+       "rows_agg_missing_NA": 58,
+       "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+      },
+      "old_value_reproduction_anchor": {
+       "hard_fail_cells": 0,
+       "float32_roundtrip_cells": 138418,
+       "max_relative_deviation": 5.907526619061491e-08,
+       "tolerance": 1e-06,
+       "pass": true,
+       "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+      },
+      "variants": {
+       "unified": {
+        "out": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 87144,
+         "val2na": 221,
+         "na2val": 462,
+         "na2na": 5124,
+         "zero_fill": 7328,
+         "row_na": 18085,
+         "py_missing": 29
+        }
+       },
+       "denomonly": {
+        "out": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 87365,
+         "val2na": 0,
+         "na2val": 1,
+         "na2na": 5585,
+         "zero_fill": 7328,
+         "row_na": 18085,
+         "py_missing": 29
+        }
+       }
+      },
+      "path": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/g_econ_rebuild.json"
+     },
+     "unified_frame_written": "<scratch>/econ920_run1/c2_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv"
+    },
+    "p1_frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+    "split": {
+     "run_dir": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15",
+     "secs": 0.5
+    },
+    "old79": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_old79.csv",
+    "new37": "<scratch>/econ920_run1/c2_split/frames/split/econ_fnfix_2026-08-15/data/analysis_frame_econ_fnfix_new38.csv",
+    "p2_econ": {
+     "run_dir": "<scratch>/econ920_run1/c2_p2/frames/p2-econ/econ_fnfix_2026-08-15",
+     "secs": 23.7
+    },
+    "p2_frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/becoming_unified.csv",
+    "pairs": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/pairs_unified.csv",
+    "panels23_report": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/panels23_report.json",
+    "slim": {
+     "ev": "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet",
+     "noev": "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet",
+     "stats": {
+      "rows": 12108166,
+      "pairs": 719839,
+      "ties": 15235,
+      "events": 116,
+      "produced": {
+       "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet": "328cc2f680adc55fb45f75326e6ff394e336246ccc581ca4c2536f70311eaf83",
+       "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet": "3eb3feaf9bf704d3aeceb29cc6c35f765f4630cea0acbad927a885e9911d9cee"
+      },
+      "noev_columns": [
+       "grp",
+       "year",
+       "y",
+       "D"
+      ]
+     }
+    }
+   },
+   "frames": {
+    "p1_frame_econ.csv": {
+     "sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+     "frozen_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p1_frame_econ_old79.csv": {
+     "sha256": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+     "frozen_sha256": "2a01c6b2de612a0827cbcf30c9645be55cf0f5cfa2aff69dfb9f12f9e24e79a5",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p1_frame_econ_new37.csv": {
+     "sha256": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+     "frozen_sha256": "3effce876bc93f60bfb8fb156af41fd45a9a8d83831ad2e10c48a033371946b1",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p2_becoming_econ.csv": {
+     "sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+     "frozen_sha256": "0534e4adc5d0de6cd0cba24e873fb5dd0e9e3b58f26cf78f631f30edcc53199d",
+     "verdict": "BYTE_EQUAL"
+    },
+    "p3_slim_econ.parquet": {
+     "a": "<scratch>/econ920_run1/c2_slim/p3_slim_econ.parquet",
+     "b": "data/frames/p3_slim_econ.parquet",
+     "mode": "content",
+     "equal": true,
+     "rows_a": 12108166,
+     "rows_b": 12108166,
+     "only_in_a": 0,
+     "only_in_b": 0,
+     "schema_diff": [],
+     "accepted": [],
+     "sha256_a": "",
+     "sha256_b": ""
+    },
+    "p3_slim_ev_econ.parquet": {
+     "a": "<scratch>/econ920_run1/c2_slim/p3_slim_ev_econ.parquet",
+     "b": "data/frames/p3_slim_ev_econ.parquet",
+     "mode": "content",
+     "equal": true,
+     "rows_a": 12108166,
+     "rows_b": 12108166,
+     "only_in_a": 0,
+     "only_in_b": 0,
+     "schema_diff": [],
+     "accepted": [],
+     "sha256_a": "",
+     "sha256_b": ""
+    },
+    "pairs_unified_sha256": "41d9f7e3fd5ae60165589ed9848a4bfb0d2dea80df35a1c87dcc310dc596b7de"
+   },
+   "cells": {
+    "P1_econ_fnfix": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix.json",
+     "expected": "analysis/expected/P1_econ_fnfix.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P1_econ_fnfix_old79": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix_old79.json",
+     "expected": "analysis/expected/P1_econ_fnfix_old79.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P1_econ_fnfix_new37": {
+     "new": "<scratch>/econ920_run1/c2_cells/P1_econ_fnfix_new37.json",
+     "expected": "analysis/expected/P1_econ_fnfix_new37.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P2_econ_fnfix": {
+     "new": "<scratch>/econ920_run1/c2_cells/P2_econ_fnfix.json",
+     "expected": "analysis/expected/P2_econ_fnfix.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    }
+   },
+   "verdict": "CLEAR"
+  },
+  "c3": {
+   "verified_forms": {
+    "roster": "data/raw_verified/roster_econ_verified.parquet",
+    "roster_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+    "roster_authors": 920,
+    "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+    "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+    "id_forms": 970
+   },
+   "exclusion_control_on_frozen_frames": {
+    "expected_162": 162,
+    "rule_on_data_frames_p1_p2": 162,
+    "equal": true,
+    "only_in_rule": [],
+    "only_in_expected": []
+   },
+   "postfilter_a": {
+    "input": {
+     "pre_y": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+     "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+     "rows": 118393,
+     "relationships": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/relationships.csv",
+     "relationships_sha256": "befebe0e40175ada262c28e4ce7bd8d394836c24f0249b36fa1cc5da7f2146e8"
+    },
+    "a_verified_roster": {
+     "input": {
+      "frame": "<scratch>/econ920_run1/shadow_0828/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_dept_p01_econ920_2026-08-13.csv",
+      "sha256": "3c15587e9ee95914e44f003579d09c81b95a230c8b5ac84726c916a3f0c444ad",
+      "rows": 118393
+     },
+     "rows_dropped": 15037,
+     "relations_dropped": 1367,
+     "persons_dropped": 162,
+     "persons_dropped_ids": [
+      "P_A5000129921",
+      "P_A5000195995",
+      "P_A5000248582",
+      "P_A5000261020",
+      "P_A5001034699",
+      "P_A5001689232",
+      "P_A5001701778",
+      "P_A5002921489",
+      "P_A5003065581",
+      "P_A5003503790",
+      "P_A5004088802",
+      "P_A5004337400",
+      "P_A5005195196",
+      "P_A5005221518",
+      "P_A5005424373",
+      "P_A5005506402",
+      "P_A5005591120",
+      "P_A5006064697",
+      "P_A5007086439",
+      "P_A5007696926",
+      "P_A5007934498",
+      "P_A5008667656",
+      "P_A5008921610",
+      "P_A5009126134",
+      "P_A5009676824",
+      "P_A5009685890",
+      "P_A5009986539",
+      "P_A5010518543",
+      "P_A5010717360",
+      "P_A5012746449",
+      "P_A5012774695",
+      "P_A5013214751",
+      "P_A5013583966",
+      "P_A5015052701",
+      "P_A5015809924",
+      "P_A5016230213",
+      "P_A5016659048",
+      "P_A5017214359",
+      "P_A5018043519",
+      "P_A5018588825",
+      "P_A5018982917",
+      "P_A5019358946",
+      "P_A5020852699",
+      "P_A5024266358",
+      "P_A5024398863",
+      "P_A5024990189",
+      "P_A5025340820",
+      "P_A5025359159",
+      "P_A5026228820",
+      "P_A5027138247",
+      "P_A5027155920",
+      "P_A5027685493",
+      "P_A5029088543",
+      "P_A5030040920",
+      "P_A5030346628",
+      "P_A5030823472",
+      "P_A5030919957",
+      "P_A5031621086",
+      "P_A5033118098",
+      "P_A5034076398",
+      "P_A5034647910",
+      "P_A5035801976",
+      "P_A5035818265",
+      "P_A5035998304",
+      "P_A5036193836",
+      "P_A5037426155",
+      "P_A5037530222",
+      "P_A5037962814",
+      "P_A5040191030",
+      "P_A5040485438",
+      "P_A5041227235",
+      "P_A5042115782",
+      "P_A5042616276",
+      "P_A5042802170",
+      "P_A5042828330",
+      "P_A5043275264",
+      "P_A5043335933",
+      "P_A5043678493",
+      "P_A5043876283",
+      "P_A5044343044",
+      "P_A5044706532",
+      "P_A5045605764",
+      "P_A5046551478",
+      "P_A5047138320",
+      "P_A5048519597",
+      "P_A5049010126",
+      "P_A5049060006",
+      "P_A5049848088",
+      "P_A5050357458",
+      "P_A5051284301",
+      "P_A5051613817",
+      "P_A5051703009",
+      "P_A5052068405",
+      "P_A5053325516",
+      "P_A5053497885",
+      "P_A5053509775",
+      "P_A5053765396",
+      "P_A5053798323",
+      "P_A5054485095",
+      "P_A5056551664",
+      "P_A5057072512",
+      "P_A5057137444",
+      "P_A5057148289",
+      "P_A5057459075",
+      "P_A5057608497",
+      "P_A5058872286",
+      "P_A5059507519",
+      "P_A5059989242",
+      "P_A5060589792",
+      "P_A5061335885",
+      "P_A5061523893",
+      "P_A5062089038",
+      "P_A5062522216",
+      "P_A5062895126",
+      "P_A5064512830",
+      "P_A5065344299",
+      "P_A5065572953",
+      "P_A5065659844",
+      "P_A5066605209",
+      "P_A5066605332",
+      "P_A5067812060",
+      "P_A5068470091",
+      "P_A5072051358",
+      "P_A5073251863",
+      "P_A5074137702",
+      "P_A5077362668",
+      "P_A5080866914",
+      "P_A5082598611",
+      "P_A5083522462",
+      "P_A5083945877",
+      "P_A5085271178",
+      "P_A5086095616",
+      "P_A5086151825",
+      "P_A5086296952",
+      "P_A5086505981",
+      "P_A5086655719",
+      "P_A5087413363",
+      "P_A5088881688",
+      "P_A5089364263",
+      "P_A5089745005",
+      "P_A5100386783",
+      "P_A5100413693",
+      "P_A5100681845",
+      "P_A5101496702",
+      "P_A5101596594",
+      "P_A5101684938",
+      "P_A5102447716",
+      "P_A5102819936",
+      "P_A5102902369",
+      "P_A5103122192",
+      "P_A5103196866",
+      "P_A5107479283",
+      "P_A5108225675",
+      "P_A5108867956",
+      "P_A5110074185",
+      "P_A5110468588",
+      "P_A5110954730",
+      "P_A5113440291",
+      "P_A5113577786",
+      "P_A5113845776",
+      "P_A5113969362",
+      "P_A5120638581"
+     ],
+     "output": {
+      "frame": "<scratch>/econ920_run1/c3/postfilter/pre_y_a_verified.csv",
+      "sha256": "9fe7d0f409e50c911bded9a6d56a12fe248ac9b9401eed229431a316a5a4b0dd",
+      "rows": 103356
+     },
+     "forms": {
+      "roster": "data/raw_verified/roster_econ_verified.parquet",
+      "roster_sha256": "ccea616211e42bd1cc56a17660d80aec00b732533369a97566101e5cd51f61c6",
+      "roster_authors": 920,
+      "person_map": "<openalex_extraction>/derived/u2_person_map_11school_2026-07-16/person_map/data.parquet",
+      "person_map_sha256": "3784af4ebee7f25dff1ce747aaae7b2bc8ed28fc31f15a3af921211993f5b6f8",
+      "id_forms": 970
+     }
+    },
+    "b_in_post": null,
+    "dropped_relations": 1367,
+    "dropped_rows_by_channel": {
+     "network": 15037
+    },
+    "relationships_lines_dropped": 1367,
+    "events_left_with_zero_relations": [],
+    "output": {
+     "pre_y": "<scratch>/econ920_run1/c3/postfilter/pre_y_a_verified.csv",
+     "sha256": "9fe7d0f409e50c911bded9a6d56a12fe248ac9b9401eed229431a316a5a4b0dd",
+     "rows": 103356,
+     "relationships": "<scratch>/econ920_run1/c3/postfilter/relationships.csv",
+     "relationships_sha256": "f2664fcb3e528e203c0e92a829054a2ba5e1224d95e1fa1d9f6930449bc27aad",
+     "relationships_lines": 9396
+    },
+    "dropped_persons_equal_the_162": true,
+    "only_dropped_here": [],
+    "expected_not_dropped_here": []
+   },
+   "relationships_vs_c1b": {
+    "closed": true,
+    "rows_removed": 1367,
+    "rows_kept": 9396
+   },
+   "chain": {
+    "p1_econ": {
+     "run_dir": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15",
+     "secs": 3.5,
+     "status": "OK",
+     "g_econ_rebuild": {
+      "PASS": true,
+      "C_PC_structural_anchor": {
+       "bad_rows": 0,
+       "examples": [],
+       "pass": true
+      },
+      "C_PC_fnfix_newevent_rows": {
+       "rows_written_from_agg": 60194,
+       "rows_agg_missing_NA": 58,
+       "note": "New events are excluded from the old-frame reproduction anchor: production-library y/pub_count and frozen U5 output use different sources. All new rows use this script's aggregate values, or NA when no aggregate exists."
+      },
+      "old_value_reproduction_anchor": {
+       "hard_fail_cells": 0,
+       "float32_roundtrip_cells": 107210,
+       "max_relative_deviation": 5.907526619061491e-08,
+       "tolerance": 1e-06,
+       "pass": true,
+       "note": "Recompute on the same machine against the earlier expected values and reproduce y in the 07-31 frame. Relative differences at or below 1e-6 reflect its float32 round trip. A missing-value mismatch or larger difference fails."
+      },
+      "variants": {
+       "unified": {
+        "out": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 75836,
+         "val2na": 221,
+         "na2val": 462,
+         "na2na": 4822,
+         "zero_fill": 7174,
+         "row_na": 14812,
+         "py_missing": 29
+        }
+       },
+       "denomonly": {
+        "out": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_denomonly_fullsnap_2026-08-13.csv",
+        "transition": {
+         "val2val": 76057,
+         "val2na": 0,
+         "na2val": 1,
+         "na2na": 5283,
+         "zero_fill": 7174,
+         "row_na": 14812,
+         "py_missing": 29
+        }
+       }
+      },
+      "path": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/g_econ_rebuild.json"
+     },
+     "unified_frame_written": "<scratch>/econ920_run1/c3_p1/frames/p1-econ/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv"
+    },
+    "p1_frame": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/analysis_frame_econ920_unified_fullsnap_2026-08-13.csv",
+    "p2_econ": {
+     "run_dir": "<scratch>/econ920_run1/c3_p2/frames/p2-econ/econ_fnfix_2026-08-15",
+     "secs": 15.5
+    },
+    "p2_frame": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/becoming_unified.csv",
+    "pairs": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/pairs_unified.csv",
+    "panels23_report": "<scratch>/econ920_run1/shadow_ver/v2_output/econ_fnfix_2026-08-15/data/panels23_report.json"
+   },
+   "frames": {
+    "frames/p1_frame_econ_verified.csv": {
+     "sha256": "eece914f549c4b2b8e3a8d06cc6b6e00a4b0e0e9f79cb00d37cb9c95ab28bcae",
+     "verdict": "BYTE_EQUAL"
+    },
+    "frames/p2_becoming_econ_verified.csv": {
+     "sha256": "d464f1fa860605c971c0081fce045f805ea30b12027b42f26351874a62d6e7ea",
+     "verdict": "BYTE_EQUAL"
+    }
+   },
+   "cells": {
+    "P1ver_econ": {
+     "new": "<scratch>/econ920_run1/c3_cells/P1ver_econ.json",
+     "expected": "data/robustness_2026-09-13_verified_pool/estimates/P1ver_econ.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    },
+    "P2ver_econ": {
+     "new": "<scratch>/econ920_run1/c3_cells/P2ver_econ.json",
+     "expected": "data/robustness_2026-09-13_verified_pool/estimates/P2ver_econ.json",
+     "verdict": "EQUAL",
+     "diffs": []
+    }
+   },
+   "verdict": "CLEAR"
+  }
+ },
+ "measurements": {
+  "gdose_population": {
+   "mode": "MEASUREMENT: DataFrame.sample -> identity; every old relation evaluated",
+   "n": 4470,
+   "missing_side": 0,
+   "share_exact_1e-9": 0.892841163310962,
+   "max_abs_diff": 0.13435585579294373,
+   "n_gt_1e-9": 479,
+   "n_gt_0.01": 34,
+   "n_gt_0.05": 5,
+   "gate_exit": 2,
+   "residuals_gt_0.01": [
+    {
+     "pid": "A5069703593",
+     "event_id": "A5090013218:2015",
+     "frozen_dose": 0.3971333581348657,
+     "recomputed": 0.5314892139278095,
+     "abs_diff": 0.13435585579294373
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5013630114:2008",
+     "frozen_dose": 0.3997635234791834,
+     "recomputed": 0.3264055501003741,
+     "abs_diff": 0.07335797337880934
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5046379417:2006",
+     "frozen_dose": 0.466393244601883,
+     "recomputed": 0.39663017304978226,
+     "abs_diff": 0.06976307155210071
+    },
+    {
+     "pid": "A5050473533",
+     "event_id": "A5018453582:2018",
+     "frozen_dose": 0.3012297424386393,
+     "recomputed": 0.3566681869039141,
+     "abs_diff": 0.055438444465274794
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.1794025447166775,
+     "recomputed": 0.23371274885928206,
+     "abs_diff": 0.05431020414260457
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5022446221:2020",
+     "frozen_dose": 0.206461944161838,
+     "recomputed": 0.25393018190184036,
+     "abs_diff": 0.04746823774000236
+    },
+    {
+     "pid": "A5100413693",
+     "event_id": "A5013630114:2008",
+     "frozen_dose": 0.3285485573120022,
+     "recomputed": 0.3669185084451229,
+     "abs_diff": 0.038369951133120694
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5079006965:2011",
+     "frozen_dose": 0.8022701470485215,
+     "recomputed": 0.7662323063659667,
+     "abs_diff": 0.03603784068255478
+    },
+    {
+     "pid": "A5069703593",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.4150286783196448,
+     "recomputed": 0.4407412773535267,
+     "abs_diff": 0.0257125990338819
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5080057811:2006",
+     "frozen_dose": 0.7339515277674842,
+     "recomputed": 0.7117431568915316,
+     "abs_diff": 0.02220837087595262
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5029151069:2019",
+     "frozen_dose": 0.7101945448297474,
+     "recomputed": 0.7319619045863754,
+     "abs_diff": 0.021767359756628024
+    },
+    {
+     "pid": "A5001622420",
+     "event_id": "A5075360079:2018",
+     "frozen_dose": 0.1312001569666744,
+     "recomputed": 0.11095646380796875,
+     "abs_diff": 0.02024369315870564
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5103238589:2011",
+     "frozen_dose": 0.4276408648141786,
+     "recomputed": 0.4075696393382059,
+     "abs_diff": 0.02007122547597273
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5080033018:2011",
+     "frozen_dose": 0.6964026125782159,
+     "recomputed": 0.6778684488247342,
+     "abs_diff": 0.018534163753481714
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5000292946:2009",
+     "frozen_dose": 0.2358333153182891,
+     "recomputed": 0.21884405476620425,
+     "abs_diff": 0.016989260552084856
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5027077000:2017",
+     "frozen_dose": 0.8721028496007166,
+     "recomputed": 0.8552058086620439,
+     "abs_diff": 0.016897040938672725
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5089150146:2013",
+     "frozen_dose": 0.5065879606638778,
+     "recomputed": 0.49063678958382717,
+     "abs_diff": 0.01595117108005062
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5086206624:2012",
+     "frozen_dose": 0.5392114146900089,
+     "recomputed": 0.5237706583703503,
+     "abs_diff": 0.015440756319658577
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5090013218:2015",
+     "frozen_dose": 0.8321387777032866,
+     "recomputed": 0.8473895994450867,
+     "abs_diff": 0.015250821741800147
+    },
+    {
+     "pid": "A5049848088",
+     "event_id": "A5017376589:2016",
+     "frozen_dose": 0.6419704417114399,
+     "recomputed": 0.6571102808725297,
+     "abs_diff": 0.015139839161089741
+    },
+    {
+     "pid": "A5085183308",
+     "event_id": "A5103238589:2011",
+     "frozen_dose": 0.5652065132287469,
+     "recomputed": 0.5800058938744568,
+     "abs_diff": 0.014799380645709848
+    },
+    {
+     "pid": "A5085183308",
+     "event_id": "A5008470795:2011",
+     "frozen_dose": 0.3537255714710841,
+     "recomputed": 0.3676758840252448,
+     "abs_diff": 0.013950312554160738
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5070264657:2009",
+     "frozen_dose": 0.6437970918278505,
+     "recomputed": 0.656902490925946,
+     "abs_diff": 0.013105399098095494
+    },
+    {
+     "pid": "A5047686844",
+     "event_id": "A5008470795:2011",
+     "frozen_dose": 0.5386517330399262,
+     "recomputed": 0.5257583363384118,
+     "abs_diff": 0.012893396701514348
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5105828272:2011",
+     "frozen_dose": 0.6484369942598012,
+     "recomputed": 0.6610667189586307,
+     "abs_diff": 0.012629724698829503
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5079006965:2011",
+     "frozen_dose": 0.5742683641903055,
+     "recomputed": 0.5864452529135388,
+     "abs_diff": 0.012176888723233303
+    },
+    {
+     "pid": "A5105845982",
+     "event_id": "A5080033018:2011",
+     "frozen_dose": 0.6826631057059849,
+     "recomputed": 0.6944896816201819,
+     "abs_diff": 0.011826575914197002
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5034503874:2016",
+     "frozen_dose": 0.4840314275979343,
+     "recomputed": 0.4722324717254726,
+     "abs_diff": 0.011798955872461714
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5076526695:2018",
+     "frozen_dose": 0.6342524089751846,
+     "recomputed": 0.6236914350855007,
+     "abs_diff": 0.010560973889683911
+    },
+    {
+     "pid": "A5009838261",
+     "event_id": "A5035157505:2018",
+     "frozen_dose": 0.0696185575207123,
+     "recomputed": 0.08012396369959662,
+     "abs_diff": 0.010505406178884319
+    },
+    {
+     "pid": "A5050357458",
+     "event_id": "A5027077000:2017",
+     "frozen_dose": 0.446102810740783,
+     "recomputed": 0.4356606595791525,
+     "abs_diff": 0.010442151161630497
+    },
+    {
+     "pid": "A5047860864",
+     "event_id": "A5008296992:2018",
+     "frozen_dose": 0.8693084336526197,
+     "recomputed": 0.8588943196054657,
+     "abs_diff": 0.010414114047153977
+    },
+    {
+     "pid": "A5059507519",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.2074898276620804,
+     "recomputed": 0.19716171980001382,
+     "abs_diff": 0.010328107862066588
+    },
+    {
+     "pid": "A5063481505",
+     "event_id": "A5044076496:2022",
+     "frozen_dose": 0.4866642633922875,
+     "recomputed": 0.4765808824737225,
+     "abs_diff": 0.010083380918565032
+    }
+   ],
+   "inputs": "the frozen 2026-08-15 inputs (c1a arrangement)",
+   "frozen_0813_draw": {
+    "max_abs_diff": 0.0018986229421242284,
+    "share_exact_1e-9": 0.905
+   }
+  }
+ },
+ "deviations": [
+  {
+   "where": "c1a",
+   "what": "the clone on the frozen inputs is not byte-equal to the frozen pre-y frame; the original is NON-deterministic (two runs differ); every difference is in the four y columns 04 overwrites, <= 8 ULP",
+   "detail": {
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "rows_modified": 4,
+    "rows_new": 119405
+   }
+  },
+  {
+   "where": "c1b",
+   "what": "the re-run union rung on the 08-28 inputs is not byte-equal to the 08-28 SURGERED pre-y frame; differences confined to the four y columns 04 overwrites",
+   "detail": {
+    "modified_by_columns": {
+     "fwci_frac,fwci_frac_ex_star": 3,
+     "fwci_frac": 1
+    },
+    "worst_ulp_by_column": {
+     "fwci_frac": 2,
+     "fwci_frac_ex_star": 2
+    },
+    "rows_modified": 4,
+    "rows_new": 118393
+   }
+  }
+ ],
+ "phase_secs": {
+  "c1a": 35.2,
+  "c1b": 17.8,
+  "c2": 78.3,
+  "c3": 38.7,
+  "gdose": 13.9,
+  "october": 53.2
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "rule": "drop e iff an earlier same-department arrival is within 5 years (the \u00a73 Model-1 coverage window); same-year pairs kept (no 'earlier' member), counts disclosed",
+ "spec": "pos",
+ "afar_frame": "data/frames/p3_afar_pos_{field}.parquet",
+ "econ": {
+  "events": 113,
+  "dropped": 95,
+  "kept": 18,
+  "same_year_pair_events_kept": 48,
+  "p1": {
+   "rows_in": 73073,
+   "dropped": 65945,
+   "edited": 0,
+   "kept_byte_identical": 7128
+  },
+  "p2": {
+   "rows_in": 111448,
+   "dropped": 100616,
+   "edited": 0,
+   "kept_byte_identical": 10832
+  },
+  "afar": {
+   "events_in_afar": 111,
+   "dropped_in_afar": 90,
+   "rows_kept": 266814
+  }
+ },
+ "chemistry": {
+  "events": 38,
+  "dropped": 23,
+  "kept": 15,
+  "same_year_pair_events_kept": 6,
+  "p1": {
+   "rows_in": 30635,
+   "dropped": 18084,
+   "edited": 0,
+   "kept_byte_identical": 12551
+  },
+  "p2": {
+   "rows_in": 46168,
+   "dropped": 27368,
+   "edited": 0,
+   "kept_byte_identical": 18800
+  },
+  "afar": {
+   "events_in_afar": 38,
+   "dropped_in_afar": 23,
+   "rows_kept": 50209
+  }
+ },
+ "math_stats": {
+  "events": 33,
+  "dropped": 24,
+  "kept": 9,
+  "same_year_pair_events_kept": 10,
+  "p1": {
+   "rows_in": 19910,
+   "dropped": 16291,
+   "edited": 0,
+   "kept_byte_identical": 3619
+  },
+  "p2": {
+   "rows_in": 30314,
+   "dropped": 24810,
+   "edited": 0,
+   "kept_byte_identical": 5504
+  },
+  "afar": {
+   "events_in_afar": 32,
+   "dropped_in_afar": 24,
+   "rows_kept": 15128
+  },
+  "p3_full": {
+   "pairs_rows_kept": 104999,
+   "make_slim": "{'rows': 104999, 'pairs': 6237, 'ties': 114, 'events': 9, 'produced': {'$TMPDIR/sar_rob_ds3/p3_slim_ev_ds_math_stats.parquet': '21a22ce8b5e36bd2970692bbf89befb02b862207ad3dc64682112f4ccaa4424c', '$TMPDIR/sar_rob_ds3/p3_slim_ds_math_stats.parquet': '0afb673b14eafb37241a0e10b92e41fe3f4719664ddd896cf2dcbcd77f28fcf2'}, 'noev_columns': ['grp', 'year', 'y', 'D']}"
+  }
+ },
+ "staged_sha256": {
+  "p1_ds_chemistry.csv": "0848637ec2d9144fe5d22e17d12b4a6f95ffc2fda5bda1c7ba663a76a490e283",
+  "p1_ds_econ.csv": "e40d7319bbe963011a6632e8d2b27a3cb1a22dd9afd9afc4b7dc770b77b41fbf",
+  "p1_ds_math_stats.csv": "ab4a6ab3c95cd3ac89653d26016e3e703b145ee4af412f94ac906606271ca25f",
+  "p2_ds_chemistry.csv": "f4053bf81e02d59002901bfea9f34106df43a53b089719d2a73fb0ea1e758a17",
+  "p2_ds_econ.csv": "ad5b9e70f9667cdbbc2150411a4d2ac8ef2a47cfee6cb377f9bac86dd0738e51",
+  "p2_ds_math_stats.csv": "2b0c26ae80dfe03b0397bc0b01c607e5bc962cac85a9bb21c896b2c476b53ba8",
+  "p3_afar_ds_chemistry.parquet": "a194d18397f7d05ce5451d1ca8591afe084211ba9e33ed03b279f5f2cde78d09",
+  "p3_afar_ds_econ.parquet": "3248c2905c89a0a8350c5ae9c50470a9404a9978d35f4ee81a46c91b1c76a78f",
+  "p3_afar_ds_math_stats.parquet": "d92d038b8937297fade2939d08e5ecd3a9a754942d9214aaca5c5200f531cb5c",
+  "p3_slim_ds_math_stats.parquet": "0afb673b14eafb37241a0e10b92e41fe3f4719664ddd896cf2dcbcd77f28fcf2",
+  "p3_slim_ev_ds_math_stats.parquet": "21a22ce8b5e36bd2970692bbf89befb02b862207ad3dc64682112f4ccaa4424c",
+  "pairs_none_ds_math_stats.parquet": "e468c8e7c327f020deadd905940e26080dd3bb2d3bcd713e3401e1fe94b1f83a"
+ }
+}

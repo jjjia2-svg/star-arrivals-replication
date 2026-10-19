@@ -1,0 +1,18 @@
+{
+ "rule": "complement of the 2026-08-29 double-star drop: keep only the 98 economics events that arrived within five years of an earlier same-department arrival",
+ "events_in_complement": 98,
+ "events_excluded_clean": 18,
+ "p1": {
+  "rows_in": 118393,
+  "dropped": 16016,
+  "edited": 0,
+  "kept_byte_identical": 102377
+ },
+ "control_lines_subset_of_canon": true,
+ "control_rows_complement_plus_clean_equals_canon": true,
+ "source_frame": "data/frames/p1_frame_econ.csv",
+ "source_frame_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+ "staged_sha256": {
+  "p1_dsC_econ.csv": "24abc87044951801c34113a702a427a52796367c39d6486323d556525fb44954"
+ }
+}

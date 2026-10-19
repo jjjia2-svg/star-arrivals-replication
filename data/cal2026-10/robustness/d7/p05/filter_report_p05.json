@@ -1,0 +1,68 @@
+{
+ "suffix": "_p05",
+ "frames": {
+  "p1_frame_econ.csv": {
+   "rows_in": 73073,
+   "rows_out": 54637,
+   "events_in": 113,
+   "events_out": 79,
+   "byte_identical_to_input": false
+  },
+  "p2_becoming_econ.csv": {
+   "rows_in": 111448,
+   "rows_out": 83353,
+   "events_in": 113,
+   "events_out": 79,
+   "byte_identical_to_input": false
+  },
+  "p3_afar_pos_econ.parquet": {
+   "rows_in": 1500425,
+   "rows_out": 1166416,
+   "events_in": 111,
+   "events_out": 78
+  },
+  "events_econ": 79,
+  "p1_frame_chemistry.csv": {
+   "rows_in": 30635,
+   "rows_out": 25080,
+   "events_in": 38,
+   "events_out": 31,
+   "byte_identical_to_input": false
+  },
+  "p2_becoming_chemistry.csv": {
+   "rows_in": 46168,
+   "rows_out": 37791,
+   "events_in": 38,
+   "events_out": 31,
+   "byte_identical_to_input": false
+  },
+  "p3_afar_pos_chemistry.parquet": {
+   "rows_in": 184960,
+   "rows_out": 168156,
+   "events_in": 38,
+   "events_out": 31
+  },
+  "events_chemistry": 31,
+  "p1_frame_math_stats.csv": {
+   "rows_in": 19910,
+   "rows_out": 12078,
+   "events_in": 33,
+   "events_out": 22,
+   "byte_identical_to_input": false
+  },
+  "p2_becoming_math_stats.csv": {
+   "rows_in": 30314,
+   "rows_out": 18447,
+   "events_in": 33,
+   "events_out": 22,
+   "byte_identical_to_input": false
+  },
+  "p3_afar_pos_math_stats.parquet": {
+   "rows_in": 256506,
+   "rows_out": 195777,
+   "events_in": 32,
+   "events_out": 21
+  },
+  "events_math_stats": 22
+ }
+}

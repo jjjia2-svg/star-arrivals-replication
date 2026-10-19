@@ -1,0 +1,21 @@
+bind_tokens:
+- case_sensitive: false
+  text: University of Technology Sydney
+  word_boundary: false
+- case_sensitive: false
+  text: University of Technology, Sydney
+  word_boundary: false
+- case_sensitive: true
+  text: UTS
+  word_boundary: true
+dept_key: uts_econ
+exclude_tokens: []
+openalex_inst_id: I114017466
+phrases:
+- School of Finance and Economics
+- Economics Discipline Group
+- Economics Department
+- Department of Economics
+- School of Economics and Marketing
+- Centre for Health Economics Research and Evaluation
+window_chars: 80

@@ -1,0 +1,283 @@
+== P3cutpos_math_stats  B=500
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=51..100 seed=20260830 =====
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=151..200 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=101..150 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=1..50 seed=20260830 =====
+  [P3cutpos_math_stats] perm 125 done (7.2s)
+  [P3cutpos_math_stats] perm 25 done (5.9s)
+  [P3cutpos_math_stats] perm 75 done (7.5s)
+  [P3cutpos_math_stats] perm 175 done (8.9s)
+  [P3cutpos_math_stats] perm 150 done (7.1s)
+[P3cutpos_math_stats] 101..150 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_101_150.csv
+  [P3cutpos_math_stats] perm 50 done (5.4s)
+[P3cutpos_math_stats] 1..50 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_1_50.csv
+  [P3cutpos_math_stats] perm 100 done (4.4s)
+[P3cutpos_math_stats] 51..100 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_51_100.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=251..300 seed=20260830 =====
+  [P3cutpos_math_stats] perm 200 done (3.6s)
+[P3cutpos_math_stats] 151..200 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_151_200.csv
+Warning message:
+renv took longer than expected (10 seconds) to activate the sandbox.
+
+The sandbox can be disabled by setting:
+
+    RENV_CONFIG_SANDBOX_ENABLED = FALSE
+
+within an appropriate start-up .Renviron file.
+
+See `?renv::config` for more details. 
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=201..250 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=301..350 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=351..400 seed=20260830 =====
+  [P3cutpos_math_stats] perm 275 done (7.6s)
+  [P3cutpos_math_stats] perm 225 done (7.3s)
+  [P3cutpos_math_stats] perm 375 done (7.7s)
+  [P3cutpos_math_stats] perm 325 done (9.3s)
+  [P3cutpos_math_stats] perm 300 done (7.7s)
+[P3cutpos_math_stats] 251..300 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_251_300.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=401..450 seed=20260830 =====
+  [P3cutpos_math_stats] perm 400 done (7.3s)
+[P3cutpos_math_stats] 351..400 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_351_400.csv
+  [P3cutpos_math_stats] perm 250 done (8.1s)
+[P3cutpos_math_stats] 201..250 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_201_250.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_math_stats events=32 perms=451..500 seed=20260830 =====
+  [P3cutpos_math_stats] perm 350 done (5.5s)
+[P3cutpos_math_stats] 301..350 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_301_350.csv
+  [P3cutpos_math_stats] perm 425 done (4.3s)
+  [P3cutpos_math_stats] perm 475 done (3.1s)
+  [P3cutpos_math_stats] perm 450 done (3.8s)
+[P3cutpos_math_stats] 401..450 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_401_450.csv
+  [P3cutpos_math_stats] perm 500 done (2.9s)
+[P3cutpos_math_stats] 451..500 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_math_stats_perm_451_500.csv
+   P3cutpos_math_stats done
+== P3cutpos_chemistry  B=500
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=51..100 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=1..50 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=101..150 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=151..200 seed=20260830 =====
+  [P3cutpos_chemistry] perm 75 done (9.3s)
+  [P3cutpos_chemistry] perm 175 done (7.9s)
+  [P3cutpos_chemistry] perm 25 done (8.6s)
+  [P3cutpos_chemistry] perm 125 done (8.3s)
+  [P3cutpos_chemistry] perm 100 done (8.0s)
+[P3cutpos_chemistry] 51..100 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_51_100.csv
+  [P3cutpos_chemistry] perm 200 done (6.5s)
+[P3cutpos_chemistry] 151..200 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_151_200.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=201..250 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=251..300 seed=20260830 =====
+  [P3cutpos_chemistry] perm 50 done (9.2s)
+[P3cutpos_chemistry] 1..50 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_1_50.csv
+  [P3cutpos_chemistry] perm 150 done (8.2s)
+[P3cutpos_chemistry] 101..150 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_101_150.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=301..350 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=351..400 seed=20260830 =====
+  [P3cutpos_chemistry] perm 225 done (10.3s)
+  [P3cutpos_chemistry] perm 275 done (10.3s)
+  [P3cutpos_chemistry] perm 325 done (9.9s)
+  [P3cutpos_chemistry] perm 375 done (8.7s)
+  [P3cutpos_chemistry] perm 250 done (9.8s)
+[P3cutpos_chemistry] 201..250 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_201_250.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=401..450 seed=20260830 =====
+  [P3cutpos_chemistry] perm 300 done (8.4s)
+[P3cutpos_chemistry] 251..300 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_251_300.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_chemistry events=38 perms=451..500 seed=20260830 =====
+  [P3cutpos_chemistry] perm 350 done (8.3s)
+[P3cutpos_chemistry] 301..350 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_301_350.csv
+  [P3cutpos_chemistry] perm 400 done (6.5s)
+[P3cutpos_chemistry] 351..400 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_351_400.csv
+  [P3cutpos_chemistry] perm 425 done (4.5s)
+  [P3cutpos_chemistry] perm 475 done (4.9s)
+  [P3cutpos_chemistry] perm 450 done (5.0s)
+[P3cutpos_chemistry] 401..450 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_401_450.csv
+  [P3cutpos_chemistry] perm 500 done (3.8s)
+[P3cutpos_chemistry] 451..500 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_chemistry_perm_451_500.csv
+   P3cutpos_chemistry done
+== P3cutpos_econ  B=500
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=101..150 seed=20260830 =====
+
+===== permutation p3tp P3cutpos_econ events=108 perms=51..100 seed=20260830 =====
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=151..200 seed=20260830 =====
+
+===== permutation p3tp P3cutpos_econ events=108 perms=1..50 seed=20260830 =====
+  [P3cutpos_econ] perm 175 done (45.3s)
+  [P3cutpos_econ] perm 25 done (46.7s)
+  [P3cutpos_econ] perm 125 done (53.8s)
+  [P3cutpos_econ] perm 75 done (48.5s)
+  [P3cutpos_econ] perm 150 done (73.2s)
+[P3cutpos_econ] 101..150 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_econ_perm_101_150.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=201..250 seed=20260830 =====
+  [P3cutpos_econ] perm 200 done (71.1s)
+[P3cutpos_econ] 151..200 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_econ_perm_151_200.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=251..300 seed=20260830 =====
+  [P3cutpos_econ] perm 100 done (69.3s)
+[P3cutpos_econ] 51..100 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_econ_perm_51_100.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=301..350 seed=20260830 =====
+  [P3cutpos_econ] perm 50 done (77.4s)
+[P3cutpos_econ] 1..50 done -> data/inference_afar_pos_2026-08-30/raw/P3cutpos_econ_perm_1_50.csv
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== permutation p3tp P3cutpos_econ events=108 perms=351..400 seed=20260830 =====

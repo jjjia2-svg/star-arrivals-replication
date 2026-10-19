@@ -1,0 +1,78 @@
+# R1 F2 read allowlist (pipeline/aws/r1/sandbox.py check). One TAB-separated row per allowed read:
+#   glob<TAB>configs<TAB>stages<TAB>reason
+# glob: a repo path under a watched tree (data/cal2026-08-28, pipeline/stars/caliber_2026-08-28, data/raw_verified,
+#   data/cal2026-10/_invalid_run2 = sandbox.WATCHED),
+#   or 'ref:<path under /work/ref/october>' for the purged October products ('**' crosses '/', '*' does not).
+# configs: B0, M or * (a comma list is allowed). stages: * or a comma list; a ref: row always names its stages.
+# reason: longer than 30 characters. M rows are added by W2-TJ1A when the M chain legitimately needs them.
+# Not watched, so not listed as rows (recorded for the skeptic review): data/robustness_afar_cuts_2026-08-30/estimates.
+#
+# The 08-28 caliber modules the October layer imports (stage.py, run_cal_afar.py, run_cal_frames_chemmath.py,
+# econ920_lib.py, econ_gold_stage.py, caliber_2026-10/run_caliber.py and run_cal_estimates.py put
+# pipeline/stars/caliber_2026-08-28 on sys.path or load it by path).
+pipeline/stars/caliber_2026-08-28/restake_equiv.py	*	*	the 72-equivalent ranking machine the October restake and caliber layers import from the 08-28 layer
+pipeline/stars/caliber_2026-08-28/cleaned_works.py	*	*	the calls-table reader of the 08-28 layer, imported by the October caliber code (run_caliber and friends)
+pipeline/stars/caliber_2026-08-28/caliber.py	*	*	the signed 08-28 caliber predicates, imported by the October caliber layer as the same rules
+pipeline/stars/caliber_2026-08-28/frames_stage.py	*	*	the 08-28 frame-staging helpers (Shadow, sha, accounting) that stage.py, run_cal_afar and econ920_lib import
+pipeline/stars/caliber_2026-08-28/run_cal_estimates.py	*	*	the 08-28 cell runner that caliber_2026-10/run_cal_estimates.py loads by path for its estimate machinery
+# The 08-28 modules imported by a bare name after a sys.path insert, which the seed grep cannot see (pre-J0 review
+# finding 2, e9bea25, limited to the stages that read them; W2-TJ1A found the same three for the M chain - with
+# PYTHONDONTWRITEBYTECODE=1 every import opens the .py). Merged at W2-INT keeping both: each row names the B0 stage
+# and its J1a/J1b twin. run_cal_frames loads cal_accounting only in its own main(), never through run_stage.
+pipeline/stars/caliber_2026-08-28/run_cal_frames.py	*	afar,afar_m	the 08-28 frames runner run_cal_afar.py imports (import run_cal_frames as rcf, after a sys.path insert) for run_stage, the launcher of the verbatim afar stage
+pipeline/stars/caliber_2026-08-28/cal_accounting.py	*	frames_chemmath,frames_chemmath_m,rob_frames	the 08-28 accounting helpers run_cal_frames_chemmath.py imports (import cal_accounting as ca08, after a sys.path insert); chemmath_m.py drives it in J1a and in J1b's no-centre rebuild
+pipeline/stars/caliber_2026-08-28/cal_accounting.py	M	frames_econ920	econ920_m's V3-NET imports run_cal_frames_chemmath for rebase_recorded_roots, which imports cal_accounting (j1a-19; M only: B0's economics chain does not)
+pipeline/stars/caliber_2026-08-28/supplement_fetch.py	*	patch_assemble	the 08-28 supplement row writer that econ920/fetch_patch_supplement.py imports (patch_row and KEYS; no fetch runs), read by J1a's patch_assemble
+#
+# The 08-28 canon the October (B0) chain reads as its control and anchor inputs.
+data/cal2026-08-28/calls_2026-08-28.csv	B0	restake_econ11_aug,restake_econ11_aug_all	the signed 08-28 calls table restake_econ11.py reads through run_caliber.historical_calls and cleaned_works (CALLS_CSV): exclusions and first-pub overrides
+data/cal2026-08-28/restake_2026-08-28.csv	B0	*	the 08-28 restake table stage.py reads as the October restake baseline (B0 chain only)
+data/cal2026-08-28/verdicts_2026-08-28.csv	B0	*	the 08-28 star verdicts stage.py merges with the October verdicts when it stages the shadow (B0 chain)
+data/cal2026-08-28/stars_excluded_cal2026-08-28.parquet	B0	*	the 08-28 excluded-star list stage.build_shadow reads through duckdb as the exclusion base (B0 chain)
+data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl	B0	*	the 08-28 edge supplement stage.py concatenates into the October edge supplement (B0 chain)
+data/cal2026-08-28/events_*_cal.csv	B0	*	the 08-28 event tables the chemmath frames compare with and stage.py stages in its 08-28 control mode
+data/cal2026-08-28/frames/**	B0	frames_econ920,frames_chemmath	the 08-28 frozen frames the October control chains of econ920 and chemmath compare against (run_cal_afar --control and run_controls are not J0 steps)
+data/cal2026-08-28/estimates/**	B0	frames_econ920,frames_chemmath	the 08-28 gold estimates the October control chains of econ920 and chemmath re-estimate against; a cells stage reading them is reported
+data/cal2026-08-28/MANIFEST.sha256	B0	*	the 08-28 manifest that anchors every frozen 08-28 frame and gold the October controls read
+data/raw_verified/*cal2026-08-28*	B0	*	the 08-28 event tables in raw_verified that write_events and econ_gold read as the October starting list
+#
+# The quarantined run-2 outputs (base and watched: they include byte copies of October event products, so this
+# is the one file there any stage may read).
+data/cal2026-10/_invalid_run2/verdicts_2026-10.csv	B0	write_events	the run-2 per-machine verdicts write_events.py reads for the chemistry and mathematics event tables, October's recorded input; no other run-2 file is read
+#
+# Reads of the purged October products (the read-only reference copy), per stage.
+ref:analysis/expected/**	B0	cells_rmac,cells_rcloud,gate1	the October cell golds: the J0 cells compare against them and gate 1 checks every rebuilt cell
+ref:data/cal2026-10/frames_econ/build_report_econ920_2026-10.json	B0	pairs_pin	the October econ920 build report that pins pairs_unified.csv, read from the reference so the pin is not self-checked
+ref:data/frames/p1_frame_chemistry.csv	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p2_becoming_chemistry.csv	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p3_slim_chemistry.parquet	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p3_slim_ev_chemistry.parquet	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p1_frame_math_stats.csv	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p2_becoming_math_stats.csv	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p3_slim_math_stats.parquet	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/frames/p3_slim_ev_math_stats.parquet	B0	frames_chemmath	an October canon frame run_cal_frames_chemmath's phase P anchors on (--october-ref, october_ref_files); hashed, never copied
+ref:data/cal2026-10/frames_chemistry/**	B0	frames_chemmath	the October chemistry frames and reports run_cal_frames_chemmath anchors on (--october-ref)
+ref:data/cal2026-10/frames_math_stats/**	B0	frames_chemmath	the October mathematics frames and reports run_cal_frames_chemmath anchors on (--october-ref)
+ref:**	B0	gate1	gate 1 compares every rebuilt October product with its reference copy under October's own rules
+#
+# Config M (J1a, W2-TJ1A): the 08-28 canon and the reference copy the M chain legitimately reads, per stage. Any
+# further read that sandbox_check lists after the first J1a run is reviewed and added here with a reason, then J1a
+# is relaunched with --resume-from (only sandbox and sandbox_check rerun). No J1b row: J1b reads J1a's products, and
+# a J1b read shows up in its own sandbox_check and is added the same way. Exception (M review #7): J1b's rob_frames runs
+# J1a's frames_chemmath_m call for the no-centre rebuild, so the four 08-28 reads of that call also name rob_frames.
+data/cal2026-08-28/stars_excluded_cal2026-08-28.parquet	M	frames_econ920,frames_chemmath_m,rob_frames	the 08-28 excluded-star list the M econ and chem/maths builds start the M stars_excluded list from (DROP stars out, M event stars in); J1b's no-centre rebuild runs the same chemmath_m call (M review #7)
+data/raw_verified/*cal2026-08-28*	M	events,frames_econ920,frames_chemmath_m,rob_frames	the 08-28 event tables events_r1 filters into the M event tables (--raw-0828) and the M frame builds stage as the old events
+data/cal2026-08-28/frames/**	M	frames_econ920	the 08-28 frozen frames the econ920 controls (c1a-c3) rerun in the M root compare against, as in October
+data/cal2026-08-28/estimates/**	M	frames_econ920	the 08-28 gold estimates the econ920 controls re-estimate against inside the M econ build, as in October
+data/cal2026-08-28/MANIFEST.sha256	M	frames_econ920,frames_chemmath_m,rob_frames	the 08-28 manifest that anchors the frozen 08-28 frames and golds the econ920 controls read; chemmath_m.py's pin check also anchors the 08-28 stars_excluded list on it (W2-CHEMM handoff, added at W2-INT)
+data/cal2026-08-28/calls_2026-08-28.csv	M	rank_m,calls	the 08-28 calls table: cleaned_works first_pub anchors in the RK6b rerun, and run_caliber.historical_calls in calls
+data/cal2026-08-28/edges_supplement_cal2026-08-28.jsonl	M	frames_econ920,frames_chemmath_m,new_numbers,rob_frames	the 08-28 edge supplement stage.py concatenates for prodlib and ledger_new_2026_10 hashes as the same supplement
+ref:data/cal2026-10/events_*_cal2026-10*.csv	M	rank_m,events	October's six event tables: RK6b's october_event/october_p05 flip flags (through the rank_m view) and events_r1's line check
+ref:data/cal2026-10/events_decision_2026-10.json	M	events	October's events decision file: events_r1 --mode m reads its 'dropped' list to check the M removals
+ref:data/cal2026-10/restake_econ11_aug_2026-10.csv	M	rank_tables	October's econ restake table: restake_r1 m takes the M econ table header from it (through the rank_tables view)
+ref:analysis/expected/**	M	promote	the October golds promote_r1 run records beside the M golds in the refreeze record (October vs new shas)
+ref:data/frames/**	M	promote	the October canon frames promote_r1 run records beside the M frames in the refreeze record (October vs new shas)
+# Added after j1a-19 (the first J1a run that reached sandbox_check; tests/test_r1_table_j1a.py pins the six reads).
+data/cal2026-08-28/events_*_cal.csv	M	frames_chemmath_m,rob_frames	the 08-28 event tables chemmath_m.check_tables compares the M event tables' header line with (the first line only); J1b's no-centre rebuild runs the same call
+data/cal2026-10/_invalid_run2/candidates_2026-10.csv	M	rank_tables	October's candidate rows restake_r1 m checks each of the 187 kept stars against (present, arrival_true); nothing from it is written to the M tables
+data/cal2026-10/_invalid_run2/verdicts_2026-10.csv	M	rank_tables	the run-2 chem/maths verdicts table whose header restake_r1 m copies for verdicts_chemmath_r1.csv (header line only)

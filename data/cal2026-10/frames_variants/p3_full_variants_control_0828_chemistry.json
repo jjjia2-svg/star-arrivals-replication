@@ -1,0 +1,44 @@
+{
+ "field": "chemistry",
+ "inputs": {
+  "pairs": "data/cal2026-08-28/frames/pairs_none_chemistry.parquet",
+  "pairs_sha256": "530bf6779af5ef10a166b3a6db87579614b93a7dcc9f44bf96e1eedcbc9ef00c",
+  "frame": "data/frames/p1_frame_chemistry.csv",
+  "frame_sha256": "1a7dbbba836946a7a9eedaeecc9b8c24fea04198abcf1f98ab32611a0e3283e1",
+  "events": "data/raw_verified/events_chemistry_cal2026-08-28.csv"
+ },
+ "suffix": "",
+ "events_kept": 38,
+ "p05_filter": {
+  "rows_in": 4805989,
+  "events_in": 38,
+  "rows_out": 4805989,
+  "events_out": 38
+ },
+ "p05_slim": {
+  "rows": 4805989,
+  "pairs": 286998,
+  "ties": 7907,
+  "events": 38,
+  "file": "p3_slim_chemistry_all.parquet",
+  "sha256": "95b527241d93616f0fb08ac3b621aa18020b726312b6a6ef2a0d47ffc29928cd"
+ },
+ "dosebin": {
+  "bins": 1,
+  "cuts": [],
+  "pairs_by_bin": {
+   "1": 286998
+  },
+  "rows": 4805989,
+  "pairs": 286998,
+  "ties": 7907,
+  "events": 38,
+  "max_D": 1,
+  "sha256": "9f0ae859fe5adb95516754eeb0f3e817c0c2a16e997e4e3cf4a5f39f0fc321c0",
+  "file": "p3_slim_chemistry_dosebin1.parquet"
+ },
+ "control": {
+  "p05_all_events_vs_frozen_slim": true,
+  "dosebin_vs_frozen_slim": true
+ }
+}

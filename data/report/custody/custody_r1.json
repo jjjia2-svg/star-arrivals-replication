@@ -1,0 +1,69 @@
+{
+ "task": "r1 rebuild custody",
+ "ok": true,
+ "verify": {
+  "frame_pairs": [
+   [
+    "data/report/frames/p3_slim_chemistry.parquet",
+    "p3_slim_chemistry.parquet"
+   ],
+   [
+    "analysis/estimation/run_p3.R",
+    "run_p3.R"
+   ],
+   [
+    "data/report/frames/p3_slim_econ.parquet",
+    "p3_slim_econ.parquet"
+   ],
+   [
+    "data/report/frames/p3_slim_ev_chemistry.parquet",
+    "p3_slim_ev_chemistry.parquet"
+   ],
+   [
+    "analysis/estimation/run_p3_evcl.R",
+    "run_p3_evcl.R"
+   ],
+   [
+    "data/report/expected/P3_fnfix_chemistry.json",
+    "P3_fnfix_chemistry.json"
+   ],
+   [
+    "data/report/frames/p3_slim_ev_econ.parquet",
+    "p3_slim_ev_econ.parquet"
+   ],
+   [
+    "data/report/expected/P3_econ_fnfix.json",
+    "P3_econ_fnfix.json"
+   ]
+  ],
+  "fetched_pairs": [
+   [
+    "P3_fnfix_chemistry.json",
+    "P3_fnfix_chemistry.json"
+   ],
+   [
+    "P3_econ_fnfix.json",
+    "P3_econ_fnfix.json"
+   ],
+   [
+    "P3evcl_chemistry.json",
+    "P3evcl_chemistry.json"
+   ],
+   [
+    "P3evcl_econ.json",
+    "P3evcl_econ.json"
+   ]
+  ],
+  "gold_dir": "data/report/expected",
+  "require_marker": "OK"
+ },
+ "n_cells": 4,
+ "n_payload": 8,
+ "cells_tsv_sha256": {
+  "M.tsv": "732ef32b43cfb290242f054a8c7ec9e7836e03ed78c37f96925455b401139ca2",
+  "M_evcl.tsv": "6727903795eeedec36dc6ea43eb3311636e1a068dd9268d33f1368db55c5b174"
+ },
+ "payload_md5_source": "run_cells inputs records (cells_report_<stack>.json), not recomputed",
+ "stack": "rcloud",
+ "paths": "relative to the repository root"
+}

@@ -1,0 +1,84 @@
+{
+ "field": "econ",
+ "roster_clean_variant": "none",
+ "stages": [
+  {
+   "stage": "signed_events",
+   "n": 116,
+   "note": "Arrival year falls back to the 07-24 ledger: 0 cases"
+  },
+  {
+   "stage": "network_old_rel (07-24 frame relations)",
+   "n": 5413,
+   "note": "698 persons/107 events"
+  },
+  {
+   "stage": "dept_candidates_raw (incumbent x event)",
+   "n": 4718,
+   "note": ""
+  },
+  {
+   "stage": "drop_self_star_authorid",
+   "n": 34,
+   "note": "author_id equals this event's star"
+  },
+  {
+   "stage": "dept_rel_after_selfstar",
+   "n": 4684,
+   "note": ""
+  },
+  {
+   "stage": "drop_self_alias_canon",
+   "n": 1,
+   "note": "canonical self-pair through an alias"
+  },
+  {
+   "stage": "drop_star_prearrival (gate 4)",
+   "n": 31,
+   "note": "Remove relations from the star's own employment spell before arrival"
+  },
+  {
+   "stage": "drop_alias_dup",
+   "n": 58,
+   "note": "canonical already entered the same old-frame event under an alias"
+  },
+  {
+   "stage": "dept_only_new_rel (before guard)",
+   "n": 3983,
+   "note": ""
+  },
+  {
+   "stage": "drop_age_gap_gt60 (new relations)",
+   "n": 51,
+   "note": "Examples: [('A5001558165', 'A5102739182:melbourne', -63.0), ('A5005581086', 'A5102739182:melbourne', -67.0), ('A5011417552', 'A5102739182:melbourne', -71.0), ('A5013576595', 'A5102739182:melbourne', -64.0)]"
+  },
+  {
+   "stage": "dept_only_new_rel_final",
+   "n": 3932,
+   "note": "250 relations have age_gap NA (retained)"
+  },
+  {
+   "stage": "union_rel_final",
+   "n": 9345,
+   "note": "880 persons/116 events"
+  },
+  {
+   "stage": "frame_rows",
+   "n": 102795,
+   "note": ""
+  }
+ ],
+ "final": {
+  "relationships": 9345,
+  "persons": 880,
+  "events": 116,
+  "rows": 102795,
+  "events_zero_dept_members": [
+   "A5018453582:uwa",
+   "A5073639630:uwa",
+   "A5083549223:uwa",
+   "A5086933077:anu",
+   "A5090515599:uwa"
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+Warning messages:
+1: package 'DIDmultiplegtDYN' was built under R version 4.5.2 
+2: In rgl.init(initValue, onlyNULL) : X11 error: GLXBadContext
+3: 'rgl.init' failed, will use the null device.
+See '?rgl.useNULL' for ways to avoid this warning. 
+
+===== Panel 3[topic-similar pairs] P3p05pos_econ_A_far rows=1166416 groups=70233 first ties=2842 events=78 =====
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+Placebo_3 cannot be estimated. There is no switcher or no control for this placebo.
+Placebo_4 cannot be estimated. There is no switcher or no control for this placebo.
+Some placebos could not be estimated. Therefore, the test of joint nullity of the placebos could not be computed.
+P3p05pos_econ_A_far          ATE=-0.000698 (pair-clustered SE 0.000548, CI -0.001773~0.000376) joint-effect p=0.0001 | event-clustered SE 0.000994
+[P3p05pos_econ_A_far] done elapsed=1.2 minutes
+SAR_OUT=$O Rscript $E/run_p3_tp.R P3p05pos_${F}_A_far   44.08s user 28.19s system 96% cpu 1:14.54 total

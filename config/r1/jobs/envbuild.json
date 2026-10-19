@@ -1,0 +1,22 @@
+{
+  "schema": "sar.r1.job.v1",
+  "kind": "envbuild",
+  "instance_type": "c6i.4xlarge",
+  "price_hr": 0.68,
+  "est_min": 120,
+  "hard_min": 300,
+  "root_gb": 100,
+  "sar_host": "ec2-r1",
+  "env": {},
+  "pulls": [],
+  "data_sync": [],
+  "copy_from_tip": [
+    [
+      "pipeline/aws/r1/build_env.sh",
+      "/work/build_env.sh"
+    ]
+  ],
+  "steps": [
+    "sudo -E bash /work/build_env.sh --layers py,rmac,rcloud,tex --repo \"$REPO_DIR\" --prefix \"$B/r1/env/\" --out /work/out"
+  ]
+}

@@ -1,0 +1,10 @@
+label	driver	frame	ref	out_name	stack
+P1_econ_fnfix	analysis/robustness/figure4/run_save_sample.R	p1_frame_econ.csv	-	P1_econ_fnfix.json	rmac
+P1_fnfix_chemistry	analysis/robustness/figure4/run_save_sample.R	p1_frame_chemistry.csv	-	P1_fnfix_chemistry.json	rmac
+P1_fnfix_math_stats	analysis/robustness/figure4/run_save_sample.R	p1_frame_math_stats.csv	-	P1_fnfix_math_stats.json	rmac
+P2_econ_fnfix	analysis/robustness/figure4/run_save_sample.R	p2_becoming_econ.csv	-	P2_econ_fnfix.json	rmac
+P2_fnfix_chemistry	analysis/robustness/figure4/run_save_sample.R	p2_becoming_chemistry.csv	-	P2_fnfix_chemistry.json	rmac
+P2_fnfix_math_stats	analysis/robustness/figure4/run_save_sample.R	p2_becoming_math_stats.csv	-	P2_fnfix_math_stats.json	rmac
+P3cut_pos_math_stats	analysis/robustness/figure4/run_save_sample.R	p3_afar_pos_math_stats.parquet	-	P3pos_math_stats_A_far.json	rmac
+P3cut_pos_chemistry	analysis/robustness/figure4/run_save_sample.R	p3_afar_pos_chemistry.parquet	-	P3pos_chemistry_A_far.json	rmac
+P3cut_pos_econ	analysis/robustness/figure4/run_save_sample.R	p3_afar_pos_econ.parquet	-	P3pos_econ_A_far.json	rmac

@@ -1,0 +1,44 @@
+{
+ "field": "econ",
+ "inputs": {
+  "pairs": "<scratch>/afar_ctl_econ/pairs_unified.csv",
+  "pairs_sha256": "41d9f7e3fd5ae60165589ed9848a4bfb0d2dea80df35a1c87dcc310dc596b7de",
+  "frame": "data/frames/p1_frame_econ.csv",
+  "frame_sha256": "da5cf9edd7d408620256af0ab56316bc4f49cec5060517be4f41926de54d694f",
+  "events": "data/raw_verified/events_econ_cal2026-08-28.csv"
+ },
+ "suffix": "",
+ "events_kept": 116,
+ "p05_filter": {
+  "rows_in": 12108166,
+  "events_in": 116,
+  "rows_out": 12108166,
+  "events_out": 116
+ },
+ "p05_slim": {
+  "rows": 12108166,
+  "pairs": 719839,
+  "ties": 15235,
+  "events": 116,
+  "file": "p3_slim_econ_all.parquet",
+  "sha256": "f0a2d2e86da76f4fbfa5023a637fc7a88b1f18831aed4d938c6751cda76703b6"
+ },
+ "dosebin": {
+  "bins": 1,
+  "cuts": [],
+  "pairs_by_bin": {
+   "1": 719839
+  },
+  "rows": 12108166,
+  "pairs": 719839,
+  "ties": 15235,
+  "events": 116,
+  "max_D": 1,
+  "sha256": "f7b8a3d142d217d87107d57f0f75a04432a93c2fb404d192dcf30071dc3b10be",
+  "file": "p3_slim_econ_dosebin1.parquet"
+ },
+ "control": {
+  "p05_all_events_vs_frozen_slim": true,
+  "dosebin_vs_frozen_slim": true
+ }
+}

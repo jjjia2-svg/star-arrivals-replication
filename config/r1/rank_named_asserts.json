@@ -1,0 +1,17 @@
+{
+  "schema": "sar.r1.rank_named.v1",
+  "reference": "rk6b-06",
+  "note": "Code list C2, re-derived for rk6b-06, the rank reference after the 3e paper checks (rec-01 + merge-04 + rk6a-04, RESULT OK, gates 0), not from the 10-01 numbers. Own-field values come from git: flips_r1.json pct_own as addlist-04 installed it from rk6b-06 (40e944d). No file in git carries rk6b-06's pass-C percentiles, so the two pass-C values are rk6b-06 run outputs (its flips.csv pct_C under r1/runs/rk6b-06/out/files/, pinned by manifest digest from pin-02). Their in_C flag equals the signed basis in p2_decisions.json ('in_C=True'), whose rank numbers are rk6b-05's and stay unedited (signed author file); each pass-C source names both. rank_r1.py gate checks every value on the new run, and the same gate holds the run content-equal to the pinned rk6b-06 copy. tests/test_r1_rank_stage.py ties each own value to flips_r1.json and each pass-C in-flag and rk6b-05 basis number to p2_decisions.json.",
+  "asserts": [
+    {"person_id": "A5028731684", "field": "econ", "arrival": 2008, "pass": "own", "pct": 0.974, "in": true,
+     "source": "flips_r1.json pct_own 0.974 (rk6b-06 own-field rank, KEEP, flip none; same as rk6b-05); arrival 2008 = fixes_1001.csv redate (signed 2026-10-01, D01:5), not about 0.92 at 2010"},
+    {"person_id": "A5001177483", "field": "econ", "pass": "own", "pct": 0.8813, "in": false,
+     "source": "flips_r1.json pct_own 0.8813 (rk6b-06 own-field rank fails, flip in->out; 0.8718 in rk6b-05, before the 3e checks confirmed two more profiles); recorded, not a gate on her verdict"},
+    {"person_id": "A5001177483", "field": "econ", "pass": "C", "pct": 0.943, "in": true,
+     "source": "rk6b-06 run output flips.csv pct_C 0.943 in_C=True (not in git). Signed basis: p2_decisions.json persons basis 'cleaned all-field rank 0.9373 in_C=True' (rk6b-05 pass C); in_C is unchanged, so she stays KEEP through the label fix (「按推荐签」 2026-10-12)"},
+    {"person_id": "A5008470795", "field": "econ", "pass": "own", "pct": 0.9079, "in": true,
+     "source": "flips_r1.json pct_own 0.9079 (rk6b-06 own-field rank passes, flip none; 0.8857 in->out in rk6b-05, before the 3e checks dropped the namesake merge A5107989060 and his academic age went from 40 to 7)"},
+    {"person_id": "A5008470795", "field": "econ", "pass": "C", "pct": 0.9494, "in": true,
+     "source": "rk6b-06 run output flips.csv pct_C 0.9494 in_C=True (not in git). Signed basis: p2_decisions.json persons basis 'cleaned all-field rank 0.9875 in_C=True' (rk6b-05 pass C, which still counted the namesake's 26 works); in_C is unchanged, so he stays KEEP through the label fix (「按推荐签」 2026-10-12)"}
+  ]
+}

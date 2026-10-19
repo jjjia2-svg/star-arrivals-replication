@@ -1,0 +1,58 @@
+{
+ "task": "T6 caliber p3afar ledger (cal2026-08-28)",
+ "generated": "2026-08-28T15:34:11",
+ "authority": "the author's decision record of 2026-08-28 (private archive)",
+ "generator": "analysis/paper/ledger_p3afar.py",
+ "generator_sha256": "41d5e01f2be6e8158555c847161d8ea52cc9924a864b485687117629e82a3818",
+ "input_hashes": {
+  "data/cal2026-08-28/frames/p3_afar_econ.parquet": "05612d000387ed7f175725ee07bd41c54bbecb616658f5a2d3bc9a47e33e8725",
+  "data/cal2026-08-28/frames/p3_afar_chemistry.parquet": "507930451ccb31c06d62b0a85d9e54e16d0ece4516d4d154dc816dd58a04a20d",
+  "data/cal2026-08-28/frames/p3_afar_math_stats.parquet": "a1e96931efbed88932a4c50285e9f1fddcade631ae57aca7cf75c5e548e62981",
+  "data/cal2026-08-28/frames/p3_afar_counts.csv": "08e1210572a058e78b1ff571f0c0660a71d15df6364454ac942762d64c80dd6e",
+  "data/cal2026-08-28/estimates/P3lb_econ_A_far.json": "88584e6a2a375b762ecf31cac4d01ac4bc14afa686f2cb8c5baf0d2b7a3724b2",
+  "data/cal2026-08-28/estimates/P3lb_chemistry_A_far.json": "4bc2094e18e544e453b301b728fb34a4bb674fd204e51500fba29399906ef3b4",
+  "data/cal2026-08-28/estimates/P3lb_math_stats_A_far.json": "e4b021949bf2d520401cf3c21abcdc093ba88edf71eba4d18907f1e2b853b509"
+ },
+ "determinism": {
+  "led": "EQUAL",
+  "fig": "EQUAL",
+  "compare": "EQUAL",
+  "run1": {
+   "led_sha": "f94a8b622780d728be7277c4fe686e08ac78bae0de99da1326922fad5b77200d",
+   "fig_sha": "e699a09852edd3c31c64eb4439a46b980b78078f96309aff90d05b71fca8f715"
+  },
+  "run2": {
+   "led_sha": "f94a8b622780d728be7277c4fe686e08ac78bae0de99da1326922fad5b77200d",
+   "fig_sha": "e699a09852edd3c31c64eb4439a46b980b78078f96309aff90d05b71fca8f715"
+  }
+ },
+ "headline": {
+  "econ": {
+   "ate_pp": -0.133,
+   "se_pair_pp": 0.049,
+   "p_joint_effects_pair": 0.00018724,
+   "events": 86,
+   "pairs": 23758,
+   "rate_pre_pp": 0.396,
+   "rate_post_obs_pp": 0.312
+  },
+  "chemistry": {
+   "ate_pp": -0.604,
+   "se_pair_pp": 0.264,
+   "p_joint_effects_pair": 0.24005184,
+   "events": 33,
+   "pairs": 2466,
+   "rate_pre_pp": 0.938,
+   "rate_post_obs_pp": 0.749
+  },
+  "math_stats": {
+   "ate_pp": -0.042,
+   "se_pair_pp": 0.128,
+   "p_joint_effects_pair": 0.34308189,
+   "events": 31,
+   "pairs": 2770,
+   "rate_pre_pp": 0.327,
+   "rate_post_obs_pp": 0.261
+  }
+ }
+}

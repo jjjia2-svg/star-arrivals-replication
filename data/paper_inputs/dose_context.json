@@ -1,0 +1,29 @@
+{
+ "econ": {
+  "pairs_total": 724002,
+  "pairs_both_dose": 724002,
+  "pairs_both_in_p2": 721063,
+  "dose_median_pos": 0.33317068744181094,
+  "dose_p75_pos": 0.5514751227302374,
+  "dose_mean_pos": 0.3748948851082762,
+  "relations_pos_dose": 9149
+ },
+ "chemistry": {
+  "pairs_total": 269168,
+  "pairs_both_dose": 268509,
+  "pairs_both_in_p2": 267918,
+  "dose_median_pos": 0.34265290200710297,
+  "dose_p75_pos": 0.6550679355859756,
+  "dose_mean_pos": 0.39920809335921664,
+  "relations_pos_dose": 3846
+ },
+ "math_stats": {
+  "pairs_total": 78478,
+  "pairs_both_dose": 72099,
+  "pairs_both_in_p2": 76947,
+  "dose_median_pos": 0.08851521462202072,
+  "dose_p75_pos": 0.2851429327243493,
+  "dose_mean_pos": 0.20995203938854332,
+  "relations_pos_dose": 1383
+ }
+}

@@ -1,0 +1,1 @@
+{"label":"P2depA_math_stats","field":"math","clean":"stats","panel":"P2_becoming","file":"p2_dep_A_math_stats.csv","rows":20604,"rels":1220,"persons":416,"events":23,"first_ties":27,"spec":{"effects":5,"placebo":4,"cluster":"person_id","group":"person x star-rel","D":"post(0/1)"},"secs":3.29184198,"status":"FAILED"}

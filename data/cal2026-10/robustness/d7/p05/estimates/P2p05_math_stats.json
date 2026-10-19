@@ -1,0 +1,1 @@
+{"label":"P2p05_math_stats","field":"math","clean":"stats","panel":"P2_becoming","file":"p2_becoming_math_stats.csv","rows":18447,"rels":1093,"persons":329,"events":22,"first_ties":25,"spec":{"effects":5,"placebo":4,"cluster":"person_id","group":"person x star-rel","D":"post(0/1)"},"secs":3.30984116,"status":"FAILED"}

@@ -1,0 +1,51 @@
+{
+  "discipline": "econ",
+  "label": "econ cal2026-10: ALL events in one prodlib run (the July 79-event frame is not byte-preserved); network pool = the verified October roster folded through the U2 person map (D2/D4); star edges = 11-school snapshot ∪ fnfix ∪ cal2026-08-28 ∪ star-id-correction supplements",
+  "p_level": "p01",
+  "_cal2026_10_note": [
+    "Modes vs the 2026-08-15 econ machine (econ_fnfix.json): events u4_frozen on a u4_aug pair DERIVED from the econ cal event table (stage.py: every event star is_star_1pct=is_star_5pct=is_foreign_poach=True so that prodlib seeds every star's works; dept_id from the pinned roster_lib.SCHOOL_INST); roster u4_roster_pool on ONE derived file = data/cal2026-10/roster_econ_verified_2026-10.parquet in the DEPT_ROSTER_PANEL 8-column shape minus the excluded star ids (the 08-15 pool baked its star exclusion in the same way).",
+    "Why not roster.mode=silver_parquet as chemistry/math_stats: prodlib.load_roster silver_parquet sets person_id = author_id (prodlib.py:206-209) while person_map.mode=parquet makes every pool/pair id a U2 person id (P_...); compute_pool (prodlib.py:361, :373) then intersects an author-id set with a person-id set and the pool is empty ('候选对为空' STOP). silver_parquet is the identity-person-map shape; the person-mapped shape is u4_roster_pool (fold_roster_to_persons). Established by reading the pinned prodlib (the lines cited), not by a control run.",
+    "indept roster_intervals (the October roster has no null spell ends; the verified spells ARE the in-post rule, D2). star_first_pub/ego_first_pub works_robust (robust_first_pub over each person's edge years, gap 10) instead of the 08-15 star_set_academic_age / panel_then_wfp: age_gap follows the chemistry/mathematics rule. Review 2026-09-22: the U3 panel IS on the mirror and panel_then_wfp needs only indept.panel_glob (prodlib.py:636-661), and star_set_academic_age works once every event star has a restake row (academic_age from restake aage) — so both 08-15 modes are runnable; which rule economics follows is an author decision, measured by run_controls.py E2 on the frozen 38-event inputs. Not decided here.",
+    "outcome exclusion exclude_list = stars_excluded_cal2026-10 (cal2026-08-28 list ∪ every event star of the three October tables ∪ every U2 fragment of each econ event star's person — the 08-15 ship_plevel_poach semantics, prodlib.py:518-523, restored by the 2026-09-22 review; a bare-id list had left 92 fragments / 2,682 works of 21 stars out of the *_ex_star outcomes) instead of ship_plevel_poach itself (which needs the U4 star_set flags).",
+    "person_map = the mirror's U2 parquet UNCHANGED. It maps BOTH A5091326353 ids to P_A5090515599; see stage.py docstring (measured consequence: nil inside the event window)."
+  ],
+  "snapshot": {
+    "edges_glob": "${DERIVED}/u1_full_11school_2026-07-16/authorship_edges/**/*.parquet",
+    "works_glob": "${DERIVED}/u1_full_11school_2026-07-16/works/**/*.parquet",
+    "work_first_pub_glob": "${DERIVED}/u1_full_11school_2026-07-16/work_first_pub/**/*.parquet",
+    "fwci_baseline_pop_glob": "${DERIVED}/u1_full_11school_2026-07-16/fwci_baseline_pop/**/*.parquet"
+  },
+  "supplement_jsonl": "${SHADOW}/cal2026-10/econ/edges_supplement_econ_cal2026-10.jsonl",
+  "person_map": {
+    "mode": "parquet",
+    "path": "${DERIVED}/u2_person_map_11school_2026-07-16/person_map/data.parquet"
+  },
+  "events": {
+    "mode": "u4_frozen",
+    "events_dir": "${SHADOW}/cal2026-10/econ/u4_aug/events",
+    "star_set_dir": "${SHADOW}/cal2026-10/econ/u4_aug/star_set"
+  },
+  "roster": {
+    "mode": "u4_roster_pool",
+    "files": [
+      "${SHADOW}/cal2026-10/econ/roster_pool_econ_cal2026-10.parquet"
+    ]
+  },
+  "outcome_exclusion_stars": {
+    "mode": "exclude_list",
+    "path": "${SHADOW}/cal2026-10/econ/stars_excluded_cal2026-10.parquet"
+  },
+  "indept": {
+    "mode": "roster_intervals"
+  },
+  "star_first_pub": {
+    "mode": "works_robust"
+  },
+  "ego_first_pub": {
+    "mode": "works_robust"
+  },
+  "dose_coupling_join": {
+    "mode": "na"
+  },
+  "run_dir": "${RUN_DIR}"
+}

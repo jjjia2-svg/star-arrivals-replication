@@ -1,0 +1,7 @@
+r_seed: 42                 # set.seed(42) in run_p1.R, run_p2.R, run_p1_evcl.R, run_p2_evcl.R (verbatim);
+                           # run_p3.R seeds only its optional frac<1 subsample; run_p3_evcl.R and
+                           # run_p3_tp.R are deterministic and set no seed
+python_hashseed: 0         # PYTHONHASHSEED=0 exported by analysis/run_all.sh
+null_simulation_seed: 20260817   # B0_null_test.R (robustness, not in M0/M1)
+permutation_seed: 20260829       # analysis/robustness/inference/run_perm.R (T5 randomization
+                                 # inference): permutation i draws with set.seed(seed + i)

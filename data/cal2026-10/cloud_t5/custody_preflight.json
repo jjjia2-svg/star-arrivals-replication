@@ -1,0 +1,156 @@
+{
+ "task": "cal2026-10 cloud batch — preflight (BEFORE upload)",
+ "generated_utc": "2026-09-22T17:26:22Z",
+ "marker": "2026_10C",
+ "instance": {
+  "instance_type": "r6i.16xlarge",
+  "region": "us-east-1",
+  "image_id": "ami-052355af2a014bd2c",
+  "market": "on-demand"
+ },
+ "groups": [],
+ "fields": [
+  "econ",
+  "chemistry",
+  "math_stats"
+ ],
+ "seeds": {
+  "perm": 20260829,
+  "null": 20260830
+ },
+ "perm_b": 500,
+ "null_n": 200,
+ "chunks": {
+  "perm_econ": 5,
+  "perm_chemistry": 50,
+  "perm_math_stats": 50,
+  "null_econ": 5,
+  "null_chemistry": 50,
+  "null_math_stats": 50
+ },
+ "parallel": 12,
+ "threads": 4,
+ "payload_dir": "$TMPDIR/cal2026-10_payload_t5",
+ "payloads": {
+  "P1_econ_fnfix.json": {
+   "source": "analysis/expected/P1_econ_fnfix.json",
+   "sha256_before": "02f19ea4a12fc30a63dbca926843fdc1c6da596e8a48a229aac3b7d306cfabe5",
+   "md5_before": "eb91f28e0bbe7ae817bddbac0ca8443d",
+   "bytes": 3664
+  },
+  "P1_fnfix_chemistry.json": {
+   "source": "analysis/expected/P1_fnfix_chemistry.json",
+   "sha256_before": "11c71c765f1b110d7fec6c12b313864a1a804976761313170fa6884fe7c2f682",
+   "md5_before": "151fdfca76d18eb7356753e9683b66cc",
+   "bytes": 3643
+  },
+  "P1_fnfix_math_stats.json": {
+   "source": "analysis/expected/P1_fnfix_math_stats.json",
+   "sha256_before": "96c7d970919a6f4d945d6744e46349ce233b3acc68e570bc062394f0c186ae11",
+   "md5_before": "991aaadb7350160cafbd960b65c956e8",
+   "bytes": 3622
+  },
+  "P2_econ_fnfix.json": {
+   "source": "analysis/expected/P2_econ_fnfix.json",
+   "sha256_before": "9360c66d824a4c014eb82fe110a55f60bffc3e2cc58543ed1dbb8aded2aeea74",
+   "md5_before": "7545e68067fac9c637e3a95ee7cff14f",
+   "bytes": 1076
+  },
+  "P2_fnfix_chemistry.json": {
+   "source": "analysis/expected/P2_fnfix_chemistry.json",
+   "sha256_before": "cc6a5379bad729199d5bafa3f92657b1f152d7d751632af4d6dc2d5eda9aba6a",
+   "md5_before": "c20cc64b60a19571d3b568351cecfc9c",
+   "bytes": 1083
+  },
+  "P2_fnfix_math_stats.json": {
+   "source": "analysis/expected/P2_fnfix_math_stats.json",
+   "sha256_before": "d1863479f42820221bf41af574155af167ab382193839518296b2816cb4c6e83",
+   "md5_before": "da8aece1eb98b16f0620b36ff30e1850",
+   "bytes": 1077
+  },
+  "bootstrap.sh": {
+   "source": null,
+   "sha256_before": "d2450bd072de321faf13893dd90eaf7d5b4d7a540fe08a1f89033e8e1f8b0394",
+   "md5_before": "ff6cfed1e9cd8b0e64e860835a2ffa70",
+   "bytes": 2859
+  },
+  "driver.env": {
+   "source": null,
+   "sha256_before": "132717f36a011d17e481d7e962efd24fc6304f6dd63fac82b8e2379af9028701",
+   "md5_before": "42732249811b6d91db41f51579cdf0d3",
+   "bytes": 33
+  },
+  "driver.sh": {
+   "source": null,
+   "sha256_before": "ce1a06121507eccb0da0aea034f813fafe3f09844f44ce10564e0dae803ee7c7",
+   "md5_before": "de309e39688a5351706ed589e5bb319b",
+   "bytes": 5136
+  },
+  "jobs_parallel.txt": {
+   "source": null,
+   "sha256_before": "f79244c09107f09120ba6c4b132a9c1986410be48b899889f0eea7e24eb63818",
+   "md5_before": "cbc50581ad553d25bf5f0206e603ec1d",
+   "bytes": 9287
+  },
+  "jobs_serial.txt": {
+   "source": null,
+   "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+   "bytes": 0
+  },
+  "p1_frame_chemistry.csv": {
+   "source": "data/frames/p1_frame_chemistry.csv",
+   "sha256_before": "2fa95c70046ebb09a733e9bc0a7d411bfa1a30ea3992802a5661837814fe57d5",
+   "md5_before": "64b0b928d5203a39ebbe5a0f4eab818a",
+   "bytes": 4875239
+  },
+  "p1_frame_econ.csv": {
+   "source": "data/frames/p1_frame_econ.csv",
+   "sha256_before": "a2cfabf7c36ae54fca554d6880b2b78ba475615aa8f54901026a8fecf067ec80",
+   "md5_before": "10cf5304372e36eba18112ac8d90dfda",
+   "bytes": 11894212
+  },
+  "p1_frame_math_stats.csv": {
+   "source": "data/frames/p1_frame_math_stats.csv",
+   "sha256_before": "47e6f4bb08050477a5bac1d7bc7783e2a5c98d509ce0747f36f9c00b771401f9",
+   "md5_before": "ffb2a50ac2653ffe961ae9b2436660b8",
+   "bytes": 2871951
+  },
+  "p2_becoming_chemistry.csv": {
+   "source": "data/frames/p2_becoming_chemistry.csv",
+   "sha256_before": "4b62a66ef25da583038237503b6e3fdcf03f38d626d560d2a7a0f2d24cafe68d",
+   "md5_before": "89036df942e6c141d8aa90b96d3aa1c1",
+   "bytes": 2869496
+  },
+  "p2_becoming_econ.csv": {
+   "source": "data/frames/p2_becoming_econ.csv",
+   "sha256_before": "5028e78e41eb14872e807e1674236fce4949c075fdcf2f4e2707c49b3b1685de",
+   "md5_before": "d0ccd0f59012392422c42879f4c6730b",
+   "bytes": 6839699
+  },
+  "p2_becoming_math_stats.csv": {
+   "source": "data/frames/p2_becoming_math_stats.csv",
+   "sha256_before": "aac31ce16449873c74dc6a407bde646f6364c57bdd95c3f5889441430d13bbe0",
+   "md5_before": "3fb39b276871da1db1ff67f008cc96a4",
+   "bytes": 1928708
+  },
+  "run_perm.R": {
+   "source": "analysis/robustness/inference/run_perm.R",
+   "sha256_before": "2dc98b40cb1f76ce84169efcc578bd67c71d78ffd8f4ca26ca9d3b0278fe6f40",
+   "md5_before": "1c8dba4f398c09f130a3e80611a29b30",
+   "bytes": 9476
+  }
+ },
+ "payload_md5_sha256": "a94df9c1f0ac8ea38cf3a425407fee457cba839944ebece0a30cdf40112a1c2c",
+ "jobs_serial": [],
+ "jobs_parallel_n": 66,
+ "cost_estimate": {
+  "basis": "A6 in cloudkit.py: 08-28 measured wall per cell, predate x1.6, 08-30 batch wall for the parallel phase, 14 min overhead",
+  "serial_cells_min": {},
+  "parallel_phase_min": 81.0,
+  "overhead_min": 14.0,
+  "wall_min_projected": 95.0,
+  "on_demand_usd_per_h": 4.032,
+  "cost_usd_projected_on_demand": 6.38
+ }
+}

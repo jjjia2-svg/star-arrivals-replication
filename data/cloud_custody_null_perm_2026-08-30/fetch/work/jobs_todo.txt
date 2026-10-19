@@ -1,0 +1,115 @@
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 208 210
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 213 215
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 218 220
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 223 225
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 228 230
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 233 235
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 238 240
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 243 245
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 248 250
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 257 259
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 262 264
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 266 270
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 271 275
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 276 280
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 281 285
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 286 290
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 291 295
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 296 300
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 305 309
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 310 314
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 315 319
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 320 324
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 325 329
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 330 334
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 335 339
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 340 344
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 345 349
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 350 350
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 354 358
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 359 363
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 364 368
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 369 373
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 374 378
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 379 383
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 384 388
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 389 393
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 394 398
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 399 403
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 404 408
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 409 413
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 414 418
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 419 423
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 424 428
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 429 433
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 434 438
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 439 443
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 444 448
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 449 453
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 454 458
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 459 463
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 464 468
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 469 473
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 474 478
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 479 483
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 484 488
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 489 493
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 494 498
+Rscript run_perm.R p3tp P3cutpos_econ p3_afar_pos_econ.parquet P3cut_pos_econ.json 20260830 499 500
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 1 5 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 6 10 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 11 15 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 16 20 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 21 25 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 26 30 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 31 35 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 36 40 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 41 45 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 46 50 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 51 55 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 56 60 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 61 65 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 66 70 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 71 75 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 76 80 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 81 85 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 86 90 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 91 95 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 96 100 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 101 105 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 106 110 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 111 115 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 116 120 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 121 125 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 126 130 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 131 135 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 136 140 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 141 145 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 146 150 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 151 155 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 156 160 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 161 165 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 166 170 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 171 175 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 176 180 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 181 185 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 186 190 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 191 195 out_null
+Rscript run_null.R NULLpos_econ p3_afar_pos_econ.parquet 20260830 196 200 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 23 47 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 48 50 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 73 97 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 98 100 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 123 147 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 148 150 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 172 196 out_null
+Rscript run_null.R NULLpos_chemistry p3_afar_pos_chemistry.parquet 20260830 197 200 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 21 45 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 46 50 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 71 95 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 96 100 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 121 145 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 146 150 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 170 194 out_null
+Rscript run_null.R NULLpos_math_stats p3_afar_pos_math_stats.parquet 20260830 195 200 out_null
+Rscript run_perm.R p3tp P3cutpos_math_stats p3_afar_pos_math_stats.parquet P3cut_pos_math_stats.json 20260830 0 0
