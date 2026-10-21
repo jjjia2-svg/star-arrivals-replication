@@ -1,3 +1,49 @@
+# Star Arrivals and Their Colleagues
+
+Code and data for **Star Arrivals and Their Colleagues: Evidence from Australian Academia**, by Jia Jia, The University of Melbourne (2026).
+
+The study follows 377 star arrivals: economics 173, chemistry 97 and mathematics and statistics 107. It examines colleagues' research output, their first papers with the star, and first collaborations between colleagues.
+
+**The final report data are in [`data/report/`](data/report/README.md).** The default command below uses this version.
+
+## Find the results
+
+| What you need | Where to look |
+|---|---|
+| Numbers reported in the paper | [Result ledgers](data/report/paper_numbers/) |
+| Analysis datasets | [Panel data](data/report/frames/) |
+| Recorded estimates used to check a run | [Reference results](data/report/expected/) |
+| Code that estimates the results | [Estimation programs](analysis/estimation/README.md) |
+
+## Run the replication
+
+**Check your machine first.** The default run was tested on Linux x86_64 with 256 GiB of RAM. It took about 28 minutes and used up to **152.5 GiB of memory**. See the [resource requirements](data/report/custody/RESOURCES.md) before running it on a smaller machine.
+
+Install Python 3.12, R 4.5.1 and `uv`, then run these commands from the repository root. Setup and the first R run need an internet connection; see [environment setup](setup/README.md) for details.
+
+```bash
+bash setup/install_py.sh
+Rscript setup/install_r.R
+bash analysis/run_all.sh
+```
+
+The default run re-estimates 23 of the 27 headline estimates and checks the other 4 against their recorded AWS runs. It prints `ALL_EQUAL` when all results match. In `output/compare_report.md`, expect **23 `EQUAL`** rows and **4 `VERIFIED_NOT_RERUN`** rows. Run logs are saved in `output/logs/`.
+
+Re-running the four large estimates requires a second R environment and sufficient memory; see the [estimation guide](analysis/estimation/README.md). Rebuilding the data from raw sources or generating the manuscript also needs inputs not distributed here; see the detailed guide below.
+
+## About this package
+
+Version 1.0 was released on 19 October 2026. The [original published snapshot](https://github.com/jjjia2-svg/star-arrivals-replication/tree/ffa951e5c4950090b0aa6e6a14391a562cc270ab) remains available.
+
+[Citation](CITATION.cff) · [Code licence](LICENSE) · [Data licence](LICENSE-DATA.md) · [AI use](docs/AI_USAGE.md)
+
+Contact: Jia Jia, jjjia2@student.unimelb.edu.au.
+
+---
+
+<details>
+<summary><strong>Full replication guide: data, methods, earlier versions and tests</strong></summary>
+
 # Replication package: Star Arrivals and Their Colleagues
 
 Replication package for the report **"Star Arrivals and Their Colleagues: Evidence from Australian
@@ -390,3 +436,5 @@ The work used Claude (Anthropic) and Codex (OpenAI), as the report states. See `
 ## Contact
 
 Jia Jia, The University of Melbourne: jjjia2@student.unimelb.edu.au
+
+</details>
