@@ -4,16 +4,17 @@ Code and data for **Star Arrivals and Their Colleagues: Evidence from Australian
 
 The study follows 377 star arrivals: economics 173, chemistry 97 and mathematics and statistics 107. It examines colleagues' research output, their first papers with the star, and first collaborations between colleagues.
 
-**The final report data are in [`data/report/`](data/report/README.md).** The default command below uses this version.
+<a id="find-the-results"></a>
 
-## Find the results
+## Data, R code and data collection
 
-| What you need | Where to look |
+| Start here | What you will find |
 |---|---|
-| Numbers reported in the paper | [Result ledgers](data/report/paper_numbers/) |
-| Analysis datasets | [Panel data](data/report/frames/) |
-| Recorded estimates used to check a run | [Reference results](data/report/expected/) |
-| Code that estimates the results | [Estimation programs](analysis/estimation/README.md) |
+| [Data used in the paper](data/report/frames/) | The final analysis datasets for economics, chemistry, and mathematics and statistics. |
+| [Data and R code guide](docs/DATA_AND_CODE.md) | Each dataset's rows and main variables, its [R analysis script](analysis/estimation/), and the corresponding results. |
+| [How the data were obtained](docs/DATA_WORKFLOW.md) | Sources, collection, matching and preparation, with links to the Python construction code and an explanation of which inputs are public. |
+
+The default analysis uses [`data/report/`](data/report/README.md). [Recorded estimates](data/report/expected/) and [numbers printed in the paper](data/report/paper_numbers/) are available to read without running anything.
 
 ## Run the replication
 
@@ -29,11 +30,11 @@ bash analysis/run_all.sh
 
 The default run re-estimates 23 of the 27 headline estimates and checks the other 4 against their recorded AWS runs. It prints `ALL_EQUAL` when all results match. In `output/compare_report.md`, expect **23 `EQUAL`** rows and **4 `VERIFIED_NOT_RERUN`** rows. Run logs are saved in `output/logs/`.
 
-Re-running the four large estimates requires a second R environment and sufficient memory; see the [estimation guide](analysis/estimation/README.md). Rebuilding the data from raw sources or generating the manuscript also needs inputs not distributed here; see the detailed guide below.
+Re-running the four large estimates requires a second R environment; see the [estimation guide](analysis/estimation/README.md). Rebuilding the data from raw sources needs inputs not distributed here, as the [data workflow](docs/DATA_WORKFLOW.md) explains.
 
 ## About this package
 
-Version 1.0 was released on 19 October 2026. The [original published snapshot](https://github.com/jjjia2-svg/star-arrivals-replication/tree/ffa951e5c4950090b0aa6e6a14391a562cc270ab) remains available.
+Version 1.0 was released on 19 October 2026. [View the fixed paper version](https://github.com/jjjia2-svg/star-arrivals-replication/tree/v1.0) or [download it with checksums](https://github.com/jjjia2-svg/star-arrivals-replication/releases/tag/v1.0). It preserves the [original published snapshot](https://github.com/jjjia2-svg/star-arrivals-replication/tree/ffa951e5c4950090b0aa6e6a14391a562cc270ab); this homepage can continue to improve.
 
 [Citation](CITATION.cff) · [Code licence](LICENSE) · [Data licence](LICENSE-DATA.md) · [AI use](docs/AI_USAGE.md)
 
